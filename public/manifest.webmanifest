@@ -1,0 +1,47 @@
+{
+  "name": "Mzansi Stream — Premium IPTV South Africa",
+  "short_name": "Mzansi Stream",
+  "description": "Premium IPTV for South Africa. 20,000+ channels in 4K including SuperSport, DStv Premiership, SABC, kykNET and Premier League. WhatsApp activation in 10 minutes.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#007749",
+  "lang": "en-ZA",
+  "dir": "ltr",
+  "categories": ["entertainment", "video", "multimedia", "lifestyle"],
+  "id": "za.mzansistream.app",
+  "icons": [
+    { "src": "/icon-72.png",  "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "/icon-96.png",  "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "/icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "/screenshot-mobile.jpg",  "sizes": "1080x1920", "type": "image/jpeg", "form_factor": "narrow", "label": "Mzansi Stream on mobile — pricing and channels" },
+    { "src": "/screenshot-desktop.jpg", "sizes": "1920x1080", "type": "image/jpeg", "form_factor": "wide",   "label": "Mzansi Stream on desktop — comparison vs DStv Premium" }
+  ],
+  "shortcuts": [
+    { "name": "Pricing",        "short_name": "Pricing",  "description": "View all IPTV pricing from R199/month",    "url": "/?source=shortcut#offers",        "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }] },
+    { "name": "24h Free Trial", "short_name": "Trial",    "description": "Request 24-hour free trial via WhatsApp",  "url": "/?source=shortcut-trial",          "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }] },
+    { "name": "Setup",          "short_name": "Setup",    "description": "Step-by-step installation guide",          "url": "/?source=shortcut#setup",          "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }] },
+    { "name": "WhatsApp Support","short_name": "Support", "description": "Talk to support on WhatsApp",              "url": "https://wa.me/447307410512?text=Hi!%20I%20need%20help%20with%20Mzansi%20Stream.","icons": [{ "src": "/icon-96.png", "sizes": "96x96" }] }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [
+    { "platform": "play",    "url": "https://play.google.com/store/apps/details?id=za.mzansistream.app", "id": "za.mzansistream.app" },
+    { "platform": "windows", "url": "https://espg.vercel.app/downloads/MzansiStream-Setup.exe" }
+  ],
+  "edge_side_panel": { "preferred_width": 400 },
+  "launch_handler": { "client_mode": ["navigate-existing", "auto"] },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    { "protocol": "web+mzansistream", "url": "/?source=protocol&path=%s" }
+  ]
+}
