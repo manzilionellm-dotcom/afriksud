@@ -1,15 +1,8 @@
-import { NuqsAdapter } from 'nuqs/adapters/next/app';
-import { ChatProvider } from '@/lib/chat-context';
-import { CommandLogsStream } from '@/components/commands-logs/commands-logs-stream';
-import { ErrorMonitor } from '@/components/error-monitor/error-monitor';
-import { SandboxState } from '@/components/modals/sandbox-state';
-import { Toaster } from '@/components/ui/sonner';
 import type { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
-import { Suspense } from 'react';
 import './globals.css';
 
-const SITE_URL = 'https://espg.vercel.app';
+const SITE_URL = 'https://afriksud.vercel.app';
 const BRAND = 'Mzansi Stream';
 const TITLE = 'Mzansi Stream — Premium IPTV South Africa · DStv Alternative from R199/month';
 const DESCRIPTION =
@@ -67,31 +60,27 @@ export const metadata: Metadata = {
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `${BRAND} — Premium IPTV for South Africa` }],
   },
   twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION, images: ['/og-image.jpg'] },
-  icons: { icon: '/favicon.ico', apple: '/icon-192.png' },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: [
+      { rel: 'icon', type: 'image/png', sizes: '192x192', url: '/icon-192.png' },
+      { rel: 'icon', type: 'image/png', sizes: '512x512', url: '/icon-512.png' },
+    ],
+  },
   manifest: '/manifest.webmanifest',
   formatDetection: { telephone: false, email: false, address: false },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#007749', // SA flag green
+  themeColor: '#007749',
   width: 'device-width', initialScale: 1, maximumScale: 5, colorScheme: 'dark',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en-ZA">
-      <body className="antialiased">
-        <Suspense fallback={null}>
-          <NuqsAdapter>
-            <ChatProvider>
-              <ErrorMonitor>{children}</ErrorMonitor>
-            </ChatProvider>
-          </NuqsAdapter>
-        </Suspense>
-        <Toaster />
-        <CommandLogsStream />
-        <SandboxState />
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
