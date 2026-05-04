@@ -1,0 +1,38 @@
+[package]
+name = "mzansi-stream"
+version = "1.0.0"
+description = "Mzansi Stream — Premium IPTV 4K for South Africa"
+authors = ["Mzansi Stream <support@mzansistream.co.za>"]
+license = "Proprietary"
+repository = "https://github.com/manzilionellm-dotcom/espg"
+homepage = "https://espg.vercel.app"
+edition = "2021"
+rust-version = "1.77"
+
+[lib]
+name = "mzansi_stream_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["devtools"] }
+tauri-plugin-shell = "2"
+tauri-plugin-updater = "2"
+tauri-plugin-window-state = "2"
+tauri-plugin-single-instance = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
+incremental = false
