@@ -1224,7 +1224,7 @@ function TrustSection() {
 }
 
 // ─── SOUTH AFRICA CITIES ──────────────────────────────────────────────────────
-function SpainCities({ ua }: { ua: string }) {
+function SACities({ ua }: { ua: string }) {
   return (
     <section id="cities" className="section">
       <div className="sectionHead">
@@ -1321,11 +1321,11 @@ function MzansiLogo({ size = 36, showText = true }: { size?: number; showText?: 
       {showText && (
         <>
           <text x="50" y="19" fontFamily="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" fontWeight="800" fontSize="13" letterSpacing="2.5" fill="#f5f0f5">
-            ESPAÑA
+            MZANSI
           </text>
           <line x1="50" y1="23" x2="205" y2="23" stroke="url(#lgGold)" strokeWidth="0.7" opacity="0.6" />
-          <text x="50" y="35" fontFamily="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" fontWeight="900" fontSize="11" letterSpacing="6" fill="url(#lgGold)">
-            TV
+          <text x="50" y="35" fontFamily="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" fontWeight="900" fontSize="11" letterSpacing="3.5" fill="url(#lgGold)">
+            STREAM
           </text>
         </>
       )}
@@ -1703,7 +1703,7 @@ export default function Page() {
         "@type": "ContactPoint",
         contactType: "sales",
         telephone: `+${SITE.whatsappPhone}`,
-        availableLanguage: ["Spanish", "English"],
+        availableLanguage: ["English", "Afrikaans"],
         areaServed: "Worldwide",
       },
     ],
@@ -1989,7 +1989,7 @@ export default function Page() {
           <InternationalSection ua={ua} />
           <DeviceSection ua={ua} />
           <ReviewsSection />
-          <SpainCities ua={ua} />
+          <SACities ua={ua} />
           <QuickSetup ua={ua} />
 
           {/* FAQ */}
