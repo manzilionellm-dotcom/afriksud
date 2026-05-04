@@ -20,7 +20,6 @@ const faqStyle: React.CSSProperties = { background: '#0a0a0a', border: '1px soli
 const faqSummaryStyle: React.CSSProperties = { cursor: 'pointer', fontWeight: 600, fontSize: 15 };
 const faqAnswerStyle: React.CSSProperties = { marginTop: 10, color: '#b8b8b8', fontSize: 14 };
 const ctaBlockStyle: React.CSSProperties = { marginTop: 40, padding: 28, background: 'linear-gradient(180deg, rgba(0,119,73,0.08), transparent)', border: '1px solid rgba(0,119,73,0.4)', borderRadius: 12, textAlign: 'center' };
-const priceBoxStyle: React.CSSProperties = { background: 'rgba(34,197,94,0.06)', border: '1px solid rgba(34,197,94,0.3)', borderRadius: 10, padding: '14px 18px', marginBottom: 22, fontSize: 16 };
 
 import { SA_CITIES_DATA, cityPageData } from '@/content/programmatic-pages';
 
