@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "version": "2026-05-za",
+    "scope": "South Africa primary + diaspora (UK, AU, NZ, US, CA, AE, DE, IE)",
+    "vol_source": "Estimation Google Keyword Planner + Ahrefs + Semrush + DataForSEO. Monthly volume.",
+    "intent_legend": { "TXN": "Transactional (high purchase intent)", "COM": "Commercial", "INF": "Informational", "NAV": "Navigational" }
+  },
+  "ZA": {
+    "head": [
+      { "kw": "iptv south africa",        "vol": 18100, "kd": 48, "intent": "TXN" },
+      { "kw": "best iptv 2026 sa",        "vol": 8100,  "kd": 42, "intent": "COM" },
+      { "kw": "iptv 4k",                  "vol": 6600,  "kd": 38, "intent": "COM" },
+      { "kw": "cheap iptv south africa",  "vol": 5400,  "kd": 32, "intent": "TXN" },
+      { "kw": "iptv smart tv south africa","vol": 4400, "kd": 36, "intent": "INF" },
+      { "kw": "iptv firestick south africa","vol": 3600,"kd": 34, "intent": "INF" },
+      { "kw": "watch soccer free south africa","vol": 9900,"kd": 65, "intent": "INF" },
+      { "kw": "dstv alternative",         "vol": 12100, "kd": 41, "intent": "TXN" }
+    ],
+    "long_tail_high_value": [
+      { "kw": "iptv dstv premiership streaming",   "vol": 2900, "kd": 28, "intent": "TXN" },
+      { "kw": "supersport iptv",                   "vol": 4400, "kd": 30, "intent": "TXN" },
+      { "kw": "iptv premier league south africa",  "vol": 3600, "kd": 32, "intent": "TXN" },
+      { "kw": "iptv kyknet",                       "vol": 1900, "kd": 22, "intent": "TXN" },
+      { "kw": "iptv sabc 1 2 3 streaming",         "vol": 1300, "kd": 20, "intent": "TXN" },
+      { "kw": "iptv free trial 24 hours",          "vol": 880,  "kd": 16, "intent": "TXN" },
+      { "kw": "iptv eft payment south africa",     "vol": 590,  "kd": 12, "intent": "TXN" },
+      { "kw": "iptv snapscan",                     "vol": 320,  "kd": 10, "intent": "TXN" },
+      { "kw": "iptv zapper payment",               "vol": 210,  "kd": 9,  "intent": "TXN" },
+      { "kw": "iptv firestick install south africa","vol": 2400,"kd": 24, "intent": "INF" },
+      { "kw": "iptv smart tv samsung sa",          "vol": 2900, "kd": 26, "intent": "INF" },
+      { "kw": "iptv smart tv lg sa",               "vol": 1900, "kd": 24, "intent": "INF" },
+      { "kw": "iptv tivimate setup",               "vol": 1300, "kd": 19, "intent": "INF" },
+      { "kw": "iptv android tv box south africa",  "vol": 2400, "kd": 28, "intent": "COM" },
+      { "kw": "showmax alternative iptv",          "vol": 720,  "kd": 18, "intent": "TXN" }
+    ],
+    "forum_questions": [
+      "Is IPTV legal in South Africa in 2026?",
+      "Best IPTV that beats DStv on price and SuperSport coverage?",
+      "Which IPTV accepts EFT or SnapScan? I do not want to use a credit card",
+      "IPTV that works on Vumatel and Openserve fibre with no buffering?",
+      "Which IPTV app is best on Firestick: TiviMate, IPTV Smarters or GSE?",
+      "Setup for IPTV on Samsung Smart TV (Tizen) — which app?",
+      "Trustworthy IPTV in SA with 24h free trial without credit card?",
+      "Do I need a VPN for IPTV in South Africa?",
+      "My IPTV buffers during the Soweto Derby — is it normal?",
+      "Does the IPTV include catch-up TV for the last 7 days?",
+      "How do I install IPTV on LG webOS without rooting?",
+      "Best IPTV for cricket (SA20 + Proteas tours)?"
+    ]
+  },
+  "diaspora": {
+    "sa-in-uk": [
+      { "kw": "watch supersport in uk", "vol": 1900, "kd": 22, "intent": "TXN" },
+      { "kw": "south african iptv london","vol": 880, "kd": 16, "intent": "TXN" },
+      { "kw": "watch dstv in uk",        "vol": 2400, "kd": 24, "intent": "TXN" }
+    ],
+    "sa-in-au": [
+      { "kw": "watch supersport in australia","vol": 1600, "kd": 20, "intent": "TXN" },
+      { "kw": "south african iptv perth",     "vol": 590,  "kd": 14, "intent": "TXN" },
+      { "kw": "watch dstv in australia",      "vol": 1900, "kd": 22, "intent": "TXN" }
+    ],
+    "sa-in-nz": [
+      { "kw": "watch supersport in new zealand", "vol": 720, "kd": 15, "intent": "TXN" },
+      { "kw": "south african iptv auckland",     "vol": 320, "kd": 10, "intent": "TXN" }
+    ],
+    "sa-in-us": [
+      { "kw": "watch supersport in usa", "vol": 1300, "kd": 18, "intent": "TXN" },
+      { "kw": "south african iptv houston","vol": 480, "kd": 12, "intent": "TXN" }
+    ],
+    "sa-in-ae": [
+      { "kw": "watch supersport in dubai","vol": 880, "kd": 16, "intent": "TXN" },
+      { "kw": "south african iptv uae",   "vol": 720, "kd": 14, "intent": "TXN" }
+    ],
+    "sa-in-de": [
+      { "kw": "south african iptv germany", "vol": 320, "kd": 10, "intent": "TXN" }
+    ],
+    "sa-in-ca": [
+      { "kw": "south african iptv toronto", "vol": 480, "kd": 12, "intent": "TXN" }
+    ]
+  },
+  "ai_overviews_target_questions": [
+    "What is the best IPTV in South Africa in 2026?",
+    "Is IPTV legal in South Africa?",
+    "How do I install IPTV on a Firestick?",
+    "How do I install IPTV on a Samsung Smart TV?",
+    "How much does a good IPTV cost per month in 2026 in South Africa?",
+    "Which IPTV provides DStv Premiership and Premier League?",
+    "Does IPTV work with Vumatel, Openserve and MTN fibre?",
+    "Which is the best IPTV app: TiviMate vs IPTV Smarters?",
+    "Do I need a VPN for IPTV in South Africa?",
+    "How do I pay for IPTV with EFT, SnapScan or Zapper?",
+    "Is IPTV cheaper than DStv Premium?",
+    "Can I watch SuperSport without DStv?"
+  ]
+}
