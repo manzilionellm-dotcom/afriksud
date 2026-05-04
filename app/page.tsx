@@ -1192,7 +1192,7 @@ function ReviewsSection() {
         {T.reviews.items.map((r, i) => (
           <article key={i} className="reviewCard">
             <div className="reviewStars">{"⭐".repeat(r.stars)}</div>
-            <p className="reviewText">"{r.text}"</p>
+            <p className="reviewText">&ldquo;{r.text}&rdquo;</p>
             <div className="reviewMeta">
               <span className="reviewName">{r.name}</span>
               <span className="reviewCity">— {r.city}</span>
@@ -1439,7 +1439,7 @@ function CinematicIntro({ onDone }: { onDone: () => void }) {
 
 // ─── MAIN PAGE ────────────────────────────────────────────────────────
 export default function Page() {
-  const [installPrompt, setInstallPrompt] = useState<any>(null);
+  const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
   const [showPWABar, setShowPWABar] = useState(false);
@@ -1503,7 +1503,7 @@ export default function Page() {
 
   useEffect(() => {
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isInStandalone = (window.navigator as any).standalone === true;
+    const isInStandalone = (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
     if (!isIOS || isInStandalone) return;
     const key = "ios_pwa_dismissed_v1";
     try { if (localStorage.getItem(key)) return; } catch {}
@@ -1515,8 +1515,8 @@ export default function Page() {
     if (!installPrompt) return;
     setShowPWABar(false);
     try { localStorage.removeItem("pwa_dismissed_v1"); } catch {}
-    installPrompt.prompt();
-    installPrompt.userChoice.then((c: any) => { if (c.outcome === "accepted") setInstallPrompt(null); });
+    (installPrompt as unknown as { prompt: () => void }).prompt();
+    (installPrompt as unknown as { userChoice: Promise<{ outcome: string }> }).userChoice.then((c) => { if (c.outcome === "accepted") setInstallPrompt(null); });
   };
 
   const handlePWADismiss = () => {
