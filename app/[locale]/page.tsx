@@ -13,13 +13,9 @@ import { plans } from "../../components/shared/plans";
 import { SITE } from "../../components/shared/site";
 
 import { LanguageProvider } from "../../components/client/LanguageProvider";
-import { HeaderNav } from "../../components/client/HeaderNav";
 import {
-  TopBar,
-  Hero,
   TrialBanner,
   TrustSection,
-  Offers,
   VODSection,
   CompareSection,
   ReviewsSection,
@@ -33,10 +29,13 @@ import { ChannelExplorer } from "../../components/client/ChannelExplorer";
 import { CountriesSection } from "../../components/client/CountriesSection";
 import { InternationalSection } from "../../components/client/InternationalSection";
 import { WhatsAppFab } from "../../components/client/WhatsAppFab";
-import { StickyBottomCta } from "../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../components/client/SkipLink";
 import { LocaleSync } from "../../components/client/LocaleSync";
+import { StickyHeader } from "../../components/ux/StickyHeader";
+import { HeroV2 } from "../../components/ux/HeroV2";
+import { PricingCarousel } from "../../components/ux/PricingCarousel";
+import { BottomTabBar } from "../../components/ux/BottomTabBar";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -323,30 +322,33 @@ export default async function LocaleHome({ params }: Props) {
         <LocaleSync locale={locale as Locale} />
         <SkipLink />
         <div className="bg" />
-        <TopBar />
-        <HeaderNav />
+        <StickyHeader />
 
-        <main className="main" id="main-content">
-          <Hero />
-          <TrialBanner />
-          <TrustSection />
-          <Offers />
-          <VODSection />
-          <CompareSection />
-          <ChannelExplorer />
-          <CountriesSection />
-          <InternationalSection />
-          <DeviceSection />
-          <ReviewsSection />
-          <SACities />
-          <QuickSetup />
-          <FaqSection />
+        <main id="main-content">
+          <HeroV2 />
+          <div className="main">
+            <TrialBanner />
+            <TrustSection />
+          </div>
+          <PricingCarousel />
+          <div className="main">
+            <VODSection />
+            <CompareSection />
+            <ChannelExplorer />
+            <CountriesSection />
+            <InternationalSection />
+            <DeviceSection />
+            <ReviewsSection />
+            <SACities />
+            <QuickSetup />
+            <FaqSection />
+          </div>
         </main>
 
         <FooterSection />
 
         <WhatsAppFab />
-        <StickyBottomCta />
+        <BottomTabBar />
         <PopiaConsentBanner />
       </LanguageProvider>
     </>
