@@ -1,8 +1,12 @@
 // components/shared/dict.ts
-// Trilingual dictionary for Mzansi Stream:
-// - en (English en-ZA, primary, all SA users)
-// - af (Afrikaans, ~12% of SA, high purchasing power, NB Cape & Pretoria)
-// - fr (French, for francophone African expats in SA)
+// Mzansi Stream copy across the 12 P0 locales.
+//
+// Hero H1/CTA strings for af / zu / xh / pt-mz / en-zw / fr are the
+// owner-approved native-language wording defined in the SEO playbook —
+// these were drafted by hand to avoid machine-translated nguni copy.
+// English diaspora variants (en-gb / en-au / en-us / en-ae / en-nz)
+// share the en-ZA base; per-market hero copy lands in follow-up PRs as
+// the diaspora landing pages are built out.
 
 import type { Copy, Locale } from "./types";
 import { deviceList } from "./plans";
@@ -10,13 +14,13 @@ import { deviceList } from "./plans";
 const SITE_LABEL = { brand: "Mzansi Stream" };
 
 // ════════════════════════════════════════════════════════════════════════════
-// ENGLISH (en-ZA) — PRIMARY
+// ENGLISH SOUTH AFRICA (en-ZA) — DEFAULT
 // ════════════════════════════════════════════════════════════════════════════
-const en: Copy = {
+const enZA: Copy = {
   brand: SITE_LABEL.brand,
   top: {
     status: "Servers online · Live WhatsApp support",
-    urgency: "🎁 Launch price locked in until 30 June · Free 24h trial",
+    urgency: "🎁 Free 24h trial · No card, no commitment",
   },
   nav: {
     offers: "Pricing",
@@ -37,7 +41,7 @@ const en: Copy = {
     lead: "20,000+ channels in native 4K, live sport with no buffering, movies and series unlocked in seconds. SuperSport, DStv Premiership, Premier League, kykNET — all in one package. No contract.",
     ctaPrices: "See pricing",
     ctaAdvisor: "Talk to an advisor",
-    trust: "★ 4.9/5 · 1,200+ customers · Available worldwide · No contract",
+    trust: "One of the most reliable IPTV services in South Africa · Available worldwide · No contract",
   },
   trial: {
     badge: "FREE TRIAL",
@@ -102,16 +106,12 @@ const en: Copy = {
     ],
   },
   reviews: {
-    title: "What our customers say",
-    sub: "Real reviews from customers across South Africa.",
-    items: [
-      { name: "Sipho M.",   city: "Johannesburg", stars: 5, plan: "3 months",  text: "I had it running in 10 minutes with their WhatsApp help. SABC, e.tv, SuperSport PSL, Premier League — everything works. Saving over R600/month vs DStv Premium." },
-      { name: "Lerato N.",  city: "Cape Town",    stars: 5, plan: "6 months",  text: "Finally watching the URC and the Stormers in 4K with zero buffering. Customer support replies in English, every day of the week. Brilliant." },
-      { name: "Pieter B.",  city: "Pretoria",     stars: 5, plan: "12 months", text: "Tried plenty of IPTV in the past — this one is the most stable by far. TiviMate runs perfectly on my Firestick, no drops even at peak. 100% recommended." },
-      { name: "Naledi K.",  city: "Durban",       stars: 4, plan: "3 months",  text: "Was nervous at first but the support walked me through every step. Now I get all the kykNET dramas, the AmaZulu matches and SABC without issues." },
-      { name: "Riaan vdM.", city: "Gqeberha",     stars: 5, plan: "12 months", text: "Tested for 24h free and signed up for the year the next day. PSL, Premier League, F1 and cricket all in one place. Top class." },
-      { name: "Thandi Z.",  city: "Bloemfontein", stars: 5, plan: "6 months",  text: "Works perfectly on my Samsung Smart TV and my iPhone. The kids' channels are a great bonus for the family." },
-    ],
+    title: "Customer reviews",
+    // POPIA + Omnibus compliance: this list starts empty and only grows
+    // with consented, verified customer testimonials (HelloPeter /
+    // Trustpilot). Do not seed with invented entries.
+    sub: "Be among our first verified customers — leave your HelloPeter review after 30 days of use.",
+    items: [],
   },
   trust: {
     title: "Safe, simple sign-up",
@@ -238,11 +238,11 @@ const en: Copy = {
 // AFRIKAANS (af) — secondary, ~12% SA, high purchasing power
 // ════════════════════════════════════════════════════════════════════════════
 const af: Copy = {
-  ...en,
+  ...enZA,
   brand: SITE_LABEL.brand,
   top: {
     status: "Bedieners aanlyn · Lewendige WhatsApp-ondersteuning",
-    urgency: "🎁 Bekendstellingsprys vasgemaak tot 30 Junie · Gratis 24-uur proeftydperk",
+    urgency: "🎁 Gratis 24-uur proeftydperk · Geen kaart, geen verbintenis",
   },
   nav: {
     offers: "Pryse",
@@ -263,7 +263,7 @@ const af: Copy = {
     lead: "20 000+ kanale in inheemse 4K, lewendige sport sonder buffering, films en reekse onmiddellik beskikbaar. SuperSport, DStv Premiership, Premier League, kykNET — alles in een pakket. Geen kontrak.",
     ctaPrices: "Sien pryse",
     ctaAdvisor: "Praat met 'n raadgewer",
-    trust: "★ 4,9/5 · 1 200+ kliënte · Wêreldwyd beskikbaar · Geen kontrak",
+    trust: "Een van die mees betroubare IPTV-dienste in Suid-Afrika · Wêreldwyd beskikbaar · Geen kontrak",
   },
   trial: {
     badge: "GRATIS PROEF",
@@ -305,11 +305,11 @@ const af: Copy = {
 // FRENCH (fr) — for francophone African expats in SA + DRC/CIV/Senegal etc.
 // ════════════════════════════════════════════════════════════════════════════
 const fr: Copy = {
-  ...en,
+  ...enZA,
   brand: SITE_LABEL.brand,
   top: {
     status: "Serveurs en ligne · Support WhatsApp en direct",
-    urgency: "🎁 Prix de lancement bloqué jusqu'au 30 juin · Essai gratuit 24h",
+    urgency: "🎁 Essai gratuit 24h · Sans carte, sans engagement",
   },
   nav: {
     offers: "Tarifs",
@@ -330,7 +330,7 @@ const fr: Copy = {
     lead: "20 000+ chaînes en 4K natif, sport en direct sans coupure, films et séries débloqués en quelques secondes. SuperSport, DStv Premiership, Premier League, kykNET — tout dans un seul forfait. Sans engagement.",
     ctaPrices: "Voir les tarifs",
     ctaAdvisor: "Parler à un conseiller",
-    trust: "★ 4,9/5 · 1 200+ clients · Disponible dans le monde · Sans engagement",
+    trust: "L'un des services IPTV les plus fiables en Afrique du Sud · Disponible dans le monde · Sans engagement",
   },
   trial: {
     badge: "ESSAI GRATUIT",
@@ -368,4 +368,138 @@ const fr: Copy = {
   stickyCta: "★ Essayer 24h gratuit →",
 };
 
-export const dict: Record<Locale, Copy> = { en, af, fr };
+// ════════════════════════════════════════════════════════════════════════════
+// NATIVE-LANGUAGE HERO OVERLAYS
+// ----------------------------------------------------------------------------
+// Per-locale overrides applied on top of the en-ZA base. Only the strings
+// that materially differ from English go here; the rest inherits.
+// ════════════════════════════════════════════════════════════════════════════
+
+// isiZulu — hero owner-approved (SEO playbook section B.1).
+const zu: Copy = {
+  ...enZA,
+  top: {
+    status: "Iziphunziso zixhumekile · Usekelo lwe-WhatsApp luphila",
+    urgency: "🎁 Ukulinga kwamahhala kwama-24h · Akudingeki ikhadi",
+  },
+  hero: {
+    ...enZA.hero,
+    titleA: "I-IPTV Engcono e-South Africa 2026.",
+    titleB: "Iziteshi ezi-20,000+, SuperSport, ku-4K kusukela ku-R99/inyanga.",
+    ctaPrices: "Bona izinhlelo",
+    ctaAdvisor: "Khuluma nomeluleki",
+    trust: "Enye yezinsizakalo ze-IPTV ezithembeke kakhulu e-South Africa · Akukho nkontileka",
+  },
+  trial: {
+    ...enZA.trial,
+    cta: "Qala Ukulinga Kwamahhala Kwama-24h",
+  },
+  stickyCta: "★ Qala kwamahhala 24h →",
+  reviews: {
+    title: "Izibuyekezo zamakhasimende",
+    sub: "Yiba phakathi kwamakhasimende ethu okuqala — shiya isibuyekezo se-HelloPeter sakho ngemuva kwezinsuku ezingu-30 zokusebenzisa.",
+    items: [],
+  },
+};
+
+// isiXhosa — hero owner-approved.
+const xh: Copy = {
+  ...enZA,
+  top: {
+    status: "Iiseva zixhumekile · Inkxaso ye-WhatsApp iphila",
+    urgency: "🎁 Uvavanyo lwasimahla lweyure ezingama-24 · Akukho khadi",
+  },
+  hero: {
+    ...enZA.hero,
+    titleA: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026.",
+    titleB: "20,000+ iitshaneli, SuperSport ku-4K ukusuka ku-R99/inyanga.",
+    ctaPrices: "Jonga izicwangciso",
+    ctaAdvisor: "Thetha necebo",
+    trust: "Enye yeenkonzo ze-IPTV ezithembekileyo eMzantsi Afrika · Akukho sivumelwano",
+  },
+  trial: {
+    ...enZA.trial,
+    cta: "Qala uvavanyo lwasimahla lweyure ezingama-24",
+  },
+  stickyCta: "★ Zama simahla iiyure ezingama-24 →",
+  reviews: {
+    title: "Izimvo zabathengi",
+    sub: "Yiba phakathi kwabathengi bethu bokuqala abaqinisekisiweyo — shiya isimvo sakho se-HelloPeter emva kweentsuku ezingama-30 zokusebenzisa.",
+    items: [],
+  },
+};
+
+// Português Moçambique — hero owner-approved.
+const ptMZ: Copy = {
+  ...enZA,
+  top: {
+    status: "Servidores em linha · Suporte WhatsApp ao vivo",
+    urgency: "🎁 Teste grátis de 24h · Sem cartão, sem compromisso",
+  },
+  hero: {
+    ...enZA.hero,
+    pill: "4K Premium · CDN global · 20.000+ canais",
+    titleA: "Melhor IPTV Moçambique 2026.",
+    titleB: "DStv, SuperSport, 20.000+ canais em 4K.",
+    lead: "20.000+ canais em 4K nativo, desporto ao vivo sem cortes, filmes e séries em segundos. SuperSport, Premier League, TVM, RTP África — tudo num só pacote. Sem fidelização.",
+    ctaPrices: "Ver planos",
+    ctaAdvisor: "Falar com um consultor",
+    trust: "Um dos serviços de IPTV mais confiáveis em África Austral · Disponível em todo o mundo · Sem fidelização",
+  },
+  trial: {
+    badge: "TESTE GRÁTIS",
+    title: "Experimente grátis por 24 horas",
+    sub: "Sem cartão, sem compromisso. Fale connosco no WhatsApp e teste o serviço na sua Smart TV, Firestick, telemóvel ou tablet em poucos minutos.",
+    cta: "Pedir o meu teste grátis",
+    note: "Sem fidelização. Sem cobranças automáticas.",
+  },
+  stickyCta: "★ Experimentar 24h grátis →",
+  reviews: {
+    title: "Avaliações dos clientes",
+    sub: "Seja um dos nossos primeiros clientes verificados — deixe a sua avaliação no HelloPeter após 30 dias de uso.",
+    items: [],
+  },
+};
+
+// English Zimbabwe — hero owner-approved.
+const enZW: Copy = {
+  ...enZA,
+  top: {
+    status: "Servers online · Live WhatsApp support",
+    urgency: "🎁 Free 24h trial · No card, no commitment",
+  },
+  hero: {
+    ...enZA.hero,
+    titleA: "Best IPTV Zimbabwe 2026.",
+    titleB: "DStv channels, SuperSport & 20,000+ live in 4K.",
+    lead: "20,000+ channels in native 4K, live sport with no buffering, movies and series in seconds. SuperSport, Premier League, ZBC TV and the full DStv line-up — in one package. No contract, no decoder.",
+    trust: "One of the most reliable IPTV services in Southern Africa · No contract · Pay in USD, EcoCash or OneMoney",
+  },
+};
+
+// English diaspora variants share en-ZA copy. The "Watch SA TV abroad"
+// hero defined in the SEO playbook lands per-page in follow-up PRs as
+// the diaspora landing routes are built; the homepage stays neutral for
+// now to avoid showing the wrong proposition to a visitor browsing
+// /?lang=en-gb without a dedicated route yet.
+const enGB: Copy = { ...enZA };
+const enAU: Copy = { ...enZA };
+const enUS: Copy = { ...enZA };
+const enAE: Copy = { ...enZA };
+const enNZ: Copy = { ...enZA };
+
+export const dict: Record<Locale, Copy> = {
+  "en-za": enZA,
+  "en-gb": enGB,
+  "en-au": enAU,
+  "en-us": enUS,
+  af,
+  zu,
+  xh,
+  "pt-mz": ptMZ,
+  "en-zw": enZW,
+  fr,
+  "en-ae": enAE,
+  "en-nz": enNZ,
+};
+

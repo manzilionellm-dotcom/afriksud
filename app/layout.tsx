@@ -1,9 +1,11 @@
 // app/layout.tsx
-// Server Component — generates ALL metadata server-side for Google.
-// 130+ keywords for SA + diaspora. Optimised to crush DStv on SERP.
+// Server Component — generates all root metadata server-side for Google.
+// hreflang map is built from the canonical 12-locale registry so the
+// switcher, sitemap and HTML metadata never drift out of sync.
 
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
+import { DEFAULT_LOCALE, LOCALE_META, LOCALES, hreflangAlternates } from "../lib/locales";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,177 +18,25 @@ const SITE_URL = "https://iptvmzansi.com";
 const SITE_NAME = "Mzansi Stream";
 const OG_IMAGE = SITE_URL + "/og-image.jpg";
 
+const buildLocaleUrl = (locale: typeof LOCALES[number]) =>
+  locale === DEFAULT_LOCALE ? SITE_URL + "/" : `${SITE_URL}/?lang=${locale}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Best IPTV South Africa 2026 — 20,000+ Channels, 4K, from R99/mo | Mzansi Stream",
+    // Kept under 60 characters so Google doesn't truncate on SERP.
+    default: "DStv Alternative — 20,000+ Channels from R99 | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },
+  // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "🇿🇦 South Africa's best IPTV 2026 — 20,000+ channels in 4K UHD. SABC, e.tv, SuperSport, DStv Premiership, Premier League + Indian, Nigerian, Zimbabwean channels. Activated in 10 min on WhatsApp. Free 24h trial, no card. From R99/mo. No contract. ★ 4.9/5 from 1,200+ customers.",
+    "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24h trial, no card. From R99/mo.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
-  keywords: [
-    // ── SOUTH AFRICA HIGH-VOLUME ─────────────────────────────────────────────
-    "IPTV South Africa",
-    "best IPTV South Africa",
-    "best IPTV South Africa 2026",
-    "IPTV SA",
-    "IPTV Mzansi",
-    "South African IPTV",
-    "IPTV subscription South Africa",
-    "IPTV streaming SA",
-    "stable IPTV South Africa",
-    "cheap IPTV South Africa",
-    "IPTV free trial South Africa",
-    "Mzansi Stream",
-    // ── DStv ALTERNATIVE (huge keyword) ─────────────────────────────────────
-    "DStv alternative",
-    "alternative to DStv",
-    "DStv vs IPTV",
-    "cheaper than DStv",
-    "DStv replacement",
-    "drop DStv",
-    "cancel DStv",
-    "DStv Premium alternative",
-    "DStv Compact alternative",
-    "Showmax alternative",
-    "Netflix alternative South Africa",
-    // ── SA CHANNELS ─────────────────────────────────────────────────────────
-    "SABC IPTV",
-    "SABC streaming",
-    "SABC live online",
-    "e.tv streaming",
-    "e.tv live",
-    "kykNET IPTV",
-    "Mzansi Magic streaming",
-    "M-Net online",
-    "1 Magic streaming",
-    "eNCA online",
-    "Newzroom Afrika streaming",
-    // ── SPORT (MASSIVE) ─────────────────────────────────────────────────────
-    "SuperSport stream",
-    "SuperSport live",
-    "SuperSport PSL streaming",
-    "DStv Premiership stream",
-    "PSL streaming",
-    "PSL live",
-    "Premier League South Africa",
-    "Premier League streaming SA",
-    "Springboks stream",
-    "Springboks live",
-    "URC streaming",
-    "URC South Africa",
-    "Currie Cup stream",
-    "Stormers stream",
-    "Sharks rugby stream",
-    "Bulls rugby stream",
-    "Cheetahs stream",
-    "Kaizer Chiefs stream",
-    "Orlando Pirates stream",
-    "Mamelodi Sundowns stream",
-    "AmaZulu FC stream",
-    "Cape Town City stream",
-    "Proteas cricket stream",
-    "IPL South Africa",
-    "T20 stream SA",
-    "F1 streaming South Africa",
-    // ── DEVICES ─────────────────────────────────────────────────────────────
-    "Firestick IPTV South Africa",
-    "Smart TV IPTV SA",
-    "TiviMate South Africa",
-    "IPTV Smarters South Africa",
-    "MAG Box South Africa",
-    "iPhone IPTV SA",
-    "Android TV box South Africa",
-    "M3U South Africa",
-    // ── CITIES ──────────────────────────────────────────────────────────────
-    "IPTV Johannesburg",
-    "IPTV Cape Town",
-    "IPTV Durban",
-    "IPTV Pretoria",
-    "IPTV Gqeberha",
-    "IPTV Bloemfontein",
-    "IPTV East London",
-    "IPTV Polokwane",
-    "IPTV Joburg",
-    "IPTV Sandton",
-    "IPTV Soweto",
-    "IPTV Stellenbosch",
-    // ── DIASPORA COMMUNITIES IN SA ──────────────────────────────────────────
-    "Zimbabwean IPTV South Africa",
-    "ZBC TV Johannesburg",
-    "Star FM streaming SA",
-    "Indian IPTV South Africa",
-    "Bollywood streaming Durban",
-    "Zee TV South Africa",
-    "Sun TV Durban",
-    "Star Plus SA",
-    "Asianet South Africa",
-    "Nigerian IPTV South Africa",
-    "Nollywood IPTV SA",
-    "Channels TV South Africa",
-    "Africa Magic SA",
-    "British TV South Africa",
-    "BBC Cape Town",
-    "Sky Sports South Africa",
-    "ITV Cape Town",
-    "Portuguese TV South Africa",
-    "TVM Mozambique South Africa",
-    "RTP Pretoria",
-    "Chinese IPTV South Africa",
-    "CCTV South Africa",
-    "Arabic IPTV South Africa",
-    "MBC Cape Town",
-    "beIN Sports Johannesburg",
-    "Greek IPTV South Africa",
-    "ERT Johannesburg",
-    // ── SA EXPATS WORLDWIDE (BIG SEO) ───────────────────────────────────────
-    "watch SuperSport in UK",
-    "watch SuperSport in Australia",
-    "watch SuperSport in USA",
-    "watch SuperSport abroad",
-    "watch SABC abroad",
-    "watch SABC in UK",
-    "watch SABC in Australia",
-    "watch SABC in USA",
-    "watch SABC outside South Africa",
-    "watch kykNET abroad",
-    "watch PSL abroad",
-    "watch Springboks abroad",
-    "watch URC abroad",
-    "watch Currie Cup abroad",
-    "South African TV in UK",
-    "South African TV in Australia",
-    "South African TV in USA",
-    "South African TV in UAE",
-    "South African TV in Canada",
-    "South African TV in Germany",
-    "SA TV expat",
-    "DStv abroad",
-    "DStv outside South Africa",
-    "South African channels worldwide",
-    // ── ISP / FIBRE ─────────────────────────────────────────────────────────
-    "IPTV Vumatel",
-    "IPTV Openserve",
-    "IPTV Frogfoot",
-    "IPTV MTN Fibre",
-    "IPTV Vodacom Fibre",
-    "IPTV Octotel",
-    "IPTV MetroFibre",
-    "IPTV Cool Ideas",
-    // ── PAYMENTS / TRUST ────────────────────────────────────────────────────
-    "IPTV SnapScan",
-    "IPTV Zapper",
-    "IPTV EFT South Africa",
-    "IPTV Capitec Pay",
-    "IPTV Ozow",
-    "IPTV without contract South Africa",
-    "IPTV free trial 24 hours",
-    "IPTV no credit card",
-  ],
+  // `meta name="keywords"` is intentionally omitted — modern Google ignores
+  // it, and stuffing 100+ terms here is a known low-quality signal. Surface
+  // entities through structured data and on-page copy instead.
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
@@ -202,24 +52,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
-    languages: {
-      "en-ZA": SITE_URL + "/?lang=en",
-      "en-GB": SITE_URL + "/?lang=en",
-      "en-AU": SITE_URL + "/?lang=en",
-      "en-US": SITE_URL + "/?lang=en",
-      "en-AE": SITE_URL + "/?lang=en",
-      en: SITE_URL + "/?lang=en",
-      "af-ZA": SITE_URL + "/?lang=af",
-      af: SITE_URL + "/?lang=af",
-      "fr-FR": SITE_URL + "/?lang=fr",
-      fr: SITE_URL + "/?lang=fr",
-      "x-default": SITE_URL,
-    },
+    languages: hreflangAlternates(buildLocaleUrl),
   },
   openGraph: {
     type: "website",
-    locale: "en_ZA",
-    alternateLocale: ["en_GB", "en_AU", "en_US", "af_ZA", "fr_FR"],
+    locale: LOCALE_META[DEFAULT_LOCALE].ogLocale,
+    alternateLocale: LOCALES.filter((l) => l !== DEFAULT_LOCALE).map(
+      (l) => LOCALE_META[l].ogLocale
+    ),
     url: SITE_URL,
     siteName: SITE_NAME,
     title: "Best IPTV South Africa 2026 — 20,000+ Channels in 4K | Mzansi Stream",
@@ -271,7 +111,7 @@ export const metadata: Metadata = {
     "geo.placename": "South Africa",
     "geo.position": "-26.2041;28.0473",
     ICBM: "-26.2041, 28.0473",
-    language: "English, Afrikaans, French",
+    language: "English, Afrikaans, isiZulu, isiXhosa, Português, Français",
     rating: "general",
     distribution: "global",
     coverage: "worldwide",
@@ -295,10 +135,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // The `<html lang>` / `dir` attributes are kept at the en-ZA default for
+  // the initial server render — `LanguageProvider` rewrites them on the
+  // client once the resolved locale is known. A future PR will migrate the
+  // app to `/[locale]/` routes so the correct attributes ship from SSR.
+  const rootMeta = LOCALE_META[DEFAULT_LOCALE];
   return (
     <html
-      lang="en"
-      dir="ltr"
+      lang={rootMeta.hreflang}
+      dir={rootMeta.dir}
       className={geistSans.variable + " h-full antialiased"}
     >
       <body className="min-h-full flex flex-col">{children}</body>

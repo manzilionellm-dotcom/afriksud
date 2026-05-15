@@ -34,7 +34,7 @@ import { StickyMobileCta } from "../components/client/StickyMobileCta";
 
 export default function Page() {
   // Use English as the canonical version for JSON-LD (best for Google in SA)
-  const t = dict.en;
+  const t = dict[SITE.defaultLocale];
 
   // ─── JSON-LD SCHEMAS (ALL SERVER-RENDERED) ────────────────────────────────
   const seller = {
@@ -76,20 +76,9 @@ export default function Page() {
     sku: "MZANSI-STREAM-ZA",
     mpn: "MZANSI-2026",
     category: "Streaming / IPTV",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "1200",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: t.reviews.items.slice(0, 4).map(r => ({
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: String(r.stars), bestRating: "5" },
-      author: { "@type": "Person", name: r.name },
-      reviewBody: r.text,
-      datePublished: "2026-01-15",
-    })),
+    // aggregateRating + review intentionally omitted until HelloPeter
+    // Business profile is connected and there are 50+ verified reviews
+    // with consent (POPIA + Omnibus). DO NOT seed with invented data.
     offers: plans.map(p => ({
       "@type": "Offer",
       "@id": `${SITE.domain}/#offer-${p.key}`,
@@ -157,12 +146,7 @@ export default function Page() {
         closes: "23:00",
       },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "1200",
-      bestRating: "5",
-    },
+    // aggregateRating intentionally omitted — see note on productSchema.
     sameAs: [`https://wa.me/${SITE.whatsappPhone}`],
     priceRange: "99-1199 ZAR",
     currenciesAccepted: SITE.currencyCode,
@@ -208,7 +192,10 @@ export default function Page() {
     url: SITE.domain,
     name: SITE.brand,
     description: "Premium IPTV for South Africa and the SA diaspora worldwide — 20,000+ channels in 4K.",
-    inLanguage: ["en-ZA", "en-GB", "af-ZA", "fr-FR"],
+    inLanguage: [
+      "en-ZA", "en-GB", "en-AU", "en-US", "en-AE", "en-NZ", "en-ZW",
+      "af", "zu", "xh", "pt-MZ", "fr",
+    ],
     publisher: { "@id": `${SITE.domain}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
@@ -238,7 +225,10 @@ export default function Page() {
     serviceType: "Premium IPTV Streaming",
     name: `${SITE.brand} — Premium IPTV`,
     provider: { "@id": `${SITE.domain}/#organization` },
-    inLanguage: ["en-ZA", "en-GB", "en-AU", "af-ZA", "fr-FR"],
+    inLanguage: [
+      "en-ZA", "en-GB", "en-AU", "en-US", "en-AE", "en-NZ", "en-ZW",
+      "af", "zu", "xh", "pt-MZ", "fr",
+    ],
     areaServed: [
       { "@type": "Country", name: "South Africa" },
       { "@type": "Country", name: "Zimbabwe" },

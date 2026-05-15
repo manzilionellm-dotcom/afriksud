@@ -1,7 +1,8 @@
 // components/shared/types.ts
 // All shared TypeScript types for Mzansi Stream
 
-export type Locale = "en" | "af" | "fr";
+import type { Locale } from "../../lib/locales";
+export type { Locale };
 export type PlanKey = "p1" | "p3" | "p6" | "p12";
 export type Msg = { from: "bot" | "user"; text: string };
 

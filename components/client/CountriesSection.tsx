@@ -4,12 +4,21 @@
 
 import React, { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
-import { dict } from "../shared/dict";
 import { countries } from "../shared/countries";
-import type { Country } from "../shared/types";
+import type { Country, Locale } from "../shared/types";
 import { generateWhatsAppLink } from "../shared/utils";
 
-const TITLES_BY_LANG = {
+type LangGroup = "en" | "af" | "fr";
+
+function toLangGroup(locale: Locale): LangGroup {
+  if (locale === "af") return "af";
+  if (locale === "fr") return "fr";
+  // zu / xh / pt-mz / all English variants fall back to en copy here
+  // until per-locale strings land in a follow-up PR.
+  return "en";
+}
+
+const TITLES_BY_LANG: Record<LangGroup, Record<string, string>> = {
   en: { title: "TV in your language, living in South Africa", sub: "Tap your country to see every channel and sign up instantly on WhatsApp.", hint: "👆 Tap a country to see the available channels", notFoundCta: "💬 Your language not listed? Ask us", notFoundMsg: "Hi! I am looking for channels in my language while living in South Africa.", channelsTitle: "📺 Channels included", searchTitle: "🔍 What people search on Google", volumeNote: "Volume = monthly searches in South Africa", priceTitle: "From R99/mo", priceSub: "All channels · Free 24h trial · No contract", more: "+ hundreds more", orderCta: "💬 Order — WhatsApp", trialCta: "🧪 Free 24h trial", trialMsg: "Hi! I want a free 24h trial of the" },
   af: { title: "TV in jou taal, in Suid-Afrika", sub: "Tik op jou land om al die kanale te sien en onmiddellik aan te sluit via WhatsApp.", hint: "👆 Tik 'n land om die kanale te sien", notFoundCta: "💬 Jou taal nie gelys nie? Vra ons", notFoundMsg: "Hi! Ek soek kanale in my taal in Suid-Afrika.", channelsTitle: "📺 Kanale ingesluit", searchTitle: "🔍 Wat mense op Google soek", volumeNote: "Volume = maandelikse soektogte in Suid-Afrika", priceTitle: "Vanaf R99/maand", priceSub: "Alle kanale · Gratis 24u proef · Geen kontrak", more: "+ honderde meer", orderCta: "💬 Bestel — WhatsApp", trialCta: "🧪 Gratis 24u proef", trialMsg: "Hi! Ek wil 'n gratis 24u proef van die" },
   fr: { title: "La TV dans votre langue, en Afrique du Sud", sub: "Cliquez sur votre pays pour voir toutes les chaînes et s'inscrire sur WhatsApp.", hint: "👆 Cliquez sur un pays pour voir les chaînes", notFoundCta: "💬 Votre langue n'est pas listée ? Demandez-nous", notFoundMsg: "Bonjour ! Je cherche des chaînes dans ma langue en Afrique du Sud.", channelsTitle: "📺 Chaînes incluses", searchTitle: "🔍 Ce que les gens cherchent sur Google", volumeNote: "Volume = recherches mensuelles en Afrique du Sud", priceTitle: "À partir de R99/mois", priceSub: "Toutes les chaînes · Essai 24h gratuit · Sans engagement", more: "+ des centaines d'autres", orderCta: "💬 Commander — WhatsApp", trialCta: "🧪 Essai 24h gratuit", trialMsg: "Bonjour ! Je veux un essai gratuit 24h des" },
@@ -17,7 +26,7 @@ const TITLES_BY_LANG = {
 
 export function CountriesSection() {
   const { lang } = useLang();
-  const tx = TITLES_BY_LANG[lang];
+  const tx = TITLES_BY_LANG[toLangGroup(lang)];
   const [selected, setSelected] = useState<Country | null>(null);
   const [ua, setUA] = useState("");
 
