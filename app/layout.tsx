@@ -124,7 +124,12 @@ export const viewport: Viewport = {
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  minimumScale: 1,
+  // Accessibility intact — users can pinch-zoom up to 5x. Accidental
+  // double-tap zoom is killed per-element via `touch-action: manipulation`
+  // in globals.css, not by clamping the viewport.
   maximumScale: 5,
+  userScalable: true,
   viewportFit: "cover",
 };
 

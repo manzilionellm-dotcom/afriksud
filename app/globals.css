@@ -1,6 +1,20 @@
 /* app/globals.css */
 /* MERGED: Your Tailwind + anti-overflow base + complete Sverige TV styles. */
 
+/* ===========================================================
+   .well-known/web-vitals — mobile fluidity baseline
+   -----------------------------------------------------------
+   1. touch-action: manipulation kills the 300ms tap delay and
+      iOS double-tap-to-zoom on tappable surfaces. Pinch-zoom on
+      body content still works (accessibility intact).
+   2. -webkit-tap-highlight-color: transparent removes the gray
+      flash on tap; we replace it with :active states.
+   3. -webkit-text-size-adjust: 100% prevents Safari from
+      bumping font-size on landscape rotation.
+   4. Inputs forced to ≥16px font-size — anything smaller makes
+      iOS auto-zoom on focus.
+   5. -webkit-appearance: none normalises iOS form controls.
+   =========================================================== */
 @import "tailwindcss";
 
 :root {
@@ -37,7 +51,12 @@ body {
 
 html {
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  /* Removes 300ms tap delay + iOS double-tap zoom globally; pinch-zoom
+     still works for users that need it. Per-element overrides apply
+     for explicit text-selection regions further down. */
+  touch-action: manipulation;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   text-rendering: optimizeLegibility;
@@ -70,11 +89,73 @@ body > * {
   max-width: 100%;
 }
 
+/* iOS Safari auto-zooms on inputs whose computed font-size is < 16px.
+   Force 16px at all viewports (was previously only ≤768px) so desktop
+   embeds on narrow webviews don't regress. */
+input,
+select,
+textarea {
+  font-size: 16px;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Native checkbox/radio appearance must be preserved or they vanish. */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
 @media (max-width: 768px) {
   input,
   select,
   textarea {
     font-size: 16px !important;
+  }
+}
+
+/* All interactive surfaces — instant tap, no zoom, no callout. */
+button,
+a,
+[role="button"],
+[role="link"],
+[role="tab"],
+[role="menuitem"],
+input[type="submit"],
+input[type="button"],
+label,
+summary,
+.card,
+[data-tappable] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Keep native text selection on actual prose. */
+p, h1, h2, h3, h4, h5, h6, span, li, td, th, blockquote, code, pre, figcaption {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+/* Tap response — instant visual feedback at ≤100ms feels native.
+   Scoped to button-shaped surfaces only (not inline prose links). */
+:where(button, [role="button"], .btnPrimary, .btnSecondary, .btnGhost,
+       .trialCta, .pricingCta, .miliFab, .pwaInstall, .ctaPill,
+       [data-tappable]):active {
+  transform: scale(0.97);
+  transition: transform 100ms cubic-bezier(0.2, 0, 0, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  :where(button, [role="button"], .btnPrimary, .btnSecondary, .btnGhost,
+         .trialCta, .pricingCta, .miliFab, .pwaInstall, .ctaPill,
+         [data-tappable]):active {
+    transform: none;
   }
 }
 
@@ -2876,3 +2957,127 @@ body {
   color: var(--mz-accent-gold);
   text-decoration: underline;
 }
+
+/* ===========================================================
+   CONTENT-VISIBILITY — skip rendering work for offscreen
+   sections. The browser only paints / lays out these blocks
+   when they're near the viewport. Reserved height comes from
+   contain-intrinsic-size so CLS stays at 0.
+   =========================================================== */
+.section,
+section.deferred,
+[data-deferred="true"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+/* Don't defer the hero / above-the-fold band — it must paint immediately. */
+.hero,
+.heroV2,
+.hero-v2,
+[data-hero],
+.trialBanner,
+.section.aboveFold,
+[data-deferred="false"] {
+  content-visibility: visible;
+  contain-intrinsic-size: auto;
+}
+
+/* ===========================================================
+   CSS CONTAINMENT on every card-shaped surface so per-card
+   updates can't trigger global reflow. (Cards already had
+   `contain: layout style` earlier — we extend to paint.)
+   =========================================================== */
+.card,
+.trustCard,
+.deviceCard,
+.reviewCard,
+.stepCard,
+.countryCard,
+.intlCard,
+.priceCard,
+.pricingCard,
+.cityCard,
+.channelCard,
+.communityCard,
+.faqItem,
+[data-card] {
+  contain: layout style paint;
+}
+
+/* ===========================================================
+   CAROUSEL CONTAINMENT — scroll-snap rows are isolated so
+   inertial scrolling on the row doesn't bounce the page; the
+   scrollbar is visually hidden (keyboard nav unaffected).
+   =========================================================== */
+[data-scroll-x],
+.carousel-track,
+.pricingCarouselTrack,
+.horizontalRow {
+  contain: layout style paint;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline-start: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+[data-scroll-x]::-webkit-scrollbar,
+.carousel-track::-webkit-scrollbar,
+.pricingCarouselTrack::-webkit-scrollbar,
+.horizontalRow::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+[data-scroll-x] > *,
+.carousel-track > *,
+.pricingCarouselTrack > *,
+.horizontalRow > * {
+  scroll-snap-align: start;
+}
+
+/* ===========================================================
+   SAFE-AREA INSETS — fixed top / bottom UI must clear iPhone
+   notch and home indicator. (Component-level classes already
+   compute via max(); this is a safety net for any future
+   sticky element added with [data-fixed-bottom].)
+   =========================================================== */
+[data-fixed-bottom] {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+[data-fixed-top] {
+  padding-top: max(8px, env(safe-area-inset-top));
+}
+
+/* ===========================================================
+   GPU LAYER PROMOTION — frequently-animated surfaces. We pin
+   will-change only on persistently-animated elements (sticky
+   header, FAB, sheets). Don't add to one-shot animations.
+   =========================================================== */
+.miliFab,
+.liveToast,
+.stickyMobileCta,
+.stickyBottomCta,
+.headerStuck,
+.sheetWrap,
+.drawer,
+.cinWrap {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ===========================================================
+   ASPECT-RATIO RESERVATIONS — any container that hosts an
+   image must reserve space before the resource lands. Tailwind
+   utilities already cover most; these utility classes are
+   available where no Tailwind class is in play.
+   =========================================================== */
+.image-wrap-16x9 { aspect-ratio: 16 / 9; }
+.image-wrap-1x1 { aspect-ratio: 1 / 1; }
+.image-wrap-4x5 { aspect-ratio: 4 / 5; }
+.image-wrap-3x4 { aspect-ratio: 3 / 4; }
+
+/* Focus ring already declared earlier in the file (:focus-visible
+   and *:focus-visible). No override here — keeps brand red ring. */
