@@ -3,12 +3,13 @@
 
 import React, { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 import { dict } from "../shared/dict";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
 
 export function HeaderNav() {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
   const t = dict[lang];
   const [menuOpen, setMenuOpen] = useState(false);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
@@ -53,23 +54,7 @@ export function HeaderNav() {
             {navLinks.map(l => (
               <a key={l.href} href={l.href}>{l.label}</a>
             ))}
-            <div className="langSwitch">
-              <button
-                onClick={() => setLang("en")}
-                className={`langBtn ${lang === "en" ? "active" : ""}`}
-                aria-label="English"
-              >EN</button>
-              <button
-                onClick={() => setLang("af")}
-                className={`langBtn ${lang === "af" ? "active" : ""}`}
-                aria-label="Afrikaans"
-              >AF</button>
-              <button
-                onClick={() => setLang("fr")}
-                className={`langBtn ${lang === "fr" ? "active" : ""}`}
-                aria-label="Français"
-              >FR</button>
-            </div>
+            <LocaleSwitcher variant="desktop" />
             {installPrompt && (
               <button onClick={handleInstallClick} className="installBtn" type="button">
                 📲 {t.nav.install}
@@ -97,20 +82,10 @@ export function HeaderNav() {
               {l.label}
             </a>
           ))}
-          <div className="mobileLangSwitch">
-            <button
-              onClick={(e) => { e.stopPropagation(); setLang("en"); }}
-              className={`langBtn ${lang === "en" ? "active" : ""}`}
-            >EN</button>
-            <button
-              onClick={(e) => { e.stopPropagation(); setLang("af"); }}
-              className={`langBtn ${lang === "af" ? "active" : ""}`}
-            >AF</button>
-            <button
-              onClick={(e) => { e.stopPropagation(); setLang("fr"); }}
-              className={`langBtn ${lang === "fr" ? "active" : ""}`}
-            >FR</button>
-          </div>
+          <LocaleSwitcher
+            variant="mobile"
+            onSelect={() => setMenuOpen(false)}
+          />
           <a
             className="btnPrimary"
             href={generateWhatsAppLink(t.whatsapp.generic, ua, "Mobile-Menu")}

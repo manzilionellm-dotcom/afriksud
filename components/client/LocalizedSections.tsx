@@ -61,11 +61,6 @@ export function Hero() {
         <div className="heroTrust">{t.hero.trust}</div>
 
         <div className="trustStrip" aria-label="Mzansi Stream trust signals">
-          <span className="trustStripItem">
-            <span className="gold">★ 4.9/5</span>&nbsp;·&nbsp;
-            <strong>1,200+</strong> {t.trustStrip.customers}
-          </span>
-          <span className="trustStripDot" aria-hidden="true" />
           <span className="trustStripItem">⚡ <strong>{t.trustStrip.activated}</strong></span>
           <span className="trustStripDot" aria-hidden="true" />
           <span className="trustStripItem">🌍 <strong>50+ {t.trustStrip.countries}</strong></span>
@@ -260,25 +255,28 @@ export function CompareSection() {
 export function ReviewsSection() {
   const { lang } = useLang();
   const t = dict[lang];
+  const hasReviews = t.reviews.items.length > 0;
   return (
     <section className="section">
       <div className="sectionHead">
         <h2>{t.reviews.title}</h2>
         <p>{t.reviews.sub}</p>
       </div>
-      <div className="reviewsGrid">
-        {t.reviews.items.map((r, i) => (
-          <article key={i} className="reviewCard">
-            <div className="reviewStars">{"⭐".repeat(r.stars)}</div>
-            <p className="reviewText">&ldquo;{r.text}&rdquo;</p>
-            <div className="reviewMeta">
-              <span className="reviewName">{r.name}</span>
-              <span className="reviewCity">— {r.city}</span>
-              <span className="reviewPlan">{r.plan}</span>
-            </div>
-          </article>
-        ))}
-      </div>
+      {hasReviews ? (
+        <div className="reviewsGrid">
+          {t.reviews.items.map((r, i) => (
+            <article key={i} className="reviewCard">
+              <div className="reviewStars">{"⭐".repeat(r.stars)}</div>
+              <p className="reviewText">&ldquo;{r.text}&rdquo;</p>
+              <div className="reviewMeta">
+                <span className="reviewName">{r.name}</span>
+                <span className="reviewCity">— {r.city}</span>
+                <span className="reviewPlan">{r.plan}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }

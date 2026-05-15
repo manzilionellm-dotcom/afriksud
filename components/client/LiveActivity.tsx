@@ -5,6 +5,11 @@ import React, { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
 import { generateWhatsAppLink, getISOWeekKey, hash32, makePRNG, clamp, timeAgoLabel } from "../shared/utils";
 import { SITE } from "../shared/site";
+import type { Locale } from "../shared/types";
+
+type LangGroup = "en" | "af" | "fr";
+const toLangGroup = (locale: Locale): LangGroup =>
+  locale === "af" ? "af" : locale === "fr" ? "fr" : "en";
 
 const COPY = {
   en: { live: "live", title: "Right now 🔥", subTpl: (n: number) => `${n} people are looking at pricing now.`, view: "View", visitors: "Visitors now", support: "Support", online: "Online", openCta: "Open WhatsApp", waMsg: "Hi! I want to sign up.", updated: "Updated" },
@@ -14,7 +19,7 @@ const COPY = {
 
 export function LiveActivity() {
   const { lang } = useLang();
-  const cx = COPY[lang];
+  const cx = COPY[toLangGroup(lang)];
   const [open, setOpen] = useState(false);
   const [toast, setToast] = useState(false);
   const [data, setData] = useState<{ viewing: number; updatedLabel: string } | null>(null);
