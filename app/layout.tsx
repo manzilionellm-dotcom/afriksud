@@ -5,7 +5,7 @@
 
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
-import { DEFAULT_LOCALE, LOCALE_META, LOCALES, hreflangAlternates } from "../lib/locales";
+import { DEFAULT_LOCALE, LOCALE_META, LOCALES } from "../lib/locales";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,9 +17,6 @@ const geistSans = Geist({
 const SITE_URL = "https://iptvmzansi.com";
 const SITE_NAME = "Mzansi Stream";
 const OG_IMAGE = SITE_URL + "/og-image.jpg";
-
-const buildLocaleUrl = (locale: typeof LOCALES[number]) =>
-  locale === DEFAULT_LOCALE ? SITE_URL + "/" : `${SITE_URL}/?lang=${locale}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -51,8 +48,9 @@ export const metadata: Metadata = {
     address: false,
   },
   alternates: {
+    // Per-page canonical + languages live on `app/[locale]/.../page.tsx`.
+    // Root-level metadata only carries the default-locale hint.
     canonical: "/",
-    languages: hreflangAlternates(buildLocaleUrl),
   },
   openGraph: {
     type: "website",
