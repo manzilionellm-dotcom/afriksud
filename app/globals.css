@@ -2407,3 +2407,430 @@ h1 {
 .card, .trustCard, .deviceCard, .reviewCard, .stepCard, .countryCard, .intlCard {
   contain: layout style;
 }
+
+/* ─── Mzansi Sun palette (CSS custom properties, additive) ───────────── */
+:root {
+  --mz-bg: #0a0a0f;
+  --mz-accent-gold: #f5b82e;
+  --mz-accent-red: #e63946;
+  --mz-cream: #fff8ee;
+  --mz-neutral-100: #1a1a22;
+  --mz-neutral-200: #2a2a33;
+  --mz-neutral-300: #3a3a44;
+  --mz-neutral-400: #6a6a75;
+  --mz-neutral-500: #9a9aa5;
+  --mz-neutral-600: #c5c5d0;
+  --mz-success: #28a745;
+  --mz-radius: 12px;
+  --mz-radius-lg: 16px;
+}
+
+/* ─── A11y — skip link + focus visible + reduced motion ──────────────── */
+.skip-link {
+  position: absolute;
+  inset-inline-start: -9999px;
+  top: 0;
+  background: var(--mz-accent-red);
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: 600;
+  z-index: 1000;
+  border-radius: 0 0 var(--mz-radius) 0;
+}
+.skip-link:focus {
+  inset-inline-start: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--mz-accent-red);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Tap targets ────────────────────────────────────────────────────── */
+button,
+a.btnPrimary,
+a.btnSecondary,
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: 44px;
+}
+
+/* ─── Longform / programmatic page shell ─────────────────────────────── */
+.longform {
+  max-width: 880px;
+  margin-inline: auto;
+  padding: 24px 20px 80px;
+  line-height: 1.6;
+}
+.longformHeader {
+  padding: 32px 0 24px;
+}
+.longformEyebrow {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mz-accent-gold);
+  margin-bottom: 12px;
+}
+.longformLead {
+  font-size: 1.05rem;
+  color: var(--mz-neutral-600);
+  margin: 16px 0 24px;
+}
+.longformSection {
+  margin: 32px 0;
+}
+.longformSection h2 {
+  margin-top: 32px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.longformSection h3 {
+  margin-top: 24px;
+  font-size: 1.15rem;
+}
+.longformSection p {
+  margin: 12px 0;
+}
+.longformList {
+  margin: 12px 0 12px 20px;
+  padding: 0;
+}
+.longformList li {
+  margin: 6px 0;
+}
+.longformWarning {
+  background: rgba(245, 184, 46, 0.12);
+  border-inline-start: 3px solid var(--mz-accent-gold);
+  padding: 12px 16px;
+  border-radius: var(--mz-radius);
+  color: var(--mz-cream);
+  font-size: 0.95rem;
+}
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* ─── Comparison table ────────────────────────────────────────────────── */
+.compareTableWrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  border-radius: var(--mz-radius);
+}
+.compareTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  font-size: 0.95rem;
+}
+.compareTable th,
+.compareTable td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--mz-neutral-200);
+}
+.compareTable thead th {
+  background: var(--mz-neutral-100);
+  font-weight: 600;
+  color: var(--mz-cream);
+}
+.compareTable .highlight {
+  background: rgba(230, 57, 70, 0.08);
+  color: var(--mz-cream);
+  font-weight: 600;
+}
+.compareTable .featureLabel {
+  font-weight: 500;
+  color: var(--mz-neutral-600);
+}
+
+/* ─── FAQ items ─────────────────────────────────────────────────────── */
+.faqItem {
+  border-bottom: 1px solid var(--mz-neutral-200);
+  padding: 14px 0;
+}
+.faqItem summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.02rem;
+  list-style: none;
+}
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+.faqItem summary::after {
+  content: "+";
+  float: right;
+  font-weight: 400;
+  color: var(--mz-accent-gold);
+}
+.faqItem[open] summary::after {
+  content: "−";
+}
+.faqItem p {
+  margin: 10px 0 0;
+  color: var(--mz-neutral-600);
+}
+
+/* ─── Blog index ────────────────────────────────────────────────────── */
+.blogIndex {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+.blogIndexItem {
+  padding: 16px 18px;
+  background: var(--mz-neutral-100);
+  border-radius: var(--mz-radius);
+  border: 1px solid var(--mz-neutral-200);
+}
+.blogIndexItem h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.blogIndexItem h2 a {
+  color: var(--mz-cream);
+  text-decoration: none;
+}
+.blogIndexItem h2 a:hover,
+.blogIndexItem h2 a:focus-visible {
+  color: var(--mz-accent-gold);
+}
+.blogIndexLead {
+  color: var(--mz-neutral-600);
+  margin: 6px 0;
+}
+.blogIndexMeta {
+  font-size: 0.85rem;
+  color: var(--mz-neutral-500);
+}
+
+/* ─── Savings calculator ────────────────────────────────────────────── */
+.savingsCalc {
+  background: var(--mz-neutral-100);
+  border: 1px solid var(--mz-neutral-200);
+  border-radius: var(--mz-radius-lg);
+  padding: 20px;
+  margin: 20px 0;
+}
+.savingsCalcLabel {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.savingsCalcSelect {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--mz-radius);
+  border: 1px solid var(--mz-neutral-300);
+  background: var(--mz-bg);
+  color: var(--mz-cream);
+  font-size: 1rem;
+}
+.savingsCalcResult {
+  margin-top: 16px;
+  padding: 14px;
+  background: var(--mz-bg);
+  border-radius: var(--mz-radius);
+}
+.savingsCalcRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--mz-neutral-200);
+}
+.savingsCalcRow:last-child {
+  border-bottom: none;
+}
+.savingsCalcTotal {
+  font-size: 1.1rem;
+  padding-top: 12px;
+  margin-top: 6px;
+  border-top: 2px solid var(--mz-accent-red);
+  border-bottom: none;
+}
+.savingsCalcWin {
+  color: var(--mz-success);
+}
+.savingsCalcHint {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  color: var(--mz-neutral-500);
+}
+
+/* ─── WhatsApp FAB ──────────────────────────────────────────────────── */
+.waFab {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  inset-inline-end: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+  z-index: 60;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.waFab:hover {
+  transform: scale(1.05);
+}
+
+/* ─── Sticky bottom CTA bar ─────────────────────────────────────────── */
+.stickyBottomCta {
+  position: fixed;
+  bottom: 0;
+  inset-inline: 0;
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 50;
+  border-top: 1px solid var(--mz-neutral-200);
+}
+.stickyBottomCta a {
+  flex: 1;
+  text-align: center;
+  padding: 14px 12px;
+  border-radius: var(--mz-radius);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.stickyBottomCtaPrimary {
+  background: var(--mz-accent-red);
+  color: #fff;
+}
+.stickyBottomCtaSecondary {
+  background: var(--mz-neutral-200);
+  color: var(--mz-cream);
+}
+@media (min-width: 768px) {
+  .stickyBottomCta {
+    inset-inline-start: auto;
+    inset-inline-end: 90px;
+    bottom: 20px;
+    border-radius: var(--mz-radius-lg);
+    border: 1px solid var(--mz-neutral-200);
+    max-width: 480px;
+  }
+}
+
+/* leave space below sticky CTA so it doesn't hide content */
+body {
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}
+@media (max-width: 767px) {
+  .longform,
+  .main {
+    padding-bottom: 96px;
+  }
+}
+
+/* ─── POPIA consent banner ──────────────────────────────────────────── */
+.popiaBanner {
+  position: fixed;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+  background: var(--mz-neutral-100);
+  border-top: 1px solid var(--mz-neutral-300);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 70;
+}
+.popiaBannerText {
+  flex: 1 1 280px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--mz-neutral-600);
+}
+.popiaBannerLink {
+  color: var(--mz-accent-gold);
+  text-decoration: underline;
+}
+.popiaBannerActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.popiaBtn {
+  padding: 10px 16px;
+  border-radius: var(--mz-radius);
+  border: 1px solid var(--mz-neutral-300);
+  background: var(--mz-bg);
+  color: var(--mz-cream);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.popiaBtnAccept {
+  background: var(--mz-accent-red);
+  border-color: var(--mz-accent-red);
+  color: #fff;
+}
+.popiaBtnReject {
+  background: var(--mz-neutral-200);
+}
+.popiaBtnCustomize {
+  background: transparent;
+}
+
+/* ─── Hero typography clamp (mobile-first) ──────────────────────────── */
+.longform h1 {
+  font-size: clamp(1.8rem, 7vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* ─── LocaleSwitcher native labels ──────────────────────────────────── */
+.langSwitch,
+.mobileLangSwitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--mz-neutral-300);
+  background: transparent;
+  color: var(--mz-cream);
+  cursor: pointer;
+}
+.langBtn.active {
+  background: var(--mz-accent-red);
+  border-color: var(--mz-accent-red);
+  color: #fff;
+}

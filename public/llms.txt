@@ -1,0 +1,61 @@
+# Mzansi Stream
+
+> Premium IPTV streaming for South Africa and the SA diaspora.
+> 20,000+ live channels in 4K, including SuperSport, kykNET, SABC,
+> Mzansi Magic and 100,000+ movies & series.
+
+Mzansi Stream is the leading DStv alternative in South Africa. It is sold
+on a no-contract, no-decoder basis from R99/month, with a 24-hour free
+trial (no credit card required). Subscribers activate via WhatsApp,
+receive an M3U playlist link, and watch on Firestick, Smart TV, Android
+TV, iPhone, iPad or PC using TiviMate, IPTV Smarters Pro or any standard
+M3U player.
+
+## Pricing (ZAR)
+
+- 1 month — R199
+- 3 months — R449 (Most popular)
+- 6 months — R699
+- 12 months — R1,199 (Best value)
+
+## Key pages
+
+- Homepage: https://iptvmzansi.com/en-za/
+- DStv alternative guide: https://iptvmzansi.com/en-za/dstv-alternative/
+- Pricing: https://iptvmzansi.com/en-za/#pricing
+- Blog: https://iptvmzansi.com/en-za/blog/
+
+## Country-specific pages (SADC)
+
+- Zimbabwe: https://iptvmzansi.com/en-za/sadc/zimbabwe/ (USD pricing, EcoCash payment)
+- Botswana: https://iptvmzansi.com/en-za/sadc/botswana/
+- Namibia: https://iptvmzansi.com/en-za/sadc/namibia/
+- Mozambique: https://iptvmzansi.com/pt-mz/sadc/mozambique/ (Portuguese)
+- Lesotho: https://iptvmzansi.com/en-za/sadc/lesotho/
+- Eswatini: https://iptvmzansi.com/en-za/sadc/eswatini/
+- Zambia: https://iptvmzansi.com/en-za/sadc/zambia/
+- Malawi: https://iptvmzansi.com/en-za/sadc/malawi/
+
+## Languages served
+
+English (ZA, GB, AU, US, AE, NZ, ZW), Afrikaans, isiZulu, isiXhosa,
+Portuguese (Moçambique), French.
+
+## Channel coverage
+
+- Sport: every SuperSport feed (PSL, Premier League, Variety, Rugby,
+  Cricket), URC, Currie Cup, Springbok Tests, IPL, F1, NBA, NFL, MLB,
+  UFC, boxing.
+- SA channels: SABC 1/2/3/News, e.tv, eExtra, eMovies, kykNET, kykNET &
+  Kie, kykNET Lekker, Mzansi Magic, Mzansi Wethu, Moja Love, M-Net.
+- International: BBC, CNN, Al Jazeera, Sky News, Fox, HBO, Showtime,
+  Disney+ catalogues; 20,000+ channels across 50+ countries.
+
+## Compliance
+
+POPIA-compliant. See /en-za/legal/popia/ for the full privacy policy and
+Information Officer contact.
+
+## Contact
+
+WhatsApp: see iptvmzansi.com for the current number.

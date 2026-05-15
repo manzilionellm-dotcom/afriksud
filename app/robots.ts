@@ -1,4 +1,7 @@
 // app/robots.ts
+// AI Mode 2026: explicitly allow LLM crawlers we want to be cited by
+// (ChatGPT, Claude, Perplexity, Google AI Overviews). Their default
+// posture is "off"; we opt in. SEO competitor scrapers stay blocked.
 
 import type { MetadataRoute } from "next";
 
@@ -7,7 +10,7 @@ const SITE_URL = "https://iptvmzansi.com";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Mainstream search engines — full access
+      // Mainstream search — full access.
       { userAgent: "Googlebot", allow: "/" },
       { userAgent: "Googlebot-Image", allow: "/" },
       { userAgent: "Googlebot-News", allow: "/" },
@@ -16,30 +19,30 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Slurp", allow: "/" },
       { userAgent: "Applebot", allow: "/" },
       { userAgent: "YandexBot", allow: "/" },
-      // AI training crawlers — blocked
-      { userAgent: "GPTBot", disallow: "/" },
-      { userAgent: "ChatGPT-User", disallow: "/" },
-      { userAgent: "OAI-SearchBot", disallow: "/" },
-      { userAgent: "ClaudeBot", disallow: "/" },
-      { userAgent: "Claude-Web", disallow: "/" },
-      { userAgent: "anthropic-ai", disallow: "/" },
-      { userAgent: "Google-Extended", disallow: "/" },
-      { userAgent: "Applebot-Extended", disallow: "/" },
-      { userAgent: "PerplexityBot", disallow: "/" },
-      { userAgent: "Perplexity-User", disallow: "/" },
-      { userAgent: "Bytespider", disallow: "/" },
-      { userAgent: "Amazonbot", disallow: "/" },
-      { userAgent: "FacebookBot", disallow: "/" },
-      { userAgent: "Meta-ExternalAgent", disallow: "/" },
-      { userAgent: "CCBot", disallow: "/" },
-      { userAgent: "YouBot", disallow: "/" },
-      { userAgent: "cohere-ai", disallow: "/" },
-      // SEO competitor scrapers
+
+      // AI Mode crawlers — ALLOW so we can be cited by ChatGPT / Claude /
+      // Perplexity / Google AI Overviews. Mzansi Stream wants the visibility.
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "Perplexity-User", allow: "/" },
+      { userAgent: "YouBot", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+
+      // SEO competitor scrapers — keep blocked.
       { userAgent: "AhrefsBot", disallow: "/" },
       { userAgent: "SemrushBot", disallow: "/" },
       { userAgent: "MJ12bot", disallow: "/" },
       { userAgent: "DotBot", disallow: "/" },
-      // Default
+
+      // Default — everything else.
       { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"], crawlDelay: 5 },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
