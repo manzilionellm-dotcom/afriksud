@@ -2834,3 +2834,45 @@ body {
   border-color: var(--mz-accent-red);
   color: #fff;
 }
+
+/* ─── Diaspora / community internal-link footers ─────────────────────── */
+.diasporaLinks {
+  margin: 24px 0 8px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--mz-neutral-200);
+  border-radius: var(--mz-radius);
+}
+.diasporaLinksTitle {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mz-accent-gold);
+  margin: 0 0 10px;
+}
+.diasporaLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px 16px;
+}
+.diasporaLinks li {
+  margin: 0;
+}
+.diasporaLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mz-cream);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 4px 0;
+  line-height: 1.3;
+}
+.diasporaLinks a:hover,
+.diasporaLinks a:focus-visible {
+  color: var(--mz-accent-gold);
+  text-decoration: underline;
+}

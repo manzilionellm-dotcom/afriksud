@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
 import { SA_CITY_SLUGS, getSACity } from "../../../../lib/seo/cities";
+import { CITY_TOP_COMMUNITIES, getCommunity } from "../../../../lib/seo/communities";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../../components/client/HeaderNav";
 import { FooterSection } from "../../../../components/client/LocalizedSections";
@@ -50,6 +51,10 @@ export default async function CityPage({ params }: Props) {
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const data = getSACity(city);
   if (!data) notFound();
+
+  const topCommunities = (CITY_TOP_COMMUNITIES[city] ?? [])
+    .map((slug) => getCommunity(slug))
+    .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
   const localBusiness = {
     "@context": "https://schema.org",
@@ -165,6 +170,26 @@ export default async function CityPage({ params }: Props) {
                 demand.
               </p>
             </section>
+
+            {topCommunities.length > 0 ? (
+              <section className="longformSection">
+                <h2>Diaspora channels for {data.name}</h2>
+                <p>
+                  Households in {data.name} often pair their SA channels
+                  with home-country programming. Featured community pages:
+                </p>
+                <ul className="longformList">
+                  {topCommunities.map((c) => (
+                    <li key={c.slug}>
+                      <a href={`/${locale}/communities/${c.slug}/`}>
+                        {c.demonym} TV in South Africa — {c.homeCountry}{" "}
+                        channels
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
             <section className="longformSection" id="pricing">
               <h2>Plans from R99/month — no contract</h2>

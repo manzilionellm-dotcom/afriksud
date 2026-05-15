@@ -9,6 +9,8 @@ import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
 import { BLOG_SLUGS } from "../lib/seo/blog-posts";
 import { LEGAL_SLUGS, LEGAL_TOPICS } from "../lib/seo/legal";
 import { SA_LANGUAGE_SLUGS } from "../lib/seo/sa-languages";
+import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
+import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -84,6 +86,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const slug of LEGAL_SLUGS) {
     if (!indexableLegalSlugs.includes(slug)) continue;
     entries.push(withAlternates(`/legal/${slug}/`, 0.4, "yearly"));
+  }
+
+  // SA diaspora abroad — canonical lives on the preferred locale per
+  // country (e.g. /en-gb/sa-abroad/uk/ rather than /en-za/...).
+  for (const country of SA_ABROAD_COUNTRIES) {
+    void SA_ABROAD_SLUGS; // tree-shake guard
+    entries.push({
+      url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}/`),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}/`) },
+    });
+  }
+
+  // Foreign communities in SA — always canonicalises to en-za.
+  for (const slug of COMMUNITY_SLUGS) {
+    entries.push(withAlternates(`/communities/${slug}/`, 0.75, "monthly"));
   }
 
   // Reference: LOCALE_META is wired here purely to validate the helpers

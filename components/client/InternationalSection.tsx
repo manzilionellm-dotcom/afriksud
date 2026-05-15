@@ -7,6 +7,7 @@ import { useLang } from "./LanguageProvider";
 import { dict } from "../shared/dict";
 import { expatCountries } from "../shared/countries";
 import { generateWhatsAppLink } from "../shared/utils";
+import { SA_ABROAD_COUNTRIES } from "../../lib/seo/sa-abroad";
 
 export function InternationalSection() {
   const { lang } = useLang();
@@ -73,6 +74,19 @@ export function InternationalSection() {
           ))}
         </div>
       </div>
+
+      <nav className="diasporaLinks" aria-label="South African diaspora country guides">
+        <p className="diasporaLinksTitle">Country guides for SA expats</p>
+        <ul>
+          {SA_ABROAD_COUNTRIES.map((c) => (
+            <li key={c.slug}>
+              <a href={`/${lang}/sa-abroad/${c.slug}/`} hrefLang={c.preferredCanonicalLocale}>
+                <span aria-hidden="true">{c.flag}</span> SA TV in {c.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <div className="stepsCtaWrap" style={{ marginTop: 28, flexDirection: "column", gap: 10 }}>
         <a

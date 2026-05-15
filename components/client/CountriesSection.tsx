@@ -7,6 +7,7 @@ import { useLang } from "./LanguageProvider";
 import { countries } from "../shared/countries";
 import type { Country, Locale } from "../shared/types";
 import { generateWhatsAppLink } from "../shared/utils";
+import { COMMUNITIES } from "../../lib/seo/communities";
 
 type LangGroup = "en" | "af" | "fr";
 
@@ -73,6 +74,20 @@ export function CountriesSection() {
             {tx.notFoundCta}
           </a>
         </div>
+
+        <nav className="diasporaLinks" aria-label="Community channel guides">
+          <p className="diasporaLinksTitle">Read the community channel guides</p>
+          <ul>
+            {COMMUNITIES.map((c) => (
+              <li key={c.slug}>
+                <a href={`/${lang}/communities/${c.slug}/`}>
+                  <span aria-hidden="true">{c.flag}</span> {c.demonym} TV in
+                  South Africa
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </section>
 
       {selected && (
