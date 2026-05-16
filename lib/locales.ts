@@ -260,7 +260,7 @@ export function localeFromAcceptLanguage(header: string | null | undefined): Loc
 /**
  * Read the WhatsApp number for a locale, falling back to the global default.
  * Numbers are sourced from env so they can be configured per environment
- * without redeploying — values are placeholders today (TO_FILL_BY_OWNER).
+ * without redeploying.
  */
 export function whatsappForLocale(
   locale: Locale,
@@ -269,7 +269,7 @@ export function whatsappForLocale(
   const meta = LOCALE_META[locale];
   const specific = env[meta.whatsappEnvKey];
   if (specific) return specific;
-  return env.NEXT_PUBLIC_WHATSAPP_DEFAULT ?? "27000000000";
+  return env.NEXT_PUBLIC_WHATSAPP_DEFAULT ?? "447307410512";
 }
 
 /** Build the alternate-language map used in `<link rel="alternate" hreflang>`. */
