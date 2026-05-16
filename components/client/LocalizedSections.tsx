@@ -401,17 +401,56 @@ export function FaqSection() {
 export function FooterSection() {
   const { lang } = useLang();
   const t = dict[lang];
+  const basePath = `/${lang}`;
   return (
     <footer className="footer">
       <div className="footerLogo"><MzansiLogo size={32} showText={true} /></div>
       <p>© {new Date().getFullYear()} {SITE.brand}. {t.footer.rights}</p>
       <p style={{ marginTop: 6 }}>{t.footer.note}</p>
-      <div className="footerLinks">
-        <a href="#faq">{t.footer.legal}</a>
-        <a href="#faq">{t.footer.privacy}</a>
-        <a href="#faq">{t.footer.terms}</a>
-        <a href="#faq">{t.footer.refund}</a>
-      </div>
+
+      <nav className="footerNav" aria-label="Footer navigation">
+        <div className="footerCol">
+          <h4>Product</h4>
+          <a href={`${basePath}/`}>Home</a>
+          <a href={`${basePath}/best-iptv-south-africa-2026/`}>Best IPTV 2026</a>
+          <a href={`${basePath}/dstv-alternative/`}>DStv alternative</a>
+          <a href={`${basePath}/iptv-supersport-without-dstv/`}>Watch SuperSport</a>
+          <a href={`${basePath}/blog/`}>Blog</a>
+        </div>
+        <div className="footerCol">
+          <h4>Devices</h4>
+          <a href={`${basePath}/iptv-firestick-south-africa/`}>Firestick</a>
+          <a href={`${basePath}/iptv-samsung-smart-tv/`}>Samsung Smart TV</a>
+          <a href={`${basePath}/devices/lg-webos/`}>LG webOS</a>
+          <a href={`${basePath}/devices/hisense-vidaa/`}>Hisense VIDAA</a>
+          <a href={`${basePath}/devices/`}>All devices</a>
+        </div>
+        <div className="footerCol">
+          <h4>Coverage</h4>
+          <a href={`${basePath}/cities/`}>SA cities</a>
+          <a href={`${basePath}/sadc/`}>SADC countries</a>
+          <a href={`${basePath}/sa-abroad/`}>SA abroad</a>
+          <a href={`${basePath}/communities/`}>Communities</a>
+          <a href={`${basePath}/vs/`}>Compare</a>
+        </div>
+        <div className="footerCol">
+          <h4>Legal</h4>
+          <a href={`${basePath}/legal/about/`}>{t.footer.legal}</a>
+          <a href={`${basePath}/legal/popia/`}>{t.footer.privacy}</a>
+          <a href={`${basePath}/legal/terms/`}>{t.footer.terms}</a>
+          <a href={`${basePath}/legal/refund/`}>{t.footer.refund}</a>
+          <a href={`${basePath}/legal/cookies/`}>Cookies</a>
+          <a href={`${basePath}/is-iptv-legal-south-africa/`}>Is IPTV legal in SA?</a>
+        </div>
+        <div className="footerCol">
+          <h4>Support</h4>
+          <a href={`${basePath}/iptv-eft-snapscan-payment/`}>Payment methods</a>
+          <a href={`${basePath}/cancel-dstv-2026/`}>Cancel DStv</a>
+          <a href={`${basePath}/iptv-vumatel-openserve-frogfoot/`}>Fibre & ISPs</a>
+          <a href={`${basePath}/referral/`}>Refer a friend</a>
+          <a href={`${basePath}/affiliate/`}>Affiliate</a>
+        </div>
+      </nav>
     </footer>
   );
 }

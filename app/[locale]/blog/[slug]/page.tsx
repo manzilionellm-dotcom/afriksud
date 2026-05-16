@@ -9,7 +9,12 @@ import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { BLOG_SLUGS, getBlogPost } from "../../../../lib/seo/blog-posts";
+import {
+  AUTHORS,
+  DEFAULT_AUTHOR_SLUG,
+} from "../../../../lib/seo/authors";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { AuthorBio } from "../../../../components/seo/AuthorBio";
 import { SITE } from "../../../../components/shared/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -49,6 +54,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const author = AUTHORS[DEFAULT_AUTHOR_SLUG];
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -57,10 +64,19 @@ export default async function BlogPostPage({ params }: Props) {
     image: `${SITE_URL}/og-image.jpg`,
     datePublished: post.datePublished,
     dateModified: post.datePublished,
-    author: { "@type": "Organization", name: SITE.brand },
+    author: {
+      "@type": "Person",
+      name: author.name,
+      jobTitle: author.role,
+      description: author.bio,
+      ...(author.profiles?.length ? { sameAs: author.profiles } : {}),
+      ...(author.image ? { image: author.image } : {}),
+      worksFor: { "@type": "Organization", name: SITE.brand, url: SITE_URL },
+    },
     publisher: {
       "@type": "Organization",
       name: SITE.brand,
+      url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
     },
     mainEntityOfPage: localeUrl(locale as Locale, `/blog/${slug}/`),
@@ -103,6 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <h1>{post.title}</h1>
             <p className="longformLead">{post.lead}</p>
+            <AuthorBio author={author} dateLabel={post.datePublished} />
           </header>
 
           {post.sections.map((s) => (
