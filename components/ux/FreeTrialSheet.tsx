@@ -51,7 +51,7 @@ export function FreeTrialSheet({
               type="tel"
               inputMode="tel"
               autoComplete="tel"
-              placeholder="+27 71 234 5678"
+              placeholder="+44 7307 410512"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="w-full bg-transparent text-base text-white placeholder:text-white/30 outline-none"
