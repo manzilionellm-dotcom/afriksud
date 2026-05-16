@@ -6,8 +6,7 @@
 //   2. Overlay: top-to-bottom black gradient + brand gold radial glow.
 //   3. Content: bottom-aligned pill, hero H1, lead, dual CTAs.
 
-import React, { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { Play, ArrowRight } from "lucide-react";
 import { useLang } from "../client/LanguageProvider";
 import { dict } from "../shared/dict";
@@ -22,9 +21,20 @@ const HERO_POSTER_SRC = "/og-image.jpg";
 export function HeroV2() {
   const { lang } = useLang();
   const t = dict[lang];
-  const reduce = useReducedMotion();
   const [trialOpen, setTrialOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
+  // Defer the video element to first paint: poster image carries the
+  // hero visual at the SSR moment so LCP is the H1, not a 1.5MB video
+  // initialised mid-paint. The video mounts after the first user gesture
+  // or after `mount` to keep mobile data + CPU sane on Galaxy A-class
+  // devices.
+  const [showVideo, setShowVideo] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      setShowVideo(true);
+    }
+  }, []);
 
   const headline = (t.hero.titleA || "").trim();
   const accent = (t.hero.titleB || "").trim();
@@ -36,20 +46,35 @@ export function HeroV2() {
       aria-label={t.hero.pill}
     >
       <div className="absolute inset-0 z-0">
-        <video
-          className="h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={HERO_POSTER_SRC}
-          aria-hidden="true"
-        >
-          {/* The .mp4 is intentionally a placeholder. If missing, the poster
-              ensures graceful fallback — no broken state. */}
-          <source src={HERO_VIDEO_SRC} type="video/mp4" />
-        </video>
+        {showVideo ? (
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            poster={HERO_POSTER_SRC}
+            aria-hidden="true"
+          >
+            {/* The .mp4 is intentionally a placeholder. If missing, the poster
+                ensures graceful fallback — no broken state. */}
+            <source src={HERO_VIDEO_SRC} type="video/mp4" />
+          </video>
+        ) : (
+          // Mobile / first paint: serve the poster as a plain <img> so it
+          // becomes the LCP candidate quickly and never blocks on video
+          // metadata. Better Samsung / Galaxy A class performance.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={HERO_POSTER_SRC}
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+            fetchPriority="high"
+            className="h-full w-full object-cover"
+          />
+        )}
       </div>
 
       <div
@@ -63,10 +88,7 @@ export function HeroV2() {
 
       <div className="relative z-[2] flex h-full min-h-[100dvh] flex-col">
         <div className="flex-1" />
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="mx-auto w-full max-w-[1100px] px-5 sm:px-8 pb-[max(8rem,env(safe-area-inset-bottom))] md:pb-24"
         >
           <span
@@ -132,7 +154,7 @@ export function HeroV2() {
           </div>
 
           <p className="mt-5 text-xs text-white/55">{t.hero.trust}</p>
-        </motion.div>
+        </div>
       </div>
 
       <FreeTrialSheet open={trialOpen} onOpenChange={setTrialOpen} />

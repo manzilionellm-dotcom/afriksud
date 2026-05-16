@@ -199,7 +199,9 @@ export default async function LocaleHome({ params }: Props) {
         closes: "23:00",
       },
     },
-    sameAs: [`https://wa.me/${SITE.whatsappPhone}`],
+    // `sameAs` intentionally omitted — wa.me is not a canonical social
+    // profile per schema.org guidance. Add real X / LinkedIn / YouTube
+    // entity URLs here once those profiles exist.
     priceRange: "99-1199 ZAR",
     currenciesAccepted: SITE.currencyCode,
     paymentAccepted:
@@ -255,7 +257,9 @@ export default async function LocaleHome({ params }: Props) {
         areaServed: "Worldwide",
       },
     ],
-    sameAs: [`https://wa.me/${SITE.whatsappPhone}`],
+    // `sameAs` intentionally omitted — wa.me is not a canonical social
+    // profile per schema.org guidance. Add real X / LinkedIn / YouTube
+    // entity URLs here once those profiles exist.
   };
 
   const websiteSchema = {

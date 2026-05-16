@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangFor, localeUrl } from "../../../lib/url";
+import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { BLOG_POSTS } from "../../../lib/seo/blog-posts";
 import { LongformShell } from "../../../components/client/LongformShell";
 
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: localeUrl(locale as Locale, "/blog/"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 

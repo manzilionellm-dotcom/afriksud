@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { SA_CITY_SLUGS, getSACity } from "../../../../lib/seo/cities";
 import { CITY_TOP_COMMUNITIES, getCommunity } from "../../../../lib/seo/communities";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `Stream 20,000+ channels in ${data.name} from R99/mo. SuperSport, kykNET, SABC in 4K.`,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 

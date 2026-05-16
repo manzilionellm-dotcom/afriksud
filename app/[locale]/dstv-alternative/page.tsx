@@ -6,8 +6,10 @@ import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
+import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { COMPETITORS, getCompetitor } from "../../../lib/seo/competitors";
 import { DstvSavingsCalculator } from "../../../components/client/DstvSavingsCalculator";
+import { generateWhatsAppLink } from "../../../components/shared/utils";
 import { LanguageProvider } from "../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../components/client/HeaderNav";
 import { FooterSection } from "../../../components/client/LocalizedSections";
@@ -44,6 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "Cancel DStv. Keep SuperSport, kykNET and SABC in 4K. From R99/mo on WhatsApp.",
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 
@@ -317,7 +320,16 @@ export default async function DstvAlternativePage({ params }: Props) {
                 <li>Enjoy the same channels at a fraction of the price.</li>
               </ol>
               <div className="ctaRow">
-                <a href="#" className="btnPrimary">
+                <a
+                  href={generateWhatsAppLink(
+                    "Hi! I'd like the free 24h Mzansi Stream trial to switch from DStv.",
+                    "",
+                    "DStv-Alt-Trial-CTA"
+                  )}
+                  className="btnPrimary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Get my free 24h trial →
                 </a>
               </div>

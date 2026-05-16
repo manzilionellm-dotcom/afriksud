@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { SADC_SLUGS, getSadcCountry } from "../../../../lib/seo/sadc-countries";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../../components/client/HeaderNav";
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: data.meta.description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 

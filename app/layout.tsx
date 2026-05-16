@@ -4,8 +4,14 @@
 // switcher, sitemap and HTML metadata never drift out of sync.
 
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import { Geist } from "next/font/google";
-import { DEFAULT_LOCALE, LOCALE_META, LOCALES } from "../lib/locales";
+import {
+  DEFAULT_LOCALE,
+  LOCALE_META,
+  LOCALES,
+  type Locale,
+} from "../lib/locales";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -133,20 +139,24 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // The `<html lang>` / `dir` attributes are kept at the en-ZA default for
-  // the initial server render — `LanguageProvider` rewrites them on the
-  // client once the resolved locale is known. A future PR will migrate the
-  // app to `/[locale]/` routes so the correct attributes ship from SSR.
-  const rootMeta = LOCALE_META[DEFAULT_LOCALE];
+  // `<html lang>` / `dir` resolve from the middleware-set `x-mz-locale`
+  // header so Googlebot sees the correct attribute on every locale URL
+  // instead of a static `en-ZA` fallback.
+  const hdrs = await headers();
+  const headerLocale = hdrs.get("x-mz-locale") ?? DEFAULT_LOCALE;
+  const resolved = (LOCALES as readonly string[]).includes(headerLocale)
+    ? (headerLocale as Locale)
+    : DEFAULT_LOCALE;
+  const meta = LOCALE_META[resolved];
   return (
     <html
-      lang={rootMeta.hreflang}
-      dir={rootMeta.dir}
+      lang={meta.hreflang}
+      dir={meta.dir}
       className={geistSans.variable + " h-full antialiased"}
     >
       <body className="min-h-full flex flex-col">{children}</body>

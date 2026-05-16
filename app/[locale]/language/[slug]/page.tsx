@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl } from "../../../../lib/url";
+import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   SA_LANGUAGE_SLUGS,
   getSALanguagePage,
@@ -40,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: data.title,
       description: data.metaDescription,
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 
