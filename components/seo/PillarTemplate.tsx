@@ -1,0 +1,235 @@
+// components/seo/PillarTemplate.tsx
+// Server component. Renders any pillar page from `lib/seo/pillars.ts`
+// — long-form copy, in-page TOC, HowTo-aware steps, FAQ accordion,
+// related-link cluster and the full schema stack (Article + FAQPage
+// + HowTo when steps exist + BreadcrumbList).
+
+import Link from "next/link";
+import { LOCALE_META, type Locale } from "../../lib/locales";
+import { localeUrl, SITE_URL } from "../../lib/url";
+import { SITE } from "../shared/site";
+import { generateWhatsAppLink } from "../shared/utils";
+import { LongformShell } from "../client/LongformShell";
+import type { Pillar } from "../../lib/seo/pillars";
+
+export function PillarTemplate({
+  pillar,
+  locale,
+}: {
+  pillar: Pillar;
+  locale: Locale;
+}) {
+  const canonical = localeUrl(locale, `/${pillar.slug}/`);
+  const primaryHref = generateWhatsAppLink(
+    pillar.cta.primary.message,
+    "",
+    pillar.cta.primary.ref
+  );
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: pillar.h1,
+    description: pillar.metaDescription,
+    image: `${SITE_URL}/og-image.jpg`,
+    datePublished: pillar.datePublished,
+    dateModified: pillar.dateModified,
+    author: { "@type": "Organization", name: SITE.brand, url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.brand,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+    },
+    mainEntityOfPage: canonical,
+    inLanguage: LOCALE_META[locale].hreflang,
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: pillar.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale, "/") },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: pillar.h1,
+        item: canonical,
+      },
+    ],
+  };
+
+  // Emit a HowTo schema if any section has steps[].
+  const howToSection = pillar.sections.find((s) => s.steps && s.steps.length);
+  const howToSchema = howToSection
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: howToSection.h2,
+        description: howToSection.paragraphs?.[0] ?? pillar.metaDescription,
+        totalTime: "PT10M",
+        supply: [
+          { "@type": "HowToSupply", name: "Internet connection (min 25 Mbps for 4K)" },
+          { "@type": "HowToSupply", name: "Mzansi Stream M3U link + Xtream Codes credentials" },
+        ],
+        tool: [
+          { "@type": "HowToTool", name: "Smart TV, Firestick, Android TV box or any standard M3U player" },
+        ],
+        step: howToSection.steps!.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.title,
+          text: s.text,
+        })),
+      }
+    : null;
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {howToSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      ) : null}
+
+      <LongformShell locale={locale}>
+        <article className="section">
+          <header className="longformHeader">
+            <p className="longformEyebrow">{pillar.eyebrow}</p>
+            <h1>{pillar.h1}</h1>
+            <p className="longformLead">{pillar.lead}</p>
+            {pillar.trustLine ? (
+              <p className="trustStrip" style={{ marginTop: 16 }}>
+                {pillar.trustLine}
+              </p>
+            ) : null}
+            <div className="ctaRow">
+              <a
+                href={primaryHref}
+                className="btnPrimary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {pillar.cta.primary.label}
+              </a>
+              {pillar.cta.secondary ? (
+                <a
+                  href={pillar.cta.secondary.href}
+                  className="btnSecondary"
+                >
+                  {pillar.cta.secondary.label}
+                </a>
+              ) : null}
+            </div>
+          </header>
+
+          <nav aria-label="On this page" className="longformSection">
+            <h2 className="sr-only">On this page</h2>
+            <ul className="longformList">
+              {pillar.sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`}>{s.h2}</a>
+                </li>
+              ))}
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+
+          {pillar.sections.map((s) => (
+            <section key={s.id} id={s.id} className="longformSection">
+              <h2>{s.h2}</h2>
+              {s.paragraphs?.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+              {s.bullets ? (
+                <ul className="longformList">
+                  {s.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {s.steps ? (
+                <ol className="longformList">
+                  {s.steps.map((st) => (
+                    <li key={st.title}>
+                      <strong>{st.title}.</strong> {st.text}
+                    </li>
+                  ))}
+                </ol>
+              ) : null}
+            </section>
+          ))}
+
+          <section className="longformSection" id="faq">
+            <h2>Frequently asked questions</h2>
+            {pillar.faq.map((f) => (
+              <details key={f.q} className="faqItem">
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </section>
+
+          <section className="longformSection" id="next-step">
+            <h2>Ready to start? Free 24h trial — no card</h2>
+            <p>
+              Message {SITE.brand} on WhatsApp and we activate your free
+              24-hour trial within 10 minutes. Full 20,000+ channel lineup,
+              4K UHD, EPG, support in English — no credit card required.
+            </p>
+            <div className="ctaRow">
+              <a
+                href={primaryHref}
+                className="btnPrimary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {pillar.cta.primary.label}
+              </a>
+            </div>
+          </section>
+
+          <section className="longformSection">
+            <h2>Related guides</h2>
+            <ul className="longformList">
+              {pillar.related.map((r) => (
+                <li key={r.href}>
+                  <Link href={`/${locale}${r.href}`}>{r.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </article>
+      </LongformShell>
+    </>
+  );
+}
