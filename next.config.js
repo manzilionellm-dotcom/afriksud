@@ -31,9 +31,12 @@ const nextConfig = {
         destination: "/en-za/vs/:competitor/",
         permanent: true,
       },
+      // Sport-specific legacy slug → SuperSport pillar (the most-trafficked
+      // sport landing post-migration). Specific slugs that match other
+      // pillars can be added explicitly later.
       {
-        source: "/iptv-:sport",
-        destination: "/en-za/best-iptv-for/:sport/",
+        source: "/iptv-:sport(dstv-premiership|urc-rugby|premier-league|cricket)",
+        destination: "/en-za/iptv-supersport-without-dstv/",
         permanent: true,
       },
     ];
