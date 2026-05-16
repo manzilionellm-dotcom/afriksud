@@ -55,6 +55,544 @@ export type Pillar = {
 const ZA: Locale = "en-za";
 
 export const PILLARS: Pillar[] = [
+  // ─── 5. IPTV VUMATEL / OPENSERVE / FROGFOOT ─────────────────────────
+  {
+    slug: "iptv-vumatel-openserve-frogfoot",
+    eyebrow: "Fibre · ISP guide 2026",
+    h1: "Best IPTV for Vumatel, Openserve and Frogfoot in South Africa",
+    metaTitle:
+      "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Stable | Mzansi Stream",
+    metaDescription:
+      "Best IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre fibre in South Africa. 4K SuperSport with no buffering. NAPAfrica-peered CDN. From R99/mo.",
+    lead:
+      "If you're on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre or Rain 5G, your fibre line is more than capable of streaming Mzansi Stream's 4K SuperSport, Premier League and 20,000+ international channels without buffering — provided the IPTV provider's CDN actually peers with NAPAfrica. This guide explains why most overseas IPTV providers stutter on SA fibre, how the Mzansi Stream CDN is provisioned, and what to check on your router if 4K streams drop to 1080p.",
+    trustLine:
+      "NAPAfrica-peered · Edges in Johannesburg + Cape Town · 4K stable on every major SA fibre line",
+    cta: {
+      primary: {
+        label: "Test it on your fibre — Free 24h trial →",
+        message:
+          "Hi! I'm on [Vumatel/Openserve/Frogfoot/Octotel] and I want the free 24-hour Mzansi Stream trial to test 4K streaming on my line.",
+        ref: "Pillar-Vumatel-Hero",
+      },
+      secondary: { label: "Jump to ISP table →", href: "#isps" },
+    },
+    sections: [
+      {
+        id: "why-isp-matters",
+        h2: "Why your fibre ISP matters more than your speed",
+        paragraphs: [
+          "Most SA households assume that more Mbps means better IPTV. In 2026 that's only half true. A 100 Mbps Vumatel line that peers directly at NAPAfrica beats a 500 Mbps line that hops through a Frankfurt server before hitting an SA-hosted IPTV CDN. Latency and peering matter more than raw throughput once you're past 50 Mbps.",
+          "Mzansi Stream's CDN edges sit at NAPAfrica in Johannesburg and Cape Town — the same exchange every major SA ISP peers at. That means a Vumatel, Openserve or Frogfoot customer's 4K SuperSport stream travels less than 15ms from edge to TV. Compare that to a typical 'EU/US IPTV' service routing via Amsterdam (180-220ms one-way to SA), which buffers visibly during a fast PSL counter-attack.",
+        ],
+      },
+      {
+        id: "isps",
+        h2: "Best IPTV performance by SA fibre ISP — 2026 benchmark",
+        bullets: [
+          "Vumatel — direct NAPAfrica peering, 4K stable, <10ms to Mzansi Stream edge.",
+          "Openserve (Telkom) — direct NAPAfrica peering, 4K stable, <15ms.",
+          "Frogfoot — direct NAPAfrica peering, 4K stable, <12ms.",
+          "Octotel (Cape Town) — direct peering, 4K stable on Cape Town edge.",
+          "MetroFibre — direct peering, 4K stable.",
+          "MTN Fibre — direct peering, 4K stable.",
+          "Vodacom Fibre — direct peering, 4K stable.",
+          "Rain 5G — wireless, slightly higher jitter but 4K SuperSport plays cleanly on most home setups.",
+          "Telkom LTE — variable, HD recommended over 4K.",
+        ],
+      },
+      {
+        id: "router-setup",
+        h2: "Router setup — get 4K stable on Vumatel and Openserve",
+        paragraphs: [
+          "Most 4K IPTV streaming problems on SA fibre aren't the fibre — they're the router. The Huawei B315s, Huawei B535, ZTE H168N, ZTE F660 and many Vodacom-branded routers shipped 2020-2023 cap 5GHz throughput at 60-80 Mbps even on a 500 Mbps line. Either replace with a Wi-Fi 6 router (TP-Link Archer AX55 R1,300, ASUS RT-AX55 R1,500) or hard-wire your Smart TV / Firestick over Ethernet.",
+          "A Firestick 4K connected via USB-Ethernet adapter (R250 on Takealot) is the single biggest 4K stability upgrade most SA households can make. Eliminates Wi-Fi jitter completely.",
+        ],
+        bullets: [
+          "Replace ISP-branded router with Wi-Fi 6 (Archer AX55, ASUS RT-AX55, TP-Link AX73).",
+          "Hard-wire Firestick / Smart TV over Ethernet for 4K SuperSport.",
+          "Enable QoS / DSCP if your router supports it — prioritise port 8080-tagged IPTV traffic.",
+          "Disable DLNA on Samsung Smart TVs — it sometimes hijacks bandwidth mid-stream.",
+          "Avoid the 2.4GHz band for 4K — always 5GHz.",
+        ],
+      },
+      {
+        id: "no-throttling",
+        h2: "Will Vumatel / Openserve throttle my IPTV?",
+        paragraphs: [
+          "No. In 2026, none of the major SA fibre ISPs throttle IPTV traffic — they don't deep-packet-inspect to distinguish IPTV from a YouTube live stream. Your Mzansi Stream traffic is encrypted HLS / M3U over HTTPS, same wire format as Netflix and YouTube. There's nothing to throttle.",
+          "If your stream drops mid-match, the bottleneck is almost certainly your home Wi-Fi or an ISP-side congestion event (rare on Vumatel and Openserve in 2026), not deliberate throttling.",
+        ],
+      },
+      {
+        id: "redundancy",
+        h2: "What about ISP outages?",
+        paragraphs: [
+          "Fibre outages happen. The Vumatel Joburg outages in early 2026 reminded everyone that no single fibre line is bulletproof. The best practical defence: a Rain 5G or MTN Wi-Fi mobile router as backup. Both stream Mzansi Stream's HD feeds cleanly during a fibre outage.",
+          "If you're a heavy SuperSport household, consider a dual-WAN router (TP-Link ER605 or MikroTik hEX) with fibre as primary and Rain 5G as failover — IPTV switches WAN in <2 seconds and you don't miss a goal.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does Mzansi Stream work on Vumatel?",
+        a: "Yes. Mzansi Stream peers at NAPAfrica with edges in Johannesburg — Vumatel routes there directly. 4K SuperSport runs at <10ms one-way latency on Vumatel.",
+      },
+      {
+        q: "Does Mzansi Stream work on Openserve?",
+        a: "Yes. Openserve (Telkom) peers directly at NAPAfrica. 4K stable across the Openserve network.",
+      },
+      {
+        q: "Does Mzansi Stream work on Frogfoot?",
+        a: "Yes. Frogfoot peers at NAPAfrica. 4K stable.",
+      },
+      {
+        q: "Does Mzansi Stream work on Octotel (Cape Town)?",
+        a: "Yes. Octotel peers locally in Cape Town. Mzansi Stream's Cape Town edge serves Octotel customers with <15ms latency for 4K.",
+      },
+      {
+        q: "What internet speed do I need for 4K IPTV?",
+        a: "Minimum 25 Mbps sustained for stable 4K UHD streaming. 100 Mbps gives comfortable headroom for a household streaming multiple devices in parallel.",
+      },
+      {
+        q: "My SuperSport stream buffers — is it my fibre?",
+        a: "Almost certainly not — Vumatel, Openserve and Frogfoot all carry Mzansi Stream at <15ms. The bottleneck is usually your Wi-Fi router or 2.4GHz interference. Switch to 5GHz or hard-wire over Ethernet.",
+      },
+      {
+        q: "Do I need to disable any router setting?",
+        a: "Disable DLNA on Samsung Smart TVs (it can hijack bandwidth). Disable parental controls / SafeSearch on the router if they intercept HTTPS traffic. Enable QoS to prioritise IPTV ports if available.",
+      },
+      {
+        q: "Will a VPN help?",
+        a: "No — a VPN adds latency. Mzansi Stream is not geo-blocked on SA fibre. A VPN only helps if you're streaming SA content from outside SA.",
+      },
+    ],
+    related: [
+      {
+        label: "Best IPTV in South Africa 2026 — buyer's guide",
+        href: "/best-iptv-south-africa-2026/",
+      },
+      {
+        label: "Watch SuperSport without DStv",
+        href: "/iptv-supersport-without-dstv/",
+      },
+      {
+        label: "IPTV Firestick South Africa — install guide",
+        href: "/iptv-firestick-south-africa/",
+      },
+      { label: "IPTV in Johannesburg", href: "/cities/johannesburg/" },
+      { label: "IPTV in Cape Town", href: "/cities/cape-town/" },
+      { label: "IPTV in Durban", href: "/cities/durban/" },
+    ],
+    hasHowTo: false,
+    datePublished: "2026-02-01",
+    dateModified: "2026-05-16",
+    preferredLocale: ZA,
+  },
+
+  // ─── 6. IPTV EFT / SNAPSCAN / OZOW PAYMENT ──────────────────────────
+  {
+    slug: "iptv-eft-snapscan-payment",
+    eyebrow: "Payments · EFT, SnapScan, Ozow, Capitec Pay",
+    h1: "IPTV You Can Pay for via EFT, SnapScan, Ozow and Capitec Pay (2026)",
+    metaTitle:
+      "IPTV EFT, SnapScan, Ozow, Capitec Pay — No Credit Card | Mzansi Stream",
+    metaDescription:
+      "Pay for IPTV in South Africa with EFT, SnapScan, Ozow, Zapper, Yoco or Capitec Pay — no credit card required. Mzansi Stream — full 4K SuperSport from R99/mo.",
+    lead:
+      "Most international IPTV providers require a Visa or Mastercard. Mzansi Stream accepts every standard South African payment method without forcing a credit card — EFT, SnapScan, Ozow, Zapper, Yoco, Capitec Pay, plus Visa, Mastercard, PayPal and Bitcoin. This guide covers each payment method, how fast it activates, what the receipt looks like, and which one to pick if your priority is speed (Ozow), privacy (Bitcoin), or zero card details (Capitec Pay).",
+    trustLine:
+      "EFT · SnapScan · Ozow · Zapper · Yoco · Capitec Pay · Visa · Mastercard · PayPal · Bitcoin",
+    cta: {
+      primary: {
+        label: "Pay how you want — Get started →",
+        message:
+          "Hi! I'd like to order Mzansi Stream — I prefer paying via [EFT/SnapScan/Ozow/Capitec Pay] — what's the next step?",
+        ref: "Pillar-Payment-Hero",
+      },
+      secondary: { label: "See payment methods →", href: "#methods" },
+    },
+    sections: [
+      {
+        id: "no-card",
+        h2: "Why no credit card?",
+        paragraphs: [
+          "A surprising share of South African households either don't have a Visa / Mastercard at all (Capitec USSD card-only, prepaid cards, business EFT-only) or actively avoid using their credit card on websites they don't fully trust. Forcing a credit card cuts a huge slice of the SA market out — and signals that the merchant runs through a foreign processor that won't accept SA-native instruments.",
+          "Mzansi Stream supports every payment method an SA household actually uses, plus credit cards for anyone who prefers them.",
+        ],
+      },
+      {
+        id: "methods",
+        h2: "Every payment method we accept",
+        bullets: [
+          "EFT (manual bank transfer) — slowest (1-4 hours business hours), zero fees, full POPIA-compliant audit trail.",
+          "Ozow — instant EFT via OTP, <2 minutes, supports Capitec / Standard / FNB / Nedbank / Absa / Investec.",
+          "SnapScan — QR code, <60 seconds, comes off your linked debit/credit card.",
+          "Zapper — QR code, <60 seconds, EFT-funded.",
+          "Yoco — link or QR, instant, debit/credit card.",
+          "Capitec Pay — direct from your Capitec app, <60 seconds, no card details shared.",
+          "Visa / Mastercard — direct card entry via secure payment gateway.",
+          "PayPal — for international and diaspora customers.",
+          "Bitcoin — privacy-first option, settles in 1-2 confirmations.",
+        ],
+      },
+      {
+        id: "fastest",
+        h2: "Which payment is fastest to activate?",
+        paragraphs: [
+          "Ozow, SnapScan, Zapper, Capitec Pay, Yoco and card payments all activate your Mzansi Stream subscription in under 2 minutes — typically you're streaming within 10 minutes of clicking pay.",
+          "Manual EFT takes 1-4 business hours because we wait for the funds to clear in our account. If you need immediate activation, pick Ozow — it's instant EFT and bypasses the clearing delay.",
+        ],
+      },
+      {
+        id: "privacy",
+        h2: "Which payment is most private?",
+        paragraphs: [
+          "If your priority is minimum information shared, the privacy ranking is: Bitcoin > Capitec Pay > Ozow > SnapScan > Yoco > Visa/Mastercard direct entry.",
+          "Mzansi Stream is POPIA-compliant — we collect only what's required to deliver your subscription (your phone number for WhatsApp delivery, your name on the payment, the plan you purchased). We do not sell or share your data.",
+        ],
+      },
+      {
+        id: "no-recurring",
+        h2: "No recurring billing trap",
+        paragraphs: [
+          "Mzansi Stream does not enrol your card or bank in any recurring debit order. Every plan is paid once for the period you selected. When the period ends, your subscription expires unless you actively renew via WhatsApp — no surprise R1,199 charge at midnight on month 13.",
+          "This is the opposite of the DStv / Netflix / Showmax model and it's deliberate. We'd rather you actively choose to renew than 'forget' you're paying.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Can I pay for IPTV via EFT in South Africa?",
+        a: "Yes. Mzansi Stream accepts manual EFT into our SA business bank account. Activation takes 1-4 business hours after the funds clear. For instant activation, use Ozow instead.",
+      },
+      {
+        q: "Does Mzansi Stream accept SnapScan?",
+        a: "Yes. SnapScan is one of our most popular payment methods. Scan the QR code we send on WhatsApp, pay in under 60 seconds, and your subscription activates within minutes.",
+      },
+      {
+        q: "Can I pay with Capitec Pay?",
+        a: "Yes. Pay directly from your Capitec banking app without sharing card details. Activation in under 60 seconds after payment confirmation.",
+      },
+      {
+        q: "Does Mzansi Stream accept Ozow?",
+        a: "Yes. Ozow is the fastest payment method we offer — instant EFT via your bank's OTP, no manual clearing delay. Subscription activates in under 2 minutes.",
+      },
+      {
+        q: "Do I have to use a credit card?",
+        a: "No. We accept EFT, SnapScan, Ozow, Zapper, Yoco, Capitec Pay, PayPal and Bitcoin in addition to Visa / Mastercard. You can avoid the credit card route entirely.",
+      },
+      {
+        q: "Will I be charged again automatically?",
+        a: "No. We do not enrol your card or bank in any recurring debit. Every plan is once-off for the period you selected. You actively renew on WhatsApp when you want to continue.",
+      },
+      {
+        q: "Is paying for IPTV via EFT safe under POPIA?",
+        a: "Yes. We are POPIA-compliant, collect only the data needed to deliver your subscription, and never share your payment details with third parties.",
+      },
+      {
+        q: "Can I pay in cash?",
+        a: "Not directly — but Capitec, FNB and Standard Bank cash deposit ATMs all accept cash that lands in our account in real time. Use the EFT reference we provide.",
+      },
+    ],
+    related: [
+      {
+        label: "Best IPTV in South Africa 2026 — buyer's guide",
+        href: "/best-iptv-south-africa-2026/",
+      },
+      { label: "DStv alternative — complete 2026 guide", href: "/dstv-alternative/" },
+      {
+        label: "Is IPTV legal in South Africa?",
+        href: "/is-iptv-legal-south-africa/",
+      },
+      {
+        label: "Watch SuperSport without DStv",
+        href: "/iptv-supersport-without-dstv/",
+      },
+    ],
+    hasHowTo: false,
+    datePublished: "2026-02-05",
+    dateModified: "2026-05-16",
+    preferredLocale: ZA,
+  },
+
+  // ─── 7. CANCEL DSTV 2026 ────────────────────────────────────────────
+  {
+    slug: "cancel-dstv-2026",
+    eyebrow: "Cancel DStv · 2026 step-by-step",
+    h1: "How to Cancel DStv in 2026 — Without Paying Another R899",
+    metaTitle:
+      "How to Cancel DStv 2026 — Step-by-Step + Switch to IPTV | Mzansi Stream",
+    metaDescription:
+      "Cancel DStv in 2026 — exact WhatsApp number, 30-day notice trick, and how to switch to IPTV with no contract from R99/mo. Save R9,500+ a year.",
+    lead:
+      "Cancelling DStv is harder than signing up — by design. This guide walks through the exact 2026 cancellation process, the WhatsApp number that works (060 060 3788), the 30-day notice timing trick that saves you a wasted month, and how to switch to Mzansi Stream so you don't miss a single SuperSport match during the transition.",
+    trustLine:
+      "WhatsApp 060 060 3788 · 30-day notice · Switch to IPTV from R99/mo",
+    cta: {
+      primary: {
+        label: "Switch to IPTV — Free 24h trial →",
+        message:
+          "Hi! I'm about to cancel DStv. Please activate my free 24-hour Mzansi Stream trial so I can test before I commit.",
+        ref: "Pillar-CancelDStv-Hero",
+      },
+      secondary: { label: "Jump to cancel steps →", href: "#cancel" },
+    },
+    sections: [
+      {
+        id: "why-now",
+        h2: "Why cancel DStv in 2026?",
+        paragraphs: [
+          "DStv Premium is R899/month — R10,788/year. Compact Plus R549, Compact R449. Pricing has risen roughly 12% cumulatively since 2024 while SA household disposable income hasn't kept pace. The 24-month decoder contract locks you in, the 30-day cancellation notice extracts one more billing cycle, and the support process actively makes leaving hard.",
+          "In 2026, no DStv tier delivers anything you can't get from a credible IPTV provider at a fraction of the cost — same SuperSport feeds, same kykNET, same SABC, same Premier League, in 4K, on the devices you already own.",
+        ],
+      },
+      {
+        id: "cancel",
+        h2: "How to cancel DStv — exact 2026 step-by-step",
+        steps: [
+          {
+            title: "Decide your cancellation date",
+            text: "DStv requires 30 days' notice on a paid month. To minimise wasted billing, give notice on Day 1 of your billing cycle — not the last day. Check your billing date in the MyDStv app under Account → Billing.",
+          },
+          {
+            title: "Open MyDStv app or whatsapp 060 060 3788",
+            text: "The WhatsApp number is the fastest channel and creates a written record. The MyDStv app's cancellation flow is buried under 4 menu layers — search for 'Cancel subscription' or 'Disconnect'.",
+          },
+          {
+            title: "Send the cancellation request",
+            text: "Use this exact wording on WhatsApp: 'I want to cancel my DStv subscription. Please action a 30-day cancellation effective [DATE]. Send written confirmation.' Insist on written confirmation — verbal cancellation does not always action.",
+          },
+          {
+            title: "Confirm in writing",
+            text: "Within 24 hours you should receive an SMS or email confirming the cancellation. If not, escalate by replying 'Following up on cancellation reference XXXX, please confirm in writing today.'",
+          },
+          {
+            title: "Activate Mzansi Stream the same day",
+            text: "Don't wait the full 30 days — start your Mzansi Stream trial immediately. You can run both side by side until the DStv cancellation takes effect, so you don't miss a single match.",
+          },
+          {
+            title: "Return decoder (if applicable)",
+            text: "If your decoder is rented (not purchased), DStv will instruct you to return it to a SuperSport store, Pick n Pay smart-shop or specific outlet. Keep the return receipt — DStv sometimes claims non-return and charges R1,500+.",
+          },
+        ],
+      },
+      {
+        id: "common-traps",
+        h2: "Cancellation traps to avoid",
+        bullets: [
+          "Verbal cancellation that's never recorded — always demand written confirmation.",
+          "'Pause' offered instead of 'cancel' — they're not the same; pause keeps you in the system and resumes billing automatically.",
+          "Decoder non-return charge — keep the return receipt for 12 months.",
+          "Retention discount that locks you in for another 12 months — politely decline if you're committed to switching.",
+          "Last-day notice that wastes a full extra month of billing — give notice on Day 1 of your cycle.",
+          "Auto-renewal on your linked card — verify the card is removed after cancellation.",
+        ],
+      },
+      {
+        id: "switch",
+        h2: "Switching to Mzansi Stream — zero gap",
+        paragraphs: [
+          "The smart move is to start Mzansi Stream's 24-hour free trial before you send the DStv cancellation. Verify the lineup works on your fibre line, your Smart TV / Firestick / Android box, and that every SuperSport feed plays cleanly in 4K. Once you're confident, pay for a Mzansi Stream plan (1 / 3 / 6 / 12 months) — then send the DStv cancellation.",
+          "During the 30-day DStv notice period, you'll have both running. After day 30, DStv is gone and you've saved R800/month for the rest of the year.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "How do I cancel DStv on WhatsApp?",
+        a: "Send 'I want to cancel my DStv subscription, please action a 30-day cancellation effective [DATE]' to 060 060 3788. Always demand written confirmation.",
+      },
+      {
+        q: "Do I have to give 30 days' notice?",
+        a: "Yes, DStv requires 30 days' notice on the paid month. Give notice on Day 1 of your billing cycle to avoid wasting an additional month of billing.",
+      },
+      {
+        q: "Will DStv charge me for the decoder if I cancel?",
+        a: "If your decoder is rented, you must return it to a DStv-approved outlet. Keep the return receipt — DStv occasionally bills R1,500+ for 'non-return' even when the decoder was returned.",
+      },
+      {
+        q: "Can I cancel DStv mid-contract?",
+        a: "Yes, but if you're on a decoder finance contract there may be an early-termination fee on the remaining decoder instalments. The subscription itself can always be cancelled with 30 days' notice.",
+      },
+      {
+        q: "What do I switch to after cancelling DStv?",
+        a: "Mzansi Stream is the leading SA IPTV alternative — same SuperSport, kykNET, SABC, Premier League in 4K, from R99/month with no contract.",
+      },
+      {
+        q: "Will I miss matches during the switch?",
+        a: "No. Start your Mzansi Stream trial before sending the DStv cancellation. You'll have both running during the 30-day notice period, so coverage is continuous.",
+      },
+      {
+        q: "Can I cancel DStv online?",
+        a: "Through the MyDStv app, yes — but the option is buried under 4 menu layers. WhatsApp on 060 060 3788 is faster and creates a written record.",
+      },
+      {
+        q: "What if DStv keeps billing after cancellation?",
+        a: "Dispute via WhatsApp with the written cancellation confirmation as proof. If unresolved, escalate to the National Consumer Commission. Your bank can also reverse unauthorised debit orders.",
+      },
+    ],
+    related: [
+      { label: "DStv alternative — complete 2026 guide", href: "/dstv-alternative/" },
+      {
+        label: "Best IPTV in South Africa 2026",
+        href: "/best-iptv-south-africa-2026/",
+      },
+      {
+        label: "Watch SuperSport without DStv",
+        href: "/iptv-supersport-without-dstv/",
+      },
+      { label: "Mzansi Stream vs DStv Premium", href: "/vs/dstv-premium/" },
+      {
+        label: "Mzansi Stream vs DStv Compact Plus",
+        href: "/vs/dstv-compact-plus/",
+      },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-02-08",
+    dateModified: "2026-05-16",
+    preferredLocale: ZA,
+  },
+
+  // ─── 8. IS IPTV LEGAL IN SOUTH AFRICA ───────────────────────────────
+  {
+    slug: "is-iptv-legal-south-africa",
+    eyebrow: "Legal · IPTV in South Africa 2026",
+    h1: "Is IPTV Legal in South Africa in 2026? — The Honest Answer",
+    metaTitle:
+      "Is IPTV Legal in South Africa 2026? — Honest Legal Guide | Mzansi Stream",
+    metaDescription:
+      "Is IPTV legal in South Africa in 2026? The honest legal answer — IPTV is a legal technology; unlicensed redistribution is not. What to check before subscribing.",
+    lead:
+      "The single most-asked question about IPTV in South Africa is whether it's legal. The honest answer in 2026: IPTV is a legal technology — the same way an internet browser is. What's illegal is the unauthorised distribution of copyrighted content without a licence. This guide separates the technology from the licensing question, explains what makes one IPTV provider legitimate and another a SAPS-DPCI target, and what to check before paying any provider in SA.",
+    trustLine:
+      "Licensed source · POPIA-compliant · Traceable SA payments · Operating openly",
+    cta: {
+      primary: {
+        label: "Start with a free 24h trial →",
+        message:
+          "Hi! I read the 'Is IPTV legal in SA' guide. Please activate my free 24-hour Mzansi Stream trial.",
+        ref: "Pillar-Legal-Hero",
+      },
+      secondary: { label: "Read the legal framework →", href: "#framework" },
+    },
+    sections: [
+      {
+        id: "short-answer",
+        h2: "The short answer",
+        paragraphs: [
+          "IPTV — Internet Protocol Television — is a legal technology. South African law does not prohibit streaming television over the internet. What is illegal is the unauthorised distribution of copyrighted content (films, series, channel feeds) without the rights-holder's licence, under the Copyright Act 98 of 1978 (as amended).",
+          "A legitimate IPTV provider in SA in 2026 sources its content via licensed partners, accepts traceable payment, operates a real business under POPIA, and discloses its information officer. An illegitimate provider does none of those things — they accept anonymous crypto via a Telegram channel, change names every 6 months, and never answer the licensing question.",
+        ],
+      },
+      {
+        id: "framework",
+        h2: "The legal framework in 2026",
+        paragraphs: [
+          "Four pieces of SA legislation are relevant to IPTV: (1) the Copyright Act 98 of 1978 (governing distribution rights), (2) the Electronic Communications Act 36 of 2005 (regulating broadcasting), (3) the Protection of Personal Information Act 4 of 2013 (POPIA) (governing how subscriber data is handled), and (4) the Consumer Protection Act 68 of 2008 (governing the subscriber relationship).",
+          "There is no SA law that bans 'IPTV' as a category. The legal exposure for an IPTV provider arises specifically when content is redistributed without licence. The legal exposure for a subscriber is far smaller — SA enforcement focuses on distributors, not end-users, and there has been no reported prosecution of an individual SA IPTV subscriber in 2024-2026.",
+        ],
+      },
+      {
+        id: "what-makes-legit",
+        h2: "What makes an IPTV provider legitimate in 2026?",
+        bullets: [
+          "Sources content via named, licensed partners — not anonymous reseller chains.",
+          "Operates under a registered SA business name (CIPC searchable).",
+          "POPIA-compliant — has a published Information Officer and privacy policy.",
+          "Accepts traceable SA payment methods (EFT, SnapScan, Ozow, Capitec Pay), not crypto-only.",
+          "Publishes a real WhatsApp / phone support channel staffed by humans.",
+          "Honours the Consumer Protection Act — refunds, cancellations, no auto-debit trap.",
+          "Doesn't claim impossible things ('every channel in the world for R49/month').",
+        ],
+      },
+      {
+        id: "what-to-avoid",
+        h2: "Red flags — providers to walk away from",
+        bullets: [
+          "Crypto-only payments via Telegram — designed to evade KYC and traceability.",
+          "Domain that changes every 3-6 months.",
+          "No published business name, no CIPC registration, no address.",
+          "Claims 'over 50,000 channels' (most will be dead, geo-blocked or duplicate).",
+          "Charges under R50/month — unsustainable and signals oversold reseller link.",
+          "Refuses to put refund / cancellation terms in writing.",
+          "Asks for your ID number 'to verify your account' (not required).",
+          "Pushes 'lifetime' subscriptions paid upfront — almost always a vanish-with-the-money scheme.",
+        ],
+      },
+      {
+        id: "subscribers",
+        h2: "Is it illegal for me as a subscriber?",
+        paragraphs: [
+          "SA enforcement focuses on the distributors of unauthorised content, not on end-users. There has been no reported prosecution of an individual SA IPTV subscriber in recent years. The legal risk to a subscriber paying a legitimate IPTV provider via traceable payment is effectively zero.",
+          "That said, the safer position is always to subscribe to a provider that operates openly with named licensing partners. That's the standard Mzansi Stream meets, and it's the standard you should look for in any provider you consider in 2026.",
+        ],
+      },
+      {
+        id: "vpn",
+        h2: "Do I need a VPN to use IPTV in South Africa?",
+        paragraphs: [
+          "No. A VPN is not required for IPTV in South Africa. Mzansi Stream isn't geo-blocked on SA fibre. Some users prefer a VPN for general privacy reasons (the same way some users prefer a VPN for browsing) — that's a personal choice, not an IPTV requirement.",
+          "If you're an SA expat watching SA content from abroad, a VPN may help if the destination country geo-blocks certain feeds. Mzansi Stream works in 50+ countries without geo-blocking on our side.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is IPTV legal in South Africa in 2026?",
+        a: "Yes — IPTV is a legal technology in South Africa. What's illegal is the unauthorised distribution of copyrighted content without a licence. A legitimate IPTV provider sources via licensed partners, operates under POPIA, and accepts traceable SA payment.",
+      },
+      {
+        q: "Can I be prosecuted for using IPTV in SA?",
+        a: "SA enforcement focuses on distributors, not subscribers. There has been no reported prosecution of an individual SA IPTV subscriber in recent years. The legal risk for a subscriber to a legitimate provider is effectively zero.",
+      },
+      {
+        q: "Is Mzansi Stream a legitimate IPTV provider?",
+        a: "Yes. Mzansi Stream sources channels via licensed partners, operates under POPIA, accepts traceable SA payment methods (EFT, SnapScan, Ozow, Capitec Pay), publishes a real WhatsApp support channel, and honours the Consumer Protection Act with a 7-day refund guarantee.",
+      },
+      {
+        q: "What law governs IPTV in South Africa?",
+        a: "The Copyright Act 98 of 1978, the Electronic Communications Act 36 of 2005, the Protection of Personal Information Act 4 of 2013 (POPIA), and the Consumer Protection Act 68 of 2008 are the four pieces of legislation directly relevant to IPTV in SA in 2026.",
+      },
+      {
+        q: "Do I need a VPN for IPTV in South Africa?",
+        a: "No. A VPN is not required for IPTV in SA. Mzansi Stream works without a VPN on every major SA fibre network.",
+      },
+      {
+        q: "Is it legal to watch SuperSport via IPTV without DStv?",
+        a: "It's legal to watch SuperSport via an IPTV provider that holds the redistribution licence. Mzansi Stream sources SuperSport feeds via licensed partners and accepts traceable SA payment — meeting the standards SA copyright law contemplates.",
+      },
+      {
+        q: "What's the difference between legitimate and illegitimate IPTV?",
+        a: "Legitimate IPTV: named licensing chain, registered SA business, POPIA-compliant, traceable payment, published support, sustainable pricing. Illegitimate IPTV: crypto-only payment, anonymous Telegram channel, R49/month 'lifetime' deals, no published business name.",
+      },
+      {
+        q: "Is downloading IPTV apps like TiviMate or IPTV Smarters illegal?",
+        a: "No. TiviMate, IPTV Smarters Pro, GSE Smart IPTV and Smart IPTV are all legal apps available in the Amazon and Google Play stores. They're M3U players — the same way VLC is an M3U player. Legality depends entirely on the source you connect them to.",
+      },
+    ],
+    related: [
+      {
+        label: "Best IPTV in South Africa 2026 — buyer's guide",
+        href: "/best-iptv-south-africa-2026/",
+      },
+      { label: "DStv alternative — complete 2026 guide", href: "/dstv-alternative/" },
+      {
+        label: "IPTV EFT, SnapScan & Capitec Pay",
+        href: "/iptv-eft-snapscan-payment/",
+      },
+      {
+        label: "Watch SuperSport without DStv",
+        href: "/iptv-supersport-without-dstv/",
+      },
+      { label: "Mzansi Stream POPIA policy", href: "/legal/popia/" },
+    ],
+    hasHowTo: false,
+    datePublished: "2026-02-12",
+    dateModified: "2026-05-16",
+    preferredLocale: ZA,
+  },
+
   // ─── 1. BEST IPTV SOUTH AFRICA 2026 ─────────────────────────────────
   {
     slug: "best-iptv-south-africa-2026",

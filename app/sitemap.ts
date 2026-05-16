@@ -12,6 +12,7 @@ import { SA_LANGUAGE_SLUGS } from "../lib/seo/sa-languages";
 import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 import { PILLAR_SLUGS } from "../lib/seo/pillars";
+import { DEVICE_SLUGS } from "../lib/seo/devices";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -69,6 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/sadc/", 0.8, "monthly"));
   entries.push(withAlternates("/sa-abroad/", 0.8, "monthly"));
   entries.push(withAlternates("/communities/", 0.7, "monthly"));
+  entries.push(withAlternates("/devices/", 0.8, "monthly"));
+
+  // Device install pages (under /devices/[slug]/ — Hisense, LG, Sony, etc.).
+  for (const slug of DEVICE_SLUGS) {
+    entries.push(withAlternates(`/devices/${slug}/`, 0.7, "monthly"));
+  }
 
   // SADC countries (8 × default locale anchor with hreflang alternates).
   for (const slug of SADC_SLUGS) {
