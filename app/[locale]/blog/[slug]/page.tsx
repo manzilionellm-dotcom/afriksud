@@ -15,6 +15,7 @@ import {
 } from "../../../../lib/seo/authors";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { AuthorBio } from "../../../../components/seo/AuthorBio";
+import { PricingCtaBlock } from "../../../../components/seo/PricingCtaBlock";
 import { SITE } from "../../../../components/shared/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -98,6 +99,19 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
+  const faqSchema =
+    post.faq && post.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: post.faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <>
       <script
@@ -108,6 +122,12 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
 
       <LongformShell locale={locale as Locale}>
         <article className="section">
@@ -130,6 +150,23 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </section>
           ))}
+
+          {post.faq && post.faq.length > 0 ? (
+            <section className="longformSection" id="faq">
+              <h2>Frequently asked questions</h2>
+              {post.faq.map((f) => (
+                <details key={f.q} className="faqItem">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </section>
+          ) : null}
+
+          <PricingCtaBlock
+            locale={locale as Locale}
+            ref={`Blog-${slug}`}
+          />
 
           <section className="longformSection">
             <h2>Related</h2>

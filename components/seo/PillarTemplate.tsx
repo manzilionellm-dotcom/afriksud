@@ -10,6 +10,7 @@ import { localeUrl, SITE_URL } from "../../lib/url";
 import { SITE } from "../shared/site";
 import { generateWhatsAppLink } from "../shared/utils";
 import { LongformShell } from "../client/LongformShell";
+import { PricingCtaBlock } from "./PricingCtaBlock";
 import type { Pillar } from "../../lib/seo/pillars";
 
 export function PillarTemplate({
@@ -198,6 +199,11 @@ export function PillarTemplate({
               </details>
             ))}
           </section>
+
+          <PricingCtaBlock
+            locale={locale}
+            ref={`Pillar-${pillar.slug}`}
+          />
 
           <section className="longformSection" id="next-step">
             <h2>Ready to start? Free 24h trial — no card</h2>

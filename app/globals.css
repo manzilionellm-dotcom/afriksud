@@ -2603,6 +2603,102 @@ input[type="radio"] {
   color: var(--mz-cream);
   font-size: 0.95rem;
 }
+
+/* ─── Pricing CTA block (longform pages) ─────────────────────────────── */
+.pricingCtaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 18px 0 10px;
+}
+.pricingCtaCard {
+  position: relative;
+  border: 1px solid var(--mz-neutral-200);
+  border-radius: 18px;
+  padding: 18px 16px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pricingCtaCard.is-highlight {
+  border-color: rgba(255, 184, 28, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 184, 28, 0.18),
+              0 20px 60px -25px rgba(255, 184, 28, 0.35);
+}
+.pricingCtaBadge {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  background: #FFB81C;
+  color: #0a0a0a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.pricingCtaBadge--save {
+  background: #E0152D;
+  color: #fff;
+  left: auto;
+  right: 14px;
+}
+.pricingCtaLabel {
+  font-size: 0.85rem;
+  color: var(--mz-neutral-600);
+  font-weight: 500;
+}
+.pricingCtaPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.pricingCtaCurrency {
+  font-size: 1rem;
+  color: var(--mz-neutral-600);
+}
+.pricingCtaAmount {
+  font-size: clamp(2rem, 5vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--mz-cream);
+  line-height: 1;
+}
+.pricingCtaUnit {
+  font-size: 0.85rem;
+  color: var(--mz-neutral-600);
+}
+.pricingCtaBilled {
+  font-size: 0.78rem;
+  color: var(--mz-neutral-600);
+  margin-bottom: 8px;
+}
+.pricingCtaButton {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #25D366;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.12s ease;
+}
+.pricingCtaButton:hover { transform: translateY(-1px); }
+.pricingCtaButton:active { transform: translateY(0); }
+.pricingCtaTrust {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--mz-neutral-600);
+  text-align: center;
+}
+
 .ctaRow {
   display: flex;
   flex-wrap: wrap;
