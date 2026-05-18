@@ -11,6 +11,9 @@ import { SITE } from "../shared/site";
 import { generateWhatsAppLink } from "../shared/utils";
 import { LongformShell } from "../client/LongformShell";
 import type { Pillar } from "../../lib/seo/pillars";
+import { InlinePricingBlock } from "./InlinePricingBlock";
+import { TrustReversalBlock } from "./TrustReversalBlock";
+import { InternalLinkHub } from "./InternalLinkHub";
 
 export function PillarTemplate({
   pillar,
@@ -199,6 +202,15 @@ export function PillarTemplate({
             ))}
           </section>
 
+          <TrustReversalBlock locale={locale} />
+
+          <InlinePricingBlock
+            locale={locale}
+            refTag={`Pillar-${pillar.slug}`}
+            heading="Pricing — from R99/month, no contract"
+            sub="Pick a plan, message us on WhatsApp, and we activate within 10 minutes. 24-hour free trial available before you pay."
+          />
+
           <section className="longformSection" id="next-step">
             <h2>Ready to start? Free 24h trial — no card</h2>
             <p>
@@ -228,6 +240,11 @@ export function PillarTemplate({
               ))}
             </ul>
           </section>
+
+          <InternalLinkHub
+            locale={locale}
+            exclude={[`/${pillar.slug}/`]}
+          />
         </article>
       </LongformShell>
     </>
