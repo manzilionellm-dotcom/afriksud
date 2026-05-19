@@ -14,6 +14,7 @@ import { SITE } from "../shared/site";
 import { generateWhatsAppLink } from "../shared/utils";
 import type { Plan } from "../shared/types";
 import { tapHaptic } from "./haptic";
+import { track } from "../../lib/analytics/track";
 
 function PlanCard({
   plan,
@@ -152,6 +153,8 @@ function PlanDetailsSheet({
         rel="noreferrer"
         onClick={() => tapHaptic(14)}
         className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-base font-semibold text-black shadow-[0_8px_24px_rgba(37,211,102,0.35)] active:scale-95 transition"
+        data-track-ref={`Plan-${plan.key}-Sheet`}
+        data-track-placement="Pricing-Sheet"
       >
         {t.offers.order}
         <ArrowRight size={18} aria-hidden="true" />
@@ -165,14 +168,41 @@ export function PricingCarousel() {
   const t = dict[lang];
   const [selected, setSelected] = useState<Plan | null>(null);
   const [open, setOpen] = useState(false);
+  const sectionRef = React.useRef<HTMLElement | null>(null);
+  const firedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    if (!sectionRef.current || firedRef.current) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting && !firedRef.current) {
+            firedRef.current = true;
+            track("pricing_view", { placement: "Pricing-Carousel" });
+            obs.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: 0.3 }
+    );
+    obs.observe(sectionRef.current);
+    return () => obs.disconnect();
+  }, []);
 
   const handleSelect = (p: Plan) => {
     setSelected(p);
     setOpen(true);
+    track("plan_card_click", {
+      plan_key: p.key,
+      months: p.months,
+      price: p.price,
+      placement: "Pricing-Carousel",
+    });
   };
 
   return (
-    <section id="offers" className="relative py-12 sm:py-20">
+    <section ref={sectionRef} id="offers" className="relative py-12 sm:py-20">
       <div className="mx-auto max-w-[1100px] px-5 sm:px-8">
         <h2
           className="font-bold tracking-tight text-white"

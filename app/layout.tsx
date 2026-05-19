@@ -12,6 +12,7 @@ import {
   LOCALES,
   type Locale,
 } from "../lib/locales";
+import { AnalyticsProvider } from "../lib/analytics/AnalyticsProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -159,7 +160,10 @@ export default async function RootLayout({
       dir={meta.dir}
       className={geistSans.variable + " h-full antialiased"}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AnalyticsProvider />
+        {children}
+      </body>
     </html>
   );
 }

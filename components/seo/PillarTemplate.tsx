@@ -14,6 +14,7 @@ import type { Pillar } from "../../lib/seo/pillars";
 import { InlinePricingBlock } from "./InlinePricingBlock";
 import { TrustReversalBlock } from "./TrustReversalBlock";
 import { InternalLinkHub } from "./InternalLinkHub";
+import { DirectAnswerBlock } from "./DirectAnswerBlock";
 
 export function PillarTemplate({
   pillar,
@@ -139,6 +140,8 @@ export function PillarTemplate({
                 className="btnPrimary"
                 target="_blank"
                 rel="noreferrer"
+                data-track-ref={pillar.cta.primary.ref}
+                data-track-placement={`Pillar-${pillar.slug}-Hero`}
               >
                 {pillar.cta.primary.label}
               </a>
@@ -146,12 +149,24 @@ export function PillarTemplate({
                 <a
                   href={pillar.cta.secondary.href}
                   className="btnSecondary"
+                  data-track-ref={`Pillar-${pillar.slug}-Hero-Secondary`}
+                  data-track-placement={`Pillar-${pillar.slug}-Hero`}
                 >
                   {pillar.cta.secondary.label}
                 </a>
               ) : null}
             </div>
           </header>
+
+          <DirectAnswerBlock
+            question={pillar.h1}
+            answer={pillar.lead}
+            keyFacts={
+              pillar.trustLine
+                ? [pillar.trustLine, "From R99/month. 24-hour free trial, no credit card. Activated on WhatsApp in 10 minutes."]
+                : undefined
+            }
+          />
 
           <nav aria-label="On this page" className="longformSection">
             <h2 className="sr-only">On this page</h2>
@@ -224,6 +239,8 @@ export function PillarTemplate({
                 className="btnPrimary"
                 target="_blank"
                 rel="noreferrer"
+                data-track-ref={pillar.cta.primary.ref}
+                data-track-placement={`Pillar-${pillar.slug}-Footer-CTA`}
               >
                 {pillar.cta.primary.label}
               </a>

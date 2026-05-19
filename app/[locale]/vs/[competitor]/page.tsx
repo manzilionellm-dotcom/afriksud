@@ -21,6 +21,9 @@ import { SkipLink } from "../../../../components/client/SkipLink";
 import { LocaleSync } from "../../../../components/client/LocaleSync";
 import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
 import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
+import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
+import { DirectAnswerBlock } from "../../../../components/seo/DirectAnswerBlock";
+import { SITE } from "../../../../components/shared/site";
 
 type Props = { params: Promise<{ locale: string; competitor: string }> };
 
@@ -143,14 +146,29 @@ export default async function VersusPage({ params }: Props) {
                 From R99/mo · 24h free trial, no card · NAPAfrica-peered · 7-day satisfaction guarantee
               </p>
               <div className="ctaRow">
-                <a href="#pricing" className="btnPrimary">
+                <a
+                  href="#pricing"
+                  className="btnPrimary"
+                  data-track-ref={`Vs-${competitor}-Hero-Pricing`}
+                  data-track-placement={`Vs-${competitor}-Hero`}
+                >
                   See plans from R99/mo →
                 </a>
-                <a href="#table" className="btnSecondary">
+                <a
+                  href="#table"
+                  className="btnSecondary"
+                  data-track-ref={`Vs-${competitor}-Hero-Compare`}
+                  data-track-placement={`Vs-${competitor}-Hero`}
+                >
                   See the comparison →
                 </a>
               </div>
             </header>
+
+            <DirectAnswerBlock
+              question={`Is Mzansi Stream a real alternative to ${data.name}?`}
+              answer={`Yes. Mzansi Stream covers the same core channels as ${data.name} (where rights overlap) in 4K UHD for R99/month, with no contract, no decoder and no installer visit. Activation runs on WhatsApp in under 10 minutes. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective — most households save R8,000-R10,000 a year by switching.`}
+            />
 
             <section className="longformSection" id="table">
               <h2>Side-by-side comparison</h2>
@@ -212,6 +230,12 @@ export default async function VersusPage({ params }: Props) {
                 </details>
               ))}
             </section>
+
+            <InternalLinkHub
+              locale={locale as Locale}
+              heading={`More guides — ${SITE.brand} buyer hub`}
+              exclude={[`/vs/${competitor}/`]}
+            />
 
             <section className="longformSection" id="trial">
               <h2>Switch from {data.name} today</h2>
