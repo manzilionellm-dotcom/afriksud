@@ -19,7 +19,8 @@ import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
 import { LocaleSync } from "../../../../components/client/LocaleSync";
-import { PricingCtaBlock } from "../../../../components/seo/PricingCtaBlock";
+import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
+import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
 
 type Props = { params: Promise<{ locale: string; competitor: string }> };
 
@@ -193,9 +194,11 @@ export default async function VersusPage({ params }: Props) {
               </ul>
             </section>
 
-            <PricingCtaBlock
+            <TrustReversalBlock locale={locale as Locale} />
+
+            <InlinePricingBlock
               locale={locale as Locale}
-              ref={`Vs-${competitor}`}
+              refTag={`Vs-${competitor}`}
               heading={`Switch from ${data.name} — plans from R99/month`}
               sub={`Same SuperSport, same kykNET, same SABC, 20,000+ more channels in 4K. No contract, no decoder. Activated on WhatsApp in 10 minutes.`}
             />

@@ -10,8 +10,10 @@ import { localeUrl, SITE_URL } from "../../lib/url";
 import { SITE } from "../shared/site";
 import { generateWhatsAppLink } from "../shared/utils";
 import { LongformShell } from "../client/LongformShell";
-import { PricingCtaBlock } from "./PricingCtaBlock";
 import type { Pillar } from "../../lib/seo/pillars";
+import { InlinePricingBlock } from "./InlinePricingBlock";
+import { TrustReversalBlock } from "./TrustReversalBlock";
+import { InternalLinkHub } from "./InternalLinkHub";
 
 export function PillarTemplate({
   pillar,
@@ -200,9 +202,13 @@ export function PillarTemplate({
             ))}
           </section>
 
-          <PricingCtaBlock
+          <TrustReversalBlock locale={locale} />
+
+          <InlinePricingBlock
             locale={locale}
-            ref={`Pillar-${pillar.slug}`}
+            refTag={`Pillar-${pillar.slug}`}
+            heading="Pricing — from R99/month, no contract"
+            sub="Pick a plan, message us on WhatsApp, and we activate within 10 minutes. 24-hour free trial available before you pay."
           />
 
           <section className="longformSection" id="next-step">
@@ -234,6 +240,11 @@ export function PillarTemplate({
               ))}
             </ul>
           </section>
+
+          <InternalLinkHub
+            locale={locale}
+            exclude={[`/${pillar.slug}/`]}
+          />
         </article>
       </LongformShell>
     </>

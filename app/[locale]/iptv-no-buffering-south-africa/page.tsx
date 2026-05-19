@@ -1,5 +1,5 @@
-// app/[locale]/iptv-no-buffering/page.tsx
-// Buyer-intent pillar — targets "iptv no buffering" + "stable iptv" variants.
+// app/[locale]/iptv-no-buffering-south-africa/page.tsx
+// Buyer-intent pillar — targets "iptv no buffering", "stable iptv south africa".
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -10,7 +10,7 @@ import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { getPillar } from "../../../lib/seo/pillars";
 import { PillarTemplate } from "../../../components/seo/PillarTemplate";
 
-const SLUG = "iptv-no-buffering";
+const SLUG = "iptv-no-buffering-south-africa";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function IptvNoBufferingPage({ params }: Props) {
+export default async function NoBufferingPage({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const pillar = getPillar(SLUG);

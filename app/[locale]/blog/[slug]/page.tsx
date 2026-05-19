@@ -15,7 +15,9 @@ import {
 } from "../../../../lib/seo/authors";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { AuthorBio } from "../../../../components/seo/AuthorBio";
-import { PricingCtaBlock } from "../../../../components/seo/PricingCtaBlock";
+import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
+import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
+import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
 import { SITE } from "../../../../components/shared/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -99,19 +101,6 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
-  const faqSchema =
-    post.faq && post.faq.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: post.faq.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }
-      : null;
-
   return (
     <>
       <script
@@ -122,12 +111,6 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {faqSchema ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      ) : null}
 
       <LongformShell locale={locale as Locale}>
         <article className="section">
@@ -151,21 +134,13 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           ))}
 
-          {post.faq && post.faq.length > 0 ? (
-            <section className="longformSection" id="faq">
-              <h2>Frequently asked questions</h2>
-              {post.faq.map((f) => (
-                <details key={f.q} className="faqItem">
-                  <summary>{f.q}</summary>
-                  <p>{f.a}</p>
-                </details>
-              ))}
-            </section>
-          ) : null}
+          <TrustReversalBlock locale={locale as Locale} />
 
-          <PricingCtaBlock
+          <InlinePricingBlock
             locale={locale as Locale}
-            ref={`Blog-${slug}`}
+            refTag={`Blog-${slug}`}
+            heading={`Get started with ${SITE.brand} — from R99/month`}
+            sub="Same channel pack on every plan. Pay once, no auto-renewal, no contract. 24-hour free trial available on request."
           />
 
           <section className="longformSection">
@@ -178,6 +153,11 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </ul>
           </section>
+
+          <InternalLinkHub
+            locale={locale as Locale}
+            heading="More buyer-intent guides"
+          />
         </article>
       </LongformShell>
     </>

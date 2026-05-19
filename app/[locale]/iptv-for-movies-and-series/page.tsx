@@ -1,5 +1,6 @@
-// app/[locale]/iptv-for-movies-series/page.tsx
-// Buyer-intent pillar — targets "iptv for movies" / "iptv movies and series".
+// app/[locale]/iptv-for-movies-and-series/page.tsx
+// Buyer-intent pillar — targets "iptv for movies", "iptv vod", "Netflix
+// alternative south africa", "best iptv for movies and series".
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -10,7 +11,7 @@ import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { getPillar } from "../../../lib/seo/pillars";
 import { PillarTemplate } from "../../../components/seo/PillarTemplate";
 
-const SLUG = "iptv-for-movies-series";
+const SLUG = "iptv-for-movies-and-series";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function IptvForMoviesSeriesPage({ params }: Props) {
+export default async function MoviesAndSeriesPage({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const pillar = getPillar(SLUG);

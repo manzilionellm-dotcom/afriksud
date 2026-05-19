@@ -1287,481 +1287,545 @@ export const PILLARS: Pillar[] = [
     dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
-];
 
-// ─── BUYER-INTENT PILLARS (cheap / 4K / no-buffering / movies) ──────────
-// These target high-purchase-intent head terms that aren't covered by the
-// brand-led pillars above. Each one funnels straight to the pricing CTA
-// block and the WhatsApp activation flow.
-
-PILLARS.push(
+  // ─── 9. CHEAP IPTV SOUTH AFRICA ─────────────────────────────────────
   {
     slug: "cheap-iptv-south-africa",
-    eyebrow: "Cheap IPTV · 2026 guide",
-    h1: "Cheap IPTV in South Africa — R99/month with no buffering",
+    eyebrow: "Buyer guide · Cheap IPTV 2026",
+    h1: "Cheap IPTV in South Africa — under R100/month, 20,000+ channels",
     metaTitle:
-      "Cheap IPTV South Africa 2026 — From R99/mo, 4K, No Contract | Mzansi Stream",
+      "Cheap IPTV South Africa — From R99/mo, 20,000+ Channels | Mzansi Stream",
     metaDescription:
-      "Cheapest reliable IPTV in South Africa 2026 — R99/month, 20,000+ channels in 4K, NAPAfrica-peered for no buffering. Free 24h trial, no card.",
+      "Cheap IPTV in South Africa from R99/month. 20,000+ live channels, 4K SuperSport, kykNET, SABC and Premier League. No contract, no decoder, no installation fee.",
     lead:
-      "Cheap IPTV in South Africa doesn't have to mean unreliable. Mzansi Stream is R99/month for 20,000+ live channels in 4K with NAPAfrica peering, full SuperSport, full Premier League and WhatsApp support — the cheapest realistic price point for a provider that actually stays online during peak hours. Here's how the pricing works, what's included, and where the cheaper-than-R99 'IPTV scam' usually falls apart.",
+      "If you've been searching for cheap IPTV in South Africa that doesn't drop frames mid-PSL match, this guide compares what R99/month actually buys you in 2026 — channel count, 4K availability, sport coverage, support response time — and how Mzansi Stream's 12-month plan lands at R99.92 effective per month for the full 20,000+ channel lineup.",
     trustLine:
-      "From R99/mo · 24h free trial · NAPAfrica-peered · No contract · No card to start",
+      "From R99/mo · No contract · 24h free trial · Activated in 10 minutes",
     cta: {
       primary: {
-        label: "Start cheap IPTV — free 24h trial →",
+        label: "Start with the R99/mo plan — Free trial first →",
         message:
-          "Hi! I want the cheap IPTV plan — free 24-hour trial, no card. Can you activate me on Mzansi Stream?",
-        ref: "Pillar-CheapIPTV-Hero",
+          "Hi! I want the cheapest Mzansi Stream plan (R99/mo via 12-month). Can you send me the free 24h trial first?",
+        ref: "Pillar-Cheap-Hero",
       },
-      secondary: { label: "Jump to pricing →", href: "#pricing" },
+      secondary: { label: "See pricing", href: "#pricing" },
     },
     sections: [
       {
         id: "what-cheap-means",
         h2: "What 'cheap IPTV' actually means in 2026",
         paragraphs: [
-          "R99/month is the realistic floor for a reliable South African IPTV provider in 2026. Below that, the maths stops working — licensed CDN feeds cost real money, NAPAfrica peering costs real money, and WhatsApp support costs real time. Providers under R50/month either skip licensed feeds (channels start disappearing), oversubscribe a single server (you get peak-hour buffering) or churn through customers in 1-3 months before vanishing.",
-          "Mzansi Stream's 12-month plan works out to R99.92/mo effective. That's the cheapest price you'll see on a provider that has direct NAPAfrica peering, WhatsApp support 7 days a week, and a 24-hour free trial with no credit card.",
+          "Cheap IPTV in South Africa is anything sustainably under R200/month for a real, full-channel service with 4K, EPG and human WhatsApp support. Below R50/month you're usually looking at re-sellers without their own CDN — they buffer the moment SuperSport hits a goal replay.",
+          "Mzansi Stream's 12-month plan works out at R99.92/month (R1,199 once-off). The 6-month plan is R116.50/month effective. Both unlock the identical 20,000+ channel pack, 4K UHD, full EPG and WhatsApp support — there is no tiered channel pack, no Premier League surcharge, no decoder rental.",
         ],
       },
       {
-        id: "what-you-get",
-        h2: "What's included at R99 — every plan, no upsell tiers",
+        id: "real-savings-vs-dstv",
+        h2: "Real savings vs DStv in 2026",
         bullets: [
-          "20,000+ live channels — SuperSport, kykNET, SABC, Premier League, M-Net, international.",
-          "100,000+ movies and series on demand, refreshed weekly.",
-          "4K UHD on every plan — no premium tier required.",
-          "EPG (electronic programme guide) included.",
-          "Works on Firestick, Samsung Tizen, LG webOS, Hisense VIDAA, iPhone, iPad, Android, MAG Box, PC and Mac.",
-          "WhatsApp support 7 days a week.",
-          "24-hour free trial, no credit card required.",
+          "DStv Premium: R899/mo × 12 = R10,788/year + R1,500+ decoder.",
+          "DStv Compact Plus: R549/mo × 12 = R6,588/year + decoder + installation.",
+          "Mzansi Stream 12-month: R1,199 once. Save ~R9,500 over DStv Premium year one.",
+          "Mzansi Stream 6-month: R699 once. Pay twice a year, save R5,200+ vs Compact Plus.",
+          "Mzansi Stream 1-month: R199 once. Same channels. No commitment.",
         ],
       },
       {
-        id: "vs-cheaper",
-        h2: "Why Mzansi Stream is cheaper than DStv, Compact and even Showmax Pro",
+        id: "what-cheap-iptv-includes",
+        h2: "What R99/month actually includes at Mzansi Stream",
         bullets: [
-          "DStv Premium — R899/mo (R10,788/year). Mzansi Stream 12-month plan: R1,199/year. Save ~R9,500.",
-          "DStv Compact — R449/mo. Mzansi Stream: R99/mo with more sport, more channels, 4K and no contract.",
-          "Showmax Pro — R299/mo for partial Premier League. Mzansi Stream: R99/mo with full Premier League, full SuperSport and 20,000+ extra channels.",
-          "StarSat — R199-R399/mo with a decoder upfront. Mzansi Stream: no decoder, no contract, R99/mo.",
+          "20,000+ live channels — SABC 1/2/3, e.tv, kykNET, Mzansi Magic, SuperSport PSL, SuperSport Premier League, SuperSport Rugby & Cricket, M-Net, Disney+, HBO Max mirror.",
+          "100,000+ on-demand movies and series, refreshed weekly.",
+          "Native 4K UHD on every channel that broadcasts in 4K (no quality tier).",
+          "Full Electronic Programme Guide (EPG) for the next 7 days.",
+          "Catch-up TV on most channels.",
+          "Works on every device you already own — Smart TV, Firestick, iPhone, Android, MAG, PC.",
+          "WhatsApp support 7 days a week in English (Afrikaans on request).",
         ],
       },
       {
-        id: "red-flags",
-        h2: "Cheap IPTV red flags — what to avoid",
-        bullets: [
-          "Crypto-only or gift-card-only payment — no traceable recourse.",
-          "No real free trial (or 'trial' demands card details upfront).",
-          "Pricing below R50/mo with no explanation of how peering works.",
-          "Channel list 'on request' that never arrives.",
-          "Email-only support, no WhatsApp.",
-          "No registered SA business address or contact.",
-        ],
-      },
-      {
-        id: "payment",
-        h2: "How to pay — every SA method accepted",
+        id: "what-to-avoid",
+        h2: "Three traps to avoid when shopping cheap IPTV",
         paragraphs: [
-          "Mzansi Stream accepts EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin. Every payment is traceable, every payment hits a registered South African business account, and every payment is covered by our 7-day satisfaction guarantee.",
+          "Most 'R49/month IPTV' offers in South Africa fail one of three sniff tests: the provider is a single re-seller (no redundant servers), there's no SA-peered CDN (every match buffers), or there's no human support (your stream dies on Saturday afternoon and nobody answers).",
+          "Stick to providers that have NAPAfrica peering, document their channel list publicly, and respond on WhatsApp within minutes during peak hours. If the seller refuses a free trial, walk away — the channel pack you're buying should survive a 24-hour test.",
+        ],
+        bullets: [
+          "Trap 1 — No free trial. Refusal to offer 24h trial = no confidence in the stream.",
+          "Trap 2 — Channel list locked behind WhatsApp. A real provider lists channels publicly.",
+          "Trap 3 — Prepaid for 12 months upfront with no refund clause. Walk away.",
+        ],
+      },
+      {
+        id: "how-to-buy",
+        h2: "How to buy the cheapest Mzansi Stream plan",
+        steps: [
+          {
+            title: "Pick the 12-month plan",
+            text: "R1,199 once-off works out at R99.92/month — the lowest sustainable per-month rate.",
+          },
+          {
+            title: "Request the 24h free trial first",
+            text: "Message us on WhatsApp. We send the M3U link within 10 minutes. Test on your Smart TV, Firestick or phone for 24 hours before paying.",
+          },
+          {
+            title: "Pay any local method",
+            text: "EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco, Visa, Mastercard, PayPal or Bitcoin. No card-on-file, no recurring charge.",
+          },
+          {
+            title: "Watch in 4K within minutes",
+            text: "We re-send the M3U credentials and the full setup guide for your specific device.",
+          },
         ],
       },
     ],
     faq: [
       {
-        q: "What is the cheapest IPTV in South Africa?",
-        a: "R99/month is the cheapest realistic price for a reliable, NAPAfrica-peered IPTV service. Mzansi Stream's 1-month plan starts at R199 and the 12-month plan effective rate is R99.92/mo.",
+        q: "What's the cheapest Mzansi Stream plan in 2026?",
+        a: "The 12-month plan at R1,199 once-off — that's R99.92 effective per month for the full 20,000+ channel pack with 4K, EPG and support.",
       },
       {
-        q: "Is cheap IPTV legal in South Africa?",
-        a: "Streaming TV is not illegal per se in South Africa — what's illegal is distributing copyrighted content without authorisation. Mzansi Stream sources channels via licensed partners, accepts traceable payment and is POPIA-compliant.",
+        q: "Is cheap IPTV reliable for SuperSport and Premier League?",
+        a: "Mzansi Stream carries every SuperSport feed and the Premier League on every plan, including the R99/mo tier. The CDN peers at NAPAfrica so 4K stays stable through PSL counter-attacks and Premier League stoppage time.",
       },
       {
-        q: "Can I get cheap IPTV with SuperSport included?",
-        a: "Yes — every Mzansi Stream plan from R99/month includes every SuperSport feed (PSL, Premier League, Variety 1-4, Rugby, Cricket, Motorsport, Tennis, Golf) in 4K UHD.",
+        q: "Why is Mzansi Stream cheaper than DStv?",
+        a: "No decoder hardware, no installer truck, no 24-month lock-in. You stream the channels directly to devices you already own. The savings are real — R9,500+ over DStv Premium in year one.",
       },
       {
-        q: "Is there a really free IPTV trial?",
-        a: "Mzansi Stream offers a 24-hour free trial on WhatsApp with no credit card required. Full 20,000+ channel access for 24 hours — pay only if it works for you.",
+        q: "Are there hidden fees on the R99/mo plan?",
+        a: "No. The 12-month plan is R1,199 once-off, full stop. No installation, no decoder rental, no per-channel surcharge, no auto-renewal.",
       },
       {
-        q: "Why is cheap IPTV often unreliable?",
-        a: "Below R50/month the provider can't afford licensed CDN feeds or NAPAfrica peering — so streams buffer at peak hours or the service vanishes inside 3 months. R99 is the price floor for a sustainable SA IPTV operation.",
+        q: "Can I try before I pay?",
+        a: "Yes — a free 24-hour trial of the full channel pack. Request it on WhatsApp. We don't ask for a card.",
       },
       {
-        q: "Can I cancel any time on Mzansi Stream?",
-        a: "Yes — there's no contract and no auto-renewal. You pay for the chosen period, the service runs for that period, and you renew manually if you want to continue.",
+        q: "Will the R99 plan stay R99 next year?",
+        a: "Pricing is locked in for the term you pay for. Mzansi Stream has held R99 (12-month equivalent) since launch and there's no scheduled hike for 2026.",
+      },
+      {
+        q: "What if cheap IPTV gets shut down?",
+        a: "Mzansi Stream operates as a legitimate streaming business with a published company entity, POPIA-compliant data handling and named support staff. We're not a flea-market re-seller. The service is built to run year on year.",
       },
     ],
     related: [
-      { label: "Best IPTV South Africa 2026 — full guide", href: "/best-iptv-south-africa-2026/" },
-      { label: "DStv alternative — save R800+/month", href: "/dstv-alternative/" },
-      { label: "Is IPTV legal in South Africa?", href: "/is-iptv-legal-south-africa/" },
-      { label: "How to choose an IPTV service", href: "/blog/how-to-choose-iptv-service-south-africa/" },
+      { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "DStv alternative — complete 2026 guide", href: "/dstv-alternative/" },
+      { label: "IPTV with no buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
+      { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa/" },
+      { label: "Mzansi Stream vs DStv Premium", href: "/vs/dstv-premium/" },
+      { label: "Watch SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
     ],
-    hasHowTo: false,
-    datePublished: "2026-02-18",
-    dateModified: "2026-05-18",
+    hasHowTo: true,
+    datePublished: "2026-03-01",
+    dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
 
+  // ─── 10. 4K IPTV SOUTH AFRICA ────────────────────────────────────────
   {
     slug: "4k-iptv-south-africa",
-    eyebrow: "4K IPTV · 2026 guide",
-    h1: "4K IPTV in South Africa — every channel in UHD on every plan",
+    eyebrow: "4K UHD · Streaming quality 2026",
+    h1: "4K IPTV in South Africa — native UHD on every channel that broadcasts it",
     metaTitle:
-      "4K IPTV South Africa 2026 — UHD on Every Plan from R99 | Mzansi Stream",
+      "4K IPTV South Africa — Native UHD SuperSport & Premier League | Mzansi Stream",
     metaDescription:
-      "Best 4K IPTV in South Africa 2026 — every SuperSport, Premier League and kykNET channel in native UHD. NAPAfrica-peered, stable 4K on Vumatel and Openserve. From R99/mo.",
+      "Native 4K UHD IPTV in South Africa. SuperSport, Premier League, kykNET and 20,000+ channels in true 4K — no upscaling. NAPAfrica CDN, no buffering. From R99/mo.",
     lead:
-      "4K IPTV in South Africa used to mean paying DStv Premium prices for a handful of UHD channels. In 2026 it doesn't. Mzansi Stream ships every SuperSport feed, every Premier League match, kykNET and the major international channels in native 4K UHD on every plan from R99/month — provided your fibre line and router can keep up. Here's exactly what's available in 4K, what bandwidth you need, and what to fix if your stream keeps dropping back to 1080p.",
+      "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a low-latency edge close enough to the viewer for the stream to never re-buffer. Mzansi Stream is built for all three on every SA fibre line, on every plan from R99/month.",
     trustLine:
-      "4K on every plan · NAPAfrica-peered · Stable on Vumatel, Openserve and Frogfoot",
+      "Native 4K · NAPAfrica-peered · No quality tier · 4K available on every plan",
     cta: {
       primary: {
-        label: "Test 4K IPTV — free 24h trial →",
+        label: "Test 4K on your Smart TV — Free 24h trial →",
         message:
-          "Hi! I want to test 4K IPTV on Mzansi Stream — free 24-hour trial, no card. Can you activate me?",
-        ref: "Pillar-4KIPTV-Hero",
+          "Hi! I want to test the 4K Mzansi Stream feeds on my [Samsung/LG/Sony] Smart TV. Can you send the free 24h trial?",
+        ref: "Pillar-4K-Hero",
       },
-      secondary: { label: "What you need for 4K →", href: "#requirements" },
+      secondary: { label: "Pricing", href: "#pricing" },
     },
     sections: [
       {
-        id: "whats-in-4k",
-        h2: "Which channels are available in 4K UHD",
-        bullets: [
-          "Every SuperSport feed — PSL, Premier League, Variety 1-4, Rugby, Cricket, Motorsport, Tennis, Golf, F1, UFC.",
-          "Premier League — every match in native 4K on the dedicated SuperSport Premier League channel.",
-          "Springbok Test matches and URC fixtures — SuperSport Rugby in 4K.",
-          "M-Net Movies Premiere and Action+ in 4K HDR.",
-          "Major international channels — BBC One UHD, Sky News, Eurosport 4K, DAZN.",
-          "100,000+ on-demand movies, with the major Hollywood and Netflix-mirror titles in 4K HDR.",
-        ],
-      },
-      {
-        id: "requirements",
-        h2: "What you need for stable 4K streaming",
+        id: "what-4k-means",
+        h2: "Native 4K vs upscaled 1080p — what you're actually paying for",
         paragraphs: [
-          "Bandwidth: roughly 25-30 Mbps of clean throughput per concurrent 4K stream. Any modern Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN or Vodacom fibre line easily delivers this — provided the router and Wi-Fi don't bottleneck.",
-          "Router: a Wi-Fi 6 router (TP-Link Archer AX55 around R1,300, ASUS RT-AX55 around R1,500) or a hardwired Ethernet connection. ISP-issued routers from 2020-2022 frequently cap 5GHz throughput well below 100 Mbps — they're the most common reason 4K IPTV drops to 1080p mid-match.",
-          "Device: any Firestick 4K Max, Android TV box, modern Samsung Tizen / LG webOS / Hisense VIDAA Smart TV, or 4K-capable iPad will play the stream cleanly.",
+          "Half the 'IPTV' services on local Facebook groups claim 4K and serve 1080p with software sharpening. The picture looks slightly crisper than 1080p but it's not real UHD — the source feed never carried 2160 lines. You see it most clearly on fast pans (Premier League corner kicks, F1 cornering): the image smears.",
+          "Native 4K means the broadcaster's master feed is 3840×2160 at 50fps or higher, encoded in HEVC (H.265), and delivered to your TV as ~20-25 Mbps. Mzansi Stream carries every SA channel that broadcasts in native 4K — SuperSport 4K Pop-Up, Eurosport 4K, BT Sport Ultimate 4K — at the actual broadcast resolution.",
         ],
       },
       {
-        id: "fibre-by-isp",
-        h2: "4K stability by South African fibre ISP",
+        id: "what-broadcasts-in-4k",
+        h2: "What's actually in 4K on Mzansi Stream in 2026",
         bullets: [
-          "Vumatel — direct NAPAfrica peering, 4K stable, <10ms to Mzansi Stream edge.",
-          "Openserve (Telkom) — direct peering, 4K stable, <15ms.",
-          "Frogfoot — direct peering, 4K stable, <12ms.",
-          "Octotel — Cape Town edge, 4K stable.",
-          "MetroFibre / MTN Fibre / Vodacom Fibre — all peer directly, 4K stable.",
-          "Rain 5G — wireless, slightly higher jitter but 4K plays cleanly on most home setups.",
+          "SuperSport PSL 4K (every Premiership match available in UHD).",
+          "SuperSport Premier League 4K (selected fixtures + every Manchester / North London / Merseyside derby).",
+          "SuperSport Rugby 4K (every Springboks Test, every URC fixture).",
+          "Eurosport 1 4K — Tour de France, Australian Open, Roland Garros.",
+          "BT Sport Ultimate 4K — Champions League, Premier League, UFC PPV.",
+          "Sky Sports F1 4K — every Grand Prix race weekend.",
+          "Discovery 4K, Insight 4K — nature documentaries in true UHD.",
+          "Netflix 4K mirror, Disney+ 4K, HBO Max 4K — movies and series.",
         ],
       },
       {
-        id: "fix-1080p",
-        h2: "Why your 4K stream might drop to 1080p — and how to fix it",
+        id: "minimum-spec",
+        h2: "Minimum spec to actually watch 4K IPTV in SA",
+        bullets: [
+          "Internet: 25 Mbps sustained per 4K stream (50 Mbps fibre comfortable, 100 Mbps ideal).",
+          "TV: any 2018+ Smart TV with HEVC (H.265) decode — Samsung, LG, Sony, Hisense, TCL.",
+          "Hardware streaming box (if Smart TV is older): Firestick 4K Max, Apple TV 4K, Nvidia Shield, Chromecast with Google TV 4K.",
+          "Connection: wired Ethernet preferred for 4K. Wi-Fi 5 GHz acceptable for single-stream households.",
+          "App: TiviMate Premium (best 4K UI) or IPTV Smarters Pro (free tier works).",
+        ],
+      },
+      {
+        id: "why-no-buffering",
+        h2: "Why Mzansi Stream's 4K doesn't buffer on SA fibre",
+        paragraphs: [
+          "Most overseas IPTV providers route 4K traffic from Europe or the US. A 4K SuperSport stream from a Frankfurt server hits SA at 180-220ms one-way latency. The moment the network blip — and SA fibre has plenty of micro-blips — the stream re-buffers because the player's 4-second buffer empties before the next chunk arrives.",
+          "Mzansi Stream's 4K edges sit at NAPAfrica in Johannesburg and Cape Town, the same exchange Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN and Vodacom peer at. End-to-end latency from edge to TV is typically <15ms. The buffer never empties, so the picture never freezes.",
+        ],
+      },
+      {
+        id: "how-to-enable-4k",
+        h2: "How to enable 4K on your device in 5 steps",
         steps: [
           {
-            title: "Check the player",
-            text: "Open TiviMate or IPTV Smarters → Settings → Player → set 'Quality' to 4K (lock manually if needed). Adaptive bitrate often downgrades streams on marginal Wi-Fi.",
+            title: "Pick a 4K-capable player",
+            text: "TiviMate Premium on Firestick / Android TV is the gold standard. IPTV Smarters Pro works free.",
           },
           {
-            title: "Hardwire the device",
-            text: "Plug a 10m Ethernet cable from the router into the TV or Firestick. The R250 Firestick USB-Ethernet adapter eliminates Wi-Fi jitter entirely.",
+            title: "Connect over Ethernet (if possible)",
+            text: "Buy a USB-to-Ethernet adapter for Firestick (R250). Eliminates Wi-Fi jitter and locks 4K at full bitrate.",
           },
           {
-            title: "Replace ISP-branded router",
-            text: "Most ISP routers cap 5GHz throughput at 60-80 Mbps. A Wi-Fi 6 router (Archer AX55, ASUS RT-AX55) clears 300+ Mbps to a single device.",
+            title: "Set the player's max resolution to 'Auto' or '4K'",
+            text: "In TiviMate: Settings → Playback → Preferred resolution → 4K. In IPTV Smarters: enable 'Best Player' mode.",
           },
           {
-            title: "Switch to 5GHz",
-            text: "Always connect the TV and IPTV box to the 5GHz Wi-Fi SSID — 2.4GHz is too crowded to hold 4K bitrate.",
+            title: "Tune in to a 4K-tagged channel",
+            text: "Look for the '4K' suffix on channel names: 'SuperSport PSL 4K', 'Eurosport 4K', 'BT Sport Ultimate 4K'.",
           },
           {
-            title: "Run a peak-hour test",
-            text: "If 4K only drops between 19:00 and 22:00, your ISP may be over-subscribing NAPAfrica capacity. Raise it with the ISP or move to Vumatel / Openserve.",
+            title: "Confirm 4K is playing",
+            text: "Most TVs show a '4K HDR' badge top-right when receiving native UHD. If you see 1080p, switch player or check your fibre line.",
           },
-        ],
-      },
-      {
-        id: "vs-dstv-4k",
-        h2: "Mzansi Stream 4K vs DStv 4K",
-        bullets: [
-          "DStv Premium offers 4K on a limited subset of channels — Mzansi Stream ships 4K on every channel where the broadcaster provides a UHD feed.",
-          "DStv 4K requires the Explora Ultra decoder (R3,500+ upfront) — Mzansi Stream 4K runs on a R900 Firestick.",
-          "DStv contract: 24 months. Mzansi Stream: no contract.",
-          "DStv Premium 4K total cost year one: R10,788 + R3,500 = R14,288. Mzansi Stream 12-month 4K: R1,199.",
         ],
       },
     ],
     faq: [
       {
-        q: "Is 4K IPTV available on every Mzansi Stream plan?",
-        a: "Yes — 4K UHD is included on every plan from R99/month. There is no premium tier required to unlock 4K.",
+        q: "Is 4K available on every Mzansi Stream plan?",
+        a: "Yes. Every plan — including R99/month effective on the 12-month — carries the same 4K channel pack. There is no 4K surcharge.",
       },
       {
-        q: "How much bandwidth does 4K IPTV use in South Africa?",
-        a: "Approximately 25-30 Mbps per concurrent 4K stream on Mzansi Stream's NAPAfrica-peered CDN. A 100 Mbps Vumatel or Openserve line can hold three 4K streams at once.",
+        q: "What internet speed do I need for 4K IPTV?",
+        a: "25 Mbps sustained per active 4K stream. A 50 Mbps Vumatel or Openserve line comfortably runs one 4K + one HD stream simultaneously.",
       },
       {
-        q: "Will 4K IPTV work on my Samsung or LG Smart TV?",
-        a: "Yes — modern Samsung Tizen, LG webOS and Hisense VIDAA Smart TVs support 4K IPTV via Smarters Lite or IPTV Smarters Pro. For best results, hardwire the TV via Ethernet.",
+        q: "Does Mzansi Stream upscale 1080p to fake 4K?",
+        a: "No. The 4K channels are sourced from native UHD broadcast feeds. Channels that broadcast in 1080p are delivered in 1080p — we don't software-upscale.",
       },
       {
-        q: "Why does my 4K IPTV keep dropping to 1080p?",
-        a: "Almost always a router or Wi-Fi bottleneck — not the stream. Lock the player to 4K manually, hardwire the device via Ethernet, or replace an ISP-issued router with a Wi-Fi 6 model.",
+        q: "Will 4K work on my older Samsung Smart TV?",
+        a: "If the TV is 2018 or newer with HEVC decode, yes. Older models without H.265 hardware should pair a Firestick 4K Max for 4K playback.",
       },
       {
-        q: "Is Mzansi Stream 4K stable during PSL kick-off?",
-        a: "Yes — our CDN edges peer directly at NAPAfrica in Johannesburg and Cape Town, so peak-hour latency stays under 15ms for every major SA fibre ISP. 4K SuperSport PSL plays cleanly.",
+        q: "Why does my 4K stream drop to 1080p?",
+        a: "Usually a Wi-Fi jitter issue. Switch to 5 GHz, move closer to the router, or hard-wire over Ethernet. Your fibre line is almost never the bottleneck.",
       },
       {
-        q: "Can I watch Premier League in 4K on Mzansi Stream?",
-        a: "Yes — every Premier League match is carried in native 4K on the dedicated SuperSport Premier League channel, included on every plan from R99/month.",
+        q: "Does the EPG show 4K availability?",
+        a: "Yes — the channel name carries the '4K' suffix when a feed is native UHD.",
+      },
+      {
+        q: "Do I need a separate 4K subscription for Premier League?",
+        a: "No. Premier League 4K fixtures are included on every plan via SuperSport Premier League 4K and BT Sport Ultimate 4K.",
       },
     ],
     related: [
-      { label: "Best IPTV South Africa 2026", href: "/best-iptv-south-africa-2026/" },
-      { label: "Best IPTV for Vumatel, Openserve, Frogfoot", href: "/iptv-vumatel-openserve-frogfoot/" },
-      { label: "Firestick IPTV setup — South Africa", href: "/iptv-firestick-south-africa/" },
-      { label: "Why your IPTV keeps buffering", href: "/blog/iptv-buffering-how-to-fix/" },
+      { label: "Best IPTV for SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
+      { label: "IPTV with no buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
+      { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/iptv-vumatel-openserve-frogfoot/" },
+      { label: "IPTV Firestick install guide", href: "/iptv-firestick-south-africa/" },
+      { label: "IPTV for Samsung Smart TV", href: "/iptv-samsung-smart-tv/" },
+      { label: "Cheap IPTV South Africa", href: "/cheap-iptv-south-africa/" },
     ],
     hasHowTo: true,
-    datePublished: "2026-02-20",
-    dateModified: "2026-05-18",
+    datePublished: "2026-03-02",
+    dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
 
+  // ─── 11. IPTV NO BUFFERING SOUTH AFRICA ─────────────────────────────
   {
-    slug: "iptv-no-buffering",
-    eyebrow: "Stable IPTV · 2026 guide",
-    h1: "IPTV with no buffering in South Africa — how Mzansi Stream stays stable",
+    slug: "iptv-no-buffering-south-africa",
+    eyebrow: "Streaming quality · Stability 2026",
+    h1: "IPTV without buffering in South Africa — what actually causes it and how to fix it",
     metaTitle:
-      "IPTV No Buffering South Africa 2026 — NAPAfrica-Peered 4K | Mzansi Stream",
+      "IPTV No Buffering South Africa — Stable 4K Streams | Mzansi Stream",
     metaDescription:
-      "Stable IPTV in South Africa 2026 — no buffering, NAPAfrica-peered 4K with under 15ms to every major fibre ISP. From R99/mo. Free 24h trial.",
+      "Stable IPTV with no buffering in South Africa. NAPAfrica-peered CDN, <15ms latency, 4K SuperSport that doesn't drop mid-match. Setup checklist + provider comparison.",
     lead:
-      "If you've cycled through three IPTV providers because every one of them buffers at peak hours, the problem usually isn't your fibre line — it's where the IPTV provider's CDN lives. Mzansi Stream's CDN edges sit directly at NAPAfrica in Johannesburg and Cape Town, the exchange every major South African ISP peers at. That's why our 4K SuperSport, Premier League and kykNET streams stay stable when overseas IPTV providers stutter. Here's exactly how it works, and the five-step diagnostic that fixes most buffering issues outside the CDN.",
+      "Buffering is the single most common complaint in every SA IPTV WhatsApp group. The fix usually isn't your fibre — it's the provider's CDN, your home Wi-Fi, or your streaming app's buffer settings. This guide walks through every cause in order of likelihood, and explains why Mzansi Stream's 4K SuperSport feed survives PSL counter-attacks where most overseas IPTVs freeze.",
     trustLine:
-      "NAPAfrica-peered · <15ms to every major SA ISP · 4K stable on Vumatel, Openserve, Frogfoot",
+      "NAPAfrica-peered · <15ms latency on Vumatel, Openserve, Frogfoot, Octotel · 4K stable",
     cta: {
       primary: {
-        label: "Test stable IPTV — free 24h trial →",
+        label: "Test a stable 4K stream — Free 24h trial →",
         message:
-          "Hi! I want to test Mzansi Stream IPTV for stability — free 24-hour trial, no card.",
-        ref: "Pillar-NoBuffering-Hero",
+          "Hi! I've had buffering issues with another IPTV provider. Can you send me the Mzansi Stream 24h free trial so I can test?",
+        ref: "Pillar-NoBuffer-Hero",
       },
-      secondary: { label: "Run the diagnostic →", href: "#diagnostic" },
+      secondary: { label: "Diagnostic checklist", href: "#fix-it" },
     },
     sections: [
       {
-        id: "why-iptv-buffers",
-        h2: "Why most IPTV in South Africa buffers",
+        id: "what-causes-buffering",
+        h2: "What actually causes IPTV buffering in South Africa",
         paragraphs: [
-          "Most IPTV providers sold to South Africans are based in Europe or the US. Their CDN edges sit in Amsterdam, Frankfurt or Dallas. The stream has to travel 180-220ms one-way to reach South Africa — and on a marginal connection, that's enough latency to make a fast PSL counter-attack visibly stutter.",
-          "It gets worse at peak hours. SA ISPs over-subscribe their international transit capacity to manage cost, so between 19:00 and 22:00 — exactly when sport kicks off — international latency spikes further. That's why so many IPTV services 'work great in the morning' but buffer every evening.",
+          "Buffering is the visible symptom of one thing: the streaming app's local buffer empties faster than the network can refill it. Every other variable — provider, fibre line, router, TV — feeds back into that one equation.",
+          "There are five common bottlenecks, ranked by how often they're the real culprit on SA fibre lines in 2026.",
+        ],
+        bullets: [
+          "1. Provider CDN routes overseas (no NAPAfrica peering) — 180-220ms latency to SA.",
+          "2. Wi-Fi router caps real throughput below 100 Mbps (especially old 2.4 GHz only).",
+          "3. Streaming app's buffer setting is too small (TiviMate default is 2s; raise it to 8s for 4K).",
+          "4. Background traffic (game console download, Windows Update) saturating the line.",
+          "5. ISP-side congestion event (rare on Vumatel and Openserve in 2026).",
         ],
       },
       {
-        id: "napafrica",
-        h2: "How NAPAfrica peering fixes it",
+        id: "why-mzansi-doesnt-buffer",
+        h2: "Why Mzansi Stream is stable where others freeze",
         paragraphs: [
-          "NAPAfrica is the largest internet exchange in Africa, sitting in two physical locations: Teraco Johannesburg and Teraco Cape Town. Every major SA ISP — Vumatel, Openserve, Frogfoot, Octotel, MTN, Vodacom, MetroFibre — peers there directly.",
-          "Mzansi Stream's CDN has dedicated edges at both NAPAfrica locations. That means a Vumatel customer's 4K stream travels under 10ms from edge to TV, an Openserve customer's under 15ms, and a Cape Town Frogfoot or Octotel customer's under 12ms. Peak hour or 3am, the latency doesn't change — because we never leave South Africa.",
+          "Mzansi Stream operates its own CDN edges at NAPAfrica in Johannesburg and Cape Town. NAPAfrica is the public peering exchange where every major SA ISP — Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN, Vodacom, Rain — interconnects.",
+          "End-to-end latency from Mzansi Stream edge to a Vumatel customer's Smart TV is typically <10ms. Same for Openserve, Frogfoot and Octotel. Compare that to a typical 'cheap European IPTV' routing via Frankfurt: 180ms one-way latency, every micro-blip turns into a re-buffer.",
+          "On top of low-latency peering, the player buffer is configured at 8 seconds for 4K streams (vs the default 2 seconds), and the M3U feed is fronted by an HLS adaptive bitrate ladder — so if your line briefly drops from 50 Mbps to 15 Mbps, the player drops from 4K to 1080p instead of stalling.",
         ],
       },
       {
-        id: "diagnostic",
-        h2: "Five-step buffering diagnostic — fix it in 10 minutes",
+        id: "fix-it",
+        h2: "The buffering fix checklist — work through it in order",
         steps: [
           {
-            title: "Check your speed at peak",
-            text: "Run Ookla speed test at 20:00 vs 02:00. If peak speed drops more than 30%, your ISP is the bottleneck, not the IPTV provider.",
+            title: "Switch the streaming app to a 5 GHz Wi-Fi band",
+            text: "Most home routers still default to 2.4 GHz. Force the streaming device onto the 5 GHz SSID. If unsure, name the bands differently in router settings — e.g. 'MyHome' and 'MyHome-5G' — and connect your Firestick to the -5G one.",
           },
           {
-            title: "Hardwire the device",
-            text: "Plug an Ethernet cable from router to TV/Firestick. Most 'buffering' is Wi-Fi jitter — the cable eliminates it.",
+            title: "Hard-wire over Ethernet for 4K streams",
+            text: "A USB-to-Ethernet adapter for Firestick (R250 on Takealot) is the single biggest stability upgrade. Eliminates Wi-Fi jitter entirely. Mandatory for households streaming 4K SuperSport during peak Saturday traffic.",
           },
           {
-            title: "Switch to 5GHz only",
-            text: "2.4GHz Wi-Fi cannot hold 4K reliably in 2026. Always pair the TV / IPTV box with the 5GHz SSID.",
+            title: "Raise the player buffer to 8 seconds",
+            text: "In TiviMate: Settings → Playback → Buffer Size → 8 sec. In IPTV Smarters: Settings → Player Settings → Time-shift Buffer → 6-10 sec. Eats a couple of seconds of channel-change delay, eliminates 95% of re-buffers.",
           },
           {
-            title: "Replace ISP router",
-            text: "ISP-branded routers cap 5GHz at 60-80 Mbps. Replace with TP-Link Archer AX55 (R1,300) or ASUS RT-AX55 (R1,500).",
+            title: "Disable Smart TV DLNA / SmartShare",
+            text: "Samsung Smart TVs run DLNA service in the background. It occasionally hijacks bandwidth mid-stream. Disable: Smart TV Settings → Network → AllShare / SmartShare → Off.",
           },
           {
-            title: "Lock the player to a fixed resolution",
-            text: "In TiviMate or IPTV Smarters: set quality manually to 1080p or 4K. Adaptive bitrate keeps downgrading on marginal Wi-Fi.",
+            title: "Run a speed test during the buffer event",
+            text: "speedtest.net from the same Wi-Fi network the TV uses. If you're getting <25 Mbps on a 100 Mbps line, your router is the bottleneck. Replace with Wi-Fi 6 (TP-Link Archer AX55, ASUS RT-AX55).",
+          },
+          {
+            title: "Check for a Rain 5G / fibre backup",
+            text: "If your primary fibre line has chronic congestion, a R299/mo Rain 5G mobile router is a clean backup. Switch streams over via a dual-WAN router (TP-Link ER605 R1,200).",
           },
         ],
       },
       {
-        id: "guarantee",
-        h2: "Our peak-hour stability guarantee",
-        paragraphs: [
-          "We back the NAPAfrica peering with a 24-hour free trial and a 7-day satisfaction guarantee. Test the service on a Saturday night at PSL kick-off — exactly when other IPTV providers fall over. If it doesn't hold up cleanly for you, we refund inside the first 7 days, no questions.",
+        id: "provider-shopping-list",
+        h2: "How to vet an IPTV provider for stability before you pay",
+        bullets: [
+          "Ask: 'Do you peer at NAPAfrica?' — if the answer is no or vague, walk away.",
+          "Ask: 'What's the SLA on 4K streams during a PSL match?' — a real provider quotes 99.9%+ uptime.",
+          "Demand a 24-hour free trial of the full channel pack. If the trial is restricted, the production feed is probably worse.",
+          "Test on a Saturday afternoon during a SuperSport PSL fixture and a Premier League fixture. Peak load reveals every weakness.",
+          "Watch a 4K stream + a 1080p stream simultaneously on two devices. Real CDNs handle this without breaking sweat.",
         ],
       },
     ],
     faq: [
       {
-        q: "Why does my IPTV buffer even on fast fibre?",
-        a: "Speed isn't the only metric — peering and jitter matter more once you're past 50 Mbps. If your provider's CDN routes via Europe instead of NAPAfrica in Johannesburg or Cape Town, 4K IPTV will buffer regardless of your line speed.",
+        q: "Why does my IPTV buffer during the Premier League but not movies?",
+        a: "Live sport is bandwidth-heavier than VOD because the player can't pre-fetch. Live 4K sport requires sustained throughput; movies tolerate brief network drops because the player can buffer ahead.",
       },
       {
-        q: "Does Mzansi Stream buffer at peak hours?",
-        a: "Our CDN edges peer directly at NAPAfrica with edges in Johannesburg and Cape Town. Peak-hour latency stays under 15ms to every major SA fibre ISP — so 4K SuperSport PSL plays cleanly at 20:00 just like at 02:00.",
+        q: "Is buffering my fibre line's fault?",
+        a: "Rarely on Vumatel, Openserve, Frogfoot or Octotel — they all peer directly at NAPAfrica. The bottleneck is usually the provider's CDN routing overseas, your home Wi-Fi, or the streaming app's buffer setting.",
       },
       {
-        q: "Is Mzansi Stream stable on Vumatel and Openserve?",
-        a: "Yes — both Vumatel and Openserve peer directly at NAPAfrica. Mzansi Stream's edge sits at the same exchange, so the stream travels under 15ms end-to-end. 4K stays stable.",
+        q: "How fast does my connection need to be?",
+        a: "25 Mbps sustained per 4K stream. A 50 Mbps Vumatel line comfortably runs one 4K + one HD stream. Below 15 Mbps, drop to 1080p for stable playback.",
       },
       {
-        q: "Will a VPN reduce IPTV buffering?",
-        a: "Usually not. A VPN adds latency rather than removing it. The exception is if your ISP is throttling specific IPTV ports — in which case a VPN bypasses that. Fix the router and check peering first.",
+        q: "Will a VPN reduce buffering?",
+        a: "No — a VPN adds latency. Mzansi Stream is not geo-blocked on SA fibre, so a VPN only hurts. Only use one if streaming from outside SA.",
       },
       {
-        q: "What internet speed do I need for stable 4K IPTV?",
-        a: "Approximately 25-30 Mbps of clean throughput per 4K stream. A 50 Mbps Vumatel or Openserve line holds one 4K stream comfortably; 100 Mbps holds three concurrent 4K streams.",
+        q: "What's the difference between buffering and freezing?",
+        a: "Buffering = the player spinner shows for a few seconds then resumes (network drop, recoverable). Freezing = the picture locks completely and the stream restarts (provider feed died or app crashed). Persistent freezing usually means a bad provider.",
       },
       {
-        q: "Can I get a free trial to test stability?",
-        a: "Yes — Mzansi Stream offers a 24-hour free trial on WhatsApp with no credit card. Test it during a Saturday night PSL kick-off — that's the hardest stability test and the one most providers fail.",
+        q: "Does TiviMate's buffer setting really matter?",
+        a: "Yes — by far the most under-rated fix. Raising the buffer from 2s to 8s eliminates 95% of micro-re-buffers without noticeable channel-change delay.",
+      },
+      {
+        q: "Does Mzansi Stream guarantee no buffering?",
+        a: "No streaming service can guarantee zero buffering — your home Wi-Fi and ISP-side congestion are out of any provider's control. Mzansi Stream guarantees its CDN side: NAPAfrica peering, <15ms edge latency, and 99.9%+ stream uptime measured monthly.",
       },
     ],
     related: [
-      { label: "Best IPTV for Vumatel, Openserve, Frogfoot", href: "/iptv-vumatel-openserve-frogfoot/" },
-      { label: "4K IPTV South Africa", href: "/4k-iptv-south-africa/" },
-      { label: "Why your IPTV keeps buffering — full guide", href: "/blog/iptv-buffering-how-to-fix/" },
-      { label: "Best IPTV South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/iptv-vumatel-openserve-frogfoot/" },
+      { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa/" },
+      { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "IPTV Firestick install guide", href: "/iptv-firestick-south-africa/" },
+      { label: "Cheap IPTV South Africa", href: "/cheap-iptv-south-africa/" },
+      { label: "Watch SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
     ],
     hasHowTo: true,
-    datePublished: "2026-02-22",
-    dateModified: "2026-05-18",
+    datePublished: "2026-03-03",
+    dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
 
+  // ─── 12. IPTV FOR MOVIES & SERIES ───────────────────────────────────
   {
-    slug: "iptv-for-movies-series",
-    eyebrow: "Movies & series · 2026 guide",
-    h1: "IPTV for movies and series in South Africa — 100,000+ on demand in 4K",
+    slug: "iptv-for-movies-and-series",
+    eyebrow: "Movies & Series · 100,000+ titles",
+    h1: "IPTV for movies and series — 100,000+ titles on demand, plus live M-Net",
     metaTitle:
-      "IPTV Movies & Series South Africa 2026 — 100,000+ on Demand in 4K | Mzansi Stream",
+      "IPTV for Movies & Series South Africa — 100K Titles | Mzansi Stream",
     metaDescription:
-      "Best IPTV for movies and series in South Africa 2026 — 100,000+ titles in 4K HDR, Netflix mirror, M-Net Movies, HBO Max, Disney+. From R99/mo.",
+      "IPTV for movies and series in South Africa — 100,000+ titles on demand plus live M-Net, Netflix mirror, Disney+, HBO Max and Showmax content. 4K, no contract. From R99/mo.",
     lead:
-      "If you're choosing IPTV mainly for movies and series — not sport — the metric that matters is catalogue size and how often it's refreshed. Mzansi Stream ships 100,000+ on-demand titles in 4K HDR alongside the live TV bundle, refreshed weekly, with the major streamer catalogues mirrored: Netflix, HBO Max, Disney+, Showtime, Paramount+, plus M-Net Movies and AMC live. Here's what's actually in the catalogue, how the VOD library is updated, and how the bundle compares to running Netflix + Showmax + Disney+ separately.",
+      "If you watch more movies and series than live sport, Mzansi Stream's VOD catalogue covers the same ground as Netflix, Disney+, HBO Max, Showmax and Amazon Prime combined — 100,000+ titles, refreshed weekly, plus the live M-Net channels (M-Net Movies Premiere, M-Net Movies Action+, M-Net Series and 1 Magic) that the streaming services don't carry.",
     trustLine:
-      "100,000+ VOD · 4K HDR · Catalogue refreshed weekly · No ads on premium tier",
+      "100,000+ VOD titles · M-Net Movies Premiere live · 4K UHD · Refreshed weekly",
     cta: {
       primary: {
-        label: "Start free 24h movies trial →",
+        label: "Browse the movie catalogue — Free 24h trial →",
         message:
-          "Hi! I want to test Mzansi Stream for movies and series — free 24-hour trial, no card.",
-        ref: "Pillar-MoviesIPTV-Hero",
+          "Hi! I'm interested in Mzansi Stream mainly for movies and series. Can I get the 24h free trial to browse the VOD catalogue?",
+        ref: "Pillar-Movies-Hero",
       },
-      secondary: { label: "Browse what's included →", href: "#catalogue" },
+      secondary: { label: "Pricing", href: "#pricing" },
     },
     sections: [
       {
-        id: "catalogue",
-        h2: "What's in the 100,000+ VOD catalogue",
-        bullets: [
-          "Hollywood box office releases (typically 30-60 days after theatrical).",
-          "Netflix originals mirrored in 4K HDR — including SA-region exclusives.",
-          "HBO Max library — Succession, House of the Dragon, The Last of Us, every Warner title.",
-          "Disney+ library — Marvel, Star Wars, Pixar, National Geographic.",
-          "Showtime — Yellowjackets, Billions, Dexter.",
-          "Paramount+ — Star Trek, Yellowstone universe (1883, 1923), Sonic, Top Gun.",
-          "Showmax originals — every SA drama and reality series.",
-          "M-Net Movies Premiere, Action+, Smile, Stars — live + on-demand.",
-          "AMC — Breaking Bad, Better Call Saul, The Walking Dead universe.",
-          "Anime — Crunchyroll catalogue mirror.",
-          "African cinema — Nollywood, Mzansi Magic originals, Africa Magic Showcase.",
-        ],
-      },
-      {
-        id: "refresh",
-        h2: "How often the catalogue refreshes",
+        id: "vs-streaming-services",
+        h2: "Mzansi Stream VOD vs Netflix, Disney+, HBO Max, Showmax",
         paragraphs: [
-          "New titles are added weekly. Hollywood box office releases typically land 30-60 days after theatrical release. New Netflix originals and HBO Max releases land within a few days of their global launch. Discontinued or geo-restricted titles are rotated out — the catalogue holds steady around 100,000+ titles at any given time.",
+          "Netflix carries roughly 6,000 titles in SA. Showmax carries about 4,500. Disney+ and HBO Max each carry 3,500-5,000. Stack them all together and you're at ~20,000 titles — split across four monthly subscriptions costing roughly R600/month combined.",
+          "Mzansi Stream's VOD catalogue is 100,000+ titles, including the same Netflix originals, Disney+ Marvel and Star Wars catalogue, HBO Max originals, Showmax local content and Prime Video original series. One R99/month plan replaces the four-app billing stack.",
         ],
       },
       {
-        id: "vs-streamers",
-        h2: "Mzansi Stream movies bundle vs Netflix + Showmax + Disney+ separately",
+        id: "what-is-included",
+        h2: "What's in the VOD catalogue",
         bullets: [
-          "Netflix Standard (with ads): R99/mo",
-          "Showmax Entertainment: R99/mo",
-          "Disney+ Standard: R119/mo",
-          "Apple TV+: R85/mo",
-          "Total: R402/mo across four apps, with different remotes, different searches, different watchlists.",
-          "Mzansi Stream: R99/mo for all four catalogues plus 20,000 live channels plus full SuperSport.",
+          "Hollywood blockbusters — every major studio release within weeks of theatrical.",
+          "Netflix originals — Stranger Things, The Crown, Squid Game, all seasons + new drops.",
+          "Disney+ catalogue — Marvel Cinematic Universe, Star Wars, Pixar, Disney animation.",
+          "HBO Max originals — Succession, The Last of Us, House of the Dragon, White Lotus.",
+          "Showmax local — every Showmax SA original (Tali's Wedding Diary, The Wife, Devilsdorp).",
+          "Amazon Prime originals — The Boys, Reacher, Rings of Power.",
+          "Bollywood + Tamil + Telugu — full Hotstar / Zee5 / SonyLIV mirror.",
+          "African series — Africa Magic Showcase, Trace Mziki, kykNET dramas.",
+          "Classic catalogue — every film from the 90s and 2000s available on demand.",
+          "Documentaries — Discovery, National Geographic, BBC Earth full library.",
         ],
       },
       {
-        id: "4k-hdr",
-        h2: "4K HDR — what's actually in UHD",
+        id: "live-movie-channels",
+        h2: "Live movie channels (the bit Netflix can't give you)",
+        bullets: [
+          "M-Net Movies Premiere — first-run blockbusters before they hit streaming services.",
+          "M-Net Movies Action+ — every Bond, Mission Impossible, Fast & Furious in rotation.",
+          "AMC — The Walking Dead, Mad Men, Breaking Bad in syndication.",
+          "FOX — every recent Hollywood drop on cable rotation.",
+          "BBC Brit, BBC First — Peaky Blinders, Killing Eve, Line of Duty.",
+          "Sony Channel, Universal TV — series + classic films.",
+          "Cinemax, MGM — film catalogue rotation.",
+        ],
+      },
+      {
+        id: "quality",
+        h2: "Quality — 4K HDR where the source supports it",
         paragraphs: [
-          "Roughly 18,000 of the 100,000+ titles ship in native 4K HDR. That includes all major Hollywood box office releases since 2018, every Netflix original tagged 4K, every Disney+ Premier Access title, the full HBO Max 4K library and most Showtime / Paramount+ tentpole series.",
-          "Older titles ship in 1080p or upscaled HD. The IPTV player (TiviMate, Smarters Pro) auto-detects the source resolution.",
+          "Movies and series in the VOD catalogue play at the highest resolution the source feed carries. Recent Netflix Originals, Disney+ premium content and HBO Max prestige drama play in 4K HDR. Older catalogue typically plays at 1080p.",
+          "Mzansi Stream doesn't tier quality — there's no 'Premium 4K' upsell. If the source is 4K HDR, you get 4K HDR on R99/month.",
         ],
       },
       {
-        id: "devices",
-        h2: "Where to watch — every screen in the house",
-        bullets: [
-          "Smart TV: Samsung Tizen, LG webOS, Hisense VIDAA, Sony Bravia (via Smarters Lite or Smarters Pro).",
-          "Streaming stick: Firestick 4K Max (best app: TiviMate). Roku, Apple TV (Smarters Pro).",
-          "Mobile: iPhone, iPad, Android phone, Android tablet (Smarters Pro, GSE Smart IPTV).",
-          "Desktop: PC + Mac browser via Smarters Web.",
-          "Android TV box: MX Q Pro, Skystream, Nvidia Shield (TiviMate).",
+        id: "how-to-browse",
+        h2: "How to browse the VOD catalogue",
+        steps: [
+          {
+            title: "Install a VOD-friendly player",
+            text: "IPTV Smarters Pro has the cleanest VOD grid on Firestick / Android TV / Samsung Tizen. TiviMate Premium handles live + VOD in one app.",
+          },
+          {
+            title: "Load your Xtream Codes credentials",
+            text: "We send the username/password via WhatsApp after sign-up. Enter once — the VOD library appears as a grid like Netflix.",
+          },
+          {
+            title: "Use the search / categories",
+            text: "Filter by genre (Action, Drama, Comedy), studio (Marvel, Disney, A24) or year. Watchlist + resume-watching are saved per device.",
+          },
+          {
+            title: "Stream in 4K when available",
+            text: "Look for the '4K' badge on the title card. The same title sits at 1080p on a basic stream and 4K HDR on a 4K-capable TV.",
+          },
         ],
       },
     ],
     faq: [
       {
-        q: "How many movies are on Mzansi Stream?",
-        a: "Approximately 100,000+ on-demand titles, refreshed weekly. Roughly 18,000 are in native 4K HDR.",
+        q: "Is the VOD catalogue really 100,000+ titles?",
+        a: "Yes. It's the union of every major studio + streaming-service catalogue, including Netflix, Disney+, HBO Max, Showmax and Amazon Prime. The number rises weekly as new releases are added.",
       },
       {
-        q: "Does Mzansi Stream include Netflix originals?",
-        a: "Yes — the Netflix catalogue is mirrored in 4K HDR including SA-region titles. The VOD library updates within days of Netflix's global launch for new originals.",
+        q: "Can I watch new Netflix releases on Mzansi Stream?",
+        a: "Yes — Netflix Originals appear in the VOD catalogue within days of their Netflix premiere. Stranger Things, Squid Game, The Crown — all available.",
       },
       {
-        q: "Can I watch HBO Max series on Mzansi Stream?",
-        a: "Yes — Succession, House of the Dragon, The Last of Us, Euphoria and the full Warner / HBO Max library are in the VOD catalogue.",
+        q: "Does the VOD catalogue include local SA shows?",
+        a: "Yes — every Showmax SA Original (Tali's Wedding Diary, The Wife, Devilsdorp), every kykNET drama and every Mzansi Magic series are in the catalogue.",
       },
       {
-        q: "Is the VOD library updated regularly?",
-        a: "Yes — new titles land weekly. Box office releases typically arrive 30-60 days after theatrical; new streaming originals within a few days of global launch.",
+        q: "Can I watch movies in 4K on Mzansi Stream?",
+        a: "Yes — recent Hollywood releases, Marvel Cinematic Universe titles, prestige HBO Max series and Disney+ premium content play in 4K HDR when your TV supports it.",
       },
       {
-        q: "Are there ads on Mzansi Stream movies?",
-        a: "No — every Mzansi Stream plan from R99/month is ad-free across both live channels and the on-demand VOD library.",
+        q: "Is there a resume-watching feature?",
+        a: "Yes — IPTV Smarters Pro and TiviMate Premium both save resume points per device and per profile.",
       },
       {
-        q: "Can I watch on multiple TVs at once?",
-        a: "The standard plan includes one concurrent connection. For households that need 2-3 concurrent streams, message us on WhatsApp and we'll set up a tailored multi-screen plan.",
+        q: "Can I download titles for offline viewing?",
+        a: "Not by default — Mzansi Stream is a streaming service, not a download store. Some VOD players support pre-fetching for offline use; we explain how on WhatsApp on request.",
+      },
+      {
+        q: "Why is Mzansi Stream cheaper than the streaming services combined?",
+        a: "You're paying for streaming infrastructure once instead of paying four different SVOD apps independently. The R99/month replaces ~R600/month of Netflix + Disney+ + HBO Max + Showmax + Prime billed separately.",
       },
     ],
     related: [
-      { label: "Best IPTV South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa/" },
+      { label: "Cheap IPTV South Africa", href: "/cheap-iptv-south-africa/" },
       { label: "Mzansi Stream vs Netflix", href: "/vs/netflix/" },
       { label: "Mzansi Stream vs Showmax", href: "/vs/showmax/" },
-      { label: "DStv alternative — full guide", href: "/dstv-alternative/" },
+      { label: "DStv alternative — complete guide", href: "/dstv-alternative/" },
     ],
-    hasHowTo: false,
-    datePublished: "2026-02-24",
-    dateModified: "2026-05-18",
+    hasHowTo: true,
+    datePublished: "2026-03-04",
+    dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
-);
+];
 
 export const PILLAR_SLUGS = PILLARS.map((p) => p.slug);
 

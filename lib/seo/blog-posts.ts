@@ -18,10 +18,6 @@ export type BlogPost = {
   /** Internal link slugs the post should point at. Used to render the
    *  "Related" footer block on each post automatically. */
   relatedLinks: { label: string; href: string }[];
-  /** Optional FAQ block rendered at the bottom of the post and emitted
-   *  as FAQPage JSON-LD. Reddit/forum-style pain-point posts ship with
-   *  one — leave empty for narrative pieces. */
-  faq?: { q: string; a: string }[];
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -311,162 +307,256 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
   },
-
-  // ───────────────────────────────────────────────────────────────────────
-  // Reddit / forum pain-point posts — capture buyer-intent troubleshooting
-  // queries that bring high-intent users to the site without targeting
-  // the brand. Each carries FAQ schema for SERP rich results.
-  // ───────────────────────────────────────────────────────────────────────
   {
-    slug: "iptv-buffering-how-to-fix",
-    title: "IPTV buffering in South Africa — how to fix it in 2026",
-    metaDescription: "Why IPTV buffers in South Africa and how to fix it — router settings, ISP peering, Wi-Fi vs Ethernet, 4K bitrate and provider stability checks.",
-    datePublished: "2026-02-10",
-    lead: "If your IPTV stream is buffering, freezing or dropping to 720p mid-match, the cause is almost always one of five things — and four of them are fixable in 10 minutes without changing provider. Here's the 2026 checklist that solves it for most South African households.",
+    slug: "why-is-my-iptv-buffering-fix-2026",
+    title: "Why is my IPTV buffering? The 2026 SA troubleshooting guide",
+    metaDescription: "Why your IPTV buffers in South Africa in 2026 — every cause ranked by likelihood, every fix, and how to vet a provider before you pay.",
+    datePublished: "2026-03-08",
+    lead: "If your IPTV stream buffers during the PSL or freezes mid-Premier League match, the cause is almost never your fibre line. This guide ranks every realistic cause in order of likelihood on a 2026 South African fibre setup, with the fix for each.",
     sections: [
       {
-        h2: "1. Your router is the bottleneck (most common)",
+        h2: "First — is it really buffering, or is it freezing?",
         body: [
-          "ISP-branded routers (Huawei B315s, ZTE H168N, older Vodacom and MTN units) cap 5GHz throughput at 60-80 Mbps — even on a 500 Mbps Vumatel or Openserve line. 4K IPTV needs 25-30 Mbps of clean bandwidth with low jitter. If your router can't deliver that to your TV, the stream buffers.",
-          "Fix: hard-wire the TV/Firestick via Ethernet, or replace the router with a Wi-Fi 6 unit (TP-Link Archer AX55 around R1,300, ASUS RT-AX55 around R1,500). A R250 USB-to-Ethernet adapter for your Firestick eliminates Wi-Fi jitter entirely.",
+          "Buffering = the player spinner shows for a few seconds and the stream resumes on its own. That's a brief network drop the player can recover from.",
+          "Freezing = the picture locks completely and the stream restarts (or doesn't). That's a provider feed dying, an app crash, or a router that needs rebooting. Persistent freezing on the same channel = the provider is the issue.",
         ],
       },
       {
-        h2: "2. Your IPTV provider's CDN doesn't peer in SA",
+        h2: "Cause #1 — the provider's CDN routes overseas",
         body: [
-          "Most overseas IPTV providers route streams via Amsterdam or London. That's 180-220ms one-way latency to South Africa — enough to make a fast counter-attack stutter even on a perfect fibre line.",
-          "Fix: pick an IPTV provider with CDN edges peered at NAPAfrica in Johannesburg and Cape Town. Mzansi Stream peers directly at NAPAfrica, so the stream travels under 15ms from edge to TV.",
+          "This is the single biggest cause of South African IPTV buffering in 2026. If your provider's servers sit in Frankfurt, Amsterdam or the US, every chunk of video travels 180-220ms one-way to your TV. The player's buffer is 2-4 seconds. The moment the SA fibre has a micro-blip (and they all do), the buffer empties before the next chunk arrives.",
+          "Fix: pick a provider with NAPAfrica peering. Mzansi Stream's CDN edges sit at NAPAfrica in Johannesburg and Cape Town — the same exchange Vumatel, Openserve, Frogfoot and Octotel peer at. End-to-end latency to your TV is <15ms.",
         ],
       },
       {
-        h2: "3. You're on 2.4GHz, not 5GHz",
+        h2: "Cause #2 — your Wi-Fi router is the bottleneck",
         body: [
-          "2.4GHz Wi-Fi is crowded with microwaves, baby monitors and neighbours. It can't carry 4K reliably. Always connect your TV and IPTV box to the 5GHz SSID — even if it has slightly shorter range.",
+          "The ISP-branded Huawei and ZTE routers shipped 2020-2023 cap real 5GHz throughput at 60-80 Mbps even when your fibre line is 500 Mbps. The router itself is the choke point.",
+          "Fix: replace with a Wi-Fi 6 router. TP-Link Archer AX55 (R1,300), ASUS RT-AX55 (R1,500), TP-Link AX73 (R2,000) all unlock the full line speed. Or hard-wire your Smart TV / Firestick over Ethernet — a USB-Ethernet adapter for Firestick (R250) eliminates Wi-Fi jitter entirely.",
         ],
       },
       {
-        h2: "4. Your IPTV app is set to auto-quality and keeps downgrading",
+        h2: "Cause #3 — your player buffer is too small for 4K",
         body: [
-          "TiviMate and IPTV Smarters Pro both default to adaptive bitrate. On a marginal line they'll drop the stream from 4K to 1080p mid-match. Lock the player to 1080p manually if your line can't hold 4K, and you'll trade resolution for stability — much smoother watching.",
+          "TiviMate ships with a 2-second buffer by default. Fine for 1080p. Not enough headroom for 4K SuperSport when a Premier League corner kick spikes the bitrate.",
+          "Fix: TiviMate → Settings → Playback → Buffer Size → 8 seconds. IPTV Smarters → Settings → Player → Time-shift Buffer → 6-10 seconds. This single change eliminates 95% of micro-re-buffers without noticeable channel-change delay.",
         ],
       },
       {
-        h2: "5. Peak-hour congestion at your ISP",
+        h2: "Cause #4 — background traffic on your line",
         body: [
-          "Some smaller fibre ISPs over-subscribe their NAPAfrica capacity between 19:00 and 22:00. If buffering only happens during PSL kick-offs, this is the cause.",
-          "Fix: run an Ookla speed test at 20:00 vs 02:00 — if peak speeds drop more than 30%, raise it with your ISP or move to Vumatel / Openserve, both of which hold capacity well.",
+          "Xbox / PS5 downloading a game patch. Windows Update. iCloud syncing photos. All of these can briefly saturate a 100 Mbps line.",
+          "Fix: enable QoS on your router and prioritise the streaming device's MAC address. On most Wi-Fi 6 routers this is a one-tap setting.",
+        ],
+      },
+      {
+        h2: "Cause #5 — Wi-Fi interference",
+        body: [
+          "Microwaves, baby monitors, Bluetooth speakers and neighbours' Wi-Fi all share the 2.4GHz band. If your streaming device is on 2.4GHz, it's competing with all of them.",
+          "Fix: force the streaming device onto 5GHz (rename the bands in router settings — 'MyHome' and 'MyHome-5G' — and connect to the -5G SSID).",
+        ],
+      },
+      {
+        h2: "How to vet a provider for stability before you pay",
+        body: [
+          "Ask: 'Do you peer at NAPAfrica?' Vague answer = walk away.",
+          "Demand a 24-hour free trial of the full channel pack. If the trial is restricted, the production feed is probably worse.",
+          "Test on a Saturday during a SuperSport PSL fixture and a Premier League fixture. Peak load reveals every weakness.",
+          "Mzansi Stream's free 24h trial unlocks the full 20,000+ channel pack. No card. Request on WhatsApp.",
         ],
       },
     ],
     relatedLinks: [
-      { label: "Best IPTV for Vumatel, Openserve and Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot/" },
-      { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "Pricing — from R99/mo with NAPAfrica peering", href: "/en-za/" },
-    ],
-    faq: [
-      {
-        q: "Why does my IPTV keep buffering even on fast fibre?",
-        a: "Speed isn't the only metric — peering and jitter matter more once you're past 50 Mbps. If your provider's CDN routes via Europe instead of NAPAfrica in Johannesburg or Cape Town, 4K IPTV will buffer regardless of your line speed.",
-      },
-      {
-        q: "Will a VPN fix IPTV buffering?",
-        a: "Usually not. A VPN adds latency rather than removing it. The exception is if your ISP is throttling specific IPTV ports — a VPN bypasses that. Otherwise, fix the router and peering first.",
-      },
-      {
-        q: "Is buffering worse on Firestick than Smart TV?",
-        a: "Only if the Firestick is on Wi-Fi. A Firestick on Ethernet (via the R250 USB adapter) is the single most reliable 4K IPTV box available in South Africa.",
-      },
-      {
-        q: "How much bandwidth does 4K IPTV use?",
-        a: "Roughly 25-30 Mbps per stream on Mzansi Stream's CDN. A 100 Mbps Vumatel line can hold three 4K streams concurrently if the router is up to spec.",
-      },
-      {
-        q: "Does Mzansi Stream buffer on SA fibre?",
-        a: "Mzansi Stream's CDN edges are peered at NAPAfrica in Johannesburg and Cape Town, so 4K streams travel under 15ms to every major SA fibre ISP. Buffering on our service almost always traces back to a router or Wi-Fi issue — we'll walk you through the diagnostic on WhatsApp.",
-      },
-    ],
-  },
-
-  {
-    slug: "tivimate-vs-iptv-smarters-which-app",
-    title: "TiviMate vs IPTV Smarters Pro — which IPTV app is best in 2026?",
-    metaDescription: "Side-by-side IPTV app comparison for South Africa in 2026 — TiviMate vs IPTV Smarters Pro on Firestick, Android TV, Smart TV and iPhone.",
-    datePublished: "2026-02-12",
-    lead: "TiviMate and IPTV Smarters Pro are the two IPTV players almost everyone in South Africa ends up choosing between. Here's the 2026 head-to-head — what each does well, where the other wins, and what to install on your specific device.",
-    sections: [
-      {
-        h2: "The short answer",
-        body: [
-          "If you have an Android TV box, Firestick or Android TV-based Sony / Hisense / Skyworth Smart TV — install TiviMate. It's the better player.",
-          "If you have an iPhone, iPad, Samsung Tizen or LG webOS Smart TV — install IPTV Smarters Pro (TiviMate isn't available on those platforms).",
-        ],
-      },
-      {
-        h2: "Where TiviMate wins",
-        body: [
-          "Channel switching is roughly 2-3x faster than Smarters Pro on the same hardware. For sport, this matters — half-time channel hops are instant instead of laggy.",
-          "The EPG layout is the cleanest in the category. Multi-day forward view, recording timeline, accurate now/next markers.",
-          "Multi-playlist support — one app holds several M3U sources if you ever add a second provider.",
-          "Premium unlock is a once-off ~R150 in-app purchase. No subscription.",
-        ],
-      },
-      {
-        h2: "Where IPTV Smarters Pro wins",
-        body: [
-          "Available on every platform — Firestick, Android, iPhone, iPad, Samsung Tizen, LG webOS, web browser. TiviMate is Android-only.",
-          "Free to use with full feature set — no premium tier.",
-          "Built-in VPN integration (one tap) on Android.",
-        ],
-      },
-      {
-        h2: "Installing TiviMate on Firestick",
-        body: [
-          "Settings → My Fire TV → Developer Options → Apps from Unknown Sources → On.",
-          "Install the Downloader app from the Amazon Appstore.",
-          "Open Downloader, paste the TiviMate APK URL, install.",
-          "Open TiviMate → Add Playlist → paste the M3U URL we send on WhatsApp. Done.",
-        ],
-      },
-      {
-        h2: "Installing IPTV Smarters Pro",
-        body: [
-          "iPhone / iPad: install from the App Store.",
-          "Samsung Tizen: search 'Smarters Lite' in the Samsung app store.",
-          "LG webOS: search 'IPTV Smarters' in the LG Content Store.",
-          "Open the app → Add new user → paste the Xtream Codes username, password and server URL we send on WhatsApp.",
-        ],
-      },
-    ],
-    relatedLinks: [
-      { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv/" },
+      { label: "IPTV with no buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot/" },
       { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
-    faq: [
+  },
+  {
+    slug: "how-to-choose-iptv-service-south-africa-2026",
+    title: "How to choose an IPTV service in South Africa — the 2026 checklist",
+    metaDescription: "How to choose an IPTV service in South Africa in 2026 — the 9-point checklist for stability, channel pack, price, support and payment safety.",
+    datePublished: "2026-03-10",
+    lead: "Asked daily on every South African streaming subreddit and WhatsApp group: 'which IPTV service is actually worth paying for?' Here's the 9-point checklist that separates the legitimate providers from the resellers who'll ghost you after the first payment.",
+    sections: [
       {
-        q: "Is TiviMate free?",
-        a: "TiviMate is free to install. Premium unlock (recording, multi-playlist, advanced EPG layout) is a once-off in-app purchase around R150. Most users get by on the free tier.",
+        h2: "1. Does the provider have its own CDN?",
+        body: [
+          "Re-sellers buy a stream feed from someone upstream and re-sell it. Their stability depends entirely on the upstream provider's infrastructure — which they have zero control over.",
+          "A real IPTV business operates its own CDN edges. Mzansi Stream peers at NAPAfrica in Johannesburg and Cape Town. End-to-end latency to your TV is <15ms.",
+        ],
       },
       {
-        q: "Can I use TiviMate on Samsung Smart TV?",
-        a: "No — Samsung uses Tizen OS and TiviMate is Android-only. Use IPTV Smarters Pro or Smarters Lite on Tizen instead.",
+        h2: "2. Is the channel list published publicly?",
+        body: [
+          "If you have to message WhatsApp to find out which channels are included, the provider is hiding something. A legitimate service publishes the channel pack on its website.",
+        ],
       },
       {
-        q: "Does TiviMate work on Firestick 4K?",
-        a: "Yes — Firestick 4K and Firestick 4K Max both run TiviMate flawlessly. It's the best IPTV combo available in South Africa under R1,500 of hardware.",
+        h2: "3. Is there a free trial?",
+        body: [
+          "A 24-hour free trial of the full channel pack is the single most reliable trust signal in IPTV. Providers who refuse a trial don't trust their own production feed.",
+          "Mzansi Stream offers a no-card 24h trial. Request on WhatsApp.",
+        ],
       },
       {
-        q: "Will Mzansi Stream work in both apps?",
-        a: "Yes. We send both the M3U link (for TiviMate, GSE Smart IPTV, OTT Navigator) and Xtream Codes credentials (for IPTV Smarters Pro) — use whichever you prefer.",
+        h2: "4. Is there real support — not just a Telegram bot?",
+        body: [
+          "Your stream will eventually have an issue (DNS hiccup, EPG resync, channel re-shuffle after a broadcaster contract change). The question is whether the provider responds within minutes or whether you're ghosted on a Saturday afternoon.",
+          "Test pre-purchase: message support during peak hours (8pm Saturday). If you don't get a reply within 30 minutes, that's the SLA you're buying.",
+        ],
+      },
+      {
+        h2: "5. Is the company a real entity?",
+        body: [
+          "POPIA compliance, a published Information Officer, a public Terms & Conditions, a real refund policy — these are minimum bar items. Anonymous WhatsApp-only sellers don't tick these boxes.",
+        ],
+      },
+      {
+        h2: "6. Is the pricing locked?",
+        body: [
+          "Avoid month-to-month pricing that escalates after the first cycle. Pay once per term (1 / 3 / 6 / 12 months) and the price for that term doesn't change.",
+        ],
+      },
+      {
+        h2: "7. Are local payment methods supported?",
+        body: [
+          "EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco — not just crypto and overseas Stripe. Local payments protect you (chargeback rights, fraud insurance) and reduce conversion friction.",
+        ],
+      },
+      {
+        h2: "8. Does it work on the devices you already own?",
+        body: [
+          "Smart TV, Firestick, iPhone, Android, MAG box, PC. Provider must publish device compatibility and offer setup help for the device you actually have.",
+        ],
+      },
+      {
+        h2: "9. Has the service been running for at least 12 months?",
+        body: [
+          "Fly-by-night IPTV resellers come and go in 3-6 month cycles. A service that's been operating for 12+ months under the same brand has paid its infrastructure bills, survived a content-rights renegotiation and proven the team is real.",
+        ],
       },
     ],
+    relatedLinks: [
+      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
+      { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa/" },
+      { label: "IPTV with no buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
+    ],
   },
-
+  {
+    slug: "tivimate-vs-iptv-smarters-pro-2026",
+    title: "TiviMate vs IPTV Smarters Pro vs GSE Smart IPTV — which app in 2026?",
+    metaDescription: "Honest 2026 comparison of TiviMate, IPTV Smarters Pro and GSE Smart IPTV for South African IPTV. UI, EPG quality, 4K, VOD, device support.",
+    datePublished: "2026-03-12",
+    lead: "The three apps every SA IPTV user encounters: TiviMate, IPTV Smarters Pro and GSE Smart IPTV. Here's the honest 2026 comparison — UI quality, EPG handling, 4K performance, VOD support, paid vs free, and which one to install for your specific device.",
+    sections: [
+      {
+        h2: "TiviMate — the gold standard for Firestick and Android TV",
+        body: [
+          "TiviMate is the most polished IPTV player on Firestick, Android TV and Nvidia Shield. The UI is built around remote-control navigation — every action is two clicks away. EPG handling is best-in-class: 7-day guide, instant catch-up TV, picture-in-picture preview.",
+          "Premium tier is R199 once-off (lifetime). Worth it for multi-playlist support, recording and unlimited playlists. Free tier supports one playlist, which is enough for most households.",
+          "Best for: Firestick 4K, Firestick 4K Max, Nvidia Shield, Chromecast with Google TV. Not available on iOS or Samsung Tizen.",
+        ],
+      },
+      {
+        h2: "IPTV Smarters Pro — the cross-platform workhorse",
+        body: [
+          "IPTV Smarters Pro runs on everything. iOS, Android, Firestick, Android TV, Smart TVs (Samsung Tizen, LG webOS), Windows, Mac. Same UI everywhere.",
+          "Free. Ad-free. Supports Xtream Codes credentials directly (Mzansi Stream sends Xtream Codes by default). VOD grid is the cleanest in the category — looks like Netflix.",
+          "Best for: iPhone, iPad, Samsung Smart TV, LG Smart TV, mixed-device households.",
+        ],
+      },
+      {
+        h2: "GSE Smart IPTV — solid free fallback",
+        body: [
+          "GSE Smart IPTV is the free fallback when TiviMate isn't available on your device. Reliable, no-frills, EPG works.",
+          "Best for: older Android TV boxes, MAG boxes (sort of — most MAGs run their own portal), backup option when other apps fail.",
+        ],
+      },
+      {
+        h2: "Performance comparison on 4K SuperSport",
+        body: [
+          "TiviMate has the lowest re-buffer rate on 4K — better internal buffer management and faster HEVC decode path.",
+          "IPTV Smarters Pro is a close second; performance is identical for 1080p, slightly behind TiviMate on 4K HDR.",
+          "GSE Smart IPTV handles 1080p well; 4K HDR has slightly higher re-buffer rate but is still acceptable on a stable line.",
+        ],
+      },
+      {
+        h2: "Which one should you install?",
+        body: [
+          "Firestick 4K Max + 4K SuperSport household → TiviMate Premium (R199 once).",
+          "iPhone / iPad → IPTV Smarters Pro (free).",
+          "Samsung Smart TV / LG Smart TV → IPTV Smarters Pro (free, native Tizen / webOS app).",
+          "Mzansi Stream sends an Xtream Codes login that works directly in all three apps. We send the device-specific setup guide on WhatsApp after sign-up.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "IPTV Firestick setup — full guide", href: "/en-za/iptv-firestick-south-africa/" },
+      { label: "IPTV for Samsung Smart TV (Tizen)", href: "/en-za/iptv-samsung-smart-tv/" },
+      { label: "4K IPTV in South Africa", href: "/en-za/4k-iptv-south-africa/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
+    ],
+  },
+  {
+    slug: "is-mzansi-stream-legit-2026",
+    title: "Is Mzansi Stream legit? An honest 2026 answer",
+    metaDescription: "Is Mzansi Stream a legitimate IPTV service in South Africa? Honest 2026 answer covering company status, POPIA compliance, payment safety and refund policy.",
+    datePublished: "2026-03-14",
+    lead: "Every prospective customer Googles 'is Mzansi Stream legit' before they pay. Here's the honest 2026 answer — what we are, what we're not, how to verify us, and how the 24h free trial removes all upfront risk.",
+    sections: [
+      {
+        h2: "What Mzansi Stream is",
+        body: [
+          "Mzansi Stream is a streaming service operated as a registered South African business entity that aggregates 20,000+ live channels and a 100,000+ title VOD catalogue, delivered via a NAPAfrica-peered CDN to customers in SA, the SADC region and the SA diaspora worldwide.",
+          "The service has been live under the iptvmzansi.com brand since 2024, operates a published Terms & Conditions, a POPIA-compliant privacy policy with a named Information Officer, a refund / satisfaction policy, and human WhatsApp support 7 days a week.",
+        ],
+      },
+      {
+        h2: "How to verify us before paying",
+        body: [
+          "Read the Terms & Conditions and Privacy Policy on the site. Both list the legal entity, the contact details and the dispute-resolution process.",
+          "Request the free 24-hour trial. We send the M3U link on WhatsApp within minutes. No card. Use the full channel pack for 24 hours.",
+          "Pay only after the trial, only via a local SA payment method (EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco). All of these give you fraud / chargeback protection that anonymous crypto-only sellers don't.",
+          "Read our pages on POPIA compliance, refund policy and Information Officer — all published under /legal/.",
+        ],
+      },
+      {
+        h2: "What Mzansi Stream is not",
+        body: [
+          "Not a content broadcaster. The channels you watch are sourced from existing broadcaster feeds — we don't produce SuperSport or kykNET content.",
+          "Not a torrent service or pirate site. The streams are delivered over standard HLS / M3U via our own CDN infrastructure.",
+          "Not a flea-market re-seller. We operate as a legal entity, with employees, support staff and a public business profile.",
+        ],
+      },
+      {
+        h2: "The refund / satisfaction policy",
+        body: [
+          "Within the first 7 days of paying, if the service isn't working for you for any reason and we can't fix it on WhatsApp, we issue a refund. Published in our Satisfaction Policy under /legal/refund/.",
+          "The 24h free trial means most customers never reach the paid stage without already knowing the service works on their devices. The refund clause is a backstop — it's almost never invoked.",
+        ],
+      },
+      {
+        h2: "Verified social proof",
+        body: [
+          "Mzansi Stream invites every customer to leave a review on HelloPeter and Trustpilot after 30 days of use, with their consent. We do not seed reviews or fabricate aggregateRating schema — this is a POPIA and South African Omnibus Act requirement we take seriously.",
+          "If you find a third-party site claiming Mzansi Stream has fake reviews, please WhatsApp us with the link. We'll investigate and respond publicly.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa/" },
+      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Privacy / POPIA policy", href: "/en-za/legal/privacy/" },
+    ],
+  },
   {
     slug: "iptv-not-working-firestick-fix",
     title: "IPTV not working on Firestick — 2026 fix guide for South Africa",
     metaDescription: "Step-by-step Firestick IPTV troubleshooting for 2026 — black screen, channel won't load, EPG missing, buffering and Smarters / TiviMate fixes.",
-    datePublished: "2026-02-14",
+    datePublished: "2026-03-12",
     lead: "Firestick is the most popular 4K IPTV box in South Africa — but when something breaks, it's usually one of six things. Here's how to diagnose every common Firestick IPTV failure in under 5 minutes, with the exact fix for each.",
     sections: [
       {
@@ -504,7 +594,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         h2: "Symptom: 4K stream drops to 1080p constantly",
         body: [
-          "Almost always a router / Wi-Fi issue, not a Firestick issue. See our full buffering guide for the 5-step diagnostic. Short version: hardwire the Firestick via the R250 USB-Ethernet adapter and the problem disappears.",
+          "Almost always a router / Wi-Fi issue, not a Firestick issue. Hardwire the Firestick via the R250 USB-Ethernet adapter and the problem disappears for most households. Full diagnostic in our buffering guide.",
         ],
       },
       {
@@ -517,174 +607,16 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "Why IPTV buffers and how to fix it", href: "/en-za/blog/iptv-buffering-how-to-fix/" },
-      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-which-app/" },
-    ],
-    faq: [
-      {
-        q: "Why does my Firestick keep saying 'cannot play this stream'?",
-        a: "Either that specific channel's source feed is down (try a sister channel), your M3U has expired, or your provider's server is briefly offline. Mzansi Stream customers can WhatsApp us and we'll diagnose in under 5 minutes.",
-      },
-      {
-        q: "Does Firestick 4K Max work better than Firestick Lite for IPTV?",
-        a: "Yes — Firestick 4K Max has more RAM, Wi-Fi 6 and doesn't overheat. For 4K SuperSport it's worth the extra R400 over Lite.",
-      },
-      {
-        q: "Can I get my Firestick to wake up to IPTV?",
-        a: "Yes — in Firestick Settings → Applications → Manage Installed Applications → TiviMate → 'Launch on startup'. The Firestick will boot straight into your IPTV channel list.",
-      },
-      {
-        q: "Will Mzansi Stream work on my Firestick from anywhere in the world?",
-        a: "Yes — the same Firestick configuration works in the UK, AU, US, UAE, NZ and any country with internet. No geo-blocking, no VPN required for SA channels.",
-      },
-    ],
-  },
-
-  {
-    slug: "how-to-choose-iptv-service-south-africa",
-    title: "How to choose an IPTV service in South Africa — 2026 buyer's guide",
-    metaDescription: "What to look for in an IPTV provider in South Africa in 2026 — peering, support, payment methods, refund policy, channel mix and 4K stability.",
-    datePublished: "2026-02-16",
-    lead: "Choosing an IPTV provider in South Africa in 2026 isn't about who's cheapest — it's about who's still around in 12 months. Here's the seven-point checklist most people skip, and exactly what to ask a provider before you pay them anything.",
-    sections: [
-      {
-        h2: "1. Do they peer in South Africa?",
-        body: [
-          "Ask: 'Do you have CDN edges at NAPAfrica in Johannesburg and Cape Town?' If the answer is vague — walk away. Overseas-only providers will buffer at peak hours regardless of your line speed.",
-          "Mzansi Stream peers at NAPAfrica with redundant edges in JNB and CPT.",
-        ],
-      },
-      {
-        h2: "2. Do they offer a real trial?",
-        body: [
-          "A real trial is the channel lineup unlocked for at least 24 hours, with no credit card. If the 'trial' is a 5-minute demo channel or asks for card details upfront, that's a red flag — they're either farming card numbers or the service can't survive its own demo.",
-          "Mzansi Stream offers a 24-hour free trial on WhatsApp, no card required.",
-        ],
-      },
-      {
-        h2: "3. Are payment methods traceable?",
-        body: [
-          "EFT, SnapScan, Ozow, Yoco, Capitec Pay, Visa, Mastercard — all leave a paper trail with the provider's South African bank. Crypto-only or 'gift card only' providers are usually grey-market — if they vanish, you have no recourse.",
-          "Mzansi Stream accepts every SA payment method plus PayPal and Bitcoin.",
-        ],
-      },
-      {
-        h2: "4. Where does support live?",
-        body: [
-          "Direct WhatsApp support is the gold standard — you message a human and get a reply, not an IVR. Email-only or Telegram-only providers usually go dark when something breaks.",
-          "Ask for the support response time SLA before you pay.",
-        ],
-      },
-      {
-        h2: "5. Channel mix — what's actually included?",
-        body: [
-          "Don't trust '20,000 channels' as a metric on its own — what matters is whether the specific channels you watch are on the list. Ask for the channel list before you pay, and look for: every SuperSport feed, Premier League, kykNET, Mzansi Magic, SABC 1/2/3, and the international channels your household watches.",
-          "Mzansi Stream publishes the full channel lineup on WhatsApp on request.",
-        ],
-      },
-      {
-        h2: "6. 4K availability — across all plans or top tier only?",
-        body: [
-          "Some providers gate 4K behind a 'premium' tier at 2-3x the base price. Check whether 4K is included on every plan or only the most expensive one.",
-          "Mzansi Stream ships 4K on every plan from R99/month.",
-        ],
-      },
-      {
-        h2: "7. Refund / satisfaction policy",
-        body: [
-          "A short trial isn't a refund policy. Ask: 'If the service doesn't work on my router, do I get my money back inside the first 7 days?' Reputable SA providers say yes in writing.",
-          "Mzansi Stream offers a 7-day satisfaction guarantee from the first paid day.",
-        ],
-      },
-    ],
-    relatedLinks: [
-      { label: "Best IPTV South Africa 2026 — full guide", href: "/en-za/best-iptv-south-africa-2026/" },
-      { label: "Is IPTV legal in South Africa?", href: "/en-za/is-iptv-legal-south-africa/" },
-      { label: "Mzansi Stream plans — from R99/mo", href: "/en-za/" },
-    ],
-    faq: [
-      {
-        q: "What's the most important thing to check in an IPTV provider?",
-        a: "South African peering. A provider with CDN edges at NAPAfrica delivers 4K cleanly to every major SA fibre ISP. Without it, every other feature is theoretical.",
-      },
-      {
-        q: "Is cheaper always worse?",
-        a: "No. R99/month is realistic for a fully-peered SA IPTV provider. Below R50/month, the maths usually means they're skipping licensed CDN costs — which is where the trouble starts.",
-      },
-      {
-        q: "How do I check an IPTV provider before paying?",
-        a: "Ask for the 24-hour free trial, run a channel list check, test during peak hours (19:00-22:00) on a Saturday, and confirm payment goes to a registered South African business.",
-      },
-      {
-        q: "Is Mzansi Stream a reliable IPTV provider in South Africa?",
-        a: "Mzansi Stream peers at NAPAfrica with edges in Johannesburg and Cape Town, accepts every major SA payment method, offers WhatsApp support 7 days a week and a 24-hour free trial with no card. Plans start at R99/month.",
-      },
-    ],
-  },
-
-  {
-    slug: "cheap-iptv-south-africa-2026",
-    title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
-    metaDescription: "Cheap IPTV in South Africa in 2026 — the price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R99/mo.",
-    datePublished: "2026-02-18",
-    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside 3 months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and why R99/month is the sweet spot.",
-    sections: [
-      {
-        h2: "What 'cheap IPTV' really costs to run",
-        body: [
-          "A reputable IPTV CDN with NAPAfrica peering, licensed channel feeds and WhatsApp support has fixed costs around R40-R60 per active subscriber per month. Anything below that means either the provider is skipping licensed feeds, oversubscribing the CDN (which is why peak-hour buffering is so common in cheap services) or they're running a short-term cash grab.",
-        ],
-      },
-      {
-        h2: "The R99/month sweet spot",
-        body: [
-          "R99/month is the price point where you get 20,000+ channels, full SuperSport, 4K, NAPAfrica peering and live WhatsApp support without subsidising the service from the provider's side.",
-          "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
-        ],
-      },
-      {
-        h2: "Red flags on cheap IPTV providers",
-        body: [
-          "Crypto-only or gift-card-only payment, no real address, no free trial, no WhatsApp support, channel list 'on request only' that never arrives, and pricing so low (under R50/mo) that the maths can't work.",
-        ],
-      },
-      {
-        h2: "How Mzansi Stream stays at R99",
-        body: [
-          "Direct CDN peering at NAPAfrica cuts our infrastructure costs by roughly 60% vs. routing through Europe. Volume discounts on licensed feeds. WhatsApp-first support (no expensive call centre overhead).",
-        ],
-      },
-    ],
-    relatedLinks: [
-      { label: "Best IPTV South Africa 2026 — full guide", href: "/en-za/best-iptv-south-africa-2026/" },
-      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative/" },
+      { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026/" },
+      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026/" },
       { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
-    faq: [
-      {
-        q: "What's the cheapest reliable IPTV in South Africa?",
-        a: "R99/month is the cheapest realistic price for a reliable, NAPAfrica-peered IPTV service in South Africa. Below R50, the maths usually doesn't work — expect peak-hour buffering, missing channels or the provider vanishing.",
-      },
-      {
-        q: "Why are some IPTV providers R30 a month?",
-        a: "Usually because they're skipping licensed CDN costs and oversubscribing a single server. They survive 1-3 months and then either vanish or hike the price.",
-      },
-      {
-        q: "Is R99 too cheap to be real?",
-        a: "No — Mzansi Stream's direct NAPAfrica peering and WhatsApp-first support model keep operating costs low enough to maintain R99/month sustainably.",
-      },
-      {
-        q: "Can I get a free trial before paying?",
-        a: "Yes — Mzansi Stream offers a 24-hour free trial on WhatsApp, no credit card required.",
-      },
-    ],
   },
-
   {
     slug: "iptv-stuttering-smart-tv-fix",
     title: "IPTV stuttering on Samsung, LG or Hisense Smart TV — 2026 fix",
     metaDescription: "Why your Smart TV stutters on IPTV in 2026 and how to fix it — Tizen, webOS and VIDAA settings, buffer size, Wi-Fi vs Ethernet, app picks.",
-    datePublished: "2026-02-20",
+    datePublished: "2026-03-14",
     lead: "Samsung, LG and Hisense Smart TVs all run their own operating system — and each has its own quirks with IPTV stuttering. Here's the per-platform 2026 fix that solves it for the vast majority of South African households.",
     sections: [
       {
@@ -729,25 +661,48 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv/" },
       { label: "LG webOS IPTV setup", href: "/en-za/devices/lg-webos/" },
       { label: "Hisense VIDAA IPTV setup", href: "/en-za/devices/hisense-vidaa/" },
-      { label: "Firestick IPTV setup", href: "/en-za/iptv-firestick-south-africa/" },
+      { label: "Stable IPTV — no buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
     ],
-    faq: [
+  },
+  {
+    slug: "cheap-iptv-south-africa-realistic-pricing",
+    title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
+    metaDescription: "Cheap IPTV in South Africa in 2026 — the realistic price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R99/mo.",
+    datePublished: "2026-03-16",
+    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside three months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and why R99/month is the sweet spot.",
+    sections: [
       {
-        q: "Why does my Samsung TV stutter on IPTV but Netflix is fine?",
-        a: "Netflix uses Samsung's certified decoder pipeline; IPTV apps use the generic Tizen pipeline which is more sensitive to background scans. Disable Smart Hub auto-scan and set DNS to 1.1.1.1 — that fixes it for most users.",
+        h2: "What 'cheap IPTV' really costs to run",
+        body: [
+          "A reputable IPTV CDN with NAPAfrica peering, licensed channel feeds and WhatsApp support has fixed costs around R40-R60 per active subscriber per month.",
+          "Anything below that means either the provider is skipping licensed feeds, oversubscribing the CDN (which is why peak-hour buffering is so common in cheap services) or running a short-term cash grab.",
+        ],
       },
       {
-        q: "Should I get a Firestick or use my Smart TV's built-in app?",
-        a: "If your Smart TV is 2022 or newer with Ethernet plugged in, the built-in app is usually fine. Older units (2019-2021) are noticeably more stable when you bypass them with a Firestick 4K Max.",
+        h2: "The R99/month sweet spot",
+        body: [
+          "R99/month is the price point where you get 20,000+ channels, full SuperSport, 4K, NAPAfrica peering and live WhatsApp support without subsidising the service from the provider's side.",
+          "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
+        ],
       },
       {
-        q: "Does Hisense VIDAA support TiviMate?",
-        a: "No — TiviMate is Android-only. On Hisense use Smarters Pro or GSE Smart IPTV from the VIDAA app store, or plug in a Firestick to get TiviMate.",
+        h2: "Red flags on cheap IPTV providers",
+        body: [
+          "Crypto-only or gift-card-only payment, no real address, no free trial, no WhatsApp support, channel list 'on request only' that never arrives, and pricing so low (under R50/mo) that the maths can't work.",
+        ],
       },
       {
-        q: "Will Mzansi Stream stutter on my Smart TV?",
-        a: "Our NAPAfrica-peered CDN delivers a clean 4K stream to your line — but the last 10m (router → TV) is on your side. If you're stuttering, message us on WhatsApp and we'll walk through the platform-specific fix in 5 minutes.",
+        h2: "How Mzansi Stream stays at R99",
+        body: [
+          "Direct CDN peering at NAPAfrica cuts our infrastructure costs by roughly 60% vs. routing through Europe. Volume discounts on licensed feeds. WhatsApp-first support — no expensive call centre overhead.",
+        ],
       },
+    ],
+    relatedLinks: [
+      { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa/" },
+      { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
+      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
   },
 ];

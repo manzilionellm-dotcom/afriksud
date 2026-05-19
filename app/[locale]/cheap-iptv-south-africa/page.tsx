@@ -1,5 +1,6 @@
 // app/[locale]/cheap-iptv-south-africa/page.tsx
-// Buyer-intent pillar — targets "cheap iptv south africa" + variants.
+// Buyer-intent pillar — targets "cheap iptv south africa" and adjacent
+// long-tails (affordable IPTV, IPTV under R100, cheapest IPTV 2026).
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function CheapIptvSAPage({ params }: Props) {
+export default async function CheapIptvSouthAfricaPage({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const pillar = getPillar(SLUG);

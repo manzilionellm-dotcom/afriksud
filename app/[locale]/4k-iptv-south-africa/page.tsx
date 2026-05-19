@@ -1,5 +1,5 @@
 // app/[locale]/4k-iptv-south-africa/page.tsx
-// Buyer-intent pillar — targets "4k iptv south africa" + variants.
+// Buyer-intent pillar — targets "4k iptv", "uhd iptv south africa".
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function FourKIptvSAPage({ params }: Props) {
+export default async function FourKIptvSouthAfricaPage({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const pillar = getPillar(SLUG);
