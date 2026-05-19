@@ -413,6 +413,10 @@ export function FooterSection() {
           <h4>Product</h4>
           <a href={`${basePath}/`}>Home</a>
           <a href={`${basePath}/best-iptv-south-africa-2026/`}>Best IPTV 2026</a>
+          <a href={`${basePath}/cheap-iptv-south-africa/`}>Cheap IPTV from R99</a>
+          <a href={`${basePath}/4k-iptv-south-africa/`}>4K IPTV</a>
+          <a href={`${basePath}/iptv-no-buffering-south-africa/`}>Stable IPTV — no buffering</a>
+          <a href={`${basePath}/iptv-for-movies-and-series/`}>IPTV for movies & series</a>
           <a href={`${basePath}/dstv-alternative/`}>DStv alternative</a>
           <a href={`${basePath}/iptv-supersport-without-dstv/`}>Watch SuperSport</a>
           <a href={`${basePath}/blog/`}>Blog</a>
@@ -432,6 +436,15 @@ export function FooterSection() {
           <a href={`${basePath}/sa-abroad/`}>SA abroad</a>
           <a href={`${basePath}/communities/`}>Communities</a>
           <a href={`${basePath}/vs/`}>Compare</a>
+        </div>
+        <div className="footerCol">
+          <h4>Help & guides</h4>
+          <a href={`${basePath}/blog/why-is-my-iptv-buffering-fix-2026/`}>Fix IPTV buffering</a>
+          <a href={`${basePath}/blog/tivimate-vs-iptv-smarters-pro-2026/`}>TiviMate vs Smarters</a>
+          <a href={`${basePath}/blog/iptv-not-working-firestick-fix/`}>Firestick fixes</a>
+          <a href={`${basePath}/blog/iptv-stuttering-smart-tv-fix/`}>Smart TV stuttering</a>
+          <a href={`${basePath}/blog/how-to-choose-iptv-service-south-africa-2026/`}>How to choose IPTV</a>
+          <a href={`${basePath}/blog/is-mzansi-stream-legit-2026/`}>Is Mzansi Stream legit?</a>
         </div>
         <div className="footerCol">
           <h4>Legal</h4>

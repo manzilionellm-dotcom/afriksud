@@ -552,6 +552,159 @@ export const BLOG_POSTS: BlogPost[] = [
       { label: "Privacy / POPIA policy", href: "/en-za/legal/privacy/" },
     ],
   },
+  {
+    slug: "iptv-not-working-firestick-fix",
+    title: "IPTV not working on Firestick — 2026 fix guide for South Africa",
+    metaDescription: "Step-by-step Firestick IPTV troubleshooting for 2026 — black screen, channel won't load, EPG missing, buffering and Smarters / TiviMate fixes.",
+    datePublished: "2026-03-12",
+    lead: "Firestick is the most popular 4K IPTV box in South Africa — but when something breaks, it's usually one of six things. Here's how to diagnose every common Firestick IPTV failure in under 5 minutes, with the exact fix for each.",
+    sections: [
+      {
+        h2: "Symptom: 'No channels' or empty channel list",
+        body: [
+          "Cause 1: your M3U link expired. Most IPTV subscriptions tie the M3U to a fixed expiry. Message your provider on WhatsApp and ask them to confirm the link is active.",
+          "Cause 2: you pasted the link with a trailing space. Re-copy and paste it fresh.",
+          "Cause 3: Firestick lost network. Settings → Network — verify Wi-Fi is connected to the 5GHz SSID.",
+        ],
+      },
+      {
+        h2: "Symptom: 'Cannot play this stream' on every channel",
+        body: [
+          "Your provider's server may be temporarily down (rare for Mzansi Stream — NAPAfrica edges run 99.95% uptime). Try a single channel after 60 seconds.",
+          "If only some channels fail: that channel's source feed is down at the broadcaster (e.g. a SuperSport feed mid-restream). Switch to a sister channel and retry.",
+          "If every channel fails for more than 5 minutes — message your provider on WhatsApp. Mzansi Stream resolves outages typically within an hour.",
+        ],
+      },
+      {
+        h2: "Symptom: EPG (channel guide) is empty",
+        body: [
+          "In TiviMate: Settings → Playlist → Tap your playlist → 'Update EPG'. Wait 60 seconds.",
+          "In Smarters Pro: log out and log back in with your Xtream Codes credentials. EPG re-syncs on login.",
+          "If still empty after both: the EPG XML URL may not be set. Ask your provider for the EPG URL alongside the M3U — Mzansi Stream sends both by default.",
+        ],
+      },
+      {
+        h2: "Symptom: Firestick frozen / app won't open",
+        body: [
+          "Hold the play button + select button together for 10 seconds — soft restart.",
+          "Settings → Applications → TiviMate / Smarters → Clear Cache. Reopen the app.",
+          "If the Firestick still locks up: unplug the power for 60 seconds. Older Firestick Lite units overheat in summer — switch to a Firestick 4K Max.",
+        ],
+      },
+      {
+        h2: "Symptom: 4K stream drops to 1080p constantly",
+        body: [
+          "Almost always a router / Wi-Fi issue, not a Firestick issue. Hardwire the Firestick via the R250 USB-Ethernet adapter and the problem disappears for most households. Full diagnostic in our buffering guide.",
+        ],
+      },
+      {
+        h2: "Symptom: audio is out of sync",
+        body: [
+          "In TiviMate: open the channel → press Up on the remote → Audio Sync → adjust by ±200ms until lips match.",
+          "In Smarters Pro: long-press the channel → Audio Track → switch decoder. Often fixes Dolby vs. AAC mismatches.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa/" },
+      { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026/" },
+      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
+    ],
+  },
+  {
+    slug: "iptv-stuttering-smart-tv-fix",
+    title: "IPTV stuttering on Samsung, LG or Hisense Smart TV — 2026 fix",
+    metaDescription: "Why your Smart TV stutters on IPTV in 2026 and how to fix it — Tizen, webOS and VIDAA settings, buffer size, Wi-Fi vs Ethernet, app picks.",
+    datePublished: "2026-03-14",
+    lead: "Samsung, LG and Hisense Smart TVs all run their own operating system — and each has its own quirks with IPTV stuttering. Here's the per-platform 2026 fix that solves it for the vast majority of South African households.",
+    sections: [
+      {
+        h2: "Samsung (Tizen) — most common cause",
+        body: [
+          "Samsung Tizen TVs default to letting Smart Hub and DLNA scan the network in the background. On older 2019-2021 models this hijacks bandwidth mid-stream.",
+          "Fix: Settings → General → Network → Expert → IP Settings → set DNS to 1.1.1.1 manually. Then Settings → General → External Device Manager → disable Smart Hub auto-scan. Stutter usually disappears.",
+          "Best IPTV app on Samsung: Smarters Lite, available in the Samsung app store.",
+        ],
+      },
+      {
+        h2: "LG (webOS) — second most common cause",
+        body: [
+          "LG webOS aggressively throttles background apps. Some IPTV apps lose their buffer the moment the screensaver fires.",
+          "Fix: Settings → System → Screensaver → set to 'Off' or 'After 4 hours'. Settings → All Settings → General → Power Saving → set 'Auto Power Off' to 'Off' while watching live.",
+          "Best IPTV app on LG: IPTV Smarters Pro from the LG Content Store.",
+        ],
+      },
+      {
+        h2: "Hisense (VIDAA) — buffer is too small by default",
+        body: [
+          "VIDAA's default video buffer for third-party apps is around 2 seconds — enough to stutter on a marginal line.",
+          "Fix: open your IPTV app → Settings → Player Settings → Buffer size → set to 8-10 seconds. Slightly slower channel switching, dramatically more stable streams.",
+          "Best IPTV app on Hisense VIDAA: Smarters Pro or GSE Smart IPTV.",
+        ],
+      },
+      {
+        h2: "All Smart TVs: stop using Wi-Fi for IPTV",
+        body: [
+          "Smart TVs ship with budget Wi-Fi chipsets that struggle with sustained 4K bitrate. The single biggest stability upgrade is to plug an Ethernet cable from the router (or a powerline adapter) into the TV.",
+          "Cost: ~R200 for a 10m flat Ethernet cable, ~R900 for a TP-Link powerline kit if you can't run cable.",
+        ],
+      },
+      {
+        h2: "Or: skip the Smart TV app entirely",
+        body: [
+          "A Firestick 4K Max (~R1,400) plugged into the TV's HDMI port runs TiviMate — a far better IPTV player than anything available on Samsung, LG or Hisense. Often the cleanest fix is to bypass the Smart TV's OS altogether.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv/" },
+      { label: "LG webOS IPTV setup", href: "/en-za/devices/lg-webos/" },
+      { label: "Hisense VIDAA IPTV setup", href: "/en-za/devices/hisense-vidaa/" },
+      { label: "Stable IPTV — no buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
+    ],
+  },
+  {
+    slug: "cheap-iptv-south-africa-realistic-pricing",
+    title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
+    metaDescription: "Cheap IPTV in South Africa in 2026 — the realistic price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R99/mo.",
+    datePublished: "2026-03-16",
+    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside three months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and why R99/month is the sweet spot.",
+    sections: [
+      {
+        h2: "What 'cheap IPTV' really costs to run",
+        body: [
+          "A reputable IPTV CDN with NAPAfrica peering, licensed channel feeds and WhatsApp support has fixed costs around R40-R60 per active subscriber per month.",
+          "Anything below that means either the provider is skipping licensed feeds, oversubscribing the CDN (which is why peak-hour buffering is so common in cheap services) or running a short-term cash grab.",
+        ],
+      },
+      {
+        h2: "The R99/month sweet spot",
+        body: [
+          "R99/month is the price point where you get 20,000+ channels, full SuperSport, 4K, NAPAfrica peering and live WhatsApp support without subsidising the service from the provider's side.",
+          "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
+        ],
+      },
+      {
+        h2: "Red flags on cheap IPTV providers",
+        body: [
+          "Crypto-only or gift-card-only payment, no real address, no free trial, no WhatsApp support, channel list 'on request only' that never arrives, and pricing so low (under R50/mo) that the maths can't work.",
+        ],
+      },
+      {
+        h2: "How Mzansi Stream stays at R99",
+        body: [
+          "Direct CDN peering at NAPAfrica cuts our infrastructure costs by roughly 60% vs. routing through Europe. Volume discounts on licensed feeds. WhatsApp-first support — no expensive call centre overhead.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa/" },
+      { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
+      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative/" },
+      { label: "Pricing — from R99/mo", href: "/en-za/" },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
