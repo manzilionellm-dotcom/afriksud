@@ -17,6 +17,9 @@ import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
 import { LocaleSync } from "../../../../components/client/LocaleSync";
+import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
+import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
+import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
 type Props = { params: Promise<{ locale: string; city: string }> };
 
 export function generateStaticParams() {
@@ -193,28 +196,28 @@ export default async function CityPage({ params }: Props) {
               </section>
             ) : null}
 
-            <section className="longformSection" id="pricing">
-              <h2>Plans from R99/month — no contract</h2>
-              <ul className="longformList">
-                <li>1 month — R199</li>
-                <li>3 months — R449 (Most popular)</li>
-                <li>6 months — R699</li>
-                <li>12 months — R1,199 (Best value)</li>
-              </ul>
-              <p>
-                Pay via EFT, Ozow, SnapScan, Zapper, Yoco, Capitec Pay,
-                Visa, Mastercard, PayPal or Bitcoin.
-              </p>
-            </section>
+            <TrustReversalBlock locale={locale as Locale} />
+
+            <InlinePricingBlock
+              locale={locale as Locale}
+              refTag={`City-${city}`}
+              heading={`IPTV pricing in ${data.name} — from R99/month`}
+              sub={`Same channel pack on every plan. No installer truck, no decoder rental, no contract. 24-hour free trial first — no card.`}
+            />
 
             <section className="longformSection" id="trial">
-              <h2>Get started — 10 minutes on WhatsApp</h2>
+              <h2>Get started in {data.name} — 10 minutes on WhatsApp</h2>
               <p>
                 Message us on WhatsApp, pick a plan, pay, and we send your
                 M3U link with a setup guide for your specific device. 24-hour
                 free trial, no card.
               </p>
             </section>
+
+            <InternalLinkHub
+              locale={locale as Locale}
+              heading="More buyer guides for South Africa"
+            />
           </article>
         </main>
 

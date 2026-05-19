@@ -19,6 +19,9 @@ import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
 import { LocaleSync } from "../../../../components/client/LocaleSync";
+import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
+import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
+import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
 
 type Props = { params: Promise<{ locale: string; competitor: string }> };
 
@@ -148,6 +151,15 @@ export default async function VersusPage({ params }: Props) {
               </ul>
             </section>
 
+            <TrustReversalBlock locale={locale as Locale} />
+
+            <InlinePricingBlock
+              locale={locale as Locale}
+              refTag={`Vs-${competitor}`}
+              heading={`Switch from ${data.name} — pricing from R99/month`}
+              sub={`Migrate to Mzansi Stream today. Same channels ${data.name} carries (and more), at a fraction of the cost. 24-hour free trial first — no card.`}
+            />
+
             <section className="longformSection" id="trial">
               <h2>Switch from {data.name} today</h2>
               <p>
@@ -155,6 +167,12 @@ export default async function VersusPage({ params }: Props) {
                 Activated on WhatsApp within 10 minutes.
               </p>
             </section>
+
+            <InternalLinkHub
+              locale={locale as Locale}
+              heading={`More ways to compare ${data.name} alternatives`}
+              exclude={[`/vs/${competitor}/`]}
+            />
           </article>
         </main>
 

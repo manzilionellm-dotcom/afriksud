@@ -418,6 +418,14 @@ export function FooterSection() {
           <a href={`${basePath}/blog/`}>Blog</a>
         </div>
         <div className="footerCol">
+          <h4>Buyer guides</h4>
+          <a href={`${basePath}/cheap-iptv-south-africa/`}>Cheap IPTV (under R100)</a>
+          <a href={`${basePath}/4k-iptv-south-africa/`}>4K IPTV</a>
+          <a href={`${basePath}/iptv-no-buffering-south-africa/`}>IPTV with no buffering</a>
+          <a href={`${basePath}/iptv-for-movies-and-series/`}>IPTV for movies &amp; series</a>
+          <a href={`${basePath}/iptv-supersport-without-dstv/`}>IPTV for sport</a>
+        </div>
+        <div className="footerCol">
           <h4>Devices</h4>
           <a href={`${basePath}/iptv-firestick-south-africa/`}>Firestick</a>
           <a href={`${basePath}/iptv-samsung-smart-tv/`}>Samsung Smart TV</a>
