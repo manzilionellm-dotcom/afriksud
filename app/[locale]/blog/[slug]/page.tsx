@@ -15,6 +15,9 @@ import {
 } from "../../../../lib/seo/authors";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { AuthorBio } from "../../../../components/seo/AuthorBio";
+import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBlock";
+import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
+import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
 import { SITE } from "../../../../components/shared/site";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -131,6 +134,15 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           ))}
 
+          <TrustReversalBlock locale={locale as Locale} />
+
+          <InlinePricingBlock
+            locale={locale as Locale}
+            refTag={`Blog-${slug}`}
+            heading={`Get started with ${SITE.brand} — from R99/month`}
+            sub="Same channel pack on every plan. Pay once, no auto-renewal, no contract. 24-hour free trial available on request."
+          />
+
           <section className="longformSection">
             <h2>Related</h2>
             <ul className="longformList">
@@ -141,6 +153,11 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </ul>
           </section>
+
+          <InternalLinkHub
+            locale={locale as Locale}
+            heading="More buyer-intent guides"
+          />
         </article>
       </LongformShell>
     </>
