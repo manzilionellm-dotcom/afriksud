@@ -77,6 +77,8 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noreferrer"
       aria-label="Open WhatsApp chat"
+      data-track-ref="WhatsApp-Fab"
+      data-track-placement="Floating-Action-Button"
     >
       <svg
         viewBox="0 0 32 32"

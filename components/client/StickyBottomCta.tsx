@@ -51,10 +51,20 @@ export function StickyBottomCta() {
 
   return (
     <div className="stickyBottomCta" role="region" aria-label="Quick actions">
-      <a href="#trial" className="stickyBottomCtaPrimary">
+      <a
+        href="#trial"
+        className="stickyBottomCtaPrimary"
+        data-track-ref="Sticky-Bottom-Trial"
+        data-track-placement="Sticky-Bottom-CTA"
+      >
         {TRIAL_LABEL[lang] ?? TRIAL_LABEL["en-za"]}
       </a>
-      <a href="#offers" className="stickyBottomCtaSecondary">
+      <a
+        href="#offers"
+        className="stickyBottomCtaSecondary"
+        data-track-ref="Sticky-Bottom-Pricing"
+        data-track-placement="Sticky-Bottom-CTA"
+      >
         {PLANS_LABEL[lang] ?? PLANS_LABEL["en-za"]}
       </a>
     </div>

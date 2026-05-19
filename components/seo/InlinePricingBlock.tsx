@@ -148,6 +148,8 @@ export function InlinePricingBlock({
                 rel="noreferrer"
                 className={isBest ? "btnPrimary" : "btnSecondary"}
                 style={{ width: "100%", justifyContent: "center" }}
+                data-track-ref={`${refTag}-${p.key}`}
+                data-track-placement={refTag}
               >
                 {t.offers.order} →
               </a>
