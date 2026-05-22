@@ -15,6 +15,8 @@ import { InlinePricingBlock } from "./InlinePricingBlock";
 import { TrustReversalBlock } from "./TrustReversalBlock";
 import { InternalLinkHub } from "./InternalLinkHub";
 import { DirectAnswerBlock } from "./DirectAnswerBlock";
+import { JsonLd } from "../../lib/seo/jsonld";
+import { ORG_ID, WEBSITE_ID } from "../../lib/seo/entity";
 
 export function PillarTemplate({
   pillar,
@@ -38,19 +40,35 @@ export function PillarTemplate({
     image: `${SITE_URL}/og-image.jpg`,
     datePublished: pillar.datePublished,
     dateModified: pillar.dateModified,
-    author: { "@type": "Organization", name: SITE.brand, url: SITE_URL },
-    publisher: {
-      "@type": "Organization",
-      name: SITE.brand,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-      },
-    },
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
     mainEntityOfPage: canonical,
     inLanguage: LOCALE_META[locale].hreflang,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@type": "Thing", name: pillar.h1 },
+  };
+
+  // WebPage + Speakable. Marks the direct-answer block + lead so AI
+  // Overviews / voice surfaces have a high-confidence quotable span.
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: pillar.metaTitle,
+    description: pillar.metaDescription,
+    inLanguage: LOCALE_META[locale].hreflang,
+    isPartOf: { "@id": WEBSITE_ID },
+    primaryImageOfPage: `${SITE_URL}/og-image.jpg`,
+    datePublished: pillar.datePublished,
+    dateModified: pillar.dateModified,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".longformLead", ".direct-answer"],
+    },
+    breadcrumb: {
+      "@id": `${canonical}#breadcrumb`,
+    },
   };
 
   const faqSchema = {
@@ -66,6 +84,7 @@ export function PillarTemplate({
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${canonical}#breadcrumb`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale, "/") },
       {
@@ -104,24 +123,11 @@ export function PillarTemplate({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      {howToSchema ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        />
-      ) : null}
+      <JsonLd data={articleSchema} />
+      <JsonLd data={webPageSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
       <LongformShell locale={locale}>
         <article className="section">

@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     // Kept under 60 characters so Google doesn't truncate on SERP.
+    // `default` is rendered as-is (no template applied) so the brand
+    // suffix lives here. Child pages must set `title` WITHOUT the
+    // `| Mzansi Stream` suffix — the template appends it once.
     default: "DStv Alternative — 20,000+ Channels from R99 | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },

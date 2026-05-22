@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
 
   const cityList = data.cities.join(", ");
-  const title = `Watch SuperSport, SABC & kykNET in ${data.name} — Mzansi Stream`;
+  const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
   const description = `Stream SuperSport, SABC, kykNET and 20,000+ South African channels in ${data.name} (${cityList}) in 4K. Built for SA expats — no DStv decoder, no contract.`;
 
   // Canonical follows B.5.4 — the preferred-locale variant owns the URL.

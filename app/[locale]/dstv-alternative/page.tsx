@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   return {
-    title: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels | Mzansi Stream",
+    title: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels",
     description:
       "Best DStv alternative in South Africa 2026. 20,000+ live channels, SuperSport PSL, Premier League, kykNET, SABC in 4K. From R99/mo. Free 24h trial — no card.",
     alternates: {

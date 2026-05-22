@@ -61,7 +61,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Fibre · ISP guide 2026",
     h1: "Best IPTV for Vumatel, Openserve and Frogfoot in South Africa",
     metaTitle:
-      "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Stable | Mzansi Stream",
+      "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Stable",
     metaDescription:
       "Best IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre fibre in South Africa. 4K SuperSport with no buffering. NAPAfrica-peered CDN. From R99/mo.",
     lead:
@@ -196,7 +196,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Payments · EFT, SnapScan, Ozow, Capitec Pay",
     h1: "IPTV You Can Pay for via EFT, SnapScan, Ozow and Capitec Pay (2026)",
     metaTitle:
-      "IPTV EFT, SnapScan, Ozow, Capitec Pay — No Credit Card | Mzansi Stream",
+      "IPTV EFT, SnapScan, Ozow, Capitec Pay — No Credit Card",
     metaDescription:
       "Pay for IPTV in South Africa with EFT, SnapScan, Ozow, Zapper, Yoco or Capitec Pay — no credit card required. Mzansi Stream — full 4K SuperSport from R99/mo.",
     lead:
@@ -322,7 +322,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Cancel DStv · 2026 step-by-step",
     h1: "How to Cancel DStv in 2026 — Without Paying Another R899",
     metaTitle:
-      "How to Cancel DStv 2026 — Step-by-Step + Switch to IPTV | Mzansi Stream",
+      "How to Cancel DStv 2026 — Step-by-Step + Switch to IPTV",
     metaDescription:
       "Cancel DStv in 2026 — exact WhatsApp number, 30-day notice trick, and how to switch to IPTV with no contract from R99/mo. Save R9,500+ a year.",
     lead:
@@ -460,7 +460,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Legal · IPTV in South Africa 2026",
     h1: "Is IPTV Legal in South Africa in 2026? — The Honest Answer",
     metaTitle:
-      "Is IPTV Legal in South Africa 2026? — Honest Legal Guide | Mzansi Stream",
+      "Is IPTV Legal in South Africa 2026? — Honest Legal Guide",
     metaDescription:
       "Is IPTV legal in South Africa in 2026? The honest legal answer — IPTV is a legal technology; unlicensed redistribution is not. What to check before subscribing.",
     lead:
@@ -599,7 +599,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Best IPTV · 2026 buyer's guide",
     h1: "Best IPTV in South Africa 2026 — Honest Buyer's Guide",
     metaTitle:
-      "Best IPTV South Africa 2026 — 20,000+ Channels in 4K | Mzansi Stream",
+      "Best IPTV South Africa 2026 — 20,000+ Channels in 4K",
     metaDescription:
       "The honest 2026 buyer's guide to the best IPTV in South Africa. Compare price, channels, sport, 4K, support and what to check before you pay. From R99/mo with a 24h free trial.",
     lead:
@@ -785,7 +785,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Firestick install · 10-minute setup",
     h1: "IPTV Firestick South Africa — Install in 10 Minutes (2026 Guide)",
     metaTitle:
-      "IPTV Firestick South Africa 2026 — TiviMate Setup in 10 Min | Mzansi Stream",
+      "IPTV Firestick South Africa 2026 — TiviMate Setup in 10 Min",
     metaDescription:
       "Step-by-step IPTV Firestick setup for South Africa in 2026 — TiviMate Premium, M3U link, EPG, 4K SuperSport. Works on Vumatel, Openserve, Frogfoot. From R99/mo.",
     lead:
@@ -956,7 +956,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Samsung Smart TV · Tizen install",
     h1: "IPTV for Samsung Smart TV (Tizen) — 2026 South Africa Guide",
     metaTitle:
-      "IPTV Samsung Smart TV South Africa 2026 — Tizen Install | Mzansi Stream",
+      "IPTV Samsung Smart TV South Africa 2026 — Tizen Install",
     metaDescription:
       "Install IPTV on a Samsung Smart TV (Tizen) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport, kykNET. Works on every 2022+ Samsung. From R99/mo.",
     lead:
@@ -1123,7 +1123,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "SuperSport · No DStv required",
     h1: "Watch SuperSport Without DStv — IPTV Guide for South Africa 2026",
     metaTitle:
-      "Watch SuperSport Without DStv — IPTV in 4K 2026 | Mzansi Stream",
+      "Watch SuperSport Without DStv — IPTV in 4K 2026",
     metaDescription:
       "Stream every SuperSport feed (PSL, Premier League, Rugby, Cricket) in 4K without DStv. Mzansi Stream IPTV from R99/mo on WhatsApp — installed in 10 minutes.",
     lead:
@@ -1294,7 +1294,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Buyer guide · Cheap IPTV 2026",
     h1: "Cheap IPTV in South Africa — under R100/month, 20,000+ channels",
     metaTitle:
-      "Cheap IPTV South Africa — From R99/mo, 20,000+ Channels | Mzansi Stream",
+      "Cheap IPTV South Africa — From R99/mo, 20,000+ Channels",
     metaDescription:
       "Cheap IPTV in South Africa from R99/month. 20,000+ live channels, 4K SuperSport, kykNET, SABC and Premier League. No contract, no decoder, no installation fee.",
     lead:
@@ -1429,7 +1429,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "4K UHD · Streaming quality 2026",
     h1: "4K IPTV in South Africa — native UHD on every channel that broadcasts it",
     metaTitle:
-      "4K IPTV South Africa — Native UHD SuperSport & Premier League | Mzansi Stream",
+      "4K IPTV South Africa — Native UHD SuperSport & Premier League",
     metaDescription:
       "Native 4K UHD IPTV in South Africa. SuperSport, Premier League, kykNET and 20,000+ channels in true 4K — no upscaling. NAPAfrica CDN, no buffering. From R99/mo.",
     lead:
@@ -1564,7 +1564,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Streaming quality · Stability 2026",
     h1: "IPTV without buffering in South Africa — what actually causes it and how to fix it",
     metaTitle:
-      "IPTV No Buffering South Africa — Stable 4K Streams | Mzansi Stream",
+      "IPTV No Buffering South Africa — Stable 4K Streams",
     metaDescription:
       "Stable IPTV with no buffering in South Africa. NAPAfrica-peered CDN, <15ms latency, 4K SuperSport that doesn't drop mid-match. Setup checklist + provider comparison.",
     lead:
@@ -1697,7 +1697,7 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Movies & Series · 100,000+ titles",
     h1: "IPTV for movies and series — 100,000+ titles on demand, plus live M-Net",
     metaTitle:
-      "IPTV for Movies & Series South Africa — 100K Titles | Mzansi Stream",
+      "IPTV for Movies & Series South Africa — 100K Titles",
     metaDescription:
       "IPTV for movies and series in South Africa — 100,000+ titles on demand plus live M-Net, Netflix mirror, Disney+, HBO Max and Showmax content. 4K, no contract. From R99/mo.",
     lead:

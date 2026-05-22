@@ -18,7 +18,7 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Hisense VIDAA · Install guide",
     h1: "IPTV on Hisense Smart TV (VIDAA OS) — South Africa 2026",
     metaTitle:
-      "IPTV Hisense VIDAA Smart TV 2026 — Install in 10 Min | Mzansi Stream",
+      "IPTV Hisense VIDAA Smart TV 2026 — Install in 10 Min",
     metaDescription:
       "Install IPTV on a Hisense Smart TV (VIDAA OS) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport. Works on every Hisense U6, U7, U8 and ULED.",
     lead:
@@ -132,7 +132,7 @@ export const DEVICES: Pillar[] = [
     eyebrow: "LG webOS · Install guide",
     h1: "IPTV on LG Smart TV (webOS) — South Africa 2026",
     metaTitle:
-      "IPTV LG Smart TV webOS 2026 — Install in 12 Min | Mzansi Stream",
+      "IPTV LG Smart TV webOS 2026 — Install in 12 Min",
     metaDescription:
       "Install IPTV on an LG Smart TV (webOS) in South Africa — Smart IPTV or SS IPTV, M3U link, 4K SuperSport. Works on every LG OLED, QNED and UHD from 2018.",
     lead:
@@ -244,7 +244,7 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Sony Bravia · Google TV install",
     h1: "IPTV on Sony Bravia (Google TV / Android TV) — South Africa 2026",
     metaTitle:
-      "IPTV Sony Bravia Google TV 2026 — TiviMate Install | Mzansi Stream",
+      "IPTV Sony Bravia Google TV 2026 — TiviMate Install",
     metaDescription:
       "Install IPTV on a Sony Bravia (Google TV / Android TV) — TiviMate or IPTV Smarters, 4K Dolby Vision SuperSport. Works on every Bravia XR and A-series.",
     lead:
@@ -336,7 +336,7 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Android TV Box · Install guide",
     h1: "IPTV on Android TV Box (Nvidia Shield, Mi Box, Onn) — South Africa 2026",
     metaTitle:
-      "IPTV Android TV Box 2026 — Nvidia Shield, Mi Box | Mzansi Stream",
+      "IPTV Android TV Box 2026 — Nvidia Shield, Mi Box",
     metaDescription:
       "Install IPTV on Nvidia Shield, Xiaomi Mi Box, Onn 4K Pro or any Android TV box in South Africa — TiviMate Premium, 4K SuperSport, EPG. From R99/mo.",
     lead:
@@ -420,7 +420,7 @@ export const DEVICES: Pillar[] = [
     slug: "apple-tv-4k",
     eyebrow: "Apple TV 4K · Install guide",
     h1: "IPTV on Apple TV 4K — South Africa 2026",
-    metaTitle: "IPTV Apple TV 4K 2026 — IPTV Smarters | Mzansi Stream",
+    metaTitle: "IPTV Apple TV 4K 2026 — IPTV Smarters",
     metaDescription:
       "Install IPTV on Apple TV 4K in South Africa — IPTV Smarters Player or GSE Smart IPTV, 4K Dolby Vision SuperSport. From R99/mo on WhatsApp.",
     lead:
@@ -499,7 +499,7 @@ export const DEVICES: Pillar[] = [
     slug: "iphone-ipad",
     eyebrow: "iPhone & iPad · Install guide",
     h1: "IPTV on iPhone & iPad — South Africa 2026",
-    metaTitle: "IPTV iPhone iPad 2026 — IPTV Smarters Player | Mzansi Stream",
+    metaTitle: "IPTV iPhone iPad 2026 — IPTV Smarters Player",
     metaDescription:
       "Install IPTV on iPhone or iPad in South Africa — IPTV Smarters Player or GSE Smart IPTV from the App Store. 4K SuperSport. From R99/mo.",
     lead:
@@ -568,7 +568,7 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Android phone & tablet · Install",
     h1: "IPTV on Android Phone & Tablet — South Africa 2026",
     metaTitle:
-      "IPTV Android Phone Tablet 2026 — TiviMate / Smarters | Mzansi Stream",
+      "IPTV Android Phone Tablet 2026 — TiviMate / Smarters",
     metaDescription:
       "Install IPTV on Android phones and tablets in SA — TiviMate Companion, IPTV Smarters Pro, M3U. Cast to Chromecast or Smart TV. From R99/mo.",
     lead:
@@ -636,7 +636,7 @@ export const DEVICES: Pillar[] = [
     slug: "mag-box",
     eyebrow: "MAG Box · Install guide",
     h1: "IPTV on MAG Box (322, 524, 540) — South Africa 2026",
-    metaTitle: "IPTV MAG Box 322 524 540 2026 — Stalker Portal | Mzansi Stream",
+    metaTitle: "IPTV MAG Box 322 524 540 2026 — Stalker Portal",
     metaDescription:
       "Configure IPTV on MAG Box (322, 524, 540) in South Africa — Stalker portal, MAC address, 4K SuperSport. Mzansi Stream from R99/mo.",
     lead:

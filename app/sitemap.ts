@@ -6,22 +6,31 @@ import { hreflangFor, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
-import { BLOG_SLUGS } from "../lib/seo/blog-posts";
+import { BLOG_POSTS, BLOG_SLUGS } from "../lib/seo/blog-posts";
 import { LEGAL_SLUGS, LEGAL_TOPICS } from "../lib/seo/legal";
 import { SA_LANGUAGE_SLUGS } from "../lib/seo/sa-languages";
 import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
-import { PILLAR_SLUGS } from "../lib/seo/pillars";
-import { DEVICE_SLUGS } from "../lib/seo/devices";
+import { PILLARS, PILLAR_SLUGS } from "../lib/seo/pillars";
+import { DEVICES, DEVICE_SLUGS } from "../lib/seo/devices";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
-const lastModified = new Date();
+// Build-time fallback for surfaces that don't have a per-resource
+// dateModified. Stable so per-build sitemaps don't churn for crawlers.
+const buildDate = new Date();
+
+function parseDate(d: string | undefined): Date {
+  if (!d) return buildDate;
+  const parsed = new Date(d);
+  return isNaN(parsed.getTime()) ? buildDate : parsed;
+}
 
 function withAlternates(
   path: string,
   priority: number,
-  changeFrequency: SitemapEntry["changeFrequency"] = "weekly"
+  changeFrequency: SitemapEntry["changeFrequency"] = "weekly",
+  lastModified: Date = buildDate
 ): SitemapEntry {
   return {
     url: localeUrl(DEFAULT_LOCALE, path),
@@ -46,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     entries.push({
       url: localeUrl(locale, "/"),
-      lastModified,
+      lastModified: buildDate,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: { languages: hreflangFor("/") },
@@ -59,10 +68,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/referral/", 0.5, "monthly"));
   entries.push(withAlternates("/affiliate/", 0.5, "monthly"));
 
-  // Head-term pillars (best-iptv, firestick, samsung, supersport, etc.)
-  for (const slug of PILLAR_SLUGS) {
-    entries.push(withAlternates(`/${slug}/`, 0.9, "monthly"));
+  // Head-term pillars — use per-pillar `dateModified` so the sitemap
+  // reflects actual content freshness instead of the build date.
+  for (const pillar of PILLARS) {
+    entries.push(
+      withAlternates(
+        `/${pillar.slug}/`,
+        0.9,
+        "monthly",
+        parseDate(pillar.dateModified)
+      )
+    );
   }
+  void PILLAR_SLUGS;
 
   // Section hubs / listing pages.
   entries.push(withAlternates("/cities/", 0.8, "monthly"));
@@ -73,9 +91,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/devices/", 0.8, "monthly"));
 
   // Device install pages (under /devices/[slug]/ — Hisense, LG, Sony, etc.).
-  for (const slug of DEVICE_SLUGS) {
-    entries.push(withAlternates(`/devices/${slug}/`, 0.7, "monthly"));
+  for (const device of DEVICES) {
+    entries.push(
+      withAlternates(
+        `/devices/${device.slug}/`,
+        0.7,
+        "monthly",
+        parseDate(device.dateModified)
+      )
+    );
   }
+  void DEVICE_SLUGS;
 
   // SADC countries (8 × default locale anchor with hreflang alternates).
   for (const slug of SADC_SLUGS) {
@@ -97,10 +123,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(withAlternates(`/language/${slug}/`, 0.7, "monthly"));
   }
 
-  // Blog posts.
-  for (const slug of BLOG_SLUGS) {
-    entries.push(withAlternates(`/blog/${slug}/`, 0.6, "monthly"));
+  // Blog posts — use per-post `datePublished` (blog posts don't carry
+  // a separate `dateModified` field; published-date is the closest
+  // honest signal we have).
+  for (const post of BLOG_POSTS) {
+    entries.push(
+      withAlternates(
+        `/blog/${post.slug}/`,
+        0.6,
+        "monthly",
+        parseDate(post.datePublished)
+      )
+    );
   }
+  void BLOG_SLUGS;
 
   // Legal — only the ones with finalised copy (skip placeholder pages).
   for (const slug of LEGAL_SLUGS) {
@@ -114,7 +150,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     void SA_ABROAD_SLUGS; // tree-shake guard
     entries.push({
       url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}/`),
-      lastModified,
+      lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.8,
       alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}/`) },

@@ -27,20 +27,54 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "OAI-SearchBot", allow: "/" },
       { userAgent: "ClaudeBot", allow: "/" },
       { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "Claude-SearchBot", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
       { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "GoogleOther", allow: "/" },
       { userAgent: "Applebot-Extended", allow: "/" },
       { userAgent: "PerplexityBot", allow: "/" },
       { userAgent: "Perplexity-User", allow: "/" },
       { userAgent: "YouBot", allow: "/" },
       { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "Cohere-AI", allow: "/" },
       { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Meta-ExternalAgent", allow: "/" },
+      { userAgent: "Meta-ExternalFetcher", allow: "/" },
+      { userAgent: "FacebookBot", allow: "/" },
+      { userAgent: "Bytespider", allow: "/" },
+      { userAgent: "Amazonbot", allow: "/" },
+      { userAgent: "Diffbot", allow: "/" },
+      { userAgent: "Mistralai-User", allow: "/" },
+      { userAgent: "DuckAssistBot", allow: "/" },
+      { userAgent: "Kagibot", allow: "/" },
 
-      // SEO competitor scrapers — keep blocked.
+      // Social / preview unfurlers (LinkedIn, Discord, X) — allow so
+      // shared links render rich cards instead of a bare URL.
+      { userAgent: "LinkedInBot", allow: "/" },
+      { userAgent: "Twitterbot", allow: "/" },
+      { userAgent: "Discordbot", allow: "/" },
+      { userAgent: "TelegramBot", allow: "/" },
+      { userAgent: "WhatsApp", allow: "/" },
+      { userAgent: "Slackbot-LinkExpanding", allow: "/" },
+      { userAgent: "Slackbot", allow: "/" },
+      { userAgent: "facebookexternalhit", allow: "/" },
+
+      // SEO competitor scrapers — keep blocked. They consume crawl
+      // budget without contributing to ranking, indexation or AI
+      // citations and reveal competitive intel to competitors who pay
+      // for their dashboards.
       { userAgent: "AhrefsBot", disallow: "/" },
+      { userAgent: "AhrefsSiteAudit", disallow: "/" },
       { userAgent: "SemrushBot", disallow: "/" },
+      { userAgent: "SemrushBot-SA", disallow: "/" },
       { userAgent: "MJ12bot", disallow: "/" },
       { userAgent: "DotBot", disallow: "/" },
+      { userAgent: "BLEXBot", disallow: "/" },
+      { userAgent: "PetalBot", disallow: "/" },
+      { userAgent: "DataForSeoBot", disallow: "/" },
+      { userAgent: "ZoominfoBot", disallow: "/" },
+      { userAgent: "barkrowler", disallow: "/" },
+      { userAgent: "SerpstatBot", disallow: "/" },
 
       // Default — everything else.
       { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"], crawlDelay: 5 },
