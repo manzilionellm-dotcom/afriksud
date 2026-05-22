@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   return {
-    title: "Refer a friend — 1 month free | Mzansi Stream",
+    title: "Refer a friend — 1 month free",
     description:
       "Refer a friend to Mzansi Stream and you both get 1 free month when they subscribe. No limit on referrals.",
     alternates: {

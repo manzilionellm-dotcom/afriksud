@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
-  const title = "IPTV in South African Cities — 12 Metros Covered | Mzansi Stream";
+  const title = "IPTV in South African Cities — 12 Metros Covered";
   const description =
     "Local IPTV for every major South African metro — Johannesburg, Cape Town, Durban, Pretoria, Gqeberha and 7 more. Optimised for Vumatel, Openserve and Frogfoot.";
   return {

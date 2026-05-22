@@ -8,6 +8,8 @@
 // individually addressable by Google's `passage indexing`, and adds a
 // SpeakableSpecification to mark the answer for voice surfaces.
 
+import { JsonLd } from "../../lib/seo/jsonld";
+
 type Props = {
   question: string;
   answer: string;
@@ -44,10 +46,7 @@ export function DirectAnswerBlock({ question, answer, keyFacts }: Props) {
           "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0))",
       }}
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(qaSchema) }}
-      />
+      <JsonLd data={qaSchema} />
       <p
         style={{
           fontSize: 12,

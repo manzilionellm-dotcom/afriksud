@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!(LOCALES as readonly string[]).includes(locale) || !post) return {};
   return {
-    title: `${post.title} | Mzansi Stream`,
+    title: post.title,
     description: post.metaDescription,
     alternates: {
       canonical: localeUrl(locale as Locale, `/blog/${slug}/`),

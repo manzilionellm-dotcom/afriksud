@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getLegalTopic(topic);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
   return {
-    title: `${data.title} | Mzansi Stream`,
+    title: data.title,
     description: data.metaDescription,
     alternates: {
       canonical: localeUrl(locale as Locale, `/legal/${topic}/`),

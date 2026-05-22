@@ -11,6 +11,15 @@ import { hreflangFor, localeUrl, SITE_URL } from "../../lib/url";
 import { dict } from "../../components/shared/dict";
 import { plans } from "../../components/shared/plans";
 import { SITE } from "../../components/shared/site";
+import { JsonLd } from "../../lib/seo/jsonld";
+import {
+  BRAND_ID,
+  ORG_ID,
+  WEBSITE_ID,
+  brandSchema,
+  organizationSchema,
+  websiteSchema,
+} from "../../lib/seo/entity";
 
 import { LanguageProvider } from "../../components/client/LanguageProvider";
 import {
@@ -48,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   const meta = LOCALE_META[locale as Locale];
   return {
-    title: "DStv Alternative — 20,000+ Channels from R99 | Mzansi Stream",
+    title: "DStv Alternative — 20,000+ Channels from R99",
     description:
       "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24h trial, no card. From R99/mo.",
     alternates: {
@@ -107,7 +116,8 @@ export default async function LocaleHome({ params }: Props) {
     "@type": "Product",
     "@id": `${SITE.domain}/${locale}/#product`,
     name: "Mzansi Stream — Premium IPTV South Africa",
-    brand: { "@type": "Brand", name: SITE.brand },
+    brand: { "@id": BRAND_ID },
+    manufacturer: { "@id": ORG_ID },
     description:
       "Mzansi Stream — 20,000+ live channels, 100,000+ movies and series, EPG, 4K/UHD. SuperSport, DStv Premiership, Premier League, kykNET, SABC and more. WhatsApp activation in 10 minutes.",
     image: `${SITE.domain}/og-image.jpg`,
@@ -115,6 +125,10 @@ export default async function LocaleHome({ params }: Props) {
     sku: "MZANSI-STREAM-ZA",
     mpn: "MZANSI-2026",
     category: "Streaming / IPTV",
+    audience: {
+      "@type": "PeopleAudience",
+      geographicArea: { "@type": "Country", name: "South Africa" },
+    },
     // aggregateRating + review intentionally omitted until HelloPeter
     // Business profile is connected and there are 50+ verified reviews
     // with consent. DO NOT seed with invented data.
@@ -208,119 +222,48 @@ export default async function LocaleHome({ params }: Props) {
       "EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin",
   };
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${SITE.domain}/#organization`,
-    name: SITE.brand,
-    legalName: SITE.brand,
-    url: SITE.domain,
-    logo: { "@type": "ImageObject", url: `${SITE.domain}/og-image.jpg`, width: 1200, height: 630 },
-    image: `${SITE.domain}/og-image.jpg`,
-    description:
-      "Mzansi Stream — premium streaming service with 20,000+ live channels, 100,000+ movies and series. Trusted by South Africans worldwide.",
-    foundingDate: "2024",
-    knowsAbout: [
-      "IPTV",
-      "DStv alternative",
-      "SuperSport streaming",
-      "PSL",
-      "Premier League",
-      "Springboks",
-      "kykNET",
-      "Mzansi Magic",
-      "SABC",
-      "MultiChoice",
-      "Vumatel",
-      "Openserve",
-      "Frogfoot",
-      "4K UHD streaming",
-      "Smart TV",
-      "Firestick",
-      "TiviMate",
-      "IPTV Smarters Pro",
-    ],
-    knowsLanguage: ["en", "af", "zu", "xh", "pt", "fr"],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        telephone: `+${SITE.whatsappPhone}`,
-        availableLanguage: [
-          "English",
-          "Afrikaans",
-          "Zulu",
-          "Xhosa",
-          "Portuguese",
-          "French",
-        ],
-        areaServed: "Worldwide",
-      },
-    ],
-    // `sameAs` intentionally omitted — wa.me is not a canonical social
-    // profile per schema.org guidance. Add real X / LinkedIn / YouTube
-    // entity URLs here once those profiles exist.
-  };
+  const orgSchema = organizationSchema({ whatsappPhone: SITE.whatsappPhone });
+  const siteSchema = websiteSchema();
+  const brand = brandSchema();
 
-  const websiteSchema = {
+  // WebPage + Speakable lets Google's voice surfaces and AI Overviews
+  // safely quote the H1 + hero lead. We bind it to the actual on-page
+  // anchors so the extracted snippet matches what the user sees.
+  const webPageSchema = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE.domain}/#website`,
-    url: SITE.domain,
-    name: SITE.brand,
+    "@type": "WebPage",
+    "@id": `${localeUrl(locale as Locale, "/")}#webpage`,
+    url: localeUrl(locale as Locale, "/"),
+    name: "DStv Alternative — Mzansi Stream IPTV South Africa",
     description:
-      "Premium IPTV for South Africa and the SA diaspora worldwide — 20,000+ channels in 4K.",
-    inLanguage: [
-      "en-ZA",
-      "en-GB",
-      "en-AU",
-      "en-US",
-      "en-AE",
-      "en-NZ",
-      "en-ZW",
-      "af",
-      "zu",
-      "xh",
-      "pt-MZ",
-      "fr",
-    ],
-    publisher: { "@id": `${SITE.domain}/#organization` },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale as Locale, "/") },
-    ],
+      "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24-hour trial, no card. From R99/month.",
+    inLanguage: LOCALE_META[locale as Locale].hreflang,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": ORG_ID },
+    primaryImageOfPage: `${SITE.domain}/og-image.jpg`,
+    datePublished: "2024-09-01",
+    dateModified: new Date().toISOString().slice(0, 10),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".heroLead", ".trustStrip"],
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale as Locale, "/") },
+      ],
+    },
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={orgSchema} />
+      <JsonLd data={brand} />
+      <JsonLd data={siteSchema} />
+      <JsonLd data={webPageSchema} />
+      <JsonLd data={productSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={localBusinessSchema} />
 
       <LanguageProvider>
         <LocaleSync locale={locale as Locale} />
