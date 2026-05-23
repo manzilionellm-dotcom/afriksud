@@ -3,7 +3,7 @@
 // Horizontal scroll-snap pricing row + bottom-sheet plan details.
 // All prices and copy are unchanged — only the visual layer is new.
 
-import React, { useState } from "react";
+import React from "react";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
 import { HorizontalRow, RowItem } from "./HorizontalRow";
 import { Sheet } from "./Sheet";
@@ -11,10 +11,10 @@ import { useLang } from "../client/LanguageProvider";
 import { dict } from "../shared/dict";
 import { plans } from "../shared/plans";
 import { SITE } from "../shared/site";
-import { generateWhatsAppLink } from "../shared/utils";
 import type { Plan } from "../shared/types";
 import { tapHaptic } from "./haptic";
 import { track } from "../../lib/analytics/track";
+import { openCheckout } from "./checkout/bus";
 
 function PlanCard({
   plan,
@@ -102,72 +102,9 @@ function PlanCard({
   );
 }
 
-function PlanDetailsSheet({
-  plan,
-  open,
-  onOpenChange,
-}: {
-  plan: Plan | null;
-  open: boolean;
-  onOpenChange: (v: boolean) => void;
-}) {
-  const { lang } = useLang();
-  const t = dict[lang];
-  if (!plan) return null;
-  const pricePerMonth = Math.round(plan.price / plan.months);
-  const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
-  const orderHref = generateWhatsAppLink(
-    t.whatsapp.orderMessage(t.planNames[plan.key], plan.price, SITE.currencyLabel),
-    ua,
-    `Plan-${plan.key}-Sheet`
-  );
-
-  return (
-    <Sheet
-      open={open}
-      onOpenChange={onOpenChange}
-      direction="bottom"
-      title={t.planNames[plan.key]}
-      description={`${SITE.currencyLabel}${pricePerMonth} ${t.offers.perMonth} · ${t.offers.billedOnce} ${SITE.currencyLabel}${plan.price}`}
-    >
-      <ul className="mt-3 space-y-3 text-sm text-white/85">
-        {t.planPerks[plan.key].map((perk) => (
-          <li key={perk} className="flex items-start gap-2.5">
-            <Check size={18} className="mt-0.5 text-emerald-400" aria-hidden="true" />
-            <span>{perk}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="mt-5 rounded-2xl border border-white/10 bg-black/40 p-4">
-        <p className="text-xs uppercase tracking-widest text-white/50">
-          {t.payments.label}
-        </p>
-        <p className="mt-2 text-sm text-white/75">
-          EFT · SnapScan · Zapper · Yoco · Ozow · Capitec Pay · Visa · Mastercard ·
-          PayPal · Bitcoin
-        </p>
-      </div>
-      <a
-        href={orderHref}
-        target="_blank"
-        rel="noreferrer"
-        onClick={() => tapHaptic(14)}
-        className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-base font-semibold text-black shadow-[0_8px_24px_rgba(37,211,102,0.35)] active:scale-95 transition"
-        data-track-ref={`Plan-${plan.key}-Sheet`}
-        data-track-placement="Pricing-Sheet"
-      >
-        {t.offers.order}
-        <ArrowRight size={18} aria-hidden="true" />
-      </a>
-    </Sheet>
-  );
-}
-
 export function PricingCarousel() {
   const { lang } = useLang();
   const t = dict[lang];
-  const [selected, setSelected] = useState<Plan | null>(null);
-  const [open, setOpen] = useState(false);
   const sectionRef = React.useRef<HTMLElement | null>(null);
   const firedRef = React.useRef(false);
 
@@ -191,14 +128,13 @@ export function PricingCarousel() {
   }, []);
 
   const handleSelect = (p: Plan) => {
-    setSelected(p);
-    setOpen(true);
     track("plan_card_click", {
       plan_key: p.key,
       months: p.months,
       price: p.price,
       placement: "Pricing-Carousel",
     });
+    openCheckout({ plan: p, source: "Pricing-Carousel" });
   };
 
   return (
@@ -223,12 +159,13 @@ export function PricingCarousel() {
           ))}
         </HorizontalRow>
       </div>
-      <PlanDetailsSheet plan={selected} open={open} onOpenChange={setOpen} />
     </section>
   );
 }
 
 // Re-exported for BottomTabBar — opens the plans sheet from the tab bar.
+// Clicking any plan now opens the global PriceCheckoutPanel directly,
+// so the legacy detail-sheet step is gone (one fewer tap to WhatsApp).
 export function PricingSheet({
   open,
   onOpenChange,
@@ -238,38 +175,34 @@ export function PricingSheet({
 }) {
   const { lang } = useLang();
   const t = dict[lang];
-  const [selected, setSelected] = useState<Plan | null>(null);
-  const [detailOpen, setDetailOpen] = useState(false);
 
   return (
-    <>
-      <Sheet
-        open={open}
-        onOpenChange={onOpenChange}
-        direction="bottom"
-        fullHeight
-        title={t.offers.title}
-        description={t.offers.sub}
-      >
-        <div className="mt-2 grid grid-cols-1 gap-3">
-          {plans.map((p) => (
-            <PlanCard
-              key={p.key}
-              plan={p}
-              onSelect={(plan) => {
-                setSelected(plan);
-                setDetailOpen(true);
-                onOpenChange(false);
-              }}
-            />
-          ))}
-        </div>
-      </Sheet>
-      <PlanDetailsSheet
-        plan={selected}
-        open={detailOpen}
-        onOpenChange={setDetailOpen}
-      />
-    </>
+    <Sheet
+      open={open}
+      onOpenChange={onOpenChange}
+      direction="bottom"
+      fullHeight
+      title={t.offers.title}
+      description={t.offers.sub}
+    >
+      <div className="mt-2 grid grid-cols-1 gap-3">
+        {plans.map((p) => (
+          <PlanCard
+            key={p.key}
+            plan={p}
+            onSelect={(plan) => {
+              onOpenChange(false);
+              track("plan_card_click", {
+                plan_key: plan.key,
+                months: plan.months,
+                price: plan.price,
+                placement: "Pricing-Sheet",
+              });
+              openCheckout({ plan, source: "Pricing-Sheet" });
+            }}
+          />
+        ))}
+      </div>
+    </Sheet>
   );
 }

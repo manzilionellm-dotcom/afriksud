@@ -110,6 +110,15 @@ input[type="radio"] {
   appearance: auto;
 }
 
+/* PIÈGE B: on Windows/Linux the <select> popup is rendered by the OS.
+   Without an explicit background, white option text lands on the system
+   background (also white) → invisible. Force a dark popup everywhere. */
+select option,
+select optgroup {
+  background-color: #0d0a12;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
   input,
   select,

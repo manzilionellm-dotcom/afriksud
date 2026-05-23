@@ -8,7 +8,7 @@
 import { dict } from "../shared/dict";
 import { plans } from "../shared/plans";
 import { SITE } from "../shared/site";
-import { generateWhatsAppLink } from "../shared/utils";
+import { PriceTrigger } from "../ux/checkout/PriceTrigger";
 import type { Locale } from "../../lib/locales";
 
 const PAYMENTS =
@@ -52,11 +52,6 @@ export function InlinePricingBlock({
       >
         {plans.map((p) => {
           const perMonth = Math.round(p.price / p.months);
-          const orderHref = generateWhatsAppLink(
-            t.whatsapp.orderMessage(t.planNames[p.key], p.price, SITE.currencyLabel),
-            "",
-            `${refTag}-${p.key}`
-          );
           const saving = pct(p);
           const isBest = p.highlight === true;
           return (
@@ -142,17 +137,14 @@ export function InlinePricingBlock({
                   <li key={perk}>✓ {perk}</li>
                 ))}
               </ul>
-              <a
-                href={orderHref}
-                target="_blank"
-                rel="noreferrer"
+              <PriceTrigger
+                planKey={p.key}
+                source={`${refTag}-${p.key}`}
+                ariaLabel={`${t.offers.order} ${t.planNames[p.key]}`}
                 className={isBest ? "btnPrimary" : "btnSecondary"}
-                style={{ width: "100%", justifyContent: "center" }}
-                data-track-ref={`${refTag}-${p.key}`}
-                data-track-placement={refTag}
               >
                 {t.offers.order} →
-              </a>
+              </PriceTrigger>
             </div>
           );
         })}
