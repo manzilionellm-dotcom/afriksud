@@ -60,6 +60,36 @@ export type Copy = {
     generic: string; trial: string;
     orderMessage: (p: string, pr: number, c: string) => string;
   };
+  checkout: {
+    title: string;
+    secureBadge: string;
+    close: string;
+    step1Label: string;
+    step1Title: string;
+    step2Label: string;
+    step2Title: string;
+    step2Placeholder: string;
+    step3Label: string;
+    step3Title: string;
+    step3Placeholder: string;
+    step4Label: string;
+    step4Title: string;
+    step4Placeholder: string;
+    otherSpecify: string;
+    pillTotal: string;
+    pillBilledOnce: string;
+    recapTitle: string;
+    recapPlan: string;
+    recapDevice: string;
+    recapApp: string;
+    recapNotes: string;
+    recapEmpty: string;
+    cta: string;
+    badges: { title: string; desc: string }[];
+    waIntro: string;
+    waContext: string;
+    waNotesLabel: string;
+  };
   bot: {
     name: string;
     greeting1: string; greeting2: string;

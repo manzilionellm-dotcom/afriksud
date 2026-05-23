@@ -43,8 +43,9 @@ import { SkipLink } from "../../components/client/SkipLink";
 import { LocaleSync } from "../../components/client/LocaleSync";
 import { StickyHeader } from "../../components/ux/StickyHeader";
 import { HeroV2 } from "../../components/ux/HeroV2";
-import { PricingCarousel } from "../../components/ux/PricingCarousel";
+import { PremiumPlanSelector } from "../../components/ux/PremiumPlanSelector";
 import { BottomTabBar } from "../../components/ux/BottomTabBar";
+import { PriceCheckoutMount } from "../../components/ux/checkout/PriceCheckoutMount";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -277,7 +278,7 @@ export default async function LocaleHome({ params }: Props) {
             <TrialBanner />
             <TrustSection />
           </div>
-          <PricingCarousel />
+          <PremiumPlanSelector />
           <div className="main">
             <VODSection />
             <CompareSection />
@@ -297,6 +298,7 @@ export default async function LocaleHome({ params }: Props) {
         <WhatsAppFab />
         <BottomTabBar />
         <PopiaConsentBanner />
+        <PriceCheckoutMount />
       </LanguageProvider>
     </>
   );

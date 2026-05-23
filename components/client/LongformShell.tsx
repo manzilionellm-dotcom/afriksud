@@ -12,6 +12,7 @@ import { FooterSection } from "./LocalizedSections";
 import { WhatsAppFab } from "./WhatsAppFab";
 import { StickyBottomCta } from "./StickyBottomCta";
 import { PopiaConsentBanner } from "./PopiaConsentBanner";
+import { PriceCheckoutMount } from "../ux/checkout/PriceCheckoutMount";
 
 export function LongformShell({
   locale,
@@ -33,6 +34,7 @@ export function LongformShell({
       <WhatsAppFab />
       <StickyBottomCta />
       <PopiaConsentBanner />
+      <PriceCheckoutMount />
     </LanguageProvider>
   );
 }
