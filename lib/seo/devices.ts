@@ -702,6 +702,419 @@ export const DEVICES: Pillar[] = [
     dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
+
+  // ─── WINDOWS PC (Niveau 3 — OS) ─────────────────────────────────────
+  {
+    slug: "windows-pc",
+    eyebrow: "Windows PC · Install guide",
+    h1: "IPTV on Windows PC or Laptop — South Africa 2026",
+    metaTitle: "IPTV Windows PC 2026 — Smarters, VLC, Kodi Setup",
+    metaDescription:
+      "Watch IPTV on a Windows 10/11 PC or laptop in South Africa — IPTV Smarters, VLC and Kodi with Xtream Codes or M3U, EPG and 4K SuperSport. Mzansi Stream from R99/mo.",
+    lead:
+      "A Windows 10 or 11 PC or laptop makes a capable IPTV player — plug it into your TV over HDMI and it becomes a big-screen setup. You have three solid options: IPTV Smarters for Windows (the full app with EPG and VOD), the free VLC media player (quick M3U playback), or Kodi with an IPTV add-on. This guide covers all three with your Mzansi Stream Xtream Codes login.",
+    trustLine:
+      "Windows 10 / 11 · IPTV Smarters · VLC · Kodi · Xtream Codes / M3U · HDMI to TV",
+    cta: {
+      primary: {
+        label: "Get my Windows login →",
+        message:
+          "Hi! I want IPTV on my Windows PC — please send my Xtream Codes URL, username and password (and the M3U link for VLC).",
+        ref: "Device-Windows-Hero",
+      },
+      secondary: { label: "Jump to setup steps →", href: "#install" },
+    },
+    sections: [
+      {
+        id: "compatibility",
+        h2: "What you need on Windows",
+        paragraphs: [
+          "Any Windows 10 or 11 PC or laptop from the last decade will play Mzansi Stream — IPTV is light on hardware. For 4K, you want a reasonably modern CPU/GPU and an HDMI 2.0 output if you're mirroring to a 4K TV. A wired Ethernet connection beats Wi-Fi for smooth live sport, exactly as on any other device.",
+        ],
+        bullets: [
+          "Windows 10 or Windows 11 (32-bit or 64-bit).",
+          "HDMI cable to connect the PC/laptop to your TV (optional).",
+          "IPTV Smarters for Windows, or VLC, or Kodi.",
+          "Your Mzansi Stream Xtream Codes login (or M3U URL for VLC).",
+        ],
+      },
+      {
+        id: "install",
+        h2: "Set up IPTV on Windows — step-by-step",
+        steps: [
+          {
+            title: "Pick your player",
+            text: "IPTV Smarters (full app with EPG, catch-up and VOD) is the best all-rounder. VLC is fastest for a quick test. Kodi suits tinkerers who want a 10-foot media-centre UI.",
+          },
+          {
+            title: "IPTV Smarters — install and log in",
+            text: "Download IPTV Smarters for Windows from the developer's site, install it, choose 'Login with Xtream Codes API', and enter the Server URL, username and password we sent on WhatsApp.",
+          },
+          {
+            title: "VLC — open the M3U link",
+            text: "In VLC: Media → Open Network Stream → paste the M3U URL we send → Play. VLC plays the channel list but has no EPG — it's best for a quick check.",
+          },
+          {
+            title: "Kodi — add the PVR IPTV Simple Client",
+            text: "In Kodi: Add-ons → PVR IPTV Simple Client → Configure → set the M3U URL and the XMLTV EPG URL we provide → enable. Kodi then shows a full guide.",
+          },
+          {
+            title: "Connect to your TV (optional)",
+            text: "Run an HDMI cable from the laptop to the TV and set Windows display to 'Duplicate' or 'Second screen only' for a big-screen picture.",
+          },
+          {
+            title: "Test 4K and set favourites",
+            text: "Open SuperSport or Premier League to confirm playback. In IPTV Smarters, star your regular channels so they're one click away.",
+          },
+        ],
+      },
+      {
+        id: "troubleshooting",
+        h2: "Windows IPTV troubleshooting",
+        bullets: [
+          "No picture in IPTV Smarters but the list loads — switch the built-in player engine, or install VLC/K-Lite codecs.",
+          "Choppy 4K on a laptop — plug into Ethernet, close background apps, and set Windows power mode to 'Best performance'.",
+          "VLC plays audio only — a codec issue; update VLC to the latest version or use IPTV Smarters instead.",
+          "No EPG in VLC — that's expected; VLC has no guide. Use IPTV Smarters or Kodi for the 7-day EPG.",
+          "Windows SmartScreen warns on install — the app is unsigned; choose 'More info → Run anyway' only for the official download.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Can I watch IPTV on a Windows laptop?",
+        a: "Yes. Install IPTV Smarters for Windows and log in with your Mzansi Stream Xtream Codes URL, username and password, or open the M3U link in the free VLC player. Connect the laptop to your TV over HDMI for a big-screen setup.",
+      },
+      {
+        q: "What's the best IPTV player for Windows?",
+        a: "IPTV Smarters for Windows is the best all-rounder — it has the 7-day EPG, catch-up and a Movies/Series library. VLC is quickest for a test but has no guide, and Kodi (with PVR IPTV Simple Client) suits users who want a media-centre interface.",
+      },
+      {
+        q: "Does VLC work for IPTV?",
+        a: "Yes, for playback. In VLC use Media → Open Network Stream and paste the M3U URL we send. VLC plays the channels but has no EPG or catch-up, so it's best as a quick check — use IPTV Smarters or Kodi for the full experience.",
+      },
+      {
+        q: "How do I get IPTV from my PC onto my TV?",
+        a: "Connect the PC or laptop to the TV with an HDMI cable and set Windows display to 'Duplicate' or 'Second screen only'. The IPTV picture then shows on the TV at up to 4K if both the PC output and TV support it.",
+      },
+    ],
+    related: [
+      { label: "IPTV on macOS", href: "/devices/macos/" },
+      { label: "IPTV Smarters Pro setup", href: "/apps/iptv-smarters-pro/" },
+      { label: "How to install IPTV", href: "/knowledge-base/how-to-install-iptv/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-05",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
+
+  // ─── macOS (Niveau 3 — OS) ──────────────────────────────────────────
+  {
+    slug: "macos",
+    eyebrow: "macOS · Install guide",
+    h1: "IPTV on Mac (macOS) — South Africa 2026",
+    metaTitle: "IPTV Mac 2026 — macOS Smarters, VLC, iMPlayer Setup",
+    metaDescription:
+      "Watch IPTV on a Mac (macOS, Intel or Apple Silicon) in South Africa — IPTV Smarters, iMPlayer and VLC with Xtream Codes, EPG and 4K SuperSport. Mzansi Stream from R99/mo.",
+    lead:
+      "IPTV runs cleanly on any Mac — Intel or Apple Silicon (M1/M2/M3/M4). The best native experience is iMPlayer or IPTV Smarters from the Mac App Store, both of which support Xtream Codes with a full EPG; VLC is the free fallback for quick M3U playback. Connect the Mac to your TV over HDMI or AirPlay to a nearby Apple TV for the big screen. This guide covers all three.",
+    trustLine:
+      "macOS Intel & Apple Silicon · iMPlayer · IPTV Smarters · VLC · Xtream Codes · AirPlay",
+    cta: {
+      primary: {
+        label: "Get my Mac login →",
+        message:
+          "Hi! I want IPTV on my Mac — please send my Xtream Codes URL, username and password (and the M3U link for VLC).",
+        ref: "Device-macOS-Hero",
+      },
+      secondary: { label: "Jump to setup steps →", href: "#install" },
+    },
+    sections: [
+      {
+        id: "compatibility",
+        h2: "What you need on a Mac",
+        paragraphs: [
+          "Any Mac running a recent macOS version plays Mzansi Stream — Apple Silicon Macs (M-series) handle 4K effortlessly, and Intel Macs from the last several years are fine too. Apps from the Mac App Store are notarised and install without the security warnings you sometimes hit on Windows. For live sport, wire the Mac to Ethernet (a USB-C/Thunderbolt adapter) or use 5GHz Wi-Fi.",
+        ],
+        bullets: [
+          "macOS on Apple Silicon (M1/M2/M3/M4) or a recent Intel Mac.",
+          "iMPlayer or IPTV Smarters from the Mac App Store, or VLC.",
+          "HDMI/USB-C to your TV, or AirPlay to an Apple TV.",
+          "Your Mzansi Stream Xtream Codes login (or M3U URL for VLC).",
+        ],
+      },
+      {
+        id: "install",
+        h2: "Set up IPTV on macOS — step-by-step",
+        steps: [
+          {
+            title: "Choose your player",
+            text: "iMPlayer and IPTV Smarters are the best native Mac apps (EPG, catch-up, VOD, Xtream Codes). VLC is the free option for a quick M3U test with no guide.",
+          },
+          {
+            title: "iMPlayer / IPTV Smarters — install and log in",
+            text: "Install from the Mac App Store, open the app, choose 'Xtream Codes' login, and enter the Server URL, username and password we sent on WhatsApp.",
+          },
+          {
+            title: "VLC — open the M3U link",
+            text: "In VLC: File → Open Network → paste the M3U URL → Open. VLC plays the channels but has no EPG.",
+          },
+          {
+            title: "Send to the TV",
+            text: "Connect the Mac to the TV with a USB-C/HDMI adapter, or AirPlay the screen (or the app, on supported players) to an Apple TV on the same network.",
+          },
+          {
+            title: "Confirm the EPG and test 4K",
+            text: "In iMPlayer/IPTV Smarters the 7-day EPG loads automatically. Open SuperSport or Premier League to confirm 4K, then add favourites.",
+          },
+        ],
+      },
+      {
+        id: "troubleshooting",
+        h2: "macOS IPTV troubleshooting",
+        bullets: [
+          "App won't play a channel — switch the player engine in the app's settings, or try VLC to isolate a codec issue.",
+          "AirPlay drops during sport — AirPlay adds latency and jitter; a wired HDMI/USB-C connection is steadier for live 4K.",
+          "Choppy playback on an Intel Mac — close heavy background apps and use Ethernet; older Intel GPUs work harder on 4K.",
+          "VLC audio only — update VLC to the current version; older builds miss some codecs.",
+          "Can't find the app — search the exact name ('iMPlayer', 'IPTV Smarters') in the Mac App Store; names vary slightly by region.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Can I watch IPTV on a Mac?",
+        a: "Yes. Install iMPlayer or IPTV Smarters from the Mac App Store and log in with your Mzansi Stream Xtream Codes details, or open the M3U link in VLC. It runs on both Apple Silicon (M1–M4) and recent Intel Macs.",
+      },
+      {
+        q: "What's the best IPTV app for macOS?",
+        a: "iMPlayer and IPTV Smarters are the best native Mac apps — both support Xtream Codes with a full 7-day EPG, catch-up and VOD. VLC works for quick M3U playback but has no guide. All use the same Mzansi Stream login.",
+      },
+      {
+        q: "Does IPTV work on Apple Silicon (M1/M2/M3) Macs?",
+        a: "Yes, and very well — M-series Macs decode 4K IPTV with ease. Install a native Mac App Store player (iMPlayer or IPTV Smarters); most are universal or Apple-Silicon-native, so there's no performance penalty.",
+      },
+      {
+        q: "How do I get IPTV from my Mac to the TV?",
+        a: "Two ways: connect the Mac to the TV with a USB-C/HDMI adapter for a wired big-screen picture, or AirPlay to an Apple TV on the same Wi-Fi. Wired HDMI is steadier for live 4K sport since AirPlay adds a little latency.",
+      },
+    ],
+    related: [
+      { label: "IPTV on Windows PC", href: "/devices/windows-pc/" },
+      { label: "IPTV on iPhone & iPad", href: "/devices/iphone-ipad/" },
+      { label: "IPTV Smarters Pro setup", href: "/apps/iptv-smarters-pro/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-05",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
+
+  // ─── ROKU (Niveau 4 — limited support, honest angle) ────────────────
+  {
+    slug: "roku",
+    eyebrow: "Roku · Compatibility guide",
+    h1: "IPTV on Roku — Honest Guide & Best Workaround (2026)",
+    metaTitle: "IPTV on Roku 2026 — Limited Support + Best Workaround",
+    metaDescription:
+      "Can you use IPTV on Roku? The honest answer: Roku has no proper Xtream Codes app, so support is limited. Here's the realistic workaround (screen mirroring) and the better fix. Mzansi Stream.",
+    lead:
+      "Let's be straight: Roku is the one platform where IPTV support is genuinely limited. Roku's locked-down channel store has no proper Xtream Codes player like TiviMate or IPTV Smarters, so you can't install Mzansi Stream directly the way you can on a Firestick or Smart TV. The realistic options are screen mirroring from an Android phone, or — the honest best fix — using a cheap Firestick instead. This guide explains both without overselling.",
+    trustLine:
+      "Honest compatibility · screen-mirroring workaround · Firestick is the better fix",
+    cta: {
+      primary: {
+        label: "Ask us the best option for you →",
+        message:
+          "Hi! I have a Roku and want Mzansi Stream. What's the best way to watch — mirror from my phone, or should I get a Firestick?",
+        ref: "Device-Roku-Hero",
+      },
+      secondary: { label: "See the workarounds →", href: "#workaround" },
+    },
+    sections: [
+      {
+        id: "honest",
+        h2: "The honest truth about Roku and IPTV",
+        paragraphs: [
+          "Roku deliberately keeps its platform closed. There's no official IPTV Smarters, no TiviMate and no reliable Xtream Codes player in the Roku Channel Store, and side-loading third-party apps isn't practical for most users. Any 'private channel' hacks that once existed are unreliable and often break. So unlike a Firestick or a Samsung TV, you cannot simply install Mzansi Stream on a Roku and log in.",
+          "We'd rather tell you that up front than sell you something that won't work well. If Roku is your only device, the mirroring workaround below gets you watching; if you want a proper experience, a R700 Firestick is the honest recommendation.",
+        ],
+      },
+      {
+        id: "workaround",
+        h2: "Workaround 1 — screen mirror from an Android phone",
+        steps: [
+          {
+            title: "Enable screen mirroring on the Roku",
+            text: "On the Roku: Settings → System → Screen mirroring → set to 'Prompt' or 'Always allow'.",
+          },
+          {
+            title: "Install a player on your Android phone",
+            text: "Install IPTV Smarters or XCIPTV on your Android phone and log in with your Mzansi Stream Xtream Codes details.",
+          },
+          {
+            title: "Cast the phone screen to the Roku",
+            text: "On Android: Settings → Connected devices → Cast (or 'Smart View' on Samsung) → pick your Roku. The phone screen, including the IPTV app, appears on the TV.",
+          },
+          {
+            title: "Play in landscape and full-screen",
+            text: "Rotate the phone to landscape and play the channel full-screen. Note: mirroring uses your phone's battery and Wi-Fi, and can add lag on 4K — HD mirrors more smoothly.",
+          },
+        ],
+      },
+      {
+        id: "iphone",
+        h2: "Workaround 2 — iPhone (limited)",
+        paragraphs: [
+          "iPhones use AirPlay, which Roku supports on newer models — but AirPlay mirroring of a live IPTV stream is inconsistent and often blocked by the player app. In practice, Android mirroring to Roku is far more reliable than iPhone AirPlay for IPTV. If you only have an iPhone and a Roku, the Firestick route below is the sensible choice.",
+        ],
+      },
+      {
+        id: "better-fix",
+        h2: "The better fix — a Firestick (or your Smart TV app)",
+        paragraphs: [
+          "For about R700, an Amazon Firestick 4K plugs into the same HDMI port as your Roku and runs TiviMate, IPTV Smarters and XCIPTV natively — full EPG, catch-up, 4K, no mirroring. If your TV is a smart Samsung, LG, Hisense or Sony, you can install a player on the TV itself and skip extra hardware entirely. Either is a dramatically better experience than mirroring to a Roku.",
+        ],
+        bullets: [
+          "Firestick 4K — native TiviMate/Smarters/XCIPTV, full EPG and 4K.",
+          "Samsung/LG/Hisense/Sony Smart TV — install IBO/Duplex/Smarters on the TV.",
+          "Android TV box or Formuler Z — the most stable 4K for heavy sport.",
+          "Keep the Roku for Netflix/Disney+ and add a Firestick for IPTV.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Can I install IPTV on a Roku?",
+        a: "Not directly. Roku's closed platform has no proper Xtream Codes player like IPTV Smarters or TiviMate, so you can't install Mzansi Stream and log in the way you can on a Firestick or Smart TV. The realistic options are screen-mirroring from an Android phone, or using a cheap Firestick instead.",
+      },
+      {
+        q: "How do I watch IPTV on my Roku TV then?",
+        a: "Mirror it from an Android phone: enable Screen Mirroring on the Roku, run IPTV Smarters/XCIPTV on the phone, and cast the phone screen to the Roku. It works but adds some lag on 4K. For a proper experience, plug a Firestick into the TV instead.",
+      },
+      {
+        q: "Is there an IPTV Smarters app for Roku?",
+        a: "No. There is no reliable IPTV Smarters, TiviMate or Xtream Codes player in the Roku Channel Store, and side-loading isn't practical. This is a genuine Roku limitation — not something specific to Mzansi Stream.",
+      },
+      {
+        q: "What should I buy to watch IPTV if I have a Roku?",
+        a: "An Amazon Firestick 4K (~R700) is the honest best answer — it plugs into the same TV, runs the top IPTV players natively with full EPG and 4K, and needs no mirroring. If your TV is a smart Samsung/LG/Hisense/Sony, you can install a player on the TV itself instead.",
+      },
+    ],
+    related: [
+      { label: "IPTV on Firestick / Fire TV", href: "/iptv-firestick-south-africa/" },
+      { label: "IPTV on Chromecast", href: "/devices/chromecast/" },
+      { label: "Which platform should I choose?", href: "/knowledge-base/which-iptv-platform-to-choose/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-05",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
+
+  // ─── CHROMECAST (Niveau 4 — limited support, honest angle) ──────────
+  {
+    slug: "chromecast",
+    eyebrow: "Chromecast · Compatibility guide",
+    h1: "IPTV on Chromecast — Honest Guide (2026)",
+    metaTitle: "IPTV Chromecast 2026 — Which Model Works + Workaround",
+    metaDescription:
+      "IPTV on Chromecast: it depends on the model. Chromecast with Google TV runs IPTV apps natively; the older cast-only dongle needs a workaround. The honest guide for Mzansi Stream.",
+    lead:
+      "Chromecast is a tale of two devices, so here's the honest breakdown. 'Chromecast with Google TV' (the one with a remote) is actually full Android TV — it installs IPTV Smarters, TiviMate and XCIPTV natively and works perfectly. The older 'cast-only' Chromecast dongle (no remote) has no apps of its own and only supports casting, which most IPTV players block — so support there is limited. This guide tells you which you have and the best path for each.",
+    trustLine:
+      "Google TV = full support · cast-only dongle = limited + workaround · honest angle",
+    cta: {
+      primary: {
+        label: "Which Chromecast do I have? Ask us →",
+        message:
+          "Hi! I have a Chromecast and want Mzansi Stream. Mine [has/doesn't have] a remote — what's the best way to set it up?",
+        ref: "Device-Chromecast-Hero",
+      },
+      secondary: { label: "See which model you have →", href: "#which" },
+    },
+    sections: [
+      {
+        id: "which",
+        h2: "First: which Chromecast do you have?",
+        paragraphs: [
+          "This is the whole answer, so check before anything else. If your Chromecast came with a remote control and shows a full app-launcher home screen, it's 'Chromecast with Google TV' — a proper Android TV device with an app store. If it's a small dongle with no remote that you only control by 'casting' from your phone, it's a legacy cast-only Chromecast.",
+        ],
+        bullets: [
+          "Has a remote + home screen with apps → Chromecast with Google TV (full IPTV support).",
+          "No remote, cast-only from your phone → legacy Chromecast (limited).",
+          "Google TV Streamer (2024+) → also full Android TV, same as Google TV.",
+        ],
+      },
+      {
+        id: "google-tv",
+        h2: "Chromecast with Google TV — full support, install directly",
+        steps: [
+          {
+            title: "Open the Google Play Store on the device",
+            text: "From the Google TV home screen, go to Apps / search and open the Play Store.",
+          },
+          {
+            title: "Install IPTV Smarters, TiviMate or XCIPTV",
+            text: "Search and install your preferred player — all three run natively on Google TV.",
+          },
+          {
+            title: "Log in with Xtream Codes",
+            text: "Open the app, choose 'Xtream Codes API', and enter the Server URL, username and password we sent on WhatsApp.",
+          },
+          {
+            title: "Load channels, EPG and test 4K",
+            text: "The full lineup and 7-day EPG load automatically. Chromecast with Google TV outputs 4K HDR — open SuperSport to confirm, then add favourites.",
+          },
+        ],
+      },
+      {
+        id: "legacy",
+        h2: "Legacy cast-only Chromecast — the limited workaround",
+        paragraphs: [
+          "The old dongle has no apps and can only receive a 'cast'. The catch: most IPTV players (IPTV Smarters, TiviMate) don't offer a Chromecast cast button, because live IPTV streams don't cast reliably. So you can't cleanly send a channel to a legacy Chromecast the way you'd cast YouTube.",
+          "The only real workaround is to cast your whole Android phone screen (tab/screen mirroring) to the Chromecast via Google Home — but this is laggy for live 4K and drains the phone. Honestly, if you have a legacy Chromecast, the better move is to replace it with a Chromecast with Google TV or a Firestick, both of which run IPTV apps directly.",
+        ],
+        bullets: [
+          "Screen-cast the phone via the Google Home app (laggy, HD is smoother than 4K).",
+          "Better: upgrade to Chromecast with Google TV — installs IPTV apps natively.",
+          "Or add a Firestick 4K (~R700) for full TiviMate/Smarters support.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does IPTV work on Chromecast?",
+        a: "It depends on the model. 'Chromecast with Google TV' (the one with a remote) is full Android TV — it installs IPTV Smarters, TiviMate and XCIPTV natively and works perfectly. The older cast-only Chromecast dongle has no apps and can't reliably cast live IPTV, so support there is limited.",
+      },
+      {
+        q: "How do I know which Chromecast I have?",
+        a: "If it came with a remote and shows a home screen full of apps, it's Chromecast with Google TV (full IPTV support). If it's a small dongle with no remote that you only control by casting from your phone, it's a legacy cast-only Chromecast, which is limited for IPTV.",
+      },
+      {
+        q: "Can I cast IPTV from my phone to a Chromecast?",
+        a: "Not cleanly. Most IPTV player apps don't offer a Chromecast cast button because live streams don't cast reliably. You can screen-mirror your whole Android phone to the Chromecast via Google Home, but it's laggy for 4K. Chromecast with Google TV, which runs the apps directly, is far better.",
+      },
+      {
+        q: "What's the best fix if I have an old cast-only Chromecast?",
+        a: "Upgrade to Chromecast with Google TV or add a Firestick 4K (~R700). Both plug into the same HDMI port and run IPTV Smarters, TiviMate and XCIPTV natively with full EPG and 4K — no mirroring, no lag. It's a much better experience than casting to the old dongle.",
+      },
+    ],
+    related: [
+      { label: "IPTV on Android TV box", href: "/devices/android-tv-box/" },
+      { label: "IPTV on Firestick / Fire TV", href: "/iptv-firestick-south-africa/" },
+      { label: "IPTV on Roku", href: "/devices/roku/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-05",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
 ];
 
 export const DEVICE_SLUGS = DEVICES.map((d) => d.slug);

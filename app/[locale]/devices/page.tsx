@@ -68,12 +68,13 @@ export default async function DevicesHub({ params }: Props) {
     <HubListing
       locale={locale as Locale}
       eyebrow="Devices · install guides"
-      h1="Install IPTV on any device — 10 device guides"
-      lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet, PC. Pick your device for the exact app, install steps and troubleshooting."
+      h1={`Install IPTV on any device — ${items.length} device guides`}
+      lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet and PC. Pick your device for the exact app, install steps and troubleshooting. Not sure which device is best? See our platform-chooser guide."
       itemListName="Device install guides"
       basePath="/devices/"
       intro={[
         "All guides use the same Mzansi Stream M3U / Xtream Codes credentials — one subscription covers every device on your network.",
+        "On Roku and older cast-only Chromecasts, IPTV support is genuinely limited — those guides give you the honest workaround rather than overselling.",
       ]}
       items={items}
     />
