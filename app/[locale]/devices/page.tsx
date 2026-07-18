@@ -67,13 +67,14 @@ export default async function DevicesHub({ params }: Props) {
   return (
     <HubListing
       locale={locale as Locale}
-      eyebrow="Devices · install guides"
-      h1="Install IPTV on any device — 10 device guides"
-      lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet, PC. Pick your device for the exact app, install steps and troubleshooting."
-      itemListName="Device install guides"
+      eyebrow="Devices & apps · install guides"
+      h1={`Install IPTV on any device — ${items.length} setup guides`}
+      lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet, PC — plus the two best players, TiviMate and IPTV Smarters Pro. Pick your device or app for the exact steps and troubleshooting."
+      itemListName="Device and app install guides"
       basePath="/devices/"
       intro={[
         "All guides use the same Mzansi Stream M3U / Xtream Codes credentials — one subscription covers every device on your network.",
+        "Not sure which app to use? TiviMate is the slickest player on Firestick and Android TV; IPTV Smarters Pro runs on everything including iPhone, iPad and Smart TVs.",
       ]}
       items={items}
     />

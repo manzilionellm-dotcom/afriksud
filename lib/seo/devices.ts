@@ -702,6 +702,317 @@ export const DEVICES: Pillar[] = [
     dateModified: "2026-05-16",
     preferredLocale: ZA,
   },
+
+  // ─── NIVEAU 1 — IPTV APPS / PLAYERS (highest buyer intent) ──────────
+  // These are player-setup pages, not hardware pages. They target the
+  // "which app + how to set it up" queries (e.g. "iptv tivimate setup",
+  // "TiviMate vs IPTV Smarters") that sit closest to the purchase.
+  {
+    slug: "tivimate",
+    eyebrow: "TiviMate · Player setup",
+    h1: "TiviMate IPTV Setup — South Africa 2026",
+    metaTitle: "TiviMate IPTV Setup 2026 — Xtream Codes in 8 Min",
+    metaDescription:
+      "Set up TiviMate for IPTV in South Africa — add your Xtream Codes playlist, EPG, groups and Premium recording. The slickest player for Firestick, Android TV and Google TV.",
+    lead:
+      "TiviMate is the most polished IPTV player on Android, Fire OS and Google TV — a proper 10-foot TV guide, buffered zapping, catch-up and DVR recording. It does not carry any channels itself: you point it at the Mzansi Stream Xtream Codes playlist and it builds the guide for you. This page is the complete SA setup — free vs Premium, the exact login steps, EPG, groups, and the fixes for the two errors people actually hit.",
+    trustLine:
+      "Firestick · Android TV · Google TV · NVIDIA Shield · Xtream Codes API · Premium DVR",
+    cta: {
+      primary: {
+        label: "Get your TiviMate Xtream login →",
+        message:
+          "Hi! I'm setting up TiviMate — please send my Xtream Codes URL, username and password plus the EPG link.",
+        ref: "App-TiviMate-Hero",
+      },
+      secondary: { label: "Jump to setup steps →", href: "#setup" },
+    },
+    sections: [
+      {
+        id: "what-is-tivimate",
+        h2: "What is TiviMate — and which devices run it?",
+        paragraphs: [
+          "TiviMate is an IPTV player, not a channel provider. It reads a playlist (either an Xtream Codes login or an M3U URL) and turns it into a fast, DStv-style channel guide with a proper EPG. It's built for the remote-and-couch experience, which is why it feels far better than a generic M3U app on a big screen.",
+          "The one thing to know before you start: TiviMate only runs on Android-based devices. There is no iPhone, iPad, Samsung Tizen or LG webOS build. On those, use IPTV Smarters Pro instead — see the link at the bottom.",
+        ],
+        bullets: [
+          "Amazon Firestick / Fire TV (all 4K models) — the most popular TiviMate device in SA.",
+          "Android TV & Google TV — Sony Bravia, TCL, Philips, Chromecast with Google TV.",
+          "NVIDIA Shield — the premium TiviMate experience, flawless 4K.",
+          "Android TV boxes (Formuler, generic Allwinner/Amlogic) — supported.",
+          "Android phones & tablets — works, though the UI is designed for a remote.",
+          "NOT supported: iPhone, iPad, Samsung Tizen, LG webOS — use IPTV Smarters Pro.",
+        ],
+      },
+      {
+        id: "free-vs-premium",
+        h2: "TiviMate free vs Premium — what you actually need",
+        paragraphs: [
+          "The free version is enough to watch every Mzansi Stream channel with a full EPG. You only need Premium (~R250 once-off lifetime, or roughly R110/year) if you want recording, catch-up playback, multiple playlists or the 4-up multi-view. For most SA households the free version is fine to start; sport fans usually upgrade for the DVR so they never miss a PSL kickoff.",
+        ],
+        bullets: [
+          "Free: one playlist, full live TV, EPG, favourites, external players.",
+          "Premium: DVR recording, catch-up/archive, multiple playlists, multi-view (up to 4 streams), scheduled recordings, custom EPG sources.",
+          "Buy Premium once inside the app — it's tied to your Google account, so it follows you to a new Firestick or box.",
+        ],
+      },
+      {
+        id: "setup",
+        h2: "Set up TiviMate with your Mzansi Stream playlist — step by step",
+        steps: [
+          {
+            title: "Install TiviMate",
+            text: "On Firestick, open the Amazon Appstore and search 'TiviMate'. On Android TV / Google TV, install it from Google Play. It's free.",
+          },
+          {
+            title: "Add a playlist",
+            text: "Open TiviMate → 'Add playlist' → choose 'Xtream Codes'. This is better than M3U because it pulls the EPG, VOD and catch-up automatically.",
+          },
+          {
+            title: "Enter your Xtream login",
+            text: "Paste the Server URL, Username and Password we send you on WhatsApp. Give the playlist a name like 'Mzansi Stream' and continue.",
+          },
+          {
+            title: "Let the guide build",
+            text: "TiviMate downloads the 20,000+ channel list and the EPG. The first build takes 30-90 seconds; after that it launches in a couple of seconds.",
+          },
+          {
+            title: "Tidy the channel groups",
+            text: "Settings → Playlists → your playlist → 'Channel groups'. Hide the groups you don't watch (e.g. leave South Africa, Sport, Movies, Kids) so zapping is fast.",
+          },
+          {
+            title: "Set the EPG time zone",
+            text: "Settings → EPG → set time offset to GMT+2 (SAST) so SuperSport and SABC programmes line up with the real schedule.",
+          },
+          {
+            title: "Test SuperSport in 4K",
+            text: "Open SuperSport PSL or Premier League. On a decent fibre line it plays in 4K/HD instantly. If it buffers, see the fixes below.",
+          },
+        ],
+      },
+      {
+        id: "premium-features",
+        h2: "Recording, catch-up and multi-view (Premium)",
+        paragraphs: [
+          "If you upgraded to Premium, three features are worth setting up on day one. Recording lets you DVR a match to a USB drive plugged into your Firestick or box. Catch-up (called 'Archive' in TiviMate) plays the last few days of a channel — handy if you miss a game. Multi-view puts up to four streams on screen at once, so you can watch two PSL matches side by side on derby day.",
+        ],
+        bullets: [
+          "Recording: long-press a channel → Record, or schedule from the EPG. Point it at a USB drive for space.",
+          "Catch-up: channels with a clock icon support archive — open the EPG and select a past programme.",
+          "Multi-view: long-press → 'Add to multi-view' (needs Premium and a device with enough grunt — Shield or a 4K Firestick).",
+          "Multiple playlists: keep the SA playlist as default and add a backup line without losing your favourites.",
+        ],
+      },
+      {
+        id: "troubleshooting",
+        h2: "TiviMate not working? The two real fixes",
+        paragraphs: [
+          "Ninety percent of TiviMate problems in SA are one of two things: a wrong or expired login, or a buffering line. Here's how to tell them apart.",
+        ],
+        bullets: [
+          "'Playlist processing failed' / can't add playlist — the Xtream URL or password is wrong, or the subscription lapsed. Re-check the details we sent, or message us to confirm your line is active.",
+          "Everything loads but one channel is black — that single stream is temporarily down; try another channel in the same group. If all are black, it's the connection, not TiviMate.",
+          "Buffering every few seconds — hard-wire the Firestick with a USB-Ethernet adapter, or move to 5GHz Wi-Fi. On a Huawei/ZTE ISP router, throughput caps are the usual culprit.",
+          "EPG times are wrong — set the EPG offset to GMT+2 in Settings → EPG.",
+          "App feels sluggish on an old Firestick — clear the app cache and turn off the on-screen clock/animations in Settings → Appearance.",
+          "Buffered channel switching: enable Settings → Playback → 'Buffered channel switching' for instant, DStv-like zapping.",
+        ],
+      },
+      {
+        id: "tivimate-vs-smarters",
+        h2: "TiviMate vs IPTV Smarters — which should you use?",
+        paragraphs: [
+          "Use TiviMate if your device is a Firestick, Android TV, Google TV or an Android box and you want the best live-TV guide and DVR. Use IPTV Smarters Pro if you're on iPhone, iPad, a Samsung/LG Smart TV, or you mainly watch movies and series (Smarters has a nicer VOD/series layout). Many SA users run TiviMate on the lounge Firestick and Smarters on their phone — one subscription covers both.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is TiviMate free?",
+        a: "Yes — the free version plays every Mzansi Stream channel with a full EPG. Premium (~R250 once-off) adds DVR recording, catch-up, multiple playlists and 4-up multi-view. You never pay TiviMate for channels; those come with your Mzansi Stream subscription.",
+      },
+      {
+        q: "Does TiviMate work on Firestick?",
+        a: "Yes — Firestick is the most popular TiviMate device in South Africa. Install it from the Amazon Appstore, add your Xtream Codes login, and you're watching in about eight minutes.",
+      },
+      {
+        q: "Can I use TiviMate on iPhone or a Samsung Smart TV?",
+        a: "No. TiviMate is Android-only (Firestick, Android TV, Google TV, Android boxes). On iPhone, iPad, Samsung Tizen or LG webOS, use IPTV Smarters Pro instead — the same Mzansi Stream login works there.",
+      },
+      {
+        q: "What do I enter to set up TiviMate?",
+        a: "Choose 'Xtream Codes' and enter the Server URL, Username and Password we send you on WhatsApp. That single login pulls the channels, EPG, catch-up and VOD automatically.",
+      },
+      {
+        q: "Why does TiviMate say 'playlist processing failed'?",
+        a: "That almost always means the login is mistyped or the subscription has expired. Re-check the exact URL, username and password, or message us on WhatsApp and we'll confirm your line is active.",
+      },
+      {
+        q: "How do I record a match on TiviMate?",
+        a: "With Premium, long-press the channel and choose Record, or schedule it from the EPG. Plug a USB drive into your Firestick or box so recordings have space to save.",
+      },
+    ],
+    related: [
+      { label: "IPTV Smarters Pro — setup guide", href: "/devices/iptv-smarters-pro/" },
+      { label: "IPTV on Firestick — install guide", href: "/iptv-firestick-south-africa/" },
+      { label: "IPTV on Android TV box", href: "/devices/android-tv-box/" },
+      { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "Watch SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-18",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
+
+  {
+    slug: "iptv-smarters-pro",
+    eyebrow: "IPTV Smarters Pro · Player setup",
+    h1: "IPTV Smarters Pro Setup — South Africa 2026",
+    metaTitle: "IPTV Smarters Pro Setup 2026 — Login in 6 Min",
+    metaDescription:
+      "Set up IPTV Smarters Pro in South Africa — log in with Xtream Codes, load the EPG, catch-up and VOD. The one player that runs on iPhone, iPad, Android, Firestick and Smart TVs.",
+    lead:
+      "IPTV Smarters Pro is the most widely-compatible IPTV player — it runs on iPhone, iPad, Android, Firestick and most Smart TVs, which is why it's the default app we recommend across every Mzansi Stream install guide. It's completely free; you just log in with the Xtream Codes details we send. This page is the full SA setup: the login, EPG, catch-up, movies/series, and the fixes for the errors people hit most.",
+    trustLine:
+      "iPhone · iPad · Android · Firestick · Smart TV · Xtream Codes login · Free app",
+    cta: {
+      primary: {
+        label: "Get your Smarters Xtream login →",
+        message:
+          "Hi! I'm setting up IPTV Smarters Pro — please send my Xtream Codes URL, username and password plus the EPG link.",
+        ref: "App-Smarters-Hero",
+      },
+      secondary: { label: "Jump to setup steps →", href: "#setup" },
+    },
+    sections: [
+      {
+        id: "compatibility",
+        h2: "Which devices run IPTV Smarters Pro?",
+        paragraphs: [
+          "The reason we default to IPTV Smarters Pro is coverage — it's the one player that runs on almost everything. If you have a mix of devices at home (a Firestick in the lounge, an iPhone on the go, a Samsung TV in the bedroom), Smarters gives everyone the same layout with one login.",
+        ],
+        bullets: [
+          "iPhone & iPad — App Store (this is the main reason to pick Smarters over TiviMate).",
+          "Android phones & tablets — Google Play or our APK.",
+          "Amazon Firestick / Fire TV — Amazon Appstore or Downloader.",
+          "Android TV & Google TV — Sony, TCL, Philips, Chromecast with Google TV.",
+          "Samsung Tizen & LG webOS — sideload / store depending on model (Smart IPTV is the fallback).",
+          "Windows & macOS — desktop build available.",
+        ],
+      },
+      {
+        id: "setup",
+        h2: "Set up IPTV Smarters Pro — step by step",
+        steps: [
+          {
+            title: "Install the app",
+            text: "iPhone/iPad: App Store → 'IPTV Smarters Pro'. Firestick: Amazon Appstore, or use the Downloader app if it isn't listed. Android: Google Play.",
+          },
+          {
+            title: "Choose 'Login with Xtream Codes API'",
+            text: "On the first screen pick 'Login with Xtream Codes API' — not M3U. Xtream pulls the EPG, catch-up and VOD automatically; M3U is live-only.",
+          },
+          {
+            title: "Enter your details",
+            text: "Any name (e.g. 'Mzansi Stream'), then the Server URL, Username and Password we send on WhatsApp. Tap Add User.",
+          },
+          {
+            title: "Wait for the first sync",
+            text: "The app loads Live TV, Movies and Series plus the EPG. The first sync takes 30-60 seconds; after that it opens instantly.",
+          },
+          {
+            title: "Open Live TV and set the EPG",
+            text: "Go to Live TV. If programme names look off by two hours, set the time zone to GMT+2 (SAST) in Settings so SuperSport and SABC line up.",
+          },
+          {
+            title: "Pick an external player if a stream stutters",
+            text: "Settings → Player Selection. If the built-in player struggles on a channel, switch that stream to MX Player or VLC for smoother 4K.",
+          },
+          {
+            title: "Test SuperSport",
+            text: "Open SuperSport in Live TV. It should play in seconds on a decent fibre line. Buffering fixes are below.",
+          },
+        ],
+      },
+      {
+        id: "features",
+        h2: "Catch-up, movies, series and multi-screen",
+        paragraphs: [
+          "IPTV Smarters Pro is stronger than most players on on-demand content, which is why movie-and-series households often prefer it. The Movies and Series tabs give you a poster-wall layout with resume-watching, and catch-up lets you rewind live channels that support archive.",
+        ],
+        bullets: [
+          "Catch-up: channels with archive show a clock/EPG history — open the guide and pick a past programme.",
+          "Movies & Series: poster layout with categories, search and resume — good for the whole family.",
+          "External players: set MX Player or VLC per stream for the smoothest 4K on weaker devices.",
+          "Parental controls: PIN-lock adult categories in Settings — useful on the kids' TV.",
+          "Multi-screen: paid add-on lets you view several streams at once on supported devices.",
+        ],
+      },
+      {
+        id: "troubleshooting",
+        h2: "IPTV Smarters not working? Common fixes",
+        paragraphs: [
+          "Most Smarters issues in SA come down to the login, an expired line, or the network. Work through these before reinstalling.",
+        ],
+        bullets: [
+          "'Invalid credentials' or 'unable to login' — the URL, username or password is mistyped, or the subscription lapsed. Re-check exactly, or message us to confirm your line is active.",
+          "Logs in but no channels appear — pull-to-refresh, or force-close and reopen so the list re-syncs.",
+          "One channel is black but others play — that stream is briefly down; try another in the same group.",
+          "Everything buffers — hard-wire the Firestick over Ethernet or move to 5GHz Wi-Fi; ISP-branded Huawei/ZTE routers often cap throughput.",
+          "EPG shifted by two hours — set the time zone to GMT+2 (SAST) in Settings.",
+          "Choppy 4K on an older device — switch that stream to MX Player or VLC under Player Selection.",
+          "App won't install on Firestick — use the Downloader app and our APK link (some regions hide Smarters in the Amazon store).",
+        ],
+      },
+      {
+        id: "smarters-vs-tivimate",
+        h2: "IPTV Smarters vs TiviMate — which to choose?",
+        paragraphs: [
+          "Pick IPTV Smarters Pro if you're on iPhone, iPad, a Samsung/LG Smart TV, or you watch a lot of movies and series — its VOD layout and cross-device reach are the best. Pick TiviMate if you're on a Firestick, Android TV or box and want the slickest live-TV guide and DVR recording. Your single Mzansi Stream login works in both, so plenty of households run Smarters on phones and TiviMate on the lounge Firestick.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Is IPTV Smarters Pro free?",
+        a: "Yes — the app is free on every platform. You only pay for your Mzansi Stream subscription (from R99/month), which is the Xtream Codes login you enter into the app.",
+      },
+      {
+        q: "Does IPTV Smarters Pro work on iPhone and iPad?",
+        a: "Yes. It's on the App Store for iPhone and iPad — that's the main reason to choose Smarters over TiviMate, which is Android-only. Log in with your Xtream Codes details and you're watching in minutes.",
+      },
+      {
+        q: "M3U or Xtream Codes — which login should I use?",
+        a: "Use 'Login with Xtream Codes API'. It pulls the EPG, catch-up and movies/series automatically. M3U only gives you live channels with no guide.",
+      },
+      {
+        q: "Why does IPTV Smarters say 'invalid credentials'?",
+        a: "The server URL, username or password is mistyped, or the subscription has expired. Re-check the details exactly as we sent them, or message us on WhatsApp to confirm your line is active.",
+      },
+      {
+        q: "Can I watch movies and series on IPTV Smarters Pro?",
+        a: "Yes — the Movies and Series tabs give you a poster-wall layout with categories, search and resume-watching, on top of the live channels and catch-up.",
+      },
+      {
+        q: "How do I fix buffering in IPTV Smarters Pro?",
+        a: "Hard-wire your Firestick or box over Ethernet, or use 5GHz Wi-Fi, and switch the stream to MX Player or VLC under Settings → Player Selection. Most buffering is the network or an ISP router cap, not the app.",
+      },
+    ],
+    related: [
+      { label: "TiviMate — setup guide", href: "/devices/tivimate/" },
+      { label: "IPTV on Firestick — install guide", href: "/iptv-firestick-south-africa/" },
+      { label: "IPTV on iPhone & iPad", href: "/devices/iphone-ipad/" },
+      { label: "IPTV on Samsung Smart TV (Tizen)", href: "/iptv-samsung-smart-tv/" },
+      { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
+      { label: "All devices supported", href: "/devices/" },
+    ],
+    hasHowTo: true,
+    datePublished: "2026-07-18",
+    dateModified: "2026-07-18",
+    preferredLocale: ZA,
+  },
 ];
 
 export const DEVICE_SLUGS = DEVICES.map((d) => d.slug);
