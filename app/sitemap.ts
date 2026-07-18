@@ -13,6 +13,9 @@ import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 import { PILLARS, PILLAR_SLUGS } from "../lib/seo/pillars";
 import { DEVICES, DEVICE_SLUGS } from "../lib/seo/devices";
+import { IPTV_APPS, IPTV_APP_SLUGS } from "../lib/seo/apps";
+import { HELP_ARTICLES, HELP_SLUGS } from "../lib/seo/help-center";
+import { KB_ARTICLES, KB_SLUGS } from "../lib/seo/knowledge-base";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -89,6 +92,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/sa-abroad/", 0.8, "monthly"));
   entries.push(withAlternates("/communities/", 0.7, "monthly"));
   entries.push(withAlternates("/devices/", 0.8, "monthly"));
+  entries.push(withAlternates("/apps/", 0.85, "monthly"));
+  entries.push(withAlternates("/help/", 0.7, "weekly"));
+  entries.push(withAlternates("/knowledge-base/", 0.7, "weekly"));
 
   // Device install pages (under /devices/[slug]/ — Hisense, LG, Sony, etc.).
   for (const device of DEVICES) {
@@ -102,6 +108,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
   }
   void DEVICE_SLUGS;
+
+  // IPTV apps & players (Device Hub Niveau 1 — highest buyer intent).
+  for (const app of IPTV_APPS) {
+    entries.push(
+      withAlternates(
+        `/apps/${app.slug}/`,
+        0.8,
+        "monthly",
+        parseDate(app.dateModified)
+      )
+    );
+  }
+  void IPTV_APP_SLUGS;
+
+  // Help Center troubleshooting articles.
+  for (const article of HELP_ARTICLES) {
+    entries.push(
+      withAlternates(
+        `/help/${article.slug}/`,
+        0.65,
+        "monthly",
+        parseDate(article.dateModified)
+      )
+    );
+  }
+  void HELP_SLUGS;
+
+  // Knowledge Base articles.
+  for (const article of KB_ARTICLES) {
+    entries.push(
+      withAlternates(
+        `/knowledge-base/${article.slug}/`,
+        0.65,
+        "monthly",
+        parseDate(article.dateModified)
+      )
+    );
+  }
+  void KB_SLUGS;
 
   // SADC countries (8 × default locale anchor with hreflang alternates).
   for (const slug of SADC_SLUGS) {

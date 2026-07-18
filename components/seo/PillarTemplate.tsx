@@ -21,11 +21,35 @@ import { ORG_ID, WEBSITE_ID } from "../../lib/seo/entity";
 export function PillarTemplate({
   pillar,
   locale,
+  pathPrefix = "",
+  showUpdated = false,
 }: {
   pillar: Pillar;
   locale: Locale;
+  /** Optional URL segment the page lives under, e.g. "/devices" or
+   *  "/apps". Keeps the JSON-LD canonical / breadcrumb in sync with the
+   *  real route when a pillar is rendered under a sub-path. Defaults to
+   *  root ("") for the head-term pillars. */
+  pathPrefix?: string;
+  /** When true, renders a visible "Last updated" line under the lead.
+   *  Used by the Knowledge Base where a visible freshness date is part
+   *  of the format spec. Defaults off so existing pillars are unchanged. */
+  showUpdated?: boolean;
 }) {
-  const canonical = localeUrl(locale, `/${pillar.slug}/`);
+  const canonical = localeUrl(locale, `${pathPrefix}/${pillar.slug}/`);
+
+  // Human-readable "18 July 2026" from the ISO dateModified. Fixed to
+  // en-GB day-month-year so the string is stable across build locales.
+  const updatedLabel = (() => {
+    const d = new Date(pillar.dateModified);
+    if (isNaN(d.getTime())) return null;
+    return new Intl.DateTimeFormat("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(d);
+  })();
   const primaryHref = generateWhatsAppLink(
     pillar.cta.primary.message,
     "",
@@ -138,6 +162,12 @@ export function PillarTemplate({
             {pillar.trustLine ? (
               <p className="trustStrip" style={{ marginTop: 16 }}>
                 {pillar.trustLine}
+              </p>
+            ) : null}
+            {showUpdated && updatedLabel ? (
+              <p style={{ marginTop: 10, fontSize: 13, opacity: 0.65 }}>
+                Last updated:{" "}
+                <time dateTime={pillar.dateModified}>{updatedLabel}</time>
               </p>
             ) : null}
             <div className="ctaRow">
