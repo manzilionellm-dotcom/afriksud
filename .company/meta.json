@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "usine_version": "v8",
+  "domain": "iptvmzansi.com",
+  "brand": "Mzansi Stream",
+  "conversion": "whatsapp",
+  "default_locale": "en-za",
+  "x_default": "en-za",
+  "transformation_done": false,
+  "last_run": "run-001",
+  "created": "2026-07-24"
+}

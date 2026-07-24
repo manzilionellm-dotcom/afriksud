@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "updated": "run-001",
+  "items": [
+    {
+      "id": "L10N-META-PILLARS",
+      "titre": "Localiser natifs les métadonnées (title/description) des pillars + hubs pour af/zu/xh/pt-mz/fr",
+      "axe": "T1 langue / T5 tech",
+      "preuve": "curl /fr/dstv-alternative etc. → titre anglais identique à en-za, sous lang=fr",
+      "impact": 5,
+      "effort": 4,
+      "confiance": "fetch",
+      "metrique": "titres uniques natifs par locale ; taux d'indexation af/zu/xh/pt-mz/fr",
+      "note": "Traduction native uniquement (Loi #9), jamais machine. Prioriser fr + pt-mz + af (langues où j'écris nativement), puis zu/xh en relecture."
+    },
+    {
+      "id": "L10N-BODY-PILLARS",
+      "titre": "Localiser natifs les corps des pillars pour les locales non-anglaises",
+      "axe": "T1 langue / T8 contenu",
+      "preuve": "corps des pillars = anglais sous lang étranger",
+      "impact": 5,
+      "effort": 5,
+      "confiance": "fetch",
+      "metrique": "langue 100% native par page servie",
+      "note": "Alternative si non traduit : retirer l'alternate hreflang de la langue non couverte OU canonicaliser vers en-za pour éviter la dilution duplicate. Décision par page selon indexation GSC."
+    },
+    {
+      "id": "HREFLANG-DEDUP",
+      "titre": "Dédupliquer les balises hreflang (proper-case Next Metadata + lowercase dupliqué)",
+      "axe": "T4 indexation",
+      "preuve": "curl /fr → deux jeux de balises hreflang (en-ZA et en-za)",
+      "impact": 3,
+      "effort": 2,
+      "confiance": "fetch",
+      "metrique": "un seul jeu de balises hreflang par page"
+    },
+    {
+      "id": "CWV-LIGHTHOUSE",
+      "titre": "Baseline CWV/Lighthouse réelle (3 pages types) + smoke Playwright",
+      "axe": "T5 tech",
+      "preuve": "non exécuté run-001 (pas de headless lancé)",
+      "impact": 4,
+      "effort": 3,
+      "confiance": "gsc",
+      "metrique": "LCP<2.5s, INP<200ms, CLS<0.1, scores > concurrents"
+    },
+    {
+      "id": "GSC-BING-SUBMIT",
+      "titre": "Brancher GSC_KEY + soumission sitemap GSC/Bing/IndexNow",
+      "axe": "T4 indexation",
+      "preuve": "aucune clé configurée",
+      "impact": 5,
+      "effort": 1,
+      "confiance": "n/a",
+      "metrique": "taux d'indexation ≥90% sous 4-6 semaines",
+      "note": "BLOQUÉ : accès. Nécessite action humaine (gh secret set GSC_KEY, verif Bing Webmaster)."
+    },
+    {
+      "id": "CI-COMPETITIVE",
+      "titre": "T-CI : teardown concurrentiel SERP réel + cible de surclassement chiffrée",
+      "axe": "T-CI",
+      "preuve": "intel/concurrents.md vide",
+      "impact": 5,
+      "effort": 3,
+      "confiance": "fetch",
+      "metrique": "score 0-5 par axe vs MAX concurrent"
+    }
+  ]
+}
