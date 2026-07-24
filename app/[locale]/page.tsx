@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../lib/url";
+import { homeMetaFor, brandedTitle } from "../../lib/seo/home-meta";
 import { dict } from "../../components/shared/dict";
 import { plans } from "../../components/shared/plans";
 import { SITE } from "../../components/shared/site";
@@ -57,10 +58,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   const meta = LOCALE_META[locale as Locale];
+  const home = homeMetaFor(locale as Locale);
   return {
-    title: "DStv Alternative — 20,000+ Channels from R99",
-    description:
-      "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24h trial, no card. From R99/mo.",
+    title: home.title,
+    description: home.description,
     alternates: {
       canonical: localeUrl(locale as Locale, "/"),
       languages: hreflangFor("/"),
@@ -72,9 +73,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternateLocale: LOCALES.filter((l) => l !== locale).map(
         (l) => LOCALE_META[l].ogLocale
       ),
-      title: "DStv Alternative — 20,000+ Channels from R99 | Mzansi Stream",
-      description:
-        "South Africa's IPTV alternative to DStv — 20,000+ live channels in 4K. From R99/mo.",
+      title: brandedTitle(locale as Locale),
+      description: home.ogDescription ?? home.description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
   };
