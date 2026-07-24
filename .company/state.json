@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "n_pages_reelles": 128,
+  "locales": ["en-za","en-gb","en-au","en-us","af","zu","xh","pt-mz","en-zw","fr","en-ae","en-nz"],
+  "baseline": {
+    "run": "run-001",
+    "build": "exit 0",
+    "rollback_point": "a18aa71"
+  },
+  "applied_optimizations": [
+    "run-001:home-meta-localized-12-locales",
+    "run-002:pillar-meta-localized-13-pages (af/fr/pt-mz full + zu/xh native; en-* fallback)"
+  ],
+  "gsc_key_present": false
+}

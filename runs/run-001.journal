@@ -1,0 +1,34 @@
+# USINE v8 — Journal run-001 (MODE T bootstrap + T1 slice)
+# Branch: claude/usine-v8-prompt-fh8zoz
+# Deux fins légales: (a) journal 100% coché + build/qa vert, (b) rollback + rapport rouge.
+# Relance = première case vide, MÊME branche.
+
+## Phase 0 — Recon & baseline (mesurer avant de toucher — Loi #1)
+- [x] Inventaire git + état repo (branch, log, remotes)
+- [x] Config auto-déduite (DOMAINE=iptvmzansi.com, marchés, CONVERSION=WhatsApp)
+- [x] pnpm install
+- [x] Build baseline = exit 0 (point de rollback = HEAD a18aa71)
+- [x] N_pages_réelles = 128 URLs canoniques (sitemap.xml, serveur prod)
+- [x] Matrice langue: <html lang> correct par locale MAIS titre/contenu = anglais partout
+- [x] hreflang: self-référent + réciproque + x-default présents (OK) ; duplication de balises notée
+- [x] Livrable T0 écrit → .company/qa/T0-baseline.md
+
+## Phase 1 — Bootstrap backbone (§0, manquant)
+- [x] .company/ memory scaffold (meta.json, state.json, decisions, assumptions, roadmap, backlog, intel)
+- [x] CLAUDE.md ← LOIS
+- [x] scripts/qa-gates.mjs (+ --self-test)
+- [x] scripts/incremental-check.mjs (standalone)
+- [~] .claude/settings.json hook PostToolUse — SKIP (refusé par l'utilisateur)
+
+## Phase 2 — T1 correctif (bloquant #1 : métadonnées homepage localisées)
+- [x] Baseline: 12 locales partagent 1 titre anglais identique (dup + lang-mismatch)
+- [x] Correctif: lib/seo/home-meta.ts — titre+description natifs par locale
+- [x] Wire app/[locale]/page.tsx generateMetadata
+- [x] DoD: build exit 0
+- [x] DoD: qa-gates exit 0
+- [x] Delta: 12 titres uniques natifs vérifiés par curl
+
+## Phase 3 — Clôture
+- [x] Commits checkpoint par phase
+- [x] Push -u origin claude/usine-v8-prompt-fh8zoz
+- [x] Rapport final GO/NO-GO + backlog + CHECKLIST_HUMAINE

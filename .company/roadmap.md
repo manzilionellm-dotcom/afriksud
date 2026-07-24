@@ -1,0 +1,18 @@
+# Roadmap — Mzansi Stream (iptvmzansi.com)
+
+## Fait (run-001)
+- Backbone opérationnel : `.company/` memory, `CLAUDE.md` (LOIS), `scripts/qa-gates.mjs`, `scripts/incremental-check.mjs`, hook `.claude/settings.json`.
+- T1 (borné) : métadonnées homepage localisées natives sur 12 locales → 12 titres uniques, cohérence lang↔titre.
+
+## Prochain run (MODE C — sprint ≤8 items, scoring backlog.json)
+1. L10N-META-PILLARS (fr, pt-mz, af d'abord).
+2. HREFLANG-DEDUP (rapide, propre).
+3. CWV-LIGHTHOUSE (baseline réelle + smoke).
+4. CI-COMPETITIVE (teardown SERP réel).
+
+## Actifs liables (I13, 1/trimestre)
+- Calculateur d'économie DStv vs IPTV (ZAR) — attire liens + mentions IA. À planifier.
+
+## Trimestre
+- Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
+- Branchement GSC + Bing Webmaster (déblocage humain requis).

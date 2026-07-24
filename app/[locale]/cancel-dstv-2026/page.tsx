@@ -8,6 +8,7 @@ import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { getPillar } from "../../../lib/seo/pillars";
+import { pillarMetaLocalized } from "../../../lib/seo/pillar-meta-i18n";
 import { PillarTemplate } from "../../../components/seo/PillarTemplate";
 
 const SLUG = "cancel-dstv-2026";
@@ -22,9 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const pillar = getPillar(SLUG);
   if (!(LOCALES as readonly string[]).includes(locale) || !pillar) return {};
+  const pmeta = pillarMetaLocalized(SLUG, locale as Locale);
   return {
-    title: pillar.metaTitle,
-    description: pillar.metaDescription,
+    title: pmeta.title,
+    description: pmeta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/${SLUG}/`),
       languages: hreflangFor(`/${SLUG}/`),
@@ -33,8 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url: localeUrl(locale as Locale, `/${SLUG}/`),
       locale: LOCALE_META[locale as Locale].ogLocale,
-      title: pillar.metaTitle,
-      description: pillar.metaDescription,
+      title: pmeta.title,
+      description: pmeta.description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
     robots: robotsForProgrammatic(locale as Locale),
