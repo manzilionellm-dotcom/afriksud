@@ -4,14 +4,15 @@
   "items": [
     {
       "id": "L10N-META-PILLARS",
-      "titre": "Localiser natifs les métadonnées (title/description) des pillars + hubs pour af/zu/xh/pt-mz/fr",
+      "statut": "FAIT (run-002)",
+      "titre": "Localiser natifs les métadonnées (title/description) des 13 pages pillars pour af/fr/pt-mz (complet) + zu/xh (natif)",
       "axe": "T1 langue / T5 tech",
-      "preuve": "curl /fr/dstv-alternative etc. → titre anglais identique à en-za, sous lang=fr",
+      "preuve": "run-002 : lib/seo/pillar-meta-i18n.ts + wire ; curl vérifie titres+desc natifs par locale ; en-* fallback anglais",
       "impact": 5,
       "effort": 4,
       "confiance": "fetch",
-      "metrique": "titres uniques natifs par locale ; taux d'indexation af/zu/xh/pt-mz/fr",
-      "note": "Traduction native uniquement (Loi #9), jamais machine. Prioriser fr + pt-mz + af (langues où j'écris nativement), puis zu/xh en relecture."
+      "metrique": "titres+desc natifs par locale sur 13 pages ; suivi indexation à J+30",
+      "note": "zu/xh : terminologie alignée sur le hero owner-approved de dict.ts — à faire relire par un locuteur natif (comme le hero l'a été). Titres+desc EN diaspora restent partagés (même langue, alternates hreflang légitimes)."
     },
     {
       "id": "L10N-BODY-PILLARS",

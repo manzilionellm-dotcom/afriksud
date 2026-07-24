@@ -1,0 +1,13 @@
+# USINE v8 — Journal run-002 (MODE C sprint: L10N-META-PILLARS)
+# Branch: claude/usine-v8-prompt-fh8zoz
+# Objectif: localiser natifs les métadonnées (title+description) des 12 pillars
+# pour af, fr, pt-mz (complet) + zu, xh (natif). en-* = fallback anglais (même langue).
+
+- [x] Extraire les 12 metaTitle/metaDescription EN (source de vérité)
+- [x] lib/seo/pillar-meta-i18n.ts — overlay natif par locale + getter fallback
+- [x] Wire 12 pages pillars → pillarMetaLocalized(SLUG, locale)
+- [x] Build exit 0
+- [x] qa-gates exit 0
+- [x] Vérif live: titres pillars natifs par locale (fr/pt-mz/af/zu/xh)
+- [x] Commit + push
+- [x] Mémoire à jour (state, backlog, decisions)

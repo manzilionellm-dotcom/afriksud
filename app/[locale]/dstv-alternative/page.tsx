@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
+import { pillarMetaLocalized } from "../../../lib/seo/pillar-meta-i18n";
 import { COMPETITORS, getCompetitor } from "../../../lib/seo/competitors";
 import { DstvSavingsCalculator } from "../../../components/client/DstvSavingsCalculator";
 import { generateWhatsAppLink } from "../../../components/shared/utils";
@@ -29,10 +30,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
-  return {
+  const pmeta = pillarMetaLocalized("dstv-alternative", locale as Locale, {
     title: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels",
     description:
       "Best DStv alternative in South Africa 2026. 20,000+ live channels, SuperSport PSL, Premier League, kykNET, SABC in 4K. From R99/mo. Free 24h trial — no card.",
+  });
+  return {
+    title: pmeta.title,
+    description: pmeta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, "/dstv-alternative/"),
       languages: hreflangFor("/dstv-alternative/"),
@@ -41,9 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url: localeUrl(locale as Locale, "/dstv-alternative/"),
       locale: LOCALE_META[locale as Locale].ogLocale,
-      title: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels",
-      description:
-        "Cancel DStv. Keep SuperSport, kykNET and SABC in 4K. From R99/mo on WhatsApp.",
+      title: pmeta.title,
+      description: pmeta.description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
     robots: robotsForProgrammatic(locale as Locale),

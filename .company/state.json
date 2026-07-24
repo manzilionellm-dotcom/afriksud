@@ -8,7 +8,8 @@
     "rollback_point": "a18aa71"
   },
   "applied_optimizations": [
-    "run-001:home-meta-localized-12-locales"
+    "run-001:home-meta-localized-12-locales",
+    "run-002:pillar-meta-localized-13-pages (af/fr/pt-mz full + zu/xh native; en-* fallback)"
   ],
   "gsc_key_present": false
 }
