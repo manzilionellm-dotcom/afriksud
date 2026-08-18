@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "run-001",
+  "updated": "2026-08-17 (signal terrain)",
   "items": [
     {
       "id": "L10N-META-PILLARS",
@@ -64,7 +64,8 @@
       "impact": 5,
       "effort": 3,
       "confiance": "fetch",
-      "metrique": "score 0-5 par axe vs MAX concurrent"
+      "metrique": "score 0-5 par axe vs MAX concurrent",
+      "note": "PRIORITE RELEVEE 2026-08-17 : un lead attribue a ChatGPT est arrive en WhatsApp. Le canal est prouve, il nest pas mesure. Cet item remplit intel/share-of-model.md avec de lobserve."
     }
   ]
 }
