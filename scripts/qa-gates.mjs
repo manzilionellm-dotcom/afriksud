@@ -54,6 +54,42 @@ function gatePlaceholders(files) {
   else ok("Aucun placeholder {{À_DÉFINIR}} dans le contenu publié.");
 }
 
+// ── GATE 1b: no owner-placeholder leaking through RENDERED strings.
+// Why this gate exists: `TO_FILL_BY_OWNER` shipped live inside
+// `localPriceNote` on 20 diaspora country pages and was printed verbatim in
+// the Pricing paragraph — on the very page type that produced a
+// Copilot-sourced order. GATE 1 never caught it because it only knows the
+// `{{À_DÉFINIR}}` form.
+//
+// Scope is deliberately the string-literal form only: the token legitimately
+// appears in `//` comments and in `<code>TO_FILL_BY_OWNER</code>` JSX where
+// the docs describe the token itself. A quoted literal, by contrast, is data
+// destined for the page.
+//
+// `lib/seo/legal.ts` is reported separately, not silently exempted: those
+// placeholders hold the legal entity name, CIPC number and Information
+// Officer — facts only the owner can supply, that an agent must never invent
+// (Loi #3). They stay visible in every run until filled.
+const OWNER_PLACEHOLDER_LITERAL = /"[^"\n]*TO_FILL_BY_OWNER[^"\n]*"/;
+const LEGAL_DATA_FILE = "lib/seo/legal.ts";
+function gateOwnerPlaceholders(files) {
+  const rendered = files.filter((f) => {
+    const p = f.replace(/\\/g, "/");
+    return (isContentFile(p) || p.includes("/lib/seo/")) && !p.endsWith(LEGAL_DATA_FILE);
+  });
+  const hits = rendered.filter((f) => OWNER_PLACEHOLDER_LITERAL.test(read(f)));
+  if (hits.length) {
+    fail(`TO_FILL_BY_OWNER dans des chaînes rendues: ${hits.join(", ")}`);
+  } else {
+    ok("Aucun TO_FILL_BY_OWNER dans les chaînes rendues (hors legal).");
+  }
+  const legalSrc = read(join(ROOT, LEGAL_DATA_FILE));
+  const legalCount = (legalSrc.match(/TO_FILL_BY_OWNER/g) || []).length;
+  if (legalCount) {
+    ok(`BLOQUÉ OWNER: ${legalCount} placeholders légaux en attente dans ${LEGAL_DATA_FILE} (entité, CIPC, Information Officer). Non inventables — Loi #3.`);
+  }
+}
+
 // ── GATE 2: no secrets committed (env/GitHub Secrets only — Loi #8).
 const SECRET_PATTERNS = [
   [/\bsk-[A-Za-z0-9]{20,}\b/, "clé style OpenAI (sk-…)"],
@@ -106,6 +142,7 @@ function gateHreflang() {
 function run() {
   const files = walk(ROOT);
   gatePlaceholders(files);
+  gateOwnerPlaceholders(files);
   gateSecrets(files);
   gateHomeMeta();
   gateHreflang();
@@ -117,6 +154,10 @@ function selfTest() {
   // Placeholder regex must fire on a placeholder and not on clean text.
   if (!PLACEHOLDER.test("prix {{À_DÉFINIR}}")) localFail.push("placeholder regex faux négatif");
   if (PLACEHOLDER.test("prix R99 clean")) localFail.push("placeholder regex faux positif");
+  // GATE 1b: must fire on a quoted literal, stay silent on comment/JSX forms.
+  if (!OWNER_PLACEHOLDER_LITERAL.test('note: "~AU$8 (TO_FILL_BY_OWNER for FX)",')) localFail.push("owner-placeholder regex faux négatif");
+  if (OWNER_PLACEHOLDER_LITERAL.test("const SRC = '/v.mp4'; // TO_FILL_BY_OWNER")) localFail.push("owner-placeholder regex faux positif (commentaire)");
+  if (OWNER_PLACEHOLDER_LITERAL.test("<code>TO_FILL_BY_OWNER</code>")) localFail.push("owner-placeholder regex faux positif (JSX)");
   // Secret regex must fire on a fake key and not on clean text.
   if (!SECRET_PATTERNS[0][0].test("sk-" + "a".repeat(24))) localFail.push("secret regex faux négatif");
   if (SECRET_PATTERNS[0][0].test("skateboard")) localFail.push("secret regex faux positif");

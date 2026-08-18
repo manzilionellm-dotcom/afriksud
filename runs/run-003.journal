@@ -14,15 +14,21 @@
 - [x] Build exit 0
 
 ## Phase 2 — GEO sur le gabarit qui encaisse (/sa-abroad/[country])
-- [ ] DirectAnswerBlock (Question + Answer + Speakable) en tête de page
-- [ ] FAQPage schema
-- [ ] Build exit 0 + qa-gates exit 0
+- [x] DirectAnswerBlock (Question + Answer + Speakable) en tête de page
+- [x] FAQPage schema + FAQ VISIBLE rendue depuis la même source
+- [x] Build exit 0 + qa-gates exit 0 + vérif live par curl
 
 ## Phase 3 — Mémoire & intel
-- [ ] intel/share-of-model.md : 2 faits datés, sans PII
-- [ ] decisions.md : re-priorisation diaspora vs af/fr/pt-mz
-- [ ] backlog.json + roadmap.md
+- [x] intel/share-of-model.md : 2 faits datés, sans PII
+- [x] decisions.md D12-D17
+- [x] backlog.json + state.json
 
 ## Phase 4 — Clôture
-- [ ] Commit checkpoint par phase
-- [ ] Push -u origin claude/seo-techniques-analysis-n8hij3
+- [x] Commit checkpoint par phase
+- [x] Push -u origin claude/seo-techniques-analysis-n8hij3
+
+## Phase 2b — Durcissement (hors périmètre initial, déclenché par la mesure)
+- [x] Fuite `TO_FILL_BY_OWNER for live FX` rendue en clair dans le bloc Pricing des 20 pages diaspora → corrigée
+- [x] qa-gates GATE 1b : détecte les placeholders owner dans les littéraux rendus
+- [x] Gate prouvée par commande réelle (bug réintroduit → exit 1 ; restauré → exit 0)
+- [x] 15 placeholders légaux : signalés BLOQUÉ OWNER, jamais inventés (Loi #3)

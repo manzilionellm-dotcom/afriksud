@@ -16,6 +16,7 @@ import {
   getSaAbroadCountry,
 } from "../../../../lib/seo/sa-abroad";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { DirectAnswerBlock } from "../../../../components/seo/DirectAnswerBlock";
 
 type Props = { params: Promise<{ locale: string; country: string }> };
 
@@ -96,6 +97,57 @@ export default async function SaAbroadCountryPage({ params }: Props) {
     ],
   };
 
+  // AI-extraction surface. Evidence-driven: this template produced a
+  // Copilot-sourced order (2026-08-16, /en-au/sa-abroad/australia) while
+  // carrying no Question/Answer/Speakable markup at all — the engines cited
+  // it from raw prose. Every fact below is already asserted in the body
+  // copy of this page; nothing new is claimed here.
+  const directAnswer = {
+    question: `Can I watch SuperSport, SABC and kykNET in ${data.name}?`,
+    answer: `Yes. Mzansi Stream streams every SuperSport feed, SABC 1/2/3, e.tv, kykNET and Mzansi Magic live in ${data.name} over your normal internet line — no DStv decoder, no satellite dish and no 24-month contract. Plans start at R199 for one month, billed in ZAR, and a 24-hour free trial runs before you pay anything.`,
+    keyFacts: [
+      `Streams reach ${cityList} through our edge in ${data.edgeRegion}, so 4K stays stable across ${data.name}.`,
+      `Time difference: ${data.timezone}.`,
+      `Plans are billed in ZAR: R199 for 1 month, R449 for 3 months, R699 for 6 months and R1,199 for 12 months. ${data.localPriceNote}.`,
+      `Setup is usually live within 10 minutes of payment, delivered as an M3U link plus a one-page device guide.`,
+      `A 7-day money-back guarantee applies if the service does not work on your line in ${data.name}.`,
+    ],
+  };
+
+  const faqItems = [
+      {
+        q: `Can I watch SuperSport in ${data.name} without a DStv decoder?`,
+        a: `Yes. Every SuperSport feed — PSL, Premier League, Variety 1-4, Rugby and Cricket — streams live to ${data.name} over your existing internet connection. There is no decoder, no satellite dish, no installer and no SuperSport stand-alone subscription.`,
+      },
+      {
+        q: `How much does South African TV cost in ${data.name}?`,
+        a: `Plans are priced in ZAR: R199 for 1 month, R449 for 3 months, R699 for 6 months and R1,199 for 12 months. ${data.localPriceNote}. Payment is by Visa, Mastercard, PayPal, Apple Pay, Google Pay or Wise, and there is no 24-month contract.`,
+      },
+      {
+        q: `Which devices work in ${data.name}?`,
+        a: `Samsung, LG, Sony and Hisense Smart TVs, Amazon Firestick 4K Max, Apple TV, Android TV boxes, iPhone, iPad, Android phones, MAG Box, PC and Mac — through TiviMate, IPTV Smarters Pro, GSE Smart IPTV, XCIPTV or any standard M3U player.`,
+      },
+      {
+        q: `How long does activation take in ${data.name}?`,
+        a: `Usually under 10 minutes. You message us on WhatsApp from your ${data.name} number, pick a plan and pay, then receive your M3U link with a one-page setup guide for your device.`,
+      },
+      {
+        q: `Can I test it before paying in ${data.name}?`,
+        a: `Yes. A 24-hour free trial runs before any payment, and paid plans carry a 7-day money-back guarantee if the stream does not work on your line in ${data.name}.`,
+      },
+  ];
+
+  // Schema mirrors the visible FAQ below one-for-one — never markup-only.
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -125,6 +177,10 @@ export default async function SaAbroadCountryPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <LongformShell locale={locale as Locale}>
@@ -158,6 +214,12 @@ export default async function SaAbroadCountryPage({ params }: Props) {
               </a>
             </div>
           </header>
+
+          <DirectAnswerBlock
+            question={directAnswer.question}
+            answer={directAnswer.answer}
+            keyFacts={directAnswer.keyFacts}
+          />
 
           <section className="longformSection">
             <h2>Watch SuperSport in {data.name}</h2>
@@ -257,6 +319,16 @@ export default async function SaAbroadCountryPage({ params }: Props) {
               same M3U link works on home fibre, public WiFi and mobile
               data on any local network.
             </p>
+          </section>
+
+          <section className="longformSection" id="faq">
+            <h2>South African TV in {data.name} — frequently asked questions</h2>
+            {faqItems.map((item) => (
+              <div key={item.q}>
+                <h3>{item.q}</h3>
+                <p>{item.a}</p>
+              </div>
+            ))}
           </section>
 
           <section className="longformSection">

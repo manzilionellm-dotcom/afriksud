@@ -2,39 +2,48 @@
 
 ## Statut
 - run-001 : NON MESURÉ.
-- **2026-08-17 : PREMIER SIGNAL POSITIF OBSERVÉ.** Un lead entrant sur WhatsApp
-  portait le suffixe d'attribution avec ChatGPT comme source (rapporté par
-  l'owner). Preuve de conversion, pas encore de volume.
+- **run-003 (2026-08-18) : 2 leads d'origine IA observés, sur 2 moteurs distincts,
+  dont 1 commande payante.** Le canal est prouvé. Le volume reste non mesuré.
 
-## Signaux observés (1 ligne = 1 fait, jamais d'estimation)
+## Signaux observés (1 ligne = 1 fait ; aucune donnée personnelle consignée)
 
-| date | source | landing | issue | preuve |
+| date | moteur | landing | ref CTA | issue |
 |---|---|---|---|---|
-| 2026-08-17 | ChatGPT (référent) | `{{À_DÉFINIR}}` — à relire dans le fil WhatsApp | lead entrant | suffixe `attributionSummary()` dans le message WhatsApp, rapporté par l'owner |
+| 2026-08-14 (jeu.) | ChatGPT | `/en-za/4k-iptv-south-africa` | `Pillar-4K-Hero` | demande d'essai 24 h (Smart TV) |
+| 2026-08-16 (sam.) | Microsoft Copilot | `/en-au/sa-abroad/australia` | — (parcours vers `/en-za`) | **commande 1 mois R199** (Hisense VIDAA / SIPTV) |
 
-**À compléter :** le champ `landing:` du même message nomme la page exacte que
-ChatGPT a citée. C'est l'information la plus utile disponible aujourd'hui et
-elle est gratuite — relire le message et remplir la case.
+Source : captures d'écran du fil WhatsApp fournies par l'owner. Numéros et noms
+volontairement non consignés (POPIA — la mémoire du dépôt n'a pas besoin de PII).
 
-## Ce que ce signal prouve / ne prouve pas
+## Ce que ces 2 faits établissent
 
-**Prouve.** La chaîne GEO complète fonctionne de bout en bout : `robots.ts`
-autorise les crawlers IA → une page a été indexée puis citée → l'utilisateur a
-cliqué le lien dans la réponse → `document.referrer` a été capté → le suffixe
-d'attribution a survécu jusqu'au message WhatsApp → l'owner a pu identifier la
-source. Aucun maillon n'a cassé.
+1. **Ce n'est pas ChatGPT seul.** Copilot cite aussi. Deux moteurs indépendants
+   sur deux jours = un comportement de moteur, pas une anomalie.
+2. **L'attribution est plus solide que prévu.** Les deux moteurs ajoutent
+   eux-mêmes `?utm_source=chatgpt.com` / `?utm_source=copilot.com` aux liens
+   sortants. L'attribution ne dépend donc pas seulement du `document.referrer` :
+   le paramètre UTM survit même si le référent est nettoyé.
+3. **Le canal va jusqu'à l'encaissement.** Le lead Copilot n'est pas une demande
+   d'info : plan choisi (1 mois R199), device (Hisense VIDAA), app (SIPTV).
+4. **Le trafic IA est diaspora, pas ZA.** Numéro US et numéro australien
+   (Perth). Les deux pages d'atterrissage servent des Sud-Africains à
+   l'étranger — dont une page `/sa-abroad/` explicitement diaspora.
+5. **Parcours multi-pages observé.** Le lead Copilot atterrit sur
+   `/en-au/sa-abroad/australia` puis commande depuis `/en-za`. La page citée
+   par l'IA n'est pas forcément la page de conversion : c'est la porte d'entrée.
 
-**Ne prouve pas.** Ni le volume, ni la répétabilité, ni quelle page porte la
-citation, ni si les autres moteurs (Perplexity, Gemini, Copilot) citent aussi.
-Un point n'est pas une courbe.
+## Ce que ces 2 faits n'établissent pas
+Ni le volume, ni la récurrence, ni la part de marché face aux concurrents dans
+les réponses des moteurs. Deux points ne font pas une tendance.
 
-## Undercount structurel (important)
+## Undercount structurel
+Le référent/UTM n'apparaît **que si la personne clique le lien dans la réponse**.
+Quand le moteur cite « Mzansi Stream » et que la personne tape le nom, le lead
+retombe en `Source: direct`. L'acquisition réellement pilotée par l'IA est donc
+**≥** ce compteur, jamais inférieure.
 
-Le référent `chatgpt.com` n'apparaît **que si l'utilisateur clique le lien dans
-la réponse**. Si le modèle nomme « Mzansi Stream » et que la personne tape le
-nom dans son navigateur, le lead arrive en `Source: direct`. L'acquisition
-réellement pilotée par l'IA est donc **supérieure ou égale** à ce que ce
-compteur montre — jamais inférieure. Ne pas lire les `direct` comme du hasard.
-
-## Panel de prompts « argent » à jouer (non exécuté)
+## Panel de prompts « argent » à jouer (non exécuté — CI-COMPETITIVE)
 Format : prompt | moteurs cités | nous O/N | date.
+Priorité déduite des faits ci-dessus : requêtes **diaspora** d'abord
+(« watch SuperSport in Australia », « SABC abroad », « DStv alternative UK »),
+pas seulement les requêtes ZA.
