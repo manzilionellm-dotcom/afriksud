@@ -72,7 +72,7 @@ export const PILLARS: Pillar[] = [
       primary: {
         label: "Test it on your fibre — Free 24h trial →",
         message:
-          "Hi! I'm on [Vumatel/Openserve/Frogfoot/Octotel] and I want the free 24-hour Mzansi Stream trial to test 4K streaming on my line.",
+          "Hi! I'm on a fibre line and I want the free 24-hour Mzansi Stream trial to test 4K streaming on it.",
         ref: "Pillar-Vumatel-Hero",
       },
       secondary: { label: "Jump to ISP table →", href: "#isps" },
@@ -207,7 +207,7 @@ export const PILLARS: Pillar[] = [
       primary: {
         label: "Pay how you want — Get started →",
         message:
-          "Hi! I'd like to order Mzansi Stream — I prefer paying via [EFT/SnapScan/Ozow/Capitec Pay] — what's the next step?",
+          "Hi! I'd like to order Mzansi Stream — which local payment options do you take, and what's the next step?",
         ref: "Pillar-Payment-Hero",
       },
       secondary: { label: "See payment methods →", href: "#methods" },
@@ -1440,7 +1440,7 @@ export const PILLARS: Pillar[] = [
       primary: {
         label: "Test 4K on your Smart TV — Free 24h trial →",
         message:
-          "Hi! I want to test the 4K Mzansi Stream feeds on my [Samsung/LG/Sony] Smart TV. Can you send the free 24h trial?",
+          "Hi! I want to test the 4K Mzansi Stream feeds on my Smart TV. Can you send the free 24h trial?",
         ref: "Pillar-4K-Hero",
       },
       secondary: { label: "Pricing", href: "#pricing" },

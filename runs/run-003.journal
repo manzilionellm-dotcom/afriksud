@@ -1,0 +1,28 @@
+# USINE v8 — Journal run-003 (MODE C sprint: GEO-AMPLIFY)
+# Branch: claude/seo-techniques-analysis-n8hij3
+# Déclencheur: 2 leads IA observés (ChatGPT + Copilot), dont 1 commande R199.
+# Périmètre borné: le gabarit qui a converti + le bug de template constaté.
+
+## Phase 0 — Mesure (Loi #1)
+- [x] 2 leads IA consignés (screenshots owner) : ChatGPT → /en-za/4k-iptv-south-africa ; Copilot → /en-au/sa-abroad/australia
+- [x] Cartographie DirectAnswerBlock : présent sur pillars, cities, sadc, vs — ABSENT sur sa-abroad/[country]
+- [x] Bug constaté : placeholder non rempli `[Samsung/LG/Sony]` envoyé tel quel par un vrai prospect
+- [x] Build baseline exit 0 (point de rollback = c795105)
+
+## Phase 1 — Correctif bug template WhatsApp
+- [x] 3 messages pré-remplis nettoyés dans lib/seo/pillars.ts
+- [x] Build exit 0
+
+## Phase 2 — GEO sur le gabarit qui encaisse (/sa-abroad/[country])
+- [ ] DirectAnswerBlock (Question + Answer + Speakable) en tête de page
+- [ ] FAQPage schema
+- [ ] Build exit 0 + qa-gates exit 0
+
+## Phase 3 — Mémoire & intel
+- [ ] intel/share-of-model.md : 2 faits datés, sans PII
+- [ ] decisions.md : re-priorisation diaspora vs af/fr/pt-mz
+- [ ] backlog.json + roadmap.md
+
+## Phase 4 — Clôture
+- [ ] Commit checkpoint par phase
+- [ ] Push -u origin claude/seo-techniques-analysis-n8hij3
