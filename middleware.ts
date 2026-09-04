@@ -1,12 +1,15 @@
 // middleware.ts
-// Exposes the resolved locale + path to the root layout via request headers
-// so `<html lang>` / `<html dir>` can be set correctly on the SERVER for
-// every URL. Without this, every locale shipped `lang="en-ZA"` to crawlers
-// because the root layout has no access to route params.
+// 1) 308 www.iptvmzansi.com → https://iptvmzansi.com (path + query kept).
+// 2) Expose the resolved locale + path to the root layout via request
+//    headers so `<html lang>` / `<html dir>` can be set correctly on the
+//    SERVER for every URL. Without this, every locale shipped
+//    lang="en-ZA" to crawlers because the root layout has no access to
+//    route params.
 
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { LOCALES, DEFAULT_LOCALE } from "./lib/locales";
+import { wwwToApexLocation } from "./lib/url";
 
 const LOCALE_SET = new Set<string>(LOCALES);
 
@@ -17,6 +20,11 @@ function extractLocale(pathname: string): string {
 }
 
 export function middleware(req: NextRequest) {
+  const apex = wwwToApexLocation(req.nextUrl.href, req.headers.get("host"));
+  if (apex) {
+    return NextResponse.redirect(apex, 308);
+  }
+
   const { pathname } = req.nextUrl;
   const locale = extractLocale(pathname);
 

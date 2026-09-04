@@ -1,0 +1,13 @@
+# USINE v8 — Journal run-003 (www SSL / canonical hygiene)
+# Branch: cursor/www-ssl-canonical-hygiene-2f3d
+# Objectif: apex canonical, 308 www→apex (middleware + vercel.json),
+# docs Vercel pour SAN www, préserver les 12 locales réelles. PR non mergée.
+
+- [x] T0 live: apex 307 /en-za, www TLS SAN mismatch, 12 locales 200, hreflang apex
+- [x] Journal + assumptions + T0 QA
+- [x] Helper apex + middleware 308 www→apex
+- [x] vercel.json 308 host www.iptvmzansi.com → https://iptvmzansi.com
+- [x] docs/WWW-DOMAIN.md (ajouter www sur Vercel, ne pas inverser le canonique)
+- [x] qa-gates: apex SITE_URL, redirect www, 12 locales figées
+- [ ] DoD: pnpm build exit 0 + node scripts/qa-gates.mjs exit 0
+- [ ] Commit + push + PR unmerged (pas de merge, pas de --force, pas de push main)

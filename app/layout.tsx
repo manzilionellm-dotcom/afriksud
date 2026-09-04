@@ -13,6 +13,7 @@ import {
   type Locale,
 } from "../lib/locales";
 import { AnalyticsProvider } from "../lib/analytics/AnalyticsProvider";
+import { SITE_URL } from "../lib/url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,7 +22,6 @@ const geistSans = Geist({
   display: "swap",
 });
 
-const SITE_URL = "https://iptvmzansi.com";
 const SITE_NAME = "Mzansi Stream";
 const OG_IMAGE = SITE_URL + "/og-image.jpg";
 
