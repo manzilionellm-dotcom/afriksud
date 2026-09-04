@@ -17,3 +17,6 @@
 - **D10.** Hôte canonique = apex `iptvmzansi.com`. `www` n'est pas un site parallèle : 308 path-preserving vers l'apex (`vercel.json` edge + `middleware.ts` app). Pas de 301/307 pour ce hop (308 demandé, cacheable, méthode préservée).
 - **D11.** Les 12 locales live (`en-za en-gb en-au en-us af zu xh pt-mz en-zw fr en-ae en-nz`) restent la source de vérité hreflang. Ce run ne touche pas `LOCALES`, les pages programmatiques, ni les schémas FAQPage/HowTo/ContactPoint. Conversion WhatsApp only, numéro existant `447307410512`.
 - **D12.** Le SAN mismatch www ne se corrige pas dans Git : il faut ajouter `www.iptvmzansi.com` au projet Vercel (doc `docs/WWW-DOMAIN.md`). PR ouverte, **non mergée** par l'agent.
+
+## run-004 (2026-09-04) — www 308 before trailing-slash
+- **D13.** `skipTrailingSlashRedirect: true` + middleware : 308 www→apex (path+query, y compris slash) **puis** slash-strip apex. `vercel.json` / `next.config.js` ajoutent `/:path+/`. Locales et WhatsApp inchangés.

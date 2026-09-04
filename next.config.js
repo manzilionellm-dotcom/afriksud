@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Next's built-in slash 308 is relative and beats host redirects, so
+  // `www/en-za/` stayed on www. Handle slash-strip in middleware AFTER
+  // the absolute www→apex 308.
+  skipTrailingSlashRedirect: true,
   eslint: {
     // Don't fail Vercel build on ESLint warnings — production safety net.
     // TypeScript errors will still fail the build (which is what we want).
@@ -22,6 +26,12 @@ const nextConfig = {
         source: "/",
         has: [{ type: "host", value: "www.iptvmzansi.com" }],
         destination: "https://iptvmzansi.com/",
+        permanent: true,
+      },
+      {
+        source: "/:path+/",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination: "https://iptvmzansi.com/:path+/",
         permanent: true,
       },
       {

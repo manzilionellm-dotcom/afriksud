@@ -9,4 +9,4 @@
 
 ## run-003
 - **A6.** `www.iptvmzansi.com` n'est pas attaché au projet Vercel : le certificat live n'a que `DNS:iptvmzansi.com`. DNS www (CNAME → apex) existe déjà. L'ajout du domaine + provisioning SSL est une action dashboard, pas ce PR.
-- **A7.** Canonique = **apex** (`https://iptvmzansi.com`). Les canonicals, sitemap et hreflang live sont déjà apex. Vercel propose souvent l'inverse (apex → www) : à refuser. Ne pas inventer ni retirer de locales — les 12 de `lib/locales.ts` sont toutes 200 en prod.
+- **A8.** Live 2026-09-04 post-#12 : TLS www OK, mais Next trailing-slash 308 relatif gagne sur les host-redirects (`www/en-za/` → `/en-za` same-host). `skipTrailingSlashRedirect` + middleware www-first est le correctif in-repo ; le redirect domaine Vercel (www → apex 308) reste le garde-fou edge.

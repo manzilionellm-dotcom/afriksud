@@ -19,23 +19,27 @@ export function hostnameOf(hostOrUrl: string | null | undefined): string {
 }
 
 /**
- * Absolute apex URL for a www request (path + query preserved).
- * Returns null when the request is not for `www.iptvmzansi.com`.
+ * Absolute apex URL for a www request (path + query preserved, including
+ * a trailing slash). Matches if ANY of the Host-like values or the
+ * request URL hostname is `www.iptvmzansi.com`.
  */
 export function wwwToApexLocation(
   requestUrl: string,
-  hostHeader?: string | null
+  ...hostHeaders: Array<string | null | undefined>
 ): string | null {
-  let hostname = hostnameOf(hostHeader);
-  if (!hostname) {
-    try {
-      hostname = new URL(requestUrl).hostname.toLowerCase();
-    } catch {
-      return null;
-    }
+  let url: URL;
+  try {
+    url = new URL(requestUrl, SITE_URL);
+  } catch {
+    return null;
   }
-  if (hostname !== WWW_HOST) return null;
-  const url = new URL(requestUrl, SITE_URL);
+  const hosts = new Set<string>();
+  for (const header of hostHeaders) {
+    const name = hostnameOf(header);
+    if (name) hosts.add(name);
+  }
+  hosts.add(url.hostname.toLowerCase());
+  if (!hosts.has(WWW_HOST)) return null;
   url.protocol = "https:";
   url.hostname = APEX_HOST;
   url.port = "";

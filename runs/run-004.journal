@@ -1,0 +1,10 @@
+# USINE v8 — Journal run-004 (www 308 before trailing-slash)
+# Branch: cursor/www-308-before-slash-2f3d
+# Objectif: www always 308 to apex (path+query) BEFORE Next locale/slash hops.
+
+- [x] T0 live: slashless www 308 apex; trailing-slash www 308 same-host
+- [ ] skipTrailingSlashRedirect + middleware www-first + slash-strip on apex
+- [ ] vercel.json / next.config host rule for /:path+/
+- [ ] qa-gates + local curl Host: www with trailing slash
+- [ ] DoD build + qa-gates exit 0
+- [ ] PR unmerged
