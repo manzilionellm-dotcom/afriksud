@@ -7,6 +7,12 @@
       "permanent": true
     },
     {
+      "source": "/:path+/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/:path+/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
       "destination": "https://iptvmzansi.com/:path*",

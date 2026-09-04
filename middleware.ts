@@ -20,12 +20,28 @@ function extractLocale(pathname: string): string {
 }
 
 export function middleware(req: NextRequest) {
-  const apex = wwwToApexLocation(req.nextUrl.href, req.headers.get("host"));
+  // Host 308 MUST run before locale / trailing-slash hops. Next.js
+  // otherwise 308s `/en-za/` → `/en-za` on the same (www) host.
+  const apex = wwwToApexLocation(
+    req.nextUrl.href,
+    req.headers.get("x-forwarded-host"),
+    req.headers.get("host")
+  );
   if (apex) {
     return NextResponse.redirect(apex, 308);
   }
 
-  const { pathname } = req.nextUrl;
+  const { pathname, search } = req.nextUrl;
+  // Restore Next default (trailingSlash: false) now that
+  // skipTrailingSlashRedirect is on — but only AFTER www has left.
+  // Use a WHATWG URL, not nextUrl.clone(): NextURL re-appends `/`.
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    const dest = new URL(req.url);
+    dest.pathname = pathname.replace(/\/+$/, "") || "/";
+    dest.search = search;
+    return NextResponse.redirect(dest, 308);
+  }
+
   const locale = extractLocale(pathname);
 
   const res = NextResponse.next();

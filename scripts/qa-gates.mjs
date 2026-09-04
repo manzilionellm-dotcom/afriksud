@@ -116,18 +116,26 @@ function parseLocales(src) {
   return [...m[1].matchAll(/"([^"]+)"/g)].map((x) => x[1]);
 }
 
-function wwwToApexLocation(requestUrl, hostHeader) {
-  const hostRaw = (hostHeader || "").trim().toLowerCase();
-  const host = hostRaw.includes("://")
-    ? hostRaw.replace(/^[a-z][a-z0-9+.-]*:\/\//, "").split("/")[0].split(":")[0]
-    : hostRaw.split("/")[0].split(":")[0];
-  let hostname = host;
-  if (!hostname) {
-    try { hostname = new URL(requestUrl).hostname.toLowerCase(); }
-    catch { return null; }
+function hostnameOf(hostOrUrl) {
+  if (!hostOrUrl) return "";
+  const raw = String(hostOrUrl).trim().toLowerCase();
+  const withoutProto = raw.includes("://")
+    ? raw.replace(/^[a-z][a-z0-9+.-]*:\/\//, "")
+    : raw;
+  return withoutProto.split("/")[0]?.split(":")[0] ?? "";
+}
+
+function wwwToApexLocation(requestUrl, ...hostHeaders) {
+  let url;
+  try { url = new URL(requestUrl, "https://iptvmzansi.com"); }
+  catch { return null; }
+  const hosts = new Set();
+  for (const header of hostHeaders) {
+    const name = hostnameOf(header);
+    if (name) hosts.add(name);
   }
-  if (hostname !== "www.iptvmzansi.com") return null;
-  const url = new URL(requestUrl, "https://iptvmzansi.com");
+  hosts.add(url.hostname.toLowerCase());
+  if (!hosts.has("www.iptvmzansi.com")) return null;
   url.protocol = "https:";
   url.hostname = "iptvmzansi.com";
   url.port = "";
@@ -165,10 +173,10 @@ function gateCanonicalApex() {
 
 function gateWww308() {
   const mw = read(join(ROOT, "middleware.ts"));
-  if (!/wwwToApexLocation/.test(mw) || !/\b308\b/.test(mw)) {
-    fail("middleware.ts: 308 www→apex manquant.");
+  if (!/wwwToApexLocation/.test(mw) || !/\b308\b/.test(mw) || !/x-forwarded-host/.test(mw)) {
+    fail("middleware.ts: 308 www→apex (x-forwarded-host) manquant.");
   } else {
-    ok("middleware.ts: 308 www→apex.");
+    ok("middleware.ts: 308 www→apex avant slash-strip.");
   }
   const v = read(join(ROOT, "vercel.json"));
   if (!v) {
@@ -189,10 +197,20 @@ function gateWww308() {
   } else {
     ok(`vercel.json: ${www.length} redirect(s) 308 www→apex.`);
   }
-  if (!/www\.iptvmzansi\.com/.test(read(join(ROOT, "next.config.js")))) {
-    fail("next.config.js: redirect host www.iptvmzansi.com manquant.");
+  const cfg = read(join(ROOT, "next.config.js"));
+  if (!/skipTrailingSlashRedirect:\s*true/.test(cfg) || !/skipMiddlewareUrlNormalize:\s*true/.test(cfg)) {
+    fail("next.config.js: skipTrailingSlashRedirect + skipMiddlewareUrlNormalize true requis.");
   } else {
-    ok("next.config.js: 308 www→apex (avant trailing-slash).");
+    ok("next.config.js: skipTrailingSlashRedirect + skipMiddlewareUrlNormalize.");
+  }
+  if (!/www\.iptvmzansi\.com/.test(cfg) || !/:path\+\//.test(cfg)) {
+    fail("next.config.js: redirect host www /:path+/ manquant.");
+  } else {
+    ok("next.config.js: 308 www→apex inclut /:path+/.");
+  }
+  const slashRule = www.some((r) => String(r.source).includes(":path+") && String(r.source).endsWith("/"));
+  if (!slashRule) {
+    fail("vercel.json: règle host /:path+/ manquante (trailing slash).");
   }
   const doc = read(join(ROOT, "docs/WWW-DOMAIN.md"));
   if (!doc || !/www\.iptvmzansi\.com/.test(doc) || !/Settings/.test(doc)) {
@@ -205,9 +223,18 @@ function gateWww308() {
     ["https://www.iptvmzansi.com/", "www.iptvmzansi.com", "https://iptvmzansi.com/"],
     ["https://www.iptvmzansi.com/en-za/?q=1", "www.iptvmzansi.com", "https://iptvmzansi.com/en-za/?q=1"],
     ["https://www.iptvmzansi.com/af/dstv-alternative/", "www.iptvmzansi.com:443", "https://iptvmzansi.com/af/dstv-alternative/"],
+    ["https://www.iptvmzansi.com/en-za/", "iptvmzansi.com", "https://iptvmzansi.com/en-za/"],
     ["https://iptvmzansi.com/en-za/", "iptvmzansi.com", null],
     ["http://127.0.0.1:3000/zu/", "www.iptvmzansi.com", "https://iptvmzansi.com/zu/"],
   ];
+  const forwarded = wwwToApexLocation(
+    "http://127.0.0.1:3000/en-za/",
+    "www.iptvmzansi.com",
+    "127.0.0.1:3000"
+  );
+  if (forwarded !== "https://iptvmzansi.com/en-za/") {
+    fail(`wwwToApexLocation forwarded-host = ${forwarded}`);
+  }
   for (const [req, host, expected] of cases) {
     const got = wwwToApexLocation(req, host);
     if (got !== expected) {

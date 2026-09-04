@@ -45,7 +45,10 @@ Official references:
 3. When Vercel asks to add `www` as the primary domain and redirect the apex
    to `www`, **refuse**. Keep `iptvmzansi.com` as the production domain.
 4. On the `www.iptvmzansi.com` row, set **Redirect to** `iptvmzansi.com`
-   (308 if the UI offers a status; otherwise 308 is also in `vercel.json`).
+   with status **308**. This is a Vercel *project* redirect: it runs at
+   the domain edge **before** Next.js trailing-slash / locale hops.
+   In-repo `vercel.json` + middleware are the fallback when that row
+   is left as “connected” (serves the app on www).
 5. DNS (already observed as CNAME `www` → `iptvmzansi.com`). If Vercel
    shows Invalid Configuration, set at the registrar:
 
@@ -76,11 +79,16 @@ vercel certs ls
 
 ## After SSL is valid — verify the 308
 
-In-repo (`vercel.json` at the Vercel edge, plus `next.config.js` and
-`middleware.ts`) 308 `www` → apex and preserve path and query. Edge
-redirects run **before** Next.js trailing-slash normalisation, so
-`https://www.iptvmzansi.com/en-za/` becomes `https://iptvmzansi.com/en-za/`
-in one hop. After the cert includes www:
+Measured after PR #12: slashless www URLs 308 to apex, but **trailing
+slash stays on www** because Next.js emits a relative 308
+(`/en-za/` → `/en-za`) *before* host redirects.
+
+This repo now sets `skipTrailingSlashRedirect: true` and 308s www → apex
+in middleware (and `vercel.json` / `next.config.js` `/:path+/`) **first**.
+Apex then slash-strips as before.
+
+Prefer also the dashboard **Redirect to** on the www domain (step 4) so
+the hop never reaches Next.
 
 ```sh
 curl -sI https://www.iptvmzansi.com/
@@ -88,16 +96,17 @@ curl -sI https://www.iptvmzansi.com/
 
 curl -sI https://www.iptvmzansi.com/en-za/
 # 308  Location: https://iptvmzansi.com/en-za/
+# NOT Location: /en-za  (that was the same-host slash hop)
 
-curl -sI https://www.iptvmzansi.com/af/dstv-alternative/
-# 308  Location: https://iptvmzansi.com/af/dstv-alternative/
+curl -sI https://www.iptvmzansi.com/af/dstv-alternative/?utm=1
+# 308  Location: https://iptvmzansi.com/af/dstv-alternative/?utm=1
 
 curl -sI https://iptvmzansi.com/en-za/
-# still 200 — do not disturb locale routes
+# 308 → /en-za then 200 — locale routes unchanged
 ```
 
-No redirect chain longer than: HTTP `www` → HTTPS `www` → HTTPS apex
-(then the existing apex `/` → `/en-za/` 307, unchanged).
+No www→www hop. Chain: HTTP `www` → HTTPS `www` → HTTPS apex (then
+existing apex `/` → `/en-za/` 307).
 
 ## What this repo already guarantees
 
