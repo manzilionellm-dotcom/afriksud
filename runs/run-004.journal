@@ -3,8 +3,16 @@
 # Objectif: www always 308 to apex (path+query) BEFORE Next locale/slash hops.
 
 - [x] T0 live: slashless www 308 apex; trailing-slash www 308 same-host
-- [ ] skipTrailingSlashRedirect + middleware www-first + slash-strip on apex
-- [ ] vercel.json / next.config host rule for /:path+/
-- [ ] qa-gates + local curl Host: www with trailing slash
-- [ ] DoD build + qa-gates exit 0
-- [ ] PR unmerged
+- [x] skipTrailingSlashRedirect + skipMiddlewareUrlNormalize + middleware www-first + slash-strip on apex (WHATWG URL)
+- [x] vercel.json / next.config host rule for /:path+/
+- [x] qa-gates + local curl Host: www with trailing slash
+- [x] DoD build + qa-gates exit 0
+- [x] PR unmerged
+
+Preuves:
+- `node scripts/qa-gates.mjs` exit 0
+- `pnpm type-check` / `lint` / `build` exit 0 (1449 pages, 12 locales)
+- next start Host www `/en-za/` → 308 `https://iptvmzansi.com/en-za/`
+- Host www `/fr/dstv-alternative/?utm=1` → 308 apex with query
+- x-forwarded-host www `/zu/` → 308 apex
+- Host apex `/en-za/` → 308 `/en-za` (pas de boucle)
