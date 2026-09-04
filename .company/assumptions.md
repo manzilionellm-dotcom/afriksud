@@ -6,3 +6,7 @@
 - **A3.** en-zw (Zimbabwe) = marché anglophone distinct avec rails de paiement locaux (USD/EcoCash/OneMoney), déjà reflété dans `dict.ts`.
 - **A4.** Cible de déploiement = Vercel (présence de `next.config.js`, projet Next). Non confirmé par `.vercel/` dans le repo → à valider (CHECKLIST_HUMAINE).
 - **A5.** Absence de clé GSC → indexation non mesurée, jamais estimée en « fait ».
+
+## run-003
+- **A6.** `www.iptvmzansi.com` n'est pas attaché au projet Vercel : le certificat live n'a que `DNS:iptvmzansi.com`. DNS www (CNAME → apex) existe déjà. L'ajout du domaine + provisioning SSL est une action dashboard, pas ce PR.
+- **A7.** Canonique = **apex** (`https://iptvmzansi.com`). Les canonicals, sitemap et hreflang live sont déjà apex. Vercel propose souvent l'inverse (apex → www) : à refuser. Ne pas inventer ni retirer de locales — les 12 de `lib/locales.ts` sont toutes 200 en prod.

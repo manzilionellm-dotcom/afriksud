@@ -4,7 +4,7 @@
 const WHATSAPP_DEFAULT = "447307410512";
 
 export const SITE = {
-  domain: "https://iptvmzansi.com",
+  domain: "https://iptvmzansi.com", // apex canonical — never www
   brand: "Mzansi Stream",
   whatsappPhone:
     process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT || WHATSAPP_DEFAULT,

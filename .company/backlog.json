@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "run-001",
+  "updated": "run-003",
   "items": [
     {
       "id": "L10N-META-PILLARS",
@@ -55,6 +55,18 @@
       "confiance": "n/a",
       "metrique": "taux d'indexation ≥90% sous 4-6 semaines",
       "note": "BLOQUÉ : accès. Nécessite action humaine (gh secret set GSC_KEY, verif Bing Webmaster)."
+    },
+    {
+      "id": "WWW-VERCEL-DOMAIN",
+      "statut": "BLOQUÉ : action humaine Vercel",
+      "titre": "Ajouter www.iptvmzansi.com au projet Vercel (certificat SAN www) sans inverser le canonique apex",
+      "axe": "T5 tech / T4 indexation",
+      "preuve": "T0 2026-09-04: curl https://www.iptvmzansi.com → SAN mismatch; cert SAN = iptvmzansi.com only; DNS www CNAME déjà présent",
+      "impact": 5,
+      "effort": 1,
+      "confiance": "fetch",
+      "metrique": "curl -sI https://www.iptvmzansi.com → 308 Location https://iptvmzansi.com/… sans erreur TLS",
+      "note": "Voir docs/WWW-DOMAIN.md. Ne pas accepter le prompt Vercel apex→www. Les 12 locales restent."
     },
     {
       "id": "CI-COMPETITIVE",

@@ -9,7 +9,8 @@
   },
   "applied_optimizations": [
     "run-001:home-meta-localized-12-locales",
-    "run-002:pillar-meta-localized-13-pages (af/fr/pt-mz full + zu/xh native; en-* fallback)"
+    "run-002:pillar-meta-localized-13-pages (af/fr/pt-mz full + zu/xh native; en-* fallback)",
+    "run-003:www-308-to-apex + vercel.json + WWW-DOMAIN.md (cert SAN still needs Vercel domain add)"
   ],
   "gsc_key_present": false
 }

@@ -16,6 +16,20 @@ const nextConfig = {
     // Vercel preview SITE_URL, and duplicate content with the canonical
     // /[locale]/* tree. 301 to the canonical English equivalents.
     return [
+      // www → apex before trailing-slash normalisation so `/en-za/` on
+      // www does not 308 to `/en-za` on the same (www) host first.
+      {
+        source: "/",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination: "https://iptvmzansi.com/",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination: "https://iptvmzansi.com/:path*",
+        permanent: true,
+      },
       {
         source: "/iptv-:city",
         destination: "/en-za/cities/:city/",

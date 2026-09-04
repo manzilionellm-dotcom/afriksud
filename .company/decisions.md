@@ -12,3 +12,8 @@
 - **D7.** Localisation des métadonnées des 13 pages pillars via un module central `lib/seo/pillar-meta-i18n.ts` + getter `pillarMetaLocalized(slug, locale, fallback?)`, plutôt que 13 blocs codés en dur. Wire uniforme par codemod (les 12 pages `getPillar` partagent un pattern identique) ; `dstv-alternative` (hors set getPillar) câblée avec fallback anglais explicite.
 - **D8.** Couverture native : af/fr/pt-mz = title+description complets (langues à haute confiance rédactionnelle) ; zu/xh = title+description natifs alignés sur le hero owner-approved de `dict.ts`, à faire relire par un locuteur natif (Loi #3 : signalé, pas présenté comme validé). en-* (diaspora+za+zw) = fallback anglais assumé (même langue → alternates hreflang légitimes).
 - **D9.** Corps des pillars (contenu long) toujours anglais : hors périmètre de ce sprint (borné), reste backloggé `L10N-BODY-PILLARS`. Le gain métadonnées est réel et vérifiable dès maintenant sans toucher au corps qui ranke (Loi #4).
+
+## run-003 (2026-09-04) — www SSL / canonical hygiene
+- **D10.** Hôte canonique = apex `iptvmzansi.com`. `www` n'est pas un site parallèle : 308 path-preserving vers l'apex (`vercel.json` edge + `middleware.ts` app). Pas de 301/307 pour ce hop (308 demandé, cacheable, méthode préservée).
+- **D11.** Les 12 locales live (`en-za en-gb en-au en-us af zu xh pt-mz en-zw fr en-ae en-nz`) restent la source de vérité hreflang. Ce run ne touche pas `LOCALES`, les pages programmatiques, ni les schémas FAQPage/HowTo/ContactPoint. Conversion WhatsApp only, numéro existant `447307410512`.
+- **D12.** Le SAN mismatch www ne se corrige pas dans Git : il faut ajouter `www.iptvmzansi.com` au projet Vercel (doc `docs/WWW-DOMAIN.md`). PR ouverte, **non mergée** par l'agent.

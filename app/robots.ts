@@ -4,8 +4,7 @@
 // posture is "off"; we opt in. SEO competitor scrapers stay blocked.
 
 import type { MetadataRoute } from "next";
-
-const SITE_URL = "https://iptvmzansi.com";
+import { SITE_URL } from "../lib/url";
 
 export default function robots(): MetadataRoute.Robots {
   return {
