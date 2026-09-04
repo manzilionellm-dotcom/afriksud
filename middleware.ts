@@ -31,13 +31,15 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(apex, 308);
   }
 
-  const { pathname } = req.nextUrl;
+  const { pathname, search } = req.nextUrl;
   // Restore Next default (trailingSlash: false) now that
   // skipTrailingSlashRedirect is on — but only AFTER www has left.
+  // Use a WHATWG URL, not nextUrl.clone(): NextURL re-appends `/`.
   if (pathname.length > 1 && pathname.endsWith("/")) {
-    const url = req.nextUrl.clone();
-    url.pathname = pathname.replace(/\/+$/, "") || "/";
-    return NextResponse.redirect(url, 308);
+    const dest = new URL(req.url);
+    dest.pathname = pathname.replace(/\/+$/, "") || "/";
+    dest.search = search;
+    return NextResponse.redirect(dest, 308);
   }
 
   const locale = extractLocale(pathname);

@@ -4,6 +4,7 @@ const nextConfig = {
   // `www/en-za/` stayed on www. Handle slash-strip in middleware AFTER
   // the absolute www→apex 308.
   skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
   eslint: {
     // Don't fail Vercel build on ESLint warnings — production safety net.
     // TypeScript errors will still fail the build (which is what we want).

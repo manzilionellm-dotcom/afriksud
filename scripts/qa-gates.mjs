@@ -198,10 +198,10 @@ function gateWww308() {
     ok(`vercel.json: ${www.length} redirect(s) 308 www→apex.`);
   }
   const cfg = read(join(ROOT, "next.config.js"));
-  if (!/skipTrailingSlashRedirect:\s*true/.test(cfg)) {
-    fail("next.config.js: skipTrailingSlashRedirect true requis (sinon /en-za/ reste sur www).");
+  if (!/skipTrailingSlashRedirect:\s*true/.test(cfg) || !/skipMiddlewareUrlNormalize:\s*true/.test(cfg)) {
+    fail("next.config.js: skipTrailingSlashRedirect + skipMiddlewareUrlNormalize true requis.");
   } else {
-    ok("next.config.js: skipTrailingSlashRedirect (host 308 avant slash).");
+    ok("next.config.js: skipTrailingSlashRedirect + skipMiddlewareUrlNormalize.");
   }
   if (!/www\.iptvmzansi\.com/.test(cfg) || !/:path\+\//.test(cfg)) {
     fail("next.config.js: redirect host www /:path+/ manquant.");
