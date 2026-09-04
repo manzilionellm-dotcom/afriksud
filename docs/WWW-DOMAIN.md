@@ -76,8 +76,11 @@ vercel certs ls
 
 ## After SSL is valid — verify the 308
 
-In-repo (`vercel.json` + `middleware.ts`) 308 `www` → apex and preserve path
-and query. After the cert includes www:
+In-repo (`vercel.json` at the Vercel edge, plus `next.config.js` and
+`middleware.ts`) 308 `www` → apex and preserve path and query. Edge
+redirects run **before** Next.js trailing-slash normalisation, so
+`https://www.iptvmzansi.com/en-za/` becomes `https://iptvmzansi.com/en-za/`
+in one hop. After the cert includes www:
 
 ```sh
 curl -sI https://www.iptvmzansi.com/

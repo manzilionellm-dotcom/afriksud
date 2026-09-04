@@ -9,5 +9,13 @@
 - [x] vercel.json 308 host www.iptvmzansi.com → https://iptvmzansi.com
 - [x] docs/WWW-DOMAIN.md (ajouter www sur Vercel, ne pas inverser le canonique)
 - [x] qa-gates: apex SITE_URL, redirect www, 12 locales figées
-- [ ] DoD: pnpm build exit 0 + node scripts/qa-gates.mjs exit 0
-- [ ] Commit + push + PR unmerged (pas de merge, pas de --force, pas de push main)
+- [x] DoD: pnpm build exit 0 + node scripts/qa-gates.mjs exit 0
+- [x] Commit + push + PR unmerged (pas de merge, pas de --force, pas de push main)
+
+Preuves DoD:
+- `node scripts/qa-gates.mjs` exit 0 (12 locales figées, apex SITE_URL, 308 www)
+- `pnpm type-check` exit 0
+- `pnpm lint` exit 0
+- `pnpm build` exit 0 — 1449 pages, 12 locales (`[+9 more paths]`), sitemap apex only
+- `next start` + `Host: www.iptvmzansi.com` → 308 `https://iptvmzansi.com/…` (path+query)
+- Live www TLS SAN toujours cassé jusqu'à action Vercel (docs/WWW-DOMAIN.md)

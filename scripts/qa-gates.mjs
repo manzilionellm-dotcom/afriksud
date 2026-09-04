@@ -189,6 +189,11 @@ function gateWww308() {
   } else {
     ok(`vercel.json: ${www.length} redirect(s) 308 www→apex.`);
   }
+  if (!/www\.iptvmzansi\.com/.test(read(join(ROOT, "next.config.js")))) {
+    fail("next.config.js: redirect host www.iptvmzansi.com manquant.");
+  } else {
+    ok("next.config.js: 308 www→apex (avant trailing-slash).");
+  }
   const doc = read(join(ROOT, "docs/WWW-DOMAIN.md"));
   if (!doc || !/www\.iptvmzansi\.com/.test(doc) || !/Settings/.test(doc)) {
     fail("docs/WWW-DOMAIN.md incomplet (ajouter www sur Vercel).");
