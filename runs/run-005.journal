@@ -1,0 +1,51 @@
+# USINE v8 — Journal run-005 (ZA SEO blog guides → WhatsApp)
+# Branch: cursor/za-seo-blog-guides-f663
+# Objectif: 12 guides longs uniques sous /blog/, FAQPage/HowTo, CTA WhatsApp only.
+# Locales: corps EN (en-za canonique). Autres locales = routing existant + noindex non-EN.
+
+## T0 (mesuré, 2026-09-05)
+
+- [x] git: `main` @ `7a890e7`, working tree clean, `origin/main` identique après `git fetch origin main`
+- [x] Blog existant: **17 slugs** dans `lib/seo/blog-posts.ts` (pas reconstruits)
+- [x] Pillars existants: **12 slugs** (Firestick, SuperSport, buffering, EFT, etc.)
+- [x] Live `https://iptvmzansi.com/en-za/blog` → **200** (308 slash → slashless)
+- [x] Live `https://iptvmzansi.com/en-za/blog/dstv-vs-iptv-2026-complete-guide` → **200**
+- [x] Live probe nouveau slug `/en-za/blog/order-iptv-whatsapp-south-africa` → **404** (libre)
+- [x] Template blog: Article + Breadcrumb seulement (pas FAQPage/HowTo)
+- [x] CTA existants: `InlinePricingBlock` + `TrustReversalBlock` → WhatsApp via `PriceTrigger` / `SITE.whatsappPhone`
+- [x] `robotsForProgrammatic`: index EN locales only (en-za + diaspora EN)
+- [x] GSC: clé absente (`.company/state.json` `gsc_key_present: false`) — volumes NON OBSERVÉS
+- [x] Concurrents: `.company/intel/concurrents.md` NON RENSEIGNÉ — originalité = angle SA absent des pages internes, pas un score SERP simulé
+
+## Travail
+
+- [x] Types BlogPost étendus (faq, howTo, steps, cta) — posts existants inchangés
+- [x] Template blog: FAQPage + HowTo + DirectAnswer + CTA WhatsApp hero/footer
+- [x] 12 guides nouveaux (slugs inédits, en-za)
+- [x] Sitemap dateModified + hub liens internes + index tri date
+- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [ ] Vérif HTML: FAQPage/HowTo, wa.me, 0 mailto, 0 AggregateRating
+- [ ] PR unique
+
+## 12 slugs nouveaux (preuve: absents de BLOG_POSTS + PILLARS + live 404)
+
+1. `order-iptv-whatsapp-south-africa` — rituel commande WhatsApp
+2. `iptv-multiple-devices-south-africa` — connexions foyer
+3. `tivimate-setup-south-africa-2026` — HowTo TiviMate (≠ comparaison apps)
+4. `iptv-load-shedding-south-africa` — Eskom / onduleur / LTE
+5. `watch-premier-league-south-africa-no-dstv` — PL (Compact drop) ≠ PSL blog
+6. `switch-from-dstv-to-iptv-weekend` — bascule week-end ≠ cancel-dstv
+7. `iptv-on-lte-5g-south-africa` — fallback mobile
+8. `watch-proteas-cricket-online-south-africa` — cricket ≠ Springboks
+9. `iptv-epg-catchup-south-africa` — EPG / catch-up vs Explora
+10. `firestick-4k-max-vs-lite-south-africa` — achat SKU ≠ setup pillar
+11. `iptv-wifi-6-router-south-africa` — Wi-Fi 6 / Ethernet
+12. `watch-kyknet-online-without-dstv` — cluster Afrikaans
+
+## Originalité (Loi #10) — ce que les pages internes n'ont PAS
+
+Chaque guide apporte un angle opérationnel (templates de message, ordre de mort des appareils sous Eskom, overlap week-end, SKU Firestick, catch-up vs PVR) plutôt qu'une 2e table de prix DStv.
+
+## Anti-cannibalisation
+
+Aucun slug existant renommé / reconstruit. 0 mailto. 0 AggregateRating. Prix / canaux = chiffres déjà publiés sur le site.

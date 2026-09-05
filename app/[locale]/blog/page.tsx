@@ -1,5 +1,5 @@
 // app/[locale]/blog/page.tsx
-// Blog index — lists the 10 pillar posts.
+// Blog index — lists every post (scaffolding + long-form guides).
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "Mzansi Stream Blog — IPTV guides, sport, devices",
     description:
-      "Guides for IPTV in South Africa and SADC — DStv alternatives, Firestick setup, PSL streaming, Springbok rugby, Vumatel and Openserve compatibility.",
+      "Guides for IPTV in South Africa and SADC — WhatsApp order, DStv alternatives, Firestick, TiviMate, PSL, Premier League, load shedding and multi-device setup.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/blog/"),
       languages: hreflangFor("/blog/"),
@@ -48,15 +48,17 @@ export default async function BlogIndex({ params }: Props) {
           <p className="longformEyebrow">Blog</p>
           <h1>Mzansi Stream Blog — IPTV guides for SA & SADC</h1>
           <p className="longformLead">
-            Guides to streaming TV in South Africa and across SADC — DStv
-            alternatives, device setup, sport coverage and what to look for
-            in a reliable IPTV service.
+            Guides to streaming TV in South Africa and across SADC — WhatsApp
+            order, DStv alternatives, device setup, SuperSport, load shedding
+            and what to look for in a reliable IPTV service.
           </p>
         </header>
 
         <section className="longformSection">
           <ul className="blogIndex">
-            {BLOG_POSTS.map((p) => (
+            {[...BLOG_POSTS]
+              .sort((a, b) => b.datePublished.localeCompare(a.datePublished))
+              .map((p) => (
               <li key={p.slug} className="blogIndexItem">
                 <h2>
                   <Link href={`/${locale}/blog/${p.slug}/`}>{p.title}</Link>

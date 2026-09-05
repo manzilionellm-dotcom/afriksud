@@ -23,6 +23,9 @@ const COMMERCIAL_LINKS: CommercialLink[] = [
   { label: "Mzansi Stream vs DStv Premium", href: "/vs/dstv-premium/" },
   { label: "Mzansi Stream vs Showmax", href: "/vs/showmax/" },
   { label: "Mzansi Stream vs Netflix", href: "/vs/netflix/" },
+  { label: "Order IPTV on WhatsApp — 10-minute walkthrough", href: "/blog/order-iptv-whatsapp-south-africa/" },
+  { label: "IPTV on multiple devices", href: "/blog/iptv-multiple-devices-south-africa/" },
+  { label: "IPTV during load shedding", href: "/blog/iptv-load-shedding-south-africa/" },
 ];
 
 export function InternalLinkHub({

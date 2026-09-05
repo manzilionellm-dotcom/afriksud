@@ -10,3 +10,8 @@
 ## run-003
 - **A6.** `www.iptvmzansi.com` n'est pas attaché au projet Vercel : le certificat live n'a que `DNS:iptvmzansi.com`. DNS www (CNAME → apex) existe déjà. L'ajout du domaine + provisioning SSL est une action dashboard, pas ce PR.
 - **A8.** Live 2026-09-04 post-#12 : TLS www OK, mais Next trailing-slash 308 relatif gagne sur les host-redirects (`www/en-za/` → `/en-za` same-host). `skipTrailingSlashRedirect` + middleware www-first est le correctif in-repo ; le redirect domaine Vercel (www → apex 308) reste le garde-fou edge.
+
+## run-005
+- **A9.** « MANY high-quality SEO blogs » = 12 guides **nouveaux** (8–12 demandé). Les 17 posts existants restent en scaffolding : Loi #4 interdit de reconstruire des URLs live 200.
+- **A10.** Autres locales = bas risque via `generateStaticParams` + `robotsForProgrammatic` (index EN only). Corps EN, pas de traduction machine (Loi #9).
+- **A11.** SERP concurrente non mesurée (intel vide, pas de GSC). Originalité = angle opérationnel absent des pillars/blogs internes, pas un claim de volume.
