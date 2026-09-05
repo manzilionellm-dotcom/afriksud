@@ -1,6 +1,8 @@
 // lib/seo/blog-guides.ts
 // Long-form buyer guides (run-005). New slugs only — do not reuse live
 // blog or pillar paths. English body; en-za is the indexed primary.
+// run-006: DStv soft-sell MID/END is injected by the blog template for
+// BLOG_GUIDE_SLUGS — do not duplicate that copy in section bodies.
 
 import type { BlogPost } from "./blog-posts";
 
@@ -1542,3 +1544,5 @@ export const BLOG_GUIDES: BlogPost[] = [
     ],
   },
 ];
+
+export const BLOG_GUIDE_SLUGS: readonly string[] = BLOG_GUIDES.map((g) => g.slug);

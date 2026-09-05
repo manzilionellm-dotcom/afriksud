@@ -2,6 +2,7 @@
 // One page per blog post. Long-form guides emit FAQPage + HowTo when
 // the post carries faq[] / section steps. Conversion is WhatsApp only.
 
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { BLOG_SLUGS, getBlogPost } from "../../../../lib/seo/blog-posts";
+import { BLOG_GUIDE_SLUGS } from "../../../../lib/seo/blog-guides";
+import { DstvSoftSellCta } from "../../../../components/seo/DstvSoftSellCta";
 import {
   AUTHORS,
   DEFAULT_AUTHOR_SLUG,
@@ -155,6 +158,8 @@ export default async function BlogPostPage({ params }: Props) {
       : null;
 
   const tocSections = post.sections.filter((s) => s.id);
+  const showDstvSoftSell = BLOG_GUIDE_SLUGS.includes(slug);
+  const midAfterIndex = Math.floor((post.sections.length - 1) / 2);
 
   return (
     <>
@@ -225,29 +230,34 @@ export default async function BlogPostPage({ params }: Props) {
             </nav>
           ) : null}
 
-          {post.sections.map((s) => (
-            <section key={s.h2} id={s.id} className="longformSection">
-              <h2>{s.h2}</h2>
-              {s.body.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-              {s.bullets ? (
-                <ul className="longformList">
-                  {s.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
+          {post.sections.map((s, i) => (
+            <Fragment key={s.h2}>
+              <section id={s.id} className="longformSection">
+                <h2>{s.h2}</h2>
+                {s.body.map((p, pi) => (
+                  <p key={pi}>{p}</p>
+                ))}
+                {s.bullets ? (
+                  <ul className="longformList">
+                    {s.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                {s.steps ? (
+                  <ol className="longformList">
+                    {s.steps.map((st) => (
+                      <li key={st.title}>
+                        <strong>{st.title}.</strong> {st.text}
+                      </li>
+                    ))}
+                  </ol>
+                ) : null}
+              </section>
+              {showDstvSoftSell && i === midAfterIndex ? (
+                <DstvSoftSellCta variant="mid" slug={slug} />
               ) : null}
-              {s.steps ? (
-                <ol className="longformList">
-                  {s.steps.map((st) => (
-                    <li key={st.title}>
-                      <strong>{st.title}.</strong> {st.text}
-                    </li>
-                  ))}
-                </ol>
-              ) : null}
-            </section>
+            </Fragment>
           ))}
 
           {post.faq && post.faq.length > 0 ? (
@@ -261,6 +271,8 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </section>
           ) : null}
+
+          {showDstvSoftSell ? <DstvSoftSellCta variant="end" slug={slug} /> : null}
 
           <TrustReversalBlock locale={loc} />
 
