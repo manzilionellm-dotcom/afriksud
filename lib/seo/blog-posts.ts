@@ -1,9 +1,21 @@
 // lib/seo/blog-posts.ts
-// Data for the 10 pillar blog posts. The body text is intentionally
-// shorter than the SEO playbook's 1500-word target — these ship as
-// editorial scaffolding for the owner / copy team to expand. Each post
-// already has its own canonical URL, JSON-LD Article schema, hreflang
-// alternates and an internal link to a relevant programmatic page.
+// Existing 17 scaffolding posts (live URLs — do not reconstruct) plus
+// the long-form guides in blog-guides.ts. Each post has a canonical URL,
+// JSON-LD Article schema, hreflang alternates and related internal links.
+
+import { BLOG_GUIDES } from "./blog-guides";
+
+export type BlogFaq = { q: string; a: string };
+export type BlogHowToStep = { title: string; text: string };
+
+export type BlogSection = {
+  /** Optional anchor for in-page TOC. */
+  id?: string;
+  h2: string;
+  body: string[];
+  bullets?: string[];
+  steps?: BlogHowToStep[];
+};
 
 export type BlogPost = {
   slug: string;
@@ -11,16 +23,36 @@ export type BlogPost = {
   metaDescription: string;
   /** Date the article is dated (publish ISO date for JSON-LD). */
   datePublished: string;
+  /** Optional freshness signal for sitemap + JSON-LD. */
+  dateModified?: string;
   /** Single-paragraph lead used as og:description and on the index page. */
   lead: string;
+  /** Optional extractable facts under the lead (DirectAnswer / AI Overviews). */
+  keyFacts?: string[];
   /** Section headings + paragraphs. Owner-editable. */
-  sections: { h2: string; body: string[] }[];
+  sections: BlogSection[];
+  /** FAQ accordion + FAQPage schema. Omit on older scaffolding posts. */
+  faq?: BlogFaq[];
+  /** HowTo schema wrapper. Steps live on a section; this names the recipe. */
+  howTo?: {
+    name: string;
+    description?: string;
+    totalTime?: string;
+    supply?: string[];
+    tool?: string[];
+  };
+  /** Soft WhatsApp hero/footer CTA. Falls back to a generic trial message. */
+  cta?: {
+    label: string;
+    message: string;
+    ref: string;
+  };
   /** Internal link slugs the post should point at. Used to render the
    *  "Related" footer block on each post automatically. */
   relatedLinks: { label: string; href: string }[];
 };
 
-export const BLOG_POSTS: BlogPost[] = [
+const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-watch-psl-online-2026",
     title: "How to watch PSL online in 2026 — every match, no DStv",
@@ -706,6 +738,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
 ];
+
+export const BLOG_POSTS: BlogPost[] = [...EXISTING_BLOG_POSTS, ...BLOG_GUIDES];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);

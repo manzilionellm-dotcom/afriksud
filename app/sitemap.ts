@@ -123,16 +123,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(withAlternates(`/language/${slug}/`, 0.7, "monthly"));
   }
 
-  // Blog posts — use per-post `datePublished` (blog posts don't carry
-  // a separate `dateModified` field; published-date is the closest
-  // honest signal we have).
+  // Blog posts — prefer dateModified when a guide carries one.
   for (const post of BLOG_POSTS) {
     entries.push(
       withAlternates(
         `/blog/${post.slug}/`,
         0.6,
         "monthly",
-        parseDate(post.datePublished)
+        parseDate(post.dateModified ?? post.datePublished)
       )
     );
   }

@@ -20,3 +20,9 @@
 
 ## run-004 (2026-09-04) — www 308 before trailing-slash
 - **D13.** `skipTrailingSlashRedirect: true` + middleware : 308 www→apex (path+query, y compris slash) **puis** slash-strip apex. `vercel.json` / `next.config.js` ajoutent `/:path+/`. Locales et WhatsApp inchangés.
+
+## run-005 (2026-09-05) — 12 guides blog ZA
+- **D14.** Nouveaux slugs seulement. Posts existants et pillars inchangés (Loi #4).
+- **D15.** Type `BlogPost` étendu (faq/howTo/cta optionnels) pour ne pas casser les 17 posts. Template émet FAQPage/HowTo seulement si données présentes.
+- **D16.** Conversion = WhatsApp only (`generateWhatsAppLink` + `InlinePricingBlock`). 0 mailto, 0 AggregateRating.
+- **D17.** Chiffres (R99 / R1,199 / DStv R899 / 20,000+ / NAPAfrica) = déjà publiés sur le site. Aucun volume GSC / avis inventé.
