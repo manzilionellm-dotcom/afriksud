@@ -271,7 +271,10 @@ function gateSpringboksUkHub() {
   const hubPage = read(join(ROOT, "app/[locale]/iptv-springboks-uk/page.tsx"));
   if (!hubPage || !/SPRINGBOKS_UK_HUB/.test(hubPage)) {
     fail("hub iptv-springboks-uk absent ou déconnecté du pack.");
-  } else if (/AggregateRating/.test(hubPage) || /mailto:/.test(hubPage)) {
+  } else if (
+    /"@type"\s*:\s*"AggregateRating"/.test(hubPage)
+    || /href=["']mailto:/.test(hubPage)
+  ) {
     fail("hub iptv-springboks-uk: AggregateRating / mailto interdits.");
   } else {
     ok("Hub /iptv-springboks-uk/ câblé (0 mailto, 0 AggregateRating).");

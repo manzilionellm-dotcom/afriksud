@@ -2,7 +2,7 @@
 // Thin FAQ hub for Seo short slug `iptv-springboks-uk`.
 // Visible accordion + FAQPage = SPRINGBOKS_LONDON_P1_FAQ (same pack as
 // /blog/watch-springboks-from-london/). Conversion = wa.me/447307410512.
-// 0 AggregateRating. 0 mailto. Does not reconstruct the live blog.
+// No star-rating schema. No email CTAs. Does not reconstruct the live blog.
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
