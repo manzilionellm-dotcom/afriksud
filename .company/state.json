@@ -19,7 +19,8 @@
     "run-010:308 /en/iptv-springboks-uk → blog London (P1 6Q); hub 200 removed",
     "run-011:soften /en-gb/ homepage (FAQ+1,200+/100x/every-match; 0 AggregateRating; WA 447307410512)",
     "run-012:FAQPage reinforce watch-springboks-from-london (P1 6Q exact + merge 8Q; 0 AR; 0 mailto; 0 every-feed)",
-    "run-013:vercel.json + route 308 /en/iptv-springboks-uk → blog London; next.config.ts removed"
+    "run-013:vercel.json + route 308 /en/iptv-springboks-uk → blog London; next.config.ts removed",
+    "run-014:lock WA prefill + soft purge on watch-springboks-from-london (0 Hi! I, 0 M3U, TiviMate FAQ-only, 20k soft)"
   ],
   "gsc_key_present": false
 }

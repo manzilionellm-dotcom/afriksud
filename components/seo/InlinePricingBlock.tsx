@@ -19,18 +19,28 @@ function pct(plan: { price: number; months: number }) {
   return Math.max(0, Math.round((1 - perMonth / 199) * 100));
 }
 
+function softenPerk(perk: string): string {
+  return perk
+    .replace(/20,000\+ live channels/g, "SA + sport folders to trial")
+    .replace(/20,000\+ channels/g, "Published channel pack")
+    .replace(/100,000\+ movies & series/g, "VOD on the trial");
+}
+
 export function InlinePricingBlock({
   locale,
   refTag = "InlinePricing",
   eyebrow,
   heading,
   sub,
+  softenCatalogClaims = false,
 }: {
   locale: Locale;
   refTag?: string;
   eyebrow?: string;
   heading?: string;
   sub?: string;
+  /** Strip invented catalogue counts on pages that must stay soft. */
+  softenCatalogClaims?: boolean;
 }) {
   const t = dict[locale];
 
@@ -133,9 +143,10 @@ export function InlinePricingBlock({
                   opacity: 0.92,
                 }}
               >
-                {t.planPerks[p.key].slice(0, 3).map((perk) => (
-                  <li key={perk}>✓ {perk}</li>
-                ))}
+                {t.planPerks[p.key].slice(0, 3).map((perk) => {
+                  const label = softenCatalogClaims ? softenPerk(perk) : perk;
+                  return <li key={label}>✓ {label}</li>;
+                })}
               </ul>
               <PriceTrigger
                 planKey={p.key}

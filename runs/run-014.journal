@@ -1,0 +1,30 @@
+# USINE v8 — Journal run-014 (WA prefill lock + soft purge — Springboks London)
+# Branch: cursor/springboks-london-wa-prefill-8366
+# Objectif: locker le prefill wa.me character-exact sur
+# `/en-za/blog/watch-springboks-from-london` + CTAs ; soft cleanup
+# (FAQ 6Q déjà #21, M3U, TiViMate FAQ-only, 20,000+ sur ce template).
+# Alias 308 déjà #22 — 0 landing. WA +44 7307 410512. 0 AR. 0 mailto.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: `origin/main` @ `6213cb1` `fix(seo): 308 /en/iptv-springboks-uk → London blog (#22)`
+- [x] Live blog **200**. Prefill locked **0**. Weak `Hi! I…` sur hero/footer/Diaspora + FAB
+- [x] Live FAQPage **8Q** (deploy ≠ git 6Q #21)
+- [x] Live `M3U` ×1 (dead-seller). TiviMate in HowTo. `20,000+` in InlinePricingBlock
+- [x] Live `/en/iptv-springboks-uk` **404** — git #22 a déjà 308. 0 landing à ajouter
+- [x] mailto = 0. AggregateRating = 0. `wa.me/447307410512` ×16. `+44 7307 410512` ×26
+- [x] GSC absente — volumes NON OBSERVÉS
+
+## Travail
+
+- [x] Prefill locked character-exact (0 Ref) sur blog CTAs + Diaspora + chrome qui bleed
+- [x] Soft: M3U hors body ; TiViMate FAQ-only ; 20,000+ adouci sur ce template (+ twitter overlay)
+- [x] FAQ 6Q source unique inchangée (déjà #21)
+- [x] Alias 308 #22 intact (0 page.tsx)
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` (1666) · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): href locked ×11 ; 0 Hi! I ; 6/6 P1 visible+FAQPage ; 0 M3U ; 0 20,000 ; 0 mailto ; 0 AR ; `+44 7307 410512` ×30 ; alias `/en/iptv-springboks-uk` 308 1 hop ; sibling Firestick 7Q inchangé
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/23
+
+## Originalité (Loi #10)
+
+Le href locked + Device: vide est ce que la live 8.6 n'a PAS: un prefill London/rugby/24h/no-card prêt à coller, sans `Hi! I…` ni Ref. Soft-sell inchangé.

@@ -63,3 +63,7 @@
 
 ## run-013 (2026-09-06) — edge 308 (live still 404 after #19)
 - **D38.** Même dest D30. Couche `vercel.json` (edge, www 1 hop avant `/:path*`) + `app/en/iptv-springboks-uk/route.ts` 308 only. `next.config.ts` vide retiré. 0 page 200 sur l'alias.
+
+## run-014 (2026-09-06) — WA prefill lock + soft purge London blog
+- **D39.** Href primaire = `SPRINGBOKS_LONDON_WA_HREF` character-exact (0 Ref) sur hero/footer/Diaspora + chrome qui bleed (FAB, header, checkout intro).
+- **D40.** Soft sur ce slug seulement : M3U retiré du body ; TiviMate FAQ Q3 only ; planPerks 20,000+ adoucis via `softenCatalogClaims`. 0 AggregateRating. 0 mailto. FAQ 6Q #21 inchangée. Alias #22 intact.

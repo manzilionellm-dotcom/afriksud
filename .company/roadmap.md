@@ -37,6 +37,9 @@
 ## run-013 (2026-09-06)
 - Live alias encore 404 après #19 (deploy lag). 308 edge `vercel.json` + route `/en/iptv-springboks-uk` (0 HTML). `next.config.ts` vide retiré.
 
+## run-014 (2026-09-06)
+- Prefill WA character-exact sur `/en-za/blog/watch-springboks-from-london` + CTAs. Soft: 0 M3U body, TiviMate FAQ-only, 20,000+ adouci sur ce template. Alias #22 intact.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).
