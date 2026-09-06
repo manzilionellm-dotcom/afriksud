@@ -27,9 +27,9 @@
 - [x] `watch-springboks-from-london` `faq[]` = pack P1 6Q verbatim (visible + FAQPage)
 - [x] Soft-align `iptv-uk-categories-not-licences` Q2 answer (claims P1 Q6, question distincte — pas de clone 6Q)
 - [x] Autres siblings inchangés (topic-specific, 0 promesse « every feed » / « 100% legal »)
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML: 6/6 Q+A verbatim + FAQPage 6 + wa.me/447307410512 + 0 mailto + 0 AggregateRating
-- [ ] PR ready
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): 6/6 Q+A verbatim visible+FAQPage; `wa.me/447307410512` ×16; 0 mailto; 0 AggregateRating schema; old 8Q absente; related labels humains; sibling légal Q2 soft-alignée; Firestick 7Q inchangée
+- [x] PR ready : https://github.com/manzilionellm-dotcom/afriksud/pull/17
 
 ## Originalité (Loi #10)
 
