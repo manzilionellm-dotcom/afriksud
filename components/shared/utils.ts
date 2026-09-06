@@ -15,6 +15,12 @@ export function generateWhatsAppLink(message: string, ua: string, ref?: string):
     : `https://api.whatsapp.com/send?phone=${SITE.whatsappPhone}&text=${text}`;
 }
 
+/** Always `wa.me` (desktop + mobile). Use on diaspora rugby / abroad CTAs. */
+export function waMeLink(message: string, ref?: string): string {
+  const suffix = ref ? ` | Ref: ${ref}` : "";
+  return `https://wa.me/${SITE.whatsappPhone}?text=${encodeURIComponent(message + suffix)}`;
+}
+
 export function getISOWeekKey(d = new Date()): string {
   const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
   const dayNum = date.getUTCDay() || 7;

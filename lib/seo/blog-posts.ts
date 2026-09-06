@@ -4,6 +4,7 @@
 // JSON-LD Article schema, hreflang alternates and related internal links.
 
 import { BLOG_GUIDES } from "./blog-guides";
+import { BLOG_DIASPORA } from "./blog-diaspora";
 
 export type BlogFaq = { q: string; a: string };
 export type BlogHowToStep = { title: string; text: string };
@@ -180,6 +181,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
+      { label: "Watch the Springboks from London — diaspora FAQ", href: "/en-za/blog/watch-springboks-from-london/" },
       { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
       { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026/" },
     ],
@@ -739,7 +741,11 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [...EXISTING_BLOG_POSTS, ...BLOG_GUIDES];
+export const BLOG_POSTS: BlogPost[] = [
+  ...EXISTING_BLOG_POSTS,
+  ...BLOG_GUIDES,
+  ...BLOG_DIASPORA,
+];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);

@@ -1,0 +1,44 @@
+# USINE v8 — Journal run-007 (diaspora rugby London FAQ → WhatsApp)
+# Branch: cursor/rugby-london-diaspora-faq-4256
+# Objectif: cluster FAQ EN (rugby depuis Londres / UK / abroad) + FAQPage + CTA wa.me/447307410512
+# Locales: corps EN. Blog canonique en-za (pattern existant). UK landing reste /en-gb/sa-abroad/uk/.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: `origin/main` @ `8144205` `feat(seo): DStv soft-sell CTA on ZA blog guides (PR #14 wave) (#15)`
+- [x] Live `https://iptvmzansi.com/en-gb/sa-abroad/uk` → **200** (template partagé, 0 FAQ, CTA hero = `/#offers` pas WhatsApp)
+- [x] Live `https://iptvmzansi.com/en-za/blog/watch-springboks-live-online` → **200** (scaffolding ZA, 0 FAQ, 0 London/timezone)
+- [x] Live 404 (slugs libres): `watch-springboks-from-london`, `iptv-uk-firestick-smart-tv-sa-sports`, `rugby-kickoff-times-london`, `iptv-buffering-uk-wifi`, `switch-iptv-seller-abroad-whatsapp`, `iptv-uk-categories-not-licences`
+- [x] Blog: 29 slugs (17 scaffolding + 12 guides run-005). Template = FAQPage/HowTo si données + DstvSoftSell MID/END **seulement** `BLOG_GUIDE_SLUGS`
+- [x] WA: `SITE.whatsappPhone` défaut `447307410512` (`components/shared/site.ts`)
+- [x] Sitemap: boucle `BLOG_POSTS` → nouveaux slugs auto-enregistrés
+- [x] GSC: `gsc_key_present: false` — volumes NON OBSERVÉS
+- [x] Intel concurrents: NON RENSEIGNÉ — originalité = angle London/diaspora absent des pages internes
+
+## Travail
+
+- [ ] 6 guides `/blog/` nouveaux (`lib/seo/blog-diaspora.ts`) — slugs inédits
+- [ ] FAQ 6–8 + FAQPage sur chaque guide
+- [ ] `DiasporaSoftSellCta` MID+END → `https://wa.me/447307410512` (DstvSoftSell des 12 ZA **conservé**)
+- [ ] sa-abroad `[country]`: FAQPage + WA mid/end **additif** (hero trial + pricing conservés)
+- [ ] InternalLinkHub + related (labels humains)
+- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [ ] Vérif HTML: FAQPage, wa.me/447307410512, 0 mailto, 0 AggregateRating
+- [ ] PR unique
+
+## 6 slugs nouveaux (preuve T0: absents de BLOG_POSTS + PILLARS + live 404)
+
+1. `watch-springboks-from-london` — Boks / URC / Super Rugby Pacific / Premiership-style depuis Londres
+2. `iptv-uk-firestick-smart-tv-sa-sports` — setup UK (Firestick / Smart TV) SA + sport UK
+3. `rugby-kickoff-times-london` — SAST ↔ GMT/BST (pas de calendrier inventé)
+4. `iptv-buffering-uk-wifi` — Virgin / BT / Sky / EE (≠ fibre ZA / NAPAfrica)
+5. `switch-iptv-seller-abroad-whatsapp` — trial 24h + vendeur mort à l'étranger
+6. `iptv-uk-categories-not-licences` — catégories playlist ≠ licences exclusives
+
+## Originalité (Loi #10)
+
+Ce que `watch-springboks-live-online` + `sa-abroad/uk` n'ont PAS: conversion d'heure SAST→Londres, setup retail UK, Wi-Fi UK, bascule vendeur mort hors ZA, disclaimer catégories≠licences. Pas une 2e page Springboks ZA.
+
+## Anti-cannibalisation
+
+Aucun slug live reconstruit. Related-link seul sur le post Springboks existant. 0 mailto. 0 AggregateRating.

@@ -282,4 +282,43 @@ export function getSaAbroadCountry(slug: string): SaAbroadCountry | undefined {
   return SA_ABROAD_COUNTRIES.find((c) => c.slug === slug);
 }
 
+/** 8 diaspora FAQs — interpolated, no exclusive-rights claims. */
+export function saAbroadFaq(data: SaAbroadCountry): { q: string; a: string }[] {
+  const city = data.cities[0];
+  return [
+    {
+      q: `Can I watch SuperSport and the Springboks in ${data.name}?`,
+      a: `Yes — test the SuperSport Rugby / Variety / Grandstand categories on a 24-hour WhatsApp trial from ${city}. Those are playlist folders, not exclusive SuperSport licences.`,
+    },
+    {
+      q: `What time is a South African rugby kickoff in ${data.name}?`,
+      a: `${data.timezone}. For London-style conversion (SAST → GMT/BST) see the rugby kickoff-times guide. We do not invent a fixture calendar here.`,
+    },
+    {
+      q: `What device should I use in ${data.name}?`,
+      a: `Firestick 4K / 4K Max with TiviMate, or Samsung / LG / Hisense with IPTV Smarters. Name the model on WhatsApp. The UK setup guide is the Firestick/Smart TV deep dive.`,
+    },
+    {
+      q: `Will it buffer on home Wi-Fi in ${data.name}?`,
+      a: `Use 5 GHz or Ethernet and an 8-second player buffer before you blame the playlist. Edge note already on this page: ${data.edgeRegion}. UK Wi-Fi specifics are on the UK buffering guide.`,
+    },
+    {
+      q: `How do I get a 24-hour trial from ${data.name}?`,
+      a: `WhatsApp +44 7307 410512 (wa.me/447307410512). City, device, and “24-hour trial”. No card. No mailto.`,
+    },
+    {
+      q: `My old IPTV seller died while I was already in ${data.name}. Now what?`,
+      a: `Load a new 24-hour trial as a second playlist. Do not send a passport. The switch-while-abroad guide is the checklist.`,
+    },
+    {
+      q: `How do I pay from ${data.name}?`,
+      a: `Visa, Mastercard, PayPal, Apple Pay, Google Pay or Wise — already listed on this page. ${data.localPriceNote}. ZA EFT remains if you still have that account.`,
+    },
+    {
+      q: `Are you selling Sky or SuperSport exclusive rights in ${data.name}?`,
+      a: `No. We list channel categories. See “IPTV categories are not broadcast licences”. Confirm folders on the trial.`,
+    },
+  ];
+}
+
 export const SA_ABROAD_SLUGS = SA_ABROAD_COUNTRIES.map((c) => c.slug);

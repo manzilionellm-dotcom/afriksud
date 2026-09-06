@@ -37,7 +37,11 @@ export function HubListing({
   itemListName: string;
   basePath: string;
   intro?: string[];
-  extraSections?: { h2: string; paragraphs: string[] }[];
+  extraSections?: {
+    h2: string;
+    paragraphs: string[];
+    links?: { label: string; href: string }[];
+  }[];
 }) {
   const canonical = localeUrl(locale, basePath);
 
@@ -118,6 +122,15 @@ export function HubListing({
               {s.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
+              {s.links && s.links.length ? (
+                <ul className="longformList">
+                  {s.links.map((l) => (
+                    <li key={l.href}>
+                      <Link href={`/${locale}${l.href}`}>{l.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </section>
           ))}
         </article>

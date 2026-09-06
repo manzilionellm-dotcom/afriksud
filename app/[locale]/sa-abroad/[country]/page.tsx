@@ -14,8 +14,12 @@ import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   SA_ABROAD_SLUGS,
   getSaAbroadCountry,
+  saAbroadFaq,
 } from "../../../../lib/seo/sa-abroad";
+import { JsonLd } from "../../../../lib/seo/jsonld";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
+import { waMeLink } from "../../../../components/shared/utils";
 
 type Props = { params: Promise<{ locale: string; country: string }> };
 
@@ -96,6 +100,22 @@ export default async function SaAbroadCountryPage({ params }: Props) {
     ],
   };
 
+  const faq = saAbroadFaq(data);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const waTrialHref = waMeLink(
+    `Hi! I'm a South African in ${data.name} (${data.cities[0]}). Device: [Firestick / Smart TV]. I want the free 24-hour trial — SuperSport rugby + SA channels.`,
+    `SAAbroad-${data.iso2}-Trial`
+  );
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -118,14 +138,9 @@ export default async function SaAbroadCountryPage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
 
       <LongformShell locale={locale as Locale}>
         <article className="section">
@@ -148,8 +163,18 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             </p>
             <div className="ctaRow">
               <a
-                href={`/?ref=SAAbroad-${data.iso2}#offers`}
+                href={waTrialHref}
                 className="btnPrimary"
+                target="_blank"
+                rel="noreferrer"
+                data-track-ref={`SAAbroad-${data.iso2}-Hero`}
+                data-track-placement={`SAAbroad-${data.iso2}-Hero`}
+              >
+                WhatsApp 24h trial — +44 7307 410512 →
+              </a>
+              <a
+                href={`/?ref=SAAbroad-${data.iso2}#offers`}
+                className="btnSecondary"
               >
                 Start 24h free trial →
               </a>
@@ -214,6 +239,12 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             </p>
           </section>
 
+          <DiasporaSoftSellCta
+            variant="mid"
+            slug={`sa-abroad-${data.slug}`}
+            place={`${data.cities[0]} / ${data.name}`}
+          />
+
           <section className="longformSection">
             <h2>Premier League, PSL and DStv channels overseas</h2>
             <p>
@@ -259,9 +290,50 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             </p>
           </section>
 
+          <section className="longformSection" id="faq">
+            <h2>Frequently asked questions</h2>
+            {faq.map((f) => (
+              <details key={f.q} className="faqItem">
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </section>
+
+          <DiasporaSoftSellCta
+            variant="end"
+            slug={`sa-abroad-${data.slug}`}
+            place={`${data.cities[0]} / ${data.name}`}
+          />
+
           <section className="longformSection">
             <h2>Related</h2>
             <ul className="longformList">
+              <li>
+                <Link href={`/${locale}/blog/watch-springboks-from-london/`}>
+                  Watch the Springboks from London — diaspora rugby FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/blog/rugby-kickoff-times-london/`}>
+                  Rugby kickoff times from London (SAST to GMT/BST)
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/blog/iptv-uk-firestick-smart-tv-sa-sports/`}>
+                  Best IPTV setup in the UK — Firestick and Smart TV
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/blog/switch-iptv-seller-abroad-whatsapp/`}>
+                  Switch from a dead IPTV seller while abroad
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/blog/iptv-uk-categories-not-licences/`}>
+                  IPTV categories are not broadcast licences
+                </Link>
+              </li>
               <li>
                 <Link href={`/${locale}/dstv-alternative/`}>
                   DStv abroad — full 2026 guide and pricing comparison
