@@ -261,16 +261,53 @@ function gateLocalesFrozen() {
   }
 }
 
+const SPRINGBOKS_P1_QS = [
+  "Can I watch Springboks and URC matches from London without a South African cable subscription?",
+  "Will I get every SuperSport-style feed for rugby?",
+  "Do time zones / kick-off times work for live matches in the UK?",
+  "Can I set this up on a Firestick or Smart TV in the UK?",
+  "Is there a 24-hour trial before I pay?",
+  "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
+];
+
 function gateSpringboksUkAliases() {
   const faqSrc = read(join(ROOT, "lib/seo/blog-diaspora.ts"));
   if (!/export const SPRINGBOKS_LONDON_P1_FAQ/.test(faqSrc)) {
     fail("SPRINGBOKS_LONDON_P1_FAQ manquant (pack P1 6Q).");
+  } else if (!/export const SPRINGBOKS_LONDON_P1_QUESTIONS/.test(faqSrc)) {
+    fail("SPRINGBOKS_LONDON_P1_QUESTIONS manquant (lock questions P1).");
   } else if (!/faq:\s*SPRINGBOKS_LONDON_P1_FAQ/.test(faqSrc)) {
     fail("watch-springboks-from-london n'utilise pas le pack P1 6Q.");
   } else if (/"@type"\s*:\s*"AggregateRating"/.test(faqSrc)) {
     fail("blog-diaspora: AggregateRating interdit.");
   } else {
-    ok("Pack P1 6Q câblé sur le blog London (0 AggregateRating).");
+    const londonEnd = faqSrc.indexOf('slug: "iptv-uk-firestick');
+    const londonBlock = londonEnd > 0 ? faqSrc.slice(0, londonEnd) : faqSrc;
+    const missingQ = SPRINGBOKS_P1_QS.filter((q) => !faqSrc.includes(q));
+    if (missingQ.length) {
+      fail(`Pack P1 6Q incomplet — questions manquantes: ${missingQ.length}.`);
+    } else if ((faqSrc.match(/SPRINGBOKS_LONDON_P1_QUESTIONS\[\d]/g) || []).length !== 6) {
+      fail("SPRINGBOKS_LONDON_P1_FAQ doit citer les 6 questions P1.");
+    } else if (/mailto:/.test(londonBlock)) {
+      fail("watch-springboks-from-london: mailto interdit.");
+    } else if (/\b(we |you'll |you )(get|carry|offer|unlock|guarantee|promise) every (supersport|official|match) feed/i.test(londonBlock)) {
+      fail("watch-springboks-from-london: promesse every-feed interdite.");
+    } else if (!londonBlock.includes("+44 7307 410512") || !londonBlock.includes("wa.me/447307410512")) {
+      fail("watch-springboks-from-london: WA +44 7307 410512 / wa.me/447307410512 manquant.");
+    } else {
+      ok("Pack P1 6Q exact câblé sur le blog London (0 AR, 0 mailto, 0 every-feed).");
+    }
+  }
+  const blogTpl = read(join(ROOT, "app/[locale]/blog/[slug]/page.tsx"));
+  const faqHelper = read(join(ROOT, "lib/seo/faq-page.ts"));
+  if (!/buildFaqPageSchema/.test(blogTpl) || !/reinforce:\s*isSpringboksLondon/.test(blogTpl)) {
+    fail("blog template: FAQPage renforcée absente sur watch-springboks-from-london.");
+  } else if (!/@id/.test(faqHelper) || !/inLanguage/.test(faqHelper)) {
+    fail("faq-page.ts: @id / inLanguage manquants.");
+  } else if (!/emitSchema=\{!isSpringboksLondon\}/.test(blogTpl)) {
+    fail("blog template: DirectAnswer Question schema doit céder à FAQPage sur London.");
+  } else {
+    ok("FAQPage London renforcée (@id, inLanguage) — 0 Question DirectAnswer.");
   }
   const hubPage = read(join(ROOT, "app/[locale]/iptv-springboks-uk/page.tsx"));
   if (hubPage) {

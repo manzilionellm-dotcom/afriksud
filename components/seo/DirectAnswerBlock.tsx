@@ -17,9 +17,17 @@ type Props = {
    *  under the answer. Each bullet should be a complete sentence so an
    *  AI engine can quote one line in isolation. */
   keyFacts?: string[];
+  /** When false, keep the visible block but do not emit a competing
+   *  Question JSON-LD (used so a page's FAQPage is the sole Q&A graph). */
+  emitSchema?: boolean;
 };
 
-export function DirectAnswerBlock({ question, answer, keyFacts }: Props) {
+export function DirectAnswerBlock({
+  question,
+  answer,
+  keyFacts,
+  emitSchema = true,
+}: Props) {
   const qaSchema = {
     "@context": "https://schema.org",
     "@type": "Question",
@@ -46,7 +54,7 @@ export function DirectAnswerBlock({ question, answer, keyFacts }: Props) {
           "linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0))",
       }}
     >
-      <JsonLd data={qaSchema} />
+      {emitSchema ? <JsonLd data={qaSchema} /> : null}
       <p
         style={{
           fontSize: 12,
