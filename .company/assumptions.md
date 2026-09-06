@@ -15,3 +15,7 @@
 - **A9.** « MANY high-quality SEO blogs » = 12 guides **nouveaux** (8–12 demandé). Les 17 posts existants restent en scaffolding : Loi #4 interdit de reconstruire des URLs live 200.
 - **A10.** Autres locales = bas risque via `generateStaticParams` + `robotsForProgrammatic` (index EN only). Corps EN, pas de traduction machine (Loi #9).
 - **A11.** SERP concurrente non mesurée (intel vide, pas de GSC). Originalité = angle opérationnel absent des pillars/blogs internes, pas un claim de volume.
+
+## run-006
+- **A12.** « Prefer DStv/sport/switch/load-shedding ; all 12 OK if clean » → les 12 guides PR #14 sont clean (pas de mailto / AggregateRating, prix déjà publiés) → injection sur les 12.
+- **A13.** « From about €5/mo on 12 months » est la copie owner fournie (EXACT). Ce n'est pas un nouveau tarif ZAR : les plans publiés restent R199 / R449 / R699 / R1,199. Le €5 n'est pas un taux de change mesuré ce run.

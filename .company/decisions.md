@@ -26,3 +26,7 @@
 - **D15.** Type `BlogPost` étendu (faq/howTo/cta optionnels) pour ne pas casser les 17 posts. Template émet FAQPage/HowTo seulement si données présentes.
 - **D16.** Conversion = WhatsApp only (`generateWhatsAppLink` + `InlinePricingBlock`). 0 mailto, 0 AggregateRating.
 - **D17.** Chiffres (R99 / R1,199 / DStv R899 / 20,000+ / NAPAfrica) = déjà publiés sur le site. Aucun volume GSC / avis inventé.
+
+## run-006 (2026-09-05) — DStv soft-sell on PR #14 blog guides
+- **D18.** MID + END commercial DStv injectés via `DstvSoftSellCta` dans le template blog, uniquement si `BLOG_GUIDE_SLUGS` (12 guides PR #14). Les 17 posts live et les blocks TrustReversal / InlinePricing / hero+footer WA restent.
+- **D19.** WhatsApp du bloc = `generateWhatsAppLink` + `SITE.whatsappPhone` (défaut `447307410512`). Texte visible END = `https://wa.me/${SITE.whatsappPhone}` · `SITE.domain`. 0 mailto, 0 AggregateRating.

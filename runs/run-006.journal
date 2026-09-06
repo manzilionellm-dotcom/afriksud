@@ -1,0 +1,42 @@
+# USINE v8 — Journal run-006 (DStv soft-sell CTA on ZA blog guides)
+# Branch: cursor/dstv-soft-sell-blog-guides-2ccc
+# Objectif: Injecter MID + END commercial DStv (copie exacte) dans les 12 guides PR #14.
+# Locales: en-za canonique. WhatsApp via helpers → 447307410512. 0 mailto, 0 AggregateRating.
+
+## T0 (mesuré, 2026-09-05)
+
+- [x] git: `main` @ `0175914` `feat(seo): add 12 long-form ZA blog guides with FAQPage/HowTo (#14)`, working tree clean
+- [x] 12 guides dans `lib/seo/blog-guides.ts` — aucun MID/END DStv soft-sell
+- [x] Template `app/[locale]/blog/[slug]/page.tsx` : hero CTA + TrustReversal + InlinePricing + footer WA
+- [x] WA helper: `generateWhatsAppLink` → `SITE.whatsappPhone` défaut `447307410512`
+- [x] 0 `mailto:` / 0 `AggregateRating` dans les guides (rg)
+- [x] Prix existants (R199 / R449 / R699 / R1,199) + CTAs existants à conserver
+- [x] GSC: clé absente — volumes NON OBSERVÉS
+
+## Travail
+
+- [x] `DstvSoftSellCta` (MID + END, copie exacte, WA via helper)
+- [x] Injection template sur les 12 slugs PR #14 seulement (17 posts live intacts)
+- [x] Prix / TrustReversal / hero+footer CTA non retirés
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML: 12/12 guides MID+END + `wa.me/447307410512` + helper href; scaffold `dstv-vs-iptv-2026-complete-guide` sans bloc; 0 mailto; 0 AggregateRating; `#pricing` / R99 / footer CTA conservés
+- [x] PR unique depuis `main`: https://github.com/manzilionellm-dotcom/afriksud/pull/15
+
+## 12 slugs (tous — DStv/sport/switch/load-shedding préférés, les 12 sont clean)
+
+1. `order-iptv-whatsapp-south-africa`
+2. `iptv-multiple-devices-south-africa`
+3. `tivimate-setup-south-africa-2026`
+4. `iptv-load-shedding-south-africa` — load-shedding
+5. `watch-premier-league-south-africa-no-dstv` — DStv + sport
+6. `switch-from-dstv-to-iptv-weekend` — switch + DStv
+7. `iptv-on-lte-5g-south-africa`
+8. `watch-proteas-cricket-online-south-africa` — sport
+9. `iptv-epg-catchup-south-africa`
+10. `firestick-4k-max-vs-lite-south-africa`
+11. `iptv-wifi-6-router-south-africa`
+12. `watch-kyknet-online-without-dstv` — DStv
+
+## Originalité (Loi #10)
+
+Le bloc n'est pas une 2e table de prix. MID cadre DStv vs IPTV (officiel vs lean). END demande device + ligues, promet un avis droit + trial 24h — angle absent des 17 posts scaffolding.
