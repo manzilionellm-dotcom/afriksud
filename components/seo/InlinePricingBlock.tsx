@@ -145,7 +145,7 @@ export function InlinePricingBlock({
               >
                 {t.planPerks[p.key].slice(0, 3).map((perk) => {
                   const label = softenCatalogClaims ? softenPerk(perk) : perk;
-                  return <li key={perk}>✓ {label}</li>;
+                  return <li key={label}>✓ {label}</li>;
                 })}
               </ul>
               <PriceTrigger

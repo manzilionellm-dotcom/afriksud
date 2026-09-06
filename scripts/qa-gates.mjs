@@ -343,6 +343,8 @@ function gateSpringboksUkAliases() {
     fail("blog template: href locked + softenCatalogClaims absents sur London.");
   } else if (!/waOverride=\{londonWaOverride\}/.test(blogTpl)) {
     fail("blog template: chrome waOverride absent sur London.");
+  } else if (!/twitter:/.test(blogTpl) || !/slug === "watch-springboks-from-london"/.test(blogTpl)) {
+    fail("blog template: twitter title London doit overlay le 20,000+ root.");
   } else {
     ok("FAQPage London renforcée (@id, inLanguage) — 0 Question DirectAnswer.");
     ok("Blog London: WA href locked + chrome override + perks soft.");

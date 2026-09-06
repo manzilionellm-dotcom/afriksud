@@ -64,6 +64,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.metaDescription,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
+    ...(slug === "watch-springboks-from-london"
+      ? {
+          twitter: {
+            title: post.title,
+            description: post.metaDescription,
+          },
+        }
+      : {}),
     robots: robotsForProgrammatic(locale as Locale),
   };
 }
