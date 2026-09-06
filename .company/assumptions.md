@@ -53,3 +53,9 @@
 ## run-013
 - **A30.** Git `94c3097` (#21, inclut #19) a déjà les 308 Next/middleware ; live 2026-09-06 `curl` = **404** (`x-matched-path: /_not-found`). Prod ≠ git. `vercel.json` n'avait que www→apex → l'alias n'existait pas à l'edge.
 - **A31.** `next.config.ts` vide + `next.config.js` : Next 15 charge l'un des deux. Un seul fichier (js) pour que skipTrailingSlashRedirect + redirects #19 ne puissent pas être ignorés.
+
+## run-014
+- **A32.** Prefill locked = le href owner byte-identique, **sans** `| Ref:`. Em-dash U+2014. Chrome (FAB / header / checkout intro) override seulement sur ce slug.
+- **A33.** FAQ 6Q déjà #21 ; live 8Q = Hobby lag. On ne reclône pas, on ne réécrit pas les questions.
+- **A34.** Alias 308 déjà #22. Live encore 404. 0 landing. 0 restauration sauf si le code manquait (il ne manque pas).
+- **A35.** `20,000+` adouci uniquement dans `InlinePricingBlock` de ce slug (`softenCatalogClaims`). dict.ts / homepage / siblings inchangés.

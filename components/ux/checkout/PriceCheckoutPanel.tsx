@@ -16,6 +16,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { createPortal } from "react-dom";
 import { Check, ChevronRight, ShieldCheck, X, MessageCircle } from "lucide-react";
 import { useLang } from "../../client/LanguageProvider";
+import { useWaPrefillOverride } from "../../client/WaPrefillContext";
 import { dict } from "../../shared/dict";
 import { plans } from "../../shared/plans";
 import { SITE } from "../../shared/site";
@@ -128,6 +129,7 @@ export function PriceCheckoutPanel({
 }) {
   const { lang } = useLang();
   const t = dict[lang];
+  const waOverride = useWaPrefillOverride();
 
   // Live picked plan (drives the recap + morph).
   const [planKey, setPlanKey] = useState<PlanKey>(initialPlanKey);
@@ -277,7 +279,7 @@ export function PriceCheckoutPanel({
         : "/";
     const planLabel = `${t.planNames[currentPlan.key]} (${currentPlan.months}m)`;
     const message = buildWhatsAppMessage({
-      intro: t.checkout.waIntro,
+      intro: waOverride?.message ?? t.checkout.waIntro,
       planLabel,
       total: planTotal(currentPlan),
       currencyLabel: SITE.currencyLabel,
@@ -303,6 +305,7 @@ export function PriceCheckoutPanel({
     t.checkout.waContext,
     t.checkout.waNotesLabel,
     t.planNames,
+    waOverride,
   ]);
 
   // ─── Submit via synthetic <a>.click() so analytics fires ─────

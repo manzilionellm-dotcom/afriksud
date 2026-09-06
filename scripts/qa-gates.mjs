@@ -297,6 +297,39 @@ function gateSpringboksUkAliases() {
     } else {
       ok("Pack P1 6Q exact câblé sur le blog London (0 AR, 0 mailto, 0 every-feed).");
     }
+    const LOCKED_PREFILL =
+      "Hi — London UK. Want SA rugby / Springboks on IPTV + 24h trial (no card). Device:";
+    const LOCKED_HREF =
+      "https://wa.me/447307410512?text=Hi%20%E2%80%94%20London%20UK.%20Want%20SA%20rugby%20%2F%20Springboks%20on%20IPTV%20%2B%2024h%20trial%20(no%20card).%20Device%3A";
+    const postAt = faqSrc.indexOf('slug: "watch-springboks-from-london"');
+    const postBlock = postAt >= 0 ? faqSrc.slice(postAt, londonEnd > 0 ? londonEnd : undefined) : "";
+    const faqBlockStart = faqSrc.indexOf("export const SPRINGBOKS_LONDON_P1_FAQ");
+    const faqBlockEnd = faqSrc.indexOf("export const BLOG_DIASPORA");
+    const faqBlock =
+      faqBlockStart >= 0 && faqBlockEnd > faqBlockStart
+        ? faqSrc.slice(faqBlockStart, faqBlockEnd)
+        : "";
+    if (!faqSrc.includes(`export const SPRINGBOKS_LONDON_WA_PREFILL`) || !faqSrc.includes(LOCKED_PREFILL)) {
+      fail("watch-springboks-from-london: SPRINGBOKS_LONDON_WA_PREFILL character-exact manquant.");
+    } else if (!faqSrc.includes(`export const SPRINGBOKS_LONDON_WA_HREF`) || !faqSrc.includes(LOCKED_HREF)) {
+      fail("watch-springboks-from-london: SPRINGBOKS_LONDON_WA_HREF character-exact manquant.");
+    } else if (encodeURIComponent(LOCKED_PREFILL) !== LOCKED_HREF.split("?text=")[1]) {
+      fail("watch-springboks-from-london: encodeURIComponent(prefill) ≠ href locked.");
+    } else if (!postBlock.includes("message: SPRINGBOKS_LONDON_WA_PREFILL")) {
+      fail("watch-springboks-from-london: CTA message doit être le prefill locked.");
+    } else if (/Hi! I/.test(postBlock) || /Hi! I/.test(faqBlock)) {
+      fail("watch-springboks-from-london: prefill faible Hi! I… interdit.");
+    } else if (/\bM3U\b/.test(postBlock) || /\bM3U\b/.test(faqBlock)) {
+      fail("watch-springboks-from-london: M3U public interdit (body/FAQ).");
+    } else if (/20,000/.test(postBlock) || /20,000/.test(faqBlock)) {
+      fail("watch-springboks-from-london: claim 20,000+ interdit.");
+    } else if (/TiviMate|TiViMate/.test(postBlock)) {
+      fail("watch-springboks-from-london: TiviMate hors FAQ (lead/HowTo/body).");
+    } else if (!/TiviMate/.test(faqBlock)) {
+      fail("watch-springboks-from-london: TiviMate doit rester FAQ-only.");
+    } else {
+      ok("WA prefill locked + soft purge (0 Hi! I, 0 M3U, 0 20,000, TiviMate FAQ-only).");
+    }
   }
   const blogTpl = read(join(ROOT, "app/[locale]/blog/[slug]/page.tsx"));
   const faqHelper = read(join(ROOT, "lib/seo/faq-page.ts"));
@@ -306,8 +339,13 @@ function gateSpringboksUkAliases() {
     fail("faq-page.ts: @id / inLanguage manquants.");
   } else if (!/emitSchema=\{!isSpringboksLondon\}/.test(blogTpl)) {
     fail("blog template: DirectAnswer Question schema doit céder à FAQPage sur London.");
+  } else if (!/SPRINGBOKS_LONDON_WA_HREF/.test(blogTpl) || !/softenCatalogClaims=\{isSpringboksLondon\}/.test(blogTpl)) {
+    fail("blog template: href locked + softenCatalogClaims absents sur London.");
+  } else if (!/waOverride=\{londonWaOverride\}/.test(blogTpl)) {
+    fail("blog template: chrome waOverride absent sur London.");
   } else {
     ok("FAQPage London renforcée (@id, inLanguage) — 0 Question DirectAnswer.");
+    ok("Blog London: WA href locked + chrome override + perks soft.");
   }
   const hubPage = read(join(ROOT, "app/[locale]/iptv-springboks-uk/page.tsx"));
   if (hubPage) {

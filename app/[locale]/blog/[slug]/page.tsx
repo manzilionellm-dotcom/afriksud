@@ -3,6 +3,7 @@
 // the post carries faq[] / section steps. Conversion is WhatsApp only.
 // watch-springboks-from-london: reinforced FAQPage (@id + inLanguage);
 // DirectAnswer stays visible without a competing Question schema.
+// Primary WA href = SPRINGBOKS_LONDON_WA_HREF (character-exact, 0 Ref).
 
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
@@ -14,7 +15,11 @@ import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { BLOG_SLUGS, getBlogPost } from "../../../../lib/seo/blog-posts";
 import { BLOG_GUIDE_SLUGS } from "../../../../lib/seo/blog-guides";
-import { BLOG_DIASPORA_SLUGS } from "../../../../lib/seo/blog-diaspora";
+import {
+  BLOG_DIASPORA_SLUGS,
+  SPRINGBOKS_LONDON_WA_HREF,
+  SPRINGBOKS_LONDON_WA_PREFILL,
+} from "../../../../lib/seo/blog-diaspora";
 import { DstvSoftSellCta } from "../../../../components/seo/DstvSoftSellCta";
 import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
 import {
@@ -81,9 +86,14 @@ export default async function BlogPostPage({ params }: Props) {
   };
   const showDiasporaSoftSell = BLOG_DIASPORA_SLUGS.includes(slug);
   const isSpringboksLondon = slug === "watch-springboks-from-london";
-  const waHref = showDiasporaSoftSell
-    ? waMeLink(cta.message, cta.ref)
-    : generateWhatsAppLink(cta.message, "", cta.ref);
+  const waHref = isSpringboksLondon
+    ? SPRINGBOKS_LONDON_WA_HREF
+    : showDiasporaSoftSell
+      ? waMeLink(cta.message, cta.ref)
+      : generateWhatsAppLink(cta.message, "", cta.ref);
+  const londonWaOverride = isSpringboksLondon
+    ? { href: SPRINGBOKS_LONDON_WA_HREF, message: SPRINGBOKS_LONDON_WA_PREFILL }
+    : null;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -182,7 +192,7 @@ export default async function BlogPostPage({ params }: Props) {
       ) : null}
       {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
-      <LongformShell locale={loc}>
+      <LongformShell locale={loc} waOverride={londonWaOverride}>
         <article className="section">
           <header className="longformHeader">
             <p className="longformEyebrow">
@@ -277,6 +287,9 @@ export default async function BlogPostPage({ params }: Props) {
                   variant="mid"
                   slug={slug}
                   place="London / the UK"
+                  waHrefOverride={
+                    isSpringboksLondon ? SPRINGBOKS_LONDON_WA_HREF : undefined
+                  }
                 />
               ) : null}
             </Fragment>
@@ -300,6 +313,9 @@ export default async function BlogPostPage({ params }: Props) {
               variant="end"
               slug={slug}
               place="London / the UK"
+              waHrefOverride={
+                isSpringboksLondon ? SPRINGBOKS_LONDON_WA_HREF : undefined
+              }
             />
           ) : null}
 
@@ -310,6 +326,7 @@ export default async function BlogPostPage({ params }: Props) {
             refTag={`Blog-${slug}`}
             heading={`Get started with ${SITE.brand} — from R99/month`}
             sub="Same channel pack on every plan. Pay once, no auto-renewal, no contract. 24-hour free trial available on WhatsApp."
+            softenCatalogClaims={isSpringboksLondon}
           />
 
           <section className="longformSection" id="next-step">

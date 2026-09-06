@@ -15,15 +15,18 @@ export function DiasporaSoftSellCta({
   variant,
   slug,
   place = "London / the UK",
+  waHrefOverride,
 }: {
   variant: Variant;
   slug: string;
   /** City or country for the pre-filled chat (sa-abroad pages). */
   place?: string;
+  /** Character-exact href for the London blog (0 Ref). */
+  waHrefOverride?: string;
 }) {
   const ref = `Diaspora-${slug}-${variant === "mid" ? "Mid" : "End"}`;
   const message = `Hi! I'm a South African watching from ${place}. Device: [Firestick / Samsung / LG / Hisense]. I want the free 24-hour trial — Springboks / URC / SA channels.`;
-  const waHref = waMeLink(message, ref);
+  const waHref = waHrefOverride ?? waMeLink(message, ref);
 
   if (variant === "mid") {
     return (

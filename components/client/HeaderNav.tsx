@@ -7,10 +7,12 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 import { dict } from "../shared/dict";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
+import { useWaPrefillOverride } from "./WaPrefillContext";
 
 export function HeaderNav() {
   const { lang } = useLang();
   const t = dict[lang];
+  const waOverride = useWaPrefillOverride();
   const [menuOpen, setMenuOpen] = useState(false);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
   const [ua, setUA] = useState("");
@@ -88,7 +90,7 @@ export function HeaderNav() {
           />
           <a
             className="btnPrimary"
-            href={generateWhatsAppLink(t.whatsapp.generic, ua, "Mobile-Menu")}
+            href={waOverride?.href ?? generateWhatsAppLink(t.whatsapp.generic, ua, "Mobile-Menu")}
             target="_blank"
             rel="noreferrer"
             style={{ textAlign: "center", marginTop: 8 }}

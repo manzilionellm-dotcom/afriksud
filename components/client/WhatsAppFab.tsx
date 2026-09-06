@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
 import { LOCALE_META, type Locale } from "../../lib/locales";
 import { SITE } from "../shared/site";
+import { useWaPrefillOverride } from "./WaPrefillContext";
 
 const PREFILL: Record<Locale, string> = {
   "en-za": "Hi! I'd like a free 24h Mzansi Stream trial.",
@@ -57,6 +58,7 @@ function readEnv(key: string): string | undefined {
 
 export function WhatsAppFab() {
   const { lang } = useLang();
+  const waOverride = useWaPrefillOverride();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -68,7 +70,9 @@ export function WhatsAppFab() {
     readEnv("NEXT_PUBLIC_WHATSAPP_DEFAULT") ||
     SITE.whatsappPhone;
   const message = PREFILL[lang] ?? PREFILL["en-za"];
-  const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  const href =
+    waOverride?.href ??
+    `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 
   return (
     <a

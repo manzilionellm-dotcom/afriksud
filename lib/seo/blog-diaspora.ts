@@ -6,10 +6,20 @@
 // run-012 — same 6Q questions; answers merge unique live-8Q facts; FAQPage
 // reinforced (@id / inLanguage). MID+END WA is DiasporaSoftSellCta
 // (wa.me/447307410512), not DstvSoftSellCta.
+// run-014 — primary wa.me prefill locked character-exact (0 Ref). Body:
+// no public M3U; TiviMate FAQ-only; 20,000+ not in this post.
 
 import type { BlogFaq, BlogPost } from "./blog-posts";
 
 const PUB = "2026-09-06";
+
+/** Locked primary WhatsApp prefill for this blog + CTAs. Em-dash U+2014. 0 Ref. */
+export const SPRINGBOKS_LONDON_WA_PREFILL =
+  "Hi — London UK. Want SA rugby / Springboks on IPTV + 24h trial (no card). Device:";
+
+/** Character-exact href. Do not append `| Ref:`. */
+export const SPRINGBOKS_LONDON_WA_HREF =
+  "https://wa.me/447307410512?text=Hi%20%E2%80%94%20London%20UK.%20Want%20SA%20rugby%20%2F%20Springboks%20on%20IPTV%20%2B%2024h%20trial%20(no%20card).%20Device%3A";
 
 /** Seo P1 6Q questions — locked verbatim. Do not rewrite or clone onto siblings. */
 export const SPRINGBOKS_LONDON_P1_QUESTIONS = [
@@ -41,7 +51,7 @@ export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[3],
-    a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
+    a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. TiviMate is one Firestick player some viewers use — we only mention it here as setup help, not as a requirement. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[4],
@@ -70,8 +80,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     ],
     cta: {
       label: "WhatsApp the London rugby trial — +44 7307 410512 →",
-      message:
-        "Hi! I'm in London. I want the 24-hour Mzansi Stream trial for Springboks / URC / SA channels. Device: [Firestick / Smart TV].",
+      message: SPRINGBOKS_LONDON_WA_PREFILL,
       ref: "Blog-Boks-London",
     },
     howTo: {
@@ -80,7 +89,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         "Request a WhatsApp trial from the UK, favourite SuperSport Rugby, and test a live or next fixture on London time.",
       totalTime: "PT10M",
       supply: ["WhatsApp on a UK number", "Home Wi-Fi in the UK"],
-      tool: ["Firestick, Smart TV, or phone with TiviMate or IPTV Smarters"],
+      tool: ["Firestick, Smart TV, or phone"],
     },
     sections: [
       {
@@ -126,7 +135,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
           },
           {
             title: "Load the trial on the TV you actually watch",
-            text: "TiviMate on Firestick, IPTV Smarters on Samsung / LG / Hisense. Favourite SuperSport Rugby, Variety, Grandstand.",
+            text: "Load a player on the Firestick or the Smart TV app store (Samsung / LG / Hisense). Favourite SuperSport Rugby, Variety, Grandstand.",
           },
           {
             title: "Check the next Bok or URC slot on UK time",
@@ -149,7 +158,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "dead-seller",
         h2: "If your current playlist died while you were already abroad",
         body: [
-          "A reseller who took a year up-front and vanished is a different problem from 'which folder is the Boks'. The switch-from-a-dead-seller guide covers credentials, overlapping trials, and what not to send in chat. Short version: do not wait for a Saturday Test to discover the M3U 401s.",
+          "A reseller who took a year up-front and vanished is a different problem from 'which folder is the Boks'. The switch-from-a-dead-seller guide covers credentials, overlapping trials, and what not to send in chat. Short version: do not wait for a Saturday Test to discover the playlist is dead.",
         ],
       },
     ],
