@@ -340,6 +340,56 @@ function gateSpringboksUkAliases() {
   } else {
     ok("middleware.ts: 308 aliases Springboks UK avant slash-strip.");
   }
+
+  const vj = read(join(ROOT, "vercel.json"));
+  let vjson = null;
+  try { vjson = JSON.parse(vj); } catch { /* gateWww308 already fails invalid JSON */ }
+  const vRedirs = Array.isArray(vjson?.redirects) ? vjson.redirects : [];
+  const edgeAlias = vRedirs.find((r) =>
+    r.source === "/en/iptv-springboks-uk"
+    && r.destination === "/en-za/blog/watch-springboks-from-london"
+    && r.permanent === true
+    && !(r.has || []).length
+  );
+  const edgeWww = vRedirs.find((r) =>
+    r.source === "/en/iptv-springboks-uk"
+    && String(r.destination) === "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london"
+    && r.permanent === true
+    && (r.has || []).some((h) => h.type === "host" && h.value === "www.iptvmzansi.com")
+  );
+  const wwwCatchAt = vRedirs.findIndex((r) =>
+    r.source === "/:path*"
+    && (r.has || []).some((h) => h.type === "host" && h.value === "www.iptvmzansi.com")
+  );
+  const wwwAliasAt = vRedirs.findIndex((r) =>
+    r.source === "/en/iptv-springboks-uk"
+    && (r.has || []).some((h) => h.type === "host" && h.value === "www.iptvmzansi.com")
+  );
+  if (!edgeAlias || !edgeWww) {
+    fail("vercel.json: 308 /en/iptv-springboks-uk → blog London (apex + www 1 hop).");
+  } else if (wwwAliasAt < 0 || wwwCatchAt < 0 || wwwAliasAt > wwwCatchAt) {
+    fail("vercel.json: www /en/iptv-springboks-uk doit précéder /:path* www→apex.");
+  } else {
+    ok("vercel.json: 308 edge /en/iptv-springboks-uk → blog London (slash/www).");
+  }
+
+  if (read(join(ROOT, "next.config.ts"))) {
+    fail("next.config.ts présent — Next 15 peut ignorer next.config.js (308 #19).");
+  } else {
+    ok("Un seul next.config (js).");
+  }
+
+  const aliasPage = read(join(ROOT, "app/en/iptv-springboks-uk/page.tsx"));
+  const aliasRoute = read(join(ROOT, "app/en/iptv-springboks-uk/route.ts"));
+  if (aliasPage) {
+    fail("app/en/iptv-springboks-uk/page.tsx interdit (pas de soft landing).");
+  } else if (!aliasRoute || !/NextResponse\.redirect/.test(aliasRoute) || !/,\s*308/.test(aliasRoute)) {
+    fail("app/en/iptv-springboks-uk/route.ts doit 308 (pas de HTML).");
+  } else if (/<[a-zA-Z]/.test(aliasRoute)) {
+    fail("app/en/iptv-springboks-uk/route.ts contient du markup (landing).");
+  } else {
+    ok("app/en/iptv-springboks-uk = 308 only.");
+  }
 }
 
 function run() {

@@ -60,3 +60,6 @@
 - **D35.** Questions Seo P1 6Q verbatim (`SPRINGBOKS_LONDON_P1_QUESTIONS`). Answers = P1 soft-sell + merge des faits uniques de la FAQ live 8Q. Pas de 7e/8e Question. Slug / H1 / sections inchangés.
 - **D36.** FAQPage renforcée sur ce slug seulement (`@id`, `url`, `inLanguage`, `@id` par Question, Article `hasPart`). DirectAnswer visible conservé ; son schema `Question` est coupé pour que FAQPage soit le seul graphe Q&A.
 - **D37.** Conversion inchangée : `wa.me/447307410512` / `+44 7307 410512`. 0 mailto. 0 AggregateRating. 0 promesse every-feed. Siblings non clonés (A16).
+
+## run-013 (2026-09-06) — edge 308 (live still 404 after #19)
+- **D38.** Même dest D30. Couche `vercel.json` (edge, www 1 hop avant `/:path*`) + `app/en/iptv-springboks-uk/route.ts` 308 only. `next.config.ts` vide retiré. 0 page 200 sur l'alias.
