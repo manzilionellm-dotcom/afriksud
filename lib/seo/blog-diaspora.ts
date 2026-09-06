@@ -2,15 +2,16 @@
 // run-007 — London / UK / abroad rugby FAQ cluster. New slugs only.
 // run-008 — watch-springboks-from-london FAQ is the locked Seo P1 6Q pack
 // (verbatim visible + FAQPage). English body. FAQPage via the blog template.
-// run-009 — SPRINGBOKS_LONDON_P1_FAQ exported for /iptv-springboks-uk hub.
+// run-010 — /en/iptv-springboks-uk is a 308 onto this blog (no 2nd FAQ hub).
 // MID+END WA is DiasporaSoftSellCta (wa.me/447307410512), not DstvSoftSellCta.
 
 import type { BlogFaq, BlogPost } from "./blog-posts";
 
 const PUB = "2026-09-06";
 
-/** Seo P1 6Q pack — locked verbatim. Visible accordion + FAQPage on the
- *  London blog and the `/iptv-springboks-uk` hub. Do not rewrite. */
+/** Seo P1 6Q pack — locked verbatim. Visible accordion + FAQPage on
+ *  `/blog/watch-springboks-from-london`. `/en/iptv-springboks-uk` 308s
+ *  here. Do not rewrite. */
 export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   {
     q: "Can I watch Springboks and URC matches from London without a South African cable subscription?",
@@ -141,7 +142,6 @@ export const BLOG_DIASPORA: BlogPost[] = [
     // Seo P1 6Q pack — locked verbatim (visible FAQ + FAQPage JSON-LD).
     faq: SPRINGBOKS_LONDON_P1_FAQ,
     relatedLinks: [
-      { label: "IPTV Springboks UK — short FAQ hub", href: "/en-za/iptv-springboks-uk/" },
       { label: "Rugby kickoff times from London (SAST → GMT/BST)", href: "/en-za/blog/rugby-kickoff-times-london/" },
       { label: "Best IPTV setup in the UK — Firestick and Smart TV", href: "/en-za/blog/iptv-uk-firestick-smart-tv-sa-sports/" },
       { label: "South African TV in the United Kingdom", href: "/en-gb/sa-abroad/uk/" },

@@ -1,0 +1,26 @@
+# USINE v8 — Journal run-010 (308 /en/iptv-springboks-uk → blog London)
+# Branch: cursor/springboks-uk-308-blog-b972
+# Objectif: Seo `/en/iptv-springboks-uk` = 308 1 hop vers le blog live
+# (pack P1 6Q déjà injecté). Pas de 2e hub FAQ. WA +44 7307 410512. 0 AR.
+# Hub #18 jamais live (404 mesuré) — retrait sûr.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] `origin/main` @ `96dc3aa` `#18` hub (fetch)
+- [x] Live blog `/en-za/blog/watch-springboks-from-london` **200**. WA ×16. 0 mailto. 0 AR. FAQ live encore **8Q** (deploy #17/#18 pas sorti)
+- [x] Repo blog = `SPRINGBOKS_LONDON_P1_FAQ` 6Q verbatim
+- [x] Live `/en/iptv-springboks-uk` + `/en-za/iptv-springboks-uk` = **404** (0 URL indexée à préserver)
+- [x] Live `/iptv-springboks-uk` encore 308 → `/cities/springboks-uk/` tant que le deploy n'est pas sorti
+
+## Travail
+
+- [x] Aliases 308 → `/en-za/blog/watch-springboks-from-london` (slash + no-slash, `/en/`, locale, bare)
+- [x] Retrait hub 200 + sitemap hub
+- [x] Pack P1 6Q inchangé sur le blog
+- [x] DoD: type-check · lint · build (1665 pages, hub route gone) · qa-gates exit 0
+- [x] Vérif `next start`: `/en/iptv-springboks-uk` 308 1 hop → blog; 6/6 P1 visible+FAQPage; WA ×16; 0 AR; 0 mailto; `/iptv-springboks-uk` pas cities; sitemap aliases 0
+- [x] PR : https://github.com/manzilionellm-dotcom/afriksud/pull/19
+
+## Originalité
+
+Un slug Seo de plus, zéro 2e FAQPage. Le blog reste la page qui ranke.

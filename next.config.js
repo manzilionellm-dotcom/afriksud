@@ -41,60 +41,71 @@ const nextConfig = {
         destination: "https://iptvmzansi.com/:path*",
         permanent: true,
       },
-      // Seo Springboks UK short slugs — MUST sit above `/iptv-:city`
-      // or `/iptv-springboks-uk` would 301 into /cities/springboks-uk/.
-      // Destinations omit the trailing slash (live convention) so these
-      // do not chain through middleware slash-strip.
+      // Seo Springboks UK short slugs — 308 one hop onto the live blog
+      // (P1 6Q). MUST sit above `/iptv-:city` or `/iptv-springboks-uk`
+      // would 301 into /cities/springboks-uk/. No trailing slash on dest.
       {
         source: "/en/iptv-springboks-uk",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/en/iptv-springboks-uk/",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/en/watch-springboks-uk",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/en/watch-springboks-uk/",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/iptv-springboks-uk",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/iptv-springboks-uk/",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/watch-springboks-uk",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source: "/watch-springboks-uk/",
-        destination: "/en-za/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source:
+          "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source:
+          "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk/",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source:
           "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk",
-        destination: "/:locale/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {
         source:
           "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk/",
-        destination: "/:locale/iptv-springboks-uk",
+        destination: "/en-za/blog/watch-springboks-from-london",
         permanent: true,
       },
       {

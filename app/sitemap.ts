@@ -13,7 +13,6 @@ import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 import { PILLARS, PILLAR_SLUGS } from "../lib/seo/pillars";
 import { DEVICES, DEVICE_SLUGS } from "../lib/seo/devices";
-import { SPRINGBOKS_UK_HUB, SPRINGBOKS_UK_HUB_PATH } from "../lib/seo/springboks-uk-hub";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
@@ -68,17 +67,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/blog/", 0.7, "weekly"));
   entries.push(withAlternates("/referral/", 0.5, "monthly"));
   entries.push(withAlternates("/affiliate/", 0.5, "monthly"));
-
-  // Seo short-slug FAQ hub (200). Aliases `/en/…` and `watch-springboks-uk`
-  // 308 here — they are not listed (redirects stay out of the sitemap).
-  entries.push(
-    withAlternates(
-      SPRINGBOKS_UK_HUB_PATH,
-      0.75,
-      "monthly",
-      parseDate(SPRINGBOKS_UK_HUB.dateModified)
-    )
-  );
 
   // Head-term pillars — use per-pillar `dateModified` so the sitemap
   // reflects actual content freshness instead of the build date.

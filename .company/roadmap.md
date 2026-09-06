@@ -25,6 +25,9 @@
 ## run-009 (2026-09-06)
 - Hub FAQ `/en-za/iptv-springboks-uk` (pack P1 6Q + FAQPage) + 308 `/en/iptv-springboks-uk` et `/en/watch-springboks-uk`. Sitemap hub. Blog London non reconstruit.
 
+## run-010 (2026-09-06)
+- Hub #18 retiré (jamais live). `/en/iptv-springboks-uk` 308 → blog London (P1 6Q). Catch `/iptv-:city` toujours court-circuité.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

@@ -46,3 +46,6 @@
 - **D27.** Hub FAQ dédié `/[locale]/iptv-springboks-uk/` (canon en-za). Accordion + FAQPage = `SPRINGBOKS_LONDON_P1_FAQ`. Titre/H1 distincts du blog London. Related vers le blog.
 - **D28.** 308 1 hop : `/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/iptv-springboks-uk` (avant `/iptv-:city`), `/:locale/watch-springboks-uk`. Destinations sans slash. Sitemap = hub 200 seulement.
 - **D29.** Conversion : `wa.me/447307410512`. 0 mailto. 0 AggregateRating. Labels humains. 0 stats inventées.
+
+## run-010 (2026-09-06) — 308 aliases onto London blog
+- **D30.** `/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/:locale/iptv-springboks-uk`, bare `/iptv-springboks-uk` (avant `/iptv-:city`) → 308 1 hop `/en-za/blog/watch-springboks-from-london`. Hub 200 retiré. Sitemap = blog only. WA `447307410512`. 0 AR.

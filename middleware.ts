@@ -34,7 +34,7 @@ export function middleware(req: NextRequest) {
 
   const { pathname, search } = req.nextUrl;
   // Seo short slugs BEFORE slash-strip so `/en/iptv-springboks-uk/` is
-  // one 308 to `/en-za/iptv-springboks-uk` (no chain).
+  // one 308 to the live London blog (no chain).
   const seoAlias = springboksUkAliasDestination(pathname);
   if (seoAlias) {
     const dest = new URL(req.url);
