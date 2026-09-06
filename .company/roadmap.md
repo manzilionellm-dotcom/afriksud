@@ -16,6 +16,9 @@
 ## run-005 (2026-09-05)
 - 12 guides blog longs (en-za) : commande WhatsApp, multi-device, TiviMate, load shedding, PL, week-end switch, LTE/5G, Proteas, EPG, Firestick SKU, Wi-Fi 6, kykNET. Slugs existants non reconstruits.
 
+## run-007 (2026-09-06)
+- Cluster FAQ diaspora rugby London : 6 guides `/blog/` + FAQPage additif sur `sa-abroad/[country]`. CTA `wa.me/447307410512`. Slugs live non reconstruits.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

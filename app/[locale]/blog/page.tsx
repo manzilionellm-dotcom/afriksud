@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "Mzansi Stream Blog — IPTV guides, sport, devices",
     description:
-      "Guides for IPTV in South Africa and SADC — WhatsApp order, DStv alternatives, Firestick, TiviMate, PSL, Premier League, load shedding and multi-device setup.",
+      "Guides for IPTV in South Africa, SADC and the SA diaspora — WhatsApp order, DStv alternatives, Firestick, rugby from London, PSL, Premier League and load shedding.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/blog/"),
       languages: hreflangFor("/blog/"),
@@ -46,11 +46,12 @@ export default async function BlogIndex({ params }: Props) {
       <article className="section">
         <header className="longformHeader">
           <p className="longformEyebrow">Blog</p>
-          <h1>Mzansi Stream Blog — IPTV guides for SA & SADC</h1>
+          <h1>Mzansi Stream Blog — IPTV guides for SA, SADC and the diaspora</h1>
           <p className="longformLead">
-            Guides to streaming TV in South Africa and across SADC — WhatsApp
-            order, DStv alternatives, device setup, SuperSport, load shedding
-            and what to look for in a reliable IPTV service.
+            Guides to streaming TV in South Africa, across SADC, and for
+            South Africans abroad — WhatsApp order, DStv alternatives, device
+            setup, SuperSport, rugby from London, load shedding and what to
+            look for in a reliable IPTV service.
           </p>
         </header>
 

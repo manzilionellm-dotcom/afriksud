@@ -54,7 +54,45 @@ export default async function SaAbroadHub({ params }: Props) {
       items={SA_ABROAD_COUNTRIES.map((c) => ({
         href: `/sa-abroad/${c.slug}/`,
         label: `South African TV in ${c.name}`,
+        caption:
+          c.slug === "uk"
+            ? "Rugby from London — Springboks, URC, kickoff times"
+            : undefined,
       }))}
+      extraSections={[
+        {
+          h2: "Rugby from London and the UK",
+          paragraphs: [
+            "South Africans who follow the Springboks from London have a dedicated FAQ cluster. Start the 24-hour trial on WhatsApp +44 7307 410512. We list playlist categories — not exclusive Sky, TNT or SuperSport licences.",
+          ],
+          links: [
+            {
+              label: "Watch the Springboks from London",
+              href: "/blog/watch-springboks-from-london/",
+            },
+            {
+              label: "Rugby kickoff times from London",
+              href: "/blog/rugby-kickoff-times-london/",
+            },
+            {
+              label: "Best IPTV setup in the UK",
+              href: "/blog/iptv-uk-firestick-smart-tv-sa-sports/",
+            },
+            {
+              label: "IPTV buffering on UK Wi-Fi",
+              href: "/blog/iptv-buffering-uk-wifi/",
+            },
+            {
+              label: "Switch from a dead IPTV seller while abroad",
+              href: "/blog/switch-iptv-seller-abroad-whatsapp/",
+            },
+            {
+              label: "IPTV categories are not broadcast licences",
+              href: "/blog/iptv-uk-categories-not-licences/",
+            },
+          ],
+        },
+      ]}
     />
   );
 }

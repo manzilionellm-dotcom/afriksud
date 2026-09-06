@@ -12,7 +12,9 @@ import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { BLOG_SLUGS, getBlogPost } from "../../../../lib/seo/blog-posts";
 import { BLOG_GUIDE_SLUGS } from "../../../../lib/seo/blog-guides";
+import { BLOG_DIASPORA_SLUGS } from "../../../../lib/seo/blog-diaspora";
 import { DstvSoftSellCta } from "../../../../components/seo/DstvSoftSellCta";
+import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
 import {
   AUTHORS,
   DEFAULT_AUTHOR_SLUG,
@@ -25,7 +27,7 @@ import { InlinePricingBlock } from "../../../../components/seo/InlinePricingBloc
 import { TrustReversalBlock } from "../../../../components/seo/TrustReversalBlock";
 import { InternalLinkHub } from "../../../../components/seo/InternalLinkHub";
 import { SITE } from "../../../../components/shared/site";
-import { generateWhatsAppLink } from "../../../../components/shared/utils";
+import { generateWhatsAppLink, waMeLink } from "../../../../components/shared/utils";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -74,7 +76,10 @@ export default async function BlogPostPage({ params }: Props) {
     message: `Hi! I read "${post.title}" and I want the free 24-hour Mzansi Stream trial.`,
     ref: `Blog-${slug}`,
   };
-  const waHref = generateWhatsAppLink(cta.message, "", cta.ref);
+  const showDiasporaSoftSell = BLOG_DIASPORA_SLUGS.includes(slug);
+  const waHref = showDiasporaSoftSell
+    ? waMeLink(cta.message, cta.ref)
+    : generateWhatsAppLink(cta.message, "", cta.ref);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -257,6 +262,13 @@ export default async function BlogPostPage({ params }: Props) {
               {showDstvSoftSell && i === midAfterIndex ? (
                 <DstvSoftSellCta variant="mid" slug={slug} />
               ) : null}
+              {showDiasporaSoftSell && i === midAfterIndex ? (
+                <DiasporaSoftSellCta
+                  variant="mid"
+                  slug={slug}
+                  place="London / the UK"
+                />
+              ) : null}
             </Fragment>
           ))}
 
@@ -273,6 +285,13 @@ export default async function BlogPostPage({ params }: Props) {
           ) : null}
 
           {showDstvSoftSell ? <DstvSoftSellCta variant="end" slug={slug} /> : null}
+          {showDiasporaSoftSell ? (
+            <DiasporaSoftSellCta
+              variant="end"
+              slug={slug}
+              place="London / the UK"
+            />
+          ) : null}
 
           <TrustReversalBlock locale={loc} />
 

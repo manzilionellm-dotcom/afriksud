@@ -30,3 +30,9 @@
 ## run-006 (2026-09-05) — DStv soft-sell on PR #14 blog guides
 - **D18.** MID + END commercial DStv injectés via `DstvSoftSellCta` dans le template blog, uniquement si `BLOG_GUIDE_SLUGS` (12 guides PR #14). Les 17 posts live et les blocks TrustReversal / InlinePricing / hero+footer WA restent.
 - **D19.** WhatsApp du bloc = `generateWhatsAppLink` + `SITE.whatsappPhone` (défaut `447307410512`). Texte visible END = `https://wa.me/${SITE.whatsappPhone}` · `SITE.domain`. 0 mailto, 0 AggregateRating.
+
+## run-007 (2026-09-06) — diaspora rugby London FAQ
+- **D20.** Nouveaux slugs `/blog/` seulement. `watch-springboks-live-online` et les 12 guides ZA inchangés (Loi #4) — related-link additif uniquement.
+- **D21.** Conversion diaspora = `waMeLink` → `https://wa.me/447307410512`. DstvSoftSell reste limité à `BLOG_GUIDE_SLUGS`. 0 mailto, 0 AggregateRating.
+- **D22.** Pages `sa-abroad/[country]` : FAQPage + CTA WA mid/end additifs ; hero « Start 24h free trial » et pricing conservés.
+- **D23.** Chiffres / edges / paiements = déjà publiés (R199–R1,199, LON-1, Visa/PayPal/Wise, 20,000+). Offsets SAST↔GMT/BST = faits fuseau, pas un calendrier 2026 inventé.

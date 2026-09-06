@@ -26,6 +26,10 @@ const COMMERCIAL_LINKS: CommercialLink[] = [
   { label: "Order IPTV on WhatsApp — 10-minute walkthrough", href: "/blog/order-iptv-whatsapp-south-africa/" },
   { label: "IPTV on multiple devices", href: "/blog/iptv-multiple-devices-south-africa/" },
   { label: "IPTV during load shedding", href: "/blog/iptv-load-shedding-south-africa/" },
+  { label: "Watch the Springboks from London", href: "/blog/watch-springboks-from-london/" },
+  { label: "Rugby kickoff times from London", href: "/blog/rugby-kickoff-times-london/" },
+  { label: "Best IPTV setup in the UK", href: "/blog/iptv-uk-firestick-smart-tv-sa-sports/" },
+  { label: "South African TV in the United Kingdom", href: "/sa-abroad/uk/" },
 ];
 
 export function InternalLinkHub({
