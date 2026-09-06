@@ -266,7 +266,7 @@ export default async function LocaleHome({ params }: Props) {
       <JsonLd data={faqSchema} />
       <JsonLd data={localBusinessSchema} />
 
-      <LanguageProvider>
+      <LanguageProvider initialLocale={locale as Locale}>
         <LocaleSync locale={locale as Locale} />
         <SkipLink />
         <div className="bg" />

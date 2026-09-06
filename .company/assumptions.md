@@ -43,3 +43,4 @@
 - **A23.** « Soften /en-gb/ » = homepage locale `en-gb` seulement (`dict.ts` override). Pas de clone du pack P1 6Q sur la home (cannibalisation vs blog London). Ton aligné, questions home conservées + 1 Q soft-legal additive.
 - **A24.** 1,200+ expats = volume non sourcé (GSC absente, aucun compteur repo) → retiré. Catalogue déjà publié (20,000+ channels, R99–R1,199) conservé. H1 / CTAs / sticky / pricing inchangés.
 - **A25.** AggregateRating déjà absent du schema homepage — on n'en ajoute pas. Reviews `items: []` inchangé.
+- **A26.** Les sections homepage sont des client islands (`useLang()`). Sans `initialLocale`, le HTML SSR de `/en-gb` restait en-za. Le câblage homepage est le minimum pour que la copie soft soit crawlable, pas une refonte du provider.

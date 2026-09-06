@@ -54,3 +54,4 @@
 - **D31.** Copie seule : override `enGB` dans `dict.ts`. `en-za` et les autres locales inchangés. Templates / schemas / LOCALES / WhatsApp helper inchangés.
 - **D32.** FAQPage reste branchée sur `t.faq.items`. Answers soft-sell (rights/blackouts, trial first). 0 « every Springboks/URC/match ». 0 « 100x ». 0 « 1,200+ ». 0 AggregateRating. 0 mailto.
 - **D33.** Conversion inchangée : `447307410512` / visible FAQ `+44 7307 410512`. CTAs trial / pricing / WhatsApp / sticky conservés.
+- **D34.** `LanguageProvider` accepte `initialLocale` (homepage seulement). Sans ça le SSR de `/en-gb` rendait `en-za` (hard claims) alors que FAQPage était déjà soft.

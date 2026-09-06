@@ -29,10 +29,11 @@
 - [x] `enGB` override dans `components/shared/dict.ts` (FAQ + international + cities + hero lead/trust + perk p6). en-ZA inchangé
 - [x] CTAs conservés (trial / pricing / WhatsApp / sticky)
 - [x] FAQPage continue de lire `t.faq.items` — 0 AggregateRating ajouté, 0 mailto
-- [ ] `LanguageProvider initialLocale` sur homepage (commit suivant)
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML local `/en-gb`
+- [x] `LanguageProvider initialLocale` sur homepage — sans ça le SSR `/en-gb` restait en-za
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0 (pre-rebase; re-run after rebase)
+- [x] Vérif HTML local `:3000/en-gb` : FAQ visible 17 (soft legal) ; 0 « Every Springboks Test » ; 0 « 1,200+ » ; « 100x more » seulement dans la phrase qui le refuse ; 0 AggregateRating ; `447307410512` ; `+44 7307 410512` ×6 ; 0 mailto ; trial + advisor CTAs présents. `/en-za` inchangé (16Q hard)
 - [x] PR : https://github.com/manzilionellm-dotcom/afriksud/pull/20
+- [x] Rebase sur `origin/main` (#18/#19) : run-009/010 conservés, ce travail = run-011
 
 ## Originalité (Loi #10)
 
