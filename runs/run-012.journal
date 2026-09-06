@@ -17,12 +17,12 @@
 
 ## Travail
 
-- [ ] Questions P1 6Q verbatim (source unique). Answers = P1 + merge 8Q (URC noms, Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, pas la page ZA)
-- [ ] FAQPage renforcée sur ce slug (`@id`, `url`, `inLanguage`, `@id` par Question). DirectAnswer Question schema off
-- [ ] Slug / H1 / sections / siblings inchangés. 0 clone 6Q
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML (`next start`): 6/6 Q exactes visible+FAQPage ; merge facts présents ; WA +44 7307 410512 ; 0 mailto ; 0 AR ; 0 every-feed promise ; 0 Question DirectAnswer
-- [ ] PR unique
+- [x] Questions P1 6Q verbatim (source unique). Answers = P1 + merge 8Q (URC noms, Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, pas la page ZA)
+- [x] FAQPage renforcée sur ce slug (`@id`, `url`, `inLanguage`, `@id` par Question). DirectAnswer Question schema off
+- [x] Slug / H1 / sections / siblings inchangés. 0 clone 6Q
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` (1665 pages) · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): 6/6 Q exactes visible+FAQPage ; merge facts présents ; `wa.me/447307410512` ×16 ; `+44 7307 410512` ×30 ; 0 mailto ; 0 AR ; 0 every-feed promise ; 0 Question DirectAnswer ; sibling Firestick 7Q inchangé
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/21
 
 ## Originalité (Loi #10)
 
