@@ -18,9 +18,9 @@
 - [x] `DstvSoftSellCta` (MID + END, copie exacte, WA via helper)
 - [x] Injection template sur les 12 slugs PR #14 seulement (17 posts live intacts)
 - [x] Prix / TrustReversal / hero+footer CTA non retirés
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML: MID+END, wa.me helper, 0 mailto, 0 AggregateRating
-- [ ] PR unique depuis `main`
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML: 12/12 guides MID+END + `wa.me/447307410512` + helper href; scaffold `dstv-vs-iptv-2026-complete-guide` sans bloc; 0 mailto; 0 AggregateRating; `#pricing` / R99 / footer CTA conservés
+- [x] PR unique depuis `main`: https://github.com/manzilionellm-dotcom/afriksud/pull/15
 
 ## 12 slugs (tous — DStv/sport/switch/load-shedding préférés, les 12 sont clean)
 
