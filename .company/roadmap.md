@@ -28,6 +28,9 @@
 ## run-010 (2026-09-06)
 - Hub #18 retiré (jamais live). `/en/iptv-springboks-uk` 308 → blog London (P1 6Q). Catch `/iptv-:city` toujours court-circuité.
 
+## run-011 (2026-09-06)
+- Homepage `/en-gb/` soft-sell : 0 every-match / 0 100x / 0 1,200+ expats. FAQPage conservée. WA +44 7307 410512. en-za inchangé.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

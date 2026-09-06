@@ -547,12 +547,94 @@ const enZW: Copy = {
   },
 };
 
-// English diaspora variants share en-ZA copy. The "Watch SA TV abroad"
-// hero defined in the SEO playbook lands per-page in follow-up PRs as
-// the diaspora landing routes are built; the homepage stays neutral for
-// now to avoid showing the wrong proposition to a visitor browsing
-// /?lang=en-gb without a dedicated route yet.
-const enGB: Copy = { ...enZA };
+// English diaspora variants share en-ZA copy unless a locale needs its
+// own claims. en-gb homepage is live in the UK: soft-sell only — no
+// every-match guarantees, no invented expat counts, no 100x, no ratings.
+const enGB: Copy = {
+  ...enZA,
+  hero: {
+    ...enZA.hero,
+    lead:
+      "20,000+ channels in native 4K, live sport, movies and series. SuperSport-style folders, DStv Premiership, Premier League, kykNET — one package. No contract. Trial it on your UK Wi-Fi before you pay.",
+    trust:
+      "South African TV for the UK diaspora · WhatsApp +44 7307 410512 · No contract",
+  },
+  planPerks: {
+    ...enZA.planPerks,
+    p6: ["Best value for money", "20,000+ live channels", "Up to 3 devices", "EPG + Catch-up TV", "SA + sport folders to trial"],
+  },
+  faq: {
+    title: "Frequently asked questions",
+    items: [
+      {
+        q: "Can I watch SABC, e.tv and SA free-to-air channels?",
+        a: "SABC 1, 2 and 3, e.tv and the usual SA free-to-air names are the folders most UK viewers look for. Confirm what actually plays on your 24h trial — we don’t list this as a complete official line-up.",
+      },
+      {
+        q: "Can I watch the DStv Premiership and the Premier League?",
+        a: "SuperSport-style PSL and Premier League folders are what people usually ask for. We don’t guarantee every match feed or every official broadcast. Tell us the fixtures you care about on WhatsApp +44 7307 410512 and test them on a short trial.",
+      },
+      { q: "Is it compatible with TiviMate, IPTV Smarters and Smart TV?", a: "Yes. Works with TiviMate, IPTV Smarters Pro, GSE Smart IPTV and any standard M3U app. We send the M3U link directly via WhatsApp." },
+      { q: "Which devices are supported?", a: "Smart TVs (Samsung, LG, Sony), Firestick / Fire TV, Android TV, iPhone, iPad, Android, Android TV Box, MAG Box and PC/Mac. We guide the install for your specific device." },
+      { q: "How fast is activation?", a: "Usually 5 to 10 minutes after we receive your order on WhatsApp, including weekends and public holidays." },
+      { q: "Is the EPG guide included?", a: "Yes. The full Electronic Programme Guide is included in every plan so you always know what's on now and what's coming up." },
+      { q: "Can I watch on multiple devices at the same time?", a: "The standard plan includes one connection. If you need multi-screen for the whole household, message us on WhatsApp and we'll set up a tailored plan." },
+      { q: "Do I need a VPN?", a: "Not required in South Africa, but we recommend one for extra privacy. We can advise on the best VPN for the service." },
+      { q: "Does it work outside South Africa?", a: "Yes — it works for South Africans in the UK and other countries. For best results outside SA we recommend a VPN. The 24h trial is how you check your own connection." },
+      { q: "How do I pay?", a: "Payment is handled on WhatsApp. We accept EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin." },
+      { q: "What if the service goes down?", a: "Message us directly on WhatsApp +44 7307 410512. We treat outages as a support job, not a promise that nothing will ever drop." },
+      { q: "Is there a contract? Can I cancel?", a: "No contract and no auto-renewal. You pay once and the service ends at the end of the chosen period. If you want to continue, you renew it manually." },
+      {
+        q: "Is Mzansi Stream a DStv alternative?",
+        a: "Mzansi Stream is a DStv-style alternative for South African channels — playlist categories, not an exclusive MultiChoice licence. We don’t claim every DStv Premium channel or “100x more”. Trial the folders you actually watch, then decide.",
+      },
+      {
+        q: "Do you cover the Springboks rugby and the URC?",
+        a: "Many SA fans in the UK use IPTV to follow Springboks and URC over home broadband. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what plays on your UK connection. WhatsApp +44 7307 410512.",
+      },
+      {
+        q: "Can I watch the IPL cricket and Proteas matches?",
+        a: "SuperSport Cricket / Star Sports-style folders are the usual ask for Proteas and IPL. We don’t guarantee every match or every official feed. Message +44 7307 410512 with the upcoming games and test them first.",
+      },
+      {
+        q: "Will it work with Vumatel, Openserve and other SA fibre?",
+        a: "On a UK connection, stability depends on your Wi-Fi and ISP. In South Africa we also see it on the usual fibre networks. The 24h trial is the proof on your line — not a guarantee for every network.",
+      },
+      {
+        q: "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
+        a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Trial first, keep expectations honest, then decide.",
+      },
+    ],
+  },
+  cities: {
+    ...enZA.cities,
+    items: [
+      { name: "Johannesburg", text: "A cheaper DStv-style option for Joburg households. SuperSport-style folders, Premier League, kykNET and SABC — confirm what you need on the trial." },
+      { name: "Cape Town",    text: "Cape Town viewers usually ask for Stormers, Cape Town City FC, URC and PSL folders. We don’t promise every fixture — test the ones you care about first." },
+      { name: "Durban",       text: "Built for Durban: AmaZulu FC, Sharks rugby, Indian channels for the local community and the international folders people actually use." },
+      { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — install in about 10 minutes via WhatsApp." },
+      { name: "Gqeberha",     text: "Eastern Cape setup — Chippa United, EP Elephants and the major national folders, confirmed on trial." },
+      { name: "Bloemfontein", text: "Bloemfontein Celtic, Free State Cheetahs and SuperSport-style rugby folders with English-language WhatsApp support." },
+      { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an every-match promise." },
+      { name: "Polokwane",    text: "Black Leopards, SABC, kykNET and the international folders people ask for across Limpopo." },
+    ],
+  },
+  international: {
+    ...enZA.international,
+    benefitsTitle: "Why South Africans in the UK pick Mzansi Stream",
+    benefits: [
+      { icon: "🌍", title: "Built for SA viewers abroad", desc: "European edges for a London or Manchester lounge. Trial 4K on your own UK broadband — we don’t invent viewer counts." },
+      { icon: "📺", title: "SA channel folders",      desc: "SABC, e.tv, SuperSport-style sport and kykNET are the usual folders — confirm names on the 24h trial." },
+      { icon: "⚡", title: "No SA decoder rental",        desc: "You don’t need a decoder sitting in someone’s Joburg lounge. A VPN can still help privacy and some routes." },
+      { icon: "💬", title: "Support in English",    desc: "WhatsApp +44 7307 410512, seven days a week, in English (and Afrikaans on request)." },
+    ],
+  },
+  whatsapp: {
+    ...enZA.whatsapp,
+    generic: "Hi! I'm in the UK. I need information about Mzansi Stream.",
+    trial: "Hi! I'm in the UK. I'd like a free 24-hour trial of Mzansi Stream for SA channels / Springboks. Device: [Firestick / Smart TV].",
+  },
+};
 const enAU: Copy = { ...enZA };
 const enUS: Copy = { ...enZA };
 const enAE: Copy = { ...enZA };
