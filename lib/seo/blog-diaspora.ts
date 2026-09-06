@@ -1,41 +1,55 @@
 // lib/seo/blog-diaspora.ts
 // run-007 — London / UK / abroad rugby FAQ cluster. New slugs only.
 // run-008 — watch-springboks-from-london FAQ is the locked Seo P1 6Q pack
-// (verbatim visible + FAQPage). English body. FAQPage via the blog template.
+// (verbatim questions + FAQPage). English body. FAQPage via the blog template.
 // run-010 — /en/iptv-springboks-uk is a 308 onto this blog (no 2nd FAQ hub).
-// MID+END WA is DiasporaSoftSellCta (wa.me/447307410512), not DstvSoftSellCta.
+// run-012 — same 6Q questions; answers merge unique live-8Q facts; FAQPage
+// reinforced (@id / inLanguage). MID+END WA is DiasporaSoftSellCta
+// (wa.me/447307410512), not DstvSoftSellCta.
 
 import type { BlogFaq, BlogPost } from "./blog-posts";
 
 const PUB = "2026-09-06";
 
-/** Seo P1 6Q pack — locked verbatim. Visible accordion + FAQPage on
- *  `/blog/watch-springboks-from-london`. `/en/iptv-springboks-uk` 308s
- *  here. Do not rewrite. */
+/** Seo P1 6Q questions — locked verbatim. Do not rewrite or clone onto siblings. */
+export const SPRINGBOKS_LONDON_P1_QUESTIONS = [
+  "Can I watch Springboks and URC matches from London without a South African cable subscription?",
+  "Will I get every SuperSport-style feed for rugby?",
+  "Do time zones / kick-off times work for live matches in the UK?",
+  "Can I set this up on a Firestick or Smart TV in the UK?",
+  "Is there a 24-hour trial before I pay?",
+  "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
+] as const;
+
+/** Seo P1 6Q pack. Visible accordion + FAQPage on
+ *  `/blog/watch-springboks-from-london`. Questions = P1 exact.
+ *  Answers = P1 soft-sell + merge of unique live-8Q facts (URC names,
+ *  Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, not-ZA-page).
+ *  `/en/iptv-springboks-uk` 308s here. */
 export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   {
-    q: "Can I watch Springboks and URC matches from London without a South African cable subscription?",
-    a: "Many SA fans in the UK use IPTV on a Firestick or Smart TV to follow Springboks and URC over home broadband instead of keeping an SA cable package. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what actually plays on your UK connection.",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[0],
+    a: "Many SA fans in the UK use IPTV on a Firestick or Smart TV to follow Springboks and URC over home broadband instead of keeping an SA cable package. SuperSport Rugby and Variety are the folders to test — URC sides (Stormers, Sharks, Bulls, Lions) sit there, not in Super Rugby Pacific. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what actually plays on your UK connection.",
   },
   {
-    q: "Will I get every SuperSport-style feed for rugby?",
-    a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[1],
+    a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Super Rugby Pacific and Premiership-style English club rugby are separate folders some packs list — confirm those names on the trial; a folder is not a Sky or TNT licence. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
   },
   {
-    q: "Do time zones / kick-off times work for live matches in the UK?",
-    a: "Live means live — kick-offs follow the host broadcast clock. You’ll watch in real time on UK evenings or weekends depending on the fixture. Check the guide during your trial so you’re not guessing.",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[2],
+    a: "Live means live — kick-offs follow the host broadcast clock. You’ll watch in real time on UK evenings or weekends depending on the fixture. A 17:00 SAST Test is 15:00 GMT in winter and 16:00 BST in summer (SAST does not change). Check the guide during your trial so you’re not guessing.",
   },
   {
-    q: "Can I set this up on a Firestick or Smart TV in the UK?",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[3],
     a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
   },
   {
-    q: "Is there a 24-hour trial before I pay?",
-    a: "Yes. WhatsApp +44 7307 410512 or https://wa.me/447307410512, say you’re in the UK watching SA rugby, and ask for a 24h trial. Confirm stability and the matches/channels that matter before you subscribe.",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[4],
+    a: "Yes. WhatsApp +44 7307 410512 or https://wa.me/447307410512, say you’re in the UK watching SA rugby, and ask for a 24h trial. Device + London + ‘Springboks trial’ is enough. Confirm stability and the matches/channels that matter before you subscribe. No card. No email.",
   },
   {
-    q: "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
-    a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Trial first, keep expectations honest, then decide.",
+    q: SPRINGBOKS_LONDON_P1_QUESTIONS[5],
+    a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Mzansi Stream does not ship a VPN — a VPN is your decision if a network or a feed misbehaves, and it is not required to start the trial. This page is the London FAQ, not the South Africa Springboks guide. Trial first, keep expectations honest, then decide.",
   },
 ];
 

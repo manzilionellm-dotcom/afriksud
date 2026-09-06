@@ -31,6 +31,9 @@
 ## run-011 (2026-09-06)
 - Homepage `/en-gb/` soft-sell : 0 every-match / 0 100x / 0 1,200+ expats. FAQPage conservée. WA +44 7307 410512. en-za inchangé.
 
+## run-012 (2026-09-06)
+- FAQPage de `/en-za/blog/watch-springboks-from-london` renforcée (6Q P1 exact + merge 8Q). Soft-sell WA +44 7307 410512. 0 AR. 0 mailto. 0 every-feed. Slug live non reconstruit.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

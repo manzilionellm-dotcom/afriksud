@@ -55,3 +55,8 @@
 - **D32.** FAQPage reste branchée sur `t.faq.items`. Answers soft-sell (rights/blackouts, trial first). 0 « every Springboks/URC/match ». 0 « 100x ». 0 « 1,200+ ». 0 AggregateRating. 0 mailto.
 - **D33.** Conversion inchangée : `447307410512` / visible FAQ `+44 7307 410512`. CTAs trial / pricing / WhatsApp / sticky conservés.
 - **D34.** `LanguageProvider` accepte `initialLocale` (homepage seulement). Sans ça le SSR de `/en-gb` rendait `en-za` (hard claims) alors que FAQPage était déjà soft.
+
+## run-012 (2026-09-06) — FAQPage 6Q reinforce on Springboks London
+- **D35.** Questions Seo P1 6Q verbatim (`SPRINGBOKS_LONDON_P1_QUESTIONS`). Answers = P1 soft-sell + merge des faits uniques de la FAQ live 8Q. Pas de 7e/8e Question. Slug / H1 / sections inchangés.
+- **D36.** FAQPage renforcée sur ce slug seulement (`@id`, `url`, `inLanguage`, `@id` par Question, Article `hasPart`). DirectAnswer visible conservé ; son schema `Question` est coupé pour que FAQPage soit le seul graphe Q&A.
+- **D37.** Conversion inchangée : `wa.me/447307410512` / `+44 7307 410512`. 0 mailto. 0 AggregateRating. 0 promesse every-feed. Siblings non clonés (A16).

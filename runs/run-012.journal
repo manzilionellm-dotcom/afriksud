@@ -1,0 +1,29 @@
+# USINE v8 — Journal run-012 (FAQPage 6Q reinforce — Springboks London)
+# Branch: cursor/springboks-london-faqpage-6q-7e9e
+# Objectif: renforcer FAQPage sur
+# `/en-za/blog/watch-springboks-from-london` avec le pack Seo P1 6Q
+# exact (questions verbatim). Merger les faits uniques de la FAQ live 8Q
+# dans les 6 answers. Soft-sell. WA +44 7307 410512. 0 AR. 0 mailto.
+# 0 promesse every-feed. Un seul PR.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: `origin/main` @ `6f0ff49` `fix(seo): soften /en-gb/ homepage hard claims (#20)`
+- [x] Live blog → 308 slash-strip puis **200**. FAQ visible + FAQPage = **8Q** pré-#17. Repo = P1 6Q. Deploy ≠ git.
+- [x] Live `wa.me/447307410512` ×16. `+44 7307 410512` ×26. mailto = 0. AggregateRating = 0. 0 « every feed » promise
+- [x] Source unique = `SPRINGBOKS_LONDON_P1_FAQ` → template `app/[locale]/blog/[slug]/page.tsx`
+- [x] FAQPage live/repo = `mainEntity` nu. DirectAnswer émet un `Question` parallèle
+- [x] GSC absente — volumes NON OBSERVÉS
+
+## Travail
+
+- [ ] Questions P1 6Q verbatim (source unique). Answers = P1 + merge 8Q (URC noms, Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, pas la page ZA)
+- [ ] FAQPage renforcée sur ce slug (`@id`, `url`, `inLanguage`, `@id` par Question). DirectAnswer Question schema off
+- [ ] Slug / H1 / sections / siblings inchangés. 0 clone 6Q
+- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [ ] Vérif HTML (`next start`): 6/6 Q exactes visible+FAQPage ; merge facts présents ; WA +44 7307 410512 ; 0 mailto ; 0 AR ; 0 every-feed promise ; 0 Question DirectAnswer
+- [ ] PR unique
+
+## Originalité (Loi #10)
+
+La FAQPage 6Q renforcée apporte ce que la live 8Q n'a PAS: no-SA-cable, refus every-feed, live=host clock + offset 17:00 SAST, Firestick walkthrough, trial 24h WA, soft-legal « free illegal streams » / « 100% cleared » refusé, plus `@id` crawlable. Les 8Q catégories restent dans le corps (H2), pas comme 8e/9e Question.

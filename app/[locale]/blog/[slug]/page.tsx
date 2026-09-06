@@ -20,6 +20,7 @@ import {
   DEFAULT_AUTHOR_SLUG,
 } from "../../../../lib/seo/authors";
 import { JsonLd } from "../../../../lib/seo/jsonld";
+import { buildFaqPageSchema } from "../../../../lib/seo/faq-page";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { AuthorBio } from "../../../../components/seo/AuthorBio";
 import { DirectAnswerBlock } from "../../../../components/seo/DirectAnswerBlock";
@@ -77,6 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
     ref: `Blog-${slug}`,
   };
   const showDiasporaSoftSell = BLOG_DIASPORA_SLUGS.includes(slug);
+  const isSpringboksLondon = slug === "watch-springboks-from-london";
   const waHref = showDiasporaSoftSell
     ? waMeLink(cta.message, cta.ref)
     : generateWhatsAppLink(cta.message, "", cta.ref);
@@ -106,6 +108,9 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: canonical,
     inLanguage: LOCALE_META[loc].hreflang,
+    ...(isSpringboksLondon
+      ? { hasPart: { "@id": `${canonical}#faqpage` } }
+      : {}),
   };
 
   const breadcrumbSchema = {
@@ -125,15 +130,12 @@ export default async function BlogPostPage({ params }: Props) {
 
   const faqSchema =
     post.faq && post.faq.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: post.faq.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }
+      ? buildFaqPageSchema({
+          faq: post.faq,
+          canonical,
+          inLanguage: LOCALE_META[loc].hreflang,
+          reinforce: isSpringboksLondon,
+        })
       : null;
 
   const howToSection = post.sections.find((s) => s.steps && s.steps.length);
@@ -170,7 +172,12 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={breadcrumbSchema} />
-      {faqSchema ? <JsonLd data={faqSchema} /> : null}
+      {faqSchema ? (
+        <JsonLd
+          data={faqSchema}
+          id={isSpringboksLondon ? "faqpage-jsonld" : undefined}
+        />
+      ) : null}
       {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
       <LongformShell locale={loc}>
@@ -209,6 +216,7 @@ export default async function BlogPostPage({ params }: Props) {
           <DirectAnswerBlock
             question={post.title}
             answer={post.lead}
+            emitSchema={!isSpringboksLondon}
             keyFacts={
               post.keyFacts ?? [
                 "From R99/month on the 12-month plan. 24-hour free trial, no credit card.",

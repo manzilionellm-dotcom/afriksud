@@ -44,3 +44,8 @@
 - **A24.** 1,200+ expats = volume non sourcé (GSC absente, aucun compteur repo) → retiré. Catalogue déjà publié (20,000+ channels, R99–R1,199) conservé. H1 / CTAs / sticky / pricing inchangés.
 - **A25.** AggregateRating déjà absent du schema homepage — on n'en ajoute pas. Reviews `items: []` inchangé.
 - **A26.** Les sections homepage sont des client islands (`useLang()`). Sans `initialLocale`, le HTML SSR de `/en-gb` restait en-za. Le câblage homepage est le minimum pour que la copie soft soit crawlable, pas une refonte du provider.
+
+## run-012
+- **A27.** « Exact 6Q » = les 6 questions Seo P1 (run-008 / #17) byte-identiques. « align/merge existing FAQ » = absorber les faits uniques de la live 8Q (URC noms, Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, pas-la-page-ZA) dans ces 6 answers, sans ajouter de Question.
+- **A28.** Prod 2026-09-06 sert encore la FAQ 8Q pré-#17. Git a déjà les questions P1. Ce run force le merge + schema pour le prochain deploy. Volume GSC NON OBSERVÉ.
+- **A29.** Couper le schema DirectAnswer `Question` sur ce slug seulement — pas une refonte du bloc visible. Les autres blogs gardent le Question + FAQPage historique.
