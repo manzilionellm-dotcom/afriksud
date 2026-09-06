@@ -1,7 +1,8 @@
 // lib/seo/blog-diaspora.ts
 // run-007 — London / UK / abroad rugby FAQ cluster. New slugs only.
-// English body. FAQ 6–8 + FAQPage via the blog template. MID+END WA
-// is DiasporaSoftSellCta (wa.me/447307410512), not DstvSoftSellCta.
+// run-008 — watch-springboks-from-london FAQ is the locked Seo P1 6Q pack
+// (verbatim visible + FAQPage). English body. FAQPage via the blog template.
+// MID+END WA is DiasporaSoftSellCta (wa.me/447307410512), not DstvSoftSellCta.
 
 import type { BlogPost } from "./blog-posts";
 
@@ -107,38 +108,31 @@ export const BLOG_DIASPORA: BlogPost[] = [
         ],
       },
     ],
+    // Seo P1 6Q pack — locked verbatim (visible FAQ + FAQPage JSON-LD).
     faq: [
       {
-        q: "Can I watch Springboks Tests on IPTV from London?",
-        a: "Yes — test the SuperSport Rugby category on a 24-hour WhatsApp trial. Favourite that folder and Variety before kickoff. We list categories, not exclusive SuperSport licences.",
+        q: "Can I watch Springboks and URC matches from London without a South African cable subscription?",
+        a: "Many SA fans in the UK use IPTV on a Firestick or Smart TV to follow Springboks and URC over home broadband instead of keeping an SA cable package. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what actually plays on your UK connection.",
       },
       {
-        q: "Do I get URC (Stormers, Sharks, Bulls, Lions) from the UK?",
-        a: "Those SA franchises play URC. They are the SuperSport Rugby / Variety folders, not Super Rugby Pacific. Confirm the names on the trial.",
+        q: "Will I get every SuperSport-style feed for rugby?",
+        a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
       },
       {
-        q: "Is Super Rugby still a South African competition?",
-        a: "No. Super Rugby Pacific is NZ/AU/Pacific. Ask for that folder only if you want that competition. Do not treat it as a Bok or Stormers substitute.",
+        q: "Do time zones / kick-off times work for live matches in the UK?",
+        a: "Live means live — kick-offs follow the host broadcast clock. You’ll watch in real time on UK evenings or weekends depending on the fixture. Check the guide during your trial so you’re not guessing.",
       },
       {
-        q: "Can I watch English Premiership rugby as well as the Boks?",
-        a: "Some packs include a UK club-rugby category. Confirm it on the trial. A folder name is not a TNT or Sky exclusive-rights claim.",
+        q: "Can I set this up on a Firestick or Smart TV in the UK?",
+        a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
       },
       {
-        q: "What time is a 17:00 SAST Test in London?",
-        a: "15:00 GMT in winter, 16:00 BST in summer. SAST does not change. Full offsets are on the rugby kickoff-times guide.",
+        q: "Is there a 24-hour trial before I pay?",
+        a: "Yes. WhatsApp +44 7307 410512 or https://wa.me/447307410512, say you’re in the UK watching SA rugby, and ask for a 24h trial. Confirm stability and the matches/channels that matter before you subscribe.",
       },
       {
-        q: "Do I need a VPN in London?",
-        a: "Mzansi Stream does not ship a VPN. A VPN is your decision if a network or a feed misbehaves. It is not required to start the WhatsApp trial.",
-      },
-      {
-        q: "How do I start the 24-hour trial from the UK?",
-        a: "WhatsApp +44 7307 410512 (wa.me/447307410512). Device + London + 'Springboks trial'. No card. No email.",
-      },
-      {
-        q: "Is this the same as the Springboks page for South Africa?",
-        a: "No. That post is the ZA folder list. This page is London: time zone, UK devices, categories-not-licences, and a UK WhatsApp number.",
+        q: "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
+        a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Trial first, keep expectations honest, then decide.",
       },
     ],
     relatedLinks: [
@@ -798,7 +792,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Is IPTV legal in the UK?",
-        a: "This page is not UK legal advice and does not invent an Ofcom ruling. IPTV is a delivery method. What sits in a playlist is a separate question. Confirm folders on a trial; read the SA legal pillar for ZA law only.",
+        a: "No — we don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. This page is not UK legal advice and does not invent an Ofcom ruling. Trial first, keep expectations honest, then decide. Read the SA legal pillar for ZA law only.",
       },
       {
         q: "Why do folders use brand names then?",

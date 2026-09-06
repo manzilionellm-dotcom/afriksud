@@ -13,7 +13,8 @@
     "run-003:www-308-to-apex + vercel.json + WWW-DOMAIN.md (cert SAN still needs Vercel domain add)",
     "run-005:12 long-form /blog/ guides (FAQPage/HowTo, WhatsApp CTA, existing 17 slugs untouched)",
     "run-006:DStv soft-sell MID+END on 12 PR#14 blog guides (WA helper 447307410512; prices/CTAs kept)",
-    "run-007:diaspora rugby London FAQ cluster (6 /blog/ slugs + sa-abroad FAQPage + wa.me/447307410512)"
+    "run-007:diaspora rugby London FAQ cluster (6 /blog/ slugs + sa-abroad FAQPage + wa.me/447307410512)",
+    "run-008:Seo P1 6Q verbatim on watch-springboks-from-london (FAQ+FAQPage); legal sibling Q2 soft-aligned"
   ],
   "gsc_key_present": false
 }

@@ -36,3 +36,8 @@
 - **D21.** Conversion diaspora = `waMeLink` → `https://wa.me/447307410512`. DstvSoftSell reste limité à `BLOG_GUIDE_SLUGS`. 0 mailto, 0 AggregateRating.
 - **D22.** Pages `sa-abroad/[country]` : FAQPage + CTA WA mid/end additifs ; hero « Start 24h free trial » et pricing conservés.
 - **D23.** Chiffres / edges / paiements = déjà publiés (R199–R1,199, LON-1, Visa/PayPal/Wise, 20,000+). Offsets SAST↔GMT/BST = faits fuseau, pas un calendrier 2026 inventé.
+
+## run-008 (2026-09-06) — Seo P1 6Q on Springboks London
+- **D24.** `watch-springboks-from-london` `faq[]` remplacé par le pack P1 6Q verbatim. Même source pour accordion + FAQPage. Slug / H1 / sections / CTA WA inchangés.
+- **D25.** Sibling légal `iptv-uk-categories-not-licences` : answer Q2 soft-alignée aux claims P1 Q6. Autres FAQ siblings inchangées.
+- **D26.** Conversion inchangée : `wa.me/447307410512`. 0 mailto. 0 AggregateRating. Related labels humains.
