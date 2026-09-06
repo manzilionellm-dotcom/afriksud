@@ -261,37 +261,41 @@ function gateLocalesFrozen() {
   }
 }
 
-function gateSpringboksUkHub() {
+function gateSpringboksUkAliases() {
   const faqSrc = read(join(ROOT, "lib/seo/blog-diaspora.ts"));
   if (!/export const SPRINGBOKS_LONDON_P1_FAQ/.test(faqSrc)) {
     fail("SPRINGBOKS_LONDON_P1_FAQ manquant (pack P1 6Q).");
+  } else if (!/faq:\s*SPRINGBOKS_LONDON_P1_FAQ/.test(faqSrc)) {
+    fail("watch-springboks-from-london n'utilise pas le pack P1 6Q.");
+  } else if (/"@type"\s*:\s*"AggregateRating"/.test(faqSrc)) {
+    fail("blog-diaspora: AggregateRating interdit.");
   } else {
-    ok("Pack P1 6Q exporté (SPRINGBOKS_LONDON_P1_FAQ).");
+    ok("Pack P1 6Q câblé sur le blog London (0 AggregateRating).");
   }
   const hubPage = read(join(ROOT, "app/[locale]/iptv-springboks-uk/page.tsx"));
-  if (!hubPage || !/SPRINGBOKS_UK_HUB/.test(hubPage)) {
-    fail("hub iptv-springboks-uk absent ou déconnecté du pack.");
-  } else if (
-    /"@type"\s*:\s*"AggregateRating"/.test(hubPage)
-    || /href=["']mailto:/.test(hubPage)
-  ) {
-    fail("hub iptv-springboks-uk: AggregateRating / mailto interdits.");
+  if (hubPage) {
+    fail("hub iptv-springboks-uk doit être retiré (308 vers le blog).");
   } else {
-    ok("Hub /iptv-springboks-uk/ câblé (0 mailto, 0 AggregateRating).");
+    ok("Pas de hub 200 /iptv-springboks-uk/ (alias seulement).");
   }
   const sm = read(join(ROOT, "app/sitemap.ts"));
-  if (!/SPRINGBOKS_UK_HUB_PATH/.test(sm)) {
-    fail("sitemap: SPRINGBOKS_UK_HUB_PATH manquant.");
+  if (/SPRINGBOKS_UK_HUB_PATH|iptv-springboks-uk/.test(sm)) {
+    fail("sitemap: ne pas lister les aliases 308 iptv-springboks-uk.");
   } else {
-    ok("sitemap: hub iptv-springboks-uk enregistré.");
+    ok("sitemap: aliases Springboks UK absents (blog déjà listé).");
   }
   const cfg = read(join(ROOT, "next.config.js"));
   const aliasAt = cfg.indexOf('source: "/en/iptv-springboks-uk"');
+  const destAt = cfg.indexOf('destination: "/en-za/blog/watch-springboks-from-london"');
   const cityAt = cfg.indexOf('source: "/iptv-:city"');
-  if (aliasAt < 0 || cityAt < 0 || aliasAt > cityAt) {
-    fail("next.config.js: /en/iptv-springboks-uk doit précéder /iptv-:city.");
+  if (aliasAt < 0 || destAt < 0 || cityAt < 0 || aliasAt > cityAt || destAt > cityAt) {
+    fail("next.config.js: /en/iptv-springboks-uk → blog London avant /iptv-:city.");
   } else {
-    ok("next.config.js: alias Seo avant le catch /iptv-:city.");
+    ok("next.config.js: 308 /en/iptv-springboks-uk → blog London.");
+  }
+  const aliases = read(join(ROOT, "lib/seo/springboks-uk-aliases.ts"));
+  if (!/SPRINGBOKS_UK_BLOG_DEST/.test(aliases) || !/watch-springboks-from-london/.test(aliases)) {
+    fail("springboks-uk-aliases: dest blog London manquante.");
   }
   const mw = read(join(ROOT, "middleware.ts"));
   if (!/springboksUkAliasDestination/.test(mw)) {
@@ -310,7 +314,7 @@ function run() {
   gateCanonicalApex();
   gateWww308();
   gateLocalesFrozen();
-  gateSpringboksUkHub();
+  gateSpringboksUkAliases();
 }
 
 // ── Self-test: validate gate logic against in-memory fixtures.
