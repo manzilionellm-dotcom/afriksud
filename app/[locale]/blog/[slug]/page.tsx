@@ -1,6 +1,8 @@
 // app/[locale]/blog/[slug]/page.tsx
 // One page per blog post. Long-form guides emit FAQPage + HowTo when
 // the post carries faq[] / section steps. Conversion is WhatsApp only.
+// watch-springboks-from-london: reinforced FAQPage (@id + inLanguage);
+// DirectAnswer stays visible without a competing Question schema.
 
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
