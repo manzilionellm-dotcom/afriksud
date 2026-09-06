@@ -17,14 +17,14 @@
 
 ## Travail
 
-- [ ] 6 guides `/blog/` nouveaux (`lib/seo/blog-diaspora.ts`) — slugs inédits
-- [ ] FAQ 6–8 + FAQPage sur chaque guide
-- [ ] `DiasporaSoftSellCta` MID+END → `https://wa.me/447307410512` (DstvSoftSell des 12 ZA **conservé**)
-- [ ] sa-abroad `[country]`: FAQPage + WA mid/end **additif** (hero trial + pricing conservés)
-- [ ] InternalLinkHub + related (labels humains)
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML: FAQPage, wa.me/447307410512, 0 mailto, 0 AggregateRating
-- [ ] PR unique
+- [x] 6 guides `/blog/` nouveaux (`lib/seo/blog-diaspora.ts`) — slugs inédits
+- [x] FAQ 6–8 + FAQPage sur chaque guide
+- [x] `DiasporaSoftSellCta` MID+END → `https://wa.me/447307410512` (DstvSoftSell des 12 ZA **conservé**)
+- [x] sa-abroad `[country]`: FAQPage + WA mid/end **additif** (hero trial + pricing conservés)
+- [x] InternalLinkHub + related (labels humains)
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (next start :3000): 8 `<details>` + 1 FAQPage script; `wa.me/447307410512`; 0 mailto; 0 AggregateRating schema (mention prose only on categories page); Dstv mid/end still on ZA guide; sitemap 6 slugs
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/16
 
 ## 6 slugs nouveaux (preuve T0: absents de BLOG_POSTS + PILLARS + live 404)
 
