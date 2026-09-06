@@ -17,13 +17,13 @@
 
 ## Travail
 
-- [ ] Prefill locked character-exact (0 Ref) sur blog CTAs + Diaspora + chrome qui bleed
-- [ ] Soft: M3U hors body ; TiViMate FAQ-only ; 20,000+ adouci sur ce template
-- [ ] FAQ 6Q source unique inchangée (déjà #21)
-- [ ] Alias 308 #22 intact (0 page.tsx)
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML (`next start`) : href exact ; 0 Hi! I ; 6Q ; 0 M3U body ; 0 AR ; 0 mailto
-- [ ] PR unique vers main
+- [x] Prefill locked character-exact (0 Ref) sur blog CTAs + Diaspora + chrome qui bleed
+- [x] Soft: M3U hors body ; TiViMate FAQ-only ; 20,000+ adouci sur ce template (+ twitter overlay)
+- [x] FAQ 6Q source unique inchangée (déjà #21)
+- [x] Alias 308 #22 intact (0 page.tsx)
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` (1666) · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): href locked ×11 ; 0 Hi! I ; 6/6 P1 visible+FAQPage ; 0 M3U ; 0 20,000 ; 0 mailto ; 0 AR ; `+44 7307 410512` ×30 ; alias `/en/iptv-springboks-uk` 308 1 hop ; sibling Firestick 7Q inchangé
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/23
 
 ## Originalité (Loi #10)
 
