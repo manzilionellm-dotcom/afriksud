@@ -2,11 +2,41 @@
 // run-007 — London / UK / abroad rugby FAQ cluster. New slugs only.
 // run-008 — watch-springboks-from-london FAQ is the locked Seo P1 6Q pack
 // (verbatim visible + FAQPage). English body. FAQPage via the blog template.
+// run-009 — SPRINGBOKS_LONDON_P1_FAQ exported for /iptv-springboks-uk hub.
 // MID+END WA is DiasporaSoftSellCta (wa.me/447307410512), not DstvSoftSellCta.
 
-import type { BlogPost } from "./blog-posts";
+import type { BlogFaq, BlogPost } from "./blog-posts";
 
 const PUB = "2026-09-06";
+
+/** Seo P1 6Q pack — locked verbatim. Visible accordion + FAQPage on the
+ *  London blog and the `/iptv-springboks-uk` hub. Do not rewrite. */
+export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
+  {
+    q: "Can I watch Springboks and URC matches from London without a South African cable subscription?",
+    a: "Many SA fans in the UK use IPTV on a Firestick or Smart TV to follow Springboks and URC over home broadband instead of keeping an SA cable package. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what actually plays on your UK connection.",
+  },
+  {
+    q: "Will I get every SuperSport-style feed for rugby?",
+    a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
+  },
+  {
+    q: "Do time zones / kick-off times work for live matches in the UK?",
+    a: "Live means live — kick-offs follow the host broadcast clock. You’ll watch in real time on UK evenings or weekends depending on the fixture. Check the guide during your trial so you’re not guessing.",
+  },
+  {
+    q: "Can I set this up on a Firestick or Smart TV in the UK?",
+    a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
+  },
+  {
+    q: "Is there a 24-hour trial before I pay?",
+    a: "Yes. WhatsApp +44 7307 410512 or https://wa.me/447307410512, say you’re in the UK watching SA rugby, and ask for a 24h trial. Confirm stability and the matches/channels that matter before you subscribe.",
+  },
+  {
+    q: "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
+    a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Trial first, keep expectations honest, then decide.",
+  },
+];
 
 export const BLOG_DIASPORA: BlogPost[] = [
   {
@@ -109,33 +139,9 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
     ],
     // Seo P1 6Q pack — locked verbatim (visible FAQ + FAQPage JSON-LD).
-    faq: [
-      {
-        q: "Can I watch Springboks and URC matches from London without a South African cable subscription?",
-        a: "Many SA fans in the UK use IPTV on a Firestick or Smart TV to follow Springboks and URC over home broadband instead of keeping an SA cable package. Rights and blackouts still apply — we don’t promise every official feed for every fixture. Use a short trial to see what actually plays on your UK connection.",
-      },
-      {
-        q: "Will I get every SuperSport-style feed for rugby?",
-        a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
-      },
-      {
-        q: "Do time zones / kick-off times work for live matches in the UK?",
-        a: "Live means live — kick-offs follow the host broadcast clock. You’ll watch in real time on UK evenings or weekends depending on the fixture. Check the guide during your trial so you’re not guessing.",
-      },
-      {
-        q: "Can I set this up on a Firestick or Smart TV in the UK?",
-        a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
-      },
-      {
-        q: "Is there a 24-hour trial before I pay?",
-        a: "Yes. WhatsApp +44 7307 410512 or https://wa.me/447307410512, say you’re in the UK watching SA rugby, and ask for a 24h trial. Confirm stability and the matches/channels that matter before you subscribe.",
-      },
-      {
-        q: "Soft legal — is this “free illegal streams” or 100% cleared for every Springboks game?",
-        a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Trial first, keep expectations honest, then decide.",
-      },
-    ],
+    faq: SPRINGBOKS_LONDON_P1_FAQ,
     relatedLinks: [
+      { label: "IPTV Springboks UK — short FAQ hub", href: "/en-za/iptv-springboks-uk/" },
       { label: "Rugby kickoff times from London (SAST → GMT/BST)", href: "/en-za/blog/rugby-kickoff-times-london/" },
       { label: "Best IPTV setup in the UK — Firestick and Smart TV", href: "/en-za/blog/iptv-uk-firestick-smart-tv-sa-sports/" },
       { label: "South African TV in the United Kingdom", href: "/en-gb/sa-abroad/uk/" },

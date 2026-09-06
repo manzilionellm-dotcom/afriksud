@@ -41,3 +41,8 @@
 - **D24.** `watch-springboks-from-london` `faq[]` remplacé par le pack P1 6Q verbatim. Même source pour accordion + FAQPage. Slug / H1 / sections / CTA WA inchangés.
 - **D25.** Sibling légal `iptv-uk-categories-not-licences` : answer Q2 soft-alignée aux claims P1 Q6. Autres FAQ siblings inchangées.
 - **D26.** Conversion inchangée : `wa.me/447307410512`. 0 mailto. 0 AggregateRating. Related labels humains.
+
+## run-009 (2026-09-06) — Seo short slugs Springboks UK
+- **D27.** Hub FAQ dédié `/[locale]/iptv-springboks-uk/` (canon en-za). Accordion + FAQPage = `SPRINGBOKS_LONDON_P1_FAQ`. Titre/H1 distincts du blog London. Related vers le blog.
+- **D28.** 308 1 hop : `/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/iptv-springboks-uk` (avant `/iptv-:city`), `/:locale/watch-springboks-uk`. Destinations sans slash. Sitemap = hub 200 seulement.
+- **D29.** Conversion : `wa.me/447307410512`. 0 mailto. 0 AggregateRating. Labels humains. 0 stats inventées.
