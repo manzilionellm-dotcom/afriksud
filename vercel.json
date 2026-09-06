@@ -1,6 +1,78 @@
 {
   "redirects": [
     {
+      "source": "/en/iptv-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/iptv-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/watch-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/watch-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/iptv-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/iptv-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/watch-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/watch-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk/",
+      "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
+      "destination": "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
       "destination": "https://iptvmzansi.com/",
@@ -16,6 +88,66 @@
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.iptvmzansi.com" }],
       "destination": "https://iptvmzansi.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en/iptv-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/iptv-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/watch-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/en/watch-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/iptv-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/iptv-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/watch-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/watch-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/iptv-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk",
+      "destination": "/en-za/blog/watch-springboks-from-london",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/watch-springboks-uk/",
+      "destination": "/en-za/blog/watch-springboks-from-london",
       "permanent": true
     }
   ]

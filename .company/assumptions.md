@@ -49,3 +49,7 @@
 - **A27.** « Exact 6Q » = les 6 questions Seo P1 (run-008 / #17) byte-identiques. « align/merge existing FAQ » = absorber les faits uniques de la live 8Q (URC noms, Super Rugby Pacific, Premiership folder, 17:00 SAST, VPN, pas-la-page-ZA) dans ces 6 answers, sans ajouter de Question.
 - **A28.** Prod 2026-09-06 sert encore la FAQ 8Q pré-#17. Git a déjà les questions P1. Ce run force le merge + schema pour le prochain deploy. Volume GSC NON OBSERVÉ.
 - **A29.** Couper le schema DirectAnswer `Question` sur ce slug seulement — pas une refonte du bloc visible. Les autres blogs gardent le Question + FAQPage historique.
+
+## run-013
+- **A30.** Git `94c3097` (#21, inclut #19) a déjà les 308 Next/middleware ; live 2026-09-06 `curl` = **404** (`x-matched-path: /_not-found`). Prod ≠ git. `vercel.json` n'avait que www→apex → l'alias n'existait pas à l'edge.
+- **A31.** `next.config.ts` vide + `next.config.js` : Next 15 charge l'un des deux. Un seul fichier (js) pour que skipTrailingSlashRedirect + redirects #19 ne puissent pas être ignorés.

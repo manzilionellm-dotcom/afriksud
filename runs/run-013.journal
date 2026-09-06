@@ -1,0 +1,26 @@
+# USINE v8 — Journal run-013 (308 edge `/en/iptv-springboks-uk`)
+# Branch: cursor/en-iptv-springboks-uk-308-b426
+# Objectif: alias ONLY 308/301 → canon blog London. Pas de soft landing.
+# 1 intent = 1 URL. Slash + www OK. Rebase main post-#17/#19/#21.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] `origin/main` @ `94c3097` `#21` (fetch) — #17 FAQ + #19 308 déjà dans git
+- [x] Live `/en/iptv-springboks-uk` **404** (`/_not-found`) — #19 pas en prod
+- [x] Live canon `/en-za/blog/watch-springboks-from-london` **200**
+- [x] Live slash alias = 308 slash-strip puis 404 ; www = 308 apex puis 404
+- [x] Live `/iptv-springboks-uk` encore catch cities
+
+## Travail
+
+- [ ] `vercel.json` : 308 1 hop alias → blog (www absolu d'abord, puis apex)
+- [ ] Retrait `next.config.ts` vide (un seul next.config)
+- [ ] Route `app/en/iptv-springboks-uk` = 308 only (0 HTML)
+- [ ] qa-gates : edge + pas de landing
+- [ ] DoD: type-check · lint · build · qa-gates exit 0
+- [ ] Vérif `next start` : alias 308 1 hop, 0 200 sur l'alias
+- [ ] PR unique
+
+## Originalité
+
+Pas une page. Un hop. Le blog London reste la seule URL qui ranke.
