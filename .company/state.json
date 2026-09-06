@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "n_pages_reelles": 128,
+  "n_pages_reelles": 147,
   "locales": ["en-za","en-gb","en-au","en-us","af","zu","xh","pt-mz","en-zw","fr","en-ae","en-nz"],
   "baseline": {
     "run": "run-001",

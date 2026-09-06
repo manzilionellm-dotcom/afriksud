@@ -28,9 +28,9 @@ Hub FAQ dédié 200 à `/en-za/iptv-springboks-uk` (pas redirect-only) : Seo a d
 - [x] 308 aliases 1 hop (`/en/…`, `/watch-springboks-uk`, locale-prefixed watch, catch `/iptv-springboks-uk` avant cities)
 - [x] Sitemap `withAlternates("/iptv-springboks-uk/")`
 - [x] Related bidirectionnel blog ↔ hub ; InternalLinkHub additif
-- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif locale (`next start`) : 6/6 Q+A ; aliases 308 1 hop ; 0 mailto ; 0 AggregateRating ; sitemap
-- [ ] PR unique
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif locale (`next start :3000`): 6/6 Q+A verbatim visible+FAQPage; aliases 308 1 hop (`/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/iptv-springboks-uk` pas cities); `wa.me/447307410512` ×18; 0 mailto; 0 AggregateRating; sitemap hub 14 / aliases 0; blog 200 + related hub
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/18
 
 ## Originalité (Loi #10)
 
