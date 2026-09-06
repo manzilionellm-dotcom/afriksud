@@ -96,17 +96,24 @@ function applyDocumentLocale(locale: Locale) {
   document.documentElement.dir = meta.dir;
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Locale>(DEFAULT_LOCALE);
+export function LanguageProvider({
+  children,
+  initialLocale,
+}: {
+  children: React.ReactNode;
+  /** URL locale from the server — required so /en-gb SSR is not en-za. */
+  initialLocale?: Locale;
+}) {
+  const [lang, setLangState] = useState<Locale>(initialLocale ?? DEFAULT_LOCALE);
 
   useEffect(() => {
-    const detected = detectLocale();
+    // Prefixed routes win over a leftover NEXT_LOCALE cookie so the
+    // soft /en-gb copy is not replaced by the hard ZA dictionary.
+    const detected = initialLocale ?? detectLocale();
     setLangState(detected);
     applyDocumentLocale(detected);
-    // Persist the resolved locale so SSR-rendered pages and follow-up
-    // visits stay consistent without re-running detection from scratch.
     writeCookie(COOKIE_NAME, detected);
-  }, []);
+  }, [initialLocale]);
 
   const setLang = (l: Locale) => {
     const normalised = normalizeLocale(l) ?? DEFAULT_LOCALE;

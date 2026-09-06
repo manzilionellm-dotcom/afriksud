@@ -1,0 +1,40 @@
+# USINE v8 — Journal run-011 (soften /en-gb/ homepage hard claims)
+# Branch: cursor/soften-en-gb-claims-9029
+# Objectif: assouplir UNIQUEMENT la copie homepage `https://iptvmzansi.com/en-gb/`
+# (dict en-gb). Soft-sell. 0 every-match / 0 100x / 0 1,200+ expats /
+# 0 AggregateRating / 0 volumes inventés. FAQPage conservée. WA
+# +44 7307 410512. 0 mailto. CTAs inchangés. en-za et autres locales
+# intouchées (Loi #4). Rebase sur main post-#18/#19 (run-009/010 déjà pris).
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: rebase sur `origin/main` @ `d729677` `fix(seo): 308 /en/iptv-springboks-uk onto the live London blog (#19)`
+- [x] Live `https://iptvmzansi.com/en-gb/` → **308** `/en-gb/` → **200** `/en-gb`. Title = « South African IPTV in the UK — SuperSport & DStv Channels | Mzansi Stream »
+- [x] Live FAQ visible = **16** `<details>` = copie en-ZA héritée (`const enGB = { ...enZA }`)
+- [x] Live FAQPage JSON-LD = **16** Question (mêmes textes). Autres schemas: Product, Organization, WebSite, WebPage, OnlineBusiness, BreadcrumbList. **0 AggregateRating**
+- [x] Hard claims live (visible + FAQPage) :
+  - Springboks: « Every Springboks Test, every URC fixture and every Currie Cup match in 4K »
+  - PSL/PL: « Every match in 4K with no buffering »
+  - DStv alt: « every channel DStv Premium offers (and 100x more) »
+  - Proteas/IPL: « All Proteas T20I, ODI and Test matches plus the full IPL season »
+  - International H2: « Why 1,200+ South African expats choose Mzansi Stream »
+  - Cape Town / East London blurbs: « every URC and PSL match » / « every PSL match » + « no buffering »
+- [x] `100%` live = CSS gradients only (logo/hero), pas un claim texte
+- [x] WA: `447307410512` présent (api.whatsapp.com + schema `+447307410512`). Format visible `+44 7307 410512` = **0** sur cette page. `mailto:` = **0**. Reviews items = 0 (pas de ⭐)
+- [x] Ton cible = FAQ P1 6Q `watch-springboks-from-london` (soft: no every-feed, trial first, rights/blackouts, refuse « 100% cleared »)
+- [x] GSC absente — volumes NON OBSERVÉS. 1,200+ expats = non sourcé dans le repo
+
+## Travail
+
+- [x] `enGB` override dans `components/shared/dict.ts` (FAQ + international + cities + hero lead/trust + perk p6). en-ZA inchangé
+- [x] CTAs conservés (trial / pricing / WhatsApp / sticky)
+- [x] FAQPage continue de lire `t.faq.items` — 0 AggregateRating ajouté, 0 mailto
+- [x] `LanguageProvider initialLocale` sur homepage — sans ça le SSR `/en-gb` restait en-za
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0 (pre-rebase; re-run after rebase)
+- [x] Vérif HTML local `:3000/en-gb` : FAQ visible 17 (soft legal) ; 0 « Every Springboks Test » ; 0 « 1,200+ » ; « 100x more » seulement dans la phrase qui le refuse ; 0 AggregateRating ; `447307410512` ; `+44 7307 410512` ×6 ; 0 mailto ; trial + advisor CTAs présents. `/en-za` inchangé (16Q hard)
+- [x] PR : https://github.com/manzilionellm-dotcom/afriksud/pull/20
+- [x] Rebase sur `origin/main` (#18/#19) : run-009/010 conservés, ce travail = run-011
+
+## Originalité (Loi #10)
+
+La homepage UK dit maintenant ce que la live 16Q n'a PAS: pas de promesse every-Test / every-match, pas de 100x, pas de 1,200+ expats, trial WhatsApp + droits/blackouts comme la FAQ London. en-za reste la page ZA dure.

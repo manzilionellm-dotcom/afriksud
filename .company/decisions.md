@@ -49,3 +49,9 @@
 
 ## run-010 (2026-09-06) — 308 aliases onto London blog
 - **D30.** `/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/:locale/iptv-springboks-uk`, bare `/iptv-springboks-uk` (avant `/iptv-:city`) → 308 1 hop `/en-za/blog/watch-springboks-from-london`. Hub 200 retiré. Sitemap = blog only. WA `447307410512`. 0 AR.
+
+## run-011 (2026-09-06) — soften /en-gb/ homepage claims
+- **D31.** Copie seule : override `enGB` dans `dict.ts`. `en-za` et les autres locales inchangés. Templates / schemas / LOCALES / WhatsApp helper inchangés.
+- **D32.** FAQPage reste branchée sur `t.faq.items`. Answers soft-sell (rights/blackouts, trial first). 0 « every Springboks/URC/match ». 0 « 100x ». 0 « 1,200+ ». 0 AggregateRating. 0 mailto.
+- **D33.** Conversion inchangée : `447307410512` / visible FAQ `+44 7307 410512`. CTAs trial / pricing / WhatsApp / sticky conservés.
+- **D34.** `LanguageProvider` accepte `initialLocale` (homepage seulement). Sans ça le SSR de `/en-gb` rendait `en-za` (hard claims) alors que FAQPage était déjà soft.
