@@ -1,0 +1,36 @@
+# USINE v8 — Journal run-008 (Seo P1 6Q — watch-springboks-from-london)
+# Branch: cursor/springboks-london-faq-p1-1441
+# Objectif: remplacer FAQ visible + FAQPage JSON-LD de
+# https://iptvmzansi.com/en-za/blog/watch-springboks-from-london/ par le pack
+# Seo P1 6Q verbatim. Soft-align siblings si claims divergents. 0 reconstruction
+# d'URL. WA wa.me/447307410512. 0 AggregateRating. 0 mailto. Labels humains.
+# Locales: corps EN, canon en-za.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: `origin/main` @ `e494d40` `feat(seo): diaspora rugby London FAQ cluster → WhatsApp` (fetch requis — snapshot local était `8144205`)
+- [x] Live `https://iptvmzansi.com/en-za/blog/watch-springboks-from-london/` → **200** (308 slash-strip puis 200). Title = « Watch the Springboks from London — IPTV FAQ for SA rugby fans | Mzansi Stream »
+- [x] Live FAQ visible = **8** `<details>` (catégorie / URC / Super Rugby Pacific / Premiership / 17:00 SAST / VPN / trial / page ZA). ≠ pack P1 6Q
+- [x] Live FAQPage JSON-LD = **8** Question (mêmes textes). Autres schemas: Article, BreadcrumbList, HowTo, Question (DirectAnswer)
+- [x] Live `wa.me/447307410512` présent (16). `mailto:` = 0. `AggregateRating` = 0
+- [x] Source = `lib/seo/blog-diaspora.ts` slug `watch-springboks-from-london` `faq[]` → template `app/[locale]/blog/[slug]/page.tsx` (visible + FAQPage)
+- [x] Siblings live 200, FAQ topic-specific (pas le pack P1) :
+  - `iptv-uk-firestick-smart-tv-sa-sports` 7Q setup
+  - `rugby-kickoff-times-london` 7Q fuseau
+  - `iptv-buffering-uk-wifi` 7Q Wi-Fi UK
+  - `switch-iptv-seller-abroad-whatsapp` 7Q vendeur mort
+  - `iptv-uk-categories-not-licences` 8Q licences — Q2 « Is IPTV legal in the UK? » manque le cadre owner « free illegal streams » / « 100% cleared »
+- [x] Related labels déjà humains. GSC absente — volumes NON OBSERVÉS
+
+## Travail
+
+- [x] `watch-springboks-from-london` `faq[]` = pack P1 6Q verbatim (visible + FAQPage)
+- [x] Soft-align `iptv-uk-categories-not-licences` Q2 answer (claims P1 Q6, question distincte — pas de clone 6Q)
+- [x] Autres siblings inchangés (topic-specific, 0 promesse « every feed » / « 100% legal »)
+- [x] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): 6/6 Q+A verbatim visible+FAQPage; `wa.me/447307410512` ×16; 0 mailto; 0 AggregateRating schema; old 8Q absente; related labels humains; sibling légal Q2 soft-alignée; Firestick 7Q inchangée
+- [x] PR ready : https://github.com/manzilionellm-dotcom/afriksud/pull/17
+
+## Originalité (Loi #10)
+
+Le pack P1 6Q apporte ce que la FAQ live 8Q n'a PAS: no-cable-from-London, no-guarantee SuperSport-style feed, live=host clock, Firestick walkthrough, trial 24h explicite, soft-legal « free illegal streams » / « 100% cleared » refusé. Les 8Q catégories restent dans le corps (H2), pas dans FAQPage.

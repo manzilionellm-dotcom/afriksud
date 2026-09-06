@@ -19,6 +19,9 @@
 ## run-007 (2026-09-06)
 - Cluster FAQ diaspora rugby London : 6 guides `/blog/` + FAQPage additif sur `sa-abroad/[country]`. CTA `wa.me/447307410512`. Slugs live non reconstruits.
 
+## run-008 (2026-09-06)
+- FAQ + FAQPage de `/en-za/blog/watch-springboks-from-london/` alignés sur le pack Seo P1 6Q verbatim. Soft-align légal sibling. Slug live non reconstruit.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

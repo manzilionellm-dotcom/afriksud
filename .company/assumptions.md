@@ -25,3 +25,8 @@
 ## run-006
 - **A12.** « Prefer DStv/sport/switch/load-shedding ; all 12 OK if clean » → les 12 guides PR #14 sont clean (pas de mailto / AggregateRating, prix déjà publiés) → injection sur les 12.
 - **A13.** « From about €5/mo on 12 months » est la copie owner fournie (EXACT). Ce n'est pas un nouveau tarif ZAR : les plans publiés restent R199 / R449 / R699 / R1,199. Le €5 n'est pas un taux de change mesuré ce run.
+
+## run-008
+- **A16.** Pack Seo P1 6Q = copie owner verbatim pour `watch-springboks-from-london` seulement (visible + FAQPage). Ne pas cloner les 6Q sur les siblings (cannibalisation FAQ rich results).
+- **A17.** « Soft-align if FAQ differs wildly » → siblings topic-specific déjà alignés (0 « every feed » / 0 « 100% legal »). Seul `iptv-uk-categories-not-licences` Q2 manquait le cadre « free illegal streams » / « 100% cleared » → answer soft-alignée, question distincte conservée.
+- **A18.** Corps H2 (catégories / URC / Super Rugby Pacific) conservé — Loi #4 : on remplace la FAQ, on ne reconstruit pas la page.
