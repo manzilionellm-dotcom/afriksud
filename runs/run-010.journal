@@ -17,8 +17,9 @@
 - [x] Aliases 308 → `/en-za/blog/watch-springboks-from-london` (slash + no-slash, `/en/`, locale, bare)
 - [x] Retrait hub 200 + sitemap hub
 - [x] Pack P1 6Q inchangé sur le blog
-- [ ] DoD + vérif locale
-- [ ] PR
+- [x] DoD: type-check · lint · build (1665 pages, hub route gone) · qa-gates exit 0
+- [x] Vérif `next start`: `/en/iptv-springboks-uk` 308 1 hop → blog; 6/6 P1 visible+FAQPage; WA ×16; 0 AR; 0 mailto; `/iptv-springboks-uk` pas cities; sitemap aliases 0
+- [x] PR : https://github.com/manzilionellm-dotcom/afriksud/pull/19
 
 ## Originalité
 
