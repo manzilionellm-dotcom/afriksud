@@ -10,6 +10,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { LOCALES, DEFAULT_LOCALE } from "./lib/locales";
 import { wwwToApexLocation } from "./lib/url";
+import { springboksUkAliasDestination } from "./lib/seo/springboks-uk-aliases";
 
 const LOCALE_SET = new Set<string>(LOCALES);
 
@@ -32,6 +33,16 @@ export function middleware(req: NextRequest) {
   }
 
   const { pathname, search } = req.nextUrl;
+  // Seo short slugs BEFORE slash-strip so `/en/iptv-springboks-uk/` is
+  // one 308 to `/en-za/iptv-springboks-uk` (no chain).
+  const seoAlias = springboksUkAliasDestination(pathname);
+  if (seoAlias) {
+    const dest = new URL(req.url);
+    dest.pathname = seoAlias;
+    dest.search = search;
+    return NextResponse.redirect(dest, 308);
+  }
+
   // Restore Next default (trailingSlash: false) now that
   // skipTrailingSlashRedirect is on — but only AFTER www has left.
   // Use a WHATWG URL, not nextUrl.clone(): NextURL re-appends `/`.

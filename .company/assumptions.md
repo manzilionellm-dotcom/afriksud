@@ -30,3 +30,8 @@
 - **A16.** Pack Seo P1 6Q = copie owner verbatim pour `watch-springboks-from-london` seulement (visible + FAQPage). Ne pas cloner les 6Q sur les siblings (cannibalisation FAQ rich results).
 - **A17.** « Soft-align if FAQ differs wildly » → siblings topic-specific déjà alignés (0 « every feed » / 0 « 100% legal »). Seul `iptv-uk-categories-not-licences` Q2 manquait le cadre « free illegal streams » / « 100% cleared » → answer soft-alignée, question distincte conservée.
 - **A18.** Corps H2 (catégories / URC / Super Rugby Pacific) conservé — Loi #4 : on remplace la FAQ, on ne reconstruit pas la page.
+
+## run-009
+- **A19.** `/en` n'est pas une locale live (12 codes figés). Seo `/en/iptv-springboks-uk` = 308 1 hop vers `/en-za/iptv-springboks-uk` (routing site). `watch-springboks-uk` = alias, pas un 2e 200.
+- **A20.** Hub 200 plutôt que redirect-only : « register in sitemap » n'accepte pas les 308. Blog live non reconstruit. Même pack P1 6Q (source unique) — A16 reste pour les siblings blog ; le hub EST le slug Seo demandé.
+- **A21.** Prod 2026-09-06 sert encore la FAQ 8Q pré-#17 sur le blog London. Git `790efe0` a le pack 6Q. Hub et blog repo partagent l'export. Volume GSC NON OBSERVÉ.

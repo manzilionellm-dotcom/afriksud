@@ -1,0 +1,37 @@
+# USINE v8 — Journal run-009 (Seo slug aliases + FAQ hub Springboks UK)
+# Branch: cursor/iptv-springboks-uk-faq-hub-b972
+# Objectif: slugs Seo `/en/iptv-springboks-uk` (+ optionnel `/en/watch-springboks-uk`)
+# vers un hub FAQ 200 (pack P1 6Q verbatim + FAQPage) canon `en-za`, aliases 308
+# 1 hop, sitemap, WA wa.me/447307410512. 0 reconstruction du blog live.
+# 0 AggregateRating. 0 mailto. Labels humains. 0 stats inventées.
+
+## T0 (mesuré, 2026-09-06)
+
+- [x] git: `origin/main` @ `790efe0` `feat(seo): lock Springboks London FAQ to Seo P1 6Q pack (#17)` (fetch `origin/main` = HEAD local)
+- [x] Live `https://iptvmzansi.com/en-za/blog/watch-springboks-from-london/` → 308 slash-strip puis **200**. Title = « Watch the Springboks from London — IPTV FAQ for SA rugby fans | Mzansi Stream ». Canonical = `https://iptvmzansi.com/en-za/blog/watch-springboks-from-london/`
+- [x] Live FAQ visible + FAQPage = **8Q** (pack pré-#17). Repo main a déjà le pack P1 6Q (run-008). Deploy prod ≠ git (mesuré, pas simulé).
+- [x] Live `wa.me/447307410512` ×16. `mailto:` = 0. `AggregateRating` = 0
+- [x] Live aliases **404** (0 indexé à préserver) : `/en/iptv-springboks-uk`, `/en/watch-springboks-uk`, `/en-za/iptv-springboks-uk`, `/en-za/watch-springboks-uk`, `/en-gb/iptv-springboks-uk`
+- [x] `/en` et `/en/` : `en` n'est **pas** une locale (`LOCALES` = 12, `normalizeLocale("en")` → `en-za`). `/en` live 404 ; `/en/` 308 → `/en`
+- [x] Sitemap prod `https://iptvmzansi.com/sitemap.xml` : `watch-springboks-from-london` présent (14) ; `iptv-springboks-uk` = 0
+- [x] `next.config.js` `/iptv-:city` 301 → `/en-za/cities/:city/` — un hit nu `/iptv-springboks-uk` irait vers une city 404. Règle spécifique **avant** ce catch.
+- [x] GSC absente — volumes NON OBSERVÉS
+
+## Décision (Loi #2 / #10)
+
+Hub FAQ dédié 200 à `/en-za/iptv-springboks-uk` (pas redirect-only) : Seo a demandé le slug **et** « register in sitemap » (les 308 ne s'y mettent pas). Originalité vs blog long : slug court keyword, accordion 6Q immédiat, lien related vers le guide London. Blog live **non reconstruit**. `/en/…` = 308 1 hop vers `en-za` (locale site). `watch-springboks-uk` = alias, pas un 2e 200.
+
+## Travail
+
+- [x] Extraire `SPRINGBOKS_LONDON_P1_FAQ` (source unique blog + hub)
+- [x] Page `app/[locale]/iptv-springboks-uk/` (accordion + FAQPage, titre unique)
+- [x] 308 aliases 1 hop (`/en/…`, `/watch-springboks-uk`, locale-prefixed watch, catch `/iptv-springboks-uk` avant cities)
+- [x] Sitemap `withAlternates("/iptv-springboks-uk/")`
+- [x] Related bidirectionnel blog ↔ hub ; InternalLinkHub additif
+- [ ] DoD: `pnpm type-check` · `pnpm lint` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
+- [ ] Vérif locale (`next start`) : 6/6 Q+A ; aliases 308 1 hop ; 0 mailto ; 0 AggregateRating ; sitemap
+- [ ] PR unique
+
+## Originalité (Loi #10)
+
+Le hub apporte ce que le blog `/blog/watch-springboks-from-london/` n'a PAS : slug court `iptv-springboks-uk` (query Seo), URL `/en/…` campaign-safe via 308, entrée sitemap dédiée. Même pack P1 6Q (pas de 2e rédaction). Pas de claim de volume GSC.

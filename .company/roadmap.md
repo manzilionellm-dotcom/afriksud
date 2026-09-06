@@ -22,6 +22,9 @@
 ## run-008 (2026-09-06)
 - FAQ + FAQPage de `/en-za/blog/watch-springboks-from-london/` alignés sur le pack Seo P1 6Q verbatim. Soft-align légal sibling. Slug live non reconstruit.
 
+## run-009 (2026-09-06)
+- Hub FAQ `/en-za/iptv-springboks-uk` (pack P1 6Q + FAQPage) + 308 `/en/iptv-springboks-uk` et `/en/watch-springboks-uk`. Sitemap hub. Blog London non reconstruit.
+
 ## Trimestre
 - Localisation native progressive des pages non-home (fr/pt-mz/af prioritaires).
 - Branchement GSC + Bing Webmaster (déblocage humain requis).

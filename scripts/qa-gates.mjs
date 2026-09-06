@@ -261,6 +261,46 @@ function gateLocalesFrozen() {
   }
 }
 
+function gateSpringboksUkHub() {
+  const faqSrc = read(join(ROOT, "lib/seo/blog-diaspora.ts"));
+  if (!/export const SPRINGBOKS_LONDON_P1_FAQ/.test(faqSrc)) {
+    fail("SPRINGBOKS_LONDON_P1_FAQ manquant (pack P1 6Q).");
+  } else {
+    ok("Pack P1 6Q exporté (SPRINGBOKS_LONDON_P1_FAQ).");
+  }
+  const hubPage = read(join(ROOT, "app/[locale]/iptv-springboks-uk/page.tsx"));
+  if (!hubPage || !/SPRINGBOKS_UK_HUB/.test(hubPage)) {
+    fail("hub iptv-springboks-uk absent ou déconnecté du pack.");
+  } else if (
+    /"@type"\s*:\s*"AggregateRating"/.test(hubPage)
+    || /href=["']mailto:/.test(hubPage)
+  ) {
+    fail("hub iptv-springboks-uk: AggregateRating / mailto interdits.");
+  } else {
+    ok("Hub /iptv-springboks-uk/ câblé (0 mailto, 0 AggregateRating).");
+  }
+  const sm = read(join(ROOT, "app/sitemap.ts"));
+  if (!/SPRINGBOKS_UK_HUB_PATH/.test(sm)) {
+    fail("sitemap: SPRINGBOKS_UK_HUB_PATH manquant.");
+  } else {
+    ok("sitemap: hub iptv-springboks-uk enregistré.");
+  }
+  const cfg = read(join(ROOT, "next.config.js"));
+  const aliasAt = cfg.indexOf('source: "/en/iptv-springboks-uk"');
+  const cityAt = cfg.indexOf('source: "/iptv-:city"');
+  if (aliasAt < 0 || cityAt < 0 || aliasAt > cityAt) {
+    fail("next.config.js: /en/iptv-springboks-uk doit précéder /iptv-:city.");
+  } else {
+    ok("next.config.js: alias Seo avant le catch /iptv-:city.");
+  }
+  const mw = read(join(ROOT, "middleware.ts"));
+  if (!/springboksUkAliasDestination/.test(mw)) {
+    fail("middleware.ts: springboksUkAliasDestination manquant.");
+  } else {
+    ok("middleware.ts: 308 aliases Springboks UK avant slash-strip.");
+  }
+}
+
 function run() {
   const files = walk(ROOT);
   gatePlaceholders(files);
@@ -270,6 +310,7 @@ function run() {
   gateCanonicalApex();
   gateWww308();
   gateLocalesFrozen();
+  gateSpringboksUkHub();
 }
 
 // ── Self-test: validate gate logic against in-memory fixtures.
