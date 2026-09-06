@@ -21,6 +21,22 @@ function extractLocale(pathname: string): string {
 }
 
 export function middleware(req: NextRequest) {
+  const { pathname, search } = req.nextUrl;
+  // Seo short slugs BEFORE www→apex and slash-strip so
+  // `www/en/iptv-springboks-uk/` is one 308 to the apex London blog.
+  const seoAlias = springboksUkAliasDestination(pathname);
+  if (seoAlias) {
+    const dest = new URL(req.url);
+    dest.pathname = seoAlias;
+    dest.search = search;
+    const apexDest = wwwToApexLocation(
+      dest.href,
+      req.headers.get("x-forwarded-host"),
+      req.headers.get("host")
+    );
+    return NextResponse.redirect(apexDest || dest, 308);
+  }
+
   // Host 308 MUST run before locale / trailing-slash hops. Next.js
   // otherwise 308s `/en-za/` → `/en-za` on the same (www) host.
   const apex = wwwToApexLocation(
@@ -30,17 +46,6 @@ export function middleware(req: NextRequest) {
   );
   if (apex) {
     return NextResponse.redirect(apex, 308);
-  }
-
-  const { pathname, search } = req.nextUrl;
-  // Seo short slugs BEFORE slash-strip so `/en/iptv-springboks-uk/` is
-  // one 308 to the live London blog (no chain).
-  const seoAlias = springboksUkAliasDestination(pathname);
-  if (seoAlias) {
-    const dest = new URL(req.url);
-    dest.pathname = seoAlias;
-    dest.search = search;
-    return NextResponse.redirect(dest, 308);
   }
 
   // Restore Next default (trailingSlash: false) now that

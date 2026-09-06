@@ -13,13 +13,13 @@
 
 ## Travail
 
-- [ ] `vercel.json` : 308 1 hop alias → blog (www absolu d'abord, puis apex)
-- [ ] Retrait `next.config.ts` vide (un seul next.config)
-- [ ] Route `app/en/iptv-springboks-uk` = 308 only (0 HTML)
-- [ ] qa-gates : edge + pas de landing
-- [ ] DoD: type-check · lint · build · qa-gates exit 0
-- [ ] Vérif `next start` : alias 308 1 hop, 0 200 sur l'alias
-- [ ] PR unique
+- [x] `vercel.json` : 308 1 hop alias → blog (www absolu d'abord, puis apex)
+- [x] Retrait `next.config.ts` vide (un seul next.config)
+- [x] Route `app/en/iptv-springboks-uk` = 308 only (0 HTML)
+- [x] qa-gates : edge + pas de landing
+- [x] DoD: type-check · lint · build (1666) · qa-gates exit 0
+- [x] Vérif `next start` : `/en/iptv-springboks-uk` 308 1 hop → blog; slash idem; www Host 308 apex blog; GET alias 308 40 B; canon 200; sitemap aliases 0
+- [x] PR unique : https://github.com/manzilionellm-dotcom/afriksud/pull/22
 
 ## Originalité
 

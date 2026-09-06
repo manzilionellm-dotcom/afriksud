@@ -325,10 +325,16 @@ function gateSpringboksUkAliases() {
   const aliasAt = cfg.indexOf('source: "/en/iptv-springboks-uk"');
   const destAt = cfg.indexOf('destination: "/en-za/blog/watch-springboks-from-london"');
   const cityAt = cfg.indexOf('source: "/iptv-:city"');
+  const wwwAliasAbs = cfg.indexOf(
+    'https://iptvmzansi.com/en-za/blog/watch-springboks-from-london'
+  );
+  const wwwCatch = cfg.indexOf('source: "/:path*"');
   if (aliasAt < 0 || destAt < 0 || cityAt < 0 || aliasAt > cityAt || destAt > cityAt) {
     fail("next.config.js: /en/iptv-springboks-uk → blog London avant /iptv-:city.");
+  } else if (wwwAliasAbs < 0 || wwwCatch < 0 || wwwAliasAbs > wwwCatch) {
+    fail("next.config.js: www /en/iptv-springboks-uk 1 hop avant /:path*.");
   } else {
-    ok("next.config.js: 308 /en/iptv-springboks-uk → blog London.");
+    ok("next.config.js: 308 /en/iptv-springboks-uk → blog London (www 1 hop).");
   }
   const aliases = read(join(ROOT, "lib/seo/springboks-uk-aliases.ts"));
   if (!/SPRINGBOKS_UK_BLOG_DEST/.test(aliases) || !/watch-springboks-from-london/.test(aliases)) {

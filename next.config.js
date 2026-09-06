@@ -21,6 +21,50 @@ const nextConfig = {
     // Vercel preview SITE_URL, and duplicate content with the canonical
     // /[locale]/* tree. 301 to the canonical English equivalents.
     return [
+      // www Springboks UK aliases FIRST — 1 hop to the live blog, not
+      // www→apex then a second 308. Must sit above `/:path*`.
+      {
+        source: "/en/iptv-springboks-uk",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source: "/en/iptv-springboks-uk/",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source: "/en/watch-springboks-uk",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source: "/en/watch-springboks-uk/",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source: "/iptv-springboks-uk",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
+      {
+        source: "/iptv-springboks-uk/",
+        has: [{ type: "host", value: "www.iptvmzansi.com" }],
+        destination:
+          "https://iptvmzansi.com/en-za/blog/watch-springboks-from-london",
+        permanent: true,
+      },
       // www → apex before trailing-slash normalisation so `/en-za/` on
       // www does not 308 to `/en-za` on the same (www) host first.
       {
