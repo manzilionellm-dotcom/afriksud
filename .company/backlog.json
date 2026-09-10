@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "run-003",
+  "updated": "run-003 + correctif 2026-09-10",
   "items": [
     {
       "id": "L10N-META-PILLARS",
@@ -88,6 +88,17 @@
       "confiance": "n/a",
       "metrique": "0 placeholder legal rendu",
       "note": "BLOQUE OWNER : donnees non inventables (Loi 3). Impacte E-E-A-T, que les moteurs IA ponderent."
+    },
+    {
+      "id": "TRIAL-ABUSE-GUARD",
+      "titre": "Garde-fou sur l'essai 24h (limite par numero/appareil + journal des essais accordes)",
+      "axe": "CRO / cout",
+      "preuve": "grep : aucun controle d'abus d'essai dans le code. Les 2 leads IA observes demandent d'abord l'essai gratuit.",
+      "impact": 4,
+      "effort": 3,
+      "confiance": "observe",
+      "metrique": "taux essai -> paiement ; nombre d'essais servis par periode",
+      "note": "A mesurer AVANT d'amplifier le canal IA : amplifier un canal dont le taux de conversion essai->paiement est inconnu peut multiplier le cout, pas le revenu."
     }
   ]
 }
