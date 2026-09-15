@@ -68,7 +68,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       { userAgent: "ZoominfoBot", disallow: "/" },
       { userAgent: "barkrowler", disallow: "/" },
       { userAgent: "SerpstatBot", disallow: "/" },
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"], crawlDelay: 5 },
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/", "/ops"], crawlDelay: 5 },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

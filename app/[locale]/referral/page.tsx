@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: "Refer a friend — 1 month free",
     description:
-      "Refer a friend to Mzansi Stream and you both get 1 free month when they subscribe. No limit on referrals.",
+      "When a friend pays the 12-month plan, you both get 1 extra month. Trial-only does not count. Same WhatsApp +44 7307 410512.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/referral/"),
       languages: hreflangFor("/referral/"),
@@ -43,9 +43,7 @@ export default async function ReferralPage({ params }: Props) {
           <p className="longformEyebrow">Refer a friend</p>
           <h1>Invite a friend → both get 1 month free</h1>
           <p className="longformLead">
-            Send a Mzansi Stream invite to anyone in your circle. When they
-            subscribe to any plan, you both get an extra month added to
-            your subscription — automatically.
+            Friend pays the 12-month plan. You both get +1 month on that term. The 24h trial alone does not trigger the bonus.
           </p>
         </header>
 
@@ -54,7 +52,7 @@ export default async function ReferralPage({ params }: Props) {
           <ol className="longformList">
             <li>Message us on WhatsApp with your friend&apos;s name + WhatsApp number.</li>
             <li>We message them with a 24-hour free trial link.</li>
-            <li>When they subscribe to any plan, you both get 1 month free.</li>
+            <li>When they pay the 12-month plan, both accounts get +1 month.</li>
           </ol>
         </section>
 
