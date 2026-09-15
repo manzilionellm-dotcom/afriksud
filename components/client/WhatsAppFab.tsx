@@ -12,47 +12,51 @@ import { SITE } from "../shared/site";
 import { useWaPrefillOverride } from "./WaPrefillContext";
 
 const PREFILL: Record<Locale, string> = {
-  "en-za": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-gb": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-au": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-us": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-ae": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-nz": "Hi! I'd like a free 24h Mzansi Stream trial.",
-  "en-zw": "Hi! I'd like a free 24h Mzansi Stream Zimbabwe trial.",
-  af: "Hallo! Ek wil graag begin met die gratis 24-uur Mzansi Stream toets.",
-  zu: "Sawubona! Ngifuna ukulinga kwamahhala kwama-24h kwe-Mzansi Stream.",
-  xh: "Molo! Ndingathanda uvavanyo lwasimahla lweyure ezingama-24 lwe-Mzansi Stream.",
-  "pt-mz": "Olá! Gostaria de um teste grátis de 24h do Mzansi Stream.",
-  fr: "Bonjour ! Je souhaite un essai gratuit de 24h Mzansi Stream.",
+  "en-za": "Hi Mzansi — 24h trial. City + device:",
+  "en-gb": "Hi Mzansi — 24h trial. City + device:",
+  "en-au": "Hi Mzansi — 24h trial. City + device:",
+  "en-us": "Hi Mzansi — 24h trial. City + device:",
+  "en-ae": "Hi Mzansi — 24h trial. City + device:",
+  "en-nz": "Hi Mzansi — 24h trial. City + device:",
+  "en-zw": "Hi Mzansi Zimbabwe — 24h trial. City + device:",
+  af: "Hallo Mzansi — 24-uur toets. Stad + toestel:",
+  zu: "Sawubona Mzansi — 24h trial. Idolobha + idivayisi:",
+  xh: "Molo Mzansi — 24h trial. Isixeko + isixhobo:",
+  "pt-mz": "Olá Mzansi — teste 24h. Cidade + dispositivo:",
+  fr: "Bonjour Mzansi — essai 24h. Ville + appareil :",
 };
 
 function readEnv(key: string): string | undefined {
-  // Next.js inlines `process.env.NEXT_PUBLIC_*` at build time, but a
-  // bracket access is opaque to that step. We only call this with
-  // known keys; values get baked in below via a switch.
+  // Single number for every brand. Per-locale keys still accepted so
+  // existing Vercel env names keep working — they must all be 447307410512.
+  const mzansi =
+    process.env.NEXT_PUBLIC_WHATSAPP_MZANSI ||
+    process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT ||
+    process.env.NEXT_PUBLIC_WHATSAPP_ZA ||
+    process.env.NEXT_PUBLIC_WHATSAPP_PHONE;
   switch (key) {
     case "NEXT_PUBLIC_WHATSAPP_ZA":
-      return process.env.NEXT_PUBLIC_WHATSAPP_ZA;
+      return process.env.NEXT_PUBLIC_WHATSAPP_ZA || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_ZW":
-      return process.env.NEXT_PUBLIC_WHATSAPP_ZW;
+      return process.env.NEXT_PUBLIC_WHATSAPP_ZW || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_MZ":
-      return process.env.NEXT_PUBLIC_WHATSAPP_MZ;
+      return process.env.NEXT_PUBLIC_WHATSAPP_MZ || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_BW":
-      return process.env.NEXT_PUBLIC_WHATSAPP_BW;
+      return process.env.NEXT_PUBLIC_WHATSAPP_BW || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_NA":
-      return process.env.NEXT_PUBLIC_WHATSAPP_NA;
+      return process.env.NEXT_PUBLIC_WHATSAPP_NA || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_LS":
-      return process.env.NEXT_PUBLIC_WHATSAPP_LS;
+      return process.env.NEXT_PUBLIC_WHATSAPP_LS || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_SZ":
-      return process.env.NEXT_PUBLIC_WHATSAPP_SZ;
+      return process.env.NEXT_PUBLIC_WHATSAPP_SZ || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_ZM":
-      return process.env.NEXT_PUBLIC_WHATSAPP_ZM;
+      return process.env.NEXT_PUBLIC_WHATSAPP_ZM || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_MW":
-      return process.env.NEXT_PUBLIC_WHATSAPP_MW;
+      return process.env.NEXT_PUBLIC_WHATSAPP_MW || mzansi;
     case "NEXT_PUBLIC_WHATSAPP_DEFAULT":
-      return process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT;
+      return mzansi;
     default:
-      return undefined;
+      return mzansi;
   }
 }
 
@@ -68,7 +72,8 @@ export function WhatsAppFab() {
   const number =
     readEnv(meta.whatsappEnvKey) ||
     readEnv("NEXT_PUBLIC_WHATSAPP_DEFAULT") ||
-    SITE.whatsappPhone;
+    SITE.whatsappPhone ||
+    "447307410512";
   const message = PREFILL[lang] ?? PREFILL["en-za"];
   const href =
     waOverride?.href ??
