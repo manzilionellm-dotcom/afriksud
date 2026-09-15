@@ -58,6 +58,14 @@ export function middleware(req: NextRequest) {
   const res = NextResponse.next();
   res.headers.set("x-mz-locale", locale);
   res.headers.set("x-mz-path", pathname);
+
+  const host = (req.headers.get("x-forwarded-host") || req.headers.get("host") || "")
+    .split(",")[0]
+    .trim()
+    .toLowerCase();
+  if (host.endsWith(".vercel.app")) {
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
   return res;
 }
 
