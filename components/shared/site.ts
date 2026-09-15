@@ -7,7 +7,9 @@ export const SITE = {
   domain: "https://iptvmzansi.com", // apex canonical — never www
   brand: "Mzansi Stream",
   whatsappPhone:
-    process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT || WHATSAPP_DEFAULT,
+    process.env.NEXT_PUBLIC_WHATSAPP_MZANSI ||
+    process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT ||
+    WHATSAPP_DEFAULT,
   currencyCode: "ZAR" as const,
   currencyLabel: "R",
   countryCode: "ZA",

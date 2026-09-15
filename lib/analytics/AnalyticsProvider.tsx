@@ -23,6 +23,7 @@ import {
 } from "./track";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY || "";
 const POSTHOG_HOST =
   process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com";
@@ -31,6 +32,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
     posthog?: {
       init: (key: string, opts: Record<string, unknown>) => void;
       capture: (event: string, props?: TrackProps) => void;
@@ -52,7 +54,6 @@ function attachWhatsAppDelegate() {
     const ref = anchor.getAttribute("data-track-ref") || "";
     const placement = anchor.getAttribute("data-track-placement") || "";
 
-    // Augment the WhatsApp text with attribution so support sees the source.
     try {
       const url = new URL(anchor.href);
       const textParam = url.searchParams.get("text");
@@ -70,7 +71,6 @@ function attachWhatsAppDelegate() {
     track("whatsapp_click", {
       ref: ref || undefined,
       placement: placement || undefined,
-      // The href the user is about to follow (decoded for readability).
       href: anchor.href.slice(0, 200),
     });
   };
@@ -79,16 +79,17 @@ function attachWhatsAppDelegate() {
 }
 
 function loadSinks() {
-  // Build a sink that fans out to GA4 + PostHog only when each is configured.
   registerSink((name, props) => {
     if (typeof window === "undefined") return;
     if (GA_MEASUREMENT_ID && window.gtag) {
       window.gtag("event", name, props as Record<string, unknown>);
     }
+    if (META_PIXEL_ID && window.fbq) {
+      window.fbq("trackCustom", name, props as Record<string, unknown>);
+    }
     if (POSTHOG_KEY && window.posthog) {
       window.posthog.capture(name, props);
     }
-    // Always mirror to dataLayer for GTM-driven setups (no-op without GTM).
     if (window.dataLayer) {
       window.dataLayer.push({ event: name, ...props });
     }
@@ -99,24 +100,14 @@ export function AnalyticsProvider() {
   const [consent, setConsent] = useState<Consent>(null);
 
   useEffect(() => {
-    // 1. Snapshot attribution as soon as the client mounts.
     captureAttribution();
-
-    // 2. Expose `window.mzTrack` for ad-hoc inline tracking.
     window.mzTrack = (name: string, props?: TrackProps) =>
       track(name, props || {});
-
-    // 3. WhatsApp click delegate runs whether or not analytics are loaded —
-    //    consent only gates the network send (registerSink fan-out).
     const detach = attachWhatsAppDelegate();
-
-    // 4. Fire page_view immediately. The sink queues until consent grants.
     track("page_view", {
       title: document.title,
       referrer: document.referrer || undefined,
     });
-
-    // 5. Wake on consent grant or read prior consent on remount.
     const onConsent = () => {
       const c = readConsent();
       setConsent(c);
@@ -129,14 +120,10 @@ export function AnalyticsProvider() {
     };
     onConsent();
     window.addEventListener("mz:consent", onConsent);
-
-    // Cross-tab sync: if the user grants consent in another tab, this one
-    // should start firing too.
     const onStorage = (e: StorageEvent) => {
       if (e.key === CONSENT_STORAGE_KEY) onConsent();
     };
     window.addEventListener("storage", onStorage);
-
     return () => {
       detach?.();
       window.removeEventListener("mz:consent", onConsent);
@@ -146,10 +133,6 @@ export function AnalyticsProvider() {
 
   const consented = consent === "accepted" || consent === "custom";
 
-  // Scripts only render after consent — no third-party network calls
-  // until the user has affirmatively allowed analytics. Initial server
-  // render emits no scripts (state defaults to null), so there is no
-  // hydration mismatch on first paint.
   return (
     <>
       {consented && GA_MEASUREMENT_ID ? (
@@ -172,6 +155,15 @@ export function AnalyticsProvider() {
             `}
           </Script>
         </>
+      ) : null}
+      {consented && META_PIXEL_ID ? (
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init','${META_PIXEL_ID}');
+            fbq('track','PageView');
+          `}
+        </Script>
       ) : null}
       {consented && POSTHOG_KEY ? (
         <Script id="posthog-init" strategy="afterInteractive">

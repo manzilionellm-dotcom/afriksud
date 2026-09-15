@@ -114,3 +114,11 @@ existing apex `/` → `/en-za/` 307).
 - `hreflangFor()` emits the 12 real locales + `x-default` → `/en-za/`
 - Contact remains WhatsApp-only (existing number in code; no `mailto:`)
 - No invented `aggregateRating`
+
+Until www TLS is issued, HSTS is `max-age=63072000` only (no `includeSubDomains`,
+no `preload`). Restore those flags after the www SAN is live.
+
+`mzansistream.co.za` still presents a self-signed cert. Do not add it to HSTS
+or TWA trusted origins until a real certificate is issued. TWA host is
+`iptvmzansi.com`. After a Bubblewrap rebuild, replace the SHA-256 placeholder
+in `public/.well-known/assetlinks.json`.

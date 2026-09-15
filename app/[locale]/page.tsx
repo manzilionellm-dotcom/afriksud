@@ -28,17 +28,18 @@ import {
   TrustSection,
   VODSection,
   CompareSection,
-  ReviewsSection,
   DeviceSection,
   SACities,
   QuickSetup,
   FaqSection,
   FooterSection,
 } from "../../components/client/LocalizedSections";
+import { ReviewsSection } from "../../components/client/ReviewsSection";
 import { ChannelExplorer } from "../../components/client/ChannelExplorer";
 import { CountriesSection } from "../../components/client/CountriesSection";
 import { InternationalSection } from "../../components/client/InternationalSection";
 import { WhatsAppFab } from "../../components/client/WhatsAppFab";
+import { StickyBottomCta } from "../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../components/client/SkipLink";
 import { LocaleSync } from "../../components/client/LocaleSync";
@@ -92,62 +93,35 @@ export default async function LocaleHome({ params }: Props) {
     url: SITE.domain,
   };
 
-  const shippingDetails = {
-    "@type": "OfferShippingDetails",
-    shippingRate: { "@type": "MonetaryAmount", value: "0", currency: SITE.currencyCode },
-    shippingDestination: { "@type": "DefinedRegion", addressCountry: "ZA" },
-    deliveryTime: {
-      "@type": "ShippingDeliveryTime",
-      handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 0, unitCode: "MIN" },
-      transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 10, unitCode: "MIN" },
-    },
-  };
-
-  const returnPolicy = {
-    "@type": "MerchantReturnPolicy",
-    applicableCountry: "ZA",
-    returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-    merchantReturnDays: 7,
-    returnMethod: "https://schema.org/ReturnByMail",
-    returnFees: "https://schema.org/FreeReturn",
-  };
-
-  const productSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${SITE.domain}/${locale}/#product`,
-    name: "Mzansi Stream — Premium IPTV South Africa",
+    "@type": "Service",
+    "@id": `${SITE.domain}/${locale}/#service`,
+    name: "Mzansi Stream — IPTV subscription",
+    serviceType: "IPTV streaming subscription",
     brand: { "@id": BRAND_ID },
-    manufacturer: { "@id": ORG_ID },
+    provider: { "@id": ORG_ID },
     description:
       "Mzansi Stream — 20,000+ live channels, 100,000+ movies and series, EPG, 4K/UHD. SuperSport, DStv Premiership, Premier League, kykNET, SABC and more. WhatsApp activation in 10 minutes.",
     image: `${SITE.domain}/og-image.jpg`,
     url: localeUrl(locale as Locale, "/"),
-    sku: "MZANSI-STREAM-ZA",
-    mpn: "MZANSI-2026",
-    category: "Streaming / IPTV",
-    audience: {
-      "@type": "PeopleAudience",
-      geographicArea: { "@type": "Country", name: "South Africa" },
+    areaServed: { "@type": "Country", name: "South Africa" },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Mzansi Stream plans",
+      itemListElement: plans.map((p) => ({
+        "@type": "Offer",
+        "@id": `${SITE.domain}/${locale}/#offer-${p.key}`,
+        name: t.planNames[p.key],
+        description: `Mzansi Stream ${t.planNames[p.key]} — 20,000+ channels, 4K/UHD, EPG included.`,
+        price: String(p.price),
+        priceCurrency: SITE.currencyCode,
+        priceValidUntil: p.priceValidUntil,
+        availability: "https://schema.org/InStock",
+        url: localeUrl(locale as Locale, "/"),
+        seller,
+      })),
     },
-    // aggregateRating + review intentionally omitted until HelloPeter
-    // Business profile is connected and there are 50+ verified reviews
-    // with consent. DO NOT seed with invented data.
-    offers: plans.map((p) => ({
-      "@type": "Offer",
-      "@id": `${SITE.domain}/${locale}/#offer-${p.key}`,
-      name: t.planNames[p.key],
-      description: `Mzansi Stream ${t.planNames[p.key]} — 20,000+ channels, 4K/UHD, EPG included.`,
-      price: String(p.price),
-      priceCurrency: SITE.currencyCode,
-      priceValidUntil: p.priceValidUntil,
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      url: localeUrl(locale as Locale, "/"),
-      seller,
-      shippingDetails,
-      hasMerchantReturnPolicy: returnPolicy,
-    })),
   };
 
   const faqSchema = {
@@ -214,9 +188,6 @@ export default async function LocaleHome({ params }: Props) {
         closes: "23:00",
       },
     },
-    // `sameAs` intentionally omitted — wa.me is not a canonical social
-    // profile per schema.org guidance. Add real X / LinkedIn / YouTube
-    // entity URLs here once those profiles exist.
     priceRange: "99-1199 ZAR",
     currenciesAccepted: SITE.currencyCode,
     paymentAccepted:
@@ -227,9 +198,6 @@ export default async function LocaleHome({ params }: Props) {
   const siteSchema = websiteSchema();
   const brand = brandSchema();
 
-  // WebPage + Speakable lets Google's voice surfaces and AI Overviews
-  // safely quote the H1 + hero lead. We bind it to the actual on-page
-  // anchors so the extracted snippet matches what the user sees.
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -262,7 +230,7 @@ export default async function LocaleHome({ params }: Props) {
       <JsonLd data={brand} />
       <JsonLd data={siteSchema} />
       <JsonLd data={webPageSchema} />
-      <JsonLd data={productSchema} />
+      <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <JsonLd data={localBusinessSchema} />
 
@@ -296,6 +264,7 @@ export default async function LocaleHome({ params }: Props) {
         <FooterSection />
 
         <WhatsAppFab />
+        <StickyBottomCta />
         <BottomTabBar />
         <PopiaConsentBanner />
         <PriceCheckoutMount />
