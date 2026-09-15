@@ -85,6 +85,10 @@ function loadSinks() {
       window.gtag("event", name, props as Record<string, unknown>);
     }
     if (META_PIXEL_ID && window.fbq) {
+      if (name === "whatsapp_click") {
+        window.fbq("track", "Contact");
+        window.fbq("trackCustom", "WhatsAppClick", props as Record<string, unknown>);
+      }
       window.fbq("trackCustom", name, props as Record<string, unknown>);
     }
     if (POSTHOG_KEY && window.posthog) {
@@ -101,13 +105,17 @@ export function AnalyticsProvider() {
 
   useEffect(() => {
     captureAttribution();
+
     window.mzTrack = (name: string, props?: TrackProps) =>
       track(name, props || {});
+
     const detach = attachWhatsAppDelegate();
+
     track("page_view", {
       title: document.title,
       referrer: document.referrer || undefined,
     });
+
     const onConsent = () => {
       const c = readConsent();
       setConsent(c);
@@ -120,10 +128,12 @@ export function AnalyticsProvider() {
     };
     onConsent();
     window.addEventListener("mz:consent", onConsent);
+
     const onStorage = (e: StorageEvent) => {
       if (e.key === CONSENT_STORAGE_KEY) onConsent();
     };
     window.addEventListener("storage", onStorage);
+
     return () => {
       detach?.();
       window.removeEventListener("mz:consent", onConsent);
