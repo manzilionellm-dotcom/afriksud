@@ -63,17 +63,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Pillar SEO pages.
-  entries.push(withAlternates("/dstv-alternative/", 0.95));
-  entries.push(withAlternates("/blog/", 0.7, "weekly"));
-  entries.push(withAlternates("/referral/", 0.5, "monthly"));
-  entries.push(withAlternates("/affiliate/", 0.5, "monthly"));
+  entries.push(withAlternates("/dstv-alternative", 0.95));
+  entries.push(withAlternates("/blog", 0.7, "weekly"));
+  entries.push(withAlternates("/referral", 0.5, "monthly"));
+  entries.push(withAlternates("/affiliate", 0.5, "monthly"));
 
   // Head-term pillars — use per-pillar `dateModified` so the sitemap
   // reflects actual content freshness instead of the build date.
   for (const pillar of PILLARS) {
     entries.push(
       withAlternates(
-        `/${pillar.slug}/`,
+        `/${pillar.slug}`,
         0.9,
         "monthly",
         parseDate(pillar.dateModified)
@@ -83,18 +83,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   void PILLAR_SLUGS;
 
   // Section hubs / listing pages.
-  entries.push(withAlternates("/cities/", 0.8, "monthly"));
-  entries.push(withAlternates("/vs/", 0.8, "monthly"));
-  entries.push(withAlternates("/sadc/", 0.8, "monthly"));
-  entries.push(withAlternates("/sa-abroad/", 0.8, "monthly"));
-  entries.push(withAlternates("/communities/", 0.7, "monthly"));
-  entries.push(withAlternates("/devices/", 0.8, "monthly"));
+  entries.push(withAlternates("/cities", 0.8, "monthly"));
+  entries.push(withAlternates("/vs", 0.8, "monthly"));
+  entries.push(withAlternates("/sadc", 0.8, "monthly"));
+  entries.push(withAlternates("/sa-abroad", 0.8, "monthly"));
+  entries.push(withAlternates("/communities", 0.7, "monthly"));
+  entries.push(withAlternates("/devices", 0.8, "monthly"));
 
   // Device install pages (under /devices/[slug]/ — Hisense, LG, Sony, etc.).
   for (const device of DEVICES) {
     entries.push(
       withAlternates(
-        `/devices/${device.slug}/`,
+        `/devices/${device.slug}`,
         0.7,
         "monthly",
         parseDate(device.dateModified)
@@ -105,29 +105,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // SADC countries (8 × default locale anchor with hreflang alternates).
   for (const slug of SADC_SLUGS) {
-    entries.push(withAlternates(`/sadc/${slug}/`, 0.85, "monthly"));
+    entries.push(withAlternates(`/sadc/${slug}`, 0.85, "monthly"));
   }
 
   // SA cities.
   for (const slug of SA_CITY_SLUGS) {
-    entries.push(withAlternates(`/cities/${slug}/`, 0.75, "monthly"));
+    entries.push(withAlternates(`/cities/${slug}`, 0.75, "monthly"));
   }
 
   // Versus competitors.
   for (const slug of COMPETITOR_SLUGS) {
-    entries.push(withAlternates(`/vs/${slug}/`, 0.8, "monthly"));
+    entries.push(withAlternates(`/vs/${slug}`, 0.8, "monthly"));
   }
 
   // SA-language landing pages.
   for (const slug of SA_LANGUAGE_SLUGS) {
-    entries.push(withAlternates(`/language/${slug}/`, 0.7, "monthly"));
+    entries.push(withAlternates(`/language/${slug}`, 0.7, "monthly"));
   }
 
   // Blog posts — prefer dateModified when a guide carries one.
   for (const post of BLOG_POSTS) {
     entries.push(
       withAlternates(
-        `/blog/${post.slug}/`,
+        `/blog/${post.slug}`,
         0.6,
         "monthly",
         parseDate(post.dateModified ?? post.datePublished)
@@ -139,7 +139,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Legal — only the ones with finalised copy (skip placeholder pages).
   for (const slug of LEGAL_SLUGS) {
     if (!indexableLegalSlugs.includes(slug)) continue;
-    entries.push(withAlternates(`/legal/${slug}/`, 0.4, "yearly"));
+    entries.push(withAlternates(`/legal/${slug}`, 0.4, "yearly"));
   }
 
   // SA diaspora abroad — canonical lives on the preferred locale per
@@ -147,17 +147,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const country of SA_ABROAD_COUNTRIES) {
     void SA_ABROAD_SLUGS; // tree-shake guard
     entries.push({
-      url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}/`),
+      url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}`),
       lastModified: buildDate,
       changeFrequency: "monthly",
       priority: 0.8,
-      alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}/`) },
+      alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}`) },
     });
   }
 
   // Foreign communities in SA — always canonicalises to en-za.
   for (const slug of COMMUNITY_SLUGS) {
-    entries.push(withAlternates(`/communities/${slug}/`, 0.75, "monthly"));
+    entries.push(withAlternates(`/communities/${slug}`, 0.75, "monthly"));
   }
 
   // Reference: LOCALE_META is wired here purely to validate the helpers
