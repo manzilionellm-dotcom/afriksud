@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
   // Next's built-in slash 308 is relative and beats host redirects, so
   // `www/en-za/` stayed on www. Handle slash-strip in middleware AFTER
   // the absolute www→apex 308.
@@ -26,13 +27,13 @@ const nextConfig = {
       {
         source: "/",
         has: [{ type: "host", value: "www.iptvmzansi.com" }],
-        destination: "https://iptvmzansi.com/",
+        destination: "https://iptvmzansi.com/en-za",
         permanent: true,
       },
       {
         source: "/:path+/",
         has: [{ type: "host", value: "www.iptvmzansi.com" }],
-        destination: "https://iptvmzansi.com/:path+/",
+        destination: "https://iptvmzansi.com/:path+",
         permanent: true,
       },
       {
@@ -110,17 +111,17 @@ const nextConfig = {
       },
       {
         source: "/iptv-:city",
-        destination: "/en-za/cities/:city/",
+        destination: "/en-za/cities/:city",
         permanent: true,
       },
       {
         source: "/install-iptv-:device",
-        destination: "/en-za/devices/:device/",
+        destination: "/en-za/devices/:device",
         permanent: true,
       },
       {
         source: "/iptv-vs-:competitor",
-        destination: "/en-za/vs/:competitor/",
+        destination: "/en-za/vs/:competitor",
         permanent: true,
       },
       // Sport-specific legacy slug → SuperSport pillar (the most-trafficked
@@ -128,7 +129,7 @@ const nextConfig = {
       // pillars can be added explicitly later.
       {
         source: "/iptv-:sport(dstv-premiership|urc-rugby|premier-league|cricket)",
-        destination: "/en-za/iptv-supersport-without-dstv/",
+        destination: "/en-za/iptv-supersport-without-dstv",
         permanent: true,
       },
     ];
