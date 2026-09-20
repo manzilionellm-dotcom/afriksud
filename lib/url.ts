@@ -19,9 +19,9 @@ export function hostnameOf(hostOrUrl: string | null | undefined): string {
 }
 
 /**
- * Absolute apex URL for a www request (path + query preserved, including
- * a trailing slash). Matches if ANY of the Host-like values or the
- * request URL hostname is `www.iptvmzansi.com`.
+ * Absolute apex URL for a www request (path + query preserved; trailing
+ * slash stripped except for `/`). Matches if ANY of the Host-like values
+ * or the request URL hostname is `www.iptvmzansi.com`.
  */
 export function wwwToApexLocation(
   requestUrl: string,
@@ -43,14 +43,21 @@ export function wwwToApexLocation(
   url.protocol = "https:";
   url.hostname = APEX_HOST;
   url.port = "";
+  // One hop: strip trailing slash here so www+/path/ does not need a
+  // second slash-strip 308 on apex.
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    url.pathname = url.pathname.replace(/\/+$/, "") || "/";
+  }
   return url.toString();
 }
 
-/** Build the canonical URL for a locale + relative path under that locale. */
+/** Build the canonical URL for a locale + relative path under that locale.
+ *  Always no trailing slash (trailingSlash: false). Home = /{locale}. */
 export function localeUrl(locale: Locale, path: string = "/"): string {
   const normalised = path.startsWith("/") ? path : `/${path}`;
-  // Trailing slash is preserved if present; default home keeps trailing slash.
-  return `${SITE_URL}/${locale}${normalised === "/" ? "/" : normalised}`;
+  const trimmed =
+    normalised === "/" ? "" : normalised.replace(/\/+$/, "");
+  return `${SITE_URL}/${locale}${trimmed}`;
 }
 
 /** Build the hreflang alternates map for a path that exists in every locale. */
