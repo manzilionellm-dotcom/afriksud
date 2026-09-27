@@ -6,7 +6,7 @@
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
+import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
 import { hreflangFor, localeUrl } from "../../lib/url";
 
 type Props = {
@@ -44,7 +44,3 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   return <>{children}</>;
 }
-
-// Default locale config also exported so child pages can detect the
-// fallback when they receive a malformed `params.locale`.
-export { DEFAULT_LOCALE };
