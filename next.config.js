@@ -42,6 +42,17 @@ const nextConfig = {
         destination: "https://iptvmzansi.com/:path*",
         permanent: true,
       },
+      // P0: unprefixed free-trial → canonical en-za landing
+      {
+        source: "/free-trial",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
+      {
+        source: "/free-trial/",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
       // Seo Springboks UK short slugs — 308 one hop onto the live blog
       // (P1 6Q). MUST sit above `/iptv-:city` or `/iptv-springboks-uk`
       // would 301 into /cities/springboks-uk/. No trailing slash on dest.
