@@ -1,14 +1,14 @@
 // app/sitemap.ts
 
 import type { MetadataRoute } from "next";
-import { DEFAULT_LOCALE, LOCALES, LOCALE_META } from "../lib/locales";
+import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "../lib/locales";
 import { hreflangFor, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
 import { BLOG_POSTS, BLOG_SLUGS } from "../lib/seo/blog-posts";
 import { LEGAL_SLUGS, LEGAL_TOPICS } from "../lib/seo/legal";
-import { SA_LANGUAGE_SLUGS } from "../lib/seo/sa-languages";
+import { SA_LANGUAGE_PAGES } from "../lib/seo/sa-languages";
 import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 import { PILLARS, PILLAR_SLUGS } from "../lib/seo/pillars";
@@ -118,9 +118,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(withAlternates(`/vs/${slug}`, 0.8, "monthly"));
   }
 
-  // SA-language landing pages.
-  for (const slug of SA_LANGUAGE_SLUGS) {
-    entries.push(withAlternates(`/language/${slug}`, 0.7, "monthly"));
+  // SA-language landing pages. Canonical is the native locale (the body
+  // language). Other locales 301, so they must not appear in the sitemap.
+  for (const page of SA_LANGUAGE_PAGES) {
+    const owner = page.preferredLocale as Locale;
+    const url = localeUrl(owner, `/language/${page.slug}`);
+    entries.push({
+      url,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          [LOCALE_META[owner].hreflang]: url,
+          "x-default": url,
+        },
+      },
+    });
   }
 
   // Blog posts — prefer dateModified when a guide carries one.
