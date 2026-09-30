@@ -203,7 +203,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Mzansi Stream's position",
         body: [
-          "We source through licensed partners, accept traceable payment (EFT, SnapScan, card), are registered for VAT in South Africa, and process all customer data under POPIA.",
+          "We accept traceable payment (EFT, SnapScan, card). This page does not state a VAT number or a channel licence — those fields are still placeholders on the legal pages.",
           "We do not promote bypassing geo-blocks for content where rights are clearly held elsewhere. If you're outside SA, a VPN is your decision — we don't ship one.",
         ],
       },
@@ -401,7 +401,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV with no buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "IPTV buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
       { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot/" },
       { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
@@ -474,7 +474,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
       { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa/" },
-      { label: "IPTV with no buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "IPTV buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa/" },
       { label: "Pricing — from R99/mo", href: "/en-za/" },
     ],
   },
@@ -604,7 +604,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Symptom: 'Cannot play this stream' on every channel",
         body: [
-          "Your provider's server may be temporarily down (rare for Mzansi Stream — NAPAfrica edges run 99.95% uptime). Try a single channel after 60 seconds.",
+          "The server may be temporarily down. This page does not quote an uptime percentage. Try a single channel after 60 seconds.",
           "If only some channels fail: that channel's source feed is down at the broadcaster (e.g. a SuperSport feed mid-restream). Switch to a sister channel and retry.",
           "If every channel fails for more than 5 minutes — message your provider on WhatsApp. Mzansi Stream resolves outages typically within an hour.",
         ],
@@ -695,7 +695,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv/" },
       { label: "LG webOS IPTV setup", href: "/en-za/devices/lg-webos/" },
       { label: "Hisense VIDAA IPTV setup", href: "/en-za/devices/hisense-vidaa/" },
-      { label: "Stable IPTV — no buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "IPTV buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
     ],
   },
   {

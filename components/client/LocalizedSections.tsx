@@ -415,7 +415,7 @@ export function FooterSection() {
           <a href={`${basePath}/best-iptv-south-africa-2026/`}>Best IPTV 2026</a>
           <a href={`${basePath}/cheap-iptv-south-africa/`}>Cheap IPTV from R99</a>
           <a href={`${basePath}/4k-iptv-south-africa/`}>4K IPTV</a>
-          <a href={`${basePath}/iptv-no-buffering-south-africa/`}>Stable IPTV — no buffering</a>
+          <a href={`${basePath}/iptv-no-buffering-south-africa/`}>IPTV buffering on SA fibre</a>
           <a href={`${basePath}/iptv-for-movies-and-series/`}>IPTV for movies & series</a>
           <a href={`${basePath}/dstv-alternative/`}>DStv alternative</a>
           <a href={`${basePath}/iptv-supersport-without-dstv/`}>Watch SuperSport</a>

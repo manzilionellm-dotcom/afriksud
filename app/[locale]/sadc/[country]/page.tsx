@@ -67,7 +67,7 @@ export default async function SadcCountryPage({ params }: Props) {
   const faq = [
     {
       q: `Is IPTV legal in ${data.name}?`,
-      a: `Streaming TV is not illegal per se in ${data.name}. What's illegal in most jurisdictions is the unauthorised distribution of copyrighted content. Mzansi Stream sources its channels via licensed partners and processes payments through traceable channels.`,
+      a: `Streaming TV as a technology is not, by itself, a ban in ${data.name}. Unauthorised distribution of copyrighted content is the copyright issue in most places. This page does not state that Mzansi Stream holds channel licences. Payments shown for this country are the methods listed above.`,
     },
     {
       q: `Will this work on ${data.isps.slice(0, 2).join(" or ")}?`,

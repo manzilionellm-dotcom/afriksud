@@ -86,8 +86,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@iptvmzansi",
-    creator: "@iptvmzansi",
+    // À CONFIRMER — no verified @iptvmzansi profile in the repo. Do not emit site/creator.
     title: "Best IPTV South Africa 2026 — 20,000+ Channels in 4K",
     description:
       "Premium streaming SA — SABC, e.tv, SuperSport, Premier League + diaspora channels. Activated in 10 min. Free 24h trial.",

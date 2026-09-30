@@ -35,7 +35,7 @@ export function cityPageData(slug: string) {
     },
     content: {
       intro: `If you live in ${city.name} (${city.province}, population ${(city.pop / 1000).toFixed(0)}k) and you are tired of paying R899+ per month for DStv Premium, ${BRAND} is the answer. 20,000+ live channels, all the SuperSport DStv Premiership matches, ${city.team} games, ${city.channel} and every major South African and international channel. Works with all local ISPs (${city.isp}).`,
-      whyHere: `Our edge servers are tuned for the major fibre nodes in ${city.name} — low latency, no buffering during big matches, stable 4K even during peak hours. More than 200 households in ${city.name} have already switched from DStv to ${BRAND}.`,
+      whyHere: `Setup notes for fibre in ${city.name}. 4K during a big match depends on the line in the house. This page does not publish a household count.`,
       faqs: [
         { q: `Does IPTV work with my ${city.isp.split(',')[0]} fibre line in ${city.name}?`, a: `Yes. We have tested the service with all major ISPs in ${city.name}: ${city.isp}. No throttling, no blocking.` },
         { q: `Can I watch ${city.team} matches?`, a: `Yes — every match. SuperSport coverage of the DStv Premiership and URC, plus all knockout cup competitions.` },
@@ -105,7 +105,7 @@ export function sportPageData(slug: string) {
       ],
     },
     content: {
-      intro: `Watching ${sport.nameLong} costs ${sport.competitor} in South Africa. With ${BRAND} you pay from R199/month and get the same channels: ${sport.channelsIncluded.join(', ')}. 4K quality, no buffering, no contract.`,
+      intro: `Watching ${sport.nameLong} costs ${sport.competitor} in South Africa. With ${BRAND} the published starting price is R199/month, no contract. Folders people ask for: ${sport.channelsIncluded.join(', ')}. This page does not promise the same official feeds or zero buffering.`,
       whatIncluded: `You get ${sport.teams}. Every match ${sport.matchday}, live, in English commentary, in 4K UHD.`,
       faqs: [
         { q: `Can I watch ${sport.name} on any device?`, a: `Yes. Works on Firestick, Smart TV (Samsung, LG, Sony), Android TV, iPhone, iPad, Android, MAG Box and PC.` },

@@ -143,8 +143,8 @@ export default async function LocaleHome({ params }: Props) {
     logo: `${SITE.domain}/og-image.jpg`,
     image: `${SITE.domain}/og-image.jpg`,
     description:
-      "Mzansi Stream — 20,000+ channels, 4K/UHD, sport, movies and series. Premium streaming for South Africa and the SA diaspora worldwide.",
-    foundingDate: "2024",
+      "Mzansi Stream — 20,000+ channels, 4K/UHD, sport, movies and series. Streaming for South Africa and the SA diaspora worldwide.",
+    // À CONFIRMER — founding year is not evidenced in this repo. Do not emit foundingDate.
     areaServed: [
       { "@type": "Country", name: "South Africa" },
       { "@type": "Country", name: "Zimbabwe" },

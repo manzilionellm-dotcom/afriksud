@@ -101,9 +101,9 @@ export const HOME_META: Record<Locale, HomeMeta> = {
 
   // ── Français — native.
   fr: {
-    title: "Meilleure IPTV 2026 — 20 000+ chaînes 4K, sport en direct",
+    title: "IPTV Afrique du Sud 2026 — 20 000+ chaînes 4K",
     description:
-      "Meilleure IPTV — 20 000+ chaînes en direct, sport, films et séries en 4K sans coupures, sur tous vos écrans. Essai gratuit de 24 h sur WhatsApp. Dès R99/mois.",
+      "IPTV — 20 000+ chaînes en direct, sport, films et séries en 4K, sur tous vos écrans. Essai gratuit de 24 h sur WhatsApp. Dès R99/mois. La qualité dépend de votre ligne.",
   },
 };
 

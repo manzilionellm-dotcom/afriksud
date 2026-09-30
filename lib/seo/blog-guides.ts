@@ -1018,7 +1018,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "legal",
         h2: "Rights, not random links",
         body: [
-          "We source SuperSport feeds via licensed partners and take local payment. A Facebook 'free Proteas 4K' link is a different product and a different risk. The legality pages on this site are the honest version of that sentence.",
+          "We take local payment. This page does not state that SuperSport feeds are licensed. A Facebook 'free Proteas 4K' link is a different product and a different risk.",
         ],
       },
     ],

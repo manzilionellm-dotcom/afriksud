@@ -61,7 +61,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     fr: {
       title: "IPTV pour Vumatel, Openserve & Frogfoot 2026 — 4K stable",
       description:
-        "Meilleure IPTV pour la fibre Vumatel, Openserve, Frogfoot, Octotel et MetroFibre en Afrique du Sud. SuperSport 4K sans coupures. CDN NAPAfrica. Dès R99/mois.",
+        "IPTV pour la fibre Vumatel, Openserve, Frogfoot, Octotel et MetroFibre en Afrique du Sud. SuperSport 4K, CDN NAPAfrica. Dès R99/mois. La stabilité dépend de votre ligne.",
     },
     "pt-mz": {
       title: "IPTV para Vumatel, Openserve & Frogfoot 2026 — 4K estável",
@@ -71,12 +71,12 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     zu: {
       title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K ezinzile",
       description:
-        "I-IPTV engcono ye-fiber ye-Vumatel, Openserve ne-Frogfoot e-South Africa. I-SuperSport ku-4K ngaphandle kokuma. I-CDN ye-NAPAfrica. Kusukela ku-R99/inyanga.",
+        "I-IPTV engcono ye-fiber ye-Vumatel, Openserve ne-Frogfoot e-South Africa. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. Kusukela ku-R99/inyanga.",
     },
     xh: {
       title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K ezinzileyo",
       description:
-        "I-IPTV elungileyo ye-fiber ye-Vumatel, Openserve ne-Frogfoot eMzantsi Afrika. I-SuperSport ku-4K ngaphandle kokuma. I-CDN ye-NAPAfrica. Ukusuka ku-R99/inyanga.",
+        "I-IPTV elungileyo ye-fiber ye-Vumatel, Openserve ne-Frogfoot eMzantsi Afrika. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. Ukusuka ku-R99/inyanga.",
     },
   },
 
@@ -313,7 +313,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     fr: {
       title: "IPTV 4K Afrique du Sud — UHD natif SuperSport & Premier League",
       description:
-        "IPTV 4K UHD natif en Afrique du Sud. SuperSport, Premier League, kykNET et 20 000+ chaînes en vrai 4K — sans upscaling. CDN NAPAfrica, sans coupures. Dès R99/mois.",
+        "IPTV 4K UHD en Afrique du Sud. SuperSport, Premier League, kykNET et 20 000+ chaînes en 4K. CDN NAPAfrica. Dès R99/mois. Pas de promesse zéro coupure.",
     },
     "pt-mz": {
       title: "IPTV 4K África do Sul — UHD nativo SuperSport & Premier League",
@@ -334,29 +334,29 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
 
   "iptv-no-buffering-south-africa": {
     af: {
-      title: "IPTV Sonder Onderbrekings Suid-Afrika — Stabiele 4K",
+      title: "Stabiele IPTV Suid-Afrika — oorsake van onderbrekings",
       description:
-        "Stabiele IPTV sonder onderbrekings in Suid-Afrika. NAPAfrica-CDN, <15ms vertraging, 4K SuperSport wat nie middel-in-die-wedstryd val nie. Opstellys + vergelyking.",
+        "Hoekom IPTV in Suid-Afrika onderbreek, en wat jy by die huis kan nagaan. NAPAfrica-CDN. Opstellys. Geen gemete latensie of uptyd op hierdie bladsy nie.",
     },
     fr: {
-      title: "IPTV sans coupures Afrique du Sud — Flux 4K stables",
+      title: "IPTV stable Afrique du Sud — causes des coupures",
       description:
-        "IPTV stable sans coupures en Afrique du Sud. CDN NAPAfrica, latence <15 ms, SuperSport 4K qui ne lâche pas en plein match. Checklist d'installation + comparatif.",
+        "Pourquoi l'IPTV coupe en Afrique du Sud, et quoi vérifier chez vous. CDN NAPAfrica. Checklist d'installation. Pas de latence ni de disponibilité chiffrées ici.",
     },
     "pt-mz": {
-      title: "IPTV sem cortes África do Sul — Transmissões 4K estáveis",
+      title: "IPTV estável África do Sul — causas das falhas",
       description:
-        "IPTV estável sem cortes na África do Sul. CDN NAPAfrica, latência <15ms, SuperSport 4K que não falha a meio do jogo. Checklist de instalação + comparação de fornecedores.",
+        "Porque é que o IPTV falha na África do Sul, e o que verificar em casa. CDN NAPAfrica. Checklist. Sem latência nem uptime medidos nesta página.",
     },
     zu: {
-      title: "I-IPTV Engenakuma South Africa — Ukusakaza kwe-4K Okuzinzile",
+      title: "I-IPTV e-South Africa — Ukusakaza kwe-4K Okuzinzile",
       description:
-        "I-IPTV ezinzile engenakuma e-South Africa. I-CDN ye-NAPAfrica, i-latency engaphansi kuka-15ms, i-SuperSport 4K engawi phakathi nomdlalo. Kusukela ku-R99/inyanga.",
+        "I-IPTV e-South Africa. I-CDN ye-NAPAfrica. I-SuperSport 4K. Kusukela ku-R99/inyanga.",
     },
     xh: {
-      title: "I-IPTV Engenakuma eMzantsi Afrika — Ukusasaza kwe-4K Okuzinzileyo",
+      title: "I-IPTV eMzantsi Afrika — Ukusasaza kwe-4K Okuzinzileyo",
       description:
-        "I-IPTV ezinzileyo engenakuma eMzantsi Afrika. I-CDN ye-NAPAfrica, i-latency engaphantsi kwe-15ms, i-SuperSport 4K engaweli phakathi komdlalo. Ukusuka ku-R99/inyanga.",
+        "I-IPTV eMzantsi Afrika. I-CDN ye-NAPAfrica. I-SuperSport 4K. Ukusuka ku-R99/inyanga.",
     },
   },
 
