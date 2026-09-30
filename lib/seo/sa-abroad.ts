@@ -144,7 +144,9 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     name: "Belgium",
     flag: "🇧🇪",
     iso2: "BE",
-    preferredCanonicalLocale: "fr",
+    // Page body is English. `fr` is noindex on programmatic routes, so
+    // the indexable canonical is en-za. À CONFIRMER if a French body lands.
+    preferredCanonicalLocale: "en-za",
     cities: ["Brussels", "Antwerp", "Ghent"],
     edgeRegion: "Amsterdam (AMS-1) and Brussels peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
@@ -156,7 +158,9 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     name: "Switzerland",
     flag: "🇨🇭",
     iso2: "CH",
-    preferredCanonicalLocale: "fr",
+    // Page body is English. `fr` is noindex on programmatic routes.
+    // À CONFIRMER if a French body lands.
+    preferredCanonicalLocale: "en-za",
     cities: ["Zurich", "Geneva", "Basel"],
     edgeRegion: "Frankfurt (FRA-1) and Zurich peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
@@ -216,9 +220,9 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     name: "Portugal",
     flag: "🇵🇹",
     iso2: "PT",
-    // Portugal sits closer to pt-MZ than to en-ZA for diaspora reading
-    // patterns (Portuguese SA emigrants returning to the homeland).
-    preferredCanonicalLocale: "pt-mz",
+    // Body is English. pt-mz is noindex on programmatic routes, so the
+    // indexable canonical is en-za. À CONFIRMER if a Portuguese body lands.
+    preferredCanonicalLocale: "en-za",
     cities: ["Lisbon", "Porto", "Funchal"],
     edgeRegion: "Lisbon (LIS-1) and Amsterdam (AMS-1)",
     timezone: "UTC / UTC+1 — 1-2 hours behind SAST",
@@ -269,7 +273,9 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     name: "France",
     flag: "🇫🇷",
     iso2: "FR",
-    preferredCanonicalLocale: "fr",
+    // Page body is English. `fr` is noindex on programmatic routes.
+    // À CONFIRMER if a French body lands.
+    preferredCanonicalLocale: "en-za",
     cities: ["Paris", "Lyon", "Marseille"],
     edgeRegion: "Paris (CDG-1) and Frankfurt (FRA-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",

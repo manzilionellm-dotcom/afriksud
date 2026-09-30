@@ -5,7 +5,7 @@
 // Google flags them as doorway / thin content and dilutes the EN cluster.
 
 import type { Locale } from "../locales";
-import { LOCALES } from "../locales";
+import { DEFAULT_LOCALE, LOCALES } from "../locales";
 
 /**
  * Locales that ship genuinely translated copy on the localized home page
@@ -46,4 +46,13 @@ export function robotsForProgrammatic(locale: Locale): {
     index: PROGRAMMATIC_INDEXABLE_LOCALES.has(locale),
     follow: true,
   };
+}
+
+/**
+ * Programmatic copy is English. `fr` and `pt-mz` are noindex, so they
+ * cannot be the canonical target (Google would consolidate onto a
+ * noindex URL). Fall back to en-za, which is indexable.
+ */
+export function indexableCanonicalLocale(preferred: Locale): Locale {
+  return PROGRAMMATIC_INDEXABLE_LOCALES.has(preferred) ? preferred : DEFAULT_LOCALE;
 }

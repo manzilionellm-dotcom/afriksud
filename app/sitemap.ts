@@ -2,6 +2,7 @@
 
 import type { MetadataRoute } from "next";
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META } from "../lib/locales";
+import { indexableCanonicalLocale } from "../lib/seo/indexability";
 import { hreflangFor, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
@@ -146,12 +147,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // country (e.g. /en-gb/sa-abroad/uk/ rather than /en-za/...).
   for (const country of SA_ABROAD_COUNTRIES) {
     void SA_ABROAD_SLUGS; // tree-shake guard
+    const canonicalLocale = indexableCanonicalLocale(country.preferredCanonicalLocale);
+    const url = localeUrl(canonicalLocale, `/sa-abroad/${country.slug}`);
     entries.push({
-      url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}`),
-      lastModified: buildDate,
+      url,
       changeFrequency: "monthly",
       priority: 0.8,
-      alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}`) },
+      alternates: {
+        languages: {
+          [LOCALE_META[canonicalLocale].hreflang]: url,
+          "x-default": url,
+        },
+      },
     });
   }
 

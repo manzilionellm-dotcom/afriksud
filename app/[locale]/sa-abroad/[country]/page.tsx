@@ -2,15 +2,19 @@
 // Section B.5.1 — SA expat outbound landing pages. Per-country canonical
 // follows the SEO playbook: /sa-abroad/uk/ canonicalises to its en-gb
 // alternate, /sa-abroad/australia/ to its en-au alternate, etc.
-// hreflang map still enumerates the full 12-locale set.
+// hreflang lists only that canonical URL (self + x-default). Locales
+// that are noindex (fr, pt-mz) are never the canonical target.
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
-import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
+import { localeUrl, SITE_URL } from "../../../../lib/url";
+import {
+  indexableCanonicalLocale,
+  robotsForProgrammatic,
+} from "../../../../lib/seo/indexability";
 import {
   SA_ABROAD_SLUGS,
   getSaAbroadCountry,
@@ -38,18 +42,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
   const description = `Stream SuperSport, SABC, kykNET and 20,000+ South African channels in ${data.name} (${cityList}) in 4K. Built for SA expats — no DStv decoder, no contract.`;
 
-  // Canonical follows B.5.4 — the preferred-locale variant owns the URL.
-  const canonical = localeUrl(
-    data.preferredCanonicalLocale,
-    `/sa-abroad/${country}/`
-  );
+  // One indexable URL. Non-canonical locales only emit rel=canonical
+  // (no hreflang to URLs that themselves canonicalise elsewhere).
+  const canonicalLocale = indexableCanonicalLocale(data.preferredCanonicalLocale);
+  const canonical = localeUrl(canonicalLocale, `/sa-abroad/${country}/`);
+  const selfCanonical = locale === canonicalLocale;
 
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: hreflangFor(`/sa-abroad/${country}/`),
+      languages: selfCanonical
+        ? {
+            [LOCALE_META[canonicalLocale].hreflang]: canonical,
+            "x-default": canonical,
+          }
+        : undefined,
     },
     openGraph: {
       type: "article",
@@ -59,7 +68,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
-    robots: robotsForProgrammatic(locale as Locale),
+    robots: selfCanonical
+      ? { index: true, follow: true }
+      : robotsForProgrammatic(locale as Locale),
   };
 }
 
@@ -90,7 +101,10 @@ export default async function SaAbroadCountryPage({ params }: Props) {
       audienceType: `South African diaspora in ${data.name}`,
       geographicArea: { "@type": "Country", name: data.name },
     },
-    url: localeUrl(data.preferredCanonicalLocale, `/sa-abroad/${country}/`),
+    url: localeUrl(
+      indexableCanonicalLocale(data.preferredCanonicalLocale),
+      `/sa-abroad/${country}/`
+    ),
     knowsAbout: [
       "South African television",
       "SuperSport",
