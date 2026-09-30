@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   COMPETITOR_SLUGS,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.meta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/vs/${competitor}/`),
-      languages: hreflangFor(`/vs/${competitor}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/vs/${competitor}/`),
     },
     openGraph: {
       type: "article",

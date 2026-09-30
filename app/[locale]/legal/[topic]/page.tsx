@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl } from "../../../../lib/url";
+import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { LEGAL_SLUGS, getLegalTopic } from "../../../../lib/seo/legal";
 import { LongformShell } from "../../../../components/client/LongformShell";
 
@@ -26,7 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.metaDescription,
     alternates: {
       canonical: localeUrl(locale as Locale, `/legal/${topic}/`),
-      languages: hreflangFor(`/legal/${topic}/`),
+      languages: data.needsOwnerInput
+        ? undefined
+        : hreflangForProgrammatic(locale as Locale, `/legal/${topic}/`),
     },
     openGraph: {
       type: "article",
@@ -38,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     robots: data.needsOwnerInput
       ? // Owner-input pages stay noindex until the placeholders are filled in.
         { index: false, follow: true }
-      : undefined,
+      : robotsForProgrammatic(locale as Locale),
   };
 }
 

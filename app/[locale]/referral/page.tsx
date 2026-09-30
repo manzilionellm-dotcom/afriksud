@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl } from "../../../lib/url";
+import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { LongformShell } from "../../../components/client/LongformShell";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -22,13 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "When a friend pays the 12-month plan, you both get 1 extra month. Trial-only does not count. Same WhatsApp +44 7307 410512.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/referral/"),
-      languages: hreflangFor("/referral/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/referral/"),
     },
     openGraph: {
       type: "website",
       url: localeUrl(locale as Locale, "/referral/"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 

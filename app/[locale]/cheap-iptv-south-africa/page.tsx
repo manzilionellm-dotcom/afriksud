@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { getPillar } from "../../../lib/seo/pillars";
 import { pillarMetaLocalized } from "../../../lib/seo/pillar-meta-i18n";
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: pmeta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/${SLUG}/`),
-      languages: hreflangFor(`/${SLUG}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/${SLUG}/`),
     },
     openGraph: {
       type: "article",

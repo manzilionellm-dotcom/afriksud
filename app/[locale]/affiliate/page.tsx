@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl } from "../../../lib/url";
+import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { LongformShell } from "../../../components/client/LongformShell";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -22,13 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Earn R200 per paying customer you refer to Mzansi Stream — 20% commission, monthly payout via EFT or Mobile Money.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/affiliate/"),
-      languages: hreflangFor("/affiliate/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/affiliate/"),
     },
     openGraph: {
       type: "website",
       url: localeUrl(locale as Locale, "/affiliate/"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { SA_CITY_SLUGS, getSACity } from "../../../../lib/seo/cities";
 import { CITY_TOP_COMMUNITIES, getCommunity } from "../../../../lib/seo/communities";
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/cities/${city}/`),
-      languages: hreflangFor(`/cities/${city}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/cities/${city}/`),
     },
     openGraph: {
       type: "article",

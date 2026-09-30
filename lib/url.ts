@@ -2,6 +2,7 @@
 // Single source of truth for building canonical, hreflang and OG URLs.
 
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "./locales";
+import { PROGRAMMATIC_INDEXABLE_LOCALES } from "./seo/indexability";
 
 /** Canonical host. Never `www` — live sitemap, canonicals and hreflang are apex. */
 export const APEX_HOST = "iptvmzansi.com";
@@ -65,6 +66,27 @@ export function hreflangFor(path: string): Record<string, string> {
   const map: Record<string, string> = {};
   for (const locale of LOCALES) {
     map[LOCALE_META[locale].hreflang] = localeUrl(locale, path);
+  }
+  map["x-default"] = localeUrl(DEFAULT_LOCALE, path);
+  return map;
+}
+
+/**
+ * Hreflang for English-copy programmatic pages.
+ * af / zu / xh / pt-mz / fr are noindex on those surfaces, so they must
+ * not sit in the cluster (a one-way alternate fails Google's return-tag
+ * check). Noindex locales omit the map; the page keeps its own canonical.
+ * x-default stays en-ZA, which is inside the indexable set.
+ */
+export function hreflangForProgrammatic(
+  locale: Locale,
+  path: string
+): Record<string, string> | undefined {
+  if (!PROGRAMMATIC_INDEXABLE_LOCALES.has(locale)) return undefined;
+  const map: Record<string, string> = {};
+  for (const code of LOCALES) {
+    if (!PROGRAMMATIC_INDEXABLE_LOCALES.has(code)) continue;
+    map[LOCALE_META[code].hreflang] = localeUrl(code, path);
   }
   map["x-default"] = localeUrl(DEFAULT_LOCALE, path);
   return map;
