@@ -67,6 +67,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/blog", 0.7, "weekly"));
   entries.push(withAlternates("/referral", 0.5, "monthly"));
   entries.push(withAlternates("/affiliate", 0.5, "monthly"));
+  // 200 URL only. Unprefixed /free-trial 301s here and must not be listed.
+  {
+    const trial = localeUrl(DEFAULT_LOCALE, "/free-trial");
+    entries.push({
+      url: trial,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: {
+        languages: { "en-ZA": trial, "x-default": trial },
+      },
+    });
+  }
 
   // Head-term pillars — use per-pillar `dateModified` so the sitemap
   // reflects actual content freshness instead of the build date.
