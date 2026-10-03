@@ -53,6 +53,31 @@ const nextConfig = {
         destination: "/en-za/free-trial",
         permanent: true,
       },
+      {
+        source: "/trial",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
+      {
+        source: "/essai",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
+      {
+        source: "/pricing",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
+      {
+        source: "/prix",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
+      {
+        source: "/compare",
+        destination: "/en-za/free-trial",
+        permanent: true,
+      },
       // Seo Springboks UK short slugs — 308 one hop onto the live blog
       // (P1 6Q). MUST sit above `/iptv-:city` or `/iptv-springboks-uk`
       // would 301 into /cities/springboks-uk/. No trailing slash on dest.
