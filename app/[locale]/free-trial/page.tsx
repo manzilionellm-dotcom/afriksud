@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
@@ -140,12 +141,12 @@ export default function FreeTrialPage() {
         >
           Ask for free trial
         </a>
-        <a
+        <Link
           href="/en-za"
           className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3.5 text-base font-semibold"
         >
           Back to en-ZA hub
-        </a>
+        </Link>
       </div>
 
       <section className="mt-14">
@@ -245,15 +246,15 @@ export default function FreeTrialPage() {
           Ask for free trial
         </a>
         <nav className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
-          <a href="/en-za" className="hover:text-white">
+          <Link href="/en-za" className="hover:text-white">
             en-ZA hub
-          </a>
-          <a href="/en-za/sports" className="hover:text-white">
+          </Link>
+          <Link href="/en-za/sports" className="hover:text-white">
             Sports
-          </a>
-          <a href="/" className="hover:text-white">
+          </Link>
+          <Link href="/" className="hover:text-white">
             Home
-          </a>
+          </Link>
         </nav>
       </section>
 
