@@ -59,3 +59,6 @@
 - **A33.** FAQ 6Q déjà #21 ; live 8Q = Hobby lag. On ne reclône pas, on ne réécrit pas les questions.
 - **A34.** Alias 308 déjà #22. Live encore 404. 0 landing. 0 restauration sauf si le code manquait (il ne manque pas).
 - **A35.** `20,000+` adouci uniquement dans `InlinePricingBlock` de ce slug (`softenCatalogClaims`). dict.ts / homepage / siblings inchangés.
+
+## run-015
+- **A36.** FAB SSR unique dans `app/[locale]/layout.tsx`. Numéro figé `447307410512` (pas d'env). Prefill neutre par langue : toutes les locales `en-*` partagent l'anglais ; `pt-mz` prend le portugais. L'override WaPrefill du blog London reste sur les CTA de cette page, pas sur le FAB (mission 04/10 : message neutre, 0 essai). Accueil mesuré = `/en-za`. Page `/fr/...` mesurée = `/fr/devices`.

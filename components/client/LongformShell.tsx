@@ -9,7 +9,6 @@ import { LocaleSync } from "./LocaleSync";
 import { SkipLink } from "./SkipLink";
 import { HeaderNav } from "./HeaderNav";
 import { FooterSection } from "./LocalizedSections";
-import { WhatsAppFab } from "./WhatsAppFab";
 import { StickyBottomCta } from "./StickyBottomCta";
 import { PopiaConsentBanner } from "./PopiaConsentBanner";
 import { PriceCheckoutMount } from "../ux/checkout/PriceCheckoutMount";
@@ -39,7 +38,6 @@ export function LongformShell({
           {children}
         </main>
         <FooterSection />
-        <WhatsAppFab />
         <StickyBottomCta />
         <PopiaConsentBanner />
         <PriceCheckoutMount />

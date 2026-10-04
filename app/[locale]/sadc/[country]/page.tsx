@@ -11,7 +11,6 @@ import { SADC_SLUGS, getSadcCountry } from "../../../../lib/seo/sadc-countries";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../../components/client/HeaderNav";
 import { FooterSection } from "../../../../components/client/LocalizedSections";
-import { WhatsAppFab } from "../../../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
@@ -352,7 +351,6 @@ export default async function SadcCountryPage({ params }: Props) {
         </main>
 
         <FooterSection />
-        <WhatsAppFab />
         <StickyBottomCta />
         <PopiaConsentBanner />
       </LanguageProvider>
