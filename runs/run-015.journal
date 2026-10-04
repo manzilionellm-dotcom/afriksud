@@ -16,4 +16,6 @@
 - [x] Layout: un seul graphe FAQPage (10) + Product (5) sur `/` et `/en-za`
 - [x] Alt hero depuis le H1 voisin
 - [x] `pnpm aio:llms` → 10 Q/R
-- [ ] `pnpm build && pnpm start` + `aio-check` sur le build (preuve PR)
+- [x] `pnpm build` exit 0 (1679 pages) · `node scripts/qa-gates.mjs` exit 0
+- [x] `pnpm start` + `node scripts/aio-check.mjs http://localhost:3000/` exit 0 (11 hooks, 1 FAQPage, 5 Product, images 1, videos 0, llms.txt 200)
+- [x] `/en-za/dstv-alternative` et `/af` : pas de second graphe AIO (`aio-jsonld` absent)
