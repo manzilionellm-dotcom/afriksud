@@ -2770,7 +2770,9 @@ input[type="radio"] {
 /* ─── WhatsApp FAB ──────────────────────────────────────────────────── */
 .waFab {
   position: fixed;
-  bottom: calc(20px + env(safe-area-inset-bottom));
+  /* Clear the POPIA bar, which wraps taller on a phone than on desktop,
+     so the circle stays fully visible before consent. */
+  bottom: calc(220px + env(safe-area-inset-bottom));
   inset-inline-end: 20px;
   width: 56px;
   height: 56px;
@@ -2787,6 +2789,11 @@ input[type="radio"] {
 }
 .waFab:hover {
   transform: scale(1.05);
+}
+@media (min-width: 768px) {
+  .waFab {
+    bottom: calc(120px + env(safe-area-inset-bottom));
+  }
 }
 
 /* ─── Sticky bottom CTA bar ─────────────────────────────────────────── */

@@ -19,8 +19,9 @@
 - [x] Numéro littéral `447307410512`, aucun `process.env`
 - [x] Prefill neutre en / af / zu / xh / pt / fr (0 essai, 0 prix, 0 chaîne, 0 légalité, 0 stabilité)
 - [x] Rendu client retiré des pages + LongformShell ; `WhatsAppFab` retourne `null`
-- [ ] DoD: `pnpm install --frozen-lockfile` · `pnpm lint` · `pnpm type-check` · `pnpm build` · `node scripts/qa-gates.mjs` exit 0
-- [ ] Vérif HTML (`next start :3000`): exactement 1 `href="https://wa.me/447307410512..."` sur cape-town, devices, legal/refund, affiliate, `/fr/devices`, accueil `/en-za`
+- [x] DoD: `pnpm install --frozen-lockfile` exit 0 · `pnpm lint` exit 0 · `pnpm type-check` exit 0 · `pnpm build` exit 0 (1679 pages) · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): exactement 1 `href="https://wa.me/447307410512..."` sur cape-town, devices, legal/refund, affiliate, `/fr/devices`, accueil `/en-za`. Aussi 1 sur `/af` `/zu` `/xh` `/pt-mz` `/fr` `/en-gb`, message de la langue. 1 seul `.waFab`.
+- [x] Cercle 56×56 entier au-dessus du bandeau cookies : mobile 390px (`bottom: 220px`) sur cape-town et `/fr/devices` ; desktop 1280px (`bottom: 120px`) sur `/en-za/legal/refund`.
 
 ## Originalité (Loi #10)
 
