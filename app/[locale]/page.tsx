@@ -48,6 +48,7 @@ import { HeroV2 } from "../../components/ux/HeroV2";
 import { PremiumPlanSelector } from "../../components/ux/PremiumPlanSelector";
 import { BottomTabBar } from "../../components/ux/BottomTabBar";
 import { PriceCheckoutMount } from "../../components/ux/checkout/PriceCheckoutMount";
+import { AioCitationFaq } from "../../components/seo/AioCitationFaq";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -231,7 +232,9 @@ export default async function LocaleHome({ params }: Props) {
       <JsonLd data={siteSchema} />
       <JsonLd data={webPageSchema} />
       <JsonLd data={serviceSchema} />
-      <JsonLd data={faqSchema} />
+      {/* en-za FAQPage + Product are emitted once from app/layout.tsx
+          (lib/aio.ts). Keeping the old homepage FAQPage would duplicate it. */}
+      {locale === "en-za" ? null : <JsonLd data={faqSchema} />}
       <JsonLd data={localBusinessSchema} />
 
       <LanguageProvider initialLocale={locale as Locale}>
@@ -257,7 +260,7 @@ export default async function LocaleHome({ params }: Props) {
             <ReviewsSection />
             <SACities />
             <QuickSetup />
-            <FaqSection />
+            {locale === "en-za" ? <AioCitationFaq /> : <FaqSection />}
           </div>
         </main>
 

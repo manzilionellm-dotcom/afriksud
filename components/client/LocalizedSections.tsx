@@ -9,6 +9,7 @@ import { plans } from "../shared/plans";
 import { SITE } from "../shared/site";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
+import { compareHook } from "../../lib/aio";
 
 function useUA() {
   const [ua, setUA] = useState("");
@@ -223,6 +224,7 @@ export function CompareSection() {
     <section className="section">
       <div className="sectionHead">
         <h2>{t.compare.title}</h2>
+        <p>{compareHook()}</p>
         <p>{t.compare.sub}</p>
       </div>
       <div className="compareWrap">
@@ -328,7 +330,7 @@ export function SACities() {
       <div className="grid">
         {t.cities.items.map(city => (
           <article key={city.name} className="card">
-            <div className="cardHeader"><h3>{city.name}</h3></div>
+            <h3 className="cityName">{city.name}</h3>
             <p className="cityText">{city.text}</p>
             <a
               className="btnPlan"

@@ -14,6 +14,7 @@ import {
 } from "../lib/locales";
 import { AnalyticsProvider } from "../lib/analytics/AnalyticsProvider";
 import { SITE_URL } from "../lib/url";
+import { jsonLdString } from "../lib/aio";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -157,6 +158,13 @@ export default async function RootLayout({
     ? (headerLocale as Locale)
     : DEFAULT_LOCALE;
   const meta = LOCALE_META[resolved];
+  // Sales homepage only, and only when middleware forwarded the path.
+  // An empty header must not stamp this graph onto every route: those
+  // pages already have their own FAQPage. The en-ZA page component does
+  // not emit a second copy (see app/[locale]/page.tsx).
+  const rawPath = hdrs.get("x-mz-path");
+  const path = rawPath ? rawPath.replace(/\/+$/, "") || "/" : "";
+  const aioHome = path === "/" || path === "/en-za";
   return (
     <html
       lang={meta.hreflang}
@@ -166,6 +174,13 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col">
         <AnalyticsProvider />
         {children}
+        {aioHome ? (
+          <script
+            type="application/ld+json"
+            id="aio-jsonld"
+            dangerouslySetInnerHTML={{ __html: jsonLdString() }}
+          />
+        ) : null}
       </body>
     </html>
   );

@@ -1,0 +1,160 @@
+{
+  "_doc": "Source unique AIO (llms.txt, FAQPage, Product, Citation Hooks). Ne mettre ici que des faits lisibles sur le site ou dans le dépôt. Toute valeur inconnue = null et listée dans aio.todo.md.",
+  "siteName": "Mzansi Stream",
+  "siteUrl": "https://iptvmzansi.com",
+  "defaultLang": "en",
+  "faqInLanguage": "en-ZA",
+  "currency": "ZAR",
+  "contact": {
+    "whatsapp": "https://wa.me/447307410512",
+    "whatsappNote": "Repo fallback in components/shared/site.ts when NEXT_PUBLIC_WHATSAPP_* is unset. Support hours on the homepage schema and in the previous llms.txt: 08:00-23:00 SAST, 7 days."
+  },
+  "pricingNote": "The homepage headline and the comparison table say from R99. Published plan totals are R199 (1 month), R449 (3 months), R699 (6 months) and R1199 (12 months). The pricing card also shows a rounded monthly figure (R100 on the 12 month plan).",
+  "plans": [
+    { "id": "trial-24h", "price": 0, "months": 0, "name": { "en": "24 hour free trial" } },
+    { "id": "1-month", "price": 199, "months": 1, "name": { "en": "1 month" } },
+    { "id": "3-months", "price": 449, "months": 3, "name": { "en": "3 months" } },
+    { "id": "6-months", "price": 699, "months": 6, "name": { "en": "6 months" } },
+    { "id": "12-months", "price": 1199, "months": 12, "name": { "en": "12 months" } }
+  ],
+  "tech": {
+    "maxResolution": "4K/UHD (stated on the homepage and on every plan)",
+    "devices": ["Smart TV (Samsung, LG, Sony)", "Firestick / Fire TV", "Android TV", "iPhone", "iPad", "Android", "Android TV Box", "MAG Box", "PC / Mac"],
+    "activationMinutes": "Usually 5 to 10 minutes after the WhatsApp order, including weekends and public holidays",
+    "bitrate": "25 Mbps sustained per 4K stream, as written on the 4K IPTV South Africa page. The homepage does not print a bitrate.",
+    "channelCount": "20,000+ live channels and 100,000+ movies and series (homepage copy)"
+  },
+  "i18n": {
+    "en": {
+      "description": "Mzansi Stream is a South African IPTV service with no contract and no decoder. The site states 20,000+ live channels in 4K, including SuperSport, kykNET and SABC, plus 100,000+ movies and series. A 24-hour trial needs no card. Orders and activation are on WhatsApp.",
+      "productDescription": "Mzansi Stream IPTV subscription, term: {name}. Live channels and on-demand titles as described on the site, ordered via WhatsApp.",
+      "compareHook": "Mzansi Stream is shown from R99 on the comparison table, next to DStv Premium at R899, DStv Compact Plus at R549, DStv Compact at R449, Showmax at R99 and Netflix Premium at R199. The same row lists 20000 plus live channels, video on demand, 4K and direct WhatsApp support. Those figures are the ones printed on the homepage table.",
+      "faq": [
+        {
+          "q": "How much does Mzansi Stream cost?",
+          "a": "Mzansi Stream publishes four one off plans in South African rand. One month is R199, three months is R449, six months is R699 and twelve months is R1199. The three month plan is marked most popular on the site. The headline also advertises plans from R99. A 24 hour trial is free with no card, and orders go through WhatsApp."
+        },
+        {
+          "q": "How does the free 24 hour trial work?",
+          "a": "You message Mzansi Stream on WhatsApp and ask for the free 24 hour trial. The homepage says no credit card and no commitment are required. Activation is described as usually 5 to 10 minutes after the order, including weekends and public holidays. You can try the service on a Smart TV, Firestick, phone or tablet before you pay."
+        },
+        {
+          "q": "Is IPTV legal in South Africa?",
+          "a": "The site states that IPTV is a legal technology in South Africa, and that unauthorised redistribution of copyrighted content without a licence is not. Mzansi Stream says it sources channels via licensed partners, follows POPIA, and accepts traceable South African payments. The full written guide is the page Is IPTV legal in South Africa."
+        },
+        {
+          "q": "Which devices does Mzansi Stream work on?",
+          "a": "The homepage lists Smart TVs from Samsung, LG and Sony, plus Firestick and Fire TV, Android TV, iPhone, iPad, Android phones, an Android TV box, MAG Box, and PC or Mac. An M3U link is sent on WhatsApp for TiviMate, IPTV Smarters Pro, GSE Smart IPTV or any standard M3U player. Install help is offered for the device you name."
+        },
+        {
+          "q": "Can I watch SuperSport without a DStv decoder?",
+          "a": "Yes. The site says Mzansi Stream includes SuperSport PSL, SuperSport Premier League, SuperSport Variety, SuperSport Rugby and SuperSport Cricket, together with SABC and kykNET, in 4K. No DStv decoder is required. Springboks Tests, the URC and the Currie Cup are described as part of that SuperSport rugby coverage on the homepage FAQ."
+        },
+        {
+          "q": "How fast is activation and is the programme guide included?",
+          "a": "The homepage says activation is usually 5 to 10 minutes after the WhatsApp order, including weekends and public holidays. You receive an M3U playlist link and a short setup guide. The full electronic programme guide is included on every plan so you can see what is on now and what is coming up next."
+        },
+        {
+          "q": "How do I pay and is there a contract?",
+          "a": "Payment is handled on WhatsApp. The site lists EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin. The 24 hour trial does not need a credit card. There is no contract and no automatic renewal. You pay once and the service ends when the period you chose ends, then you renew manually if you want."
+        },
+        {
+          "q": "Does Mzansi Stream work on SA fibre and outside South Africa?",
+          "a": "The homepage says the service is optimised for Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN and Vodacom fibre. It also says streaming works in 50 plus countries with no geo block, including for South Africans abroad. A VPN is not required in South Africa. Outside South Africa the site recommends a VPN for best results."
+        },
+        {
+          "q": "Can several people watch at once and what if a stream fails?",
+          "a": "The standard plan includes one connection. If you need more than one screen at the same time, the site says to message WhatsApp for a tailored plan. The six month plan text mentions up to 3 devices. If a stream fails, you message WhatsApp and the site says technical issues are typically handled within 1 to 2 hours."
+        },
+        {
+          "q": "Are Springboks rugby and Proteas cricket included?",
+          "a": "Yes. The homepage says every Springboks Test, every URC fixture and every Currie Cup match is carried in 4K via SuperSport Rugby and SuperSport Variety. Proteas T20, ODI and Test matches plus the IPL season are described as streamed in 4K via SuperSport Cricket and Star Sports. Confirm the fixture you care about on the free trial."
+        }
+      ]
+    }
+  },
+  "appendix": [
+    {
+      "h2": "Pillar pages (head-term content)",
+      "lines": [
+        "- Best IPTV in SA 2026: https://iptvmzansi.com/en-za/best-iptv-south-africa-2026/",
+        "- DStv alternative: https://iptvmzansi.com/en-za/dstv-alternative/",
+        "- IPTV Firestick: https://iptvmzansi.com/en-za/iptv-firestick-south-africa/",
+        "- IPTV Samsung Smart TV: https://iptvmzansi.com/en-za/iptv-samsung-smart-tv/",
+        "- Watch SuperSport without DStv: https://iptvmzansi.com/en-za/iptv-supersport-without-dstv/",
+        "- IPTV on Vumatel/Openserve/Frogfoot: https://iptvmzansi.com/en-za/iptv-vumatel-openserve-frogfoot/",
+        "- IPTV EFT/SnapScan/Capitec Pay: https://iptvmzansi.com/en-za/iptv-eft-snapscan-payment/",
+        "- How to cancel DStv 2026: https://iptvmzansi.com/en-za/cancel-dstv-2026/",
+        "- Is IPTV legal in South Africa: https://iptvmzansi.com/en-za/is-iptv-legal-south-africa/"
+      ]
+    },
+    {
+      "h2": "Section hubs",
+      "lines": [
+        "- Cities (12 SA metros): https://iptvmzansi.com/en-za/cities/",
+        "- Devices (10 install guides): https://iptvmzansi.com/en-za/devices/",
+        "- Compare (8 competitors): https://iptvmzansi.com/en-za/vs/",
+        "- SADC (8 countries): https://iptvmzansi.com/en-za/sadc/",
+        "- SA abroad (19 countries): https://iptvmzansi.com/en-za/sa-abroad/",
+        "- Foreign communities (15 packs): https://iptvmzansi.com/en-za/communities/",
+        "- Blog: https://iptvmzansi.com/en-za/blog/"
+      ]
+    },
+    {
+      "h2": "Country-specific pages (SADC)",
+      "lines": [
+        "- Zimbabwe: https://iptvmzansi.com/en-za/sadc/zimbabwe/ (USD pricing, EcoCash)",
+        "- Botswana: https://iptvmzansi.com/en-za/sadc/botswana/",
+        "- Namibia: https://iptvmzansi.com/en-za/sadc/namibia/",
+        "- Mozambique: https://iptvmzansi.com/pt-mz/sadc/mozambique/ (Portuguese)",
+        "- Lesotho: https://iptvmzansi.com/en-za/sadc/lesotho/",
+        "- Eswatini: https://iptvmzansi.com/en-za/sadc/eswatini/",
+        "- Zambia: https://iptvmzansi.com/en-za/sadc/zambia/",
+        "- Malawi: https://iptvmzansi.com/en-za/sadc/malawi/"
+      ]
+    },
+    {
+      "h2": "Devices supported",
+      "lines": [
+        "Smart TVs: Samsung Tizen (2022+), LG webOS (2018+), Hisense VIDAA, Sony Bravia (Google TV), TCL Google TV.",
+        "Streaming sticks/boxes: Amazon Firestick 4K, Nvidia Shield TV Pro, Xiaomi Mi Box S, Apple TV 4K, Chromecast with Google TV.",
+        "Mobile: iPhone (iOS 14+), iPad, Android (Android 7+).",
+        "Dedicated IPTV: MAG Box 322/425A/524/540."
+      ]
+    },
+    {
+      "h2": "Languages served",
+      "lines": [
+        "English (ZA, GB, AU, US, AE, NZ, ZW), Afrikaans, isiZulu, isiXhosa, Portuguese (Moçambique), French. English variants are fully indexed; non-English locales currently serve English copy and stay noindex on programmatic pages until translation copy lands."
+      ]
+    },
+    {
+      "h2": "Channel coverage",
+      "lines": [
+        "- Sport: every SuperSport feed (PSL, Premier League, Variety, Rugby, Cricket), URC, Currie Cup, Springbok Tests, IPL, F1, NBA, NFL, MLB, UFC, boxing.",
+        "- SA channels: SABC 1/2/3/News, e.tv, eExtra, eMovies, kykNET, kykNET & Kie, kykNET Lekker, Mzansi Magic, Mzansi Wethu, Moja Love, M-Net.",
+        "- International: BBC, CNN, Al Jazeera, Sky News, Fox, HBO, Showtime, Disney+ catalogues; 20,000+ channels across 50+ countries."
+      ]
+    },
+    {
+      "h2": "Payment methods accepted",
+      "lines": [
+        "EFT (manual + Ozow instant), SnapScan, Zapper, Yoco, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin. No credit card required for the 24-hour free trial."
+      ]
+    },
+    {
+      "h2": "Compliance",
+      "lines": [
+        "POPIA-compliant. See /en-za/legal/popia/ for the full privacy policy and Information Officer contact. IPTV is a legal technology in South Africa; Mzansi Stream sources channels via licensed partners, accepts traceable SA payment methods and operates under a registered SA business name."
+      ]
+    },
+    {
+      "h2": "Contact",
+      "lines": [
+        "WhatsApp fallback published in the repo: https://wa.me/447307410512 (overridden at runtime by NEXT_PUBLIC_WHATSAPP_*).",
+        "Support hours stated on the site: 08:00-23:00 SAST, 7 days a week including public holidays.",
+        "DStv cancellation (not a Mzansi Stream plan): the site publishes WhatsApp 060 060 3788 and a 30-day notice. Guide: https://iptvmzansi.com/en-za/cancel-dstv-2026/"
+      ]
+    }
+  ]
+}

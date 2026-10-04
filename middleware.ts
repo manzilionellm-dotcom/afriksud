@@ -55,7 +55,14 @@ export function middleware(req: NextRequest) {
 
   const locale = extractLocale(pathname);
 
-  const res = NextResponse.next();
+  // Request headers so the root layout can read the path (headers()
+  // does not see response headers set on NextResponse.next()).
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("x-mz-locale", locale);
+  requestHeaders.set("x-mz-path", pathname);
+  const res = NextResponse.next({
+    request: { headers: requestHeaders },
+  });
   res.headers.set("x-mz-locale", locale);
   res.headers.set("x-mz-path", pathname);
 

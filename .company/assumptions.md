@@ -59,3 +59,8 @@
 - **A33.** FAQ 6Q déjà #21 ; live 8Q = Hobby lag. On ne reclône pas, on ne réécrit pas les questions.
 - **A34.** Alias 308 déjà #22. Live encore 404. 0 landing. 0 restauration sauf si le code manquait (il ne manque pas).
 - **A35.** `20,000+` adouci uniquement dans `InlinePricingBlock` de ce slug (`softenCatalogClaims`). dict.ts / homepage / siblings inchangés.
+
+## run-015
+- **A36.** Sprint AIO : le JSON-LD FAQPage + Product est émis par le layout seulement si `x-mz-path` est `/` ou `/en-za`, pour ne pas poser un 2e FAQPage sur les pillars. Le middleware copie ce header sur la requête (`headers()` ne voit pas les response headers).
+- **A37.** Les 10 réponses Citation Hook reprennent des faits déjà publiés (plans.ts, dict FAQ, pillar légal, llms.txt). « From R99 » reste le claim du titre ; les totaux restent R199 / R449 / R699 / R1199. Le mensuel affiché `Math.round(1199/12)` = R100 n'est pas réécrit en R99.
+- **A38.** HowTo homepage non ajouté : les guides device ont déjà un HowTo. Pas de transcription : le `<video>` hero n'est pas dans le HTML sans JS.
