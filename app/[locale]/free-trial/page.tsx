@@ -264,7 +264,7 @@ export default function FreeTrialPage() {
           <Link href="/en-za" className="hover:text-white">
             en-ZA hub
           </Link>
-          <Link href="/en-za/sports" className="hover:text-white">
+          <Link href="/en-za/iptv-supersport-without-dstv" className="hover:text-white">
             Sports
           </Link>
           <Link href="/" className="hover:text-white">

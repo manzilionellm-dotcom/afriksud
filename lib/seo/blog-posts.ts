@@ -583,7 +583,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa/" },
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
       { label: "Pricing — from R99/mo", href: "/en-za/" },
-      { label: "Privacy / POPIA policy", href: "/en-za/legal/privacy/" },
+      { label: "Privacy / POPIA policy", href: "/en-za/legal/popia/" },
     ],
   },
   {

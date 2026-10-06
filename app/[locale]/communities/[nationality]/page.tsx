@@ -15,6 +15,7 @@ import {
   getCommunity,
 } from "../../../../lib/seo/communities";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { getSACity } from "../../../../lib/seo/cities";
 
 type Props = {
   params: Promise<{ locale: string; nationality: string }>;
@@ -218,6 +219,9 @@ export default async function CommunityPage({ params }: Props) {
             <ul className="longformList">
               {data.hubCities.slice(0, 3).map((city) => {
                 const slug = city.toLowerCase().replace(/\s+/g, "-");
+                // Only link hub cities that have a city page (Plettenberg Bay
+                // and Hermanus have none: the link was a 404).
+                if (!getSACity(slug)) return null;
                 return (
                   <li key={city}>
                     <Link href={`/${locale}/cities/${slug}/`}>

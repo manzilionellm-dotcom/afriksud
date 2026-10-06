@@ -131,6 +131,17 @@ const nextConfig = {
         destination: "/pt-mz/language/iptv-portuguese-mozambique",
         permanent: true,
       },
+      // Dead links found on the live site (crawl 2026-10-06): /legal/privacy
+      // never existed (POPIA page is /legal/popia); communities pages linked
+      // /cities/plettenberg-bay and /cities/hermanus, which have no page.
+      // Slash variants too: next.config runs before the middleware slash-strip.
+      { source: "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/legal/privacy", destination: "/:locale/legal/popia", permanent: true },
+      { source: "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/legal/privacy/", destination: "/:locale/legal/popia", permanent: true },
+      { source: "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/cities/:city(plettenberg-bay|hermanus)", destination: "/:locale/cities", permanent: true },
+      { source: "/:locale(en-za|en-gb|en-au|en-us|af|zu|xh|pt-mz|en-zw|fr|en-ae|en-nz)/cities/:city(plettenberg-bay|hermanus)/", destination: "/:locale/cities", permanent: true },
+      // /en-za/sports was linked from /en-za/free-trial but never had a page.
+      { source: "/en-za/sports", destination: "/en-za/iptv-supersport-without-dstv", permanent: true },
+      { source: "/en-za/sports/", destination: "/en-za/iptv-supersport-without-dstv", permanent: true },
       // Seo Springboks UK short slugs — 308 one hop onto the live blog
       // (P1 6Q). MUST sit above `/iptv-:city` or `/iptv-springboks-uk`
       // would 301 into /cities/springboks-uk/. No trailing slash on dest.

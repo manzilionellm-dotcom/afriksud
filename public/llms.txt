@@ -19,36 +19,36 @@ iPad or PC using TiviMate, IPTV Smarters Pro or any standard M3U player.
 
 ## Pillar pages (head-term content)
 
-- Best IPTV in SA 2026: https://iptvmzansi.com/en-za/best-iptv-south-africa-2026/
-- DStv alternative: https://iptvmzansi.com/en-za/dstv-alternative/
-- IPTV Firestick: https://iptvmzansi.com/en-za/iptv-firestick-south-africa/
-- IPTV Samsung Smart TV: https://iptvmzansi.com/en-za/iptv-samsung-smart-tv/
-- Watch SuperSport without DStv: https://iptvmzansi.com/en-za/iptv-supersport-without-dstv/
-- IPTV on Vumatel/Openserve/Frogfoot: https://iptvmzansi.com/en-za/iptv-vumatel-openserve-frogfoot/
-- IPTV EFT/SnapScan/Capitec Pay: https://iptvmzansi.com/en-za/iptv-eft-snapscan-payment/
-- How to cancel DStv 2026: https://iptvmzansi.com/en-za/cancel-dstv-2026/
-- Is IPTV legal in South Africa: https://iptvmzansi.com/en-za/is-iptv-legal-south-africa/
+- Best IPTV in SA 2026: https://iptvmzansi.com/en-za/best-iptv-south-africa-2026
+- DStv alternative: https://iptvmzansi.com/en-za/dstv-alternative
+- IPTV Firestick: https://iptvmzansi.com/en-za/iptv-firestick-south-africa
+- IPTV Samsung Smart TV: https://iptvmzansi.com/en-za/iptv-samsung-smart-tv
+- Watch SuperSport without DStv: https://iptvmzansi.com/en-za/iptv-supersport-without-dstv
+- IPTV on Vumatel/Openserve/Frogfoot: https://iptvmzansi.com/en-za/iptv-vumatel-openserve-frogfoot
+- IPTV EFT/SnapScan/Capitec Pay: https://iptvmzansi.com/en-za/iptv-eft-snapscan-payment
+- How to cancel DStv 2026: https://iptvmzansi.com/en-za/cancel-dstv-2026
+- Is IPTV legal in South Africa: https://iptvmzansi.com/en-za/is-iptv-legal-south-africa
 
 ## Section hubs
 
-- Cities (12 SA metros): https://iptvmzansi.com/en-za/cities/
-- Devices (10 install guides): https://iptvmzansi.com/en-za/devices/
-- Compare (8 competitors): https://iptvmzansi.com/en-za/vs/
-- SADC (8 countries): https://iptvmzansi.com/en-za/sadc/
-- SA abroad (19 countries): https://iptvmzansi.com/en-za/sa-abroad/
-- Foreign communities (15 packs): https://iptvmzansi.com/en-za/communities/
-- Blog: https://iptvmzansi.com/en-za/blog/
+- Cities (12 SA metros): https://iptvmzansi.com/en-za/cities
+- Devices (10 install guides): https://iptvmzansi.com/en-za/devices
+- Compare (8 competitors): https://iptvmzansi.com/en-za/vs
+- SADC (8 countries): https://iptvmzansi.com/en-za/sadc
+- SA abroad (19 countries): https://iptvmzansi.com/en-za/sa-abroad
+- Foreign communities (15 packs): https://iptvmzansi.com/en-za/communities
+- Blog: https://iptvmzansi.com/en-za/blog
 
 ## Country-specific pages (SADC)
 
-- Zimbabwe: https://iptvmzansi.com/en-za/sadc/zimbabwe/ (USD pricing, EcoCash)
-- Botswana: https://iptvmzansi.com/en-za/sadc/botswana/
-- Namibia: https://iptvmzansi.com/en-za/sadc/namibia/
-- Mozambique: https://iptvmzansi.com/pt-mz/sadc/mozambique/ (Portuguese)
-- Lesotho: https://iptvmzansi.com/en-za/sadc/lesotho/
-- Eswatini: https://iptvmzansi.com/en-za/sadc/eswatini/
-- Zambia: https://iptvmzansi.com/en-za/sadc/zambia/
-- Malawi: https://iptvmzansi.com/en-za/sadc/malawi/
+- Zimbabwe: https://iptvmzansi.com/en-za/sadc/zimbabwe (USD pricing, EcoCash)
+- Botswana: https://iptvmzansi.com/en-za/sadc/botswana
+- Namibia: https://iptvmzansi.com/en-za/sadc/namibia
+- Mozambique: https://iptvmzansi.com/pt-mz/sadc/mozambique (Portuguese)
+- Lesotho: https://iptvmzansi.com/en-za/sadc/lesotho
+- Eswatini: https://iptvmzansi.com/en-za/sadc/eswatini
+- Zambia: https://iptvmzansi.com/en-za/sadc/zambia
+- Malawi: https://iptvmzansi.com/en-za/sadc/malawi
 
 ## Devices supported
 
@@ -84,7 +84,7 @@ free trial.
 
 ## Compliance
 
-Privacy copy is at /en-za/legal/popia/. Legal name, CIPC number and
+Privacy copy is at /en-za/legal/popia. Legal name, CIPC number and
 Information Officer on that page are still owner placeholders — do not
 treat them as filled in.
 
@@ -103,10 +103,10 @@ holds broadcast or redistribution licences.
   IPTV. Every SuperSport feed in 4K, no DStv decoder required.
 - Q: How do I install IPTV on Firestick? — A: Sideload TiviMate via the
   Downloader app, paste the Mzansi Stream M3U URL — full guide at
-  /en-za/iptv-firestick-south-africa/.
+  /en-za/iptv-firestick-south-africa.
 - Q: How do I cancel DStv? — A: WhatsApp 060 060 3788, give 30 days'
   notice on Day 1 of your billing cycle — full guide at
-  /en-za/cancel-dstv-2026/.
+  /en-za/cancel-dstv-2026.
 
 ## Contact
 
