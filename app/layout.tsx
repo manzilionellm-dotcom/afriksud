@@ -57,11 +57,8 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
-  alternates: {
-    // Per-page canonical + languages live on `app/[locale]/.../page.tsx`.
-    // Root-level metadata only carries the default-locale hint.
-    canonical: "/",
-  },
+  // No root canonical. `/` 307s to `/en-za`, and a canonical must be a
+  // 200 URL. Each locale page sets its own alternates.canonical.
   openGraph: {
     type: "website",
     locale: LOCALE_META[DEFAULT_LOCALE].ogLocale,
@@ -86,8 +83,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@iptvmzansi",
-    creator: "@iptvmzansi",
+    // À CONFIRMER — no verified @iptvmzansi profile in the repo. Do not emit site/creator.
     title: "Best IPTV South Africa 2026 — 20,000+ Channels in 4K",
     description:
       "Premium streaming SA — SABC, e.tv, SuperSport, Premier League + diaspora channels. Activated in 10 min. Free 24h trial.",

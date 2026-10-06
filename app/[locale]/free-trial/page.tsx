@@ -1,27 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { localeUrl } from "../../../lib/url";
 
-export const metadata: Metadata = {
-  title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
-  description:
-    "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public M3U. Not official DStv.",
-  alternates: {
-    canonical: "https://iptvmzansi.com/en-za/free-trial",
-    languages: {
-      "en-ZA": "https://iptvmzansi.com/en-za/free-trial",
-      "x-default": "https://iptvmzansi.com/en-za/",
-    },
-  },
-  openGraph: {
+const TRIAL_PATH = "/free-trial";
+const TRIAL_CANONICAL = localeUrl("en-za", TRIAL_PATH);
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isCanonical = locale === "en-za";
+  return {
     title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
     description:
       "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public M3U. Not official DStv.",
-    url: "https://iptvmzansi.com/en-za/free-trial",
-    type: "website",
-    locale: "en_ZA",
-  },
-  robots: { index: true, follow: true },
-};
+    alternates: {
+      canonical: TRIAL_CANONICAL,
+      // x-default is this page, not the homepage. Other locales canonicalise
+      // here and stay out of the hreflang cluster.
+      languages: isCanonical
+        ? { "en-ZA": TRIAL_CANONICAL, "x-default": TRIAL_CANONICAL }
+        : undefined,
+    },
+    openGraph: {
+      title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
+      description:
+        "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public M3U. Not official DStv.",
+      url: TRIAL_CANONICAL,
+      type: "website",
+      locale: "en_ZA",
+    },
+    robots: isCanonical
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
+  };
+}
 
 const WA_NUMBER = "447307410512";
 const WA_PREFILL = encodeURIComponent(
@@ -249,7 +264,7 @@ export default function FreeTrialPage() {
           <Link href="/en-za" className="hover:text-white">
             en-ZA hub
           </Link>
-          <Link href="/en-za/sports" className="hover:text-white">
+          <Link href="/en-za/iptv-supersport-without-dstv" className="hover:text-white">
             Sports
           </Link>
           <Link href="/" className="hover:text-white">

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   COMPETITOR_SLUGS,
@@ -14,7 +14,6 @@ import {
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../../components/client/HeaderNav";
 import { FooterSection } from "../../../../components/client/LocalizedSections";
-import { WhatsAppFab } from "../../../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
@@ -42,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.meta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/vs/${competitor}/`),
-      languages: hreflangFor(`/vs/${competitor}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/vs/${competitor}/`),
     },
     openGraph: {
       type: "article",
@@ -105,7 +104,7 @@ export default async function VersusPage({ params }: Props) {
     },
     {
       q: `Is Mzansi Stream legal in South Africa?`,
-      a: `Streaming TV is not illegal per se in South Africa — what's illegal is distributing copyrighted content without authorisation. Mzansi Stream sources channels via licensed partners, accepts traceable payment via every major SA method and processes customer data under POPIA.`,
+      a: `Streaming TV as a technology is not banned in South Africa. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences.`,
     },
   ];
 
@@ -249,7 +248,6 @@ export default async function VersusPage({ params }: Props) {
         </main>
 
         <FooterSection />
-        <WhatsAppFab />
         <StickyBottomCta />
         <PopiaConsentBanner />
       </LanguageProvider>

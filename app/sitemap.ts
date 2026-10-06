@@ -1,14 +1,15 @@
 // app/sitemap.ts
 
 import type { MetadataRoute } from "next";
-import { DEFAULT_LOCALE, LOCALES, LOCALE_META } from "../lib/locales";
-import { hreflangFor, localeUrl } from "../lib/url";
+import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "../lib/locales";
+import { indexableCanonicalLocale } from "../lib/seo/indexability";
+import { hreflangFor, hreflangForProgrammatic, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
 import { BLOG_POSTS, BLOG_SLUGS } from "../lib/seo/blog-posts";
 import { LEGAL_SLUGS, LEGAL_TOPICS } from "../lib/seo/legal";
-import { SA_LANGUAGE_SLUGS } from "../lib/seo/sa-languages";
+import { SA_LANGUAGE_PAGES } from "../lib/seo/sa-languages";
 import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
 import { PILLARS, PILLAR_SLUGS } from "../lib/seo/pillars";
@@ -16,28 +17,30 @@ import { DEVICES, DEVICE_SLUGS } from "../lib/seo/devices";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
-// Build-time fallback for surfaces that don't have a per-resource
-// dateModified. Stable so per-build sitemaps don't churn for crawlers.
-const buildDate = new Date();
+// lastmod is emitted only when the content file carries a real date.
+// A build-time `new Date()` made every deploy look like a content change.
 
-function parseDate(d: string | undefined): Date {
-  if (!d) return buildDate;
+function parseDate(d: string | undefined): Date | undefined {
+  if (!d) return undefined;
   const parsed = new Date(d);
-  return isNaN(parsed.getTime()) ? buildDate : parsed;
+  return isNaN(parsed.getTime()) ? undefined : parsed;
 }
 
 function withAlternates(
   path: string,
   priority: number,
   changeFrequency: SitemapEntry["changeFrequency"] = "weekly",
-  lastModified: Date = buildDate
+  lastModified?: Date,
+  languages?: Record<string, string>
 ): SitemapEntry {
   return {
     url: localeUrl(DEFAULT_LOCALE, path),
-    lastModified,
+    ...(lastModified ? { lastModified } : {}),
     changeFrequency,
     priority,
-    alternates: { languages: hreflangFor(path) },
+    alternates: {
+      languages: languages ?? hreflangForProgrammatic(DEFAULT_LOCALE, path)!,
+    },
   };
 }
 
@@ -51,11 +54,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: SitemapEntry[] = [];
 
   // Home — every locale variant gets its own entry, anchored on en-za as canonical.
-  entries.push(withAlternates("/", 1.0));
+  entries.push(withAlternates("/", 1.0, "weekly", undefined, hreflangFor("/")));
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     entries.push({
       url: localeUrl(locale, "/"),
-      lastModified: buildDate,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: { languages: hreflangFor("/") },
@@ -67,6 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push(withAlternates("/blog", 0.7, "weekly"));
   entries.push(withAlternates("/referral", 0.5, "monthly"));
   entries.push(withAlternates("/affiliate", 0.5, "monthly"));
+  // 200 URL only. Unprefixed /free-trial 301s here and must not be listed.
+  {
+    const trial = localeUrl(DEFAULT_LOCALE, "/free-trial");
+    entries.push({
+      url: trial,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: {
+        languages: { "en-ZA": trial, "x-default": trial },
+      },
+    });
+  }
 
   // Head-term pillars — use per-pillar `dateModified` so the sitemap
   // reflects actual content freshness instead of the build date.
@@ -118,9 +132,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(withAlternates(`/vs/${slug}`, 0.8, "monthly"));
   }
 
-  // SA-language landing pages.
-  for (const slug of SA_LANGUAGE_SLUGS) {
-    entries.push(withAlternates(`/language/${slug}`, 0.7, "monthly"));
+  // SA-language landing pages. Canonical is the native locale (the body
+  // language). Other locales 301, so they must not appear in the sitemap.
+  for (const page of SA_LANGUAGE_PAGES) {
+    const owner = page.preferredLocale as Locale;
+    const url = localeUrl(owner, `/language/${page.slug}`);
+    entries.push({
+      url,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          [LOCALE_META[owner].hreflang]: url,
+          "x-default": url,
+        },
+      },
+    });
   }
 
   // Blog posts — prefer dateModified when a guide carries one.
@@ -146,12 +173,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // country (e.g. /en-gb/sa-abroad/uk/ rather than /en-za/...).
   for (const country of SA_ABROAD_COUNTRIES) {
     void SA_ABROAD_SLUGS; // tree-shake guard
+    const canonicalLocale = indexableCanonicalLocale(country.preferredCanonicalLocale);
+    const url = localeUrl(canonicalLocale, `/sa-abroad/${country.slug}`);
     entries.push({
-      url: localeUrl(country.preferredCanonicalLocale, `/sa-abroad/${country.slug}`),
-      lastModified: buildDate,
+      url,
       changeFrequency: "monthly",
       priority: 0.8,
-      alternates: { languages: hreflangFor(`/sa-abroad/${country.slug}`) },
+      alternates: {
+        languages: {
+          [LOCALE_META[canonicalLocale].hreflang]: url,
+          "x-default": url,
+        },
+      },
     });
   }
 

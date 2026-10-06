@@ -5,13 +5,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { SADC_SLUGS, getSadcCountry } from "../../../../lib/seo/sadc-countries";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../../components/client/HeaderNav";
 import { FooterSection } from "../../../../components/client/LocalizedSections";
-import { WhatsAppFab } from "../../../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../../components/client/SkipLink";
@@ -43,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.meta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/sadc/${country}/`),
-      languages: hreflangFor(`/sadc/${country}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/sadc/${country}/`),
     },
     openGraph: {
       type: "article",
@@ -67,7 +66,7 @@ export default async function SadcCountryPage({ params }: Props) {
   const faq = [
     {
       q: `Is IPTV legal in ${data.name}?`,
-      a: `Streaming TV is not illegal per se in ${data.name}. What's illegal in most jurisdictions is the unauthorised distribution of copyrighted content. Mzansi Stream sources its channels via licensed partners and processes payments through traceable channels.`,
+      a: `Streaming TV as a technology is not, by itself, a ban in ${data.name}. Unauthorised distribution of copyrighted content is the copyright issue in most places. This page does not state that Mzansi Stream holds channel licences. Payments shown for this country are the methods listed above.`,
     },
     {
       q: `Will this work on ${data.isps.slice(0, 2).join(" or ")}?`,
@@ -352,7 +351,6 @@ export default async function SadcCountryPage({ params }: Props) {
         </main>
 
         <FooterSection />
-        <WhatsAppFab />
         <StickyBottomCta />
         <PopiaConsentBanner />
       </LanguageProvider>

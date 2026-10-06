@@ -1,0 +1,28 @@
+# USINE v8 — Journal run-015 (WhatsApp FAB rendu côté serveur)
+# Branch: feat/whatsapp-contact
+# Objectif: un seul `<a class="waFab" href="https://wa.me/447307410512?text=...">`
+# dans le HTML initial de chaque page `app/[locale]/**`. Numéro figé
+# +44 7307 410512. Prefill neutre par langue. 0 doublon visuel.
+# JAMAIS de push main. JAMAIS de merge. PR brouillon.
+
+## T0 (mesuré, 2026-10-04)
+
+- [x] git: `origin/main` @ `b0efdf9` `308: 404 aliases /trial /essai /pricing /prix /compare → /en-za/free-trial (#35)`
+- [x] Live curl (follow) `wa.me` anchors = 0 et `waFab` = 0 sur `/en-za`, `/en-za/cities/cape-town`, `/en-za/devices`, `/en-za/legal/refund`, `/en-za/affiliate` (HTTP 200)
+- [x] Cause code: `WhatsAppFab` client `if (!mounted) return null` ; monté seulement sur home, dstv-alternative, cities, sadc, vs + LongformShell. CTA home hero = `<button>` sans href
+- [x] `trailingSlash: false` — les URLs de preuve n'ont pas de slash final
+- [x] GSC absente — volumes NON OBSERVÉS
+
+## Travail
+
+- [x] `WhatsAppFabLink` serveur dans `app/[locale]/layout.tsx` (classe `.waFab`, SVG 28×28, aria-label par langue)
+- [x] Numéro littéral `447307410512`, aucun `process.env`
+- [x] Prefill neutre en / af / zu / xh / pt / fr (0 essai, 0 prix, 0 chaîne, 0 légalité, 0 stabilité)
+- [x] Rendu client retiré des pages + LongformShell ; `WhatsAppFab` retourne `null`
+- [x] DoD: `pnpm install --frozen-lockfile` exit 0 · `pnpm lint` exit 0 · `pnpm type-check` exit 0 · `pnpm build` exit 0 (1679 pages) · `node scripts/qa-gates.mjs` exit 0
+- [x] Vérif HTML (`next start :3000`): exactement 1 `href="https://wa.me/447307410512..."` sur cape-town, devices, legal/refund, affiliate, `/fr/devices`, accueil `/en-za`. Aussi 1 sur `/af` `/zu` `/xh` `/pt-mz` `/fr` `/en-gb`, message de la langue. 1 seul `.waFab`.
+- [x] Cercle 56×56 entier au-dessus du bandeau cookies : mobile 390px (`bottom: 220px`) sur cape-town et `/fr/devices` ; desktop 1280px (`bottom: 120px`) sur `/en-za/legal/refund`.
+
+## Originalité (Loi #10)
+
+Le bouton est dans le HTML que le crawler voit, avec un message neutre dans la langue de la page. La live du 04/10 n'a pas ce lien serveur.

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { SA_ABROAD_COUNTRIES } from "../../../lib/seo/sa-abroad";
 import { HubListing } from "../../../components/seo/HubListing";
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: {
       canonical: localeUrl(locale as Locale, "/sa-abroad/"),
-      languages: hreflangFor("/sa-abroad/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/sa-abroad/"),
     },
     openGraph: {
       type: "website",
@@ -48,7 +48,7 @@ export default async function SaAbroadHub({ params }: Props) {
       locale={locale as Locale}
       eyebrow="SA worldwide · 20+ countries"
       h1="South African TV abroad — every country covered"
-      lead="If you're a South African abroad, Mzansi Stream brings SuperSport, SABC, kykNET, Mzansi Magic and 20,000+ international channels to your TV in 50+ countries — in 4K, with no DStv decoder."
+      lead="If you're a South African abroad, Mzansi Stream is a no-decoder way to try SuperSport, SABC, kykNET and Mzansi Magic folders. This page does not publish a country count."
       itemListName="Countries with SA TV via Mzansi Stream"
       basePath="/sa-abroad/"
       items={SA_ABROAD_COUNTRIES.map((c) => ({

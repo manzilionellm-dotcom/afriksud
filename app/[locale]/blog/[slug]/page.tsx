@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { BLOG_SLUGS, getBlogPost } from "../../../../lib/seo/blog-posts";
 import { BLOG_GUIDE_SLUGS } from "../../../../lib/seo/blog-guides";
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.metaDescription,
     alternates: {
       canonical: localeUrl(locale as Locale, `/blog/${slug}/`),
-      languages: hreflangFor(`/blog/${slug}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/blog/${slug}/`),
     },
     openGraph: {
       type: "article",

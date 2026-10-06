@@ -38,7 +38,6 @@ import { ReviewsSection } from "../../components/client/ReviewsSection";
 import { ChannelExplorer } from "../../components/client/ChannelExplorer";
 import { CountriesSection } from "../../components/client/CountriesSection";
 import { InternationalSection } from "../../components/client/InternationalSection";
-import { WhatsAppFab } from "../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../components/client/SkipLink";
@@ -143,8 +142,8 @@ export default async function LocaleHome({ params }: Props) {
     logo: `${SITE.domain}/og-image.jpg`,
     image: `${SITE.domain}/og-image.jpg`,
     description:
-      "Mzansi Stream — 20,000+ channels, 4K/UHD, sport, movies and series. Premium streaming for South Africa and the SA diaspora worldwide.",
-    foundingDate: "2024",
+      "Mzansi Stream — 20,000+ channels, 4K/UHD, sport, movies and series. Streaming for South Africa and the SA diaspora worldwide.",
+    // À CONFIRMER — founding year is not evidenced in this repo. Do not emit foundingDate.
     areaServed: [
       { "@type": "Country", name: "South Africa" },
       { "@type": "Country", name: "Zimbabwe" },
@@ -210,8 +209,6 @@ export default async function LocaleHome({ params }: Props) {
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     primaryImageOfPage: `${SITE.domain}/og-image.jpg`,
-    datePublished: "2024-09-01",
-    dateModified: new Date().toISOString().slice(0, 10),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".heroLead", ".trustStrip"],
@@ -263,7 +260,6 @@ export default async function LocaleHome({ params }: Props) {
 
         <FooterSection />
 
-        <WhatsAppFab />
         <StickyBottomCta />
         <BottomTabBar />
         <PopiaConsentBanner />

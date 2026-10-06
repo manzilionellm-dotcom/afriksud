@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { pillarMetaLocalized } from "../../../lib/seo/pillar-meta-i18n";
 import { COMPETITORS, getCompetitor } from "../../../lib/seo/competitors";
@@ -14,7 +14,6 @@ import { generateWhatsAppLink } from "../../../components/shared/utils";
 import { LanguageProvider } from "../../../components/client/LanguageProvider";
 import { HeaderNav } from "../../../components/client/HeaderNav";
 import { FooterSection } from "../../../components/client/LocalizedSections";
-import { WhatsAppFab } from "../../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../../components/client/SkipLink";
@@ -40,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: pmeta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, "/dstv-alternative/"),
-      languages: hreflangFor("/dstv-alternative/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/dstv-alternative/"),
     },
     openGraph: {
       type: "article",
@@ -85,7 +84,7 @@ const FAQ = [
   },
   {
     q: "Is IPTV legal in South Africa?",
-    a: "Streaming TV is not illegal per se in South Africa. What's illegal is distributing copyrighted content without authorisation. Mzansi Stream sources via licensed partners, accepts traceable payment and is POPIA-compliant — see our /legal/popia page.",
+    a: "Streaming TV as a technology is not banned in South Africa. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences. The POPIA page is linked from the footer and still contains owner placeholders.",
   },
   {
     q: "What's included in the 24h free trial?",
@@ -93,7 +92,7 @@ const FAQ = [
   },
   {
     q: "Can I watch DStv channels abroad?",
-    a: "Yes — Mzansi Stream works in 50+ countries with no geo-blocking. SA expats in the UK, AU, US, UAE, NZ and Canada use it to watch SuperSport, SABC and kykNET in 4K from home.",
+    a: "SA expats in the UK, AU, US, UAE, NZ and Canada ask for SuperSport, SABC and kykNET folders. This page does not publish a country count or promise 4K on every connection.",
   },
 ];
 
@@ -387,7 +386,6 @@ export default async function DstvAlternativePage({ params }: Props) {
         </main>
 
         <FooterSection />
-        <WhatsAppFab />
         <StickyBottomCta />
         <PopiaConsentBanner />
       </LanguageProvider>
