@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   const pmeta = pillarMetaLocalized("dstv-alternative", locale as Locale, {
-    title: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels",
+    title: "DStv Alternative 2026 — Save R800/mo · No Contract",
     description:
-      "Best DStv alternative in South Africa 2026. 20,000+ live channels, SuperSport PSL, Premier League, kykNET, SABC in 4K. From R99/mo. Free 24h trial — no card.",
+      "DStv alternative in South Africa 2026. SuperSport PSL, Premier League, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. From R99/mo. Free 24h trial — no card.",
   });
   return {
     title: pmeta.title,
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const FAQ = [
   {
     q: "What can I replace DStv with in South Africa?",
-    a: "Mzansi Stream is the leading DStv alternative in SA — same SuperSport feeds, PSL, Premier League, kykNET, SABC and 20,000+ international channels in 4K, from R99/month, with no contract and no decoder.",
+    a: "Mzansi Stream is a no-contract DStv alternative in SA — SuperSport-style, PSL, Premier League, kykNET, SABC and international folders in 4K where the source supports it, from R99/month, with no decoder. Line-up to confirm on WhatsApp.",
   },
   {
     q: "Is there an app like DStv but cheaper?",
@@ -64,15 +64,15 @@ const FAQ = [
   },
   {
     q: "How do I watch the rugby today without DStv?",
-    a: "Order a Mzansi Stream plan (from R99/month), receive the M3U link on WhatsApp within 10 minutes, and watch SuperSport Rugby in 4K on your existing TV or device.",
+    a: "Order a Mzansi Stream plan (from R99/month), receive the M3U link on WhatsApp, and check the SuperSport Rugby folder in 4K on your existing TV or device.",
   },
   {
     q: "Can I live stream SuperSport without DStv?",
-    a: "Yes. Mzansi Stream carries every SuperSport feed (PSL, Variety 1-4, Rugby, Cricket, Premier League, Motorsport, Golf, Tennis) in 4K. No DStv subscription required.",
+    a: "SuperSport-style folders (PSL, Variety, Rugby, Cricket, Premier League, Motorsport, Golf, Tennis) are in the line-up without a DStv subscription. Specific feeds and matches are to confirm on WhatsApp.",
   },
   {
     q: "Will Mzansi Stream work with Vumatel / Openserve / Frogfoot?",
-    a: "Yes — we peer at NAPAfrica with CDN edges in Johannesburg and Cape Town, so 4K is stable on every major SA fibre network including Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre and Vodacom Fibre.",
+    a: "It runs over Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre and Vodacom Fibre like any home internet. 4K depends on your line — test it on the 24-hour trial.",
   },
   {
     q: "Can I cancel DStv on WhatsApp?",
@@ -84,11 +84,11 @@ const FAQ = [
   },
   {
     q: "Is IPTV legal in South Africa?",
-    a: "Streaming TV as a technology is not banned in South Africa. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences. The POPIA page is linked from the footer and still contains owner placeholders.",
+    a: "This page is not legal advice and makes no legality claim. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences. The POPIA page is linked from the footer and still contains owner placeholders.",
   },
   {
     q: "What's included in the 24h free trial?",
-    a: "Full 20,000+ channel lineup, 4K UHD where available, EPG, WhatsApp support — for 24 hours, no credit card required.",
+    a: "The same line-up as the paid plans, 4K UHD where available, EPG, WhatsApp support — for 24 hours, no credit card required.",
   },
   {
     q: "Can I watch DStv channels abroad?",
@@ -103,9 +103,9 @@ export default async function DstvAlternativePage({ params }: Props) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "DStv Alternative 2026 — Save R800/mo · 20,000+ Channels in 4K",
+    headline: "DStv Alternative 2026 — Save R800/mo · Live TV in 4K",
     description:
-      "Cancel DStv and keep every SuperSport feed, kykNET and SABC in 4K. From R99/month on Mzansi Stream.",
+      "Leaving DStv: SuperSport-style, kykNET and SABC folders in 4K, line-up to confirm on WhatsApp. From R99/month on Mzansi Stream.",
     image: `${SITE_URL}/og-image.jpg`,
     datePublished: "2026-01-15",
     dateModified: "2026-05-15",
@@ -172,22 +172,21 @@ export default async function DstvAlternativePage({ params }: Props) {
             <header className="longformHeader">
               <p className="longformEyebrow">DStv Alternative · 2026 Guide</p>
               <h1>
-                DStv Alternative South Africa 2026 — Get 20,000+ Channels for
-                R99/month
+                DStv Alternative South Africa 2026 — Live TV from R99/month
               </h1>
               <p className="longformLead">
                 Tired of paying R899/month for DStv Premium and watching the
-                price climb every year? Mzansi Stream is the leading DStv
-                alternative in South Africa: 20,000+ live channels, every
-                SuperSport feed, the full DStv Premiership, Premier League,
-                kykNET, Mzansi Magic, SABC, e.tv, plus 100,000+ movies and
-                series — in 4K UHD, with no contract, no decoder and no
-                dish. Switch from DStv in 10 minutes on WhatsApp. Free
-                24-hour trial, no credit card. From R99/month.
+                price climb every year? Mzansi Stream is a no-contract DStv
+                alternative in South Africa: SuperSport-style folders, DStv
+                Premiership, Premier League, kykNET, Mzansi Magic, SABC,
+                e.tv, plus movies and series on demand — line-up to confirm on WhatsApp —
+                in 4K UHD where the source supports it, with no decoder and
+                no dish. Switch from DStv on WhatsApp. Free 24-hour trial,
+                no credit card. From R99/month.
               </p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
                 Works on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre,
-                MTN Fibre and Vodacom Fibre · POPIA compliant
+                MTN Fibre and Vodacom Fibre · Test it on your line
               </p>
               <div className="ctaRow">
                 <a href="#trial" className="btnPrimary">
@@ -220,9 +219,8 @@ export default async function DstvAlternativePage({ params }: Props) {
                 </li>
               </ul>
               <p>
-                Mzansi Stream sits between R99 and R150/month for the same
-                sport, the same SA channels, and 20,000+ international ones
-                — saving most households R8,000-R9,500 a year.
+                Mzansi Stream sits between R99 and R150/month, with sport,
+                SA and international folders to confirm on WhatsApp.
               </p>
             </section>
 
@@ -268,7 +266,11 @@ export default async function DstvAlternativePage({ params }: Props) {
             </section>
 
             <section className="longformSection">
-              <h2>Every DStv channel, replaced (and 20,000 more)</h2>
+              <h2>Channel folders people ask for when they leave DStv</h2>
+              <p>
+                Line-up to confirm on WhatsApp before you pay — we don&apos;t claim every
+                DStv channel or every match.
+              </p>
 
               <h3>Sport — SuperSport replacement</h3>
               <p>
@@ -287,9 +289,8 @@ export default async function DstvAlternativePage({ params }: Props) {
 
               <h3>Movies and series</h3>
               <p>
-                M-Net, M-Net Movies 1-4, Studio Universal, AMC, Universal
-                TV, Fox, FX, Disney+, HBO, Showtime and Paramount+
-                catalogues via VOD.
+                M-Net, M-Net Movies, Studio Universal, AMC, Universal TV,
+                Fox and FX folders, plus VOD — catalogue to confirm on WhatsApp.
               </p>
 
               <h3>Kids</h3>
@@ -314,8 +315,8 @@ export default async function DstvAlternativePage({ params }: Props) {
                 </li>
                 <li>Order any plan (1 / 3 / 6 / 12 months).</li>
                 <li>
-                  Receive your M3U link and one-page setup guide in under 10
-                  minutes.
+                  Receive your M3U link and one-page setup guide on
+                  WhatsApp.
                 </li>
                 <li>
                   Cancel DStv via WhatsApp 060 060 3788 or the MyDStv app.
@@ -364,11 +365,12 @@ export default async function DstvAlternativePage({ params }: Props) {
             <section className="longformSection">
               <h2>Is IPTV legal in South Africa?</h2>
               <p>
-                Streaming TV is not illegal per se in South Africa — what&apos;s
-                illegal is distributing copyrighted content without
-                authorisation. Mzansi Stream sources channels via licensed
-                partners, accepts traceable payment, and processes data
-                under POPIA. Read our full position on the{" "}
+                This page is not legal advice and makes no legality or
+                licence claim. The copyright issue is distributing
+                copyrighted content without authorisation. Mzansi Stream
+                accepts traceable payment. Rights and blackouts still apply,
+                so test the channels and matches you need during the
+                24-hour trial before you cancel DStv. Read the{" "}
                 <a href={`/${locale}/legal/popia`}>POPIA page</a>.
               </p>
             </section>

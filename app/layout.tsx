@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     // `default` is rendered as-is (no template applied) so the brand
     // suffix lives here. Child pages must set `title` WITHOUT the
     // `| Mzansi Stream` suffix — the template appends it once.
-    default: "DStv Alternative — 20,000+ Channels from R99 | Mzansi Stream",
+    default: "DStv Alternative — Live TV in 4K from R99 | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },
   // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24h trial, no card. From R99/mo.",
+    "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24h trial, no card. From R99/mo.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     ),
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Best IPTV South Africa 2026 — 20,000+ Channels in 4K | Mzansi Stream",
+    title: "Best IPTV South Africa 2026 — Live TV in 4K | Mzansi Stream",
     description:
-      "South Africa's best IPTV — SABC, e.tv, SuperSport PSL, Premier League, kykNET + 20,000 international channels in 4K. Activated in 10 minutes on WhatsApp. Free 24h trial.",
+      "IPTV for South Africa — SABC, e.tv, SuperSport PSL, Premier League, kykNET and international folders in 4K, line-up confirmed on WhatsApp. Free 24h trial.",
     images: [
       {
         url: OG_IMAGE,
@@ -85,9 +85,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     // À CONFIRMER — no verified @iptvmzansi profile in the repo. Do not emit site/creator.
-    title: "Best IPTV South Africa 2026 — 20,000+ Channels in 4K",
+    title: "Best IPTV South Africa 2026 — Live TV in 4K",
     description:
-      "Premium streaming SA — SABC, e.tv, SuperSport, Premier League + diaspora channels. Activated in 10 min. Free 24h trial.",
+      "Premium streaming SA — SABC, e.tv, SuperSport, Premier League + diaspora channels. Activated on WhatsApp. Free 24h trial.",
     images: [OG_IMAGE],
   },
   robots: {

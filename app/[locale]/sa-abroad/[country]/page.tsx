@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const cityList = data.cities.join(", ");
   const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
-  const description = `Stream SuperSport, SABC, kykNET and 20,000+ South African channels in ${data.name} (${cityList}) in 4K. Built for SA expats — no DStv decoder, no contract.`;
+  const description = `Stream SuperSport-style, SABC and kykNET folders in ${data.name} (${cityList}) in 4K — line-up to confirm on WhatsApp. Built for SA expats — no DStv decoder, no contract.`;
 
   // One indexable URL. Non-canonical locales only emit rel=canonical
   // (no hreflang to URLs that themselves canonicalise elsewhere).
@@ -88,7 +88,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Service",
     name: `Mzansi Stream — South African TV in ${data.name}`,
-    description: `Stream SuperSport, SABC, kykNET, M-Net and 20,000+ South African and international channels for SA expats living in ${data.name}.`,
+    description: `SuperSport-style, SABC, kykNET and M-Net folders for SA expats living in ${data.name} — line-up to confirm on WhatsApp.`,
     serviceType: "IPTV streaming for South African diaspora",
     provider: {
       "@type": "Organization",
@@ -167,9 +167,9 @@ export default async function SaAbroadCountryPage({ params }: Props) {
               Stream
             </h1>
             <p className="longformLead">
-              South Africans living in {cityList} can stream every
-              SuperSport feed, SABC 1/2/3, e.tv, kykNET, kykNET & Kie and
-              Mzansi Magic in 4K — without a DStv decoder, without a 24-
+              South Africans living in {cityList} can stream
+              SuperSport-style, SABC 1/2/3, e.tv, kykNET, kykNET & Kie and
+              Mzansi Magic folders in 4K (line-up to confirm on WhatsApp) — without a DStv decoder, without a 24-
               month contract and without a separate SA satellite
               subscription. Mzansi Stream delivers South African TV in
               {" "}{data.name} on the device you already own: Smart TV,
@@ -201,18 +201,15 @@ export default async function SaAbroadCountryPage({ params }: Props) {
           <section className="longformSection">
             <h2>Watch SuperSport in {data.name}</h2>
             <p>
-              Every SuperSport feed — SuperSport PSL, SuperSport Premier
-              League, SuperSport Variety 1-4, SuperSport Rugby, SuperSport
-              Cricket — streams live in 4K to viewers in {otherCities}
-              {otherCities ? " and " : ""}{lastCity}. SA expats use Mzansi
-              Stream to watch the PSL on a Saturday in {data.cities[0]} the
-              same way they would at home in Joburg — no SuperSport
+              SuperSport-style folders — PSL, Premier League, Variety,
+              Rugby, Cricket — to confirm on WhatsApp, with 4K depending on your broadband in {otherCities}
+              {otherCities ? " and " : ""}{lastCity}. In {data.cities[0]}, the PSL folder runs over home broadband — no SuperSport
               stand-alone subscription, no DStv decoder, no installer.
             </p>
             <p>
-              Watch the Springboks live in {data.name}, every URC fixture,
-              every Currie Cup match and the British &amp; Irish Lions
-              tour in 4K via SuperSport Rugby.
+              Springboks, URC, Currie Cup and British &amp; Irish Lions
+              fixtures via SuperSport Rugby-style folders in {data.name} —
+              to confirm on WhatsApp; rights and blackouts still apply.
             </p>
           </section>
 
@@ -241,13 +238,13 @@ export default async function SaAbroadCountryPage({ params }: Props) {
               </li>
               <li>
                 Receive your M3U link plus a one-page setup guide for your
-                Firestick, Smart TV, iPhone, iPad or Android TV. Usually
-                live within 10 minutes.
+                Firestick, Smart TV, iPhone, iPad or Android TV on
+                WhatsApp.
               </li>
             </ol>
             <p>
-              South African expat TV in {data.name} streams through our
-              edge in {data.edgeRegion}, so 4K is stable across {cityList}.
+              South African expat TV in {data.name}: 4K depends on your
+              broadband — test it in {cityList} during the 24-hour trial.
               {" "}{data.timezone}, so live SA sport hits prime time on
               your local clock.
             </p>

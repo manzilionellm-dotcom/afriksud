@@ -1,7 +1,7 @@
 {
   "name": "Mzansi Stream — Premium IPTV South Africa",
   "short_name": "Mzansi Stream",
-  "description": "Premium IPTV for South Africa. 20,000+ channels in 4K including SuperSport, DStv Premiership, SABC, kykNET and Premier League. WhatsApp activation in 10 minutes.",
+  "description": "Premium IPTV for South Africa. Live channels in 4K with SuperSport, DStv Premiership, SABC, kykNET and Premier League folders — line-up to confirm on WhatsApp. WhatsApp activation.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",

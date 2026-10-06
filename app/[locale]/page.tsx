@@ -102,7 +102,7 @@ export default async function LocaleHome({ params }: Props) {
     brand: { "@id": BRAND_ID },
     provider: { "@id": ORG_ID },
     description:
-      "Mzansi Stream — 20,000+ live channels, 100,000+ movies and series, EPG, 4K/UHD. SuperSport, DStv Premiership, Premier League, kykNET, SABC and more. WhatsApp activation in 10 minutes.",
+      "Mzansi Stream — live channels, movies and series, EPG, 4K/UHD. SuperSport, DStv Premiership, Premier League, kykNET and SABC folders — line-up confirmed on WhatsApp. WhatsApp activation.",
     image: `${SITE.domain}/og-image.jpg`,
     url: localeUrl(locale as Locale, "/"),
     areaServed: { "@type": "Country", name: "South Africa" },
@@ -113,7 +113,7 @@ export default async function LocaleHome({ params }: Props) {
         "@type": "Offer",
         "@id": `${SITE.domain}/${locale}/#offer-${p.key}`,
         name: t.planNames[p.key],
-        description: `Mzansi Stream ${t.planNames[p.key]} — 20,000+ channels, 4K/UHD, EPG included.`,
+        description: `Mzansi Stream ${t.planNames[p.key]} — live channels, 4K/UHD, EPG included.`,
         price: String(p.price),
         priceCurrency: SITE.currencyCode,
         priceValidUntil: p.priceValidUntil,
@@ -143,7 +143,7 @@ export default async function LocaleHome({ params }: Props) {
     logo: `${SITE.domain}/og-image.jpg`,
     image: `${SITE.domain}/og-image.jpg`,
     description:
-      "Mzansi Stream — 20,000+ channels, 4K/UHD, sport, movies and series. Streaming for South Africa and the SA diaspora worldwide.",
+      "Mzansi Stream — live channels, 4K/UHD, sport, movies and series. Streaming for South Africa and the SA diaspora worldwide.",
     // À CONFIRMER — founding year is not evidenced in this repo. Do not emit foundingDate.
     areaServed: [
       { "@type": "Country", name: "South Africa" },
@@ -205,7 +205,7 @@ export default async function LocaleHome({ params }: Props) {
     url: localeUrl(locale as Locale, "/"),
     name: "DStv Alternative — Mzansi Stream IPTV South Africa",
     description:
-      "South Africa's IPTV alternative to DStv — 20,000+ live channels including SuperSport, kykNET and SABC in 4K. Free 24-hour trial, no card. From R99/month.",
+      "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24-hour trial, no card. From R99/month.",
     inLanguage: LOCALE_META[locale as Locale].hreflang,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },

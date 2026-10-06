@@ -165,8 +165,8 @@ export default async function CommunityPage({ params }: Props) {
               ))}
             </ul>
             <p>
-              Plus 20,000+ international and South African channels in 4K
-              and HD on the same subscription, so the household gets
+              Plus international and South African channels in 4K and HD
+              on the same subscription (line-up to confirm on WhatsApp), so the household gets
               {" "}{data.homeCountry} TV alongside SuperSport, SABC and
               global content in one M3U feed.
             </p>
@@ -207,8 +207,8 @@ export default async function CommunityPage({ params }: Props) {
                 or PayPal.
               </li>
               <li>
-                Receive your M3U link plus a setup guide. Usually live
-                within 10 minutes — and {data.homeCountry} channels show
+                Receive your M3U link plus a setup guide on WhatsApp — and
+                {data.homeCountry} channels show
                 up alongside your SA channels in the same player.
               </li>
             </ol>

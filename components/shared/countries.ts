@@ -179,7 +179,7 @@ export const expatCountries: ExpatCountry[] = [
   { flag: "🇳🇿", code: "nz", name: "New Zealand",     desc: "South African channels in Auckland, Wellington, Christchurch — low-latency stream." },
   { flag: "🇺🇸", code: "us", name: "United States",   desc: "Watch SuperSport and SABC in Houston, NYC, LA — large SA community supported." },
   { flag: "🇨🇦", code: "ca", name: "Canada",          desc: "SA TV in Toronto, Vancouver, Calgary, Montreal." },
-  { flag: "🇦🇪", code: "ae", name: "UAE / Dubai",     desc: "Stable 4K stream for South Africans in the Emirates." },
+  { flag: "🇦🇪", code: "ae", name: "UAE / Dubai",     desc: "SA TV for South Africans in the Emirates — test 4K on the trial." },
   { flag: "🇩🇪", code: "de", name: "Germany",         desc: "SuperSport and SABC in Berlin, Munich, Frankfurt." },
   { flag: "🇮🇪", code: "ie", name: "Ireland",         desc: "SA channels in Dublin, Cork, Galway — growing SA expat community." },
   { flag: "🇳🇱", code: "nl", name: "Netherlands",     desc: "South African TV in Amsterdam, The Hague, Rotterdam — without VPN." },
@@ -189,5 +189,5 @@ export const expatCountries: ExpatCountry[] = [
   { flag: "🇿🇼", code: "zw", name: "Zimbabwe",        desc: "South African channels in Harare and Bulawayo with edge servers." },
   { flag: "🇧🇼", code: "bw", name: "Botswana",        desc: "SA channels in Gaborone and Francistown — same package, regional pricing." },
   { flag: "🇳🇦", code: "na", name: "Namibia",         desc: "South African TV across Windhoek, Walvis Bay, Swakopmund." },
-  { flag: "🇸🇬", code: "sg", name: "Singapore",       desc: "SA channels for expats in Singapore — optimised for Asia latency." },
+  { flag: "🇸🇬", code: "sg", name: "Singapore",       desc: "SA channels for expats in Singapore — test the stream on the trial." },
 ];

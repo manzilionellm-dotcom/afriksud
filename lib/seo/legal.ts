@@ -191,7 +191,7 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "How to reach us",
         body: [
-          "WhatsApp: see the floating button on every page. Email: [TO_FILL_BY_OWNER: hello@iptvmzansi.com]. We reply 7 days a week between 08:00 and 23:00 SAST.",
+          "WhatsApp: see the floating button on every page. Email: [TO_FILL_BY_OWNER: hello@iptvmzansi.com].",
         ],
       },
     ],

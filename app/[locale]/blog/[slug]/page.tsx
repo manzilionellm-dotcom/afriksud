@@ -340,8 +340,8 @@ export default async function BlogPostPage({ params }: Props) {
           <section className="longformSection" id="next-step">
             <h2>Ready? Message us on WhatsApp</h2>
             <p>
-              {SITE.brand} activates a free 24-hour trial within 10 minutes —
-              full channel pack, 4K where the source supports it, no credit
+              {SITE.brand} activates a free 24-hour trial on WhatsApp —
+              same channel pack as the paid plans, 4K where the source supports it, no credit
               card. Tell us your device and we send the setup steps in the
               same chat.
             </p>

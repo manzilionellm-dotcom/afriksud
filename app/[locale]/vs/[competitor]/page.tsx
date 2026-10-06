@@ -86,7 +86,7 @@ export default async function VersusPage({ params }: Props) {
   const faqEntries = [
     {
       q: `Is Mzansi Stream a real alternative to ${data.name}?`,
-      a: `Yes — Mzansi Stream covers the same core channels as ${data.name} (where rights overlap) in 4K UHD, from R99/month, with no contract and no decoder. Activated on WhatsApp in under 10 minutes.`,
+      a: `It is a different product: live TV folders in 4K UHD where the source supports it, from R99/month, with no contract and no decoder — line-up to confirm on WhatsApp. Activated on WhatsApp.`,
     },
     {
       q: `How much can I save by switching from ${data.name}?`,
@@ -104,7 +104,7 @@ export default async function VersusPage({ params }: Props) {
     },
     {
       q: `Is Mzansi Stream legal in South Africa?`,
-      a: `Streaming TV as a technology is not banned in South Africa. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences.`,
+      a: `This page is not legal advice and makes no legality claim. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences.`,
     },
   ];
 
@@ -142,7 +142,7 @@ export default async function VersusPage({ params }: Props) {
               <h1>Mzansi Stream vs {data.name}</h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                From R99/mo · 24h free trial, no card · NAPAfrica-peered · 7-day satisfaction guarantee
+                From R99/mo · 24h free trial, no card · 7-day satisfaction guarantee
               </p>
               <div className="ctaRow">
                 <a
@@ -166,7 +166,7 @@ export default async function VersusPage({ params }: Props) {
 
             <DirectAnswerBlock
               question={`Is Mzansi Stream a real alternative to ${data.name}?`}
-              answer={`Yes. Mzansi Stream covers the same core channels as ${data.name} (where rights overlap) in 4K UHD for R99/month, with no contract, no decoder and no installer visit. Activation runs on WhatsApp in under 10 minutes. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective — most households save R8,000-R10,000 a year by switching.`}
+              answer={`It is a different product: live TV folders in 4K UHD where the source supports it for R99/month, with no contract, no decoder and no installer visit — line-up to confirm on WhatsApp. Activation runs on WhatsApp. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective.`}
             />
 
             <section className="longformSection" id="table">
@@ -217,7 +217,7 @@ export default async function VersusPage({ params }: Props) {
               locale={locale as Locale}
               refTag={`Vs-${competitor}`}
               heading={`Switch from ${data.name} — plans from R99/month`}
-              sub={`Same SuperSport, same kykNET, same SABC, 20,000+ more channels in 4K. No contract, no decoder. Activated on WhatsApp in 10 minutes.`}
+              sub={`SuperSport-style, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. No contract, no decoder. Activated on WhatsApp.`}
             />
 
             <section className="longformSection" id="faq">
@@ -240,7 +240,7 @@ export default async function VersusPage({ params }: Props) {
               <h2>Switch from {data.name} today</h2>
               <p>
                 24-hour free trial, no card. Pay only if it works for you.
-                Activated on WhatsApp within 10 minutes. 7-day satisfaction
+                Activated on WhatsApp. 7-day satisfaction
                 guarantee on every paid plan.
               </p>
             </section>

@@ -88,7 +88,7 @@ export function CinematicIntro({ onDone }: { onDone: () => void }) {
           <div className="cinTitleLine" />
         </div>
         <p className="cinTagline">The future of streaming in South Africa</p>
-        <p className="cinSub">20,000+ channels&nbsp;·&nbsp;4K/UHD&nbsp;·&nbsp;EPG&nbsp;·&nbsp;WhatsApp support</p>
+        <p className="cinSub">Live TV&nbsp;·&nbsp;4K/UHD&nbsp;·&nbsp;EPG&nbsp;·&nbsp;WhatsApp support</p>
       </div>
 
       <button className="cinSkip" onClick={skip} type="button">Skip ›</button>

@@ -29,7 +29,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL", clubs: ["Kaizer Chiefs", "Orlando Pirates"] },
       { sport: "URC / Currie Cup", clubs: ["Lions"] },
     ],
-    hook: "Drop DStv Premium and keep every SuperSport feed in 4K — covering every Sundowns, Chiefs, Pirates and Lions fixture.",
+    hook: "Leaving DStv Premium? SuperSport-style folders in 4K — Sundowns, Chiefs, Pirates and Lions fixtures to confirm on WhatsApp.",
   },
   {
     slug: "cape-town",
@@ -42,7 +42,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL", clubs: ["Cape Town City"] },
       { sport: "URC", clubs: ["DHL Stormers"] },
     ],
-    hook: "Watch every Stormers URC fixture and Cape Town City PSL game in 4K, on Vumatel, Openserve, Frogfoot or Octotel.",
+    hook: "Stormers URC and Cape Town City PSL folders in 4K — fixtures to confirm on WhatsApp — on Vumatel, Openserve, Frogfoot or Octotel.",
   },
   {
     slug: "durban",
@@ -55,7 +55,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL", clubs: ["AmaZulu FC", "Royal AM"] },
       { sport: "URC", clubs: ["Hollywoodbets Sharks"] },
     ],
-    hook: "Sharks rugby, AmaZulu matches, kykNET, Mzansi Magic and 20,000+ channels — installed in 10 minutes on Vumatel or Openserve.",
+    hook: "Sharks rugby, AmaZulu matches, kykNET and Mzansi Magic folders — to confirm on WhatsApp — installed in about 10 minutes on Vumatel or Openserve.",
   },
   {
     slug: "pretoria",
@@ -68,7 +68,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL", clubs: ["Mamelodi Sundowns", "SuperSport United"] },
       { sport: "URC", clubs: ["Vodacom Bulls"] },
     ],
-    hook: "Every Sundowns, SuperSport United and Bulls match in 4K — plus kykNET drama in HD and full SABC + e.tv pack.",
+    hook: "Sundowns, SuperSport United and Bulls folders in 4K — matches to confirm on WhatsApp — plus kykNET drama in HD and SABC + e.tv.",
   },
   {
     slug: "gqeberha",
@@ -81,7 +81,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL", clubs: ["Chippa United"] },
       { sport: "URC", clubs: ["EP Elephants"] },
     ],
-    hook: "Reliable IPTV across Walmer and Summerstrand — Chippa, EP Elephants and the full SuperSport line-up in 4K.",
+    hook: "IPTV across Walmer and Summerstrand — Chippa, EP Elephants and SuperSport-style folders in 4K, to confirm on WhatsApp.",
   },
   {
     slug: "bloemfontein",
@@ -94,7 +94,7 @@ export const SA_CITIES: SACity[] = [
       { sport: "PSL / first division", clubs: ["Bloemfontein Celtic legacy fans"] },
       { sport: "URC / Currie Cup", clubs: ["Toyota Cheetahs"] },
     ],
-    hook: "Watch every Cheetahs match, the full SuperSport rugby pack and kykNET drama in 4K — installed on Vumatel or Openserve in minutes.",
+    hook: "Cheetahs, SuperSport-style rugby folders and kykNET drama in 4K — matches to confirm on WhatsApp — installed on Vumatel or Openserve.",
   },
   {
     slug: "east-london",
@@ -124,7 +124,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Sonheuwel", "West Acres", "Riverside", "White River"],
     isps: ["Vumatel", "Openserve", "Frogfoot", "MTN Fibre"],
     teams: [{ sport: "PSL", clubs: ["TS Galaxy"] }],
-    hook: "TS Galaxy fixtures, every PSL match-day and 20,000+ channels in 4K — installed on WhatsApp in 10 minutes.",
+    hook: "TS Galaxy fixtures and PSL match-day folders in 4K — to confirm on WhatsApp — installed in about 10 minutes.",
   },
   {
     slug: "rustenburg",
@@ -134,7 +134,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Cashan", "Safari Gardens", "Geelhoutpark", "Tlhabane"],
     isps: ["Openserve", "MTN Fibre", "Rain 5G"],
     teams: [{ sport: "PSL", clubs: ["Platinum Stars legacy"] }],
-    hook: "Mining-town households cancelling DStv — get every SuperSport feed, Premier League and kykNET in 4K from R99/mo.",
+    hook: "Mining-town households cancelling DStv — SuperSport-style, Premier League and kykNET folders in 4K from R99/mo, to confirm on WhatsApp.",
   },
   {
     slug: "pietermaritzburg",
@@ -144,7 +144,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Hilton", "Scottsville", "Hayfields", "Lincoln Meade"],
     isps: ["Vumatel", "Openserve", "Frogfoot"],
     teams: [{ sport: "URC", clubs: ["Sharks (Hollywoodbets — KZN home)"] }],
-    hook: "Watch the Sharks live in 4K from Maritzburg — plus the full SABC, kykNET and Mzansi Magic line-up.",
+    hook: "Sharks folders in 4K from Maritzburg — plus SABC, kykNET and Mzansi Magic, to confirm on WhatsApp.",
   },
   {
     slug: "stellenbosch",
@@ -154,7 +154,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Die Boord", "Brandwacht", "Welgevonden", "Idas Valley"],
     isps: ["Vumatel", "Openserve", "Frogfoot", "Octotel"],
     teams: [{ sport: "PSL", clubs: ["Stellenbosch FC"] }],
-    hook: "Stellenbosch FC, every Stormers URC match and kykNET drama in 4K — installed on WhatsApp in 10 minutes.",
+    hook: "Stellenbosch FC, Stormers URC and kykNET drama folders in 4K — to confirm on WhatsApp — installed in about 10 minutes.",
   },
 ];
 

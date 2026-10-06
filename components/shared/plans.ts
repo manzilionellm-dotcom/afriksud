@@ -33,7 +33,7 @@ export const channelPreview = [
     region: "Movies & Series",
     channels: [
       "M-Net Movies Premiere", "M-Net Movies Action+", "M-Net Series",
-      "AMC", "FOX", "BBC Brit", "Disney+", "HBO Max", "Netflix mirror", "Sony Channel",
+      "AMC", "FOX", "BBC Brit", "Sony Channel",
     ],
   },
   {

@@ -90,7 +90,6 @@ export function organizationSchema({ whatsappPhone }: EntityOptions) {
     "@type": "Organization",
     "@id": ORG_ID,
     name: BRAND_NAME,
-    legalName: BRAND_NAME,
     url: SITE_URL,
     logo: {
       "@type": "ImageObject",
@@ -103,8 +102,8 @@ export function organizationSchema({ whatsappPhone }: EntityOptions) {
     },
     image: OG_URL,
     description:
-      "Mzansi Stream — IPTV with 20,000+ live channels and 100,000+ movies and series in 4K. No-contract option for South Africa and the SA diaspora.",
-    slogan: "20,000+ channels in 4K — no contract, no decoder",
+      "Mzansi Stream — IPTV with live channels, movies and series in 4K where the source supports it. Line-up confirmed on WhatsApp. No-contract option for South Africa and the SA diaspora.",
+    slogan: "Live TV in 4K — no contract, no decoder",
     // À CONFIRMER — founding year is not evidenced in this repo. Do not emit foundingDate.
     knowsAbout: KNOWS_ABOUT,
     knowsLanguage: ["en", "af", "zu", "xh", "pt", "fr"],
@@ -147,7 +146,7 @@ export function brandSchema() {
     name: BRAND_NAME,
     url: SITE_URL,
     logo: LOGO_URL,
-    slogan: "20,000+ channels in 4K — no contract, no decoder",
+    slogan: "Live TV in 4K — no contract, no decoder",
   };
 }
 
@@ -160,7 +159,7 @@ export function websiteSchema() {
     name: BRAND_NAME,
     alternateName: ["iptvmzansi.com", "Mzansi IPTV"],
     description:
-      "Premium IPTV for South Africa and the SA diaspora worldwide — 20,000+ channels in 4K with WhatsApp activation in under 10 minutes.",
+      "Premium IPTV for South Africa and the SA diaspora worldwide — live channels in 4K with WhatsApp activation.",
     inLanguage: INLANGUAGE,
     publisher: { "@id": ORG_ID },
     // No SearchAction: the site has no search results URL. A template
