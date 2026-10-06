@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: SitemapEntry[] = [];
 
   // Home — every locale variant gets its own entry, anchored on en-za as canonical.
-  entries.push(withAlternates("/", 1.0, "weekly", buildDate, hreflangFor("/")));
+  entries.push(withAlternates("/", 1.0, "weekly", undefined, hreflangFor("/")));
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     entries.push({
       url: localeUrl(locale, "/"),
