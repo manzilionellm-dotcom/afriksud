@@ -57,11 +57,8 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
-  alternates: {
-    // Per-page canonical + languages live on `app/[locale]/.../page.tsx`.
-    // Root-level metadata only carries the default-locale hint.
-    canonical: "/",
-  },
+  // No root canonical. `/` 307s to `/en-za`, and a canonical must be a
+  // 200 URL. Each locale page sets its own alternates.canonical.
   openGraph: {
     type: "website",
     locale: LOCALE_META[DEFAULT_LOCALE].ogLocale,
