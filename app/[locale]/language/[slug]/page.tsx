@@ -7,8 +7,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl } from "../../../../lib/url";
-import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
+import { localeUrl } from "../../../../lib/url";
 import {
   SA_LANGUAGE_SLUGS,
   getSALanguagePage,
@@ -27,21 +26,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const data = getSALanguagePage(slug);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
+  // Body is written in `preferredLocale` (af / zu / xh / pt-mz). That URL
+  // is the only indexable version. Other locales 301 here (next.config)
+  // and, if reached, canonicalise without joining a noindex hreflang cluster.
+  const owner = data.preferredLocale as Locale;
+  const canonical = localeUrl(owner, `/language/${slug}/`);
+  const selfCanonical = locale === owner;
   return {
     title: data.title,
     description: data.metaDescription,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/language/${slug}/`),
-      languages: hreflangFor(`/language/${slug}/`),
+      canonical,
+      languages: selfCanonical
+        ? {
+            [LOCALE_META[owner].hreflang]: canonical,
+            "x-default": canonical,
+          }
+        : undefined,
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/language/${slug}/`),
-      locale: LOCALE_META[locale as Locale].ogLocale,
+      url: canonical,
+      locale: LOCALE_META[owner].ogLocale,
       title: data.title,
       description: data.metaDescription,
     },
-    robots: robotsForProgrammatic(locale as Locale),
+    robots: selfCanonical
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
   };
 }
 
