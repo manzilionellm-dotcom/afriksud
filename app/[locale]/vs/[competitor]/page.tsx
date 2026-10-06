@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: data.meta.title,
     description: data.meta.description,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/vs/${competitor}/`),
-      languages: hreflangForProgrammatic(locale as Locale, `/vs/${competitor}/`),
+      canonical: localeUrl(locale as Locale, `/vs/${competitor}`),
+      languages: hreflangForProgrammatic(locale as Locale, `/vs/${competitor}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/vs/${competitor}/`),
+      url: localeUrl(locale as Locale, `/vs/${competitor}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: data.meta.title,
       description: data.meta.description,
@@ -70,13 +70,13 @@ export default async function VersusPage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: "Compare",
-        item: localeUrl(locale as Locale, "/vs/"),
+        item: localeUrl(locale as Locale, "/vs"),
       },
       {
         "@type": "ListItem",
         position: 3,
         name: data.name,
-        item: localeUrl(locale as Locale, `/vs/${competitor}/`),
+        item: localeUrl(locale as Locale, `/vs/${competitor}`),
       },
     ],
   };
@@ -233,7 +233,7 @@ export default async function VersusPage({ params }: Props) {
             <InternalLinkHub
               locale={locale as Locale}
               heading={`More guides — ${SITE.brand} buyer hub`}
-              exclude={[`/vs/${competitor}/`]}
+              exclude={[`/vs/${competitor}`]}
             />
 
             <section className="longformSection" id="trial">

@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/communities/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/communities/"),
+      canonical: localeUrl(locale as Locale, "/communities"),
+      languages: hreflangForProgrammatic(locale as Locale, "/communities"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/communities/"),
+      url: localeUrl(locale as Locale, "/communities"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -50,9 +50,9 @@ export default async function CommunitiesHub({ params }: Props) {
       h1="Home-country TV for foreign communities in South Africa"
       lead="If you live in South Africa and want your home-country channels alongside SuperSport, SABC and kykNET, Mzansi Stream bundles them into a single M3U feed — 15 community channel packs in their native languages."
       itemListName="Community channel guides"
-      basePath="/communities/"
+      basePath="/communities"
       items={COMMUNITIES.map((c) => ({
-        href: `/communities/${c.slug}/`,
+        href: `/communities/${c.slug}`,
         label: `${c.demonym} TV in South Africa`,
         caption: c.homeCountry,
       }))}

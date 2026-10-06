@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // One indexable URL. Non-canonical locales only emit rel=canonical
   // (no hreflang to URLs that themselves canonicalise elsewhere).
   const canonicalLocale = indexableCanonicalLocale(data.preferredCanonicalLocale);
-  const canonical = localeUrl(canonicalLocale, `/sa-abroad/${country}/`);
+  const canonical = localeUrl(canonicalLocale, `/sa-abroad/${country}`);
   const selfCanonical = locale === canonicalLocale;
 
   return {
@@ -103,7 +103,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
     },
     url: localeUrl(
       indexableCanonicalLocale(data.preferredCanonicalLocale),
-      `/sa-abroad/${country}/`
+      `/sa-abroad/${country}`
     ),
     knowsAbout: [
       "South African television",
@@ -139,13 +139,13 @@ export default async function SaAbroadCountryPage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: "SA Worldwide",
-        item: localeUrl(locale as Locale, "/sa-abroad/"),
+        item: localeUrl(locale as Locale, "/sa-abroad"),
       },
       {
         "@type": "ListItem",
         position: 3,
         name: data.name,
-        item: localeUrl(locale as Locale, `/sa-abroad/${country}/`),
+        item: localeUrl(locale as Locale, `/sa-abroad/${country}`),
       },
     ],
   };
@@ -324,42 +324,42 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             <h2>Related</h2>
             <ul className="longformList">
               <li>
-                <Link href={`/${locale}/blog/watch-springboks-from-london/`}>
+                <Link href={`/${locale}/blog/watch-springboks-from-london`}>
                   Watch the Springboks from London — diaspora rugby FAQ
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/rugby-kickoff-times-london/`}>
+                <Link href={`/${locale}/blog/rugby-kickoff-times-london`}>
                   Rugby kickoff times from London (SAST to GMT/BST)
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/iptv-uk-firestick-smart-tv-sa-sports/`}>
+                <Link href={`/${locale}/blog/iptv-uk-firestick-smart-tv-sa-sports`}>
                   Best IPTV setup in the UK — Firestick and Smart TV
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/switch-iptv-seller-abroad-whatsapp/`}>
+                <Link href={`/${locale}/blog/switch-iptv-seller-abroad-whatsapp`}>
                   Switch from a dead IPTV seller while abroad
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/iptv-uk-categories-not-licences/`}>
+                <Link href={`/${locale}/blog/iptv-uk-categories-not-licences`}>
                   IPTV categories are not broadcast licences
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/dstv-alternative/`}>
+                <Link href={`/${locale}/dstv-alternative`}>
                   DStv abroad — full 2026 guide and pricing comparison
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/watch-springboks-live-online/`}>
+                <Link href={`/${locale}/blog/watch-springboks-live-online`}>
                   Watch the Springboks live online in {data.name}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog/how-to-watch-psl-online-2026/`}>
+                <Link href={`/${locale}/blog/how-to-watch-psl-online-2026`}>
                   How to watch the PSL online in 2026
                 </Link>
               </li>

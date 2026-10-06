@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/cities/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/cities/"),
+      canonical: localeUrl(locale as Locale, "/cities"),
+      languages: hreflangForProgrammatic(locale as Locale, "/cities"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/cities/"),
+      url: localeUrl(locale as Locale, "/cities"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -50,12 +50,12 @@ export default async function CitiesHub({ params }: Props) {
       h1="IPTV in South African cities — every metro covered"
       lead="Mzansi Stream is optimised for every major SA metro and the surrounding suburbs. Pick your city for the local channel mix, ISP compatibility notes and the WhatsApp setup for your specific fibre line."
       itemListName="South African cities served"
-      basePath="/cities/"
+      basePath="/cities"
       intro={[
         "Our CDN peers at NAPAfrica with edges in Johannesburg and Cape Town, so every metro on this list streams 4K cleanly on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre and Rain 5G.",
       ]}
       items={SA_CITIES.map((c) => ({
-        href: `/cities/${c.slug}/`,
+        href: `/cities/${c.slug}`,
         label: `IPTV in ${c.name}`,
         caption: `${c.region} · ${c.population}`,
       }))}

@@ -25,7 +25,7 @@ export function PillarTemplate({
   pillar: Pillar;
   locale: Locale;
 }) {
-  const canonical = localeUrl(locale, `/${pillar.slug}/`);
+  const canonical = localeUrl(locale, `/${pillar.slug}`);
   const primaryHref = generateWhatsAppLink(
     pillar.cta.primary.message,
     "",
@@ -266,7 +266,7 @@ export function PillarTemplate({
 
           <InternalLinkHub
             locale={locale}
-            exclude={[`/${pillar.slug}/`]}
+            exclude={[`/${pillar.slug}`]}
           />
         </article>
       </LongformShell>

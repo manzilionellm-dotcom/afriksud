@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "When a friend pays the 12-month plan, you both get 1 extra month. Trial-only does not count. Same WhatsApp +44 7307 410512.",
     alternates: {
-      canonical: localeUrl(locale as Locale, "/referral/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/referral/"),
+      canonical: localeUrl(locale as Locale, "/referral"),
+      languages: hreflangForProgrammatic(locale as Locale, "/referral"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/referral/"),
+      url: localeUrl(locale as Locale, "/referral"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
     robots: robotsForProgrammatic(locale as Locale),

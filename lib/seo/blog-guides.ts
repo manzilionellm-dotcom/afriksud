@@ -173,10 +173,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Pay via EFT, SnapScan, Ozow & Capitec Pay", href: "/en-za/iptv-eft-snapscan-payment/" },
-      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa/" },
-      { label: "Switch from DStv in one weekend", href: "/en-za/blog/switch-from-dstv-to-iptv-weekend/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Pay via EFT, SnapScan, Ozow & Capitec Pay", href: "/en-za/iptv-eft-snapscan-payment" },
+      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
+      { label: "Switch from DStv in one weekend", href: "/en-za/blog/switch-from-dstv-to-iptv-weekend" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -304,10 +304,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Order IPTV on WhatsApp — walkthrough", href: "/en-za/blog/order-iptv-whatsapp-south-africa/" },
-      { label: "IPTV during load shedding", href: "/en-za/blog/iptv-load-shedding-south-africa/" },
-      { label: "TiviMate setup — South Africa", href: "/en-za/blog/tivimate-setup-south-africa-2026/" },
-      { label: "Firestick IPTV pillar", href: "/en-za/iptv-firestick-south-africa/" },
+      { label: "Order IPTV on WhatsApp — walkthrough", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
+      { label: "IPTV during load shedding", href: "/en-za/blog/iptv-load-shedding-south-africa" },
+      { label: "TiviMate setup — South Africa", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "Firestick IPTV pillar", href: "/en-za/iptv-firestick-south-africa" },
     ],
   },
   {
@@ -441,10 +441,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "TiviMate vs IPTV Smarters Pro vs GSE", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026/" },
-      { label: "Firestick IPTV South Africa — pillar", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "Firestick 4K Max vs Lite — which to buy", href: "/en-za/blog/firestick-4k-max-vs-lite-south-africa/" },
-      { label: "Why IPTV buffers — SA fix guide", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026/" },
+      { label: "TiviMate vs IPTV Smarters Pro vs GSE", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
+      { label: "Firestick IPTV South Africa — pillar", href: "/en-za/iptv-firestick-south-africa" },
+      { label: "Firestick 4K Max vs Lite — which to buy", href: "/en-za/blog/firestick-4k-max-vs-lite-south-africa" },
+      { label: "Why IPTV buffers — SA fix guide", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
     ],
   },
   {
@@ -576,10 +576,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV on LTE and 5G — fibre-down fallback", href: "/en-za/blog/iptv-on-lte-5g-south-africa/" },
-      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa/" },
-      { label: "No-buffering IPTV pillar", href: "/en-za/iptv-no-buffering-south-africa/" },
-      { label: "Wi-Fi 6 and Ethernet for IPTV", href: "/en-za/blog/iptv-wifi-6-router-south-africa/" },
+      { label: "IPTV on LTE and 5G — fibre-down fallback", href: "/en-za/blog/iptv-on-lte-5g-south-africa" },
+      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
+      { label: "No-buffering IPTV pillar", href: "/en-za/iptv-no-buffering-south-africa" },
+      { label: "Wi-Fi 6 and Ethernet for IPTV", href: "/en-za/blog/iptv-wifi-6-router-south-africa" },
     ],
   },
   {
@@ -694,10 +694,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Watch SuperSport without DStv — pillar", href: "/en-za/iptv-supersport-without-dstv/" },
-      { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026/" },
-      { label: "DStv vs IPTV — complete guide", href: "/en-za/blog/dstv-vs-iptv-2026-complete-guide/" },
-      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium/" },
+      { label: "Watch SuperSport without DStv — pillar", href: "/en-za/iptv-supersport-without-dstv" },
+      { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026" },
+      { label: "DStv vs IPTV — complete guide", href: "/en-za/blog/dstv-vs-iptv-2026-complete-guide" },
+      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium" },
     ],
   },
   {
@@ -815,10 +815,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "How to cancel DStv — step by step", href: "/en-za/blog/cancel-dstv-step-by-step-2026/" },
-      { label: "Cancel DStv 2026 — pillar", href: "/en-za/cancel-dstv-2026/" },
-      { label: "Order IPTV on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "How to cancel DStv — step by step", href: "/en-za/blog/cancel-dstv-step-by-step-2026" },
+      { label: "Cancel DStv 2026 — pillar", href: "/en-za/cancel-dstv-2026" },
+      { label: "Order IPTV on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -932,10 +932,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV during load shedding", href: "/en-za/blog/iptv-load-shedding-south-africa/" },
-      { label: "IPTV on iPhone & iPad", href: "/en-za/devices/iphone-ipad/" },
-      { label: "IPTV on Android phone", href: "/en-za/devices/android-mobile/" },
-      { label: "No-buffering pillar", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "IPTV during load shedding", href: "/en-za/blog/iptv-load-shedding-south-africa" },
+      { label: "IPTV on iPhone & iPad", href: "/en-za/devices/iphone-ipad" },
+      { label: "IPTV on Android phone", href: "/en-za/devices/android-mobile" },
+      { label: "No-buffering pillar", href: "/en-za/iptv-no-buffering-south-africa" },
     ],
   },
   {
@@ -1049,10 +1049,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Watch SuperSport without DStv", href: "/en-za/iptv-supersport-without-dstv/" },
-      { label: "Watch the Springboks live", href: "/en-za/blog/watch-springboks-live-online/" },
-      { label: "Premier League without DStv", href: "/en-za/blog/watch-premier-league-south-africa-no-dstv/" },
-      { label: "Load-shedding stream tips", href: "/en-za/blog/iptv-load-shedding-south-africa/" },
+      { label: "Watch SuperSport without DStv", href: "/en-za/iptv-supersport-without-dstv" },
+      { label: "Watch the Springboks live", href: "/en-za/blog/watch-springboks-live-online" },
+      { label: "Premier League without DStv", href: "/en-za/blog/watch-premier-league-south-africa-no-dstv" },
+      { label: "Load-shedding stream tips", href: "/en-za/blog/iptv-load-shedding-south-africa" },
     ],
   },
   {
@@ -1167,10 +1167,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "TiviMate setup — EPG and buffer", href: "/en-za/blog/tivimate-setup-south-africa-2026/" },
-      { label: "IPTV for movies & series", href: "/en-za/iptv-for-movies-and-series/" },
-      { label: "Firestick IPTV not working — EPG fixes", href: "/en-za/blog/iptv-not-working-firestick-fix/" },
-      { label: "Order on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa/" },
+      { label: "TiviMate setup — EPG and buffer", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "IPTV for movies & series", href: "/en-za/iptv-for-movies-and-series" },
+      { label: "Firestick IPTV not working — EPG fixes", href: "/en-za/blog/iptv-not-working-firestick-fix" },
+      { label: "Order on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
     ],
   },
   {
@@ -1284,10 +1284,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Firestick IPTV setup — pillar", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "TiviMate setup guide", href: "/en-za/blog/tivimate-setup-south-africa-2026/" },
-      { label: "Firestick IPTV not working — fixes", href: "/en-za/blog/iptv-not-working-firestick-fix/" },
-      { label: "Wi-Fi 6 / Ethernet for IPTV", href: "/en-za/blog/iptv-wifi-6-router-south-africa/" },
+      { label: "Firestick IPTV setup — pillar", href: "/en-za/iptv-firestick-south-africa" },
+      { label: "TiviMate setup guide", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "Firestick IPTV not working — fixes", href: "/en-za/blog/iptv-not-working-firestick-fix" },
+      { label: "Wi-Fi 6 / Ethernet for IPTV", href: "/en-za/blog/iptv-wifi-6-router-south-africa" },
     ],
   },
   {
@@ -1412,10 +1412,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Why IPTV buffers — SA troubleshooting", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026/" },
-      { label: "IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot/" },
-      { label: "No-buffering pillar", href: "/en-za/iptv-no-buffering-south-africa/" },
-      { label: "Firestick 4K Max vs Lite", href: "/en-za/blog/firestick-4k-max-vs-lite-south-africa/" },
+      { label: "Why IPTV buffers — SA troubleshooting", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
+      { label: "IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot" },
+      { label: "No-buffering pillar", href: "/en-za/iptv-no-buffering-south-africa" },
+      { label: "Firestick 4K Max vs Lite", href: "/en-za/blog/firestick-4k-max-vs-lite-south-africa" },
     ],
   },
   {
@@ -1537,10 +1537,10 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Afrikaans language landing", href: "/en-za/language/iptv-afrikaans/" },
-      { label: "IPTV on Hisense VIDAA", href: "/en-za/devices/hisense-vidaa/" },
-      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "Afrikaans language landing", href: "/af/language/iptv-afrikaans" },
+      { label: "IPTV on Hisense VIDAA", href: "/en-za/devices/hisense-vidaa" },
+      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
 ];

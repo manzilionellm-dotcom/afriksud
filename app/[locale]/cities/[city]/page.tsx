@@ -50,12 +50,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/cities/${city}/`),
-      languages: hreflangForProgrammatic(locale as Locale, `/cities/${city}/`),
+      canonical: localeUrl(locale as Locale, `/cities/${city}`),
+      languages: hreflangForProgrammatic(locale as Locale, `/cities/${city}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/cities/${city}/`),
+      url: localeUrl(locale as Locale, `/cities/${city}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: `IPTV ${data.name} 2026 — DStv Alternative in 4K`,
       description: `Stream 20,000+ channels in ${data.name} from R99/mo. SuperSport, kykNET, SABC in 4K — works on ${data.isps.slice(0, 3).join(", ")}.`,
@@ -75,7 +75,7 @@ export default async function CityPage({ params }: Props) {
     .map((slug) => getCommunity(slug))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
-  const canonical = localeUrl(locale as Locale, `/cities/${city}/`);
+  const canonical = localeUrl(locale as Locale, `/cities/${city}`);
 
   // FAQ entities ground each city page in unique, query-shaped content.
   // The questions explicitly include the city + region so they ladder
@@ -175,7 +175,7 @@ export default async function CityPage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: "Cities",
-        item: localeUrl(locale as Locale, "/cities/"),
+        item: localeUrl(locale as Locale, "/cities"),
       },
       {
         "@type": "ListItem",
@@ -327,7 +327,7 @@ export default async function CityPage({ params }: Props) {
                 <ul className="longformList">
                   {topCommunities.map((c) => (
                     <li key={c.slug}>
-                      <a href={`/${locale}/communities/${c.slug}/`}>
+                      <a href={`/${locale}/communities/${c.slug}`}>
                         {c.demonym} TV in South Africa — {c.homeCountry}{" "}
                         channels
                       </a>

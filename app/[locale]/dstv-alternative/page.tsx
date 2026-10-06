@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: pmeta.title,
     description: pmeta.description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/dstv-alternative/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/dstv-alternative/"),
+      canonical: localeUrl(locale as Locale, "/dstv-alternative"),
+      languages: hreflangForProgrammatic(locale as Locale, "/dstv-alternative"),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, "/dstv-alternative/"),
+      url: localeUrl(locale as Locale, "/dstv-alternative"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: pmeta.title,
       description: pmeta.description,
@@ -115,7 +115,7 @@ export default async function DstvAlternativePage({ params }: Props) {
       name: SITE.brand,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
     },
-    mainEntityOfPage: localeUrl(locale as Locale, "/dstv-alternative/"),
+    mainEntityOfPage: localeUrl(locale as Locale, "/dstv-alternative"),
     inLanguage: LOCALE_META[locale as Locale].hreflang,
   };
 
@@ -138,7 +138,7 @@ export default async function DstvAlternativePage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: "DStv Alternative",
-        item: localeUrl(locale as Locale, "/dstv-alternative/"),
+        item: localeUrl(locale as Locale, "/dstv-alternative"),
       },
     ],
   };
@@ -369,7 +369,7 @@ export default async function DstvAlternativePage({ params }: Props) {
                 authorisation. Mzansi Stream sources channels via licensed
                 partners, accepts traceable payment, and processes data
                 under POPIA. Read our full position on the{" "}
-                <a href={`/${locale}/legal/popia/`}>POPIA page</a>.
+                <a href={`/${locale}/legal/popia`}>POPIA page</a>.
               </p>
             </section>
 

@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/sadc/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/sadc/"),
+      canonical: localeUrl(locale as Locale, "/sadc"),
+      languages: hreflangForProgrammatic(locale as Locale, "/sadc"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/sadc/"),
+      url: localeUrl(locale as Locale, "/sadc"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -50,9 +50,9 @@ export default async function SadcHub({ params }: Props) {
       h1="IPTV across SADC — 8 country guides"
       lead="Mzansi Stream serves every SADC country with local pricing, local payment methods (EcoCash, M-Pesa, Mukuru, USD direct) and channel mixes that include the local broadcasters next to SuperSport and SABC."
       itemListName="SADC country guides"
-      basePath="/sadc/"
+      basePath="/sadc"
       items={SADC_COUNTRIES.map((c) => ({
-        href: `/sadc/${c.slug}/`,
+        href: `/sadc/${c.slug}`,
         label: `IPTV in ${c.name}`,
         caption: `${c.flag} ${c.currency.code}`,
       }))}

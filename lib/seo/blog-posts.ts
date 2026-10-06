@@ -89,8 +89,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Compare DStv Premium vs Mzansi Stream", href: "/en-za/vs/dstv-premium/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "Compare DStv Premium vs Mzansi Stream", href: "/en-za/vs/dstv-premium" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -122,8 +122,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium/" },
-      { label: "How to cancel DStv", href: "/en-za/blog/cancel-dstv-step-by-step-2026/" },
+      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium" },
+      { label: "How to cancel DStv", href: "/en-za/blog/cancel-dstv-step-by-step-2026" },
     ],
   },
   {
@@ -155,8 +155,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Mzansi Stream plans from R99/mo", href: "/en-za/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "Mzansi Stream plans from R99/mo", href: "/en-za" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -181,9 +181,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Watch the Springboks from London — diaspora FAQ", href: "/en-za/blog/watch-springboks-from-london/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
-      { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026/" },
+      { label: "Watch the Springboks from London — diaspora FAQ", href: "/en-za/blog/watch-springboks-from-london" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
+      { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026" },
     ],
   },
   {
@@ -209,8 +209,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "POPIA privacy policy", href: "/en-za/legal/popia/" },
-      { label: "About Mzansi Stream", href: "/en-za/legal/about/" },
+      { label: "POPIA privacy policy", href: "/en-za/legal/popia" },
+      { label: "About Mzansi Stream", href: "/en-za/legal/about" },
     ],
   },
   {
@@ -234,8 +234,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -259,8 +259,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Switch to Mzansi Stream from R99/mo", href: "/en-za/" },
-      { label: "DStv vs Mzansi Stream comparison", href: "/en-za/vs/dstv-premium/" },
+      { label: "Switch to Mzansi Stream from R99/mo", href: "/en-za" },
+      { label: "DStv vs Mzansi Stream comparison", href: "/en-za/vs/dstv-premium" },
     ],
   },
   {
@@ -285,8 +285,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV Zimbabwe — order now", href: "/en-za/sadc/zimbabwe/" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative/" },
+      { label: "IPTV Zimbabwe — order now", href: "/en-za/sadc/zimbabwe" },
+      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -310,8 +310,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV Moçambique — encomendar", href: "/pt-mz/sadc/mozambique/" },
-      { label: "Alternativa DStv", href: "/en-za/dstv-alternative/" },
+      { label: "IPTV Moçambique — encomendar", href: "/pt-mz/sadc/mozambique" },
+      { label: "Alternativa DStv", href: "/en-za/dstv-alternative" },
     ],
   },
   {
@@ -337,8 +337,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Mzansi Stream vs DStv Premium — full comparison", href: "/en-za/vs/dstv-premium/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Mzansi Stream vs DStv Premium — full comparison", href: "/en-za/vs/dstv-premium" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -401,9 +401,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
-      { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "IPTV buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa" },
+      { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -472,10 +472,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
-      { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa/" },
-      { label: "IPTV buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
+      { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa" },
+      { label: "IPTV buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -527,10 +527,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "IPTV Firestick setup — full guide", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "IPTV for Samsung Smart TV (Tizen)", href: "/en-za/iptv-samsung-smart-tv/" },
-      { label: "4K IPTV in South Africa", href: "/en-za/4k-iptv-south-africa/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "IPTV Firestick setup — full guide", href: "/en-za/iptv-firestick-south-africa" },
+      { label: "IPTV for Samsung Smart TV (Tizen)", href: "/en-za/iptv-samsung-smart-tv" },
+      { label: "4K IPTV in South Africa", href: "/en-za/4k-iptv-south-africa" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -580,10 +580,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa/" },
-      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
-      { label: "Privacy / POPIA policy", href: "/en-za/legal/popia/" },
+      { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa" },
+      { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Privacy / POPIA policy", href: "/en-za/legal/popia" },
     ],
   },
   {
@@ -640,10 +640,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa/" },
-      { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026/" },
-      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa" },
+      { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
+      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
   {
@@ -692,10 +692,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv/" },
-      { label: "LG webOS IPTV setup", href: "/en-za/devices/lg-webos/" },
-      { label: "Hisense VIDAA IPTV setup", href: "/en-za/devices/hisense-vidaa/" },
-      { label: "IPTV buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa/" },
+      { label: "Samsung Smart TV IPTV — Tizen guide", href: "/en-za/iptv-samsung-smart-tv" },
+      { label: "LG webOS IPTV setup", href: "/en-za/devices/lg-webos" },
+      { label: "Hisense VIDAA IPTV setup", href: "/en-za/devices/hisense-vidaa" },
+      { label: "IPTV buffering pillar guide", href: "/en-za/iptv-no-buffering-south-africa" },
     ],
   },
   {
@@ -733,10 +733,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa/" },
-      { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026/" },
-      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative/" },
-      { label: "Pricing — from R99/mo", href: "/en-za/" },
+      { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa" },
+      { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
+      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative" },
+      { label: "Pricing — from R99/mo", href: "/en-za" },
     ],
   },
 ];
