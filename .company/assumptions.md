@@ -66,3 +66,6 @@
 - **A38.** Prix publiés (R199 / R449 / R699 / R1,199, R99, R99.92 dérivé) et WhatsApp `447307410512` / `+44 7307 410512` inchangés. Numéro DStv `060 060 3788` inchangé (tiers, pas l'exploitant).
 - **A39.** Année de fondation, `@iptvmzansi`, licences de chaînes, TVA, « 1,200+ », « 50+ pays », « 99.9% / 99.95% », « <15ms » mesuré, « 200 foyers » : pas de preuve dans le repo. Retirés du visible. `À CONFIRMER` seulement en commentaire source, jamais affiché comme un fait.
 - **A40.** `lastmod` sans date de contenu est omis. Inventer une date stable serait une fabrication. Les `dateModified` déjà écrits dans les fichiers de contenu restent.
+
+## run-015 (FAB WhatsApp SSR, PR #37)
+- **A41.** (numérotée A36 dans la PR #37) FAB SSR unique dans `app/[locale]/layout.tsx`. Numéro figé `447307410512` (pas d'env). Prefill neutre par langue : toutes les locales `en-*` partagent l'anglais ; `pt-mz` prend le portugais. L'override WaPrefill du blog London reste sur les CTA de cette page, pas sur le FAB (mission 04/10 : message neutre, 0 essai). Accueil mesuré = `/en-za`. Page `/fr/...` mesurée = `/fr/devices`.

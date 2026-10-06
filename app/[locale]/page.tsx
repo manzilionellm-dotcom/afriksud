@@ -38,7 +38,6 @@ import { ReviewsSection } from "../../components/client/ReviewsSection";
 import { ChannelExplorer } from "../../components/client/ChannelExplorer";
 import { CountriesSection } from "../../components/client/CountriesSection";
 import { InternationalSection } from "../../components/client/InternationalSection";
-import { WhatsAppFab } from "../../components/client/WhatsAppFab";
 import { StickyBottomCta } from "../../components/client/StickyBottomCta";
 import { PopiaConsentBanner } from "../../components/client/PopiaConsentBanner";
 import { SkipLink } from "../../components/client/SkipLink";
@@ -261,7 +260,6 @@ export default async function LocaleHome({ params }: Props) {
 
         <FooterSection />
 
-        <WhatsAppFab />
         <StickyBottomCta />
         <BottomTabBar />
         <PopiaConsentBanner />

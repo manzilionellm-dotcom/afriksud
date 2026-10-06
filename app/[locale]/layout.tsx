@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
 import { hreflangFor, localeUrl } from "../../lib/url";
+import { WhatsAppFabLink } from "../../components/seo/WhatsAppFabLink";
 
 type Props = {
   children: React.ReactNode;
@@ -42,5 +43,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <WhatsAppFabLink locale={locale as Locale} />
+    </>
+  );
 }
