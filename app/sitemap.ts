@@ -17,25 +17,24 @@ import { DEVICES, DEVICE_SLUGS } from "../lib/seo/devices";
 
 type SitemapEntry = MetadataRoute.Sitemap[number];
 
-// Build-time fallback for surfaces that don't have a per-resource
-// dateModified. Stable so per-build sitemaps don't churn for crawlers.
-const buildDate = new Date();
+// lastmod is emitted only when the content file carries a real date.
+// A build-time `new Date()` made every deploy look like a content change.
 
-function parseDate(d: string | undefined): Date {
-  if (!d) return buildDate;
+function parseDate(d: string | undefined): Date | undefined {
+  if (!d) return undefined;
   const parsed = new Date(d);
-  return isNaN(parsed.getTime()) ? buildDate : parsed;
+  return isNaN(parsed.getTime()) ? undefined : parsed;
 }
 
 function withAlternates(
   path: string,
   priority: number,
   changeFrequency: SitemapEntry["changeFrequency"] = "weekly",
-  lastModified: Date = buildDate
+  lastModified?: Date
 ): SitemapEntry {
   return {
     url: localeUrl(DEFAULT_LOCALE, path),
-    lastModified,
+    ...(lastModified ? { lastModified } : {}),
     changeFrequency,
     priority,
     alternates: { languages: hreflangFor(path) },
@@ -56,7 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     entries.push({
       url: localeUrl(locale, "/"),
-      lastModified: buildDate,
       changeFrequency: "weekly",
       priority: 0.9,
       alternates: { languages: hreflangFor("/") },

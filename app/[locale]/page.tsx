@@ -210,8 +210,6 @@ export default async function LocaleHome({ params }: Props) {
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     primaryImageOfPage: `${SITE.domain}/og-image.jpg`,
-    datePublished: "2024-09-01",
-    dateModified: new Date().toISOString().slice(0, 10),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".heroLead", ".trustStrip"],
