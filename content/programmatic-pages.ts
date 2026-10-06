@@ -109,7 +109,7 @@ export function sportPageData(slug: string) {
       whatIncluded: `You get ${sport.teams}. Every match ${sport.matchday}, live, in English commentary, in 4K UHD.`,
       faqs: [
         { q: `Can I watch ${sport.name} on any device?`, a: `Yes. Works on Firestick, Smart TV (Samsung, LG, Sony), Android TV, iPhone, iPad, Android, MAG Box and PC.` },
-        { q: `Is it legal to watch ${sport.name} via IPTV?`, a: `IPTV itself is a legal technology. We provide the M3U link and the responsibility for use lies with each user, the same as any other media player.` },
+        { q: `Is it legal to watch ${sport.name} via IPTV?`, a: `This page is not legal advice and makes no legality or licence claim. Rights and blackouts still apply; test the ${sport.name} fixtures you need on the 24-hour trial.` },
         { q: `Is there buffering during big matches?`, a: `No. Our servers are sized for the peak loads of PSL Soweto Derby and Premier League fixtures. Stable 4K even during finals.` },
       ],
     },

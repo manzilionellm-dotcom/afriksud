@@ -68,7 +68,7 @@ export const DEVICES: Pillar[] = [
           },
           {
             title: "Wait for the channel list",
-            text: "VIDAA takes 30-60 seconds to load the 20,000+ channel list the first time. Subsequent launches are <5 seconds.",
+            text: "VIDAA can take a while to load the channel list the first time. Later launches are usually faster.",
           },
           {
             title: "Set the EPG",

@@ -169,7 +169,7 @@ export function PillarTemplate({
             answer={pillar.lead}
             keyFacts={
               pillar.trustLine
-                ? [pillar.trustLine, "From R99/month. 24-hour free trial, no credit card. Activated on WhatsApp in 10 minutes."]
+                ? [pillar.trustLine, "From R99/month. 24-hour free trial, no credit card. Activated on WhatsApp."]
                 : undefined
             }
           />
@@ -229,15 +229,15 @@ export function PillarTemplate({
             locale={locale}
             refTag={`Pillar-${pillar.slug}`}
             heading="Pricing — from R99/month, no contract"
-            sub="Pick a plan, message us on WhatsApp, and we activate within 10 minutes. 24-hour free trial available before you pay."
+            sub="Pick a plan, message us on WhatsApp, and we activate it there. 24-hour free trial available before you pay."
           />
 
           <section className="longformSection" id="next-step">
             <h2>Ready to start? Free 24h trial — no card</h2>
             <p>
               Message {SITE.brand} on WhatsApp and we activate your free
-              24-hour trial within 10 minutes. Full 20,000+ channel lineup,
-              4K UHD, EPG, support in English — no credit card required.
+              24-hour trial. Test the channels you need in 4K UHD where the
+              source supports it, EPG, support in English — no credit card required.
             </p>
             <div className="ctaRow">
               <a

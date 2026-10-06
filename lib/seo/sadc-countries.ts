@@ -84,12 +84,12 @@ export const SADC_COUNTRIES: SadcCountry[] = [
       { months: 12, price: "US$66", tag: "Best value" },
     ],
     hero: {
-      h1: "Best IPTV Zimbabwe 2026 — DStv channels, SuperSport & 20,000+ live in 4K",
-      lead: "Pay in USD, EcoCash, OneMoney, ZIPIT or Innbucks. Get every SuperSport feed, the full DStv Africa line-up, ZBC TV and 20,000+ international channels in 4K — without a decoder, dish or 24-month contract. Activated on WhatsApp in 10 minutes.",
+      h1: "Best IPTV Zimbabwe 2026 — DStv-style channels and SuperSport in 4K",
+      lead: "Pay in USD, EcoCash, OneMoney, ZIPIT or Innbucks. SuperSport-style, DStv Africa-style, ZBC TV and international folders in 4K — line-up to confirm on WhatsApp — without a decoder, dish or 24-month contract. Activated on WhatsApp.",
     },
     meta: {
       title: "IPTV Zimbabwe 2026 — DStv Alternative, SuperSport in 4K",
-      description: "Stream 20,000+ live channels in Zimbabwe — DStv, SuperSport, ZBC TV in 4K. Pay in USD or EcoCash. From US$11/mo, no decoder, no contract.",
+      description: "IPTV in Zimbabwe — DStv-style, SuperSport and ZBC TV folders in 4K. Pay in USD or EcoCash. From US$11/mo, no decoder, no contract.",
     },
     dstvNote: "DStv Premium Africa runs US$96/mo in Zimbabwe — Mzansi Stream covers the same sport and channel mix for a fraction of that.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_ZW",
@@ -112,12 +112,12 @@ export const SADC_COUNTRIES: SadcCountry[] = [
       { months: 12, price: "P900", tag: "Best value" },
     ],
     hero: {
-      h1: "Best IPTV Botswana 2026 — SuperSport, DStv channels & 20,000+ live",
-      lead: "Stream every SuperSport feed, the full DStv Africa line-up, BTV+ and 20,000+ international channels in 4K. Pay with MyZaka, Orange Money, USD or card. Activated in 10 minutes — no decoder, no contract.",
+      h1: "Best IPTV Botswana 2026 — SuperSport and DStv-style channels",
+      lead: "SuperSport-style, DStv Africa-style, BTV+ and international folders in 4K — line-up to confirm on WhatsApp. Pay with MyZaka, Orange Money, USD or card. Activated on WhatsApp — no decoder, no contract.",
     },
     meta: {
       title: "IPTV Botswana 2026 — DStv Alternative, SuperSport 4K",
-      description: "Best IPTV Botswana — 20,000+ channels, SuperSport in 4K, BTV+ and DStv coverage. MyZaka, Orange Money, USD. From P150/mo, no decoder.",
+      description: "Best IPTV Botswana — SuperSport in 4K, BTV+ and DStv-style folders. MyZaka, Orange Money, USD. From P150/mo, no decoder.",
     },
     dstvNote: "DStv Compact+ Botswana retails north of P900/mo — Mzansi Stream starts at P150.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_BW",
@@ -141,11 +141,11 @@ export const SADC_COUNTRIES: SadcCountry[] = [
     ],
     hero: {
       h1: "Best IPTV Namibia 2026 — DStv alternative, SuperSport, NBC TV in 4K",
-      lead: "20,000+ live channels in 4K including every SuperSport feed, NBC TV, kykNET and the full SABC line-up. Pay in NAD, ZAR (parity) or USD. Activated on WhatsApp in 10 minutes — no decoder, no contract.",
+      lead: "Live channels in 4K — SuperSport-style, NBC TV, kykNET and SABC folders, line-up to confirm on WhatsApp. Pay in NAD, ZAR (parity) or USD. Activated on WhatsApp — no decoder, no contract.",
     },
     meta: {
       title: "IPTV Namibia 2026 — DStv Alternative, SuperSport 4K",
-      description: "Stream 20,000+ channels in Namibia — SuperSport, NBC TV, kykNET, SABC in 4K. Pay in NAD, ZAR or USD. From N$199/mo, no decoder.",
+      description: "IPTV in Namibia — SuperSport, NBC TV, kykNET, SABC folders in 4K. Pay in NAD, ZAR or USD. From N$199/mo, no decoder.",
     },
     dstvNote: "DStv Premium Namibia is over N$1,000/mo — Mzansi Stream delivers the same sport in 4K from N$199.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_NA",
@@ -168,12 +168,12 @@ export const SADC_COUNTRIES: SadcCountry[] = [
       { months: 12, price: "4.200 MT", tag: "Melhor valor" },
     ],
     hero: {
-      h1: "Melhor IPTV Moçambique 2026 — DStv, SuperSport, 20.000+ canais em 4K",
-      lead: "20.000+ canais em 4K nativo, futebol ao vivo sem cortes, filmes e séries em segundos. SuperSport, Premier League, TVM, RTP África, SIC — tudo num só pacote. Pague com M-Pesa, mKesh, USD ou cartão. Sem fidelização, sem descodificador.",
+      h1: "Melhor IPTV Moçambique 2026 — DStv, SuperSport e canais em 4K",
+      lead: "Canais em 4K, futebol ao vivo, filmes e séries. SuperSport, Premier League, TVM, RTP África, SIC — confirme a grelha no WhatsApp. Pague com M-Pesa, mKesh, USD ou cartão. Sem fidelização, sem descodificador.",
     },
     meta: {
       title: "IPTV Moçambique 2026 — Alternativa DStv em 4K",
-      description: "Stream 20.000+ canais em Moçambique — DStv, SuperSport, TVM em 4K. Pague com M-Pesa, mKesh ou USD. Desde 700 MT/mês.",
+      description: "IPTV em Moçambique — DStv, SuperSport, TVM em 4K. Pague com M-Pesa, mKesh ou USD. Desde 700 MT/mês.",
     },
     dstvNote: "DStv Compact+ Moçambique custa cerca de 4.000 MT/mês — Mzansi Stream parte de 700 MT.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_MZ",
@@ -197,11 +197,11 @@ export const SADC_COUNTRIES: SadcCountry[] = [
     ],
     hero: {
       h1: "Best IPTV Lesotho 2026 — SuperSport, kykNET, SABC in 4K",
-      lead: "20,000+ live channels in 4K — SuperSport PSL, Premier League, kykNET, SABC and LTV. Pay in LSL, ZAR (parity), or via M-Pesa and EcoCash. Activated in 10 minutes on WhatsApp.",
+      lead: "Live channels in 4K — SuperSport PSL, Premier League, kykNET, SABC and LTV folders, line-up to confirm on WhatsApp. Pay in LSL, ZAR (parity), or via M-Pesa and EcoCash. Activated on WhatsApp.",
     },
     meta: {
       title: "IPTV Lesotho 2026 — DStv Alternative, SuperSport 4K",
-      description: "Best IPTV Lesotho — 20,000+ channels, SuperSport, SABC, LTV in 4K. Pay with M-Pesa, EcoCash or ZAR. From M199/mo.",
+      description: "Best IPTV Lesotho — SuperSport, SABC, LTV in 4K. Pay with M-Pesa, EcoCash or ZAR. From M199/mo.",
     },
     dstvNote: "DStv Premium in Lesotho retails for over M1,000/mo — Mzansi Stream covers the same sport from M199.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_LS",
@@ -225,11 +225,11 @@ export const SADC_COUNTRIES: SadcCountry[] = [
     ],
     hero: {
       h1: "Best IPTV Eswatini 2026 — SuperSport, kykNET, SABC in 4K",
-      lead: "20,000+ live channels in 4K — every SuperSport feed, the PSL, Premier League, kykNET, SABC and Eswatini TV. Pay with MTN MoMo, EFT or ZAR. Activated in 10 minutes on WhatsApp.",
+      lead: "Live channels in 4K — SuperSport-style, PSL, Premier League, kykNET, SABC and Eswatini TV folders, line-up to confirm on WhatsApp. Pay with MTN MoMo, EFT or ZAR. Activated on WhatsApp.",
     },
     meta: {
       title: "IPTV Eswatini 2026 — DStv Alternative, SuperSport 4K",
-      description: "Best IPTV Eswatini — 20,000+ channels, SuperSport, Eswatini TV, SABC in 4K. MTN MoMo, ZAR. From E199/mo.",
+      description: "Best IPTV Eswatini — SuperSport, Eswatini TV, SABC in 4K. MTN MoMo, ZAR. From E199/mo.",
     },
     dstvNote: "DStv Premium Eswatini exceeds E1,000/mo — Mzansi Stream delivers the same channels from E199.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_SZ",
@@ -252,12 +252,12 @@ export const SADC_COUNTRIES: SadcCountry[] = [
       { months: 12, price: "K1,560", tag: "Best value" },
     ],
     hero: {
-      h1: "Best IPTV Zambia 2026 — SuperSport, ZNBC, 20,000+ channels in 4K",
-      lead: "20,000+ live channels in 4K — every SuperSport feed, ZNBC TV1/TV2/TV3, MUVI TV and the DStv Africa line-up. Pay with MTN MoMo, Airtel Money or USD. Activated in 10 minutes on WhatsApp.",
+      h1: "Best IPTV Zambia 2026 — SuperSport and ZNBC in 4K",
+      lead: "Live channels in 4K — SuperSport-style, ZNBC TV1/TV2/TV3, MUVI TV and DStv Africa-style folders, line-up to confirm on WhatsApp. Pay with MTN MoMo, Airtel Money or USD. Activated on WhatsApp.",
     },
     meta: {
       title: "IPTV Zambia 2026 — DStv Alternative, SuperSport 4K",
-      description: "Best IPTV Zambia — 20,000+ channels, SuperSport, ZNBC in 4K. MTN MoMo, Airtel Money, USD. From K260/mo, no decoder.",
+      description: "Best IPTV Zambia — SuperSport, ZNBC in 4K. MTN MoMo, Airtel Money, USD. From K260/mo, no decoder.",
     },
     dstvNote: "DStv Premium Zambia is well over K1,500/mo — Mzansi Stream from K260.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_ZM",
@@ -281,11 +281,11 @@ export const SADC_COUNTRIES: SadcCountry[] = [
     ],
     hero: {
       h1: "Best IPTV Malawi 2026 — SuperSport, MBC, Times TV in 4K",
-      lead: "20,000+ live channels in 4K — every SuperSport feed, MBC, Times TV, Zodiak TV and the DStv Africa line-up. Pay with TNM Mpamba, Airtel Money or USD. Activated in 10 minutes on WhatsApp.",
+      lead: "Live channels in 4K — SuperSport-style, MBC, Times TV, Zodiak TV and DStv Africa-style folders, line-up to confirm on WhatsApp. Pay with TNM Mpamba, Airtel Money or USD. Activated on WhatsApp.",
     },
     meta: {
       title: "IPTV Malawi 2026 — DStv Alternative, SuperSport 4K",
-      description: "Best IPTV Malawi — 20,000+ channels, SuperSport, MBC, Times TV in 4K. TNM Mpamba, Airtel Money, USD. From MK19,000/mo.",
+      description: "Best IPTV Malawi — SuperSport, MBC, Times TV in 4K. TNM Mpamba, Airtel Money, USD. From MK19,000/mo.",
     },
     dstvNote: "DStv Premium Malawi is over MK100,000/mo — Mzansi Stream from MK19,000.",
     whatsappEnvKey: "NEXT_PUBLIC_WHATSAPP_MW",

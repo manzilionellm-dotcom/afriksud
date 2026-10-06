@@ -56,23 +56,23 @@ export type BlogPost = {
 const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-watch-psl-online-2026",
-    title: "How to watch PSL online in 2026 — every match, no DStv",
-    metaDescription: "Stream every DStv Premiership match in 4K without a DStv subscription — SuperSport PSL feeds via Mzansi Stream, from R99/mo.",
+    title: "How to watch PSL online in 2026 — no DStv decoder",
+    metaDescription: "DStv Premiership without a DStv subscription — SuperSport PSL folders via Mzansi Stream in 4K, matches to confirm on WhatsApp, from R99/mo.",
     datePublished: "2026-01-20",
-    lead: "The DStv Premiership runs from August through May with 240+ fixtures across the season. Here's how to watch every match online in 2026 without a DStv decoder, a 24-month contract, or paying R899/month for Premium.",
+    lead: "The DStv Premiership runs from August through May with 240+ fixtures across the season. Here's how to watch PSL online in 2026 without a DStv decoder, a 24-month contract, or paying R899/month for Premium.",
     sections: [
       {
         h2: "Why so many fans are dropping DStv",
         body: [
           "DStv Premium is currently R899/month — R10,788 a year. With load-shedding, decoder failures and inflation, more PSL fans are looking for streaming that works on the devices they already own.",
-          "Mzansi Stream carries every SuperSport feed — PSL, Variety 1-4, Rugby, Cricket — in 4K. No decoder, no installer, no 24-month contract.",
+          "Mzansi Stream lists SuperSport-style folders — PSL, Variety, Rugby, Cricket — in 4K where the source supports it; matches to confirm on WhatsApp. No decoder, no installer, no 24-month contract.",
         ],
       },
       {
-        h2: "Every PSL feed you need",
+        h2: "The PSL feeds people ask for",
         body: [
-          "SuperSport PSL is the headline channel for every Premiership match. Variety 1-4 catches every cup, mid-week game and Nedbank Cup fixture. All of them stream in 4K on Mzansi Stream.",
-          "Add SuperSport Rugby and Cricket and you've got the full SA sport calendar in one subscription.",
+          "SuperSport PSL is the headline Premiership channel; Variety picks up cup, mid-week and Nedbank Cup fixtures. Which of these are in the Mzansi Stream line-up is to confirm on WhatsApp — test a match on the 24-hour trial.",
+          "Rugby and Cricket folders sit in the same subscription — fixtures to confirm on WhatsApp.",
         ],
       },
       {
@@ -82,9 +82,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "How to set it up in 10 minutes",
+        h2: "How to set it up",
         body: [
-          "Message us on WhatsApp, pick a plan (1 / 3 / 6 / 12 months), pay via EFT, SnapScan, Ozow or card, and we send the M3U link plus a one-page setup guide for your specific device. Usually live within 10 minutes.",
+          "Message us on WhatsApp, pick a plan (1 / 3 / 6 / 12 months), pay via EFT, SnapScan, Ozow or card, and we send the M3U link plus a one-page setup guide for your specific device.",
         ],
       },
     ],
@@ -111,7 +111,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "Sport coverage compared",
         body: [
           "DStv Premium carries every SuperSport feed plus Premier League. Compact Plus partially covers Premier League and URC. Compact skips the Premier League entirely.",
-          "Mzansi Stream carries every SuperSport feed plus Premier League on every plan, in 4K.",
+          "Mzansi Stream lists SuperSport-style and Premier League folders on every plan, in 4K where the source supports it — matches to confirm on WhatsApp.",
         ],
       },
       {
@@ -161,10 +161,10 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "watch-springboks-live-online",
-    title: "Watch the Springboks live online — every Test in 2026",
-    metaDescription: "Stream every Springbok Test and URC fixture in 4K — SuperSport Rugby feeds via Mzansi Stream, from R99/mo. No DStv required.",
+    title: "Watch the Springboks live online in 2026",
+    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. From R99/mo. No DStv required.",
     datePublished: "2026-01-26",
-    lead: "Every Springbok Test, Rugby Championship fixture, URC, Currie Cup and Six Nations match is on SuperSport. Here's how to stream them all in 4K without DStv.",
+    lead: "Springbok Tests, Rugby Championship, URC, Currie Cup and Six Nations matches are broadcast on SuperSport in SA. Here's how to check what plays on Mzansi Stream in 4K without DStv.",
     sections: [
       {
         h2: "Which channels carry the Boks",
@@ -176,7 +176,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Streaming setup",
         body: [
-          "Order any Mzansi Stream plan, drop the M3U link into TiviMate or IPTV Smarters, and SuperSport Rugby lands in your channel list within 10 minutes.",
+          "Order any Mzansi Stream plan, drop the M3U link into TiviMate or IPTV Smarters, and check the SuperSport Rugby folder in your channel list — fixtures to confirm on WhatsApp.",
         ],
       },
     ],
@@ -196,7 +196,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "What the law actually says",
         body: [
-          "Streaming TV in South Africa is not illegal per se. What is illegal is distributing copyrighted content without authorisation. The Films and Publications Act and the Copyright Act govern what providers can and can't carry.",
+          "This page is not legal advice and makes no legality claim. The copyright issue is distributing copyrighted content without authorisation. The Films and Publications Act and the Copyright Act govern what providers can and can't carry.",
           "A reputable IPTV provider sources its channels via licensed CDNs, transparent middleware partners, and pays for the rights they redistribute.",
         ],
       },
@@ -216,9 +216,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "best-iptv-for-vumatel-openserve",
     title: "Best IPTV for Vumatel, Openserve and Frogfoot in 2026",
-    metaDescription: "Which IPTV providers work best on Vumatel, Openserve and Frogfoot fibre in South Africa in 2026 — 4K stability, latency, peak-hour performance.",
+    metaDescription: "How to judge IPTV on Vumatel, Openserve and Frogfoot fibre in South Africa in 2026 — peering, peak hours and what to test on a trial.",
     datePublished: "2026-01-30",
-    lead: "Vumatel, Openserve and Frogfoot are the three biggest SA fibre networks. Here's how to pick an IPTV provider that streams 4K without buffering on each of them.",
+    lead: "Vumatel, Openserve and Frogfoot are the three biggest SA fibre networks. Here's how to judge an IPTV provider and test 4K on each of them.",
     sections: [
       {
         h2: "What matters on SA fibre",
@@ -227,9 +227,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "How Mzansi Stream peers",
+        h2: "How to test Mzansi Stream on your line",
         body: [
-          "We use local CDN edges in JNB and CPT, peered at NAPAfrica. That puts our 4K bitrate within ~5ms of every major SA fibre ISP.",
+          "This page does not publish a measured latency. Request the 24-hour trial and test a 4K channel during peak hours (18:00-22:00) on your own fibre line.",
         ],
       },
     ],
@@ -346,7 +346,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     title: "Why is my IPTV buffering? The 2026 SA troubleshooting guide",
     metaDescription: "Why your IPTV buffers in South Africa in 2026 — every cause ranked by likelihood, every fix, and how to vet a provider before you pay.",
     datePublished: "2026-03-08",
-    lead: "If your IPTV stream buffers during the PSL or freezes mid-Premier League match, the cause is almost never your fibre line. This guide ranks every realistic cause in order of likelihood on a 2026 South African fibre setup, with the fix for each.",
+    lead: "If your IPTV stream buffers during the PSL or freezes mid-Premier League match, the cause is often not your fibre line. This guide ranks every realistic cause in order of likelihood on a 2026 South African fibre setup, with the fix for each.",
     sections: [
       {
         h2: "First — is it really buffering, or is it freezing?",
@@ -359,7 +359,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "Cause #1 — the provider's CDN routes overseas",
         body: [
           "This is the single biggest cause of South African IPTV buffering in 2026. If your provider's servers sit in Frankfurt, Amsterdam or the US, every chunk of video travels 180-220ms one-way to your TV. The player's buffer is 2-4 seconds. The moment the SA fibre has a micro-blip (and they all do), the buffer empties before the next chunk arrives.",
-          "Fix: pick a provider with NAPAfrica peering. Mzansi Stream's CDN edges sit at NAPAfrica in Johannesburg and Cape Town — the same exchange Vumatel, Openserve, Frogfoot and Octotel peer at. End-to-end latency to your TV is <15ms.",
+          "Fix: ask the provider how it routes to SA and test on your own line. This page does not publish a measured latency for Mzansi Stream — use the 24-hour trial.",
         ],
       },
       {
@@ -373,7 +373,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "Cause #3 — your player buffer is too small for 4K",
         body: [
           "TiviMate ships with a 2-second buffer by default. Fine for 1080p. Not enough headroom for 4K SuperSport when a Premier League corner kick spikes the bitrate.",
-          "Fix: TiviMate → Settings → Playback → Buffer Size → 8 seconds. IPTV Smarters → Settings → Player → Time-shift Buffer → 6-10 seconds. This single change eliminates 95% of micro-re-buffers without noticeable channel-change delay.",
+          "Fix: TiviMate → Settings → Playback → Buffer Size → 8 seconds. IPTV Smarters → Settings → Player → Time-shift Buffer → 6-10 seconds. This change often reduces micro-re-buffers, at the cost of slightly slower channel changes.",
         ],
       },
       {
@@ -396,7 +396,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
           "Ask: 'Do you peer at NAPAfrica?' Vague answer = walk away.",
           "Demand a 24-hour free trial of the full channel pack. If the trial is restricted, the production feed is probably worse.",
           "Test on a Saturday during a SuperSport PSL fixture and a Premier League fixture. Peak load reveals every weakness.",
-          "Mzansi Stream's free 24h trial unlocks the full 20,000+ channel pack. No card. Request on WhatsApp.",
+          "Mzansi Stream's free 24h trial uses the same channel pack as the paid plans. No card. Request on WhatsApp.",
         ],
       },
     ],
@@ -417,7 +417,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "1. Does the provider have its own CDN?",
         body: [
           "Re-sellers buy a stream feed from someone upstream and re-sell it. Their stability depends entirely on the upstream provider's infrastructure — which they have zero control over.",
-          "A real IPTV business operates its own CDN edges. Mzansi Stream peers at NAPAfrica in Johannesburg and Cape Town. End-to-end latency to your TV is <15ms.",
+          "Ask how the provider routes streams to SA and test on your own line. This page does not publish a latency figure for Mzansi Stream.",
         ],
       },
       {
@@ -436,7 +436,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "4. Is there real support — not just a Telegram bot?",
         body: [
-          "Your stream will eventually have an issue (DNS hiccup, EPG resync, channel re-shuffle after a broadcaster contract change). The question is whether the provider responds within minutes or whether you're ghosted on a Saturday afternoon.",
+          "Your stream will eventually have an issue (DNS hiccup, EPG resync, channel re-shuffle after a broadcaster contract change). The question is whether the provider responds or whether you're ghosted on a Saturday afternoon.",
           "Test pre-purchase: message support during peak hours (8pm Saturday). If you don't get a reply within 30 minutes, that's the SLA you're buying.",
         ],
       },
@@ -536,39 +536,39 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "is-mzansi-stream-legit-2026",
     title: "Is Mzansi Stream legit? An honest 2026 answer",
-    metaDescription: "Is Mzansi Stream a legitimate IPTV service in South Africa? Honest 2026 answer covering company status, POPIA compliance, payment safety and refund policy.",
+    metaDescription: "Is Mzansi Stream a legitimate IPTV service in South Africa? What the site does and does not state, payment safety and the refund policy.",
     datePublished: "2026-03-14",
     lead: "Every prospective customer Googles 'is Mzansi Stream legit' before they pay. Here's the honest 2026 answer — what we are, what we're not, how to verify us, and how the 24h free trial removes all upfront risk.",
     sections: [
       {
         h2: "What Mzansi Stream is",
         body: [
-          "Mzansi Stream is a streaming service operated as a registered South African business entity that aggregates 20,000+ live channels and a 100,000+ title VOD catalogue, delivered via a NAPAfrica-peered CDN to customers in SA, the SADC region and the SA diaspora worldwide.",
-          "The service has been live under the iptvmzansi.com brand since 2024, operates a published Terms & Conditions, a POPIA-compliant privacy policy with a named Information Officer, a refund / satisfaction policy, and human WhatsApp support 7 days a week.",
+          "Mzansi Stream is an IPTV streaming service for customers in SA, the SADC region and the SA diaspora worldwide, with live channels and VOD — line-up to confirm on WhatsApp.",
+          "The site publishes a refund / satisfaction policy (7 days) and WhatsApp support. The legal entity, CIPC registration and Information Officer fields on the legal pages are still placeholders, so this page does not state them as facts.",
         ],
       },
       {
         h2: "How to verify us before paying",
         body: [
-          "Read the Terms & Conditions and Privacy Policy on the site. Both list the legal entity, the contact details and the dispute-resolution process.",
-          "Request the free 24-hour trial. We send the M3U link on WhatsApp within minutes. No card. Use the full channel pack for 24 hours.",
+          "Read the refund policy on the site. Ask on WhatsApp for any business detail you need before paying.",
+          "Request the free 24-hour trial. We send the M3U link on WhatsApp. No card. Use the same channel pack as the paid plans for 24 hours.",
           "Pay only after the trial, only via a local SA payment method (EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco). All of these give you fraud / chargeback protection that anonymous crypto-only sellers don't.",
-          "Read our pages on POPIA compliance, refund policy and Information Officer — all published under /legal/.",
+          "Read the refund policy under /legal/refund/.",
         ],
       },
       {
         h2: "What Mzansi Stream is not",
         body: [
           "Not a content broadcaster. The channels you watch are sourced from existing broadcaster feeds — we don't produce SuperSport or kykNET content.",
-          "Not a torrent service or pirate site. The streams are delivered over standard HLS / M3U via our own CDN infrastructure.",
-          "Not a flea-market re-seller. We operate as a legal entity, with employees, support staff and a public business profile.",
+          "Not a torrent service. The streams are delivered over standard HLS / M3U.",
+          "This page makes no legality or licence claim and does not state a company registration.",
         ],
       },
       {
         h2: "The refund / satisfaction policy",
         body: [
           "Within the first 7 days of paying, if the service isn't working for you for any reason and we can't fix it on WhatsApp, we issue a refund. Published in our Satisfaction Policy under /legal/refund/.",
-          "The 24h free trial means most customers never reach the paid stage without already knowing the service works on their devices. The refund clause is a backstop — it's almost never invoked.",
+          "The 24h free trial means most customers never reach the paid stage without already knowing the service works on their devices.",
         ],
       },
       {
@@ -708,14 +708,14 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "What 'cheap IPTV' really costs to run",
         body: [
-          "A reputable IPTV CDN with NAPAfrica peering, licensed channel feeds and WhatsApp support has fixed costs around R40-R60 per active subscriber per month.",
+          "Running IPTV infrastructure with WhatsApp support has real fixed costs per subscriber; this page does not publish a figure.",
           "Anything below that means either the provider is skipping licensed feeds, oversubscribing the CDN (which is why peak-hour buffering is so common in cheap services) or running a short-term cash grab.",
         ],
       },
       {
         h2: "The R99/month sweet spot",
         body: [
-          "R99/month is the price point where you get 20,000+ channels, full SuperSport, 4K, NAPAfrica peering and live WhatsApp support without subsidising the service from the provider's side.",
+          "At R99/month you get Mzansi Stream's line-up (to confirm on WhatsApp), 4K where the source supports it and WhatsApp support, with no contract.",
           "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
         ],
       },
@@ -728,7 +728,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "How Mzansi Stream stays at R99",
         body: [
-          "Direct CDN peering at NAPAfrica cuts our infrastructure costs by roughly 60% vs. routing through Europe. Volume discounts on licensed feeds. WhatsApp-first support — no expensive call centre overhead.",
+          "WhatsApp-first support — no call centre overhead — and one-off payments with no decoder hardware. This page does not publish a cost breakdown.",
         ],
       },
     ],

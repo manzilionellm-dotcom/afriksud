@@ -1,0 +1,33 @@
+# USINE — Journal run-017 (vague 3 : retrait des allégations invérifiables)
+
+# Branch: ccr-94f9cfd1-i6jats (reset sur origin/main @ f4378fa)
+# Objectif: retirer les allégations non sourcées encore publiées (statut « registered business », chiffres de chaînes/VOD, délais chiffrés, 24/7, sports garantis, faux avis). Site web seulement : rien sous src-tauri/, app, APK, panel.
+# Exception : la politique de remboursement 7 jours est écrite sur /legal/refund (needsOwnerInput: false) → les mentions « 7-day money-back » cohérentes avec elle restent.
+
+## T0 (mesuré, base origin/main)
+
+- [x] `pnpm install --frozen-lockfile` exit 0
+- [x] `pnpm build` exit 0 · `pnpm lint` exit 0 · `pnpm type-check` exit 0
+- [x] `node scripts/qa-gates.mjs` exit 0 · `--self-test` exit 0
+
+## Travail
+
+- [x] Inventaire des allégations publiées (HTML local de 3 328 URL + grep source)
+- [x] Retrait / neutralisation dans la langue de chaque page (zu/xh : suppression du fragment, pas de traduction)
+  - « registered South African business entity », « named Information Officer », « operate as a legal entity », « licensed partners/feeds » → retirés (blog is-mzansi-stream-legit-2026, dstv-alternative, coûts)
+  - « 20,000+ channels » / « 100,000+ movies » (toutes locales, plans, méta, JSON-LD, manifests, llms.txt) → retirés
+  - délais chiffrés d'activation / réponse (« within 10 minutes », « 5 to 10 minutes », « < 2 minutes », « 1–2 hours », « 7 days a week », « VIP 24/7 ») → retirés ; durées d'installation conservées
+  - « every SuperSport feed / every match / UFC PPV / Netflix·HBO Max·Disney+ mirror » → « à confirmer sur WhatsApp »
+  - latences / stabilité (« <10ms », « 4K stable », « eliminates 95% », « sans coupure », « optimised ») → retirées
+  - « IPTV technology is legal » / « not banned » → « pas d'avis juridique »
+  - conservé : garantie 7 jours (politique écrite /legal/refund) ; critères génériques de légitimité ; NAPAfrica comme fait de peering des FAI
+- [x] JSON-LD (Organization sans legalName), llms.txt régénéré (`node scripts/aio-llms.mjs`), aio.config.json (activationMinutes/channelCount = null), métadonnées, manifests. OG : aucune allégation dans l'image.
+- [x] Portes : `pnpm build` 0 · `pnpm lint` 0 · `pnpm type-check` 0 · `node scripts/qa-gates.mjs` 0 · `--self-test` 0 · aio-check `/` 0 (problèmes sitemap 201 → 194, 0 régression)
+- [x] Crawl local avec les URL en ligne : crawled=3328 dead=0 chains=0
+- [x] Commit + push `origin ccr-94f9cfd1-i6jats`
+
+## Restes (décision humaine)
+
+- `lib/seo/legal.ts` (popia/terms/about, noindex, `needsOwnerInput`) : gabarits « registered in South Africa under CIPC number [TO_FILL_BY_OWNER] » laissés tels quels (placeholders du propriétaire).
+- Mentions « NAPAfrica » (peering) et horaires `hoursAvailable` 08:00–23:00 du JSON-LD Organization : non retirés (hors liste du brief), à sourcer.
+- `content/programmatic-pages.ts` : code mort (non importé), allégations non publiées.

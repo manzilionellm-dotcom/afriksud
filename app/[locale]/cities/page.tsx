@@ -48,11 +48,11 @@ export default async function CitiesHub({ params }: Props) {
       locale={locale as Locale}
       eyebrow="Cities · South Africa"
       h1="IPTV in South African cities — every metro covered"
-      lead="Mzansi Stream is optimised for every major SA metro and the surrounding suburbs. Pick your city for the local channel mix, ISP compatibility notes and the WhatsApp setup for your specific fibre line."
+      lead="Mzansi Stream runs over home internet in every major SA metro and the surrounding suburbs. Pick your city for the local channel mix, ISP compatibility notes and the WhatsApp setup for your specific fibre line."
       itemListName="South African cities served"
       basePath="/cities"
       intro={[
-        "Our CDN peers at NAPAfrica with edges in Johannesburg and Cape Town, so every metro on this list streams 4K cleanly on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre and Rain 5G.",
+        "Every metro on this list runs over Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre or Rain 5G like any home internet. 4K depends on your line — test it on the 24-hour trial.",
       ]}
       items={SA_CITIES.map((c) => ({
         href: `/cities/${c.slug}`,
@@ -63,7 +63,7 @@ export default async function CitiesHub({ params }: Props) {
         {
           h2: "Not in this list?",
           paragraphs: [
-            "We serve every South African city with a fibre line — not just the 12 above. Message us on WhatsApp with your suburb and ISP, and we'll send a setup tailored to your area within 10 minutes.",
+            "We serve every South African city with a fibre line — not just the 12 above. Message us on WhatsApp with your suburb and ISP, and we'll send a setup tailored to your area.",
           ],
         },
       ]}

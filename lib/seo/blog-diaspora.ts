@@ -59,7 +59,7 @@ export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[5],
-    a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. Mzansi Stream does not ship a VPN — a VPN is your decision if a network or a feed misbehaves, and it is not required to start the trial. This page is the London FAQ, not the South Africa Springboks guide. Trial first, keep expectations honest, then decide.",
+    a: "No. We don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” We give no legal opinion and make no legality or licence claim; licensing, rights, and blackouts still apply. Mzansi Stream does not ship a VPN — a VPN is your decision if a network or a feed misbehaves, and it is not required to start the trial. This page is the London FAQ, not the South Africa Springboks guide. Trial first, keep expectations honest, then decide.",
   },
 ];
 
@@ -218,7 +218,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         bullets: [
           "Settings → Playback → buffer 8 seconds before a 4K SuperSport Test.",
           "Force 5 GHz Wi-Fi. Ethernet via USB adapter if Virgin or BT stutters in the lounge.",
-          "Favourite SuperSport Rugby, Variety, Grandstand, SABC 1/2/3, kykNET — or the remote drowns in 20,000+ categories.",
+          "Favourite SuperSport Rugby, Variety, Grandstand, SABC 1/2/3, kykNET — or the remote drowns in a long category list.",
         ],
       },
       {
@@ -821,11 +821,11 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Is IPTV legal in the UK?",
-        a: "No — we don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” IPTV technology is legal; licensing, rights, and blackouts still apply. This page is not UK legal advice and does not invent an Ofcom ruling. Trial first, keep expectations honest, then decide. Read the SA legal pillar for ZA law only.",
+        a: "No — we don’t offer or market “free illegal streams,” and we never claim “100% legal streams of [network/event].” We give no legal opinion and make no legality or licence claim; licensing, rights, and blackouts still apply. This page is not UK legal advice and does not invent an Ofcom ruling. Trial first, keep expectations honest, then decide. Read the SA legal pillar for ZA law only.",
       },
       {
         q: "Why do folders use brand names then?",
-        a: "That is how viewers find sport in a 20,000+ list. A label is still not a licence we can transfer to you.",
+        a: "That is how viewers find sport in a long list. A label is still not a licence we can transfer to you.",
       },
       {
         q: "What if a competitor claims official UK rights?",

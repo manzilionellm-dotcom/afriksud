@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
   const title = "South African TV Abroad — SuperSport, SABC & kykNET in 20+ Countries";
   const description =
-    "Watch SuperSport, SABC, kykNET and 20,000+ South African channels from the UK, Australia, USA, UAE, NZ, Canada and 15+ more countries. For SA expats and diaspora.";
+    "Watch SuperSport-style, SABC and kykNET folders from the UK, Australia, USA, UAE, NZ, Canada and other countries — line-up to confirm on WhatsApp. For SA expats and diaspora.";
   return {
     title,
     description,

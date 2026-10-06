@@ -19,7 +19,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     lead:
       "In South Africa, a serious IPTV order happens on WhatsApp — not a web checkout and not an email thread. This walkthrough is the exact chat ritual: the first message that gets you a 24-hour trial, the payment proof that clears, the credentials you should receive, and the five things you should never paste into the chat.",
     keyFacts: [
-      "Mzansi Stream activates on WhatsApp, usually within 10 minutes of a clear first message.",
+      "Mzansi Stream activates on WhatsApp after a clear first message; this page does not publish a fixed delay.",
       "Pay with EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco, Visa, Mastercard or PayPal after the trial — not by mailing a card number.",
       "You should receive an M3U link or Xtream Codes login plus a device-specific setup note. If you only get a random APK, walk away.",
     ],
@@ -153,7 +153,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "How fast is WhatsApp activation?",
-        a: "A complete first message is usually live within 10 minutes. Peak Saturday afternoons can take longer; stay in the same thread.",
+        a: "Activation follows a complete first message in the same thread. This page does not publish a fixed delay, and peak Saturday afternoons can take longer.",
       },
       {
         q: "Do I need to email anything?",
@@ -402,7 +402,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Favourite the sport folders",
-            text: "Star SuperSport PSL, Premier League, Rugby and Cricket so Saturday nights are two clicks, not a scroll through 20,000+ channels.",
+            text: "Star SuperSport PSL, Premier League, Rugby and Cricket so Saturday nights are two clicks, not a scroll through a long channel list.",
           },
         ],
       },
@@ -682,11 +682,11 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Will it buffer on a Saturday?",
-        a: "On a NAPAfrica-peered provider with 5 GHz or Ethernet, Saturday load is the design case. Overseas resellers fail here first.",
+        a: "It can. We don't promise zero buffering — use 5 GHz or Ethernet and test a Saturday match during the 24-hour trial.",
       },
       {
         q: "Is sport extra on Mzansi Stream?",
-        a: "No. Published plans all carry the full SuperSport line-up — sport is not an add-on tier.",
+        a: "No. Published plans all carry the same line-up — sport is not an add-on tier. Specific matches are to confirm on WhatsApp.",
       },
       {
         q: "Can I try before the big kick-off?",
@@ -1136,7 +1136,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "vod",
         h2: "VOD is a different shelf",
         body: [
-          "Catch-up is live TV shifted. VOD is the movies-and-series catalogue (the site already describes a 100,000+ title library on the movies pillar). Do not hunt for a Proteas Test inside VOD if it is still in the live EPG.",
+          "Catch-up is live TV shifted. VOD is the movies-and-series catalogue (catalogue to confirm on WhatsApp). Do not hunt for a Proteas Test inside VOD if it is still in the live EPG.",
         ],
       },
     ],
@@ -1483,7 +1483,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Favourite kykNET, kykNET & kie, VIA, SABC 2",
-            text: "Put them in a folder named Afrikaans so the remote does not drown in 20,000+ channels.",
+            text: "Put them in a folder named Afrikaans so the remote does not drown in a long channel list.",
           },
           {
             title: "Watch an evening slot on the lounge TV",

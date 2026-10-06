@@ -26,55 +26,55 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
   // page passes its English copy as the fallback for en-* locales.
   "dstv-alternative": {
     af: {
-      title: "DStv-Alternatief 2026 — Bespaar R800/md · 20,000+ Kanale",
+      title: "DStv-Alternatief 2026 — Bespaar R800/md",
       description:
-        "Beste DStv-alternatief in Suid-Afrika 2026. 20,000+ lewendige kanale, SuperSport PSL, Premier League, kykNET en SABC in 4K. Vanaf R99/md. Gratis 24u-proef — geen kaart.",
+        "Beste DStv-alternatief in Suid-Afrika 2026. SuperSport PSL, Premier League, kykNET en SABC in 4K — bevestig die lys op WhatsApp. Vanaf R99/md. Gratis 24u-proef — geen kaart.",
     },
     fr: {
-      title: "Alternative à DStv 2026 — Économisez R800/mois · 20 000+ chaînes",
+      title: "Alternative à DStv 2026 — Économisez R800/mois",
       description:
-        "Meilleure alternative à DStv en Afrique du Sud 2026. 20 000+ chaînes en direct, SuperSport PSL, Premier League, kykNET et SABC en 4K. Dès R99/mois. Essai gratuit 24 h.",
+        "Meilleure alternative à DStv en Afrique du Sud 2026. SuperSport PSL, Premier League, kykNET et SABC en 4K — catalogue à confirmer sur WhatsApp. Dès R99/mois. Essai gratuit 24 h.",
     },
     "pt-mz": {
-      title: "Alternativa à DStv 2026 — Poupe R800/mês · 20.000+ canais",
+      title: "Alternativa à DStv 2026 — Poupe R800/mês",
       description:
-        "Melhor alternativa à DStv na África do Sul 2026. 20.000+ canais ao vivo, SuperSport PSL, Premier League, kykNET e SABC em 4K. Desde R99/mês. Teste grátis de 24h.",
+        "Melhor alternativa à DStv na África do Sul 2026. SuperSport PSL, Premier League, kykNET e SABC em 4K — confirme a grelha no WhatsApp. Desde R99/mês. Teste grátis de 24h.",
     },
     zu: {
-      title: "Enye Indlela ye-DStv 2026 — Onga u-R800 · iziteshi ezi-20,000+",
+      title: "Enye Indlela ye-DStv 2026 — Onga u-R800",
       description:
-        "Enye indlela engcono ye-DStv e-South Africa 2026. Iziteshi ezi-20,000+ eziphilayo, SuperSport PSL, Premier League, kykNET ne-SABC ku-4K. Kusukela ku-R99/inyanga nokulinga kwamahhala kwama-24h.",
+        "Enye indlela engcono ye-DStv e-South Africa 2026. SuperSport PSL, Premier League, kykNET ne-SABC ku-4K. Kusukela ku-R99/inyanga nokulinga kwamahhala kwama-24h.",
     },
     xh: {
-      title: "Enye Indlela ye-DStv 2026 — Onga i-R800 · 20,000+ iitshaneli",
+      title: "Enye Indlela ye-DStv 2026 — Onga i-R800",
       description:
-        "Enye indlela elungileyo ye-DStv eMzantsi Afrika 2026. Iitshaneli ezi-20,000+ eziphilayo, SuperSport PSL, Premier League, kykNET ne-SABC ku-4K. Ukusuka ku-R99/inyanga nokuvavanya kwasimahla.",
+        "Enye indlela elungileyo ye-DStv eMzantsi Afrika 2026. SuperSport PSL, Premier League, kykNET ne-SABC ku-4K. Ukusuka ku-R99/inyanga nokuvavanya kwasimahla.",
     },
   },
 
   "iptv-vumatel-openserve-frogfoot": {
     af: {
-      title: "IPTV vir Vumatel, Openserve & Frogfoot 2026 — 4K Stabiel",
+      title: "IPTV vir Vumatel, Openserve & Frogfoot 2026 — 4K-toets",
       description:
-        "Beste IPTV vir Vumatel, Openserve, Frogfoot, Octotel en MetroFibre in Suid-Afrika. 4K SuperSport sonder onderbrekings. NAPAfrica-CDN. Vanaf R99/md.",
+        "Beste IPTV vir Vumatel, Openserve, Frogfoot, Octotel en MetroFibre in Suid-Afrika. 4K SuperSport — toets dit op jou lyn. Vanaf R99/md.",
     },
     fr: {
-      title: "IPTV pour Vumatel, Openserve & Frogfoot 2026 — 4K stable",
+      title: "IPTV pour Vumatel, Openserve & Frogfoot 2026 — tester la 4K",
       description:
         "IPTV pour la fibre Vumatel, Openserve, Frogfoot, Octotel et MetroFibre en Afrique du Sud. SuperSport 4K, CDN NAPAfrica. Dès R99/mois. La stabilité dépend de votre ligne.",
     },
     "pt-mz": {
-      title: "IPTV para Vumatel, Openserve & Frogfoot 2026 — 4K estável",
+      title: "IPTV para Vumatel, Openserve & Frogfoot 2026 — testar 4K",
       description:
-        "Melhor IPTV para fibra Vumatel, Openserve, Frogfoot, Octotel e MetroFibre na África do Sul. SuperSport em 4K sem cortes. CDN NAPAfrica. Desde R99/mês.",
+        "Melhor IPTV para fibra Vumatel, Openserve, Frogfoot, Octotel e MetroFibre na África do Sul. SuperSport em 4K — teste na sua linha. Desde R99/mês.",
     },
     zu: {
-      title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K ezinzile",
+      title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K",
       description:
         "I-IPTV engcono ye-fiber ye-Vumatel, Openserve ne-Frogfoot e-South Africa. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. Kusukela ku-R99/inyanga.",
     },
     xh: {
-      title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K ezinzileyo",
+      title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — i-4K",
       description:
         "I-IPTV elungileyo ye-fiber ye-Vumatel, Openserve ne-Frogfoot eMzantsi Afrika. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. Ukusuka ku-R99/inyanga.",
     },
@@ -166,27 +166,27 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
 
   "best-iptv-south-africa-2026": {
     af: {
-      title: "Beste IPTV Suid-Afrika 2026 — 20,000+ Kanale in 4K",
+      title: "Beste IPTV Suid-Afrika 2026 — Kopersgids, 4K",
       description:
         "Die eerlike 2026-kopersgids vir die beste IPTV in Suid-Afrika. Vergelyk prys, kanale, sport, 4K en ondersteuning. Vanaf R99/md met 'n gratis 24u-proeftydperk.",
     },
     fr: {
-      title: "Meilleure IPTV Afrique du Sud 2026 — 20 000+ chaînes en 4K",
+      title: "Meilleure IPTV Afrique du Sud 2026 — guide d'achat, 4K",
       description:
         "Le guide d'achat honnête 2026 de la meilleure IPTV en Afrique du Sud. Comparez prix, chaînes, sport, 4K et support. Dès R99/mois avec un essai gratuit de 24 h.",
     },
     "pt-mz": {
-      title: "Melhor IPTV África do Sul 2026 — 20.000+ canais em 4K",
+      title: "Melhor IPTV África do Sul 2026 — guia de compra, 4K",
       description:
         "O guia de compra honesto de 2026 para o melhor IPTV na África do Sul. Compare preço, canais, desporto, 4K e suporte. Desde R99/mês com teste grátis de 24h.",
     },
     zu: {
-      title: "I-IPTV Engcono e-South Africa 2026 — iziteshi ezi-20,000+ ku-4K",
+      title: "I-IPTV Engcono e-South Africa 2026 — ku-4K",
       description:
         "Umhlahlandlela wabathengi ka-2026 we-IPTV engcono e-South Africa. Qhathanisa intengo, iziteshi, ezemidlalo ne-4K. Kusukela ku-R99/inyanga nokulinga kwamahhala kwama-24h.",
     },
     xh: {
-      title: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026 — 20,000+ ku-4K",
+      title: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026 — ku-4K",
       description:
         "Isikhokelo sabathengi sika-2026 seyona IPTV ilungileyo eMzantsi Afrika. Thelekisa ixabiso, iitshaneli, ezemidlalo ne-4K. Ukusuka ku-R99/inyanga nokuvavanya kwasimahla.",
     },
@@ -252,55 +252,55 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "Kyk SuperSport Sonder DStv — IPTV in 4K 2026",
       description:
-        "Stroom elke SuperSport-kanaal (PSL, Premier League, Rugby, Krieket) in 4K sonder DStv. Mzansi Stream IPTV vanaf R99/md op WhatsApp — binne 10 minute geïnstalleer.",
+        "SuperSport-kanale (PSL, Premier League, Rugby, Krieket) in 4K sonder DStv — bevestig die wedstryde op WhatsApp. Mzansi Stream IPTV vanaf R99/md.",
     },
     fr: {
       title: "Regarder SuperSport sans DStv — IPTV en 4K 2026",
       description:
-        "Diffusez tous les flux SuperSport (PSL, Premier League, rugby, cricket) en 4K sans DStv. Mzansi Stream IPTV dès R99/mois sur WhatsApp — installé en 10 minutes.",
+        "Les flux SuperSport (PSL, Premier League, rugby, cricket) en 4K sans DStv — matchs à confirmer sur WhatsApp. Mzansi Stream IPTV dès R99/mois.",
     },
     "pt-mz": {
       title: "Ver SuperSport sem DStv — IPTV em 4K 2026",
       description:
-        "Transmita todos os sinais SuperSport (PSL, Premier League, râguebi, críquete) em 4K sem DStv. Mzansi Stream IPTV desde R99/mês no WhatsApp — instalado em 10 minutos.",
+        "Sinais SuperSport (PSL, Premier League, râguebi, críquete) em 4K sem DStv — confirme os jogos no WhatsApp. Mzansi Stream IPTV desde R99/mês.",
     },
     zu: {
       title: "Buka i-SuperSport Ngaphandle kwe-DStv — IPTV ku-4K 2026",
       description:
-        "Sakaza yonke i-SuperSport (PSL, Premier League, Rugby, Cricket) ku-4K ngaphandle kwe-DStv. Mzansi Stream IPTV kusukela ku-R99/inyanga ku-WhatsApp — kufakwa ngemizuzu eyi-10.",
+        "Sakaza i-SuperSport (PSL, Premier League, Rugby, Cricket) ku-4K ngaphandle kwe-DStv. Mzansi Stream IPTV kusukela ku-R99/inyanga ku-WhatsApp — kufakwa ngemizuzu eyi-10.",
     },
     xh: {
       title: "Bukela i-SuperSport Ngaphandle kwe-DStv — IPTV ku-4K 2026",
       description:
-        "Sasaza yonke i-SuperSport (PSL, Premier League, Rugby, Cricket) ku-4K ngaphandle kwe-DStv. Mzansi Stream IPTV ukusuka ku-R99/inyanga ku-WhatsApp — ifakwa ngemizuzu eli-10.",
+        "Sasaza i-SuperSport (PSL, Premier League, Rugby, Cricket) ku-4K ngaphandle kwe-DStv. Mzansi Stream IPTV ukusuka ku-R99/inyanga ku-WhatsApp — ifakwa ngemizuzu eli-10.",
     },
   },
 
   "cheap-iptv-south-africa": {
     af: {
-      title: "Goedkoop IPTV Suid-Afrika — Vanaf R99/md, 20,000+ Kanale",
+      title: "Goedkoop IPTV Suid-Afrika — Vanaf R99/md, Geen Kontrak",
       description:
-        "Goedkoop IPTV in Suid-Afrika vanaf R99/maand. 20,000+ lewendige kanale, 4K SuperSport, kykNET, SABC en Premier League. Geen kontrak, geen dekodeerder, geen installasiefooi.",
+        "Goedkoop IPTV in Suid-Afrika vanaf R99/maand. 4K SuperSport, kykNET, SABC en Premier League. Geen kontrak, geen dekodeerder, geen installasiefooi.",
     },
     fr: {
-      title: "IPTV pas chère Afrique du Sud — Dès R99/mois, 20 000+ chaînes",
+      title: "IPTV pas chère Afrique du Sud — Dès R99/mois, sans engagement",
       description:
-        "IPTV pas chère en Afrique du Sud dès R99/mois. 20 000+ chaînes en direct, SuperSport 4K, kykNET, SABC et Premier League. Sans engagement, sans décodeur.",
+        "IPTV pas chère en Afrique du Sud dès R99/mois. SuperSport 4K, kykNET, SABC et Premier League. Sans engagement, sans décodeur.",
     },
     "pt-mz": {
-      title: "IPTV barato África do Sul — Desde R99/mês, 20.000+ canais",
+      title: "IPTV barato África do Sul — Desde R99/mês, sem fidelização",
       description:
-        "IPTV barato na África do Sul desde R99/mês. 20.000+ canais ao vivo, SuperSport 4K, kykNET, SABC e Premier League. Sem fidelização, sem descodificador.",
+        "IPTV barato na África do Sul desde R99/mês. SuperSport 4K, kykNET, SABC e Premier League. Sem fidelização, sem descodificador.",
     },
     zu: {
-      title: "I-IPTV Eshibhile South Africa — Kusukela ku-R99, iziteshi ezi-20,000+",
+      title: "I-IPTV Eshibhile South Africa — Kusukela ku-R99",
       description:
-        "I-IPTV eshibhile e-South Africa kusukela ku-R99/inyanga. Iziteshi ezi-20,000+ eziphilayo, i-SuperSport 4K, i-kykNET ne-SABC. Ngaphandle kwenkontileka, ngaphandle kwedikhoda.",
+        "I-IPTV eshibhile e-South Africa kusukela ku-R99/inyanga. I-SuperSport 4K, i-kykNET ne-SABC. Ngaphandle kwenkontileka, ngaphandle kwedikhoda.",
     },
     xh: {
-      title: "I-IPTV Etshiphu eMzantsi Afrika — Ukusuka ku-R99, 20,000+ iitshaneli",
+      title: "I-IPTV Etshiphu eMzantsi Afrika — Ukusuka ku-R99",
       description:
-        "I-IPTV etshiphu eMzantsi Afrika ukusuka ku-R99/inyanga. Iitshaneli ezi-20,000+ eziphilayo, i-SuperSport 4K, i-kykNET ne-SABC. Ngaphandle kwesivumelwano, ngaphandle kwedikhoda.",
+        "I-IPTV etshiphu eMzantsi Afrika ukusuka ku-R99/inyanga. I-SuperSport 4K, i-kykNET ne-SABC. Ngaphandle kwesivumelwano, ngaphandle kwedikhoda.",
     },
   },
 
@@ -308,53 +308,53 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "4K IPTV Suid-Afrika — Ware UHD SuperSport & Premier League",
       description:
-        "Ware 4K UHD IPTV in Suid-Afrika. SuperSport, Premier League, kykNET en 20,000+ kanale in egte 4K — geen opskalering. NAPAfrica-CDN, geen onderbrekings. Vanaf R99/md.",
+        "4K UHD IPTV in Suid-Afrika. SuperSport, Premier League en kykNET in 4K waar die bron dit toelaat — bevestig op WhatsApp. Vanaf R99/md.",
     },
     fr: {
       title: "IPTV 4K Afrique du Sud — UHD natif SuperSport & Premier League",
       description:
-        "IPTV 4K UHD en Afrique du Sud. SuperSport, Premier League, kykNET et 20 000+ chaînes en 4K. CDN NAPAfrica. Dès R99/mois. Pas de promesse zéro coupure.",
+        "IPTV 4K UHD en Afrique du Sud. SuperSport, Premier League et kykNET en 4K quand la source le permet — catalogue à confirmer sur WhatsApp. Dès R99/mois. Pas de promesse zéro coupure.",
     },
     "pt-mz": {
       title: "IPTV 4K África do Sul — UHD nativo SuperSport & Premier League",
       description:
-        "IPTV 4K UHD nativo na África do Sul. SuperSport, Premier League, kykNET e 20.000+ canais em 4K real — sem upscaling. CDN NAPAfrica, sem cortes. Desde R99/mês.",
+        "IPTV 4K UHD na África do Sul. SuperSport, Premier League e kykNET em 4K quando a fonte o permite — confirme no WhatsApp. Desde R99/mês.",
     },
     zu: {
       title: "I-4K IPTV South Africa — i-UHD Yangempela SuperSport & Premier League",
       description:
-        "I-IPTV ye-4K UHD yangempela e-South Africa. I-SuperSport, Premier League, kykNET neziteshi ezi-20,000+ ku-4K yangempela. I-CDN ye-NAPAfrica. Kusukela ku-R99/inyanga.",
+        "I-IPTV ye-4K UHD e-South Africa. Kusukela ku-R99/inyanga.",
     },
     xh: {
       title: "I-4K IPTV eMzantsi Afrika — i-UHD Yokwenyani SuperSport & Premier League",
       description:
-        "I-IPTV ye-4K UHD yokwenyani eMzantsi Afrika. I-SuperSport, Premier League, kykNET neetshaneli ezi-20,000+ ku-4K yokwenyani. I-CDN ye-NAPAfrica. Ukusuka ku-R99/inyanga.",
+        "I-IPTV ye-4K UHD eMzantsi Afrika. Ukusuka ku-R99/inyanga.",
     },
   },
 
   "iptv-no-buffering-south-africa": {
     af: {
-      title: "Stabiele IPTV Suid-Afrika — oorsake van onderbrekings",
+      title: "IPTV-onderbrekings Suid-Afrika — oorsake en oplossings",
       description:
         "Hoekom IPTV in Suid-Afrika onderbreek, en wat jy by die huis kan nagaan. NAPAfrica-CDN. Opstellys. Geen gemete latensie of uptyd op hierdie bladsy nie.",
     },
     fr: {
-      title: "IPTV stable Afrique du Sud — causes des coupures",
+      title: "Coupures IPTV Afrique du Sud — causes et solutions",
       description:
         "Pourquoi l'IPTV coupe en Afrique du Sud, et quoi vérifier chez vous. CDN NAPAfrica. Checklist d'installation. Pas de latence ni de disponibilité chiffrées ici.",
     },
     "pt-mz": {
-      title: "IPTV estável África do Sul — causas das falhas",
+      title: "Falhas de IPTV na África do Sul — causas e soluções",
       description:
         "Porque é que o IPTV falha na África do Sul, e o que verificar em casa. CDN NAPAfrica. Checklist. Sem latência nem uptime medidos nesta página.",
     },
     zu: {
-      title: "I-IPTV e-South Africa — Ukusakaza kwe-4K Okuzinzile",
+      title: "I-IPTV e-South Africa — Ukusakaza kwe-4K",
       description:
         "I-IPTV e-South Africa. I-CDN ye-NAPAfrica. I-SuperSport 4K. Kusukela ku-R99/inyanga.",
     },
     xh: {
-      title: "I-IPTV eMzantsi Afrika — Ukusasaza kwe-4K Okuzinzileyo",
+      title: "I-IPTV eMzantsi Afrika — Ukusasaza kwe-4K",
       description:
         "I-IPTV eMzantsi Afrika. I-CDN ye-NAPAfrica. I-SuperSport 4K. Ukusuka ku-R99/inyanga.",
     },
@@ -362,29 +362,29 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
 
   "iptv-for-movies-and-series": {
     af: {
-      title: "IPTV vir Flieks & Reekse Suid-Afrika — 100K Titels",
+      title: "IPTV vir Flieks & Reekse Suid-Afrika",
       description:
-        "IPTV vir flieks en reekse in Suid-Afrika — 100,000+ titels op aanvraag plus lewendige M-Net, Showmax, Disney+ en HBO Max-inhoud. 4K, geen kontrak. Vanaf R99/md.",
+        "IPTV vir flieks en reekse in Suid-Afrika — films en reekse op aanvraag; bevestig die katalogus op WhatsApp. Geen kontrak. Vanaf R99/md.",
     },
     fr: {
-      title: "IPTV films & séries Afrique du Sud — 100 000 titres",
+      title: "IPTV films & séries Afrique du Sud — VOD",
       description:
-        "IPTV pour films et séries en Afrique du Sud — 100 000+ titres à la demande plus M-Net en direct, Showmax, Disney+ et HBO Max. 4K, sans engagement. Dès R99/mois.",
+        "IPTV pour films et séries en Afrique du Sud — VOD à la demande, catalogue à confirmer sur WhatsApp. Sans engagement. Dès R99/mois.",
     },
     "pt-mz": {
-      title: "IPTV filmes & séries África do Sul — 100 mil títulos",
+      title: "IPTV filmes & séries África do Sul — VOD",
       description:
-        "IPTV para filmes e séries na África do Sul — 100.000+ títulos a pedido, além de M-Net ao vivo, Showmax, Disney+ e HBO Max. 4K, sem fidelização. Desde R99/mês.",
+        "IPTV para filmes e séries na África do Sul — VOD a pedido; confirme o catálogo no WhatsApp. Sem fidelização. Desde R99/mês.",
     },
     zu: {
-      title: "I-IPTV Yamamuvi Nochungechunge South Africa — Izihloko ezingu-100K",
+      title: "I-IPTV Yamamuvi Nochungechunge South Africa",
       description:
-        "I-IPTV yamamuvi nochungechunge e-South Africa — izihloko ezingu-100,000+ ngokufuna kanye ne-M-Net, Showmax ne-Disney+. Ku-4K, ngaphandle kwenkontileka. Kusukela ku-R99.",
+        "I-IPTV yamamuvi nochungechunge e-South Africa. Ngaphandle kwenkontileka. Kusukela ku-R99.",
     },
     xh: {
-      title: "I-IPTV Yeefilimu Nothotho eMzantsi Afrika — Izihloko ezingu-100K",
+      title: "I-IPTV Yeefilimu Nothotho eMzantsi Afrika",
       description:
-        "I-IPTV yeefilimu nothotho eMzantsi Afrika — izihloko ezingu-100,000+ ngokufuna kunye ne-M-Net, Showmax ne-Disney+. Ku-4K, ngaphandle kwesivumelwano. Ukusuka ku-R99.",
+        "I-IPTV yeefilimu nothotho eMzantsi Afrika. Ngaphandle kwesivumelwano. Ukusuka ku-R99.",
     },
   },
 };

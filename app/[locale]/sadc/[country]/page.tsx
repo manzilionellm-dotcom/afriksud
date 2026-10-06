@@ -66,11 +66,11 @@ export default async function SadcCountryPage({ params }: Props) {
   const faq = [
     {
       q: `Is IPTV legal in ${data.name}?`,
-      a: `Streaming TV as a technology is not, by itself, a ban in ${data.name}. Unauthorised distribution of copyrighted content is the copyright issue in most places. This page does not state that Mzansi Stream holds channel licences. Payments shown for this country are the methods listed above.`,
+      a: `This page is not legal advice and makes no legality claim for ${data.name}. Unauthorised distribution of copyrighted content is the copyright issue in most places. This page does not state that Mzansi Stream holds channel licences. Payments shown for this country are the methods listed above.`,
     },
     {
       q: `Will this work on ${data.isps.slice(0, 2).join(" or ")}?`,
-      a: `Yes — Mzansi Stream is optimised for ${data.isps.join(", ")}. CDN edges in Johannesburg and Cape Town deliver 4K with low latency across ${data.name}.`,
+      a: `It runs over ${data.isps.join(", ")} like any home internet. 4K depends on your line — test it during the 24-hour trial.`,
     },
     {
       q: `Can I pay in ${data.currency.code} or USD?`,
@@ -86,7 +86,7 @@ export default async function SadcCountryPage({ params }: Props) {
     },
     {
       q: `What local ${data.name} channels are included?`,
-      a: `Mzansi Stream carries ${data.localChannels.join(", ")} plus the full SABC and SuperSport line-up and 20,000+ international channels.`,
+      a: `The line-up lists ${data.localChannels.join(", ")} plus SABC, SuperSport-style and international folders — to confirm on WhatsApp before you pay.`,
     },
     {
       q: `Is this a DStv ${data.name} replacement?`,
@@ -94,7 +94,7 @@ export default async function SadcCountryPage({ params }: Props) {
     },
     {
       q: "How fast is activation?",
-      a: "Usually within 10 minutes of payment on WhatsApp, including weekends and public holidays.",
+      a: "Activation is done on WhatsApp after payment. We don't publish a fixed delay.",
     },
     {
       q: "Is there a contract?",
@@ -182,7 +182,7 @@ export default async function SadcCountryPage({ params }: Props) {
     })),
   };
 
-  const directAnswer = `Mzansi Stream is the most reliable way to watch SuperSport, SABC, kykNET and 20,000+ international channels in 4K UHD from anywhere in ${data.name}. Pricing starts at ${data.pricing[0].price} for one month with no contract and no decoder. Activation runs on WhatsApp in under 10 minutes. Pay in ${data.payments.slice(0, 3).join(", ")} or via international card and PayPal — ${data.currency.code} accepted${data.currency.usdParityNote ? ` (${data.currency.usdParityNote})` : ""}. 4K stable across ${data.isps.slice(0, 3).join(", ")} and other major ${data.name} fibre/wireless networks.`;
+  const directAnswer = `Mzansi Stream is a no-contract way to watch SuperSport-style, SABC, kykNET and international folders in 4K UHD where the source supports it, from anywhere in ${data.name} — line-up to confirm on WhatsApp. Pricing starts at ${data.pricing[0].price} for one month with no contract and no decoder. Activation runs on WhatsApp. Pay in ${data.payments.slice(0, 3).join(", ")} or via international card and PayPal — ${data.currency.code} accepted${data.currency.usdParityNote ? ` (${data.currency.usdParityNote})` : ""}. Test 4K on ${data.isps.slice(0, 3).join(", ")} or other ${data.name} networks during the 24-hour trial.`;
 
   return (
     <>
@@ -233,8 +233,8 @@ export default async function SadcCountryPage({ params }: Props) {
               question={`How do I watch SuperSport and SA channels in ${data.name}?`}
               answer={directAnswer}
               keyFacts={[
-                `4K stable across ${data.isps.join(", ")} via NAPAfrica-peered CDN edges in Johannesburg and Cape Town.`,
-                `Local broadcasters included: ${data.localChannels.slice(0, 6).join(", ")}.`,
+                `Runs over ${data.isps.join(", ")} like any home internet — test 4K on the 24-hour trial.`,
+                `Local broadcasters listed (to confirm on WhatsApp): ${data.localChannels.slice(0, 6).join(", ")}.`,
                 `Cities served include ${data.cities.slice(0, 4).join(", ")} and every other major ${data.name} metro.`,
               ]}
             />
@@ -278,14 +278,14 @@ export default async function SadcCountryPage({ params }: Props) {
               <h2>Local channels and DStv alternative in {data.name}</h2>
               <p>{data.dstvNote}</p>
               <p>
-                <strong>Local channels included:</strong>{" "}
+                <strong>Local channels listed (to confirm on WhatsApp):</strong>{" "}
                 {data.localChannels.join(", ")}.
               </p>
               <p>
-                <strong>Plus:</strong> every SuperSport feed (PSL, Premier
+                <strong>Plus:</strong> SuperSport-style folders (PSL, Premier
                 League, Variety, Rugby, Cricket), SABC, kykNET, Mzansi
-                Magic, M-Net Movies, and 20,000+ international channels in
-                4K.
+                Magic, M-Net Movies and international channels — line-up
+                to confirm on WhatsApp.
               </p>
             </section>
 
@@ -311,8 +311,8 @@ export default async function SadcCountryPage({ params }: Props) {
                   {data.payments.slice(0, 3).join(", ")} or card.
                 </li>
                 <li>
-                  Receive your M3U link plus a setup guide for your device —
-                  usually live within 10 minutes.
+                  Receive your M3U link plus a setup guide for your device on
+                  WhatsApp.
                 </li>
               </ol>
             </section>
@@ -342,8 +342,7 @@ export default async function SadcCountryPage({ params }: Props) {
             <section className="longformSection" id="trial">
               <h2>Get started in {data.name} today</h2>
               <p>
-                24-hour free trial, no card. Activated on WhatsApp within 10
-                minutes. Pay in {data.payments.slice(0, 4).join(", ")} or
+                24-hour free trial, no card. Activated on WhatsApp. Pay in {data.payments.slice(0, 4).join(", ")} or
                 via international card.
               </p>
             </section>
