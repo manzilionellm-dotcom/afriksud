@@ -48,7 +48,7 @@ export default async function SaAbroadHub({ params }: Props) {
       locale={locale as Locale}
       eyebrow="SA worldwide · 20+ countries"
       h1="South African TV abroad — every country covered"
-      lead="If you're a South African abroad, Mzansi Stream brings SuperSport, SABC, kykNET, Mzansi Magic and 20,000+ international channels to your TV in 50+ countries — in 4K, with no DStv decoder."
+      lead="If you're a South African abroad, Mzansi Stream is a no-decoder way to try SuperSport, SABC, kykNET and Mzansi Magic folders. This page does not publish a country count."
       itemListName="Countries with SA TV via Mzansi Stream"
       basePath="/sa-abroad/"
       items={SA_ABROAD_COUNTRIES.map((c) => ({

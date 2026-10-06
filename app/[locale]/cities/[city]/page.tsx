@@ -85,7 +85,7 @@ export default async function CityPage({ params }: Props) {
   const faqEntries = [
     {
       q: `Is IPTV legal in ${data.name}?`,
-      a: `Yes — streaming TV is not illegal in South Africa. Mzansi Stream sources its channels via licensed partners, accepts traceable SA payment methods (EFT, SnapScan, Capitec Pay, Ozow), processes personal data under POPIA and operates from a registered SA business. Households in ${data.name} can switch without any regulatory risk.`,
+      a: `Streaming TV as a technology is not banned in South Africa. This page does not state that Mzansi Stream holds channel licences, a CIPC registration, or that a household in ${data.name} has zero regulatory risk. Payment methods shown on the site include EFT, SnapScan, Capitec Pay and Ozow.`,
     },
     {
       q: `Will Mzansi Stream work on my ${data.isps[0]} or ${data.isps[1] ?? "fibre"} line in ${data.name}?`,

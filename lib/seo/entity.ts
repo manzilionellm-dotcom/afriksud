@@ -103,9 +103,9 @@ export function organizationSchema({ whatsappPhone }: EntityOptions) {
     },
     image: OG_URL,
     description:
-      "Mzansi Stream — premium IPTV service with 20,000+ live channels and 100,000+ movies and series in 4K. Trusted by South Africans at home and abroad as a no-contract DStv alternative.",
+      "Mzansi Stream — IPTV with 20,000+ live channels and 100,000+ movies and series in 4K. No-contract option for South Africa and the SA diaspora.",
     slogan: "20,000+ channels in 4K — no contract, no decoder",
-    foundingDate: "2024",
+    // À CONFIRMER — founding year is not evidenced in this repo. Do not emit foundingDate.
     knowsAbout: KNOWS_ABOUT,
     knowsLanguage: ["en", "af", "zu", "xh", "pt", "fr"],
     areaServed: AREA_SERVED,
@@ -163,17 +163,7 @@ export function websiteSchema() {
       "Premium IPTV for South Africa and the SA diaspora worldwide — 20,000+ channels in 4K with WhatsApp activation in under 10 minutes.",
     inLanguage: INLANGUAGE,
     publisher: { "@id": ORG_ID },
-    // SearchAction unlocks the Google sitelinks search box on
-    // brand SERPs. The URL template targets the home anchor since the
-    // site does not (yet) ship a dedicated /search route — Google will
-    // not surface the search box without this declaration.
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/en-za?q={search_term_string}#search`,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    // No SearchAction: the site has no search results URL. A template
+    // that only appends ?q= to the homepage would be a false claim.
   };
 }

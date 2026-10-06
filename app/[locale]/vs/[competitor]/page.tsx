@@ -105,7 +105,7 @@ export default async function VersusPage({ params }: Props) {
     },
     {
       q: `Is Mzansi Stream legal in South Africa?`,
-      a: `Streaming TV is not illegal per se in South Africa — what's illegal is distributing copyrighted content without authorisation. Mzansi Stream sources channels via licensed partners, accepts traceable payment via every major SA method and processes customer data under POPIA.`,
+      a: `Streaming TV as a technology is not banned in South Africa. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences.`,
     },
   ];
 

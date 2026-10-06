@@ -104,7 +104,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Vincent", "Beacon Bay", "Gonubie", "Mdantsane"],
     isps: ["Vumatel", "Openserve", "Frogfoot", "Rain 5G"],
     teams: [{ sport: "PSL", clubs: ["Buffalo City clubs"] }],
-    hook: "Stable streaming in East London — every PSL match, Premier League and Springbok Test in 4K with no buffering.",
+    hook: "East London setup — PSL, Premier League and Springbok folders in 4K. Test the match on your line. No promise of zero buffering.",
   },
   {
     slug: "polokwane",

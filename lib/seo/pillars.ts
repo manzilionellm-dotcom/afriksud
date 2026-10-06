@@ -63,7 +63,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Stable",
     metaDescription:
-      "Best IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre fibre in South Africa. 4K SuperSport with no buffering. NAPAfrica-peered CDN. From R99/mo.",
+      "IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre in South Africa. 4K SuperSport, NAPAfrica-peered CDN. From R99/mo. Stability depends on your line.",
     lead:
       "If you're on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre or Rain 5G, your fibre line is more than capable of streaming Mzansi Stream's 4K SuperSport, Premier League and 20,000+ international channels without buffering — provided the IPTV provider's CDN actually peers with NAPAfrica. This guide explains why most overseas IPTV providers stutter on SA fibre, how the Mzansi Stream CDN is provisioned, and what to check on your router if 4K streams drop to 1080p.",
     trustLine:
@@ -524,8 +524,8 @@ export const PILLARS: Pillar[] = [
         id: "subscribers",
         h2: "Is it illegal for me as a subscriber?",
         paragraphs: [
-          "SA enforcement focuses on the distributors of unauthorised content, not on end-users. There has been no reported prosecution of an individual SA IPTV subscriber in recent years. The legal risk to a subscriber paying a legitimate IPTV provider via traceable payment is effectively zero.",
-          "That said, the safer position is always to subscribe to a provider that operates openly with named licensing partners. That's the standard Mzansi Stream meets, and it's the standard you should look for in any provider you consider in 2026.",
+          "This page is not legal advice and does not report court statistics or a subscriber risk score. Copyright risk sits with unauthorised distribution of protected content.",
+          "This page does not state that Mzansi Stream holds named channel licences. Operator name, CIPC number and Information Officer are still placeholders on the POPIA page, so they are not repeated here as facts.",
         ],
       },
       {
@@ -533,22 +533,22 @@ export const PILLARS: Pillar[] = [
         h2: "Do I need a VPN to use IPTV in South Africa?",
         paragraphs: [
           "No. A VPN is not required for IPTV in South Africa. Mzansi Stream isn't geo-blocked on SA fibre. Some users prefer a VPN for general privacy reasons (the same way some users prefer a VPN for browsing) — that's a personal choice, not an IPTV requirement.",
-          "If you're an SA expat watching SA content from abroad, a VPN may help if the destination country geo-blocks certain feeds. Mzansi Stream works in 50+ countries without geo-blocking on our side.",
+          "If you're an SA expat watching from abroad, a VPN may help if a destination network blocks a feed. This page does not publish a country count or a 'no geo-blocking' guarantee.",
         ],
       },
     ],
     faq: [
       {
         q: "Is IPTV legal in South Africa in 2026?",
-        a: "Yes — IPTV is a legal technology in South Africa. What's illegal is the unauthorised distribution of copyrighted content without a licence. A legitimate IPTV provider sources via licensed partners, operates under POPIA, and accepts traceable SA payment.",
+        a: "IPTV as a technology is not banned in South Africa. What's unlawful is unauthorised distribution of copyrighted content. This answer does not say Mzansi Stream holds channel licences.",
       },
       {
         q: "Can I be prosecuted for using IPTV in SA?",
-        a: "SA enforcement focuses on distributors, not subscribers. There has been no reported prosecution of an individual SA IPTV subscriber in recent years. The legal risk for a subscriber to a legitimate provider is effectively zero.",
+        a: "This page is not legal advice and does not report prosecutions or a 'zero risk' score. Copyright questions are about unauthorised distribution, not a promise that a subscriber cannot be affected.",
       },
       {
         q: "Is Mzansi Stream a legitimate IPTV provider?",
-        a: "Yes. Mzansi Stream sources channels via licensed partners, operates under POPIA, accepts traceable SA payment methods (EFT, SnapScan, Ozow, Capitec Pay), publishes a real WhatsApp support channel, and honours the Consumer Protection Act with a 7-day refund guarantee.",
+        a: "We do not publish a channel-licence schedule on this page. Payment methods shown on the site include EFT, SnapScan, Ozow and Capitec Pay. The POPIA page still has placeholders for the legal entity and Information Officer, so this answer does not repeat them as facts. The refund page describes a 7-day window.",
       },
       {
         q: "What law governs IPTV in South Africa?",
@@ -560,7 +560,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is it legal to watch SuperSport via IPTV without DStv?",
-        a: "It's legal to watch SuperSport via an IPTV provider that holds the redistribution licence. Mzansi Stream sources SuperSport feeds via licensed partners and accepts traceable SA payment — meeting the standards SA copyright law contemplates.",
+        a: "Watching a channel is lawful when the distributor has the rights. This page does not state that Mzansi Stream holds a SuperSport redistribution licence. Confirm what plays on the trial.",
       },
       {
         q: "What's the difference between legitimate and illegitimate IPTV?",
@@ -693,7 +693,7 @@ export const PILLARS: Pillar[] = [
         h2: "Is IPTV legal in South Africa in 2026?",
         paragraphs: [
           "Streaming TV via IPTV is not illegal per se in South Africa — IPTV is just a technology, in the same way an internet browser is a technology. What is illegal is the unauthorised distribution of copyrighted content without a licence.",
-          "Mzansi Stream sources channel feeds via licensed partners, accepts traceable South African payment methods (EFT, SnapScan, Capitec Pay, Ozow), processes personal data under POPIA, and publishes its information officer per the Protection of Personal Information Act 4 of 2013. A reputable IPTV provider in SA in 2026 is one that operates openly, not one that requires anonymous crypto via a Telegram channel.",
+          "Payment methods shown on the site include EFT, SnapScan, Capitec Pay and Ozow. The POPIA page is published, but the Information Officer and legal entity are still placeholders, so they are not stated here as facts. This page does not claim a channel licence.",
         ],
       },
       {
@@ -724,7 +724,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is IPTV legal in South Africa?",
-        a: "IPTV is a legal technology in South Africa. What's illegal is the unauthorised distribution of copyrighted content. Mzansi Stream sources its channels via licensed partners, accepts traceable SA payment methods and is POPIA-compliant.",
+        a: "IPTV as a technology is not banned in South Africa. Unauthorised distribution of copyrighted content is the copyright issue. This answer does not state that Mzansi Stream holds channel licences.",
       },
       {
         q: "Will an IPTV work with my Vumatel / Openserve / Frogfoot fibre line?",
@@ -850,7 +850,7 @@ export const PILLARS: Pillar[] = [
           },
           {
             title: "Test the 4K SuperSport stream",
-            text: "Find SuperSport PSL or Premier League in the channel list and start the stream. You should see 4K UHD at 50 fps with no buffering. If the stream stutters, see the troubleshooting section below.",
+            text: "Find SuperSport PSL or Premier League in the channel list and start the stream. If the picture stutters, use the troubleshooting section below. This step does not promise a buffer-free 4K picture.",
           },
         ],
         paragraphs: [
@@ -1165,7 +1165,7 @@ export const PILLARS: Pillar[] = [
         h2: "Why South Africans are watching SuperSport via IPTV instead of DStv in 2026",
         paragraphs: [
           "DStv Premium is R899/month in 2026 — R10,788 a year. The Compact Plus tier (R549/month) only carries partial Premier League, no full Variety pack and no 4K. The Compact tier (R449) drops the Premier League entirely. To get the full SuperSport line-up legally via DStv, you're committing to Premium with a 24-month contract.",
-          "IPTV providers like Mzansi Stream source the same SuperSport feeds via licensed partners, deliver them over a SA CDN (NAPAfrica peering in Johannesburg + Cape Town), and bundle them into a R99-R150/month subscription with no contract, no decoder, no installer fee. The picture quality is identical because the source feed is identical — it's the commercial structure that's different.",
+          "Some IPTV services sell SuperSport-style folders over a SA CDN (NAPAfrica peering in Johannesburg and Cape Town) on a no-contract, no-decoder subscription. This page does not state that the feed is the same licensed source as a DStv decoder, or that picture quality is identical.",
         ],
       },
       {
@@ -1212,7 +1212,7 @@ export const PILLARS: Pillar[] = [
         id: "legality",
         h2: "Is it legal to watch SuperSport via IPTV in South Africa?",
         paragraphs: [
-          "IPTV is a legal technology in South Africa. What's illegal is the unauthorised distribution of copyrighted content without a licence. Mzansi Stream sources its SuperSport feeds via licensed partners, accepts traceable SA payment methods (EFT, SnapScan, Capitec Pay, Ozow) and processes personal data under POPIA.",
+          "IPTV as a technology is not banned in South Africa. What's unlawful is unauthorised distribution of copyrighted content. This page does not state that Mzansi Stream holds SuperSport licences. Payment methods shown on the site include EFT, SnapScan, Capitec Pay and Ozow.",
           "A reputable IPTV provider in SA in 2026 operates openly with a real business name, real customer support and traceable payment. If a provider only accepts anonymous crypto via a Telegram channel and won't tell you their licensing chain, walk away — that's the risk profile that triggers enforcement, not 'IPTV' generically.",
         ],
       },
@@ -1238,7 +1238,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is it legal to watch SuperSport via IPTV in South Africa?",
-        a: "IPTV is a legal technology. What's illegal is the unauthorised distribution of copyrighted content. Mzansi Stream sources its SuperSport feeds via licensed partners, accepts traceable SA payment methods and is POPIA-compliant.",
+        a: "IPTV as a technology is not banned. Unauthorised distribution of copyrighted content is the copyright issue. This answer does not state that Mzansi Stream holds SuperSport licences.",
       },
       {
         q: "Will I get the full Premier League?",
@@ -1258,7 +1258,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Can I watch SuperSport while travelling outside South Africa?",
-        a: "Yes. Mzansi Stream works in 50+ countries with no geo-blocking. SA expats use it to watch SuperSport, SABC and kykNET from the UK, Australia, USA, UAE, NZ and Canada in 4K.",
+        a: "SA expats in the UK, Australia, USA, UAE, NZ and Canada ask for SuperSport, SABC and kykNET folders. This page does not publish a country count or promise 4K on every connection.",
       },
       {
         q: "How much does it cost per month?",
@@ -1412,7 +1412,7 @@ export const PILLARS: Pillar[] = [
     related: [
       { label: "Best IPTV in South Africa 2026", href: "/best-iptv-south-africa-2026/" },
       { label: "DStv alternative — complete 2026 guide", href: "/dstv-alternative/" },
-      { label: "IPTV with no buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
+      { label: "IPTV buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
       { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa/" },
       { label: "Mzansi Stream vs DStv Premium", href: "/vs/dstv-premium/" },
       { label: "Watch SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
@@ -1431,7 +1431,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "4K IPTV South Africa — Native UHD SuperSport & Premier League",
     metaDescription:
-      "Native 4K UHD IPTV in South Africa. SuperSport, Premier League, kykNET and 20,000+ channels in true 4K — no upscaling. NAPAfrica CDN, no buffering. From R99/mo.",
+      "4K UHD IPTV in South Africa. SuperSport, Premier League, kykNET and 20,000+ channels. NAPAfrica CDN. From R99/mo. No promise of zero buffering.",
     lead:
       "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a low-latency edge close enough to the viewer for the stream to never re-buffer. Mzansi Stream is built for all three on every SA fibre line, on every plan from R99/month.",
     trustLine:
@@ -1484,7 +1484,7 @@ export const PILLARS: Pillar[] = [
         h2: "Why Mzansi Stream's 4K doesn't buffer on SA fibre",
         paragraphs: [
           "Most overseas IPTV providers route 4K traffic from Europe or the US. A 4K SuperSport stream from a Frankfurt server hits SA at 180-220ms one-way latency. The moment the network blip — and SA fibre has plenty of micro-blips — the stream re-buffers because the player's 4-second buffer empties before the next chunk arrives.",
-          "Mzansi Stream's 4K edges sit at NAPAfrica in Johannesburg and Cape Town, the same exchange Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN and Vodacom peer at. End-to-end latency from edge to TV is typically <15ms. The buffer never empties, so the picture never freezes.",
+          "Mzansi Stream's pages describe CDN edges at NAPAfrica in Johannesburg and Cape Town, the same exchange many SA fibre networks peer at. This page does not quote an end-to-end latency or claim the picture never freezes.",
         ],
       },
       {
@@ -1546,7 +1546,7 @@ export const PILLARS: Pillar[] = [
     ],
     related: [
       { label: "Best IPTV for SuperSport without DStv", href: "/iptv-supersport-without-dstv/" },
-      { label: "IPTV with no buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
+      { label: "IPTV buffering on SA fibre", href: "/iptv-no-buffering-south-africa/" },
       { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/iptv-vumatel-openserve-frogfoot/" },
       { label: "IPTV Firestick install guide", href: "/iptv-firestick-south-africa/" },
       { label: "IPTV for Samsung Smart TV", href: "/iptv-samsung-smart-tv/" },
@@ -1566,11 +1566,11 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV No Buffering South Africa — Stable 4K Streams",
     metaDescription:
-      "Stable IPTV with no buffering in South Africa. NAPAfrica-peered CDN, <15ms latency, 4K SuperSport that doesn't drop mid-match. Setup checklist + provider comparison.",
+      "Why IPTV buffers in South Africa, and what to check at home. NAPAfrica-peered CDN. Setup checklist. No measured latency or uptime on this page.",
     lead:
       "Buffering is the single most common complaint in every SA IPTV WhatsApp group. The fix usually isn't your fibre — it's the provider's CDN, your home Wi-Fi, or your streaming app's buffer settings. This guide walks through every cause in order of likelihood, and explains why Mzansi Stream's 4K SuperSport feed survives PSL counter-attacks where most overseas IPTVs freeze.",
     trustLine:
-      "NAPAfrica-peered · <15ms latency on Vumatel, Openserve, Frogfoot, Octotel · 4K stable",
+      "NAPAfrica-peered CDN · Vumatel, Openserve, Frogfoot, Octotel · test 4K on your line",
     cta: {
       primary: {
         label: "Test a stable 4K stream — Free 24h trial →",
@@ -1640,7 +1640,7 @@ export const PILLARS: Pillar[] = [
         h2: "How to vet an IPTV provider for stability before you pay",
         bullets: [
           "Ask: 'Do you peer at NAPAfrica?' — if the answer is no or vague, walk away.",
-          "Ask: 'What's the SLA on 4K streams during a PSL match?' — a real provider quotes 99.9%+ uptime.",
+          "Ask what happens if a PSL stream drops. A written answer is more useful than an uptime slogan.",
           "Demand a 24-hour free trial of the full channel pack. If the trial is restricted, the production feed is probably worse.",
           "Test on a Saturday afternoon during a SuperSport PSL fixture and a Premier League fixture. Peak load reveals every weakness.",
           "Watch a 4K stream + a 1080p stream simultaneously on two devices. Real CDNs handle this without breaking sweat.",
@@ -1674,7 +1674,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Does Mzansi Stream guarantee no buffering?",
-        a: "No streaming service can guarantee zero buffering — your home Wi-Fi and ISP-side congestion are out of any provider's control. Mzansi Stream guarantees its CDN side: NAPAfrica peering, <15ms edge latency, and 99.9%+ stream uptime measured monthly.",
+        a: "No. Home Wi-Fi and ISP congestion are outside any provider's control, and this page does not quote a latency or an uptime percentage.",
       },
     ],
     related: [

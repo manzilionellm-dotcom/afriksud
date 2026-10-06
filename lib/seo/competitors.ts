@@ -203,7 +203,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "SuperSport PSL", them: "Not included", us: "Included" },
       { label: "Premier League", them: "Not included", us: "Included" },
       { label: "Decoder", them: "R1,000+ upfront", us: "None" },
-      { label: "International channels", them: "Limited", us: "50+ countries" },
+      { label: "International channels", them: "Limited", us: "International folders" },
       { label: "4K", them: "Not supported", us: "All plans" },
     ],
     theirStrengths: ["No monthly fee", "Decent free-to-air SA channel mix"],
