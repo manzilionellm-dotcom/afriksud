@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { SA_ABROAD_COUNTRIES } from "../../../lib/seo/sa-abroad";
 import { HubListing } from "../../../components/seo/HubListing";
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: {
       canonical: localeUrl(locale as Locale, "/sa-abroad/"),
-      languages: hreflangFor("/sa-abroad/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/sa-abroad/"),
     },
     openGraph: {
       type: "website",

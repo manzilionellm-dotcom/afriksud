@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import { SADC_SLUGS, getSadcCountry } from "../../../../lib/seo/sadc-countries";
 import { LanguageProvider } from "../../../../components/client/LanguageProvider";
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.meta.description,
     alternates: {
       canonical: localeUrl(locale as Locale, `/sadc/${country}/`),
-      languages: hreflangFor(`/sadc/${country}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/sadc/${country}/`),
     },
     openGraph: {
       type: "article",

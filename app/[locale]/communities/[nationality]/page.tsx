@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   COMMUNITY_SLUGS,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.meta.description,
     alternates: {
       canonical,
-      languages: hreflangFor(`/communities/${nationality}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/communities/${nationality}/`),
     },
     openGraph: {
       type: "article",

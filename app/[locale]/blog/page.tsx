@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangFor, localeUrl } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { BLOG_POSTS } from "../../../lib/seo/blog-posts";
 import { LongformShell } from "../../../components/client/LongformShell";
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Guides for IPTV in South Africa, SADC and the SA diaspora — WhatsApp order, DStv alternatives, Firestick, rugby from London, PSL, Premier League and load shedding.",
     alternates: {
       canonical: localeUrl(locale as Locale, "/blog/"),
-      languages: hreflangFor("/blog/"),
+      languages: hreflangForProgrammatic(locale as Locale, "/blog/"),
     },
     openGraph: {
       type: "website",

@@ -3,7 +3,7 @@
 import type { MetadataRoute } from "next";
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "../lib/locales";
 import { indexableCanonicalLocale } from "../lib/seo/indexability";
-import { hreflangFor, localeUrl } from "../lib/url";
+import { hreflangFor, hreflangForProgrammatic, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
@@ -30,14 +30,17 @@ function withAlternates(
   path: string,
   priority: number,
   changeFrequency: SitemapEntry["changeFrequency"] = "weekly",
-  lastModified?: Date
+  lastModified?: Date,
+  languages?: Record<string, string>
 ): SitemapEntry {
   return {
     url: localeUrl(DEFAULT_LOCALE, path),
     ...(lastModified ? { lastModified } : {}),
     changeFrequency,
     priority,
-    alternates: { languages: hreflangFor(path) },
+    alternates: {
+      languages: languages ?? hreflangForProgrammatic(DEFAULT_LOCALE, path)!,
+    },
   };
 }
 
@@ -51,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: SitemapEntry[] = [];
 
   // Home — every locale variant gets its own entry, anchored on en-za as canonical.
-  entries.push(withAlternates("/", 1.0));
+  entries.push(withAlternates("/", 1.0, "weekly", buildDate, hreflangFor("/")));
   for (const locale of LOCALES.filter((l) => l !== DEFAULT_LOCALE)) {
     entries.push({
       url: localeUrl(locale, "/"),
