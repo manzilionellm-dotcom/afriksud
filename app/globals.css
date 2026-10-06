@@ -1397,6 +1397,10 @@ h1 {
 }
 
 /* CITIES */
+.cityName {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
 .cityText {
   color: var(--muted);
   line-height: 1.6;
@@ -1478,6 +1482,15 @@ h1 {
   color: var(--muted);
   line-height: 1.6;
   font-size: 14px;
+}
+/* Open Citation Hooks (h3 + p), same card as the old accordion. */
+.faqItem > h3 {
+  margin: 0;
+  padding: 18px 20px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.35;
 }
 
 /* FOOTER */

@@ -68,8 +68,7 @@ export function HeroV2() {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={HERO_POSTER_SRC}
-            alt=""
-            aria-hidden="true"
+            alt="Mzansi Stream hero poster for Best IPTV South Africa"
             decoding="async"
             fetchPriority="high"
             className="h-full w-full object-cover"

@@ -1,0 +1,21 @@
+# USINE — Journal run-016 (sprint AIO, HTML brut sans JS) — journal de la PR #36, renuméroté au portage (run-015 était déjà pris sur main)
+
+# Branch: cursor/aio-sales-html-b41d
+# Objectif: Citation Hooks SSR, JSON-LD FAQPage+Product unique, llms.txt régénéré. 0 2e FAQPage.
+
+## T0 (mesuré)
+
+- [x] git `main` @ `b0efdf9`
+- [x] Live `https://afriksud.vercel.app/` → 308 `https://iptvmzansi.com/` → 307 `/en-za` 200
+- [x] HTML brut `/en-za`: 41 h2/h3, 1 question (« Why choose Mzansi Stream? ») suivie d'un p court, 0 hook 40–60, 7 scripts ld+json, 1 FAQPage, 0 Product, 1 img `alt=""`, 0 video, `public/llms.txt` déjà présent (5 Q courtes)
+
+## Travail
+
+- [x] `aio.config.json` + `lib/aio.ts` + `scripts/aio-llms.mjs` + `scripts/aio-check.mjs`
+- [x] FAQ en-ZA ouverte en SSR (`AioCitationFaq`), accordéon retiré sur cette locale seulement
+- [x] Layout: un seul graphe FAQPage (10) + Product (5) sur `/` et `/en-za`
+- [x] Alt hero depuis le H1 voisin
+- [x] `pnpm aio:llms` → 10 Q/R
+- [x] `pnpm build` exit 0 (1679 pages) · `node scripts/qa-gates.mjs` exit 0
+- [x] `pnpm start` + `node scripts/aio-check.mjs http://localhost:3000/` exit 0 (11 hooks, 1 FAQPage, 5 Product, images 1, videos 0, llms.txt 200)
+- [x] `/en-za/dstv-alternative` et `/af` : pas de second graphe AIO (`aio-jsonld` absent)

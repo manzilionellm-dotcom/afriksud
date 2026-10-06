@@ -69,3 +69,9 @@
 
 ## run-015 (FAB WhatsApp SSR, PR #37)
 - **A41.** (numérotée A36 dans la PR #37) FAB SSR unique dans `app/[locale]/layout.tsx`. Numéro figé `447307410512` (pas d'env). Prefill neutre par langue : toutes les locales `en-*` partagent l'anglais ; `pt-mz` prend le portugais. L'override WaPrefill du blog London reste sur les CTA de cette page, pas sur le FAB (mission 04/10 : message neutre, 0 essai). Accueil mesuré = `/en-za`. Page `/fr/...` mesurée = `/fr/devices`.
+
+## run-015 (sprint AIO, PR #36 — porté en vague 2)
+- **A42.** (A36 dans la PR #36) Sprint AIO : le JSON-LD FAQPage + Product est émis par le layout seulement si `x-mz-path` est `/` ou `/en-za`, pour ne pas poser un 2e FAQPage sur les pillars. Le middleware copie ce header sur la requête (`headers()` ne voit pas les response headers).
+- **A43.** (A37 dans la PR #36) Les 10 réponses Citation Hook reprennent des faits déjà publiés (plans.ts, dict FAQ, pillar légal, llms.txt). « From R99 » reste le claim du titre ; les totaux restent R199 / R449 / R699 / R1199. Le mensuel affiché `Math.round(1199/12)` = R100 n'est pas réécrit en R99.
+- **A44.** (A38 dans la PR #36) HowTo homepage non ajouté : les guides device ont déjà un HowTo. Pas de transcription : le `<video>` hero n'est pas dans le HTML sans JS.
+- **A45.** Portage #36 : les allégations « sources channels via licensed partners » et « operates under a registered SA business name » ne sont pas reprises (LOI 3, non prouvées ; llms.txt de main dit déjà que les données CIPC sont des placeholders). La réponse légale et la section Compliance reprennent la formulation de main.
