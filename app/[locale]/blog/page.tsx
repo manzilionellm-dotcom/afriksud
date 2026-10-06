@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Guides for IPTV in South Africa, SADC and the SA diaspora — WhatsApp order, DStv alternatives, Firestick, rugby from London, PSL, Premier League and load shedding.",
     alternates: {
-      canonical: localeUrl(locale as Locale, "/blog/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/blog/"),
+      canonical: localeUrl(locale as Locale, "/blog"),
+      languages: hreflangForProgrammatic(locale as Locale, "/blog"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/blog/"),
+      url: localeUrl(locale as Locale, "/blog"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
     robots: robotsForProgrammatic(locale as Locale),
@@ -62,7 +62,7 @@ export default async function BlogIndex({ params }: Props) {
               .map((p) => (
               <li key={p.slug} className="blogIndexItem">
                 <h2>
-                  <Link href={`/${locale}/blog/${p.slug}/`}>{p.title}</Link>
+                  <Link href={`/${locale}/blog/${p.slug}`}>{p.title}</Link>
                 </h2>
                 <p className="blogIndexLead">{p.lead}</p>
                 <p className="blogIndexMeta">

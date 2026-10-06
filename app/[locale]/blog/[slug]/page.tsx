@@ -53,12 +53,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.metaDescription,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/blog/${slug}/`),
-      languages: hreflangForProgrammatic(locale as Locale, `/blog/${slug}/`),
+      canonical: localeUrl(locale as Locale, `/blog/${slug}`),
+      languages: hreflangForProgrammatic(locale as Locale, `/blog/${slug}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/blog/${slug}/`),
+      url: localeUrl(locale as Locale, `/blog/${slug}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: post.title,
       description: post.metaDescription,
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const author = AUTHORS[DEFAULT_AUTHOR_SLUG];
   const loc = locale as Locale;
-  const canonical = localeUrl(loc, `/blog/${slug}/`);
+  const canonical = localeUrl(loc, `/blog/${slug}`);
   const dateModified = post.dateModified ?? post.datePublished;
 
   const cta = post.cta ?? {
@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(loc, "/") },
-      { "@type": "ListItem", position: 2, name: "Blog", item: localeUrl(loc, "/blog/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: localeUrl(loc, "/blog") },
       {
         "@type": "ListItem",
         position: 3,
@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }: Props) {
         <article className="section">
           <header className="longformHeader">
             <p className="longformEyebrow">
-              <Link href={`/${locale}/blog/`}>Blog</Link>
+              <Link href={`/${locale}/blog`}>Blog</Link>
               {" · "}
               <time dateTime={post.datePublished}>{post.datePublished}</time>
             </p>

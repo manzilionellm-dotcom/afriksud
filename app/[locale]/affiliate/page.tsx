@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       "Earn R200 per paying customer you refer to Mzansi Stream — 20% commission, monthly payout via EFT or Mobile Money.",
     alternates: {
-      canonical: localeUrl(locale as Locale, "/affiliate/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/affiliate/"),
+      canonical: localeUrl(locale as Locale, "/affiliate"),
+      languages: hreflangForProgrammatic(locale as Locale, "/affiliate"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/affiliate/"),
+      url: localeUrl(locale as Locale, "/affiliate"),
       locale: LOCALE_META[locale as Locale].ogLocale,
     },
     robots: robotsForProgrammatic(locale as Locale),

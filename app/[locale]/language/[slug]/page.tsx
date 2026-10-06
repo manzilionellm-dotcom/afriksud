@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // is the only indexable version. Other locales 301 here (next.config)
   // and, if reached, canonicalise without joining a noindex hreflang cluster.
   const owner = data.preferredLocale as Locale;
-  const canonical = localeUrl(owner, `/language/${slug}/`);
+  const canonical = localeUrl(owner, `/language/${slug}`);
   const selfCanonical = locale === owner;
   return {
     title: data.title,

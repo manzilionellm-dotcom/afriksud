@@ -80,7 +80,7 @@ export function CountriesSection() {
           <ul>
             {COMMUNITIES.map((c) => (
               <li key={c.slug}>
-                <a href={`/${lang}/communities/${c.slug}/`}>
+                <a href={`/${lang}/communities/${c.slug}`}>
                   <span aria-hidden="true">{c.flag}</span> {c.demonym} TV in
                   South Africa
                 </a>

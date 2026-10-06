@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/sa-abroad/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/sa-abroad/"),
+      canonical: localeUrl(locale as Locale, "/sa-abroad"),
+      languages: hreflangForProgrammatic(locale as Locale, "/sa-abroad"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/sa-abroad/"),
+      url: localeUrl(locale as Locale, "/sa-abroad"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -50,9 +50,9 @@ export default async function SaAbroadHub({ params }: Props) {
       h1="South African TV abroad — every country covered"
       lead="If you're a South African abroad, Mzansi Stream is a no-decoder way to try SuperSport, SABC, kykNET and Mzansi Magic folders. This page does not publish a country count."
       itemListName="Countries with SA TV via Mzansi Stream"
-      basePath="/sa-abroad/"
+      basePath="/sa-abroad"
       items={SA_ABROAD_COUNTRIES.map((c) => ({
-        href: `/sa-abroad/${c.slug}/`,
+        href: `/sa-abroad/${c.slug}`,
         label: `South African TV in ${c.name}`,
         caption:
           c.slug === "uk"
@@ -68,27 +68,27 @@ export default async function SaAbroadHub({ params }: Props) {
           links: [
             {
               label: "Watch the Springboks from London",
-              href: "/blog/watch-springboks-from-london/",
+              href: "/blog/watch-springboks-from-london",
             },
             {
               label: "Rugby kickoff times from London",
-              href: "/blog/rugby-kickoff-times-london/",
+              href: "/blog/rugby-kickoff-times-london",
             },
             {
               label: "Best IPTV setup in the UK",
-              href: "/blog/iptv-uk-firestick-smart-tv-sa-sports/",
+              href: "/blog/iptv-uk-firestick-smart-tv-sa-sports",
             },
             {
               label: "IPTV buffering on UK Wi-Fi",
-              href: "/blog/iptv-buffering-uk-wifi/",
+              href: "/blog/iptv-buffering-uk-wifi",
             },
             {
               label: "Switch from a dead IPTV seller while abroad",
-              href: "/blog/switch-iptv-seller-abroad-whatsapp/",
+              href: "/blog/switch-iptv-seller-abroad-whatsapp",
             },
             {
               label: "IPTV categories are not broadcast licences",
-              href: "/blog/iptv-uk-categories-not-licences/",
+              href: "/blog/iptv-uk-categories-not-licences",
             },
           ],
         },

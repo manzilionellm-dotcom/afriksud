@@ -26,14 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: data.title,
     description: data.metaDescription,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/legal/${topic}/`),
+      canonical: localeUrl(locale as Locale, `/legal/${topic}`),
       languages: data.needsOwnerInput
         ? undefined
-        : hreflangForProgrammatic(locale as Locale, `/legal/${topic}/`),
+        : hreflangForProgrammatic(locale as Locale, `/legal/${topic}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/legal/${topic}/`),
+      url: localeUrl(locale as Locale, `/legal/${topic}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: data.title,
       description: data.metaDescription,

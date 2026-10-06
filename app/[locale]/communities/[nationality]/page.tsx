@@ -34,14 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Per B.5.4, /communities/* canonicalises to en-za regardless of the
   // user's locale prefix — the audience lives in SA.
-  const canonical = localeUrl("en-za", `/communities/${nationality}/`);
+  const canonical = localeUrl("en-za", `/communities/${nationality}`);
 
   return {
     title: data.meta.title,
     description: data.meta.description,
     alternates: {
       canonical,
-      languages: hreflangForProgrammatic(locale as Locale, `/communities/${nationality}/`),
+      languages: hreflangForProgrammatic(locale as Locale, `/communities/${nationality}`),
     },
     openGraph: {
       type: "article",
@@ -81,7 +81,7 @@ export default async function CommunityPage({ params }: Props) {
       audienceType: `${data.demonym} community in South Africa`,
       geographicArea: { "@type": "Country", name: "South Africa" },
     },
-    url: localeUrl("en-za", `/communities/${nationality}/`),
+    url: localeUrl("en-za", `/communities/${nationality}`),
     knowsAbout: [
       `${data.homeCountry} television`,
       ...data.channels.slice(0, 5).map((c) => c.latin || c.native),
@@ -98,13 +98,13 @@ export default async function CommunityPage({ params }: Props) {
         "@type": "ListItem",
         position: 2,
         name: "Communities",
-        item: localeUrl(locale as Locale, "/communities/"),
+        item: localeUrl(locale as Locale, "/communities"),
       },
       {
         "@type": "ListItem",
         position: 3,
         name: `${data.demonym} TV`,
-        item: localeUrl("en-za", `/communities/${nationality}/`),
+        item: localeUrl("en-za", `/communities/${nationality}`),
       },
     ],
   };
@@ -224,14 +224,14 @@ export default async function CommunityPage({ params }: Props) {
                 if (!getSACity(slug)) return null;
                 return (
                   <li key={city}>
-                    <Link href={`/${locale}/cities/${slug}/`}>
+                    <Link href={`/${locale}/cities/${slug}`}>
                       IPTV in {city}
                     </Link>
                   </li>
                 );
               })}
               <li>
-                <Link href={`/${locale}/dstv-alternative/`}>
+                <Link href={`/${locale}/dstv-alternative`}>
                   DStv alternative — 2026 guide
                 </Link>
               </li>

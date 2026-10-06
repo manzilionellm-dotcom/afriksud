@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: data.metaTitle,
     description: data.metaDescription,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/devices/${device}/`),
-      languages: hreflangForProgrammatic(locale as Locale, `/devices/${device}/`),
+      canonical: localeUrl(locale as Locale, `/devices/${device}`),
+      languages: hreflangForProgrammatic(locale as Locale, `/devices/${device}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/devices/${device}/`),
+      url: localeUrl(locale as Locale, `/devices/${device}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: data.metaTitle,
       description: data.metaDescription,

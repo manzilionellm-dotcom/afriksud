@@ -41,12 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: data.meta.title,
     description: data.meta.description,
     alternates: {
-      canonical: localeUrl(locale as Locale, `/sadc/${country}/`),
-      languages: hreflangForProgrammatic(locale as Locale, `/sadc/${country}/`),
+      canonical: localeUrl(locale as Locale, `/sadc/${country}`),
+      languages: hreflangForProgrammatic(locale as Locale, `/sadc/${country}`),
     },
     openGraph: {
       type: "article",
-      url: localeUrl(locale as Locale, `/sadc/${country}/`),
+      url: localeUrl(locale as Locale, `/sadc/${country}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: data.meta.title,
       description: data.meta.description,
@@ -106,7 +106,7 @@ export default async function SadcCountryPage({ params }: Props) {
     },
   ];
 
-  const canonical = localeUrl(locale as Locale, `/sadc/${country}/`);
+  const canonical = localeUrl(locale as Locale, `/sadc/${country}`);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -149,7 +149,7 @@ export default async function SadcCountryPage({ params }: Props) {
     "@id": `${canonical}#breadcrumb`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale as Locale, "/") },
-      { "@type": "ListItem", position: 2, name: "SADC", item: localeUrl(locale as Locale, "/sadc/") },
+      { "@type": "ListItem", position: 2, name: "SADC", item: localeUrl(locale as Locale, "/sadc") },
       { "@type": "ListItem", position: 3, name: data.name, item: canonical },
     ],
   };

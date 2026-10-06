@@ -80,7 +80,7 @@ export function InternationalSection() {
         <ul>
           {SA_ABROAD_COUNTRIES.map((c) => (
             <li key={c.slug}>
-              <a href={`/${lang}/sa-abroad/${c.slug}/`} hrefLang={c.preferredCanonicalLocale}>
+              <a href={`/${lang}/sa-abroad/${c.slug}`} hrefLang={c.preferredCanonicalLocale}>
                 <span aria-hidden="true">{c.flag}</span> SA TV in {c.name}
               </a>
             </li>

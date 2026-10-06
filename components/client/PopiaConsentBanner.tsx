@@ -121,7 +121,7 @@ export function PopiaConsentBanner() {
     <div className="popiaBanner" role="dialog" aria-label="Cookie consent">
       <p className="popiaBannerText">
         {copy.body}{" "}
-        <a href={`/${lang}/legal/cookies/`} className="popiaBannerLink">
+        <a href={`/${lang}/legal/cookies`} className="popiaBannerLink">
           Cookie policy
         </a>
       </p>

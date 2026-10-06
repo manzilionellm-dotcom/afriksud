@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/devices/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/devices/"),
+      canonical: localeUrl(locale as Locale, "/devices"),
+      languages: hreflangForProgrammatic(locale as Locale, "/devices"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/devices/"),
+      url: localeUrl(locale as Locale, "/devices"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -49,17 +49,17 @@ export default async function DevicesHub({ params }: Props) {
   // Firestick) so the hub is a complete index for crawlers.
   const items = [
     {
-      href: "/iptv-firestick-south-africa/",
+      href: "/iptv-firestick-south-africa",
       label: "IPTV on Amazon Firestick 4K",
       caption: "Pillar guide",
     },
     {
-      href: "/iptv-samsung-smart-tv/",
+      href: "/iptv-samsung-smart-tv",
       label: "IPTV on Samsung Smart TV (Tizen)",
       caption: "Pillar guide",
     },
     ...DEVICES.map((d) => ({
-      href: `/devices/${d.slug}/`,
+      href: `/devices/${d.slug}`,
       label: d.h1.replace(" — South Africa 2026", ""),
     })),
   ];
@@ -71,7 +71,7 @@ export default async function DevicesHub({ params }: Props) {
       h1="Install IPTV on any device — 10 device guides"
       lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet, PC. Pick your device for the exact app, install steps and troubleshooting."
       itemListName="Device install guides"
-      basePath="/devices/"
+      basePath="/devices"
       intro={[
         "All guides use the same Mzansi Stream M3U / Xtream Codes credentials — one subscription covers every device on your network.",
       ]}

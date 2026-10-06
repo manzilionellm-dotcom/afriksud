@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: localeUrl(locale as Locale, "/vs/"),
-      languages: hreflangForProgrammatic(locale as Locale, "/vs/"),
+      canonical: localeUrl(locale as Locale, "/vs"),
+      languages: hreflangForProgrammatic(locale as Locale, "/vs"),
     },
     openGraph: {
       type: "website",
-      url: localeUrl(locale as Locale, "/vs/"),
+      url: localeUrl(locale as Locale, "/vs"),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title,
       description,
@@ -50,9 +50,9 @@ export default async function VsHub({ params }: Props) {
       h1="Mzansi Stream vs every major SA streaming service"
       lead="Honest 2026 comparisons. No fabricated star ratings, no hidden affiliate links. Pick the competitor you're weighing against to see the price gap, channel overlap and what each side genuinely does better."
       itemListName="Side-by-side comparisons"
-      basePath="/vs/"
+      basePath="/vs"
       items={COMPETITORS.map((c) => ({
-        href: `/vs/${c.slug}/`,
+        href: `/vs/${c.slug}`,
         label: `Mzansi Stream vs ${c.name}`,
         caption: c.priceMonthly,
       }))}
