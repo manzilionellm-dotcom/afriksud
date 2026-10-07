@@ -21,4 +21,4 @@
 - [x] exclus du sitemap, pages et liens footer inchangés (joignables)
 - [x] placeholders et jargon visiteur retirés, phrase neutre WhatsApp
 - [x] lint + qa-gates + build
-- [ ] PR draft vers main (jamais merge, jamais ready)
+- [x] PR draft vers main (jamais merge, jamais ready) : https://github.com/manzilionellm-dotcom/afriksud/pull/42
