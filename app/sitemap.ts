@@ -8,7 +8,7 @@ import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
 import { BLOG_POSTS, BLOG_SLUGS } from "../lib/seo/blog-posts";
-import { LEGAL_SLUGS, LEGAL_TOPICS } from "../lib/seo/legal";
+import { LEGAL_SLUGS, isNoindexLegal } from "../lib/seo/legal";
 import { SA_LANGUAGE_PAGES } from "../lib/seo/sa-languages";
 import { SA_ABROAD_SLUGS, SA_ABROAD_COUNTRIES } from "../lib/seo/sa-abroad";
 import { COMMUNITY_SLUGS } from "../lib/seo/communities";
@@ -43,12 +43,6 @@ function withAlternates(
     },
   };
 }
-
-// Skip indexing the noindex legal pages from the sitemap so Google
-// doesn't waste crawl budget on placeholder content.
-const indexableLegalSlugs = LEGAL_TOPICS.filter((t) => !t.needsOwnerInput).map(
-  (t) => t.slug
-);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: SitemapEntry[] = [];
@@ -163,9 +157,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   void BLOG_SLUGS;
 
-  // Legal — only the ones with finalised copy (skip placeholder pages).
+  // popia, terms and about stay reachable and linked, but out of the sitemap.
   for (const slug of LEGAL_SLUGS) {
-    if (!indexableLegalSlugs.includes(slug)) continue;
+    if (isNoindexLegal(slug)) continue;
     entries.push(withAlternates(`/legal/${slug}`, 0.4, "yearly"));
   }
 

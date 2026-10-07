@@ -225,7 +225,7 @@ export const PILLARS: Pillar[] = [
         id: "methods",
         h2: "Every payment method we accept",
         bullets: [
-          "EFT (manual bank transfer) — slowest (1-4 hours business hours), zero fees, full POPIA-compliant audit trail.",
+          "EFT (manual bank transfer) — slowest (1-4 hours business hours), zero fees, and you keep the bank reference.",
           "Ozow — instant EFT via OTP, <2 minutes, supports Capitec / Standard / FNB / Nedbank / Absa / Investec.",
           "SnapScan — QR code, <60 seconds, comes off your linked debit/credit card.",
           "Zapper — QR code, <60 seconds, EFT-funded.",
@@ -288,7 +288,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is paying for IPTV via EFT safe under POPIA?",
-        a: "Yes. We are POPIA-compliant, collect only the data needed to deliver your subscription, and never share your payment details with third parties.",
+        a: "An EFT shares the payment reference and the name on the transfer. The privacy page explains what we collect. Questions go to WhatsApp (+44 7307 410512).",
       },
       {
         q: "Can I pay in cash?",
@@ -482,7 +482,7 @@ export const PILLARS: Pillar[] = [
         h2: "The short answer",
         paragraphs: [
           "IPTV — Internet Protocol Television — is a delivery technology. This page is not legal advice. Copyright concerns the unauthorised distribution of copyrighted content (films, series, channel feeds) without the rights-holder's licence, under the Copyright Act 98 of 1978 (as amended), not the delivery technology itself.",
-          "A legitimate IPTV provider in SA in 2026 sources its content via licensed partners, accepts traceable payment, operates a real business under POPIA, and discloses its information officer. An illegitimate provider does none of those things — they accept anonymous crypto via a Telegram channel, change names every 6 months, and never answer the licensing question.",
+          "A provider you can question on WhatsApp, with traceable payment and a written refund page, is easier to check than an anonymous Telegram channel that only takes crypto and changes names every 6 months. This page does not state that Mzansi Stream holds channel licences.",
         ],
       },
       {
@@ -490,19 +490,19 @@ export const PILLARS: Pillar[] = [
         h2: "The legal framework in 2026",
         paragraphs: [
           "Four pieces of SA legislation are relevant to IPTV: (1) the Copyright Act 98 of 1978 (governing distribution rights), (2) the Electronic Communications Act 36 of 2005 (regulating broadcasting), (3) the Protection of Personal Information Act 4 of 2013 (POPIA) (governing how subscriber data is handled), and (4) the Consumer Protection Act 68 of 2008 (governing the subscriber relationship).",
-          "There is no SA law that bans 'IPTV' as a category. The legal exposure for an IPTV provider arises specifically when content is redistributed without licence. The legal exposure for a subscriber is far smaller — SA enforcement focuses on distributors, not end-users, and there has been no reported prosecution of an individual SA IPTV subscriber in 2024-2026.",
+          "There is no SA law that bans 'IPTV' as a category. Copyright questions concern unauthorised distribution of protected content. This page does not report prosecutions or a subscriber risk score.",
         ],
       },
       {
         id: "what-makes-legit",
         h2: "What makes an IPTV provider legitimate in 2026?",
         bullets: [
-          "Sources content via named, licensed partners — not anonymous reseller chains.",
-          "Operates under a registered SA business name (CIPC searchable).",
-          "POPIA-compliant — has a published Information Officer and privacy policy.",
+          "Will tell you, on WhatsApp, which folders are in the line-up before you pay.",
+          "Gives you a way to ask for company details before you pay.",
+          "Publishes a privacy page and a WhatsApp number you can use to ask about personal information.",
           "Accepts traceable SA payment methods (EFT, SnapScan, Ozow, Capitec Pay), not crypto-only.",
           "Publishes a real WhatsApp / phone support channel staffed by humans.",
-          "Honours the Consumer Protection Act — refunds, cancellations, no auto-debit trap.",
+          "Publishes a refund page and does not auto-debit.",
           "Doesn't claim impossible things ('every channel in the world for R49/month').",
         ],
       },
@@ -512,7 +512,7 @@ export const PILLARS: Pillar[] = [
         bullets: [
           "Crypto-only payments via Telegram — designed to evade KYC and traceability.",
           "Domain that changes every 3-6 months.",
-          "No published business name, no CIPC registration, no address.",
+          "No way to ask who you are paying before you send money.",
           "Claims 'over 50,000 channels' (most will be dead, geo-blocked or duplicate).",
           "Charges under R50/month — unsustainable and signals oversold reseller link.",
           "Refuses to put refund / cancellation terms in writing.",
@@ -525,7 +525,7 @@ export const PILLARS: Pillar[] = [
         h2: "Is it illegal for me as a subscriber?",
         paragraphs: [
           "This page is not legal advice and does not report court statistics or a subscriber risk score. Copyright risk sits with unauthorised distribution of protected content.",
-          "This page does not state that Mzansi Stream holds named channel licences. Operator name, CIPC number and Information Officer are still placeholders on the POPIA page, so they are not repeated here as facts.",
+          "This page does not state that Mzansi Stream holds named channel licences.",
         ],
       },
       {
@@ -548,7 +548,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is Mzansi Stream a legitimate IPTV provider?",
-        a: "We do not publish a channel-licence schedule on this page. Payment methods shown on the site include EFT, SnapScan, Ozow and Capitec Pay. The POPIA page still has placeholders for the legal entity and Information Officer, so this answer does not repeat them as facts. The refund page describes a 7-day window.",
+        a: "We do not publish a channel-licence schedule on this page. Payment methods shown on the site include EFT, SnapScan, Ozow and Capitec Pay. The refund page describes a 7-day window.",
       },
       {
         q: "What law governs IPTV in South Africa?",
@@ -564,7 +564,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "What's the difference between legitimate and illegitimate IPTV?",
-        a: "Legitimate IPTV: named licensing chain, registered SA business, POPIA-compliant, traceable payment, published support, sustainable pricing. Illegitimate IPTV: crypto-only payment, anonymous Telegram channel, R49/month 'lifetime' deals, no published business name.",
+        a: "Easier to question: traceable payment, a written refund page, and a WhatsApp number that answers. Walk away from crypto-only Telegram channels and R49/month lifetime deals.",
       },
       {
         q: "Is downloading IPTV apps like TiviMate or IPTV Smarters illegal?",
@@ -693,7 +693,7 @@ export const PILLARS: Pillar[] = [
         h2: "Is IPTV legal in South Africa in 2026?",
         paragraphs: [
           "This page is not legal advice and makes no legality or licence claim. IPTV is a delivery technology, like an internet browser; copyright questions concern the unauthorised distribution of protected content. Rights and blackouts still apply, so check the channels and matches you need during the 24-hour trial before you pay.",
-          "Payment methods shown on the site include EFT, SnapScan, Capitec Pay and Ozow. The POPIA page is published, but the Information Officer and legal entity are still placeholders, so they are not stated here as facts. This page does not claim a channel licence.",
+          "Payment methods shown on the site include EFT, SnapScan, Capitec Pay and Ozow. The privacy page is linked from the footer. This page does not claim a channel licence.",
         ],
       },
       {
@@ -1406,7 +1406,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "What if cheap IPTV gets shut down?",
-        a: "Mzansi Stream operates as a legitimate streaming business with a published company entity, POPIA-compliant data handling and named support staff. We're not a flea-market re-seller. The service is built to run year on year.",
+        a: "Ask on WhatsApp before you pay, and use the 24-hour trial. This page does not publish a company registration.",
       },
     ],
     related: [

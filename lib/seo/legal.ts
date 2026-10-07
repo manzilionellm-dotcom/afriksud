@@ -1,7 +1,17 @@
 // lib/seo/legal.ts
-// Skeleton legal pages. Every field tagged `TO_FILL_BY_OWNER` must be
-// populated by the owner / legal counsel before the site goes live —
-// these are placeholders, not legal advice.
+// Legal pages. popia, terms and about stay reachable but noindex,nofollow
+// until real company details are supplied. Do not invent an entity name,
+// CIPC number, address, VAT number or Information Officer.
+
+export const LEGAL_DETAILS_PENDING =
+  "Company details will be published here. For questions, message us on WhatsApp (+44 7307 410512).";
+
+/** Kept out of the sitemap. robots: noindex, nofollow. */
+export const NOINDEX_LEGAL_SLUGS = ["popia", "terms", "about"] as const;
+
+export function isNoindexLegal(slug: string): boolean {
+  return (NOINDEX_LEGAL_SLUGS as readonly string[]).includes(slug);
+}
 
 export type LegalTopic = {
   slug: string;
@@ -19,14 +29,14 @@ export const LEGAL_TOPICS: LegalTopic[] = [
   {
     slug: "popia",
     title: "Privacy Policy (POPIA)",
-    metaDescription: "Mzansi Stream POPIA-compliant privacy policy — data collected, retention, rights, complaints to the Information Regulator.",
+    metaDescription: "Mzansi Stream privacy policy — data collected, retention, rights, complaints to the Information Regulator.",
     lead: "This policy explains how Mzansi Stream collects, uses and protects personal information under the Protection of Personal Information Act 4 of 2013 (POPIA). It applies to every visitor of iptvmzansi.com and every Mzansi Stream subscriber.",
     needsOwnerInput: true,
     sections: [
       {
         h2: "Who we are",
         body: [
-          "Mzansi Stream is operated by [TO_FILL_BY_OWNER: Legal entity name], registered in South Africa under CIPC number [TO_FILL_BY_OWNER]. Our registered address is [TO_FILL_BY_OWNER]. Our Information Officer is [TO_FILL_BY_OWNER: Name + email].",
+          LEGAL_DETAILS_PENDING,
         ],
       },
       {
@@ -39,26 +49,26 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "Why we collect it",
         body: [
-          "To activate and maintain your subscription, to send the M3U link and setup guide, to respond to support questions, to process payments, and to comply with applicable tax and accounting law.",
+          "To activate and maintain your subscription, to send the setup guide, to respond to support questions, to process payments, and to keep the records tax and accounting rules require.",
         ],
       },
       {
         h2: "How long we keep it",
         body: [
-          "Payment records: 5 years (SARS retention rule). WhatsApp conversation: 12 months. Email correspondence: 24 months. After these periods data is permanently deleted from our systems.",
+          "Payment records: 5 years. WhatsApp conversation: 12 months. Email correspondence: 24 months. After these periods data is deleted from our systems.",
         ],
       },
       {
         h2: "Your rights under POPIA",
         body: [
           "You may access the information we hold on you, request correction or deletion, object to processing, and lodge a complaint with the Information Regulator (https://inforegulator.org.za).",
-          "Requests should be sent to [TO_FILL_BY_OWNER: privacy@iptvmzansi.com] — we'll respond within 30 days as required by POPIA.",
+          "Requests can be sent on WhatsApp (+44 7307 410512).",
         ],
       },
       {
         h2: "Cross-border data transfer",
         body: [
-          "Some of our processors (payment gateway, email provider) may be located outside South Africa. We only use providers that offer POPIA-equivalent protection.",
+          "Some processors (payment gateway, email provider) may be located outside South Africa. Ask on WhatsApp (+44 7307 410512) if you need to know which ones.",
         ],
       },
     ],
@@ -73,7 +83,7 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "The service",
         body: [
-          "Mzansi Stream is an internet-delivered TV streaming service. We supply an M3U playlist link, EPG access and WhatsApp-based setup support. Devices, internet connection and the player app of your choice are not part of the service.",
+          "Mzansi Stream is an internet-delivered TV streaming service. We supply playlist access, an EPG and WhatsApp-based setup support. Devices, internet connection and the player app of your choice are not part of the service.",
         ],
       },
       {
@@ -92,13 +102,13 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "Acceptable use",
         body: [
-          "One paid connection per household account, unless you have purchased a multi-screen plan. Sharing your M3U link publicly will void your subscription without refund. We may revoke service for misuse without notice.",
+          "One paid connection per household account, unless you have purchased a multi-screen plan. Sharing your playlist link publicly will void your subscription without refund. We may revoke service for misuse without notice.",
         ],
       },
       {
         h2: "Governing law",
         body: [
-          "These terms are governed by the laws of the Republic of South Africa. Disputes will be heard in the courts of [TO_FILL_BY_OWNER: jurisdiction].",
+          "These terms are governed by the laws of the Republic of South Africa.",
         ],
       },
     ],
@@ -125,7 +135,7 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "Exceptions",
         body: [
-          "Refunds outside the 7-day window are at our discretion and are not guaranteed. Refunds are not offered where the M3U link has been shared with third parties.",
+          "Refunds outside the 7-day window are at our discretion and are not guaranteed. Refunds are not offered where the playlist link has been shared with third parties.",
         ],
       },
     ],
@@ -179,19 +189,19 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "The team",
         body: [
-          "Founded by [TO_FILL_BY_OWNER: founder name + LinkedIn]. [TO_FILL_BY_OWNER: bio — 2-3 sentences].",
+          LEGAL_DETAILS_PENDING,
         ],
       },
       {
         h2: "Company information",
         body: [
-          "Legal name: [TO_FILL_BY_OWNER]. CIPC registration: [TO_FILL_BY_OWNER]. VAT number: [TO_FILL_BY_OWNER]. Registered address: [TO_FILL_BY_OWNER].",
+          LEGAL_DETAILS_PENDING,
         ],
       },
       {
         h2: "How to reach us",
         body: [
-          "WhatsApp: see the floating button on every page. Email: [TO_FILL_BY_OWNER: hello@iptvmzansi.com].",
+          "WhatsApp: +44 7307 410512 (also the floating button on every page).",
         ],
       },
     ],

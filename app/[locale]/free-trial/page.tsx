@@ -15,7 +15,7 @@ export async function generateMetadata({
   return {
     title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
     description:
-      "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public M3U. Not official DStv.",
+      "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public playlist. Not official DStv.",
     alternates: {
       canonical: TRIAL_CANONICAL,
       // x-default is this page, not the homepage. Other locales canonicalise
@@ -27,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
       description:
-        "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public M3U. Not official DStv.",
+        "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public playlist. Not official DStv.",
       url: TRIAL_CANONICAL,
       type: "website",
       locale: "en_ZA",
@@ -71,24 +71,24 @@ const faqs = [
     a: "Firestick / Android TV → 7 MOTION TV. Phone → IPTV Smarters Pro. Samsung/LG → Smart IPTV. We guide on WhatsApp.",
   },
   {
-    q: "Public M3U?",
-    a: "Never. Private WhatsApp setup only.",
+    q: "Is there a public playlist?",
+    a: "No. Setup stays on WhatsApp.",
   },
   {
     q: "What should I test?",
     a: "One SA entertainment/news category, one sports window that matters (rugby/football), and buffering at your real watch time.",
   },
   {
-    q: "Locale of this page?",
-    a: "This trial page is en-za English for South Africa + diaspora. Keep ZA spelling/tone light (Mzansi, braai-night soft metaphors OK — no slang overkill).",
+    q: "Which language is this page?",
+    a: "English, written for South Africa and for South Africans abroad.",
   },
   {
-    q: "Prices on page?",
-    a: "No invented prices. Current options on WhatsApp.",
+    q: "Where are the prices?",
+    a: "Current options on WhatsApp.",
   },
   {
-    q: "Fake star ratings?",
-    a: "No AggregateRating schema. FAQPage only.",
+    q: "Do you show star ratings?",
+    a: "This page does not show star ratings.",
   },
 ] as const;
 
@@ -111,12 +111,12 @@ const steps = [
   {
     n: "2",
     t: "Availability",
-    d: "We confirm today’s trial window on WhatsApp — capacity-aware, soft-sell.",
+    d: "We confirm today’s trial window on WhatsApp.",
   },
   {
     n: "3",
     t: "Private setup",
-    d: "7 MOTION TV / Smarters / Smart IPTV. No public M3U.",
+    d: "7 MOTION TV / Smarters / Smart IPTV. No public playlist.",
   },
   {
     n: "4",
@@ -134,7 +134,7 @@ export default function FreeTrialPage() {
       />
 
       <p className="text-sm font-medium text-emerald-700">
-        Soft trial · en-ZA · WhatsApp only · not official DStv
+        24h trial · South Africa · WhatsApp only · not official DStv
       </p>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
         Mzansi IPTV free trial — start on WhatsApp
@@ -160,7 +160,7 @@ export default function FreeTrialPage() {
           href="/en-za"
           className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-6 py-3.5 text-base font-semibold"
         >
-          Back to en-ZA hub
+          Back to South Africa
         </Link>
       </div>
 
@@ -249,8 +249,7 @@ export default function FreeTrialPage() {
       <section className="mt-14 rounded-3xl bg-neutral-900 px-6 py-10 text-center text-white">
         <h2 className="text-2xl font-bold">Message WhatsApp to start</h2>
         <p className="mx-auto mt-3 max-w-md text-neutral-300">
-          City + device · locale en-za. Current options on chat — no invented
-          prices here.
+          City + device. Current options on WhatsApp.
         </p>
         <a
           href={WA_HREF}
@@ -262,7 +261,7 @@ export default function FreeTrialPage() {
         </a>
         <nav className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
           <Link href="/en-za" className="hover:text-white">
-            en-ZA hub
+            South Africa
           </Link>
           <Link href="/en-za/iptv-supersport-without-dstv" className="hover:text-white">
             Sports

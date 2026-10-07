@@ -133,9 +133,7 @@ free trial.
 
 ## Compliance
 
-Privacy copy is at /en-za/legal/popia. Legal name, CIPC number and
-Information Officer on that page are still owner placeholders — do not
-treat them as filled in.
+Privacy copy is at /en-za/legal/popia.
 
 IPTV is a delivery method. This file does not state that Mzansi Stream
 holds broadcast or redistribution licences.

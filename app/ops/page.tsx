@@ -16,7 +16,7 @@ export default function OpsPage() {
   return (
     <main style={{ maxWidth: 720, margin: "0 auto", padding: 24, fontFamily: "sans-serif" }}>
       <h1>Scripts — un numéro 447307410512</h1>
-      <p>Page noindex. Copier-coller. Pas d’envoi auto.</p>
+      <p>Copy by hand. Nothing is sent automatically.</p>
       {SCRIPTS.map(([label, text]) => (
         <section key={label} style={{ marginTop: 24, border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
           <h2 style={{ color: "#128C7E", fontSize: 14 }}>{label}</h2>

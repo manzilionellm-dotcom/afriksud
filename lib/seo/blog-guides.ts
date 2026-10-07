@@ -157,7 +157,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Do I need to email anything?",
-        a: "No. Mzansi Stream does not use mailto checkout. Payment proof and credentials stay on WhatsApp.",
+        a: "No. Payment proof and credentials stay on WhatsApp.",
       },
       {
         q: "What if the trial buffers on my fibre?",
@@ -220,7 +220,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "households",
         h2: "Three typical South African households",
         body: [
-          "These are patterns we see in the chat — not invented user counts. Match the one that looks like your lounge.",
+          "These are patterns we see in the chat. Match the one that looks like your lounge.",
         ],
         bullets: [
           "Township / suburb family: one Smart TV on fibre + one phone for late PSL. Often one connection is enough if nobody watches two live matches at once.",
@@ -501,7 +501,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "lte",
         h2: "LTE and 5G when fibre is dark",
         body: [
-          "When the ONT is dead, a phone hotspot or a dedicated LTE/5G router is the fallback. Prefer HD over 4K on mobile data — 4K SuperSport is hungrier and we are not going to invent a GB-per-hour figure we have not metered on your SIM.",
+          "When the ONT is dead, a phone hotspot or a dedicated LTE/5G router is the fallback. Prefer HD over 4K on mobile data — 4K SuperSport uses more data. Check your operator app for the number on your SIM.",
           "Rain, Vodacom and MTN all work as a backup path for Mzansi Stream because the CDN is on the public internet, not inside a DStv smartcard. The LTE/5G guide covers hotspot hygiene; this page is about deciding the fallback before 20:00 on a derby night.",
         ],
       },
@@ -769,7 +769,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Pin both chats",
-            text: "DStv confirmation in one thread, Mzansi Stream credentials in the other. No mailto, no lost SMS.",
+            text: "DStv confirmation in one thread, Mzansi Stream credentials in the other. Keep the written reply in the chat.",
           },
         ],
       },
@@ -777,7 +777,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "money",
         h2: "What the year looks like if the switch sticks",
         body: [
-          "DStv Premium is R899 × 12 = R10,788, plus a decoder in the R1,500+ band. Mzansi Stream's 12-month plan is R1,199 once. Those figures are already on the SuperSport and vs pages — this checklist does not invent a new saving. It just stops you paying both for a quarter because you cancelled on the wrong day.",
+          "DStv Premium is R899 × 12 = R10,788, plus a decoder in the R1,500+ band. Mzansi Stream's 12-month plan is R1,199 once. Those figures are already on the SuperSport and vs pages. The point is to stop paying both for a quarter because you cancelled on the wrong day.",
         ],
       },
       {
@@ -799,7 +799,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Do I email DStv to cancel?",
-        a: "No. Use MyDStv or WhatsApp 060 060 3788 and keep the written reply. Mzansi Stream also does not use mailto.",
+        a: "No. Use MyDStv or WhatsApp 060 060 3788 and keep the written reply.",
       },
       {
         q: "When do I return the decoder?",
@@ -862,14 +862,14 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "Phone hotspot vs a dedicated LTE router",
         body: [
           "A phone hotspot is enough for one Firestick or one phone player. It shares battery and heat with the match. A dedicated LTE/5G router is calmer if load shedding is a lifestyle and fibre is a bonus.",
-          "We do not rank Rain vs Vodacom vs MTN with invented speed tests. Use the SIM that already has coverage in your suburb. If the trial buffers only on hotspot and not on fibre, say that in WhatsApp — it is a radio issue.",
+          "Use the SIM that already has coverage in your suburb. If the trial buffers only on hotspot and not on fibre, say that in WhatsApp — it is a radio issue.",
         ],
       },
       {
         id: "hd",
         h2: "HD on mobile, 4K on fibre",
         body: [
-          "4K SuperSport wants a stable pipe. On LTE, pick the 1080p variant if the player exposes it, or let the stream step down. Inventing a '2 GB per half' claim would violate the no-fabrication rule — watch your operator app if you need a data number.",
+          "4K SuperSport wants a stable pipe. On LTE, pick the 1080p variant if the player exposes it, or let the stream step down. Watch your operator app if you need a data number.",
         ],
       },
       {
@@ -920,7 +920,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Should I buy extra data for a match weekend?",
-        a: "That is your operator plan. We will not invent a gigabyte forecast. Check the operator app after one half and decide.",
+        a: "That is your operator plan. Check the operator app after one half and decide.",
       },
       {
         q: "Rain 5G vs fibre for IPTV?",

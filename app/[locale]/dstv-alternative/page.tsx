@@ -84,7 +84,7 @@ const FAQ = [
   },
   {
     q: "Is IPTV legal in South Africa?",
-    a: "This page is not legal advice and makes no legality claim. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences. The POPIA page is linked from the footer and still contains owner placeholders.",
+    a: "This page is not legal advice and makes no legality claim. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences. The privacy page is linked from the footer.",
   },
   {
     q: "What's included in the 24h free trial?",

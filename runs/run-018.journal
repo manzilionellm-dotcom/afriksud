@@ -1,0 +1,24 @@
+# USINE — Journal run-018 (noindex legal placeholders)
+
+# Branch: fix/noindex-legal-placeholders
+# Objectif: /legal/popia, /terms, /about restent joignables et liées,
+# robots noindex,nofollow, hors sitemap. Placeholders visibles et bandeau
+# ⚠️ remplacés par une phrase neutre. 0 donnée légale inventée.
+# WhatsApp +44 7307 410512. 0 AggregateRating. 0 M3U publique.
+
+## T0 (mesuré, 2026-10-07)
+
+- [x] `main` = `ba0521b` (origin/main identique)
+- [x] `lib/seo/legal.ts` : popia/terms/about `needsOwnerInput: true` avec `[TO_FILL_BY_OWNER]`
+- [x] `app/[locale]/legal/[topic]/page.tsx` : bandeau ⚠️ + robots `{ index: false, follow: true }`
+- [x] `app/sitemap.ts` : ces 3 slugs déjà exclus via `needsOwnerInput`
+- [x] Pied de page : liens about / popia / terms dans `LocalizedSections.tsx` (conservés)
+- [x] 0 promesse « 99.9 % / anti-freeze / never buffers » dans le texte visiteur
+
+## Travail
+
+- [x] robots noindex,nofollow (meta + X-Robots-Tag) sur popia, terms, about
+- [x] exclus du sitemap, pages et liens footer inchangés (joignables)
+- [x] placeholders et jargon visiteur retirés, phrase neutre WhatsApp
+- [x] lint + qa-gates + build
+- [ ] PR draft vers main (jamais merge, jamais ready)
