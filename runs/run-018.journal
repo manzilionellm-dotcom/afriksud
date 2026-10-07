@@ -22,3 +22,4 @@
 - [x] placeholders et jargon visiteur retirés, phrase neutre WhatsApp
 - [x] lint + qa-gates + build
 - [x] PR draft vers main (jamais merge, jamais ready) : https://github.com/manzilionellm-dotcom/afriksud/pull/42
+- [x] Suite QA : CTA sans jeton soft-sell ni prix €5, GET /ops → 404, llms.txt sans /en-za/legal/popia
