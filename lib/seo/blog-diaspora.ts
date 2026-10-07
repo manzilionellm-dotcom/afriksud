@@ -76,7 +76,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     keyFacts: [
       "Springbok Tests and URC sit in SuperSport Rugby / Variety / Grandstand folders on the Mzansi Stream pack — confirm names on the trial.",
       "SAST is UTC+2 all year. A 17:00 SAST kickoff is 15:00 GMT in winter and 16:00 BST in summer.",
-      "24-hour trial on WhatsApp +44 7307 410512. No card. No mailto.",
+      "24-hour trial on WhatsApp +44 7307 410512. No card.",
     ],
     cta: {
       label: "WhatsApp the London rugby trial — +44 7307 410512 →",
@@ -296,7 +296,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "How do I get the setup steps?",
-        a: "WhatsApp +44 7307 410512 with the exact model. The 24-hour trial includes the taps. No mailto.",
+        a: "WhatsApp +44 7307 410512 with the exact model. The 24-hour trial includes the taps.",
       },
     ],
     relatedLinks: [
@@ -311,11 +311,11 @@ export const BLOG_DIASPORA: BlogPost[] = [
     slug: "rugby-kickoff-times-london",
     title: "Rugby kickoff times in London — SAST to GMT and BST",
     metaDescription:
-      "Convert SuperSport rugby kickoffs from SAST to London time. SAST is UTC+2 all year. 17:00 SAST = 15:00 GMT or 16:00 BST. No invented 2026 fixtures.",
+      "Convert SuperSport rugby kickoffs from SAST to London time. SAST is UTC+2 all year. 17:00 SAST = 15:00 GMT or 16:00 BST.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
-      "The question from every South African in London is not 'is the Test on' — it is 'what time do I tell the pub'. South Africa stays on SAST (UTC+2) all year. The UK switches GMT and BST. This page is the conversion, not a fixture list we would have to invent.",
+      "The question from every South African in London is not 'is the Test on' — it is 'what time do I tell the pub'. South Africa stays on SAST (UTC+2) all year. The UK switches GMT and BST. This page is the conversion, not a fixture list.",
     keyFacts: [
       "SAST = UTC+2 with no daylight-saving change.",
       "UK winter (GMT, UTC+0): subtract 2 hours from SAST. UK summer (BST, UTC+1): subtract 1 hour.",
@@ -402,7 +402,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "not-a-calendar",
         h2: "Why there is no scraped 2026 fixture grid",
         body: [
-          "A fake calendar would violate the house rule against invented facts. World Rugby, URC and SuperSport publish lists; they change. This page stays useful in March and in October because it only teaches the offset.",
+          "World Rugby, URC and SuperSport publish lists; they change. This page stays useful in March and in October because it only teaches the offset.",
         ],
       },
     ],
@@ -429,7 +429,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Will you text me the next Bok kickoff?",
-        a: "WhatsApp +44 7307 410512 after the trial is loaded and we can read the same EPG you have. We will not invent a season list on this page.",
+        a: "WhatsApp +44 7307 410512 after the trial is loaded and we can read the same EPG you have. This page does not list a season.",
       },
       {
         q: "Does the playlist EPG show London time?",
@@ -483,7 +483,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "isps",
         h2: "Virgin, BT, Sky, EE, TalkTalk — what to tell WhatsApp",
         body: [
-          "We do not publish invented peak-hour charts per UK ISP. We do need the name. A trial message that says 'UK Wi-Fi' wastes a round. 'Virgin in Hackney, Firestick 4K Max' is a diagnosis.",
+          "We do need the ISP name. A trial message that says 'UK Wi-Fi' wastes a round. 'Virgin in Hackney, Firestick 4K Max' is a diagnosis.",
         ],
         bullets: [
           "Virgin Media — often strong throughput; still put sport on 5 GHz or Ethernet if the lounge is far from the hub.",
@@ -547,7 +547,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Do I need a new router?",
-        a: "Only after 5 GHz + Ethernet + buffer fail. We do not invent a UK SKU list here.",
+        a: "Only after 5 GHz + Ethernet + buffer fail. This page does not list UK hardware models.",
       },
       {
         q: "Does Mzansi Stream peer in London?",
@@ -584,7 +584,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     lead:
       "The WhatsApp order walkthrough already on this blog assumes you are in South Africa with EFT and SnapScan. This page is the abroad version: the playlist 401'd on a Friday night in London, the old seller is gone, and you still want SuperSport Rugby tomorrow. 24-hour trial first. Pay on a rail you can actually use from the UK.",
     keyFacts: [
-      "24-hour trial on WhatsApp +44 7307 410512 — no card, no mailto.",
+      "24-hour trial on WhatsApp +44 7307 410512 — no card.",
       "Say you are abroad, name the city, the dead-app symptom, and the device. Do not send OTPs or ID.",
       "UK-reachable rails already published on diaspora pages: Visa, Mastercard, PayPal, Wise — not a ZA EFT you cannot originate.",
     ],
@@ -676,14 +676,14 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "legal",
         h2: "You are switching a playlist, not buying a licence",
         body: [
-          "A new M3U is not an exclusive SuperSport or Sky contract. Read the categories-not-licences guide if that distinction is why you hesitated. Soft version: trial the folders, then pay.",
+          "A new playlist is not an exclusive SuperSport or Sky contract. Read the categories-not-licences guide if that distinction is why you hesitated. Trial the folders, then pay.",
         ],
       },
     ],
     faq: [
       {
         q: "Can I get a 24-hour IPTV trial on WhatsApp from the UK?",
-        a: "Yes. WhatsApp +44 7307 410512. Device + city + '24-hour trial'. No card. No mailto.",
+        a: "Yes. WhatsApp +44 7307 410512. Device + city + '24-hour trial'. No card.",
       },
       {
         q: "My seller vanished and the Test is tomorrow. What first?",
@@ -695,7 +695,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Should I email support instead?",
-        a: "No. Conversion on this site is WhatsApp only. There is no published mailto for activation.",
+        a: "No. Message us on WhatsApp (+44 7307 410512).",
       },
       {
         q: "Do you need my passport because I am not in South Africa?",
@@ -730,7 +730,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     keyFacts: [
       "A folder named SuperSport Rugby or a UK sports category is a label in a playlist — not an exclusive licence we can sell you.",
       "Confirm the folders you care about on a 24-hour trial. If they are empty, walk away.",
-      "The SA legal pillar remains the ZA law page. This page does not invent Ofcom rulings.",
+      "The SA legal pillar remains the ZA law page. This page does not state Ofcom rulings.",
     ],
     cta: {
       label: "Trial the folders on WhatsApp — +44 7307 410512 →",
@@ -765,7 +765,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "what-we-do-not-claim",
         h2: "Claims you will not find on these pages",
         body: [
-          "No exclusive UK rights. No 'official broadcaster' badge. No fabricated court outcomes. No AggregateRating. No invented subscriber counts.",
+          "No exclusive UK rights. No 'official broadcaster' badge. No fabricated court outcomes.",
         ],
         bullets: [
           "We do not sell Sky, TNT Sports, or SuperSport licences.",
@@ -841,11 +841,11 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         q: "Where is the South Africa legal write-up?",
-        a: "The pillar 'Is IPTV legal in South Africa' and the 2026 blog post. Those pages are ZA. This page is the diaspora soft framing.",
+        a: "The pillar 'Is IPTV legal in South Africa' and the 2026 blog post. Those pages are ZA. This page is the diaspora version.",
       },
       {
         q: "How do I start without emailing a lawyer or the company?",
-        a: "WhatsApp +44 7307 410512 for the 24-hour trial. No mailto on this conversion path.",
+        a: "WhatsApp +44 7307 410512 for the 24-hour trial.",
       },
     ],
     relatedLinks: [

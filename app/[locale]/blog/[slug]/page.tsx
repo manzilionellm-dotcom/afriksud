@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }: Props) {
             keyFacts={
               post.keyFacts ?? [
                 "From R99/month on the 12-month plan. 24-hour free trial, no credit card.",
-                "Activated on WhatsApp — no mailto, no call centre queue.",
+                "Activated on WhatsApp, without a call centre queue.",
               ]
             }
           />

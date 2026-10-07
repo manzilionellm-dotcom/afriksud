@@ -37,7 +37,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "London (LON-1)",
     timezone: "UTC / UTC+1 BST — 1-2 hours behind SAST",
     localCurrency: "GBP",
-    localPriceNote: "From the equivalent of ~£5/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~£5/month in ZAR",
   },
   {
     slug: "australia",
@@ -49,7 +49,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Sydney (SYD-1)",
     timezone: "UTC+8 to UTC+11 — 6-9 hours ahead of SAST",
     localCurrency: "AUD",
-    localPriceNote: "From the equivalent of ~AU$8/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~AU$8/month in ZAR",
   },
   {
     slug: "new-zealand",
@@ -61,7 +61,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Sydney (SYD-1) and Auckland peering",
     timezone: "UTC+12 — 10 hours ahead of SAST",
     localCurrency: "NZD",
-    localPriceNote: "From the equivalent of ~NZ$9/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~NZ$9/month in ZAR",
   },
   {
     slug: "usa",
@@ -73,7 +73,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Ashburn (IAD-1) and Los Angeles (LAX-1)",
     timezone: "UTC-5 to UTC-10 — 5-10 hours behind SAST",
     localCurrency: "USD",
-    localPriceNote: "From the equivalent of ~US$6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~US$6/month in ZAR",
   },
   {
     slug: "canada",
@@ -87,7 +87,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Ashburn (IAD-1) and Los Angeles (LAX-1)",
     timezone: "UTC-4 to UTC-8 — 6-10 hours behind SAST",
     localCurrency: "CAD",
-    localPriceNote: "From the equivalent of ~CA$8/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~CA$8/month in ZAR",
   },
   {
     slug: "uae",
@@ -99,7 +99,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+4 — 2 hours ahead of SAST",
     localCurrency: "AED",
-    localPriceNote: "From the equivalent of ~AED25/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~AED25/month in ZAR",
   },
   {
     slug: "germany",
@@ -113,7 +113,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Frankfurt (FRA-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "ireland",
@@ -125,7 +125,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "London (LON-1) and Dublin peering",
     timezone: "UTC / UTC+1 IST — 1-2 hours behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "netherlands",
@@ -137,7 +137,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Amsterdam (AMS-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "belgium",
@@ -151,7 +151,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Amsterdam (AMS-1) and Brussels peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "switzerland",
@@ -165,7 +165,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Frankfurt (FRA-1) and Zurich peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "CHF",
-    localPriceNote: "From the equivalent of ~CHF8/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~CHF8/month in ZAR",
   },
   {
     slug: "singapore",
@@ -177,7 +177,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Singapore (SIN-1)",
     timezone: "UTC+8 — 6 hours ahead of SAST",
     localCurrency: "SGD",
-    localPriceNote: "From the equivalent of ~SG$8/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~SG$8/month in ZAR",
   },
   {
     slug: "saudi-arabia",
@@ -189,7 +189,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+3 — 1 hour ahead of SAST",
     localCurrency: "SAR",
-    localPriceNote: "From the equivalent of ~SAR25/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~SAR25/month in ZAR",
   },
   {
     slug: "qatar",
@@ -201,7 +201,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+3 — 1 hour ahead of SAST",
     localCurrency: "QAR",
-    localPriceNote: "From the equivalent of ~QAR25/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~QAR25/month in ZAR",
   },
   {
     slug: "mauritius",
@@ -213,7 +213,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Johannesburg (JNB-1) — closest SA edge serves Mauritius",
     timezone: "UTC+4 — 2 hours ahead of SAST",
     localCurrency: "MUR",
-    localPriceNote: "From the equivalent of ~MUR300/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~MUR300/month in ZAR",
   },
   {
     slug: "portugal",
@@ -227,7 +227,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Lisbon (LIS-1) and Amsterdam (AMS-1)",
     timezone: "UTC / UTC+1 — 1-2 hours behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "israel",
@@ -239,7 +239,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Frankfurt (FRA-1) and Tel Aviv peering",
     timezone: "UTC+2 / UTC+3 — same as SAST / 1 hour ahead",
     localCurrency: "ILS",
-    localPriceNote: "From the equivalent of ~₪25/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~₪25/month in ZAR",
   },
   {
     slug: "spain",
@@ -251,7 +251,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Madrid (MAD-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "thailand",
@@ -263,7 +263,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Singapore (SIN-1)",
     timezone: "UTC+7 — 5 hours ahead of SAST",
     localCurrency: "THB",
-    localPriceNote: "From the equivalent of ~฿200/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~฿200/month in ZAR",
   },
   {
     // Tasmania-style note: France isn't a major SA diaspora destination by
@@ -280,7 +280,7 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     edgeRegion: "Paris (CDG-1) and Frankfurt (FRA-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR (TO_FILL_BY_OWNER for live FX)",
+    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
 ];
 
@@ -298,7 +298,7 @@ export function saAbroadFaq(data: SaAbroadCountry): { q: string; a: string }[] {
     },
     {
       q: `What time is a South African rugby kickoff in ${data.name}?`,
-      a: `${data.timezone}. For London-style conversion (SAST → GMT/BST) see the rugby kickoff-times guide. We do not invent a fixture calendar here.`,
+      a: `${data.timezone}. For London-style conversion (SAST → GMT/BST) see the rugby kickoff-times guide. This page does not list fixtures.`,
     },
     {
       q: `What device should I use in ${data.name}?`,
@@ -310,7 +310,7 @@ export function saAbroadFaq(data: SaAbroadCountry): { q: string; a: string }[] {
     },
     {
       q: `How do I get a 24-hour trial from ${data.name}?`,
-      a: `WhatsApp +44 7307 410512 (wa.me/447307410512). City, device, and “24-hour trial”. No card. No mailto.`,
+      a: `WhatsApp +44 7307 410512 (wa.me/447307410512). City, device, and “24-hour trial”. No card.`,
     },
     {
       q: `My old IPTV seller died while I was already in ${data.name}. Now what?`,
