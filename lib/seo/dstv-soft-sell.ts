@@ -1,18 +1,14 @@
-// lib/seo/dstv-soft-sell.ts
-// Owner-supplied commercial copy for the PR #14 ZA blog guides.
-// Rendered by DstvSoftSellCta. Do not paraphrase.
+// Quiet WhatsApp close for the ZA blog guides.
+// No price invented here. No uptime or licence claim.
+// Phone stays +44 7307 410512 / https://wa.me/447307410512.
 
-export const DSTV_SOFT_SELL_MID =
-  "DStv is the official, polished route. IPTV is the leaner alternative when the bill hurts and you mainly want live sport + more channels — with a playlist/app setup instead of a dish.";
+export const DSTV_GUIDE_MID =
+  "If you want to see how a playlist looks on the device you already use, message WhatsApp on +44 7307 410512 with your device and the leagues you follow. A 24-hour trial is available if you want to look first.";
 
-export const DSTV_SOFT_SELL_END_HEADLINE =
-  "DStv too expensive for what you watch?";
+export const DSTV_GUIDE_END_HEADLINE = "Questions before you decide?";
 
-export const DSTV_SOFT_SELL_END_BODY =
-  "WhatsApp us your device + which leagues matter — we’ll be straight about fit and set up a 24h trial if it makes sense.";
+export const DSTV_GUIDE_END_BODY =
+  "Send your device and the leagues that matter. We reply on WhatsApp (+44 7307 410512) and can open a 24-hour trial if you ask for one. The trial does not need a card.";
 
-export const DSTV_SOFT_SELL_END_PRICE =
-  "From about €5/mo on 12 months, one-time pay options, no sneaky auto-renew.";
-
-export const DSTV_SOFT_SELL_WA_MESSAGE =
-  "Hi! DStv is too expensive for what I watch. Device: [Firestick / Samsung / LG / Hisense]. Leagues that matter: [PSL / Premier League / Rugby / Cricket]. Straight talk on fit — 24h trial if it makes sense.";
+export const DSTV_GUIDE_WA_MESSAGE =
+  "Hi. Device: [Firestick / Samsung / LG / Hisense]. Leagues: [PSL / Premier League / Rugby / Cricket]. I would like to ask about a 24-hour trial.";

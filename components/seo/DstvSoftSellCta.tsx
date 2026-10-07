@@ -1,19 +1,18 @@
-// components/seo/DstvSoftSellCta.tsx
-// Mid-article aside + end-of-guide commercial close for the PR #14
-// ZA blog guides. WhatsApp href goes through generateWhatsAppLink
-// (SITE.whatsappPhone → 447307410512). No mailto. No AggregateRating.
+// Mid-article note + end-of-guide WhatsApp close for the ZA blog guides.
+// Href is always https://wa.me/447307410512. No mailto. No AggregateRating.
 
 import { SITE } from "../shared/site";
-import { generateWhatsAppLink } from "../shared/utils";
+import { waMeLink } from "../shared/utils";
 import {
-  DSTV_SOFT_SELL_END_BODY,
-  DSTV_SOFT_SELL_END_HEADLINE,
-  DSTV_SOFT_SELL_END_PRICE,
-  DSTV_SOFT_SELL_MID,
-  DSTV_SOFT_SELL_WA_MESSAGE,
+  DSTV_GUIDE_END_BODY,
+  DSTV_GUIDE_END_HEADLINE,
+  DSTV_GUIDE_MID,
+  DSTV_GUIDE_WA_MESSAGE,
 } from "../../lib/seo/dstv-soft-sell";
 
 type Variant = "mid" | "end";
+
+const WA_HUMAN = "+44 7307 410512";
 
 export function DstvSoftSellCta({
   variant,
@@ -22,18 +21,19 @@ export function DstvSoftSellCta({
   variant: Variant;
   slug: string;
 }) {
-  const ref = `Blog-${slug}-DstvSoftSell-${variant === "mid" ? "Mid" : "End"}`;
-  const waHref = generateWhatsAppLink(DSTV_SOFT_SELL_WA_MESSAGE, "", ref);
+  const ref = `Blog-${slug}-Wa-${variant === "mid" ? "Mid" : "End"}`;
+  const waHref = waMeLink(DSTV_GUIDE_WA_MESSAGE, ref);
   const waDisplay = `https://wa.me/${SITE.whatsappPhone}`;
 
   if (variant === "mid") {
     return (
-      <aside
-        className="longformSection longformWarning"
-        aria-label="DStv or IPTV"
-        data-dstv-soft-sell="mid"
-      >
-        <p style={{ margin: 0 }}>{DSTV_SOFT_SELL_MID}</p>
+      <aside className="longformSection" aria-label="WhatsApp trial">
+        <p style={{ margin: 0 }}>{DSTV_GUIDE_MID}</p>
+        <p style={{ margin: "12px 0 0" }}>
+          <a href={waHref} target="_blank" rel="noreferrer">
+            WhatsApp {WA_HUMAN}
+          </a>
+        </p>
       </aside>
     );
   }
@@ -41,9 +41,8 @@ export function DstvSoftSellCta({
   return (
     <section
       className="longformSection"
-      id="dstv-soft-sell"
-      aria-labelledby="dstv-soft-sell-h"
-      data-dstv-soft-sell="end"
+      id="guide-whatsapp"
+      aria-labelledby="guide-whatsapp-h"
       style={{
         border: "1px solid rgba(255,184,28,0.35)",
         borderRadius: 14,
@@ -52,34 +51,27 @@ export function DstvSoftSellCta({
           "linear-gradient(180deg, rgba(255,184,28,0.08) 0%, rgba(255,255,255,0.02) 100%)",
       }}
     >
-      <h2 id="dstv-soft-sell-h" style={{ marginTop: 0 }}>
-        {DSTV_SOFT_SELL_END_HEADLINE}
+      <h2 id="guide-whatsapp-h" style={{ marginTop: 0 }}>
+        {DSTV_GUIDE_END_HEADLINE}
       </h2>
-      <p>{DSTV_SOFT_SELL_END_BODY}</p>
+      <p>{DSTV_GUIDE_END_BODY}</p>
       <p>
-        <a
-          href={waHref}
-          target="_blank"
-          rel="noreferrer"
-          data-track-ref={ref}
-          data-track-placement={`Blog-${slug}-DstvSoftSell-End`}
-        >
+        <a href={waHref} target="_blank" rel="noreferrer">
           {waDisplay}
         </a>
         {" · "}
+        {WA_HUMAN}
+        {" · "}
         <a href={SITE.domain}>{SITE.domain}</a>
       </p>
-      <p>{DSTV_SOFT_SELL_END_PRICE}</p>
       <div className="ctaRow">
         <a
           href={waHref}
           className="btnPrimary"
           target="_blank"
           rel="noreferrer"
-          data-track-ref={ref}
-          data-track-placement={`Blog-${slug}-DstvSoftSell-End-Btn`}
         >
-          WhatsApp us your device + leagues →
+          WhatsApp {WA_HUMAN}
         </a>
       </div>
     </section>
