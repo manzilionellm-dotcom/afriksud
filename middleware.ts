@@ -72,6 +72,10 @@ export function middleware(req: NextRequest) {
     .toLowerCase();
   if (host.endsWith(".vercel.app")) {
     res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  } else if (/^\/[^/]+\/legal\/(popia|terms|about)$/.test(pathname)) {
+    // Placeholder legal pages (see lib/seo/legal.ts): header mirrors the
+    // meta robots so the noindex holds even if the HTML is cached.
+    res.headers.set("X-Robots-Tag", "noindex");
   }
   return res;
 }

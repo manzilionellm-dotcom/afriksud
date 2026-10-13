@@ -1,0 +1,23 @@
+# USINE — Journal run-019 (portage PR #42 sur ccr-ee3184e3-j339yo)
+
+# Branche de travail : ccr-ee3184e3-j339yo (= origin/main ba0521b au départ)
+# Objectif : trier les branches bots non fusionnées et déposer ce qui a de la
+# valeur. Jamais de push main, jamais de --force, jamais de PR.
+
+## T0 (mesuré, 2026-10-12)
+
+- [x] `git fetch origin` ; merge-base de `fix/noindex-legal-placeholders` = `ba0521b` (= main)
+- [x] `fix/lot1-redirects-404` : la ligne `/firestick → /en-za/iptv-firestick-south-africa` est déjà dans `next.config.js` de main → DÉJÀ DANS MAIN
+- [x] `seo/alias-404-free-trial` : redirects /trial /essai /pricing /prix /compare, `ci.yml` et `<Link>` déjà dans main → DÉJÀ DANS MAIN
+- [x] `feat/free-trial-wa` : `app/[locale]/free-trial/page.tsx` de main est une version plus avancée (generateMetadata, canonical en-za) → DÉJÀ DANS MAIN
+- [x] `/legal/popia`, `/terms`, `/about` : texte visiteur contient `[TO_FILL_BY_OWNER: …]` + bandeau ⚠️ ; aucune entité juridique → placeholders réels, noindex justifié (meta déjà en main, sitemap déjà exclu)
+
+## Travail
+
+- [x] `git merge --no-ff --no-commit origin/fix/noindex-legal-placeholders` (fusion propre)
+- [x] Remis à main : `app/ops/page.tsx`, `components/seo/DstvSoftSellCta.tsx`, `components/seo/DiasporaSoftSellCta.tsx`, `lib/seo/dstv-soft-sell.ts` (voir A49)
+- [x] `robots` legal = `noindex, follow` ; `X-Robots-Tag: noindex` sur popia/terms/about
+- [x] `public/llms.txt` == sortie de `node scripts/aio-llms.mjs` (vérifié par diff)
+- [x] Gates : `pnpm install --frozen-lockfile` 0 · `pnpm build` 0 · `pnpm lint` 0 · `pnpm type-check` 0 · `node scripts/qa-gates.mjs` 0 (+ `--self-test` 0) · `pnpm aio:check http://localhost:3717/en-za` 0
+- [x] Vérif. serveur local (`next start`) : `/en-za/legal/popia` → 200, `X-Robots-Tag: noindex`, `<meta name="robots" content="noindex, follow">`, 0 `TO_FILL_BY_OWNER` ; sitemap = legal/refund + legal/cookies seulement ; `/llms.txt` 0 mention de `legal/popia` ; `/en-za/free-trial` 0 jargon ; `/ops` 200 (inchangé)
+- [x] Commit « Port fix/noindex-legal-placeholders » + `git push -u origin ccr-ee3184e3-j339yo`

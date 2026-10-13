@@ -197,13 +197,13 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "What the law actually says",
         body: [
           "This page is not legal advice and makes no legality claim. The copyright issue is distributing copyrighted content without authorisation. The Films and Publications Act and the Copyright Act govern what providers can and can't carry.",
-          "A reputable IPTV provider sources its channels via licensed CDNs, transparent middleware partners, and pays for the rights they redistribute.",
+          "This page does not state that Mzansi Stream holds channel licences.",
         ],
       },
       {
         h2: "Mzansi Stream's position",
         body: [
-          "We accept traceable payment (EFT, SnapScan, card). This page does not state a VAT number or a channel licence — those fields are still placeholders on the legal pages.",
+          "We accept traceable payment (EFT, SnapScan, card). This page does not state a VAT number or a channel licence.",
           "We do not promote bypassing geo-blocks for content where rights are clearly held elsewhere. If you're outside SA, a VPN is your decision — we don't ship one.",
         ],
       },
@@ -443,7 +443,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "5. Is the company a real entity?",
         body: [
-          "POPIA compliance, a published Information Officer, a public Terms & Conditions, a real refund policy — these are minimum bar items. Anonymous WhatsApp-only sellers don't tick these boxes.",
+          "Read the refund page and ask on WhatsApp for any company detail you need before you pay. This page does not publish a registration number.",
         ],
       },
       {
@@ -544,14 +544,14 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "What Mzansi Stream is",
         body: [
           "Mzansi Stream is an IPTV streaming service for customers in SA, the SADC region and the SA diaspora worldwide, with live channels and VOD — line-up to confirm on WhatsApp.",
-          "The site publishes a refund / satisfaction policy (7 days) and WhatsApp support. The legal entity, CIPC registration and Information Officer fields on the legal pages are still placeholders, so this page does not state them as facts.",
+          "The site publishes a refund / satisfaction policy (7 days) and WhatsApp support.",
         ],
       },
       {
         h2: "How to verify us before paying",
         body: [
           "Read the refund policy on the site. Ask on WhatsApp for any business detail you need before paying.",
-          "Request the free 24-hour trial. We send the M3U link on WhatsApp. No card. Use the same channel pack as the paid plans for 24 hours.",
+          "Request the free 24-hour trial. We send the setup on WhatsApp. No card. Use the same channel pack as the paid plans for 24 hours.",
           "Pay only after the trial, only via a local SA payment method (EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco). All of these give you fraud / chargeback protection that anonymous crypto-only sellers don't.",
           "Read the refund policy under /legal/refund/.",
         ],
@@ -560,7 +560,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "What Mzansi Stream is not",
         body: [
           "Not a content broadcaster. The channels you watch are sourced from existing broadcaster feeds — we don't produce SuperSport or kykNET content.",
-          "Not a torrent service. The streams are delivered over standard HLS / M3U.",
+          "Not a torrent service. The streams are delivered over standard HLS.",
           "This page makes no legality or licence claim and does not state a company registration.",
         ],
       },
@@ -574,7 +574,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Verified social proof",
         body: [
-          "Mzansi Stream invites every customer to leave a review on HelloPeter and Trustpilot after 30 days of use, with their consent. We do not seed reviews or fabricate aggregateRating schema — this is a POPIA and South African Omnibus Act requirement we take seriously.",
+          "Mzansi Stream invites every customer to leave a review on HelloPeter and Trustpilot after 30 days of use, with their consent.",
           "If you find a third-party site claiming Mzansi Stream has fake reviews, please WhatsApp us with the link. We'll investigate and respond publicly.",
         ],
       },

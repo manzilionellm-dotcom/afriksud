@@ -91,12 +91,9 @@ export default async function AffiliatePage({ params }: Props) {
             and tell us about your audience. We get back to most applicants
             within 24 hours.
           </p>
-          <p className="longformWarning">
-            ⚠️ Programme details (commission rate, payout schedule, cookie
-            window) are subject to change. Final terms are confirmed in
-            writing when your application is approved.{" "}
-            <code>TO_FILL_BY_OWNER</code> if you decide to change the
-            structure.
+          <p>
+            Programme details are confirmed in writing on WhatsApp (+44 7307
+            410512) when your application is approved.
           </p>
         </section>
       </article>
