@@ -7,7 +7,12 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
 import { hreflangForProgrammatic, localeUrl } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
-import { LEGAL_SLUGS, getLegalTopic } from "../../../../lib/seo/legal";
+import {
+  LEGAL_DETAILS_PENDING,
+  LEGAL_SLUGS,
+  getLegalTopic,
+  isNoindexLegal,
+} from "../../../../lib/seo/legal";
 import { LongformShell } from "../../../../components/client/LongformShell";
 
 type Props = { params: Promise<{ locale: string; topic: string }> };
@@ -38,9 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: data.title,
       description: data.metaDescription,
     },
-    robots: data.needsOwnerInput
-      ? // Owner-input pages stay noindex until the placeholders are filled in.
-        { index: false, follow: true }
+    robots: isNoindexLegal(topic)
+      ? { index: false, follow: false }
       : robotsForProgrammatic(locale as Locale),
   };
 }
@@ -58,14 +62,7 @@ export default async function LegalPage({ params }: Props) {
           <p className="longformEyebrow">Legal</p>
           <h1>{data.title}</h1>
           <p className="longformLead">{data.lead}</p>
-          {data.needsOwnerInput ? (
-            <p className="longformWarning">
-              ⚠️ This page contains placeholders marked{" "}
-              <code>TO_FILL_BY_OWNER</code> that must be completed by the
-              owner / legal counsel before going live. The page is
-              currently <code>noindex</code>.
-            </p>
-          ) : null}
+          {data.needsOwnerInput ? <p>{LEGAL_DETAILS_PENDING}</p> : null}
         </header>
 
         {data.sections.map((s) => (

@@ -31,9 +31,8 @@ export function DiasporaSoftSellCta({
   if (variant === "mid") {
     return (
       <aside
-        className="longformSection longformWarning"
+        className="longformSection"
         aria-label="WhatsApp trial from abroad"
-        data-diaspora-soft-sell="mid"
       >
         <p style={{ margin: 0 }}>
           Watching the Boks from {place} is a category-and-setup question —
@@ -61,7 +60,6 @@ export function DiasporaSoftSellCta({
       className="longformSection"
       id="diaspora-whatsapp"
       aria-labelledby="diaspora-whatsapp-h"
-      data-diaspora-soft-sell="end"
       style={{
         border: "1px solid rgba(255,184,28,0.35)",
         borderRadius: 14,

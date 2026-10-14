@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Closer scripts",
+  title: "Not found",
   robots: { index: false, follow: false },
 };
 
-const SCRIPTS = [
+// Internal notes. This route calls notFound() and does not render them.
+const CLOSER_SCRIPTS = [
   ["J+0 essai", "Ville + appareil ? Essai 24 h, pas de carte. Je t'envoie le login Mzansi Stream."],
   ["J+1 relance", "Ça marche chez toi ? Si l'essai est bon, dis-moi le plan (3 / 6 / 12 mois)."],
   ["J+2 dernier jour", "Dernier jour d'essai. Tu veux que j'active quel plan ?"],
@@ -13,16 +15,5 @@ const SCRIPTS = [
 ];
 
 export default function OpsPage() {
-  return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: 24, fontFamily: "sans-serif" }}>
-      <h1>Scripts — un numéro 447307410512</h1>
-      <p>Page noindex. Copier-coller. Pas d’envoi auto.</p>
-      {SCRIPTS.map(([label, text]) => (
-        <section key={label} style={{ marginTop: 24, border: "1px solid #ddd", borderRadius: 12, padding: 16 }}>
-          <h2 style={{ color: "#128C7E", fontSize: 14 }}>{label}</h2>
-          <pre style={{ whiteSpace: "pre-wrap" }}>{text}</pre>
-        </section>
-      ))}
-    </main>
-  );
+  if (CLOSER_SCRIPTS.length >= 0) notFound();
 }

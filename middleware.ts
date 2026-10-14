@@ -70,7 +70,10 @@ export function middleware(req: NextRequest) {
     .split(",")[0]
     .trim()
     .toLowerCase();
-  if (host.endsWith(".vercel.app")) {
+  if (
+    host.endsWith(".vercel.app") ||
+    /^\/[^/]+\/legal\/(popia|terms|about)$/.test(pathname)
+  ) {
     res.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
   return res;
