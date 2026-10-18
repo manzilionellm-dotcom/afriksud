@@ -7,12 +7,14 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { localeUrl } from "../../../../lib/url";
+import { localeUrl, ogImagesFor } from "../../../../lib/url";
 import {
   SA_LANGUAGE_SLUGS,
   getSALanguagePage,
 } from "../../../../lib/seo/sa-languages";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { JsonLd } from "../../../../lib/seo/jsonld";
+import { breadcrumbSchema } from "../../../../lib/seo/breadcrumb";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -45,6 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : undefined,
     },
     openGraph: {
+      images: ogImagesFor(owner),
       type: "article",
       url: canonical,
       locale: LOCALE_META[owner].ogLocale,
@@ -65,6 +68,11 @@ export default async function SALanguagePage({ params }: Props) {
 
   return (
     <LongformShell locale={locale as Locale}>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: data.hero.h1, path: `/language/${slug}` },
+        ])}
+      />
       <article className="section" lang={data.preferredLocale}>
         <header className="longformHeader">
           <h1>{data.hero.h1}</h1>

@@ -61,6 +61,13 @@ export function localeUrl(locale: Locale, path: string = "/"): string {
   return `${SITE_URL}/${locale}${trimmed}`;
 }
 
+/** Generated share card for a locale (app/[locale]/opengraph-image.tsx, built statically). */
+export function ogImagesFor(locale: Locale) {
+  return [
+    { url: `${SITE_URL}/${locale}/opengraph-image`, width: 1200, height: 630, type: "image/png" },
+  ];
+}
+
 /** Build the hreflang alternates map for a path that exists in every locale. */
 export function hreflangFor(path: string): Record<string, string> {
   const map: Record<string, string> = {};

@@ -6,10 +6,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangForProgrammatic, localeUrl } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, ogImagesFor } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { BLOG_POSTS } from "../../../lib/seo/blog-posts";
 import { LongformShell } from "../../../components/client/LongformShell";
+import { JsonLd } from "../../../lib/seo/jsonld";
+import { breadcrumbSchema } from "../../../lib/seo/breadcrumb";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -29,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: hreflangForProgrammatic(locale as Locale, "/blog"),
     },
     openGraph: {
+      images: ogImagesFor(locale as Locale),
       type: "website",
       url: localeUrl(locale as Locale, "/blog"),
       locale: LOCALE_META[locale as Locale].ogLocale,
@@ -43,6 +46,7 @@ export default async function BlogIndex({ params }: Props) {
 
   return (
     <LongformShell locale={locale as Locale}>
+      <JsonLd data={breadcrumbSchema(locale as Locale, [{ name: "Blog", path: "/blog" }])} />
       <article className="section">
         <header className="longformHeader">
           <p className="longformEyebrow">Blog</p>

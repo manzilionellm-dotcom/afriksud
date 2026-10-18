@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { hreflangForProgrammatic, localeUrl } from "../../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, ogImagesFor } from "../../../../lib/url";
 import { robotsForProgrammatic } from "../../../../lib/seo/indexability";
 import {
   LEGAL_DETAILS_PENDING,
@@ -14,6 +14,8 @@ import {
   isNoindexLegal,
 } from "../../../../lib/seo/legal";
 import { LongformShell } from "../../../../components/client/LongformShell";
+import { JsonLd } from "../../../../lib/seo/jsonld";
+import { breadcrumbSchema } from "../../../../lib/seo/breadcrumb";
 
 type Props = { params: Promise<{ locale: string; topic: string }> };
 
@@ -37,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : hreflangForProgrammatic(locale as Locale, `/legal/${topic}`),
     },
     openGraph: {
+      images: ogImagesFor(locale as Locale),
       type: "article",
       url: localeUrl(locale as Locale, `/legal/${topic}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
@@ -57,6 +60,11 @@ export default async function LegalPage({ params }: Props) {
 
   return (
     <LongformShell locale={locale as Locale}>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: data.title, path: `/legal/${topic}` },
+        ])}
+      />
       <article className="section">
         <header className="longformHeader">
           <p className="longformEyebrow">Legal</p>

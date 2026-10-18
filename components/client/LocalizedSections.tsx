@@ -10,6 +10,9 @@ import { SITE } from "../shared/site";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
 import { compareHook } from "../../lib/aio";
+import { usePathname } from "next/navigation";
+import { LiveStatus } from "./LiveStatus";
+import { WA_ARIA_LABEL, fabLang, waNeutralHref } from "../shared/wa-neutral";
 
 function useUA() {
   const [ua, setUA] = useState("");
@@ -404,11 +407,21 @@ export function FooterSection() {
   const { lang } = useLang();
   const t = dict[lang];
   const basePath = `/${lang}`;
+  const pathname = usePathname() || basePath;
+  // Real-time status (measured values only) — the indicator links to
+  // WhatsApp with the locale's neutral prefill + brand/page context.
+  const statusHref = waNeutralHref(lang, `${SITE.brand} · ${SITE.domain}${pathname}`);
   return (
     <footer className="footer">
       <div className="footerLogo"><MzansiLogo size={32} showText={true} /></div>
       <p>© {new Date().getFullYear()} {SITE.brand}. {t.footer.rights}</p>
       <p style={{ marginTop: 6 }}>{t.footer.note}</p>
+      <LiveStatus
+        className="footerStatus"
+        labels={{ operational: t.top.status }}
+        href={statusHref}
+        ariaLabel={WA_ARIA_LABEL[fabLang(lang)]}
+      />
 
       <nav className="footerNav" aria-label="Footer navigation">
         <div className="footerCol">
