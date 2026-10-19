@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { localeUrl } from "../../../lib/url";
+import { localeUrl, ogImagesFor } from "../../../lib/url";
 
 const TRIAL_PATH = "/free-trial";
 const TRIAL_CANONICAL = localeUrl("en-za", TRIAL_PATH);
@@ -25,6 +25,7 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
+      images: ogImagesFor("en-za"),
       title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
       description:
         "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public playlist. Not official DStv.",
@@ -92,6 +93,21 @@ const faqs = [
   },
 ] as const;
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${TRIAL_CANONICAL}#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: localeUrl("en-za", "/") },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Mzansi IPTV free trial — start on WhatsApp",
+      item: TRIAL_CANONICAL,
+    },
+  ],
+};
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -131,6 +147,10 @@ export default function FreeTrialPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <p className="text-sm font-medium text-emerald-700">

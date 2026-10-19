@@ -1,43 +1,14 @@
 // Server-rendered floating WhatsApp button. Mounted once from
 // app/[locale]/layout.tsx so every locale page ships a real <a> in the
 // first HTML response. The number is fixed — do not read it from env.
+// Copy lives in components/shared/wa-neutral.ts (shared with LiveStatus).
 
 import type { Locale } from "../../lib/locales";
-
-const WA_NUMBER = "447307410512";
-
-/** Neutral prefill. No trial, price, channel, legality, or uptime claim. */
-const MESSAGE: Record<"en" | "af" | "zu" | "xh" | "pt" | "fr", string> = {
-  en: "Hello, I have a question about your service.",
-  af: "Hallo, ek het 'n vraag.",
-  zu: "Sawubona, nginombuzo.",
-  xh: "Molo, ndinombuzo.",
-  pt: "Olá, tenho uma pergunta.",
-  fr: "Bonjour, j'ai une question.",
-};
-
-const ARIA_LABEL: Record<"en" | "af" | "zu" | "xh" | "pt" | "fr", string> = {
-  en: "Chat on WhatsApp",
-  af: "Gesels op WhatsApp",
-  zu: "Xoxa ku-WhatsApp",
-  xh: "Thetha ku-WhatsApp",
-  pt: "Falar no WhatsApp",
-  fr: "Discuter sur WhatsApp",
-};
-
-type FabLang = keyof typeof MESSAGE;
-
-function fabLang(locale: Locale): FabLang {
-  if (locale === "af" || locale === "zu" || locale === "xh" || locale === "fr") {
-    return locale;
-  }
-  if (locale === "pt-mz") return "pt";
-  return "en";
-}
+import { WA_ARIA_LABEL, fabLang, waNeutralHref } from "../shared/wa-neutral";
 
 export function WhatsAppFabLink({ locale }: { locale: Locale }) {
   const lang = fabLang(locale);
-  const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(MESSAGE[lang])}`;
+  const href = waNeutralHref(locale);
 
   return (
     <a
@@ -45,7 +16,7 @@ export function WhatsAppFabLink({ locale }: { locale: Locale }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      aria-label={ARIA_LABEL[lang]}
+      aria-label={WA_ARIA_LABEL[lang]}
       data-track-ref="WhatsApp-Fab"
       data-track-placement="Floating-Action-Button"
     >

@@ -236,6 +236,26 @@ const nextConfig = {
   },
   async headers() {
     return [
+      // Non-page assets only (pages get their Cache-Control from the
+      // rendering mode — static/ISR — never from here).
+      {
+        source: "/:file(llms.txt|robots.txt|sitemap.xml)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=3600, stale-while-revalidate=86400" },
+        ],
+      },
+      {
+        source: "/:file(og-image.jpg|manifest.json|manifest.webmanifest|apple-touch-icon.png)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
+      {
+        source: "/:file(icon-[0-9]+(?:-maskable|-monochrome)?\\.png)",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
       {
         source: "/(.*)",
         headers: [

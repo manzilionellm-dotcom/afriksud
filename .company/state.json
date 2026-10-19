@@ -1,11 +1,24 @@
 {
   "schema_version": 1,
   "n_pages_reelles": 128,
-  "locales": ["en-za","en-gb","en-au","en-us","af","zu","xh","pt-mz","en-zw","fr","en-ae","en-nz"],
+  "locales": [
+    "en-za",
+    "en-gb",
+    "en-au",
+    "en-us",
+    "af",
+    "zu",
+    "xh",
+    "pt-mz",
+    "en-zw",
+    "fr",
+    "en-ae",
+    "en-nz"
+  ],
   "baseline": {
     "run": "run-001",
     "build": "exit 0",
-    "rollback_point": "a18aa71"
+    "rollback_point": "354dfb2"
   },
   "applied_optimizations": [
     "run-001:home-meta-localized-12-locales",
@@ -20,7 +33,8 @@
     "run-011:soften /en-gb/ homepage (FAQ+1,200+/100x/every-match; 0 AggregateRating; WA 447307410512)",
     "run-012:FAQPage reinforce watch-springboks-from-london (P1 6Q exact + merge 8Q; 0 AR; 0 mailto; 0 every-feed)",
     "run-013:vercel.json + route 308 /en/iptv-springboks-uk → blog London; next.config.ts removed",
-    "run-014:lock WA prefill + soft purge on watch-springboks-from-london (0 Hi! I, 0 M3U, TiviMate FAQ-only, 20k soft)"
+    "run-014:lock WA prefill + soft purge on watch-springboks-from-london (0 Hi! I, 0 M3U, TiviMate FAQ-only, 20k soft)",
+    "run-019:static locale pages (no headers()) + SSE /api/status + LiveStatus→WA + OG per locale + BreadcrumbList 6 page types + robots static AI bots"
   ],
   "gsc_key_present": false
 }

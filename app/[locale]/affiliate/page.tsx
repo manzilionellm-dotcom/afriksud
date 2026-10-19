@@ -4,9 +4,11 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
-import { hreflangForProgrammatic, localeUrl } from "../../../lib/url";
+import { hreflangForProgrammatic, localeUrl, ogImagesFor } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
 import { LongformShell } from "../../../components/client/LongformShell";
+import { JsonLd } from "../../../lib/seo/jsonld";
+import { breadcrumbSchema } from "../../../lib/seo/breadcrumb";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: hreflangForProgrammatic(locale as Locale, "/affiliate"),
     },
     openGraph: {
+      images: ogImagesFor(locale as Locale),
       type: "website",
       url: localeUrl(locale as Locale, "/affiliate"),
       locale: LOCALE_META[locale as Locale].ogLocale,
@@ -40,6 +43,11 @@ export default async function AffiliatePage({ params }: Props) {
 
   return (
     <LongformShell locale={locale as Locale}>
+      <JsonLd
+        data={breadcrumbSchema(locale as Locale, [
+          { name: "Earn R200 per referral as a Mzansi Stream affiliate", path: "/affiliate" },
+        ])}
+      />
       <article className="section">
         <header className="longformHeader">
           <p className="longformEyebrow">Affiliate Programme</p>

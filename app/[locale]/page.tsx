@@ -7,12 +7,13 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
-import { hreflangFor, localeUrl, SITE_URL } from "../../lib/url";
+import { hreflangFor, localeUrl } from "../../lib/url";
 import { homeMetaFor, brandedTitle } from "../../lib/seo/home-meta";
 import { dict } from "../../components/shared/dict";
 import { plans } from "../../components/shared/plans";
 import { SITE } from "../../components/shared/site";
 import { JsonLd } from "../../lib/seo/jsonld";
+import { jsonLdString } from "../../lib/aio";
 import {
   BRAND_ID,
   ORG_ID,
@@ -76,7 +77,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ),
       title: brandedTitle(locale as Locale),
       description: home.ogDescription ?? home.description,
-      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
+      // og:image / twitter:image come from app/[locale]/opengraph-image.tsx
+      // (native-language card per locale, generated at build time).
     },
   };
 }
@@ -229,9 +231,18 @@ export default async function LocaleHome({ params }: Props) {
       <JsonLd data={siteSchema} />
       <JsonLd data={webPageSchema} />
       <JsonLd data={serviceSchema} />
-      {/* en-za FAQPage + Product are emitted once from app/layout.tsx
-          (lib/aio.ts). Keeping the old homepage FAQPage would duplicate it. */}
-      {locale === "en-za" ? null : <JsonLd data={faqSchema} />}
+      {/* en-za FAQPage + Product (lib/aio.ts) are emitted once, here —
+          statically, instead of from a header-dependent root layout.
+          Keeping the old homepage FAQPage would duplicate it. */}
+      {locale === "en-za" ? (
+        <script
+          type="application/ld+json"
+          id="aio-jsonld"
+          dangerouslySetInnerHTML={{ __html: jsonLdString() }}
+        />
+      ) : (
+        <JsonLd data={faqSchema} />
+      )}
       <JsonLd data={localBusinessSchema} />
 
       <LanguageProvider initialLocale={locale as Locale}>

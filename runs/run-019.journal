@@ -1,0 +1,48 @@
+# USINE v8 — Journal run-019 (kit "Metrics & Conversion Engine" — données réelles)
+# Branch: ccr-6131f392-wjns5t
+# Objectif: pages statiques (edge-cacheable), SSE statut réel, OG dynamique par
+# locale, BreadcrumbList sur toutes les pages profondes, robots statique.
+
+## T0 (mesuré, 2026-10-18)
+
+- [x] `pnpm build` exit 0 (1679 "static pages" annoncées) — MAIS `next start` :
+      `Cache-Control: private, no-cache, no-store` sur /en-za, /fr, /af,
+      /en-za/free-trial, /en-za/cities/johannesburg. 0 fichier .html prérendu,
+      2 routes dans prerender-manifest. Cause : `headers()` dans app/layout.tsx
+      (lang depuis x-mz-locale) + app/robots.ts (host).
+- [x] `pnpm lint` 0 · `pnpm type-check` 0 · `node scripts/qa-gates.mjs` 0.
+- [x] JSON-LD /en-za : Organization, Brand, WebSite, WebPage(+BreadcrumbList 1 item),
+      Service(OfferCatalog), OnlineBusiness, FAQPage+Product×5 (aio). 0 AggregateRating.
+- [x] OG : /og-image.jpg statique partout. /api/status : 404. FAB WhatsApp SSR
+      (wa.me/447307410512?text=…) sur 100 % des pages [locale]. 0 lien wa.me nu.
+- [x] BreadcrumbList absent : blog index, affiliate, referral, language/[slug],
+      legal/[topic], free-trial.
+
+## Travail
+
+- [x] app/[locale]/layout.tsx devient root layout (`<html lang>` depuis le param,
+      `dynamicParams = false`) ; app/layout.tsx supprimé ; `/` et `/ops` déplacés
+      dans app/(root)/ (URLs inchangées : `/` 307 → /en-za, `/ops` 404).
+- [x] JSON-LD aio (FAQPage+Product en-za) émis depuis app/[locale]/page.tsx (1 fois).
+- [x] app/robots.ts sans `headers()` : garde preview via VERCEL_ENV ; bots IA
+      allow / + disallow /api/ /ops. Middleware inchangé (308 www→apex, X-Robots-Tag).
+- [x] app/[locale]/opengraph-image.tsx + twitter-image.tsx (12 cartes natives depuis
+      dict.hero/pill ; 0 étoile, 0 compteur) ; 6 pages sans og:image câblées dessus.
+- [x] app/api/status/route.ts (SSE, valeurs mesurées ; sessions = null sans KV) +
+      components/client/LiveStatus.tsx dans FooterSection (label = dict.top.status,
+      lien WhatsApp contextuel, 0 cookie/storage).
+- [x] lib/seo/breadcrumb.ts + BreadcrumbList sur les 6 types de pages manquants.
+- [x] next.config.js headers Cache-Control sur llms/robots/sitemap/og-image/icônes.
+
+## T1 (mesuré)
+
+- [x] `pnpm build` 0 : 1671 .html prérendus, 1697 routes prerender-manifest ;
+      dynamiques = /api/chat, /api/models, /api/status, /en/iptv-springboks-uk.
+- [x] `next start` : pages `Cache-Control: s-maxage=31536000` ; `/` 307 ; `/xx` 404.
+- [x] lint 0 · type-check 0 · qa-gates 0 (+ --self-test) · verify-site.mjs 0 sur
+      20 chemins (12 homes + free-trial + city + legal + blog + device + sa-abroad
+      + language + referral) + /api/status SSE.
+
+## Originalité
+Statut temps réel mesuré (région/heure serveur) — jamais de chiffre inventé ;
+sessions actives affichées seulement si un store KV est configuré.
