@@ -49,6 +49,7 @@ import { PremiumPlanSelector } from "../../components/ux/PremiumPlanSelector";
 import { BottomTabBar } from "../../components/ux/BottomTabBar";
 import { PriceCheckoutMount } from "../../components/ux/checkout/PriceCheckoutMount";
 import { AioCitationFaq } from "../../components/seo/AioCitationFaq";
+import { EnZaTrialCta } from "../../components/seo/EnZaTrialCta";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -253,6 +254,7 @@ export default async function LocaleHome({ params }: Props) {
 
         <main id="main-content">
           <HeroV2 />
+          {locale === "en-za" ? <EnZaTrialCta variant="hero" /> : null}
           <div className="main">
             <TrialBanner />
             <TrustSection />
@@ -269,6 +271,7 @@ export default async function LocaleHome({ params }: Props) {
             <SACities />
             <QuickSetup />
             {locale === "en-za" ? <AioCitationFaq /> : <FaqSection />}
+            {locale === "en-za" ? <EnZaTrialCta variant="after-faq" /> : null}
           </div>
         </main>
 
