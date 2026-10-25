@@ -63,7 +63,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Checks",
     metaDescription:
-      "IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre in South Africa. 4K SuperSport, NAPAfrica-peered CDN. From R99/mo. Stability depends on your line.",
+      "IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre in South Africa. 4K SuperSport, NAPAfrica-peered CDN. From R199/mo. Stability depends on your line.",
     lead:
       "If you're on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre or Rain 5G, your fibre line usually has the bandwidth for 4K IPTV — but peering, home Wi-Fi and the router decide what you actually see. This guide explains why routing matters, what to check on your router if 4K streams drop to 1080p, and how to test Mzansi Stream on your own line during the 24-hour trial.",
     trustLine:
@@ -120,7 +120,7 @@ export const PILLARS: Pillar[] = [
         id: "no-throttling",
         h2: "Will Vumatel / Openserve throttle my IPTV?",
         paragraphs: [
-          "No. In 2026, none of the major SA fibre ISPs throttle IPTV traffic — they don't deep-packet-inspect to distinguish IPTV from a YouTube live stream. Your Mzansi Stream traffic is encrypted HLS / M3U over HTTPS, same wire format as Netflix and YouTube. There's nothing to throttle.",
+          "No. In 2026, none of the major SA fibre ISPs throttle IPTV traffic — they don't deep-packet-inspect to distinguish IPTV from a YouTube live stream. Your Mzansi Stream traffic is encrypted HLS / playlist over HTTPS, same wire format as Netflix and YouTube. There's nothing to throttle.",
           "If your stream drops mid-match, the bottleneck is almost certainly your home Wi-Fi or an ISP-side congestion event (rare on Vumatel and Openserve in 2026), not deliberate throttling.",
         ],
       },
@@ -198,7 +198,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV EFT, SnapScan, Ozow, Capitec Pay — No Credit Card",
     metaDescription:
-      "Pay for IPTV in South Africa with EFT, SnapScan, Ozow, Zapper, Yoco or Capitec Pay — no credit card required. Mzansi Stream — full 4K SuperSport from R99/mo.",
+      "Pay for IPTV in South Africa with EFT, SnapScan, Ozow, Zapper, Yoco or Capitec Pay — no credit card required. Mzansi Stream — full 4K SuperSport from R199/mo.",
     lead:
       "Most international IPTV providers require a Visa or Mastercard. Mzansi Stream accepts every standard South African payment method without forcing a credit card — EFT, SnapScan, Ozow, Zapper, Yoco, Capitec Pay, plus Visa, Mastercard, PayPal and Bitcoin. This guide covers each payment method, how activation works, what the receipt looks like, and which one to pick if your priority is speed (Ozow), privacy (Bitcoin), or zero card details (Capitec Pay).",
     trustLine:
@@ -324,11 +324,11 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "How to Cancel DStv 2026 — Step-by-Step + Switch to IPTV",
     metaDescription:
-      "Cancel DStv in 2026 — exact WhatsApp number, 30-day notice trick, and how to switch to IPTV with no contract from R99/mo. Save R9,500+ a year.",
+      "Cancel DStv in 2026 — exact WhatsApp number, 30-day notice trick, and how to switch to IPTV with no contract from R199/mo. Save R9,500+ a year.",
     lead:
       "Cancelling DStv is harder than signing up — by design. This guide walks through the exact 2026 cancellation process, the WhatsApp number that works (060 060 3788), the 30-day notice timing trick that saves you a wasted month, and how to switch to Mzansi Stream so you don't miss a single SuperSport match during the transition.",
     trustLine:
-      "WhatsApp 060 060 3788 · 30-day notice · Switch to IPTV from R99/mo",
+      "WhatsApp 060 060 3788 · 30-day notice · Switch to IPTV from R199/mo",
     cta: {
       primary: {
         label: "Switch to IPTV — Free 24h trial →",
@@ -417,7 +417,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "What do I switch to after cancelling DStv?",
-        a: "Mzansi Stream is the leading SA IPTV alternative — same SuperSport, kykNET, SABC, Premier League in 4K, from R99/month with no contract.",
+        a: "Mzansi Stream is the leading SA IPTV alternative — same SuperSport, kykNET, SABC, Premier League in 4K, from R199/month with no contract.",
       },
       {
         q: "Will I miss matches during the switch?",
@@ -567,8 +567,8 @@ export const PILLARS: Pillar[] = [
         a: "Easier to question: traceable payment, a written refund page, and a WhatsApp number that answers. Walk away from crypto-only Telegram channels and R49/month lifetime deals.",
       },
       {
-        q: "Is downloading IPTV apps like TiviMate or IPTV Smarters illegal?",
-        a: "No. TiviMate, IPTV Smarters Pro, GSE Smart IPTV and Smart IPTV are apps available in the Amazon and Google Play stores. They're M3U players — the same way VLC is an M3U player. Legality depends entirely on the source you connect them to.",
+        q: "Is downloading IPTV apps like IPTV player or IPTV Smarters illegal?",
+        a: "No. IPTV player, IPTV Smarters Pro, GSE Smart IPTV and Smart IPTV are apps available in the Amazon and Google Play stores. They're playlist players — the same way VLC is a playlist player. Legality depends entirely on the source you connect them to.",
       },
     ],
     related: [
@@ -601,7 +601,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "Best IPTV South Africa 2026 — Buyer's Guide, Live TV in 4K",
     metaDescription:
-      "The honest 2026 buyer's guide to the best IPTV in South Africa. Compare price, channels, sport, 4K, support and what to check before you pay. From R99/mo with a 24h free trial.",
+      "The honest 2026 buyer's guide to the best IPTV in South Africa. Compare price, channels, sport, 4K, support and what to check before you pay. From R199/mo with a 24h free trial.",
     lead:
       "Choosing the best IPTV in South Africa in 2026 means weighing price, channel lineup, sport coverage, 4K stability on Vumatel and Openserve, support quality and the simple question — can you actually cancel without a fight? This guide ranks what to look for, what to ignore and why Mzansi Stream tops the practical short-list for SA households cutting the DStv cord.",
     trustLine:
@@ -641,7 +641,7 @@ export const PILLARS: Pillar[] = [
           "Mzansi Stream is a no-contract option for households who want one subscription with SA, SuperSport-style and international folders — line-up to confirm on WhatsApp and to test on the 24-hour trial.",
         ],
         bullets: [
-          "Mzansi Stream — from R99/mo, SuperSport-style folders to trial, WhatsApp support, no contract.",
+          "Mzansi Stream — from R199/mo, SuperSport-style folders to trial, WhatsApp support, no contract.",
           "Reseller marketplaces (Facebook groups, Gumtree) — cheap (R50-R80/mo) but typically 720p, frequent outages and no recourse when the link dies.",
           "DStv Stream — official, R249-R899/mo, 24-month commitment on Premium tier, no real ICDN edge benefit over a strong IPTV provider in 2026.",
           "Showmax — R99/mo for streaming-only catalogue, no live SuperSport sport tier without an upgrade, no SABC.",
@@ -653,7 +653,7 @@ export const PILLARS: Pillar[] = [
         h2: "Price vs. quality — the 2026 IPTV pricing reality",
         paragraphs: [
           "Healthy SA IPTV pricing in 2026 sits between R99 and R200/month on annual plans, R150-R250 on monthly. Anything cheaper than R80 typically means an oversubscribed reseller link that crashes during the Soweto Derby. Anything more expensive than R250 needs to justify it with unique premium add-ons (BeIN sport pack, specialised PVR, multi-screen on 4 devices).",
-          "Mzansi Stream prices break down to R99/month on the 12-month plan (R1,199 once) and R149/month on the 3-month plan (R449 once) — both with the same line-up, 4K UHD where the source supports it and direct WhatsApp support. The 7-day money-back guarantee removes the 'what if it sucks' objection that kills most IPTV first-time buyers.",
+          "Mzansi Stream prices break down to R99.92/month on the 12-month plan (R1,199 once) and R149.67/month equivalent on the 3-month plan (R449 once) — both with the same line-up, 4K UHD where the source supports it and direct WhatsApp support. The 7-day money-back guarantee removes the 'what if it sucks' objection that kills most IPTV first-time buyers.",
         ],
       },
       {
@@ -676,14 +676,14 @@ export const PILLARS: Pillar[] = [
         id: "devices",
         h2: "Devices — what works in 2026",
         paragraphs: [
-          "Most modern Smart TVs (Samsung Tizen 2022+, LG webOS 2022+, Sony Bravia, Hisense) install IPTV Smarters Pro or a similar M3U player from the built-in store in under five minutes. Amazon Firestick 4K and Android TV boxes (Nvidia Shield, Xiaomi Mi Box) are the gold standard for IPTV — TiviMate Premium gives the smoothest EPG UX in the market. iPhone, iPad and Android phones run IPTV Smarters Player out of the box.",
-          "Mzansi Stream supports every standard M3U device — no proprietary decoder, no installer fee, no monthly device tax.",
+          "Most modern Smart TVs (Samsung Tizen 2022+, LG webOS 2022+, Sony Bravia, Hisense) install IPTV Smarters Pro or a similar playlist player from the built-in store in under five minutes. Amazon Firestick 4K and Android TV boxes (Nvidia Shield, Xiaomi Mi Box) are the gold standard for IPTV — IPTV player Premium gives the smoothest EPG UX in the market. iPhone, iPad and Android phones run IPTV Smarters Player out of the box.",
+          "Mzansi Stream supports every standard playlist device — no proprietary decoder, no installer fee, no monthly device tax.",
         ],
         bullets: [
-          "Firestick 4K — TiviMate Premium (best mobile-first IPTV UX).",
+          "Firestick 4K — IPTV player Premium (best mobile-first IPTV UX).",
           "Samsung Tizen Smart TV — IPTV Smarters Pro via app store.",
           "LG webOS — Smart IPTV or SS IPTV.",
-          "Android TV Box (Nvidia Shield / Mi Box / Onn) — TiviMate Premium.",
+          "Android TV Box (Nvidia Shield / Mi Box / Onn) — IPTV player Premium.",
           "iPhone / iPad — IPTV Smarters Player from the App Store.",
           "MAG Box (322 / 524 / 540) — built-in Stalker portal.",
         ],
@@ -716,11 +716,11 @@ export const PILLARS: Pillar[] = [
     faq: [
       {
         q: "Which is the best IPTV in South Africa in 2026?",
-        a: "Use the checklist on this page and test on your own line. Mzansi Stream is one no-contract option — SuperSport-style, Premier League, kykNET and SABC folders to confirm on WhatsApp, from R99/month on the 12-month plan, with a 24-hour trial.",
+        a: "Use the checklist on this page and test on your own line. Mzansi Stream is one no-contract option — SuperSport-style, Premier League, kykNET and SABC folders to confirm on WhatsApp, from R199 for one month, with a 24-hour trial.",
       },
       {
         q: "How much does a good IPTV cost in South Africa?",
-        a: "Healthy SA IPTV pricing in 2026 is R99-R200/month on annual plans and R150-R250/month on monthly plans. Cheaper than R80/month typically means an unstable reseller link. Mzansi Stream's 12-month plan is R1,199 (R99/month equivalent).",
+        a: "Healthy SA IPTV pricing in 2026 is R99-R200/month on annual plans and R150-R250/month on monthly plans. Cheaper than R80/month typically means an unstable reseller link. Mzansi Stream's 12-month plan is R1,199 (R99.92/month equivalent).",
       },
       {
         q: "Is IPTV legal in South Africa?",
@@ -735,8 +735,8 @@ export const PILLARS: Pillar[] = [
         a: "No. Mzansi Stream works without a VPN on every major SA fibre network. Some users add a VPN for personal privacy reasons — it's a choice, not a requirement.",
       },
       {
-        q: "Which app is best for IPTV — TiviMate, IPTV Smarters or GSE?",
-        a: "TiviMate Premium gives the smoothest EPG UX on Firestick and Android TV boxes. IPTV Smarters Pro is the easiest install on Samsung Tizen and LG webOS Smart TVs. GSE Smart IPTV works well on iPad and iPhone. Mzansi Stream provides M3U links that work in any standard player.",
+        q: "Which app is best for IPTV — IPTV player, IPTV Smarters or GSE?",
+        a: "IPTV player Premium gives the smoothest EPG UX on Firestick and Android TV boxes. IPTV Smarters Pro is the easiest install on Samsung Tizen and LG webOS Smart TVs. GSE Smart IPTV works well on iPad and iPhone. Mzansi Stream provides playlist links that work in any standard player.",
       },
       {
         q: "Can I watch SuperSport without DStv?",
@@ -785,18 +785,18 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Firestick install · 10-minute setup",
     h1: "IPTV Firestick South Africa — Install in 10 Minutes (2026 Guide)",
     metaTitle:
-      "IPTV Firestick South Africa 2026 — TiviMate Setup in 10 Min",
+      "IPTV Firestick South Africa 2026 — IPTV player Setup in 10 Min",
     metaDescription:
-      "Step-by-step IPTV Firestick setup for South Africa in 2026 — TiviMate Premium, M3U link, EPG, 4K SuperSport. Works on Vumatel, Openserve, Frogfoot. From R99/mo.",
+      "Step-by-step IPTV Firestick setup for South Africa in 2026 — IPTV player Premium, playlist link, EPG, 4K SuperSport. Works on Vumatel, Openserve, Frogfoot. From R199/mo.",
     lead:
-      "The Amazon Firestick 4K is the most popular IPTV device in South Africa in 2026 — cheap, plug-and-play, and TiviMate Premium gives the slickest IPTV experience on any platform. This guide walks through the complete Mzansi Stream install on Firestick using TiviMate or IPTV Smarters Pro, with troubleshooting for the common SA-specific issues (Vumatel DNS, Openserve buffering, EPG load order).",
+      "The Amazon Firestick 4K is the most popular IPTV device in South Africa in 2026 — cheap, plug-and-play, and IPTV player Premium gives the slickest IPTV experience on any platform. This guide walks through the complete Mzansi Stream install on Firestick using IPTV player or IPTV Smarters Pro, with troubleshooting for the common SA-specific issues (Vumatel DNS, Openserve buffering, EPG load order).",
     trustLine:
-      "TiviMate or IPTV Smarters Pro · 4K UHD SuperSport · EPG included · 10-minute install · WhatsApp support",
+      "IPTV player or IPTV Smarters Pro · 4K UHD SuperSport · EPG included · 10-minute install · WhatsApp support",
     cta: {
       primary: {
-        label: "Get the Firestick M3U link →",
+        label: "Get the Firestick playlist link →",
         message:
-          "Hi! I want IPTV on my Firestick — please send the M3U link and setup steps for TiviMate.",
+          "Hi! I want IPTV on my Firestick — please send the playlist link and setup steps for IPTV player.",
         ref: "Pillar-Firestick-Hero",
       },
       secondary: { label: "Jump to the setup steps →", href: "#install" },
@@ -806,7 +806,7 @@ export const PILLARS: Pillar[] = [
         id: "why-firestick",
         h2: "Why Firestick is the #1 IPTV device in South Africa",
         paragraphs: [
-          "The Amazon Firestick 4K and Firestick 4K Max have become the default IPTV device for South African households because they tick every practical box: under R1,000 from Takealot, plug into any HDMI TV including older non-Smart sets, run TiviMate Premium with no rooting or jailbreaking, and stream 4K HDR over any standard fibre line.",
+          "The Amazon Firestick 4K and Firestick 4K Max have become the default IPTV device for South African households because they tick every practical box: under R1,000 from Takealot, plug into any HDMI TV including older non-Smart sets, run IPTV player Premium with no rooting or jailbreaking, and stream 4K HDR over any standard fibre line.",
           "Compared to a Smart TV's built-in OS, the Firestick gives you a dedicated remote, faster app launches, regular Amazon firmware updates and a single playlist that survives even if the TV changes. For a family that rotates the IPTV setup between bedrooms or holiday homes, the Firestick is unbeatable.",
         ],
       },
@@ -817,11 +817,11 @@ export const PILLARS: Pillar[] = [
           "Amazon Firestick 4K or Firestick 4K Max (HD Firestick works but caps at 1080p).",
           "Stable internet — minimum 10 Mbps for HD, 25 Mbps for 4K SuperSport.",
           "Amazon account (any country — the Firestick works fine with a UK/US account on a SA TV).",
-          "Mzansi Stream M3U link + portal credentials (we send these on WhatsApp).",
+          "Mzansi Stream playlist link + portal credentials (we send these on WhatsApp).",
           "About 10 minutes of uninterrupted time for the first install.",
         ],
         paragraphs: [
-          "If your Firestick is on the original Amazon firmware (2019 or earlier), update to FireOS 7+ first via Settings → My Fire TV → About → Check for Updates. TiviMate's installer requires recent FireOS for the sideload to succeed cleanly.",
+          "If your Firestick is on the original Amazon firmware (2019 or earlier), update to FireOS 7+ first via Settings → My Fire TV → About → Check for Updates. IPTV player's installer requires recent FireOS for the sideload to succeed cleanly.",
         ],
       },
       {
@@ -837,16 +837,16 @@ export const PILLARS: Pillar[] = [
             text: "From the Firestick search bar (magnifying glass icon), type 'Downloader' and install the official app by AFTVnews (orange icon).",
           },
           {
-            title: "Sideload TiviMate via Downloader",
-            text: "Open Downloader, click in the URL field and enter 'tivimate.com/companion' (we send the exact current URL on WhatsApp because the TiviMate domain changes occasionally). Install when the APK download completes.",
+            title: "Sideload IPTV player via Downloader",
+            text: "Open Downloader, click in the URL field and enter 'tivimate.com/companion' (we send the exact current URL on WhatsApp because the IPTV player domain changes occasionally). Install when the APK download completes.",
           },
           {
-            title: "Open TiviMate and add your M3U playlist",
-            text: "Launch TiviMate, choose 'Add playlist' → 'Enter URL'. Paste the M3U URL we sent you on WhatsApp. Name the playlist 'Mzansi Stream'.",
+            title: "Open IPTV player and add your stream playlist",
+            text: "Launch IPTV player, choose 'Add playlist' → 'Enter URL'. Paste the playlist URL we sent you on WhatsApp. Name the playlist 'Mzansi Stream'.",
           },
           {
             title: "Set the EPG (TV guide) source",
-            text: "TiviMate auto-detects the EPG from the M3U metadata. If it doesn't, manually paste the XMLTV URL we send alongside the M3U.",
+            text: "IPTV player auto-detects the EPG from the playlist metadata. If it doesn't, manually paste the XMLTV URL we send alongside the playlist.",
           },
           {
             title: "Test the 4K SuperSport stream",
@@ -854,15 +854,15 @@ export const PILLARS: Pillar[] = [
           },
         ],
         paragraphs: [
-          "TiviMate is the cleanest UX but it's not free — the Premium licence is once-off (about R250 lifetime) and unlocks multi-playlist, picture-in-picture and recording. If you'd rather a free alternative, IPTV Smarters Pro works identically with the same Mzansi Stream M3U link.",
+          "IPTV player is the cleanest UX but it's not free — the Premium licence is once-off (about R250 lifetime) and unlocks multi-playlist, picture-in-picture and recording. If you'd rather a free alternative, IPTV Smarters Pro works identically with the same Mzansi Stream playlist link.",
         ],
       },
       {
         id: "iptv-smarters",
         h2: "Alternative — IPTV Smarters Pro on Firestick (free)",
         paragraphs: [
-          "IPTV Smarters Pro is the standard free alternative to TiviMate. The UX is more 'classic IPTV' (less polished but completely functional) and the install is identical: sideload via Downloader, then enter the M3U URL we send on WhatsApp.",
-          "Use IPTV Smarters Pro if you don't want to pay for TiviMate Premium, if you need M3U URL switching on a multi-household account, or if you're running the same M3U on a low-spec Firestick HD where TiviMate's animations stutter.",
+          "IPTV Smarters Pro is the standard free alternative to IPTV player. The UX is more 'classic IPTV' (less polished but completely functional) and the install is identical: sideload via Downloader, then enter the playlist URL we send on WhatsApp.",
+          "Use IPTV Smarters Pro if you don't want to pay for IPTV player Premium, if you need playlist URL switching on a multi-household account, or if you're running the same playlist on a low-spec Firestick HD where IPTV player's animations stutter.",
         ],
       },
       {
@@ -879,8 +879,8 @@ export const PILLARS: Pillar[] = [
         h2: "Common Firestick IPTV problems and fixes",
         bullets: [
           "Stream starts in HD then drops to 480p — your router is throttling. Switch from 2.4GHz to 5GHz, or hard-wire via USB-Ethernet adapter.",
-          "EPG (TV guide) is empty — paste the XMLTV URL we sent on WhatsApp into TiviMate → Settings → EPG → Add URL.",
-          "TiviMate says 'Subscription not active' — wait 30 seconds and retry. The M3U URL caches at the CDN; activation takes up to 60 seconds after we send it.",
+          "EPG (TV guide) is empty — paste the XMLTV URL we sent on WhatsApp into IPTV player → Settings → EPG → Add URL.",
+          "IPTV player says 'Subscription not active' — wait 30 seconds and retry. The playlist URL caches at the CDN; activation takes up to 60 seconds after we send it.",
           "SuperSport feeds buffer during a big match — reboot the Firestick, check 5 GHz Wi-Fi, and message us on WhatsApp with the channel name if it persists.",
           "Firestick remote stops responding mid-stream — typical Firestick issue, hold Home + Back for 10 seconds to soft-reset, no IPTV side fix needed.",
         ],
@@ -896,11 +896,11 @@ export const PILLARS: Pillar[] = [
     faq: [
       {
         q: "Can I install IPTV on Firestick in South Africa?",
-        a: "Yes. The Amazon Firestick 4K is the most popular IPTV device in South Africa in 2026. Mzansi Stream installs in under 10 minutes via TiviMate Premium or IPTV Smarters Pro, sideloaded through the Downloader app. No rooting or jailbreaking required.",
+        a: "Yes. The Amazon Firestick 4K is the most popular IPTV device in South Africa in 2026. Mzansi Stream installs in under 10 minutes via IPTV player Premium or IPTV Smarters Pro, sideloaded through the Downloader app. No rooting or jailbreaking required.",
       },
       {
-        q: "Which is the best IPTV app for Firestick — TiviMate or IPTV Smarters?",
-        a: "TiviMate Premium has the cleanest UX, the best EPG and multi-playlist support — recommended for most users. IPTV Smarters Pro is the free alternative and works perfectly with the same Mzansi Stream M3U link.",
+        q: "Which is the best IPTV app for Firestick — IPTV player or IPTV Smarters?",
+        a: "IPTV player Premium has the cleanest UX, the best EPG and multi-playlist support — recommended for most users. IPTV Smarters Pro is the free alternative and works perfectly with the same Mzansi Stream playlist link.",
       },
       {
         q: "Does IPTV work in 4K on Firestick?",
@@ -915,8 +915,8 @@ export const PILLARS: Pillar[] = [
         a: "Yes. Mzansi Stream peers at NAPAfrica with edges in Johannesburg and Cape Town, so Vumatel, Openserve and Frogfoot all stream 4K cleanly. MTN Fibre, Vodacom Fibre, Rain 5G, Octotel and MetroFibre also work well.",
       },
       {
-        q: "How do I update the M3U link on Firestick?",
-        a: "In TiviMate: Settings → Playlists → tap your playlist → Update URL. In IPTV Smarters Pro: Settings → Manage Playlists → Edit. Mzansi Stream rotates the M3U URL rarely — when we do, we send the new URL on WhatsApp.",
+        q: "How do I update the playlist link on Firestick?",
+        a: "In IPTV player: Settings → Playlists → tap your playlist → Update URL. In IPTV Smarters Pro: Settings → Manage Playlists → Edit. Mzansi Stream rotates the playlist URL rarely — when we do, we send the new URL on WhatsApp.",
       },
       {
         q: "Does the Firestick HD (not 4K) work with IPTV?",
@@ -924,7 +924,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does an IPTV subscription for Firestick cost in South Africa?",
-        a: "Mzansi Stream is R99/month on the 12-month plan (R1,199 once), or R149/month on the 3-month plan (R449 once). All plans include the same line-up, 4K UHD where the source supports it, EPG and WhatsApp support — no separate device tax.",
+        a: "Mzansi Stream is R99.92/month on the 12-month plan (R1,199 once), or R149.67/month equivalent on the 3-month plan (R449 once). All plans include the same line-up, 4K UHD where the source supports it, EPG and WhatsApp support — no separate device tax.",
       },
     ],
     related: [
@@ -958,16 +958,16 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV Samsung Smart TV South Africa 2026 — Tizen Install",
     metaDescription:
-      "Install IPTV on a Samsung Smart TV (Tizen) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport, kykNET. Works on every 2022+ Samsung. From R99/mo.",
+      "Install IPTV on a Samsung Smart TV (Tizen) in South Africa — IPTV Smarters Pro, playlist link, 4K SuperSport, kykNET. Works on every 2022+ Samsung. From R199/mo.",
     lead:
-      "Samsung Smart TVs running Tizen (2022 and later) install IPTV natively from the Samsung App Store — no Firestick required, no sideload, no developer mode. This guide covers the complete Mzansi Stream install on Samsung Tizen using IPTV Smarters Pro or Smart IPTV, with troubleshooting for the Samsung-specific quirks (regional store, OneRemote pairing, the M3U cache reload).",
+      "Samsung Smart TVs running Tizen (2022 and later) install IPTV natively from the Samsung App Store — no Firestick required, no sideload, no developer mode. This guide covers the complete Mzansi Stream install on Samsung Tizen using IPTV Smarters Pro or Smart IPTV, with troubleshooting for the Samsung-specific quirks (regional store, OneRemote pairing, the playlist cache reload).",
     trustLine:
       "Samsung Tizen 2022+ · IPTV Smarters Pro · 4K UHD SuperSport · Native install · No Firestick needed",
     cta: {
       primary: {
-        label: "Get the Samsung M3U link →",
+        label: "Get the Samsung playlist link →",
         message:
-          "Hi! I want IPTV on my Samsung Smart TV — please send the M3U link and setup steps for IPTV Smarters Pro on Tizen.",
+          "Hi! I want IPTV on my Samsung Smart TV — please send the playlist link and setup steps for IPTV Smarters Pro on Tizen.",
         ref: "Pillar-Samsung-Hero",
       },
       secondary: { label: "Jump to the setup steps →", href: "#install" },
@@ -977,7 +977,7 @@ export const PILLARS: Pillar[] = [
         id: "which-samsung-works",
         h2: "Which Samsung TVs support IPTV in 2026?",
         paragraphs: [
-          "Every Samsung Smart TV running Tizen OS (2018 onwards, but practically 2022+ for the best app store availability) supports IPTV via M3U player apps from the Samsung Smart Hub. This includes the entire QLED, Crystal UHD, Neo QLED, OLED S9x, and most Crystal 4K mid-range lines sold by Hirsch's, Game and Makro across South Africa.",
+          "Every Samsung Smart TV running Tizen OS (2018 onwards, but practically 2022+ for the best app store availability) supports IPTV via playlist player apps from the Samsung Smart Hub. This includes the entire QLED, Crystal UHD, Neo QLED, OLED S9x, and most Crystal 4K mid-range lines sold by Hirsch's, Game and Makro across South Africa.",
           "If your Samsung TV is from 2021 or earlier, IPTV Smarters Pro may not be in the regional Samsung store — in that case, install Smart IPTV (the older standard) or sideload via a Firestick (see our Firestick guide).",
         ],
         bullets: [
@@ -996,7 +996,7 @@ export const PILLARS: Pillar[] = [
           "Samsung Smart TV running Tizen OS 2022 or newer (Settings → Support → About → Software Version).",
           "Stable internet — Samsung TVs work better over Ethernet than 2.4GHz WiFi; switch to 5GHz or hard-wire if possible.",
           "Samsung account signed in (required to install apps from the Samsung Smart Hub).",
-          "Mzansi Stream M3U link + Xtream Codes credentials (we send these on WhatsApp).",
+          "Mzansi Stream playlist link + Xtream Codes credentials (we send these on WhatsApp).",
           "About 8-12 minutes of time. First install takes longest because Tizen's app store is sometimes slow on first connect.",
         ],
       },
@@ -1034,8 +1034,8 @@ export const PILLARS: Pillar[] = [
         id: "smart-iptv",
         h2: "Alternative for older Samsung — Smart IPTV",
         paragraphs: [
-          "Smart IPTV is the older M3U player that worked on Samsung Tizen from 2018-2022. It's still maintained and works on every Samsung Smart TV — but it's a once-off €5.49 unlock after the 7-day trial, and the activation is per-MAC-address (you'll need your TV's MAC address from Settings → Network → Network Status).",
-          "Use Smart IPTV if your Samsung is from 2018-2021 and IPTV Smarters Pro isn't in your store, or if you specifically want the simpler 'pure M3U' interface without the Xtream Codes login wrapper.",
+          "Smart IPTV is the older playlist player that worked on Samsung Tizen from 2018-2022. It's still maintained and works on every Samsung Smart TV — but it's a once-off €5.49 unlock after the 7-day trial, and the activation is per-MAC-address (you'll need your TV's MAC address from Settings → Network → Network Status).",
+          "Use Smart IPTV if your Samsung is from 2018-2021 and IPTV Smarters Pro isn't in your store, or if you specifically want the simpler 'pure playlist' interface without the Xtream Codes login wrapper.",
         ],
       },
       {
@@ -1055,8 +1055,8 @@ export const PILLARS: Pillar[] = [
         h2: "Samsung Tizen vs Firestick — which is better for IPTV?",
         paragraphs: [
           "Samsung Tizen has the advantage of no extra hardware, no HDMI port used, one remote and a single source. The trade-off is that Tizen's regional store can lag (some apps appear in Europe months before they appear in SA), and updates are slower.",
-          "Firestick has the advantage of a dedicated IPTV-first ecosystem (TiviMate, MX Player, Downloader all live there), faster updates, and a remote optimised for streaming. The trade-off is one more remote on the coffee table.",
-          "For most households in SA in 2026, if you have a 2022+ Samsung Smart TV, install IPTV directly on Tizen — it's the cleanest setup. If you have an older Samsung or you want the best possible IPTV UX (TiviMate Premium), add a Firestick 4K to a spare HDMI port.",
+          "Firestick has the advantage of a dedicated IPTV-first ecosystem (IPTV player, MX Player, Downloader all live there), faster updates, and a remote optimised for streaming. The trade-off is one more remote on the coffee table.",
+          "For most households in SA in 2026, if you have a 2022+ Samsung Smart TV, install IPTV directly on Tizen — it's the cleanest setup. If you have an older Samsung or you want the best possible IPTV UX (IPTV player Premium), add a Firestick 4K to a spare HDMI port.",
         ],
       },
     ],
@@ -1067,7 +1067,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Which IPTV app is best for Samsung Tizen?",
-        a: "IPTV Smarters Pro (free) is the best for Samsung Tizen 2022+. Smart IPTV (€5.49 once) is the standard for Samsung Tizen 2018-2021. Both work with the same Mzansi Stream M3U link.",
+        a: "IPTV Smarters Pro (free) is the best for Samsung Tizen 2022+. Smart IPTV (€5.49 once) is the standard for Samsung Tizen 2018-2021. Both work with the same Mzansi Stream playlist link.",
       },
       {
         q: "Does my Samsung Smart TV support 4K IPTV?",
@@ -1075,7 +1075,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "What if IPTV Smarters Pro isn't in my Samsung store?",
-        a: "Your TV's regional store may not stock it. Use Smart IPTV instead (works on every Tizen TV from 2018 onwards) or connect a Firestick 4K to a free HDMI port and install TiviMate / IPTV Smarters Pro there.",
+        a: "Your TV's regional store may not stock it. Use Smart IPTV instead (works on every Tizen TV from 2018 onwards) or connect a Firestick 4K to a free HDMI port and install IPTV player / IPTV Smarters Pro there.",
       },
       {
         q: "Do I need to enable developer mode on Samsung Tizen?",
@@ -1083,7 +1083,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does IPTV cost for a Samsung Smart TV in South Africa?",
-        a: "Mzansi Stream is R99/month on the 12-month plan (R1,199 once) or R149/month on the 3-month plan. The same plan covers Samsung, Firestick, Android TV, MAG Box and any other M3U device on your network.",
+        a: "Mzansi Stream is R99.92/month on the 12-month plan (R1,199 once) or R149.67/month equivalent on the 3-month plan. The same plan covers Samsung, Firestick, Android TV, MAG Box and any other playlist device on your network.",
       },
       {
         q: "Does IPTV on Samsung work with SuperSport in 4K?",
@@ -1125,7 +1125,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "Watch SuperSport Without DStv — IPTV in 4K 2026",
     metaDescription:
-      "SuperSport-style folders (PSL, Premier League, Rugby, Cricket) in 4K without DStv — matches to confirm on WhatsApp. Mzansi Stream IPTV from R99/mo — installed in about 10 minutes.",
+      "SuperSport-style folders (PSL, Premier League, Rugby, Cricket) in 4K without DStv — matches to confirm on WhatsApp. Mzansi Stream IPTV from R199/mo — installed in about 10 minutes.",
     lead:
       "SuperSport is the single biggest reason South African households keep paying R899/month for DStv Premium. In 2026 you don't have to. This guide explains how to watch SuperSport-style folders (PSL, Premier League, Rugby, Cricket, Variety, MotorSport, Tennis, Golf) in 4K UHD where the source supports it — matches to confirm on WhatsApp — without a DStv decoder, without a 24-month contract and without the SuperSport Schools stand-alone subscription.",
     trustLine:
@@ -1137,7 +1137,7 @@ export const PILLARS: Pillar[] = [
           "Hi! I want to watch SuperSport without DStv. Please activate my free 24-hour trial.",
         ref: "Pillar-SuperSport-Hero",
       },
-      secondary: { label: "See plans from R99/mo →", href: "#pricing" },
+      secondary: { label: "See plans from R199/mo →", href: "#pricing" },
     },
     sections: [
       {
@@ -1182,8 +1182,8 @@ export const PILLARS: Pillar[] = [
         bullets: [
           "Fibre connection — minimum 25 Mbps for stable 4K SuperSport. Vumatel, Openserve, Frogfoot, MTN Fibre, Octotel and MetroFibre all work well.",
           "4K-capable display — every Samsung, LG, Sony, Hisense 4K Smart TV from 2022+ works. Older HD TVs work but stream in 1080p.",
-          "A player device — your Smart TV's built-in player, a Firestick 4K, an Android TV box (Nvidia Shield, Mi Box), an Apple TV 4K or any standard M3U player.",
-          "A Mzansi Stream subscription — from R99/month on the 12-month plan.",
+          "A player device — your Smart TV's built-in player, a Firestick 4K, an Android TV box (Nvidia Shield, Mi Box), an Apple TV 4K or any standard playlist player.",
+          "A Mzansi Stream subscription — from R199 for one month.",
         ],
       },
       {
@@ -1199,8 +1199,8 @@ export const PILLARS: Pillar[] = [
             text: "1, 3, 6 or 12-month plans. Pay via EFT, SnapScan, Ozow, Capitec Pay, Visa, Mastercard, PayPal or Bitcoin. 24-hour free trial available with no card.",
           },
           {
-            title: "Receive your M3U link",
-            text: "After payment we send your M3U URL + Xtream Codes credentials + the one-page setup guide for your device on WhatsApp.",
+            title: "Receive your playlist link",
+            text: "After payment we send your playlist URL + Xtream Codes credentials + the one-page setup guide for your device on WhatsApp.",
           },
           {
             title: "Install and stream",
@@ -1220,7 +1220,7 @@ export const PILLARS: Pillar[] = [
         id: "compared",
         h2: "Mzansi Stream vs DStv Premium for SuperSport",
         bullets: [
-          "Price: R99/mo (12-month) vs R899/mo. Saving: R800/mo, R9,500+/year.",
+          "Price: R99.92/mo (12-month) vs R899/mo. Saving: R800/mo, R9,500+/year.",
           "SuperSport coverage: folders to confirm on WhatsApp and test on the trial — not an identical feed list.",
           "Contract: no contract vs 24-month commitment on DStv Premium.",
           "Decoder: none vs R1,500+ decoder rental/purchase.",
@@ -1234,7 +1234,7 @@ export const PILLARS: Pillar[] = [
     faq: [
       {
         q: "Can I watch SuperSport without a DStv subscription?",
-        a: "SuperSport-style folders (PSL, Premier League, Variety, Rugby, Cricket, MotorSport, Tennis, Golf) are in the line-up from R99/month, with no DStv decoder, no installer and no 24-month contract. Specific feeds and matches are to confirm on WhatsApp.",
+        a: "SuperSport-style folders (PSL, Premier League, Variety, Rugby, Cricket, MotorSport, Tennis, Golf) are in the line-up from R199/month, with no DStv decoder, no installer and no 24-month contract. Specific feeds and matches are to confirm on WhatsApp.",
       },
       {
         q: "Is it legal to watch SuperSport via IPTV in South Africa?",
@@ -1250,7 +1250,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Does Mzansi Stream carry SA20 cricket and Proteas tours?",
-        a: "SuperSport Cricket-style folders are in the line-up. SA20, Proteas tours and ICC tournaments are to confirm on WhatsApp — we don't guarantee every match.",
+        a: "SuperSport Cricket-style folders are in the line-up. SA20, Proteas tours and ICC tournaments are to confirm on WhatsApp — we don't guarantee each requested fixture.",
       },
       {
         q: "Will the stream buffer during the Soweto Derby?",
@@ -1262,7 +1262,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does it cost per month?",
-        a: "R99/month on the 12-month plan (R1,199 once), R149/month on the 3-month plan, R199/month on the 1-month plan. All plans carry the same line-up — sport is not gated behind a higher tier.",
+        a: "R99.92/month on the 12-month plan (R1,199 once), R149.67/month equivalent on the 3-month plan, R199/month on the 1-month plan. All plans carry the same line-up — sport is not gated behind a higher tier.",
       },
     ],
     related: [
@@ -1294,18 +1294,18 @@ export const PILLARS: Pillar[] = [
     eyebrow: "Buyer guide · Cheap IPTV 2026",
     h1: "Cheap IPTV in South Africa — under R100/month, no contract",
     metaTitle:
-      "Cheap IPTV South Africa — From R99/mo, No Contract",
+      "Cheap IPTV South Africa — From R199/mo, No Contract",
     metaDescription:
-      "Cheap IPTV in South Africa from R99/month. SuperSport-style, kykNET, SABC and Premier League folders to confirm on WhatsApp. No contract, no decoder, no installation fee.",
+      "Cheap IPTV in South Africa from R199/month. SuperSport-style, kykNET, SABC and Premier League folders to confirm on WhatsApp. No contract, no decoder, no installation fee.",
     lead:
-      "If you've been searching for cheap IPTV in South Africa, this guide compares what R99/month actually buys you in 2026 — channel count, 4K availability, sport coverage, support response time — and how Mzansi Stream's 12-month plan lands at R99.92 effective per month for the same line-up as every plan.",
+      "If you've been searching for cheap IPTV in South Africa, this guide compares what the R199 one-month plan includes in 2026 — channel count, 4K availability, sport coverage, support response time — and how Mzansi Stream's 12-month plan lands at R99.92 effective per month for the same line-up as every plan.",
     trustLine:
-      "From R99/mo · No contract · 24h free trial · Activated on WhatsApp",
+      "From R199/mo · No contract · 24h free trial · Activated on WhatsApp",
     cta: {
       primary: {
-        label: "Start with the R99/mo plan — Free trial first →",
+        label: "Start with the R199 one-month plan — Free trial first →",
         message:
-          "Hi! I want the cheapest Mzansi Stream plan (R99/mo via 12-month). Can you send me the free 24h trial first?",
+          "Hi! I want the cheapest Mzansi Stream plan (R99.92/mo via 12-month). Can you send me the free 24h trial first?",
         ref: "Pillar-Cheap-Hero",
       },
       secondary: { label: "See pricing", href: "#pricing" },
@@ -1332,7 +1332,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         id: "what-cheap-iptv-includes",
-        h2: "What R99/month actually includes at Mzansi Stream",
+        h2: "What the R199 one-month plan includes",
         bullets: [
           "Live channel folders — SABC 1/2/3, e.tv, kykNET, Mzansi Magic, SuperSport-style PSL, Premier League, Rugby & Cricket, M-Net — line-up to confirm on WhatsApp.",
           "On-demand movies and series — catalogue to confirm on WhatsApp.",
@@ -1347,7 +1347,7 @@ export const PILLARS: Pillar[] = [
         id: "what-to-avoid",
         h2: "Three traps to avoid when shopping cheap IPTV",
         paragraphs: [
-          "Most 'R49/month IPTV' offers in South Africa fail one of three sniff tests: the provider is a single re-seller (no redundant servers), there's no SA-peered CDN (every match buffers), or there's no human support (your stream dies on Saturday afternoon and nobody answers).",
+          "Most 'R49/month IPTV' offers in South Africa fail one of three sniff tests: the provider is a single re-seller (no redundant servers), there's no SA-peered CDN (each requested fixture buffers), or there's no human support (your stream dies on Saturday afternoon and nobody answers).",
           "Stick to providers that have NAPAfrica peering, document their channel list publicly, and respond on WhatsApp during peak hours. If the seller refuses a free trial, walk away — the channel pack you're buying should survive a 24-hour test.",
         ],
         bullets: [
@@ -1366,7 +1366,7 @@ export const PILLARS: Pillar[] = [
           },
           {
             title: "Request the 24h free trial first",
-            text: "Message us on WhatsApp. We send the M3U link there. Test on your Smart TV, Firestick or phone for 24 hours before paying.",
+            text: "Message us on WhatsApp. We send the playlist link there. Test on your Smart TV, Firestick or phone for 24 hours before paying.",
           },
           {
             title: "Pay any local method",
@@ -1374,7 +1374,7 @@ export const PILLARS: Pillar[] = [
           },
           {
             title: "Watch in 4K where the source supports it",
-            text: "We re-send the M3U credentials and the full setup guide for your specific device.",
+            text: "We re-send the playlist credentials and the full setup guide for your specific device.",
           },
         ],
       },
@@ -1386,14 +1386,14 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is cheap IPTV reliable for SuperSport and Premier League?",
-        a: "Every plan, including the R99/mo tier, has the same SuperSport-style and Premier League folders. Specific matches are to confirm on WhatsApp, and 4K depends on your line — test it on the 24-hour trial.",
+        a: "Every plan, including the R199 one-month plan, has the same SuperSport-style and Premier League folders. Specific matches are to confirm on WhatsApp, and 4K depends on your line — test it on the 24-hour trial.",
       },
       {
         q: "Why is Mzansi Stream cheaper than DStv?",
         a: "No decoder hardware, no installer truck, no 24-month lock-in. You stream the channels directly to devices you already own. The savings are real — R9,500+ over DStv Premium in year one.",
       },
       {
-        q: "Are there hidden fees on the R99/mo plan?",
+        q: "Are there hidden fees on the one-month plan?",
         a: "No. The 12-month plan is R1,199 once-off, full stop. No installation, no decoder rental, no per-channel surcharge, no auto-renewal.",
       },
       {
@@ -1401,8 +1401,8 @@ export const PILLARS: Pillar[] = [
         a: "Yes — a free 24-hour trial of the full channel pack. Request it on WhatsApp. We don't ask for a card.",
       },
       {
-        q: "Will the R99 plan stay R99 next year?",
-        a: "Pricing is locked in for the term you pay for. Mzansi Stream has held R99 (12-month equivalent) since launch and there's no scheduled hike for 2026.",
+        q: "Will the price change next year?",
+        a: "Pricing is locked in for the term you pay for. Future prices are not guaranteed; check the renewal total before paying.",
       },
       {
         q: "What if cheap IPTV gets shut down?",
@@ -1431,9 +1431,9 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "4K IPTV South Africa — Native UHD SuperSport & Premier League",
     metaDescription:
-      "4K UHD IPTV in South Africa. SuperSport, Premier League and kykNET folders to confirm on WhatsApp. From R99/mo. No promise of zero buffering.",
+      "4K UHD IPTV in South Africa. SuperSport, Premier League and kykNET folders to confirm on WhatsApp. From R199/mo. No promise of zero buffering.",
     lead:
-      "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a home connection that holds 25 Mbps. Every Mzansi Stream plan from R99/month includes 4K where the source supports it — test it on your own line during the 24-hour trial.",
+      "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a home connection that holds 25 Mbps. Every Mzansi Stream plan from R199/month includes 4K where the source supports it — test it on your own line during the 24-hour trial.",
     trustLine:
       "4K where the source supports it · No quality tier · Test on the 24h trial",
     cta: {
@@ -1472,7 +1472,7 @@ export const PILLARS: Pillar[] = [
           "TV: any 2018+ Smart TV with HEVC (H.265) decode — Samsung, LG, Sony, Hisense, TCL.",
           "Hardware streaming box (if Smart TV is older): Firestick 4K Max, Apple TV 4K, Nvidia Shield, Chromecast with Google TV 4K.",
           "Connection: wired Ethernet preferred for 4K. Wi-Fi 5 GHz acceptable for single-stream households.",
-          "App: TiviMate Premium (best 4K UI) or IPTV Smarters Pro (free tier works).",
+          "App: IPTV player Premium (best 4K UI) or IPTV Smarters Pro (free tier works).",
         ],
       },
       {
@@ -1489,7 +1489,7 @@ export const PILLARS: Pillar[] = [
         steps: [
           {
             title: "Pick a 4K-capable player",
-            text: "TiviMate Premium on Firestick / Android TV is the gold standard. IPTV Smarters Pro works free.",
+            text: "IPTV player Premium on Firestick / Android TV is the gold standard. IPTV Smarters Pro works free.",
           },
           {
             title: "Connect over Ethernet (if possible)",
@@ -1497,7 +1497,7 @@ export const PILLARS: Pillar[] = [
           },
           {
             title: "Set the player's max resolution to 'Auto' or '4K'",
-            text: "In TiviMate: Settings → Playback → Preferred resolution → 4K. In IPTV Smarters: enable 'Best Player' mode.",
+            text: "In IPTV player: Settings → Playback → Preferred resolution → 4K. In IPTV Smarters: enable 'Best Player' mode.",
           },
           {
             title: "Tune in to a 4K-tagged channel",
@@ -1513,7 +1513,7 @@ export const PILLARS: Pillar[] = [
     faq: [
       {
         q: "Is 4K available on every Mzansi Stream plan?",
-        a: "Every plan — including R99/month effective on the 12-month — has the same line-up, with 4K where the source supports it. There is no 4K surcharge.",
+        a: "Every plan — including R99.92/month equivalent on the 12-month — has the same line-up, with 4K where the source supports it. There is no 4K surcharge.",
       },
       {
         q: "What internet speed do I need for 4K IPTV?",
@@ -1587,7 +1587,7 @@ export const PILLARS: Pillar[] = [
         bullets: [
           "1. Provider CDN routes overseas (no NAPAfrica peering) — 180-220ms latency to SA.",
           "2. Wi-Fi router caps real throughput below 100 Mbps (especially old 2.4 GHz only).",
-          "3. Streaming app's buffer setting is too small (TiviMate default is 2s; raise it to 8s for 4K).",
+          "3. Streaming app's buffer setting is too small (IPTV player default is 2s; raise it to 8s for 4K).",
           "4. Background traffic (game console download, Windows Update) saturating the line.",
           "5. ISP-side congestion event (rare on Vumatel and Openserve in 2026).",
         ],
@@ -1614,7 +1614,7 @@ export const PILLARS: Pillar[] = [
           },
           {
             title: "Raise the player buffer to 8 seconds",
-            text: "In TiviMate: Settings → Playback → Buffer Size → 8 sec. In IPTV Smarters: Settings → Player Settings → Time-shift Buffer → 6-10 sec. Adds a couple of seconds of channel-change delay and often reduces re-buffers.",
+            text: "In IPTV player: Settings → Playback → Buffer Size → 8 sec. In IPTV Smarters: Settings → Player Settings → Time-shift Buffer → 6-10 sec. Adds a couple of seconds of channel-change delay and often reduces re-buffers.",
           },
           {
             title: "Disable Smart TV DLNA / SmartShare",
@@ -1664,7 +1664,7 @@ export const PILLARS: Pillar[] = [
         a: "Buffering = the player spinner shows for a few seconds then resumes (network drop, recoverable). Freezing = the picture locks completely and the stream restarts (provider feed died or app crashed). Persistent freezing usually means a bad provider.",
       },
       {
-        q: "Does TiviMate's buffer setting really matter?",
+        q: "Does IPTV player's buffer setting really matter?",
         a: "Yes — it is an under-rated fix. Raising the buffer from 2s to 8s often reduces micro-re-buffers, at the cost of a slightly slower channel change.",
       },
       {
@@ -1694,7 +1694,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV for Movies & Series South Africa — VOD and Live Movies",
     metaDescription:
-      "IPTV for movies and series in South Africa — on-demand VOD plus live movie-channel folders. Catalogue to confirm on WhatsApp. 4K where the source supports it, no contract. From R99/mo.",
+      "IPTV for movies and series in South Africa — on-demand VOD plus live movie-channel folders. Catalogue to confirm on WhatsApp. 4K where the source supports it, no contract. From R199/mo.",
     lead:
       "If you watch more movies and series than live sport, ask about Mzansi Stream's VOD catalogue and live movie-channel folders before you pay. This page does not publish a title count or promise any studio's or streaming service's catalogue — browse what is actually there during the 24-hour trial, then decide.",
     trustLine:
@@ -1751,7 +1751,7 @@ export const PILLARS: Pillar[] = [
         steps: [
           {
             title: "Install a VOD-friendly player",
-            text: "IPTV Smarters Pro has the cleanest VOD grid on Firestick / Android TV / Samsung Tizen. TiviMate Premium handles live + VOD in one app.",
+            text: "IPTV Smarters Pro has the cleanest VOD grid on Firestick / Android TV / Samsung Tizen. IPTV player Premium handles live + VOD in one app.",
           },
           {
             title: "Load your Xtream Codes credentials",
@@ -1787,7 +1787,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "Is there a resume-watching feature?",
-        a: "Yes — IPTV Smarters Pro and TiviMate Premium both save resume points per device and per profile.",
+        a: "Yes — IPTV Smarters Pro and IPTV player Premium both save resume points per device and per profile.",
       },
       {
         q: "Can I download titles for offline viewing?",

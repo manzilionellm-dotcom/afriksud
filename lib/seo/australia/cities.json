@@ -1,0 +1,370 @@
+{
+  "perth": {
+    "en": {
+      "title": "SuperSport IPTV Perth — Firestick installation checklist",
+      "lead": "To prepare a Firestick in Perth for South African sport, first check which service is authorised to show your match in Australia. Installing an IPTV player does not supply SuperSport or unlock DStv Stream. Then check your exact Fire TV model, app availability and account before testing playback on your home connection.",
+      "sections": [
+        {
+          "title": "Start with the match and the device",
+          "paragraphs": [
+            "Write down the competition, fixture date and broadcaster before choosing an application. A rugby match available on an Australian service is not necessarily the SuperSport channel feed. Check the provider’s current Australian schedule and device support. On the Firestick, open Settings and record the model and software version. Two devices sold as Fire TV can have different software, so an installation guide for another model may not apply."
+          ]
+        },
+        {
+          "title": "Install from a trusted source",
+          "paragraphs": [
+            "Search the device’s official app store for the provider’s supported application. Confirm the publisher before installing, update the device and sign in with your own subscription. If a legitimate service supplies a stream playlist, use a compatible player supported by that service; keep the playlist address private because it may contain account credentials. Do not assume a phone app will also appear on a television. If the app is missing, ask the provider about a supported alternative before paying."
+          ]
+        },
+        {
+          "title": "Check the Perth connection",
+          "paragraphs": [
+            "Play an available programme on the same screen and connection you will use for the match. Compare Wi-Fi with Ethernet if your device supports an adapter. Record start-up time, picture interruptions and the selected quality over a fifteen-minute session. Change one setting at a time so you can identify what helped. We have not measured provider latency from Perth, and this checklist does not promise a particular delay or a buffer-free stream."
+          ]
+        },
+        {
+          "title": "Set the correct viewing time",
+          "paragraphs": [
+            "Perth uses AWST, UTC+8, without daylight saving. It is six hours ahead of South African standard time. A hypothetical 18:00 kickoff in South Africa therefore starts at midnight in Perth on the following day. This is a conversion example, not a fixture announcement. Check the match date and your app’s programme guide together, then keep the provider’s support details handy before the broadcast begins."
+          ]
+        }
+      ]
+    },
+    "af": {
+      "title": "SuperSport IPTV Perth — Firestick-opstelling",
+      "lead": "Om ’n Firestick in Perth vir Suid-Afrikaanse sport op te stel, bevestig eers watter diens jou wedstryd in Australië mag wys. ’n IPTV-speler sluit nie SuperSport in nie en ontsluit nie DStv Stream nie. Kontroleer daarna jou presiese Fire TV-model, die beskikbare toepassing en jou rekening voordat jy tuis begin toets.",
+      "sections": [
+        {
+          "title": "Begin by die wedstryd en toestel",
+          "paragraphs": [
+            "Skryf die kompetisie, wedstryddatum en uitsaaier neer voordat jy ’n toepassing kies. Rugby op ’n Australiese diens is nie noodwendig die SuperSport-kanaal se uitsending nie. Raadpleeg die diens se Australiese programgids en lys van ondersteunde toestelle. Maak jou Firestick se instellings oop en noteer die model en sagtewareweergawe. Toestelle met soortgelyke name kan verskillende sagteware gebruik, dus pas ’n handleiding vir ’n ander model nie altyd by jou toestel nie."
+          ]
+        },
+        {
+          "title": "Installeer uit ’n betroubare winkel",
+          "paragraphs": [
+            "Soek die ondersteunde toepassing in die toestel se amptelike winkel. Bevestig die uitgewer, werk die toestel by en meld met jou eie intekening aan. Indien ’n gemagtigde diens ’n playlist-speellys verskaf, kies ’n speler wat daardie formaat ondersteun. Hou die speellysadres privaat omdat dit rekeningbesonderhede kan bevat. ’n Toepassing wat op jou foon beskikbaar is, verskyn nie noodwendig op jou televisie nie. Vra oor ’n ondersteunde alternatief voordat jy betaal."
+          ]
+        },
+        {
+          "title": "Toets jou verbinding in Perth",
+          "paragraphs": [
+            "Speel ’n beskikbare program op dieselfde skerm en verbinding wat jy vir die wedstryd sal gebruik. Vergelyk Wi-Fi met Ethernet indien jou toestel ’n adapter ondersteun. Noteer die begintyd, onderbrekings en beeldgehalte gedurende vyftien minute. Verander net een instelling op ’n slag sodat jy weet wat gehelp het. Ons het geen verskaffervertraging vanuit Perth gemeet nie; hierdie kontrolelys belowe dus geen spesifieke vertraging of ononderbroke stroom nie."
+          ]
+        },
+        {
+          "title": "Kontroleer die plaaslike tyd",
+          "paragraphs": [
+            "Perth gebruik AWST, UTC+8, sonder somertyd. Die stad is ses uur voor Suid-Afrikaanse standaardtyd. ’n Denkbeeldige afskop om 18:00 in Suid-Afrika word dus middernag in Perth op die volgende dag. Dit is net ’n tydsomrekening en nie ’n wedstrydaankondiging nie. Vergelyk die werklike wedstryddatum met die toepassing se programgids en hou die verskaffer se kontakbesonderhede gereed. Toets jou opstelling vooraf eerder as wanneer die eerste helfte reeds begin het."
+          ]
+        }
+      ]
+    },
+    "zu": {
+      "title": "SuperSport IPTV Perth — ukusetha i-Firestick",
+      "lead": "Ukuze ulungise i-Firestick ePerth ukubuka ezemidlalo zaseNingizimu Afrika, qala uqinisekise ukuthi yimuphi umhlinzeki ovunyelwe ukukhombisa umdlalo e-Australia. Isidlali se-IPTV asifaki i-SuperSport futhi asivuli i-DStv Stream kuleli zwe. Hlola imodeli ye-Fire TV, uhlelo olutholakalayo kanye ne-akhawunti yakho ngaphambi kokuzama ukusakaza ekhaya.",
+      "sections": [
+        {
+          "title": "Qala ngomdlalo nedivayisi",
+          "paragraphs": [
+            "Bhala igama lomqhudelwano, usuku lomdlalo kanye nomsakazi ngaphambi kokukhetha uhlelo. Umdlalo webhola lombhoxo otholakala kwinkonzo yase-Australia awusho ukuthi uthola isiteshi se-SuperSport uqobo. Bheka uhlu lwemidlalo lwase-Australia kanye namadivayisi umhlinzeki awasekelayo. Vula izilungiselelo ze-Firestick ubhale imodeli nenguqulo yesofthiwe. Amadivayisi anamagama afanayo angase asebenzise amasistimu ahlukene. Ngakho ungacabangi ukuthi imiyalelo yomunye umuntu izosebenza ngokuphelele kudivayisi yakho. Qinisekisa yonke imininingwane ebalulekile ngaphambi kokukhokha imali entsha noma ukuthenga enye into ongase ungayidingi."
+          ]
+        },
+        {
+          "title": "Faka uhlelo oluvela emthonjeni othembekile",
+          "paragraphs": [
+            "Sesha uhlelo olusekelwayo esitolo esisemthethweni sedivayisi. Hlola igama lomshicileli, buyekeza isofthiwe bese ungena nge-akhawunti yakho. Uma umhlinzeki ogunyaziwe ekunika uhlu lwe-playlist, khetha isidlali esilwamukelayo. Gcina ikheli lohlu liyimfihlo ngoba lingaba nemininingwane yokungena. Uhlelo olusebenza ocingweni alutholakali njalo kumabonakude. Uma ungakwazi ukuluthola, cela umhlinzeki achaze enye indlela esekelwayo. Ungathumeli iphasiwedi yakho esithangamini somphakathi lapho ucela usizo. Bhala izinyathelo ozenzile ukuze ukwazi ukuziphinda uma kudingeka uqale kabusha."
+          ]
+        },
+        {
+          "title": "Hlola uxhumano lwakho ePerth",
+          "paragraphs": [
+            "Dlala uhlelo olutholakalayo esikrinini nasoxhumanweni ozolusebenzisa ngosuku lomdlalo. Qhathanisa i-Wi-Fi ne-Ethernet uma idivayisi isekela i-adaptha efanele. Emizuzwini eyishumi nanhlanu, bhala isikhathi sokuqala kwesithombe, ukunqamuka kanye nekhwalithi oyikhethile. Shintsha isethingi eyodwa ngesikhathi ukuze ubone ukuthi yini esizile. Asikakukali ukubambezeleka kwabahlinzeki sisePerth. Ngakho asithembisi inani elithile noma ukusakaza okungenakho ukunqamuka. Uma kukhona iphutha, bhala umlayezo walo kanye nesikhathi elivele ngaso. Lokhu kusiza abasekeli baqonde inkinga ngaphandle kokuthola iphasiwedi yakho."
+          ]
+        },
+        {
+          "title": "Sebenzisa isikhathi sasePerth",
+          "paragraphs": [
+            "IPerth isebenzisa i-AWST, UTC+8, futhi ayishintshi isikhathi ngezinkathi zonyaka. Ingamahora ayisithupha ngaphambi kwesikhathi saseNingizimu Afrika. Umdlalo oyisibonelo oqala ngo-18:00 eNingizimu Afrika ungaqala phakathi kwamabili ePerth ngosuku olulandelayo. Lokhu kuyisibonelo sokuguqula isikhathi kuphela, akusona isimemezelo somdlalo. Qhathanisa usuku olusemthethweni nomhlahlandlela wezinhlelo kuhlelo lwakho. Gcina imininingwane yosizo ngaphambi kokuba ukusakaza kuqale. Lungisa konke kusenesikhathi ukuze ungachithi ingxenye yokuqala yomdlalo usesha izilungiselelo. Bheka futhi ukuthi ikhalenda lakho likhombisa usuku olulungile."
+          ]
+        }
+      ]
+    }
+  },
+  "sydney": {
+    "en": {
+      "title": "SuperSport IPTV Sydney — diagnose buffering on Smart TV",
+      "lead": "If South African sport buffers on your Smart TV in Sydney, compare the same available programme on another device before changing provider. A slow television app, local Wi-Fi congestion and a remote stream problem can produce similar symptoms. A geographic restriction is a separate issue: changing the buffer cannot make DStv Stream available in Australia.",
+      "sections": [
+        {
+          "title": "Separate the television from the connection",
+          "paragraphs": [
+            "Record your television brand, model year, operating system and app version. Samsung, LG and Android TV do not share one universal application catalogue. Restart the app, check for supported updates and repeat the same programme. Then try a supported phone or computer on the same network. If only the television struggles, investigate its application and decoder compatibility before changing your internet plan or assuming that the provider’s entire service is down."
+          ]
+        },
+        {
+          "title": "Run a controlled home-network comparison",
+          "paragraphs": [
+            "Pause large downloads and try Ethernet where available. Otherwise test near the router, keeping the stream and picture quality unchanged. Note the start time, number of stalls and total interruption time during fifteen minutes. Repeat during the period when you normally watch sport. A speed test measures throughput to its own test server; it does not establish the delay of the television stream. Keep those results separate in your notes rather than presenting them as one latency score."
+          ]
+        },
+        {
+          "title": "Understand delay versus buffering",
+          "paragraphs": [
+            "Start-up time is how long playback takes to begin. Rebuffering is an interruption after playback starts. Live delay is the gap between an event and the picture reaching your screen. Increasing a player buffer may reduce interruptions while increasing live delay, so there is no universal setting that makes both disappear. We have no measured Sydney provider results to rank. Give support your device, connection type and timestamps, without sharing your password or complete playlist URL."
+          ]
+        },
+        {
+          "title": "Keep the Sydney clock accurate",
+          "paragraphs": [
+            "Sydney changes between AEST and AEDT. Its difference from South Africa is eight hours during standard time and nine hours during daylight saving. Use the fixture’s date when converting, rather than copying a London kickoff guide. Set the television’s date and time automatically where supported. An incorrect clock can also confuse the programme guide, making a scheduled event appear missing even when playback itself is working normally."
+          ]
+        }
+      ]
+    },
+    "af": {
+      "title": "SuperSport IPTV Sydney — herstel buffering op jou Smart TV",
+      "lead": "As Suid-Afrikaanse sport op jou Smart TV in Sydney onderbreek, vergelyk dieselfde program op ’n ander toestel voordat jy van verskaffer verander. ’n Stadige toepassing, besige Wi-Fi en ’n stroomprobleem kan soortgelyke simptome hê. ’n Gebiedsbeperking is ’n ander probleem: ’n groter buffer maak DStv Stream nie in Australië beskikbaar nie.",
+      "sections": [
+        {
+          "title": "Skei die televisie van die netwerk",
+          "paragraphs": [
+            "Noteer die televisie se handelsmerk, modeljaar, bedryfstelsel en toepassingweergawe. Samsung, LG en Android TV gebruik nie een universele toepassingwinkel nie. Herbegin die toepassing, kyk vir ondersteunde opdaterings en speel dieselfde program weer. Probeer daarna ’n ondersteunde foon of rekenaar op dieselfde netwerk. As net die televisie sukkel, ondersoek sy toepassing en video-ondersteuning voordat jy ’n duurder internetpakket koop of besluit dat die hele diens buite werking is."
+          ]
+        },
+        {
+          "title": "Vergelyk onder dieselfde omstandighede",
+          "paragraphs": [
+            "Onderbreek groot aflaaie en probeer Ethernet indien dit beskikbaar is. Andersins toets jy nader aan die roeteerder sonder om die program of beeldgehalte te verander. Noteer die begintyd, aantal onderbrekings en totale wagtyd gedurende vyftien minute. Herhaal dit wanneer jy gewoonlik sport kyk. ’n Spoedtoets meet deurset na sy eie toetsbediener; dit bewys nie hoeveel die televisiestroom agter die regstreekse gebeurtenis is nie. Hou hierdie resultate apart in jou notas."
+          ]
+        },
+        {
+          "title": "Verstaan wagtyd en onderbrekings",
+          "paragraphs": [
+            "Begintyd is die tyd voordat die eerste beeld verskyn. Bufferonderbrekings gebeur nadat afspeel begin het. Regstreekse vertraging is die verskil tussen die gebeurtenis en die beeld op jou skerm. ’n Groter buffer kan onderbrekings verminder maar die vertraging vergroot. Daar is dus geen enkele instelling wat albei altyd oplos nie. Ons het geen plaaslike Sydney-metings om verskaffers te rangskik nie. Gee ondersteuning jou toestelbesonderhede en fouttye, maar nie jou wagwoord of volledige speellysadres nie."
+          ]
+        },
+        {
+          "title": "Kontroleer Sydney se horlosie",
+          "paragraphs": [
+            "Sydney wissel tussen AEST en AEDT. Die stad is agt uur voor Suid-Afrika gedurende standaardtyd en nege uur gedurende somertyd. Gebruik die datum van die wedstryd wanneer jy die afskop omskakel; moenie ’n Londense tydgids kopieer nie. Stel die televisie se datum en tyd outomaties waar dit ondersteun word. ’n Verkeerde horlosie kan die programgids verskuif en laat lyk asof ’n wedstryd ontbreek, selfs wanneer afspeel normaal werk."
+          ]
+        }
+      ]
+    },
+    "zu": {
+      "title": "SuperSport IPTV Sydney — ukulungisa ukunqamuka ku-Smart TV",
+      "lead": "Uma ezemidlalo zaseNingizimu Afrika zinqamuka ku-Smart TV yakho eSydney, zama uhlelo olufanayo kwenye idivayisi ngaphambi kokushintsha umhlinzeki. Uhlelo oluhamba kancane, i-Wi-Fi ematasa kanye nenkinga yomthombo kungabonakala kufana. Umkhawulo wendawo uhlukile: ukukhulisa i-buffer akwenzi i-DStv Stream itholakale e-Australia.",
+      "sections": [
+        {
+          "title": "Hlukanisa inkinga kamabonakude neyoxhumano",
+          "paragraphs": [
+            "Bhala uhlobo lukamabonakude, imodeli, unyaka, isistimu kanye nenguqulo yohlelo. Ama-Samsung, ama-LG kanye ne-Android TV awasebenzisi isitolo esisodwa sezinhlelo. Qala uhlelo kabusha, hlola izibuyekezo ezisekelwayo bese uzama uhlelo olufanayo futhi. Emva kwalokho sebenzisa ifoni noma ikhompyutha esekelwayo kunethiwekhi efanayo. Uma inkinga ikumabonakude kuphela, hlola uhlelo lwawo nokusekelwa kwevidiyo. Ungasheshi uthenge iphakheji ye-inthanethi ebizayo noma uthi yonke inkonzo ayisebenzi. Ukuqhathanisa ngendlela efanayo kusiza ukunciphisa izinto okufanele uziphenye."
+          ]
+        },
+        {
+          "title": "Yenza ukuhlola okufanayo ekhaya",
+          "paragraphs": [
+            "Misa ukulanda amafayela amakhulu bese uzama i-Ethernet uma itholakala. Uma kungenjalo, zama eduze komzila we-Wi-Fi ngaphandle kokushintsha uhlelo noma ikhwalithi yesithombe. Emizuzwini eyishumi nanhlanu bhala isikhathi sokuqala, inani lokunqamuka kanye nesikhathi esiphelele sokulinda. Phinda ngesikhathi ovame ukubuka ngaso ezemidlalo. Ukuhlolwa kwesivinini kukala uxhumano oluya kuseva yakhona; akukali ukuthi isithombe sikamabonakude sisemuva kangakanani. Gcina lezi zinombolo ngokwehlukana ukuze ungazihlanganisi zibe yisilinganiso esingelona iqiniso. Bhala futhi uhlobo loxhumano olusebenzisile."
+          ]
+        },
+        {
+          "title": "Qonda umehluko wokubambezeleka",
+          "paragraphs": [
+            "Isikhathi sokuqala siphela lapho kuvela isithombe sokuqala. Ukunqamuka kwenzeka ngemva kokuba ukudlala sekuqalile. Ukubambezeleka kokusakaza bukhoma kuyigebe phakathi komcimbi nesithombe esifika kuwe. Ukwandisa i-buffer kunganciphisa ukunqamuka kodwa kwandise lelo gebe. Ayikho isethingi eyodwa eqinisekisa ukuthi zombili izinkinga ziyaphela. Asinawo amaphuzu okulinganisa aseSydney esingahlulela ngawo abahlinzeki. Thumela imininingwane yedivayisi nezikhathi zamaphutha kwabasekeli. Ungafaki iphasiwedi noma ikheli eligcwele lohlu lokudlala. Gcina ikhophi yamanothi akho ukuze uqhathanise impendulo nokuhlola okulandelayo."
+          ]
+        },
+        {
+          "title": "Lungisa iwashi laseSydney",
+          "paragraphs": [
+            "ISydney ishintsha phakathi kwe-AEST ne-AEDT. Iphambi kweNingizimu Afrika ngamahora ayisishiyagalombili ngesikhathi esijwayelekile nangayisishiyagalolunye ngesikhathi sasehlobo. Sebenzisa usuku lomdlalo lapho uguqula isikhathi sokuqala, ungakopishi umhlahlandlela waseLondon. Uma idivayisi ikuvumela, khetha ukusethwa kwesikhathi okuzenzakalelayo. Iwashi elingalungile lingaphambanisa uhlu lwezinhlelo futhi libonise sengathi umdlalo awukho. Lokhu kungenzeka noma ukudlala kwevidiyo kusebenza kahle. Hlola usuku, indawo kanye nesikhathi ndawonye ngaphambi kokucela usizo. Uma usulungisile, vula umhlahlandlela futhi ukuze uqinisekise ukuthi ushintsho luyavela."
+          ]
+        }
+      ]
+    }
+  },
+  "melbourne": {
+    "en": {
+      "title": "SuperSport IPTV Melbourne — Android viewing and rugby kickoff times",
+      "lead": "For South African rugby on Android in Melbourne, check the Australian broadcaster for the fixture and convert its kickoff using the match date. Melbourne is eight or nine hours ahead of South Africa, depending on daylight saving. An Android IPTV player is only a player; it does not include SuperSport or change a subscription’s territory.",
+      "sections": [
+        {
+          "title": "Choose the supported Android application",
+          "paragraphs": [
+            "Check whether you are using an Android phone, tablet, Google TV or Android TV device. Similar names do not guarantee that the same app supports every screen. Follow the provider’s official device list, install through a trusted store and check the publisher. If you use a separate playlist service, confirm that your player accepts its format and that the service can supply the requested programme in Australia. Test an available programme before committing to a longer subscription."
+          ]
+        },
+        {
+          "title": "Convert the date as well as the hour",
+          "paragraphs": [
+            "Melbourne uses AEST, UTC+10, during standard time and AEDT, UTC+11, during daylight saving. South African standard time is UTC+2. A hypothetical Saturday kickoff at 18:00 in South Africa therefore becomes Sunday at 02:00 or 03:00 in Melbourne. This is an illustrative conversion, not a published fixture. Save the actual match in your calendar with a named time zone and check the broadcaster’s local schedule when clocks change."
+          ]
+        },
+        {
+          "title": "Prepare for overnight viewing",
+          "paragraphs": [
+            "Charge the phone or connect the television device to reliable power before the session. Check that the application is updated and that your subscription is active. If you plan to cast to a television, confirm that both the service and receiving device support it; a cast icon alone does not promise every programme will play. Try the exact combination in advance. Keep notifications and automatic downloads from interrupting the viewing session, using the normal settings available on your device."
+          ]
+        },
+        {
+          "title": "Record what your own test shows",
+          "paragraphs": [
+            "For a useful Melbourne test, record the device, app version, internet provider, connection type and selected quality. Observe at least fifteen minutes and note start-up time and interruptions separately. We have not performed local provider latency measurements, so we cannot name a fastest option. If a programme is unavailable because of territory or rights, stop troubleshooting the Wi-Fi and check the authorised Australian listing. Keep the result with the fixture date so that a later comparison uses the same conditions."
+          ]
+        }
+      ]
+    },
+    "af": {
+      "title": "SuperSport IPTV Melbourne — Android en rugby-afskoptye",
+      "lead": "Vir Suid-Afrikaanse rugby op Android in Melbourne moet jy die Australiese uitsaaier bevestig en die afskop volgens die wedstryddatum omskakel. Melbourne is agt of nege uur voor Suid-Afrika, afhangend van somertyd. ’n Android IPTV-speler is slegs ’n speler: dit sluit nie SuperSport in nie en verander nie jou intekening se gebied nie.",
+      "sections": [
+        {
+          "title": "Kies die regte Android-toepassing",
+          "paragraphs": [
+            "Bevestig of jy ’n Android-foon, tablet, Google TV of Android TV gebruik. Soortgelyke name beteken nie dat dieselfde toepassing op elke skerm werk nie. Raadpleeg die verskaffer se amptelike toestellys, installeer uit ’n betroubare winkel en kontroleer die uitgewer. Indien jy ’n aparte speellysdiens gebruik, bevestig die formaat en beskikbaarheid van die verlangde program in Australië. Toets ’n beskikbare program voordat jy ’n langer intekening koop, met presies die toestel wat jy tydens die wedstryd gaan gebruik."
+          ]
+        },
+        {
+          "title": "Skakel die datum én tyd om",
+          "paragraphs": [
+            "Melbourne gebruik AEST, UTC+10, gedurende standaardtyd en AEDT, UTC+11, gedurende somertyd. Suid-Afrikaanse standaardtyd is UTC+2. ’n Denkbeeldige Saterdag-afskop om 18:00 in Suid-Afrika word dus Sondag om 02:00 of 03:00 in Melbourne. Dit is ’n voorbeeld en nie ’n bevestigde wedstryd nie. Stoor die werklike gebeurtenis in jou kalender met ’n benoemde tydsone en kyk weer na die uitsaaier se plaaslike program wanneer die horlosies verander."
+          ]
+        },
+        {
+          "title": "Berei voor vir laatnag-kyk",
+          "paragraphs": [
+            "Laai jou foon of koppel die televisietoestel aan betroubare krag voordat jy begin. Kontroleer dat die toepassing op datum en die intekening aktief is. Indien jy na ’n televisie wil uitsaai, bevestig dat die diens en ontvangertoestel dit ondersteun. ’n Uitsaai-ikoon waarborg nie dat elke program sal speel nie. Toets die presiese kombinasie vooraf. Beperk kennisgewings en outomatiese aflaaie met die normale instellings op jou toestel, sodat dit nie die sessie onderbreek nie."
+          ]
+        },
+        {
+          "title": "Hou jou eie toetsresultate",
+          "paragraphs": [
+            "Noteer vir ’n nuttige Melbourne-toets die toestel, toepassingweergawe, internetverskaffer, verbinding en beeldgehalte. Kyk minstens vyftien minute en skryf begintyd en onderbrekings apart neer. Ons het geen plaaslike verskaffervertraging gemeet nie en kan dus nie die vinnigste opsie aanwys nie. As ’n program weens gebiedsregte ontbreek, raadpleeg die gemagtigde Australiese programgids eerder as om die Wi-Fi aanhoudend te verander. Hou die wedstryddatum by jou notas sodat ’n latere vergelyking dieselfde omstandighede gebruik."
+          ]
+        }
+      ]
+    },
+    "zu": {
+      "title": "SuperSport IPTV Melbourne — i-Android nezikhathi zebhola lombhoxo",
+      "lead": "Ukuze ubuke ibhola lombhoxo laseNingizimu Afrika nge-Android eMelbourne, hlola umsakazi wase-Australia bese uguqula isikhathi ngokosuku lomdlalo. IMelbourne iphambi kweNingizimu Afrika ngamahora ayisishiyagalombili noma ayisishiyagalolunye. Isidlali se-IPTV asifaki i-SuperSport futhi asishintshi indawo lapho ukubhalisa kwakho kuvunyelwe ukusebenza khona.",
+      "sections": [
+        {
+          "title": "Khetha uhlelo lwe-Android olusekelwayo",
+          "paragraphs": [
+            "Hlola ukuthi usebenzisa ifoni ye-Android, ithebhulethi, i-Google TV noma i-Android TV. Amagama afanayo awaqinisekisi ukuthi uhlelo olulodwa lusebenza kuzo zonke izikrini. Landela uhlu olusemthethweni lomhl i nzeki, faka uhlelo esitolo esithembekile bese uhlola umshicileli. Uma usebenzisa inkonzo yohlu lokudlala, qinisekisa ukuthi isidlali siyayamukela ifomethi nokuthi umdlalo uyatholakala e-Australia. Zama uhlelo olutholakalayo ngaphambi kokuthenga ukubhalisa kwesikhathi eside. Sebenzisa yona idivayisi ozobuka ngayo ngosuku lomdlalo ukuze ukuhlola kube wusizo. Ungathembeli esibonelweni somunye umuntu kuphela."
+          ]
+        },
+        {
+          "title": "Guqula usuku kanye nehora",
+          "paragraphs": [
+            "IMelbourne isebenzisa i-AEST, UTC+10, ngesikhathi esijwayelekile kanye ne-AEDT, UTC+11, ngesikhathi sasehlobo. INingizimu Afrika isebenzisa i-UTC+2. Umdlalo oyisibonelo oqala ngoMgqibelo ngo-18:00 eNingizimu Afrika ungaqala ngeSonto ngo-02:00 noma ngo-03:00 eMelbourne. Lesi yisibonelo kuphela, hhayi isimemezelo somdlalo ozayo. Faka umdlalo wangempela ekhalendeni usebenzisa indawo yesikhathi enegama. Bheka futhi uhlelo lomsakazi wendawo lapho amawashi eshintsha. Ukuguqula amahora kuphela ngaphandle kosuku kungakwenza uhlele ukubuka ngobusuku obungafanele. Qinisekisa imininingwane ngaphambi kokumema abanye abantu."
+          ]
+        },
+        {
+          "title": "Lungiselela ukubuka ebusuku",
+          "paragraphs": [
+            "Shaja ifoni noma uxhume idivayisi kamabonakude kugesi othembekile ngaphambi kwesikhathi. Hlola ukuthi uhlelo lubuyekeziwe nokuthi ukubhalisa kwakho kuyasebenza. Uma ufuna ukuthumela isithombe kumabonakude, qinisekisa ukuthi inkonzo nedivayisi eyamukelayo ziyakusekela. Uphawu lokuthumela isithombe aluqinisekisi ukuthi yonke imidlalo izodlala. Zama leyo nhlanganisela kusenesikhathi. Lungisa izaziso nokulanda okuzenzakalelayo usebenzisa izilungiselelo ezijwayelekile zedivayisi. Gcina ishaja eduze uma usebenzisa ifoni isikhathi eside. Bhala izinyathelo ezisebenzile ukuze ungadingi ukuqala phansi lapho umdlalo usuqala."
+          ]
+        },
+        {
+          "title": "Gcina imiphumela yokuhlola kwakho",
+          "paragraphs": [
+            "Ukuze ukuhlola eMelbourne kube lusizo, bhala idivayisi, inguqulo yohlelo, umhlinzeki we-inthanethi, uhlobo loxhumano nekhwalithi. Bukela okungenani imizuzu eyishumi nanhlanu bese uhlukanisa isikhathi sokuqala nokunqamuka. Asikakali ukubambezeleka kwabahlinzeki kuleli dolobha, ngakho asikwazi ukukhetha oshesha kunabo bonke. Uma umdlalo uvinjelwe ngenxa yendawo, bheka uhlu lwase-Australia olugunyaziwe kunokushintsha i-Wi-Fi njalo. Gcina usuku kanye nezimo zokuhlola ukuze ukuqhathanisa okulandelayo kube okufanele. Ungabelani ngemininingwane yokungena lapho uthumela amanothi akho kwabasekeli. Ubufakazi obucacile busiza kakhulu kunesithembiso esingenamanani."
+          ]
+        }
+      ]
+    }
+  },
+  "brisbane": {
+    "en": {
+      "title": "SuperSport IPTV Brisbane — iPhone, iPad and TV playback checks",
+      "lead": "To watch South African sport on iPhone or iPad in Brisbane, confirm the Australian service and the exact match first, then check whether it supports your iOS version and television connection. A playlist app does not include SuperSport. Brisbane stays on UTC+10 throughout the year, eight hours ahead of South African standard time.",
+      "sections": [
+        {
+          "title": "Verify the account before installing extras",
+          "paragraphs": [
+            "Start with the provider’s Australian programme listing and supported-device information. Install its official application from the App Store where available, check the publisher and sign in to your own account. If you use an authorised playlist subscription, select a player that supports its format. Never paste a playlist containing account credentials into a public troubleshooting forum. An app purchase and a television subscription are separate costs, so check both before assuming the player includes the channels you want."
+          ]
+        },
+        {
+          "title": "Test the route to your television",
+          "paragraphs": [
+            "For a larger screen, check the provider’s support for AirPlay, casting or a compatible television app. Some services restrict particular output methods or devices. Test the same programme on the phone first, then try the television route. Keep both devices on the required network and check the instructions for the receiving device. If phone playback works but television playback fails, investigate that connection rather than buying a new subscription immediately. A cable or cast button is not a universal compatibility guarantee."
+          ]
+        },
+        {
+          "title": "Control mobile data and playback quality",
+          "paragraphs": [
+            "Check whether you are on home Wi-Fi or mobile data before starting a long match. Use the app’s quality settings where provided and watch your data allowance. For a comparison, record the selected quality, start-up time and interruptions over fifteen minutes. Repeat on the connection you actually intend to use. We have no measured Brisbane latency results and cannot infer them from a provider’s server-location claim. Do not compare a phone on mobile data with a television on Ethernet as if only the provider changed."
+          ]
+        },
+        {
+          "title": "Use Brisbane time, not Sydney summer time",
+          "paragraphs": [
+            "Queensland does not observe daylight saving. A hypothetical 18:00 South African kickoff becomes 02:00 the following day in Brisbane. During daylight saving in New South Wales, a Sydney listing is one hour ahead of Brisbane, so copying it without conversion can make you miss the start. Check the date and the broadcaster’s local programme guide. Save your setup notes and subscription details before the event, without sharing passwords with another viewer."
+          ]
+        }
+      ]
+    },
+    "af": {
+      "title": "SuperSport IPTV Brisbane — iPhone, iPad en televisie",
+      "lead": "Om Suid-Afrikaanse sport op iPhone of iPad in Brisbane te kyk, bevestig eers die Australiese diens en presiese wedstryd. Kontroleer daarna jou iOS-weergawe en televisieverbinding. ’n Speellysspeler sluit nie SuperSport in nie. Brisbane bly die hele jaar op UTC+10, agt uur voor Suid-Afrikaanse standaardtyd.",
+      "sections": [
+        {
+          "title": "Kontroleer jou rekening voor aankope",
+          "paragraphs": [
+            "Begin by die verskaffer se Australiese programlys en ondersteunde toestelle. Installeer die amptelike toepassing uit die App Store waar beskikbaar, bevestig die uitgewer en meld met jou eie rekening aan. Indien jy ’n gemagtigde speellysintekening gebruik, kies ’n speler wat die formaat aanvaar. Moet nooit ’n adres met rekeningbesonderhede op ’n openbare ondersteuningsforum plaas nie. ’n Speleraankoop en televisie-intekening is aparte koste; kontroleer albei voordat jy aanvaar dat die verlangde kanale ingesluit is."
+          ]
+        },
+        {
+          "title": "Toets die verbinding met die televisie",
+          "paragraphs": [
+            "Kyk vir die diens se ondersteuning vir AirPlay, uitsaai of ’n televisietoepassing. Sommige dienste beperk spesifieke uitsetmetodes en toestelle. Speel dieselfde program eers op die foon en probeer daarna die televisie. Gebruik die vereiste netwerk en volg die ontvangertoestel se instruksies. As dit op die foon werk maar nie op die televisie nie, ondersoek eers daardie verbinding voordat jy weer betaal. ’n Kabel of uitsaai-knoppie waarborg nie dat elke toepassing en program saam sal werk nie."
+          ]
+        },
+        {
+          "title": "Beheer data en beeldgehalte",
+          "paragraphs": [
+            "Kontroleer of jy huis-Wi-Fi of mobiele data gebruik voordat ’n lang wedstryd begin. Pas beeldgehalte aan waar die toepassing dit toelaat en hou jou datalimiet dop. Noteer vir ’n vergelyking die gehalte, begintyd en onderbrekings gedurende vyftien minute. Herhaal die toets op die verbinding wat jy werklik sal gebruik. Ons het geen Brisbane-vertragingsmetings nie en kan dit nie uit ’n verskaffer se bedieneradres aflei nie. Moenie twee verskillende toestelle en netwerke vergelyk asof net die verskaffer verander het nie."
+          ]
+        },
+        {
+          "title": "Gebruik Brisbane se plaaslike tyd",
+          "paragraphs": [
+            "Queensland gebruik nie somertyd nie. ’n Denkbeeldige Suid-Afrikaanse afskop om 18:00 word 02:00 die volgende dag in Brisbane. Wanneer Nieu-Suid-Wallis somertyd gebruik, is Sydney een uur voor Brisbane. Om Sydney se program sonder omskakeling te kopieer kan jou dus die begin laat mis. Kontroleer die datum en uitsaaier se plaaslike programgids. Bewaar jou opstellingsnotas en intekeningbesonderhede voor die wedstryd, maar moenie jou wagwoord met ander kykers deel nie."
+          ]
+        }
+      ]
+    },
+    "zu": {
+      "title": "SuperSport IPTV Brisbane — i-iPhone, i-iPad nokubuka ku-TV",
+      "lead": "Ukuze ubuke ezemidlalo zaseNingizimu Afrika nge-iPhone noma i-iPad eBrisbane, qala uqinisekise inkonzo yase-Australia nomdlalo oqondile. Hlola inguqulo ye-iOS nendlela yokuxhuma kumabonakude. Isidlali sohlu asifaki i-SuperSport. IBrisbane ihlala ku-UTC+10 unyaka wonke, ingamahora ayisishiyagalombili ngaphambi kweNingizimu Afrika.",
+      "sections": [
+        {
+          "title": "Hlola i-akhawunti ngaphambi kokuthenga",
+          "paragraphs": [
+            "Qala ngohlu lwemidlalo lwase-Australia kanye nemininingwane yamadivayisi asekelwayo. Faka uhlelo olusemthethweni ku-App Store uma lutholakala, hlola umshicileli bese ungena nge-akhawunti yakho. Uma usebenzisa uhlu lokudlala olugunyaziwe, khetha isidlali esamukela ifomethi yalo. Ungalokothi uthumele ikheli elinemininingwane yokungena esithangamini somphakathi. Ukuthenga isidlali nokubhalisela ithelevishini kuyizindleko ezimbili ezahlukene. Qinisekisa zombili ngaphambi kokucabanga ukuthi uthole wonke amashaneli owafunayo. Funda imininingwane yokuvuselela nokukhansela ukuze wazi ukuthi uzokhokha nini futhi. Gcina iresidi yakho endaweni ephephile."
+          ]
+        },
+        {
+          "title": "Zama indlela eya kumabonakude",
+          "paragraphs": [
+            "Ukuze usebenzise isikrini esikhulu, hlola ukuthi inkonzo isekela i-AirPlay, ukuthumela isithombe noma uhlelo lukamabonakude. Ezinye izinkonzo zikhawulela amadivayisi nezindlela zokukhipha ividiyo. Dlala uhlelo olufanayo ocingweni kuqala, bese uzama kumabonakude. Xhuma amadivayisi kunethiwekhi edingekayo futhi ulandele imiyalelo yedivayisi eyamukelayo. Uma ifoni isebenza kodwa umabonakude ungasebenzi, phenya lelo xhumano ngaphambi kokuthenga okunye ukubhalisa. Ikhebula noma inkinobho yokuthumela akusona isiqinisekiso esisebenza kukho konke. Bhala umlayezo wephutha ukuze abasekeli baqonde kahle okwenzekile."
+          ]
+        },
+        {
+          "title": "Lawula idatha nekhwalithi yokudlala",
+          "paragraphs": [
+            "Hlola ukuthi usebenzisa i-Wi-Fi yasekhaya noma idatha yeselula ngaphambi komdlalo omude. Sebenzisa izilungiselelo zekhwalithi uma uhlelo luzinikeza futhi uqaphe umkhawulo wedatha. Uma uqhathanisa, bhala ikhwalithi, isikhathi sokuqala kanye nokunqamuka emizuzwini eyishumi nanhlanu. Phinda kuxhumano ozolusebenzisa ngempela. Asinayo imiphumela yokulinganisa ukubambezeleka eBrisbane futhi asikwazi ukuyiqagela ngekheli leseva elikhangiswayo. Ungaqhathanisi ifoni esebenzisa idatha yeselula nomabonakude osebenzisa i-Ethernet sengathi kushintshe umhlinzeki kuphela. Gcina izimo zifana ngangokunokwenzeka ukuze amanothi akho abe lusizo."
+          ]
+        },
+        {
+          "title": "Sebenzisa isikhathi saseBrisbane",
+          "paragraphs": [
+            "IQueensland ayisebenzisi isikhathi sasehlobo. Umdlalo oyisibonelo oqala ngo-18:00 eNingizimu Afrika uqala ngo-02:00 ngosuku olulandelayo eBrisbane. Uma iSydney isesikhathini sasehlobo, iwashi layo liphambi kweBrisbane ngehora elilodwa. Ukukopisha uhlelo lwaseSydney ngaphandle kokuguqula isikhathi kungakwenza uphuthelwe ukuqala. Hlola usuku nomhlahlandlela wendawo womsakazi. Gcina amanothi okusetha nemininingwane yokubhalisa ngaphambi komdlalo, kodwa ungabelani ngephasiwedi nomunye umbukeli. Bheka futhi ukuthi ikhalenda lakho likhethe indawo efanele. Lokhu kubalulekile uma uvakashele elinye idolobha noma usanda kushintsha izilungiselelo zefoni."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -43,7 +43,7 @@ export const IPTV_APPS: CheckoutOption[] = [
   { value: "siptv",          label: "SIPTV / Smart IPTV" },
   { value: "smarters-pro",   label: "IPTV Smarters Pro" },
   { value: "smarters-lite",  label: "IPTV Smarters Lite" },
-  { value: "tivimate",       label: "TiviMate" },
+  { value: "tivimate",       label: "IPTV player" },
   { value: "flix-iptv",      label: "Flix IPTV" },
   { value: "net-iptv",       label: "Net IPTV" },
   { value: "perfect-player", label: "Perfect Player" },

@@ -4,12 +4,12 @@
 
 import { faqFor } from "../../lib/aio";
 
-export function AioCitationFaq() {
-  const faq = faqFor("en");
+export function AioCitationFaq({ items = faqFor("en"), title = "Frequently asked questions" }: { items?: {q: string; a: string}[]; title?: string }) {
+  const faq = items;
   return (
     <section id="faq" className="section" aria-labelledby="aio-faq-title">
       <div className="sectionHead">
-        <h2 id="aio-faq-title">Frequently asked questions</h2>
+        <h2 id="aio-faq-title">{title}</h2>
       </div>
       <div className="faq">
         {faq.map((item) => (

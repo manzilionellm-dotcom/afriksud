@@ -11,7 +11,7 @@ import type { Locale } from "../../lib/locales";
 type CommercialLink = { label: string; href: string };
 
 const COMMERCIAL_LINKS: CommercialLink[] = [
-  { label: "Pricing — see plans from R99/mo", href: "#offers" },
+  { label: "Pricing — see plans from R199/mo", href: "#offers" },
   { label: "Cheap IPTV South Africa (under R100)", href: "/cheap-iptv-south-africa" },
   { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa" },
   { label: "IPTV buffering on SA fibre", href: "/iptv-no-buffering-south-africa" },

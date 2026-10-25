@@ -5,6 +5,7 @@
 // + HowTo when steps exist + BreadcrumbList).
 
 import Link from "next/link";
+import techSpecs from "../../public/tech-specs.json";
 import { LOCALE_META, type Locale } from "../../lib/locales";
 import { localeUrl, SITE_URL } from "../../lib/url";
 import { SITE } from "../shared/site";
@@ -96,38 +97,12 @@ export function PillarTemplate({
     ],
   };
 
-  // Emit a HowTo schema if any section has steps[].
-  const howToSection = pillar.sections.find((s) => s.steps && s.steps.length);
-  const howToSchema = howToSection
-    ? {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        name: howToSection.h2,
-        description: howToSection.paragraphs?.[0] ?? pillar.metaDescription,
-        totalTime: "PT10M",
-        supply: [
-          { "@type": "HowToSupply", name: "Internet connection (min 25 Mbps for 4K)" },
-          { "@type": "HowToSupply", name: "Mzansi Stream M3U link + Xtream Codes credentials" },
-        ],
-        tool: [
-          { "@type": "HowToTool", name: "Smart TV, Firestick, Android TV box or any standard M3U player" },
-        ],
-        step: howToSection.steps!.map((s, i) => ({
-          "@type": "HowToStep",
-          position: i + 1,
-          name: s.title,
-          text: s.text,
-        })),
-      }
-    : null;
-
   return (
     <>
       <JsonLd data={articleSchema} />
       <JsonLd data={webPageSchema} />
       <JsonLd data={faqSchema} />
       <JsonLd data={breadcrumbSchema} />
-      {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
       <LongformShell locale={locale}>
         <article className="section">
@@ -164,12 +139,20 @@ export function PillarTemplate({
             </div>
           </header>
 
+          {pillar.slug === "4k-iptv-south-africa" ? <section className="longformSection">
+            <h2>HLS bitrate evidence</h2>
+            <p>Measured rendition bitrates have not yet been supplied. The 25 Mbps connection recommendation is not an HLS bitrate measurement.</p>
+            <table><thead><tr><th>Tier</th><th>Peak Mbps</th><th>Average Mbps</th></tr></thead><tbody>
+              {techSpecs.tiers.map(tier => <tr key={tier.tier}><td>{tier.tier}</td><td>{tier.peakMbps ?? "Not measured"}</td><td>{tier.averageMbps ?? "Not measured"}</td></tr>)}
+            </tbody></table>
+            <p><a href="/tech-specs.json">HLS technical specifications and measurement method (JSON)</a></p>
+          </section> : null}
           <DirectAnswerBlock
             question={pillar.h1}
             answer={pillar.lead}
             keyFacts={
               pillar.trustLine
-                ? [pillar.trustLine, "From R99/month. 24-hour free trial, no credit card. Activated on WhatsApp."]
+                ? [pillar.trustLine, "From R199/month. 24-hour free trial, no credit card. Activated on WhatsApp."]
                 : undefined
             }
           />
@@ -228,7 +211,7 @@ export function PillarTemplate({
           <InlinePricingBlock
             locale={locale}
             refTag={`Pillar-${pillar.slug}`}
-            heading="Pricing — from R99/month, no contract"
+            heading="Pricing — from R199/month, no contract"
             sub="Pick a plan, message us on WhatsApp, and we activate it there. 24-hour free trial available before you pay."
           />
 

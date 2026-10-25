@@ -1,3 +1,4 @@
+import { ClusterDirectory } from "../../../components/seo/ClusterDirectory";
 // app/[locale]/devices/page.tsx — Hub for all device install guides.
 
 import { notFound } from "next/navigation";
@@ -69,13 +70,15 @@ export default async function DevicesHub({ params }: Props) {
       locale={locale as Locale}
       eyebrow="Devices · install guides"
       h1="Install IPTV on any device — 10 device guides"
-      lead="Mzansi Stream works on every standard M3U device — Smart TV, streaming stick, set-top box, phone, tablet, PC. Pick your device for the exact app, install steps and troubleshooting."
+      lead="Mzansi Stream works on every standard playlist device — Smart TV, streaming stick, set-top box, phone, tablet, PC. Pick your device for the exact app, install steps and troubleshooting."
       itemListName="Device install guides"
       basePath="/devices"
       intro={[
-        "All guides use the same Mzansi Stream M3U / Xtream Codes credentials — one subscription covers every device on your network.",
+        "All guides use the same Mzansi Stream playlist / Xtream Codes credentials — one subscription covers every device on your network.",
       ]}
       items={items}
-    />
+    >
+      <ClusterDirectory locale={locale} />
+    </HubListing>
   );
 }

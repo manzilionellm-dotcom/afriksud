@@ -158,32 +158,6 @@ export default async function BlogPostPage({ params }: Props) {
         })
       : null;
 
-  const howToSection = post.sections.find((s) => s.steps && s.steps.length);
-  const howToSchema =
-    post.howTo && howToSection?.steps
-      ? {
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          name: post.howTo.name,
-          description: post.howTo.description ?? post.metaDescription,
-          totalTime: post.howTo.totalTime ?? "PT10M",
-          supply: (post.howTo.supply ?? []).map((name) => ({
-            "@type": "HowToSupply",
-            name,
-          })),
-          tool: (post.howTo.tool ?? []).map((name) => ({
-            "@type": "HowToTool",
-            name,
-          })),
-          step: howToSection.steps.map((s, i) => ({
-            "@type": "HowToStep",
-            position: i + 1,
-            name: s.title,
-            text: s.text,
-          })),
-        }
-      : null;
-
   const tocSections = post.sections.filter((s) => s.id);
   const showDstvSoftSell = BLOG_GUIDE_SLUGS.includes(slug);
   const midAfterIndex = Math.floor((post.sections.length - 1) / 2);
@@ -198,7 +172,6 @@ export default async function BlogPostPage({ params }: Props) {
           id={isSpringboksLondon ? "faqpage-jsonld" : undefined}
         />
       ) : null}
-      {howToSchema ? <JsonLd data={howToSchema} /> : null}
 
       <LongformShell locale={loc} waOverride={londonWaOverride}>
         <article className="section">
@@ -228,7 +201,7 @@ export default async function BlogPostPage({ params }: Props) {
                 data-track-ref={`Blog-${slug}-Hero-Pricing`}
                 data-track-placement={`Blog-${slug}-Hero`}
               >
-                See plans from R99/mo →
+                See plans from R199/mo →
               </a>
             </div>
           </header>
@@ -239,7 +212,7 @@ export default async function BlogPostPage({ params }: Props) {
             emitSchema={!isSpringboksLondon}
             keyFacts={
               post.keyFacts ?? [
-                "From R99/month on the 12-month plan. 24-hour free trial, no credit card.",
+                "From R199 for one month. 24-hour free trial, no credit card.",
                 "Activated on WhatsApp, without a call centre queue.",
               ]
             }
@@ -332,7 +305,7 @@ export default async function BlogPostPage({ params }: Props) {
           <InlinePricingBlock
             locale={loc}
             refTag={`Blog-${slug}`}
-            heading={`Get started with ${SITE.brand} — from R99/month`}
+            heading={`Get started with ${SITE.brand} — from R199/month`}
             sub="Same channel pack on every plan. Pay once, no auto-renewal, no contract. 24-hour free trial available on WhatsApp."
             softenCatalogClaims={isSpringboksLondon}
           />

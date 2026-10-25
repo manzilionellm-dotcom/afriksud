@@ -1,3 +1,4 @@
+import { webmasterVerification } from "../../lib/seo/verification";
 // app/[locale]/layout.tsx
 // ROOT layout for every locale page. It owns `<html lang>` / `dir`,
 // resolved from the `[locale]` URL param (no `headers()` — the previous
@@ -45,18 +46,19 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 const BASE_METADATA: Metadata = {
+  verification: webmasterVerification(),
   metadataBase: new URL(SITE_URL),
   title: {
     // Kept under 60 characters so Google doesn't truncate on SERP.
     // `default` is rendered as-is (no template applied) so the brand
     // suffix lives here. Child pages must set `title` WITHOUT the
     // `| Mzansi Stream` suffix — the template appends it once.
-    default: "DStv Alternative — Live TV in 4K from R99 | Mzansi Stream",
+    default: "DStv Alternative — Live TV in 4K from R199 | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },
   // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24h trial, no card. From R99/mo.",
+    "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24h trial, no card. From R199/mo.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",

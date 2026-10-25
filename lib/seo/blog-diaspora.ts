@@ -7,7 +7,7 @@
 // reinforced (@id / inLanguage). MID+END WA is DiasporaSoftSellCta
 // (wa.me/447307410512), not DstvSoftSellCta.
 // run-014 — primary wa.me prefill locked character-exact (0 Ref). Body:
-// no public M3U; TiviMate FAQ-only; 20,000+ not in this post.
+// no public playlist; IPTV player FAQ-only; 20,000+ not in this post.
 
 import type { BlogFaq, BlogPost } from "./blog-posts";
 
@@ -43,7 +43,7 @@ export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[1],
-    a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or every match feed. Lineups change and UK/SA rights differ. Super Rugby Pacific and Premiership-style English club rugby are separate folders some packs list — confirm those names on the trial; a folder is not a Sky or TNT licence. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
+    a: "We understand the SuperSport-style ask, but we don’t guarantee every channel or each requested fixture feed. Lineups change and UK/SA rights differ. Super Rugby Pacific and Premiership-style English club rugby are separate folders some packs list — confirm those names on the trial; a folder is not a Sky or TNT licence. Tell us the upcoming fixtures you care about on WhatsApp and we’ll be straight about what you can test.",
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[2],
@@ -51,7 +51,7 @@ export const SPRINGBOKS_LONDON_P1_FAQ: BlogFaq[] = [
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[3],
-    a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. TiviMate is one Firestick player some viewers use — we only mention it here as setup help, not as a requirement. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
+    a: "Yes — Firestick and many Smart TVs are the usual London-apartment setup. Install a player, enter the access we send, and test on your Wi‑Fi. IPTV player is one Firestick player some viewers use — we only mention it here as setup help, not as a requirement. Message +44 7307 410512 with your device model if you want a simple walkthrough.",
   },
   {
     q: SPRINGBOKS_LONDON_P1_QUESTIONS[4],
@@ -176,14 +176,14 @@ export const BLOG_DIASPORA: BlogPost[] = [
     slug: "iptv-uk-firestick-smart-tv-sa-sports",
     title: "Best IPTV setup in the UK for SA + rugby — Firestick and Smart TV",
     metaDescription:
-      "Firestick and Smart TV setup in the UK for SuperSport, Springboks and SA channels. TiviMate vs Smarters, Virgin/BT Wi-Fi, 24h WhatsApp trial.",
+      "Firestick and Smart TV setup in the UK for SuperSport, Springboks and SA channels. IPTV player vs Smarters, Virgin/BT Wi-Fi, 24h WhatsApp trial.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
       "The Firestick guide already on this site is a South African buyer's path (Takealot SKUs, Vumatel). This page is the UK living-room version: a stick from Amazon UK or a Curry's shelf, a Samsung or LG that came with the flat, Virgin or BT Wi-Fi, and a playlist that has to hold SuperSport Rugby and SABC on the same remote.",
     keyFacts: [
-      "Firestick 4K / 4K Max + TiviMate is the cleanest UK lounge setup for 4K sport.",
-      "Samsung Tizen, LG webOS and Hisense VIDAA use IPTV Smarters from the TV store — same Xtream/M3U as TiviMate.",
+      "Firestick 4K / 4K Max + IPTV player is the cleanest UK lounge setup for 4K sport.",
+      "Samsung Tizen, LG webOS and Hisense VIDAA use IPTV Smarters from the TV store — same Xtream/playlist as IPTV player.",
       "WhatsApp +44 7307 410512 sends the device-specific taps after you name the model.",
     ],
     cta: {
@@ -195,7 +195,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     howTo: {
       name: "Set up Mzansi Stream on a UK Firestick or Smart TV",
       description:
-        "Name the device on WhatsApp, load Xtream or M3U, favourite SuperSport Rugby and SABC, test on the lounge HDMI.",
+        "Name the device on WhatsApp, load Xtream or playlist, favourite SuperSport Rugby and SABC, test on the lounge HDMI.",
       totalTime: "PT15M",
       supply: ["WhatsApp", "UK Wi-Fi (name the ISP)"],
       tool: ["Firestick 4K / 4K Max, or Samsung / LG / Hisense Smart TV"],
@@ -210,10 +210,10 @@ export const BLOG_DIASPORA: BlogPost[] = [
       },
       {
         id: "firestick",
-        h2: "Firestick in the UK — TiviMate first",
+        h2: "Firestick in the UK — IPTV player first",
         body: [
           "Buy the stick locally (Amazon UK, high-street electronics). We do not publish a live GBP price here — retail moves. You want 4K or 4K Max, not the oldest Lite, if Saturday rugby is the point.",
-          "Enable apps from unknown sources only if you sideload TiviMate. Add the Xtream Codes or M3U we send on WhatsApp. TiviMate Premium (one-time in-app) is optional; one playlist is enough for a trial.",
+          "Enable apps from unknown sources only if you sideload IPTV player. Add the Xtream Codes or playlist we send on WhatsApp. IPTV player Premium (one-time in-app) is optional; one playlist is enough for a trial.",
         ],
         bullets: [
           "Settings → Playback → buffer 8 seconds before a 4K SuperSport Test.",
@@ -225,7 +225,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         id: "smart-tv",
         h2: "Samsung, LG, Hisense — skip the Firestick if the store app holds",
         body: [
-          "UK flats often inherit a Samsung or LG. IPTV Smarters (or Smarters Lite on Tizen) takes the same login as TiviMate. The ZA Smart TV stutter guide still applies for screensaver and DNS habits; the ISP names change.",
+          "UK flats often inherit a Samsung or LG. IPTV Smarters (or Smarters Lite on Tizen) takes the same login as IPTV player. The ZA Smart TV stutter guide still applies for screensaver and DNS habits; the ISP names change.",
           "If the TV store app is weak on 4K, a Firestick in the HDMI port is the usual upgrade — same playlist, better player. That is a setup choice, not a second subscription.",
         ],
       },
@@ -248,7 +248,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
             text: "Firestick 4K Max / Samsung Q60 / LG C2 + Virgin / BT / Sky / EE. Ask for the 24-hour trial.",
           },
           {
-            title: "Paste Xtream or M3U into TiviMate or Smarters",
+            title: "Paste Xtream or playlist into IPTV player or Smarters",
             text: "We send the taps for that OS. Do not install a random APK from a drive link that is not in the same chat.",
           },
           {
@@ -272,10 +272,10 @@ export const BLOG_DIASPORA: BlogPost[] = [
     faq: [
       {
         q: "What is the best IPTV device in the UK for Springboks and SABC?",
-        a: "Firestick 4K or 4K Max with TiviMate if you can add a stick. Samsung / LG / Hisense with IPTV Smarters if you will not. Same WhatsApp playlist.",
+        a: "Firestick 4K or 4K Max with IPTV player if you can add a stick. Samsung / LG / Hisense with IPTV Smarters if you will not. Same WhatsApp playlist.",
       },
       {
-        q: "Does TiviMate work on a UK Firestick?",
+        q: "Does IPTV player work on a UK Firestick?",
         a: "Yes. Sideload or install as we describe in the chat. Buffer 8 seconds for 4K SuperSport.",
       },
       {
@@ -304,7 +304,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
       { label: "IPTV buffering on UK Wi-Fi", href: "/en-za/blog/iptv-buffering-uk-wifi" },
       { label: "Firestick IPTV setup — South Africa guide", href: "/en-za/iptv-firestick-south-africa" },
       { label: "South African TV in the United Kingdom", href: "/en-gb/sa-abroad/uk" },
-      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
+      { label: "IPTV player vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
     ],
   },
   {
@@ -455,7 +455,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
     keyFacts: [
       "Name the ISP (Virgin, BT, Sky, EE, TalkTalk) in the WhatsApp trial so support is not debugging Vumatel.",
       "5 GHz or Ethernet beats a '500 Mbps' sticker on 2.4 GHz.",
-      "TiviMate / Smarters buffer 8 seconds before you blame the provider.",
+      "IPTV player / Smarters buffer 8 seconds before you blame the provider.",
     ],
     cta: {
       label: "WhatsApp a UK-line trial — +44 7307 410512 →",
@@ -505,7 +505,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
           },
           {
             title: "Raise the player buffer to 8 seconds",
-            text: "TiviMate → Settings → Playback. Smarters → Player / time-shift buffer. The ZA app posts show the same taps.",
+            text: "IPTV player → Settings → Playback. Smarters → Player / time-shift buffer. The ZA app posts show the same taps.",
           },
           {
             title: "Ethernet if the lounge is a dead zone",
@@ -619,7 +619,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
         bullets: [
           "City — London, Manchester, Dubai, Sydney. Not 'overseas'.",
           "Device — Firestick 4K, Samsung Tizen, LG, Hisense, iPhone.",
-          "Symptom — 'M3U expired', 'seller ghosted', or 'new setup'.",
+          "Symptom — 'playlist expired', 'seller ghosted', or 'new setup'.",
           "What you need tomorrow — Springboks / URC / SABC / kykNET.",
         ],
       },
@@ -648,8 +648,8 @@ export const BLOG_DIASPORA: BlogPost[] = [
             text: "Use the site button or wa.me/447307410512. Ask for the 24-hour trial. No card.",
           },
           {
-            title: "Add a second playlist in TiviMate / Smarters",
-            text: "Do not overwrite the old one until rugby plays. TiviMate Premium helps if you need two lists; a second Smarters profile also works.",
+            title: "Add a second playlist in IPTV player / Smarters",
+            text: "Do not overwrite the old one until rugby plays. IPTV player Premium helps if you need two lists; a second Smarters profile also works.",
           },
           {
             title: "Test SuperSport Rugby and one SABC channel on the lounge TV",
