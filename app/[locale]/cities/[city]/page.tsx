@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const primaryTeam =
     data.teams[0]?.clubs[0]?.replace(/\s*\(.*?\)\s*/g, "").trim();
   const sportLine = primaryTeam ? ` ${primaryTeam} matches to confirm on WhatsApp.` : "";
-  const description = `IPTV ${data.name} (${data.region}) — SuperSport, kykNET and SABC folders in 4K UHD. Works on ${data.isps.slice(0, 3).join(", ")}.${sportLine} From R99/mo, no contract, activated on WhatsApp.`;
+  const description = `IPTV ${data.name} (${data.region}) — SuperSport, kykNET and SABC folders in 4K UHD. Works on ${data.isps.slice(0, 3).join(", ")}.${sportLine} From R199/mo, no contract, activated on WhatsApp.`;
   const title = `IPTV ${data.name} 2026 — DStv Alternative, SuperSport 4K`;
 
   return {
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: localeUrl(locale as Locale, `/cities/${city}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: `IPTV ${data.name} 2026 — DStv Alternative in 4K`,
-      description: `IPTV in ${data.name} from R99/mo. SuperSport, kykNET, SABC folders in 4K — works on ${data.isps.slice(0, 3).join(", ")}.`,
+      description: `IPTV in ${data.name} from R199/mo. SuperSport, kykNET, SABC folders in 4K — works on ${data.isps.slice(0, 3).join(", ")}.`,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
     robots: robotsForProgrammatic(locale as Locale),
@@ -92,11 +92,11 @@ export default async function CityPage({ params }: Props) {
     },
     {
       q: `How much can I save vs DStv Premium in ${data.name}?`,
-      a: `DStv Premium is R899/month plus a R1,500 decoder and a 24-month contract. Mzansi Stream starts at R99/month effective on the 12-month plan, with no contract and no decoder. Households in ${data.name} typically save R8,000-R10,000 in the first year.`,
+      a: `DStv Premium is R899/month plus a R1,500 decoder and a 24-month contract. Mzansi Stream starts at R99.92/month equivalent on the 12-month plan, with no contract and no decoder. Households in ${data.name} typically save R8,000-R10,000 in the first year.`,
     },
     {
       q: `How fast is activation in ${data.name}?`,
-      a: `On WhatsApp, after payment. You receive an M3U playlist link plus a step-by-step setup guide for your specific device (Firestick, Samsung Smart TV, LG, Hisense, Android TV box, iPhone, iPad or PC).`,
+      a: `On WhatsApp, after payment. You receive a playlist playlist link plus a step-by-step setup guide for your specific device (Firestick, Samsung Smart TV, LG, Hisense, Android TV box, iPhone, iPad or PC).`,
     },
     {
       q: `Can I get the 24-hour free trial in ${data.name}?`,
@@ -116,7 +116,7 @@ export default async function CityPage({ params }: Props) {
   const sportSummary = sportFocus.length
     ? ` ${sportFocus.slice(0, 3).join(", ")} matches to confirm on WhatsApp.`
     : "";
-  const directAnswer = `Mzansi Stream is a no-contract DStv alternative for households in ${data.name} (${data.region}, ${data.population}) over ${data.isps.slice(0, 3).join(", ")} and other major fibre/5G networks. SuperSport-style, kykNET, SABC, Mzansi Magic and Premier League folders in 4K UHD where the source supports it — line-up to confirm on WhatsApp — from R99/month with a 24-hour free trial, no credit card required.${sportSummary}`;
+  const directAnswer = `Mzansi Stream is a no-contract DStv alternative for households in ${data.name} (${data.region}, ${data.population}) over ${data.isps.slice(0, 3).join(", ")} and other major fibre/5G networks. SuperSport-style, kykNET, SABC, Mzansi Magic and Premier League folders in 4K UHD where the source supports it — line-up to confirm on WhatsApp — from R199/month with a 24-hour free trial, no credit card required.${sportSummary}`;
 
   const localBusiness = {
     "@context": "https://schema.org",
@@ -141,7 +141,7 @@ export default async function CityPage({ params }: Props) {
     },
     url: canonical,
     image: `${SITE_URL}/og-image.jpg`,
-    priceRange: "R99-R1199",
+    priceRange: "R199-R1199",
     currenciesAccepted: "ZAR",
     paymentAccepted: "EFT, Ozow, SnapScan, Zapper, Yoco, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin",
     telephone: `+${SITE.whatsappPhone}`,
@@ -239,7 +239,7 @@ export default async function CityPage({ params }: Props) {
               </h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                Test 4K on {data.isps.slice(0, 3).join(", ")} · From R99/month · 24h free trial, no card
+                Test 4K on {data.isps.slice(0, 3).join(", ")} · From R199/month · 24h free trial, no card
               </p>
               <div className="ctaRow">
                 <a
@@ -267,7 +267,7 @@ export default async function CityPage({ params }: Props) {
               keyFacts={[
                 `Works on ${data.isps.join(", ")} like any home internet — test it on the 24-hour trial.`,
                 `Coverage spans ${data.suburbs.slice(0, 4).join(", ")} and every other ${data.region} suburb.`,
-                `From R99/month effective on the 12-month plan. No contract, no decoder, no installer.`,
+                `From R199 for one month. No contract, no decoder, no installer.`,
               ]}
             />
 
@@ -341,7 +341,7 @@ export default async function CityPage({ params }: Props) {
             <InlinePricingBlock
               locale={locale as Locale}
               refTag={`City-${city}`}
-              heading={`Pricing for ${data.name} — from R99/month`}
+              heading={`Pricing for ${data.name} — from R199/month`}
               sub={`Pick a plan, message us on WhatsApp, and we activate it there — anywhere in ${data.name}. 24-hour free trial available before you pay.`}
             />
 
@@ -364,7 +364,7 @@ export default async function CityPage({ params }: Props) {
               <h2>Get started in {data.name} on WhatsApp</h2>
               <p>
                 Message us on WhatsApp, pick a plan, pay via EFT, Ozow,
-                SnapScan, Capitec Pay or card, and we send your M3U link
+                SnapScan, Capitec Pay or card, and we send your playlist link
                 with a setup guide for your specific device. 24-hour free
                 trial, no credit card.
               </p>

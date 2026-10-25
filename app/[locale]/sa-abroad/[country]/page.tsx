@@ -1,3 +1,4 @@
+import { AustraliaClusterLink } from "../../../../components/seo/AustraliaClusterLink";
 // app/[locale]/sa-abroad/[country]/page.tsx
 // Section B.5.1 — SA expat outbound landing pages. Per-country canonical
 // follows the SEO playbook: /sa-abroad/uk/ canonicalises to its en-gb
@@ -10,9 +11,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LOCALES, LOCALE_META, type Locale } from "../../../../lib/locales";
-import { localeUrl, SITE_URL } from "../../../../lib/url";
+import { localeUrl, SITE_URL, hreflangForProgrammatic } from "../../../../lib/url";
 import {
-  indexableCanonicalLocale,
   robotsForProgrammatic,
 } from "../../../../lib/seo/indexability";
 import {
@@ -42,23 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
   const description = `Stream SuperSport-style, SABC and kykNET folders in ${data.name} (${cityList}) in 4K — line-up to confirm on WhatsApp. Built for SA expats — no DStv decoder, no contract.`;
 
-  // One indexable URL. Non-canonical locales only emit rel=canonical
-  // (no hreflang to URLs that themselves canonicalise elsewhere).
-  const canonicalLocale = indexableCanonicalLocale(data.preferredCanonicalLocale);
-  const canonical = localeUrl(canonicalLocale, `/sa-abroad/${country}`);
-  const selfCanonical = locale === canonicalLocale;
+  const canonical = localeUrl(locale as Locale, `/sa-abroad/${country}`);
 
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: selfCanonical
-        ? {
-            [LOCALE_META[canonicalLocale].hreflang]: canonical,
-            "x-default": canonical,
-          }
-        : undefined,
+      languages: hreflangForProgrammatic(locale as Locale, `/sa-abroad/${country}`),
     },
     openGraph: {
       type: "article",
@@ -68,9 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
-    robots: selfCanonical
-      ? { index: true, follow: true }
-      : robotsForProgrammatic(locale as Locale),
+    robots: robotsForProgrammatic(locale as Locale),
   };
 }
 
@@ -102,7 +91,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
       geographicArea: { "@type": "Country", name: data.name },
     },
     url: localeUrl(
-      indexableCanonicalLocale(data.preferredCanonicalLocale),
+      locale as Locale,
       `/sa-abroad/${country}`
     ),
     knowsAbout: [
@@ -158,6 +147,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
 
       <LongformShell locale={locale as Locale}>
         <article className="section">
+          {country === "australia" && <AustraliaClusterLink locale={locale} />}
           <header className="longformHeader">
             <p className="longformEyebrow">
               {data.flag} {data.name} · SA Worldwide
@@ -237,7 +227,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
                 {" "}{data.localPriceNote}.
               </li>
               <li>
-                Receive your M3U link plus a one-page setup guide for your
+                Receive your playlist link plus a one-page setup guide for your
                 Firestick, Smart TV, iPhone, iPad or Android TV on
                 WhatsApp.
               </li>
@@ -287,8 +277,8 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             <p>
               Samsung / LG / Sony / Hisense Smart TV, Amazon Firestick
               (4K Max), Apple TV, Android TV Box, iPhone, iPad, Android
-              phone, MAG Box, PC and Mac via TiviMate, IPTV Smarters Pro,
-              GSE Smart IPTV, XCIPTV or any standard M3U player.
+              phone, MAG Box, PC and Mac via IPTV player, IPTV Smarters Pro,
+              GSE Smart IPTV, XCIPTV or any standard playlist player.
             </p>
           </section>
 
@@ -296,7 +286,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             <h2>Coverage across {data.name}</h2>
             <p>
               We have customers in {cityList} and across {data.name}. The
-              same M3U link works on home fibre, public WiFi and mobile
+              same playlist link works on home fibre, public WiFi and mobile
               data on any local network.
             </p>
           </section>

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "status": "awaiting-provider-evidence",
+  "updatedAt": "2026-10-25",
+  "units": "Mbps",
+  "method": "Read HLS EXT-X-STREAM-INF BANDWIDTH and AVERAGE-BANDWIDTH in bits/s, divide by 1000000. Capture codec, resolution, frame rate and an observation timestamp. Never publish signed playback URLs or account tokens.",
+  "tiers": [
+    {
+      "tier": "SD",
+      "peakMbps": null,
+      "averageMbps": null,
+      "codec": null,
+      "resolution": null,
+      "frameRate": null,
+      "observedAt": null,
+      "evidenceRef": null
+    },
+    {
+      "tier": "HD",
+      "peakMbps": null,
+      "averageMbps": null,
+      "codec": null,
+      "resolution": null,
+      "frameRate": null,
+      "observedAt": null,
+      "evidenceRef": null
+    },
+    {
+      "tier": "Full HD",
+      "peakMbps": null,
+      "averageMbps": null,
+      "codec": null,
+      "resolution": null,
+      "frameRate": null,
+      "observedAt": null,
+      "evidenceRef": null
+    },
+    {
+      "tier": "UHD/4K",
+      "peakMbps": null,
+      "averageMbps": null,
+      "codec": null,
+      "resolution": null,
+      "frameRate": null,
+      "observedAt": null,
+      "evidenceRef": null
+    }
+  ],
+  "connectionRecommendation": {
+    "uhdMbps": 25,
+    "isMeasuredBitrate": false
+  },
+  "latencyMeasurements": []
+}

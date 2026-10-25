@@ -28,7 +28,9 @@ export function HubListing({
   basePath,
   intro,
   extraSections,
+  children,
 }: {
+  children?: React.ReactNode;
   locale: Locale;
   eyebrow: string;
   h1: string;
@@ -133,6 +135,7 @@ export function HubListing({
               ) : null}
             </section>
           ))}
+        {children}
         </article>
       </LongformShell>
     </>

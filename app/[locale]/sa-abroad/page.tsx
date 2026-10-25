@@ -1,3 +1,4 @@
+import { ClusterDirectory } from "../../../components/seo/ClusterDirectory";
 // app/[locale]/sa-abroad/page.tsx — Hub for SA expat / diaspora pages.
 
 import { notFound } from "next/navigation";
@@ -93,6 +94,8 @@ export default async function SaAbroadHub({ params }: Props) {
           ],
         },
       ]}
-    />
+    >
+      <ClusterDirectory locale={locale} />
+    </HubListing>
   );
 }

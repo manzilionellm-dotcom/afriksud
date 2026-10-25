@@ -20,16 +20,16 @@ export const DEVICES: Pillar[] = [
     metaTitle:
       "IPTV Hisense VIDAA Smart TV 2026 — Install in 10 Min",
     metaDescription:
-      "Install IPTV on a Hisense Smart TV (VIDAA OS) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport. Works on every Hisense U6, U7, U8 and ULED.",
+      "Install IPTV on a Hisense Smart TV (VIDAA OS) in South Africa — IPTV Smarters Pro, playlist link, 4K SuperSport. Works on every Hisense U6, U7, U8 and ULED.",
     lead:
       "Hisense Smart TVs running VIDAA OS are the second most-popular Smart TV brand in South Africa after Samsung — and IPTV installs cleanly on every Hisense 2022+ model from the VIDAA App Store. This guide walks through the complete Mzansi Stream install on a Hisense U6, U7, U8 or ULED using IPTV Smarters Pro.",
     trustLine:
       "Hisense VIDAA 2022+ · IPTV Smarters Pro · 4K UHD SuperSport · Native install",
     cta: {
       primary: {
-        label: "Get the Hisense M3U link →",
+        label: "Get the Hisense playlist link →",
         message:
-          "Hi! I want IPTV on my Hisense Smart TV — please send the M3U link and setup steps for IPTV Smarters Pro on VIDAA.",
+          "Hi! I want IPTV on my Hisense Smart TV — please send the playlist link and setup steps for IPTV Smarters Pro on VIDAA.",
         ref: "Device-Hisense-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -111,7 +111,7 @@ export const DEVICES: Pillar[] = [
       },
       {
         q: "How much does IPTV cost for a Hisense TV?",
-        a: "Mzansi Stream is R99/month on the 12-month plan or R149/month on the 3-month plan. Same lineup for every device.",
+        a: "Mzansi Stream is R99.92/month on the 12-month plan or R149.67/month equivalent on the 3-month plan. Same lineup for every device.",
       },
     ],
     related: [
@@ -134,15 +134,15 @@ export const DEVICES: Pillar[] = [
     metaTitle:
       "IPTV LG Smart TV webOS 2026 — Install in 12 Min",
     metaDescription:
-      "Install IPTV on an LG Smart TV (webOS) in South Africa — Smart IPTV or SS IPTV, M3U link, 4K SuperSport. Works on every LG OLED, QNED and UHD from 2018.",
+      "Install IPTV on an LG Smart TV (webOS) in South Africa — Smart IPTV or SS IPTV, playlist link, 4K SuperSport. Works on every LG OLED, QNED and UHD from 2018.",
     lead:
       "LG Smart TVs running webOS install IPTV via Smart IPTV or SS IPTV from the LG Content Store. Both work cleanly on every LG OLED (B/C/G series), QNED, NanoCell and UHD set from 2018 onwards. This guide covers the complete Mzansi Stream install with troubleshooting for the LG-specific MAC-address activation quirk.",
     trustLine: "LG webOS 2018+ · Smart IPTV or SS IPTV · 4K Dolby Vision SuperSport",
     cta: {
       primary: {
-        label: "Get the LG M3U link →",
+        label: "Get the LG playlist link →",
         message:
-          "Hi! I want IPTV on my LG Smart TV (webOS) — please send the M3U link and setup for Smart IPTV.",
+          "Hi! I want IPTV on my LG Smart TV (webOS) — please send the playlist link and setup for Smart IPTV.",
         ref: "Device-LG-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -179,12 +179,12 @@ export const DEVICES: Pillar[] = [
             text: "Settings → All Settings → Connection → Wired/Wireless → MAC address. Send it to us on WhatsApp.",
           },
           {
-            title: "Upload your M3U playlist",
-            text: "Smart IPTV: visit siptv.app/mylist on your phone → enter the MAC address → upload the M3U file we send.",
+            title: "Upload your stream playlist",
+            text: "Smart IPTV: visit siptv.app/mylist on your phone → enter the MAC address → upload the playlist file we send.",
           },
           {
             title: "Reload Smart IPTV on the TV",
-            text: "Close and re-open Smart IPTV on your LG. The channel list loads from our M3U.",
+            text: "Close and re-open Smart IPTV on your LG. The channel list loads from our playlist.",
           },
           {
             title: "Test 4K SuperSport",
@@ -219,11 +219,11 @@ export const DEVICES: Pillar[] = [
       },
       {
         q: "Why does Smart IPTV need my TV's MAC address?",
-        a: "Smart IPTV's activation is per-MAC-address. Your M3U playlist is mapped to that MAC so it loads automatically on your LG.",
+        a: "Smart IPTV's activation is per-MAC-address. Your stream playlist is mapped to that MAC so it loads automatically on your LG.",
       },
       {
         q: "Can I install IPTV on an LG TV without paying for Smart IPTV?",
-        a: "Yes — SS IPTV is the free LG alternative. It uses the same M3U URL and works on every LG webOS 4.0+.",
+        a: "Yes — SS IPTV is the free LG alternative. It uses the same playlist URL and works on every LG webOS 4.0+.",
       },
     ],
     related: [
@@ -244,17 +244,17 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Sony Bravia · Google TV install",
     h1: "IPTV on Sony Bravia (Google TV / Android TV) — South Africa 2026",
     metaTitle:
-      "IPTV Sony Bravia Google TV 2026 — TiviMate Install",
+      "IPTV Sony Bravia Google TV 2026 — IPTV player Install",
     metaDescription:
-      "Install IPTV on a Sony Bravia (Google TV / Android TV) — TiviMate or IPTV Smarters, 4K Dolby Vision SuperSport. Works on every Bravia XR and A-series.",
+      "Install IPTV on a Sony Bravia (Google TV / Android TV) — IPTV player or IPTV Smarters, 4K Dolby Vision SuperSport. Works on every Bravia XR and A-series.",
     lead:
-      "Sony Bravia Smart TVs run Google TV (formerly Android TV) — which means you get the full Google Play Store, including TiviMate Premium, the slickest IPTV experience on any platform. This guide walks through the install on a Sony Bravia XR or A-series.",
-    trustLine: "Sony Bravia + Google TV · TiviMate Premium · 4K Dolby Vision",
+      "Sony Bravia Smart TVs run Google TV (formerly Android TV) — which means you get the full Google Play Store, including IPTV player Premium, the slickest IPTV experience on any platform. This guide walks through the install on a Sony Bravia XR or A-series.",
+    trustLine: "Sony Bravia + Google TV · IPTV player Premium · 4K Dolby Vision",
     cta: {
       primary: {
-        label: "Get the Sony Bravia M3U link →",
+        label: "Get the Sony Bravia playlist link →",
         message:
-          "Hi! I want IPTV on my Sony Bravia (Google TV) — please send the M3U link and TiviMate setup steps.",
+          "Hi! I want IPTV on my Sony Bravia (Google TV) — please send the playlist link and IPTV player setup steps.",
         ref: "Device-Sony-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -264,7 +264,7 @@ export const DEVICES: Pillar[] = [
         id: "why-sony",
         h2: "Why Sony Bravia is a great IPTV TV",
         paragraphs: [
-          "Sony Bravia 4K OLED and Mini-LED sets ship with Google TV — full Play Store access, TiviMate Premium, IPTV Smarters Pro, MX Player, all work natively. The XR Cognitive Processor handles 4K HDR upscaling on IPTV streams beautifully. If you have a Sony Bravia in 2026, you have one of the best IPTV TVs money can buy without adding a Firestick.",
+          "Sony Bravia 4K OLED and Mini-LED sets ship with Google TV — full Play Store access, IPTV player Premium, IPTV Smarters Pro, MX Player, all work natively. The XR Cognitive Processor handles 4K HDR upscaling on IPTV streams beautifully. If you have a Sony Bravia in 2026, you have one of the best IPTV TVs money can buy without adding a Firestick.",
         ],
       },
       {
@@ -276,16 +276,16 @@ export const DEVICES: Pillar[] = [
             text: "Press the Google Assistant / Home button → Apps → Google Play Store.",
           },
           {
-            title: "Search for TiviMate",
-            text: "Type 'TiviMate'. Install the free version. Premium licence (~R250 once) unlocks multi-playlist + recording.",
+            title: "Search for IPTV player",
+            text: "Type 'IPTV player'. Install the free version. Premium licence (~R250 once) unlocks multi-playlist + recording.",
           },
           {
             title: "Add your Mzansi Stream playlist",
-            text: "Open TiviMate → Add Playlist → Enter URL. Paste the M3U URL we sent on WhatsApp.",
+            text: "Open IPTV player → Add Playlist → Enter URL. Paste the playlist URL we sent on WhatsApp.",
           },
           {
             title: "Configure EPG",
-            text: "TiviMate auto-detects EPG from the M3U. If not, paste the XMLTV URL from WhatsApp.",
+            text: "IPTV player auto-detects EPG from the playlist. If not, paste the XMLTV URL from WhatsApp.",
           },
           {
             title: "Test 4K Dolby Vision",
@@ -300,23 +300,23 @@ export const DEVICES: Pillar[] = [
           "Enable 'Motionflow' for sport — smoother PSL action.",
           "Set HDMI input to 'Enhanced' for 4K@60Hz inputs.",
           "Disable Bravia's 'Power Saving' mid-stream — it dims the panel.",
-          "Use the dedicated Google Assistant remote to launch TiviMate via voice.",
-          "TiviMate Premium recording works on a USB-attached drive on most Bravia models.",
+          "Use the dedicated Google Assistant remote to launch IPTV player via voice.",
+          "IPTV player Premium recording works on a USB-attached drive on most Bravia models.",
         ],
       },
     ],
     faq: [
       {
         q: "Can I install IPTV on a Sony Bravia?",
-        a: "Yes. Every Sony Bravia running Google TV or Android TV (2018+) installs IPTV directly from the Google Play Store via TiviMate or IPTV Smarters Pro.",
+        a: "Yes. Every Sony Bravia running Google TV or Android TV (2018+) installs IPTV directly from the Google Play Store via IPTV player or IPTV Smarters Pro.",
       },
       {
         q: "Does Sony Bravia support Dolby Vision IPTV?",
-        a: "Yes — Sony Bravia XR OLED and Mini-LED models support Dolby Vision IPTV via TiviMate.",
+        a: "Yes — Sony Bravia XR OLED and Mini-LED models support Dolby Vision IPTV via IPTV player.",
       },
       {
         q: "What's the best IPTV app on Sony Bravia?",
-        a: "TiviMate Premium gives the best EPG and multi-playlist UX. IPTV Smarters Pro is the free alternative.",
+        a: "IPTV player Premium gives the best EPG and multi-playlist UX. IPTV Smarters Pro is the free alternative.",
       },
     ],
     related: [
@@ -338,15 +338,15 @@ export const DEVICES: Pillar[] = [
     metaTitle:
       "IPTV Android TV Box 2026 — Nvidia Shield, Mi Box",
     metaDescription:
-      "Install IPTV on Nvidia Shield, Xiaomi Mi Box, Onn 4K Pro or any Android TV box in South Africa — TiviMate Premium, 4K SuperSport, EPG. From R99/mo.",
+      "Install IPTV on Nvidia Shield, Xiaomi Mi Box, Onn 4K Pro or any Android TV box in South Africa — IPTV player Premium, 4K SuperSport, EPG. From R199/mo.",
     lead:
       "Dedicated Android TV boxes — the Nvidia Shield TV Pro, Xiaomi Mi Box S, Onn 4K Pro, Chromecast with Google TV — give you the same Google Play Store as a Sony Bravia, with the freedom to plug into any HDMI TV (old, new, projector, monitor). For IPTV, the Nvidia Shield Pro is the absolute top-end experience.",
-    trustLine: "Nvidia Shield · Mi Box · Onn 4K Pro · TiviMate Premium · 4K Dolby Vision",
+    trustLine: "Nvidia Shield · Mi Box · Onn 4K Pro · IPTV player Premium · 4K Dolby Vision",
     cta: {
       primary: {
-        label: "Get the Android TV Box M3U link →",
+        label: "Get the Android TV Box playlist link →",
         message:
-          "Hi! I want IPTV on my Android TV Box — please send the M3U link and TiviMate setup.",
+          "Hi! I want IPTV on my Android TV Box — please send the playlist link and IPTV player setup.",
         ref: "Device-AndroidBox-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -359,7 +359,7 @@ export const DEVICES: Pillar[] = [
           "Nvidia Shield TV Pro — gold standard, R3,500-R4,000 on Takealot, 4K HDR, AI upscaling, 16GB ROM.",
           "Xiaomi Mi Box S (2nd gen) — R1,500, 4K HDR, solid IPTV runner.",
           "Onn 4K Pro (Walmart) — R1,200 imported, 4K Dolby Vision, surprisingly capable.",
-          "Chromecast with Google TV (4K) — R1,200, slim form factor, runs TiviMate.",
+          "Chromecast with Google TV (4K) — R1,200, slim form factor, runs IPTV player.",
           "Generic 'X96' / 'T95' boxes — avoid; older Android, no Play Store, no updates.",
         ],
       },
@@ -372,16 +372,16 @@ export const DEVICES: Pillar[] = [
             text: "On the Android TV home screen → Apps → Google Play Store.",
           },
           {
-            title: "Install TiviMate",
-            text: "Search 'TiviMate'. Install the free version. Premium unlock is once-off.",
+            title: "Install IPTV player",
+            text: "Search 'IPTV player'. Install the free version. Premium unlock is once-off.",
           },
           {
             title: "Add the Mzansi Stream playlist",
-            text: "Open TiviMate → Add Playlist → Enter URL → paste our M3U URL from WhatsApp.",
+            text: "Open IPTV player → Add Playlist → Enter URL → paste our playlist URL from WhatsApp.",
           },
           {
             title: "Configure EPG",
-            text: "TiviMate auto-detects EPG. If not, paste the XMLTV URL.",
+            text: "IPTV player auto-detects EPG. If not, paste the XMLTV URL.",
           },
           {
             title: "Stream 4K SuperSport",
@@ -401,7 +401,7 @@ export const DEVICES: Pillar[] = [
       },
       {
         q: "Does Nvidia Shield support Dolby Vision IPTV?",
-        a: "Yes — Nvidia Shield TV Pro plays Dolby Vision IPTV streams natively via TiviMate.",
+        a: "Yes — Nvidia Shield TV Pro plays Dolby Vision IPTV streams natively via IPTV player.",
       },
     ],
     related: [
@@ -422,15 +422,15 @@ export const DEVICES: Pillar[] = [
     h1: "IPTV on Apple TV 4K — South Africa 2026",
     metaTitle: "IPTV Apple TV 4K 2026 — IPTV Smarters",
     metaDescription:
-      "Install IPTV on Apple TV 4K in South Africa — IPTV Smarters Player or GSE Smart IPTV, 4K Dolby Vision SuperSport. From R99/mo on WhatsApp.",
+      "Install IPTV on Apple TV 4K in South Africa — IPTV Smarters Player or GSE Smart IPTV, 4K Dolby Vision SuperSport. From R199/mo on WhatsApp.",
     lead:
       "Apple TV 4K (2nd / 3rd gen) is the premium IPTV device for households already in the Apple ecosystem. The A15 / A17 silicon handles 4K HDR streams flawlessly, AirPlay lets you cast from your iPhone, and IPTV Smarters Player or GSE Smart IPTV run natively from the App Store.",
     trustLine: "Apple TV 4K · IPTV Smarters Player · GSE Smart IPTV · AirPlay · 4K Dolby Vision",
     cta: {
       primary: {
-        label: "Get the Apple TV M3U link →",
+        label: "Get the Apple TV playlist link →",
         message:
-          "Hi! I want IPTV on my Apple TV 4K — please send the M3U link and IPTV Smarters setup.",
+          "Hi! I want IPTV on my Apple TV 4K — please send the playlist link and IPTV Smarters setup.",
         ref: "Device-AppleTV-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -501,15 +501,15 @@ export const DEVICES: Pillar[] = [
     h1: "IPTV on iPhone & iPad — South Africa 2026",
     metaTitle: "IPTV iPhone iPad 2026 — IPTV Smarters Player",
     metaDescription:
-      "Install IPTV on iPhone or iPad in South Africa — IPTV Smarters Player or GSE Smart IPTV from the App Store. 4K SuperSport. From R99/mo.",
+      "Install IPTV on iPhone or iPad in South Africa — IPTV Smarters Player or GSE Smart IPTV from the App Store. 4K SuperSport. From R199/mo.",
     lead:
       "Mzansi Stream installs on every iPhone (6S onwards) and every iPad (Air 2 / Mini 4 onwards) via IPTV Smarters Player from the App Store. Native 4K playback on iPhone Pro / Pro Max models. AirPlay to Apple TV 4K or any compatible Smart TV in a single tap.",
     trustLine: "iOS 14+ · IPTV Smarters Player · AirPlay · Native 4K on Pro models",
     cta: {
       primary: {
-        label: "Get the iPhone M3U link →",
+        label: "Get the iPhone playlist link →",
         message:
-          "Hi! I want IPTV on my iPhone / iPad — please send the M3U link and IPTV Smarters setup.",
+          "Hi! I want IPTV on my iPhone / iPad — please send the playlist link and IPTV Smarters setup.",
         ref: "Device-iPhone-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -568,17 +568,17 @@ export const DEVICES: Pillar[] = [
     eyebrow: "Android phone & tablet · Install",
     h1: "IPTV on Android Phone & Tablet — South Africa 2026",
     metaTitle:
-      "IPTV Android Phone Tablet 2026 — TiviMate / Smarters",
+      "IPTV Android Phone Tablet 2026 — IPTV player / Smarters",
     metaDescription:
-      "Install IPTV on Android phones and tablets in SA — TiviMate Companion, IPTV Smarters Pro, M3U. Cast to Chromecast or Smart TV. From R99/mo.",
+      "Install IPTV on Android phones and tablets in SA — IPTV player Companion, IPTV Smarters Pro, playlist. Cast to Chromecast or Smart TV. From R199/mo.",
     lead:
-      "Mzansi Stream installs on any Android phone or tablet running Android 7 or later via TiviMate Companion or IPTV Smarters Pro from the Play Store. Cast to Chromecast, Google TV or any DLNA-capable Smart TV. Great for travel and load-shedding.",
-    trustLine: "Android 7+ · TiviMate Companion · IPTV Smarters Pro · Cast / DLNA",
+      "Mzansi Stream installs on any Android phone or tablet running Android 7 or later via IPTV player Companion or IPTV Smarters Pro from the Play Store. Cast to Chromecast, Google TV or any DLNA-capable Smart TV. Great for travel and load-shedding.",
+    trustLine: "Android 7+ · IPTV player Companion · IPTV Smarters Pro · Cast / DLNA",
     cta: {
       primary: {
-        label: "Get the Android mobile M3U link →",
+        label: "Get the Android mobile playlist link →",
         message:
-          "Hi! I want IPTV on my Android phone — please send the M3U link and TiviMate Companion setup.",
+          "Hi! I want IPTV on my Android phone — please send the playlist link and IPTV player Companion setup.",
         ref: "Device-AndroidMobile-Hero",
       },
       secondary: { label: "Jump to install steps →", href: "#install" },
@@ -593,12 +593,12 @@ export const DEVICES: Pillar[] = [
             text: "On your Android phone or tablet, open the Play Store.",
           },
           {
-            title: "Install TiviMate Companion (or IPTV Smarters Pro)",
-            text: "Search 'TiviMate Companion' — install. Use it to sync playlists with TiviMate on your Android TV box. For standalone mobile playback, install IPTV Smarters Pro.",
+            title: "Install IPTV player Companion (or IPTV Smarters Pro)",
+            text: "Search 'IPTV player Companion' — install. Use it to sync playlists with IPTV player on your Android TV box. For standalone mobile playback, install IPTV Smarters Pro.",
           },
           {
             title: "Add Mzansi Stream",
-            text: "Open the app → Add Playlist → paste the M3U URL from WhatsApp.",
+            text: "Open the app → Add Playlist → paste the playlist URL from WhatsApp.",
           },
           {
             title: "Cast to TV",
@@ -610,7 +610,7 @@ export const DEVICES: Pillar[] = [
     faq: [
       {
         q: "Does IPTV work on Android phone?",
-        a: "Yes. Install IPTV Smarters Pro or TiviMate Companion from the Google Play Store.",
+        a: "Yes. Install IPTV Smarters Pro or IPTV player Companion from the Google Play Store.",
       },
       {
         q: "Can I cast IPTV from Android to my Smart TV?",
@@ -638,7 +638,7 @@ export const DEVICES: Pillar[] = [
     h1: "IPTV on MAG Box (322, 524, 540) — South Africa 2026",
     metaTitle: "IPTV MAG Box 322 524 540 2026 — Stalker Portal",
     metaDescription:
-      "Configure IPTV on MAG Box (322, 524, 540) in South Africa — Stalker portal, MAC address, 4K SuperSport. Mzansi Stream from R99/mo.",
+      "Configure IPTV on MAG Box (322, 524, 540) in South Africa — Stalker portal, MAC address, 4K SuperSport. Mzansi Stream from R199/mo.",
     lead:
       "MAG Boxes (Infomir 322, 524, 540 and the newer 425A) are dedicated IPTV set-top boxes with a built-in Stalker portal — no app store needed, no third-party player. Configuration is purely via the portal URL we whitelist to your MAG's MAC address.",
     trustLine: "MAG 322 / 425A / 524 / 540 · Stalker portal · MAC-whitelisted",

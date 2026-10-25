@@ -19,10 +19,10 @@ export const SA_LANGUAGE_PAGES: SALanguagePage[] = [
     preferredLocale: "af",
     title: "IPTV Afrikaans 2026 — kykNET, kykNET & Kie, kykNET Lekker in 4K",
     metaDescription:
-      "Kyk kykNET, kykNET & Kie en kykNET Lekker in 4K. Geen kontrak, vanaf R99/maand. Aktiveer op WhatsApp.",
+      "Kyk kykNET, kykNET & Kie en kykNET Lekker in 4K. Geen kontrak, vanaf R199/maand. Aktiveer op WhatsApp.",
     hero: {
       h1: "IPTV in Afrikaans — kykNET, kykNET & Kie, kykNET Lekker in 4K",
-      lead: "Lewendige kanale in 4K — kykNET, SuperSport, SABC, Mzansi Magic en wêreldwye inhoud; bevestig die lys op WhatsApp. Vanaf R99/maand, geen kontrak, geen dekodeerder.",
+      lead: "Lewendige kanale in 4K — kykNET, SuperSport, SABC, Mzansi Magic en wêreldwye inhoud; bevestig die lys op WhatsApp. Vanaf R199/maand, geen kontrak, geen dekodeerder.",
       cta: "Begin gratis 24-uur proef",
     },
     featuredChannels: [
@@ -44,7 +44,7 @@ export const SA_LANGUAGE_PAGES: SALanguagePage[] = [
       {
         h2: "Werk op enige toestel",
         paragraphs: [
-          "Smart TV, Firestick, Android TV, iPhone, Android, MAG Box of rekenaar. Ons stuur die M3U-skakel via WhatsApp en lei jou stap-vir-stap deur die installasie.",
+          "Smart TV, Firestick, Android TV, iPhone, Android, MAG Box of rekenaar. Ons stuur die playlist-skakel via WhatsApp en lei jou stap-vir-stap deur die installasie.",
         ],
       },
     ],
@@ -54,10 +54,10 @@ export const SA_LANGUAGE_PAGES: SALanguagePage[] = [
     preferredLocale: "zu",
     title: "I-IPTV ngesiZulu 2026 — Mzansi Magic, Moja Love, SuperSport ku-4K",
     metaDescription:
-      "Buka i-Mzansi Magic, Mzansi Wethu, Moja Love ne-SuperSport ku-4K. Akukho nkontileka, kusukela ku-R99/inyanga.",
+      "Buka i-Mzansi Magic, Mzansi Wethu, Moja Love ne-SuperSport ku-4K. Akukho nkontileka, kusukela ku-R199/inyanga.",
     hero: {
       h1: "I-IPTV ngesiZulu — Mzansi Magic, Moja Love, SuperSport ku-4K",
-      lead: "Mzansi Magic, Mzansi Wethu, Moja Love, SuperSport PSL ne-SABC. Kusukela ku-R99/inyanga, akukho nkontileka, akukho dikhoda.",
+      lead: "Mzansi Magic, Mzansi Wethu, Moja Love, SuperSport PSL ne-SABC. Kusukela ku-R199/inyanga, akukho nkontileka, akukho dikhoda.",
       cta: "Qala Ukulinga Kwamahhala Kwama-24h",
     },
     featuredChannels: [
@@ -90,10 +90,10 @@ export const SA_LANGUAGE_PAGES: SALanguagePage[] = [
     preferredLocale: "xh",
     title: "IPTV ngesiXhosa 2026 — Mzansi Magic, Moja Love, SuperSport ku-4K",
     metaDescription:
-      "Bukela i-Mzansi Magic, Moja Love ne-SuperSport ku-4K. Akukho sivumelwano, ukusuka ku-R99/inyanga.",
+      "Bukela i-Mzansi Magic, Moja Love ne-SuperSport ku-4K. Akukho sivumelwano, ukusuka ku-R199/inyanga.",
     hero: {
       h1: "IPTV ngesiXhosa — Mzansi Magic, Moja Love, SuperSport ku-4K",
-      lead: "Mzansi Magic, Mzansi Wethu, Moja Love, SuperSport PSL ne-SABC. Ukusuka ku-R99/inyanga, akukho sivumelwano, akukho dekhoda.",
+      lead: "Mzansi Magic, Mzansi Wethu, Moja Love, SuperSport PSL ne-SABC. Ukusuka ku-R199/inyanga, akukho sivumelwano, akukho dekhoda.",
       cta: "Qala uvavanyo lwasimahla lweyure ezingama-24",
     },
     featuredChannels: [
