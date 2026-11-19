@@ -1,0 +1,28 @@
+name: SEO production sitemap audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Inspect public sitemap URLs
+        run: node scripts/seo-live-audit.mjs --json seo-live-report.json
+      - name: Preserve audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-live-report
+          path: seo-live-report.json
+          if-no-files-found: warn
