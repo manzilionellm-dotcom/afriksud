@@ -23,7 +23,7 @@ const nextConfig = {
     // /[locale]/* tree. 301 to the canonical English equivalents.
     return [
       // Lot1 ETAPE2-404
-      { source: "/firestick", destination: "/en-za/iptv-firestick-south-africa", permanent: true },
+      // /firestick is now the translated device cluster hub.
       // www → apex before trailing-slash normalisation so `/en-za/` on
       // www does not 308 to `/en-za` on the same (www) host first.
       {

@@ -9,7 +9,7 @@
     "whatsapp": "https://wa.me/447307410512",
     "whatsappNote": "Repo fallback in components/shared/site.ts when NEXT_PUBLIC_WHATSAPP_* is unset."
   },
-  "pricingNote": "The homepage headline and the comparison table say from R99. Published plan totals are R199 (1 month), R449 (3 months), R699 (6 months) and R1199 (12 months). The pricing card also shows a rounded monthly figure (R100 on the 12 month plan).",
+  "pricingNote": "Entry plan: R199 for 1 month. Other prepaid totals: R449 for 3 months, R699 for 6 months and R1199 for 12 months (R99.92/month equivalent, paid upfront). No R99 plan is offered.",
   "plans": [
     {
       "id": "trial-24h",
@@ -66,18 +66,20 @@
       "PC / Mac"
     ],
     "activationMinutes": null,
-    "bitrate": "25 Mbps sustained per 4K stream, as written on the 4K IPTV South Africa page. The homepage does not print a bitrate.",
-    "channelCount": null
+    "bitrate": null,
+    "channelCount": null,
+    "bitrateSource": "/tech-specs.json",
+    "bitrateNote": "HLS rendition bitrates are not yet supplied. 25 Mbps is a connection recommendation, not an encoded bitrate or a measured ladder. Pricing: R199 entry plan; R1199 annual total."
   },
   "i18n": {
     "en": {
       "description": "Mzansi Stream is a South African IPTV service with no contract and no decoder. The site lists live channels in 4K, including SuperSport, kykNET and SABC folders, plus movies and series; it publishes no channel count. A 24-hour trial needs no card. Orders and activation are on WhatsApp.",
       "productDescription": "Mzansi Stream IPTV subscription, term: {name}. Live channels and on-demand titles as described on the site, ordered via WhatsApp.",
-      "compareHook": "Mzansi Stream is shown from R99 on the comparison table, next to DStv Premium at R899, DStv Compact Plus at R549, DStv Compact at R449, Showmax at R99 and Netflix Premium at R199. The same row lists 20000 plus live channels, video on demand, 4K and direct WhatsApp support. Those figures are the ones printed on the homepage table.",
+      "compareHook": "Mzansi Stream lists R199 for one month, R449 for three months, R699 for six months and R1199 for twelve months. Compare the full prepaid term, device compatibility, available programmes and cancellation terms. Confirm the current channel list on WhatsApp and test your connection before paying. No competitor pricing or channel count is independently verified here.",
       "faq": [
         {
           "q": "How much does Mzansi Stream cost?",
-          "a": "Mzansi Stream publishes four one off plans in South African rand. One month is R199, three months is R449, six months is R699 and twelve months is R1199. The three month plan is marked most popular on the site. The headline also advertises plans from R99. A 24 hour trial is free with no card, and orders go through WhatsApp."
+          "a": "Mzansi Stream has four prepaid plans: R199 for one month, R449 for three months, R699 for six months and R1199 for twelve months. The annual total equals about R99.92 per month, paid upfront. A free 24 hour trial needs no card. Orders and activation are handled on WhatsApp."
         },
         {
           "q": "How does the free 24 hour trial work?",
@@ -89,7 +91,7 @@
         },
         {
           "q": "Which devices does Mzansi Stream work on?",
-          "a": "The homepage lists Smart TVs from Samsung, LG and Sony, plus Firestick and Fire TV, Android TV, iPhone, iPad, Android phones, an Android TV box, MAG Box, and PC or Mac. An M3U link is sent on WhatsApp for TiviMate, IPTV Smarters Pro, GSE Smart IPTV or any standard M3U player. Install help is offered for the device you name."
+          "a": "The homepage lists Smart TVs from Samsung, LG and Sony, plus Firestick and Fire TV, Android TV, iPhone, iPad, Android phones, an Android TV box, MAG Box, and PC or Mac. An playlist link is sent on WhatsApp for TiviMate, IPTV Smarters Pro, GSE Smart IPTV or any standard playlist player. Install help is offered for the device you name."
         },
         {
           "q": "Can I watch SuperSport without a DStv decoder?",
@@ -97,7 +99,7 @@
         },
         {
           "q": "How fast is activation and is the programme guide included?",
-          "a": "The homepage says activation is done on WhatsApp after the order and payment, with no fixed delay published. You receive an M3U playlist link and a short setup guide. The full electronic programme guide is included on every plan so you can see what is on now and what is coming up next."
+          "a": "The homepage says activation is done on WhatsApp after the order and payment, with no fixed delay published. You receive a stream playlist link and a short setup guide. The full electronic programme guide is included on every plan so you can see what is on now and what is coming up next."
         },
         {
           "q": "How do I pay and is there a contract?",
@@ -151,7 +153,7 @@
         "- Zimbabwe: https://iptvmzansi.com/en-za/sadc/zimbabwe (USD pricing, EcoCash)",
         "- Botswana: https://iptvmzansi.com/en-za/sadc/botswana",
         "- Namibia: https://iptvmzansi.com/en-za/sadc/namibia",
-        "- Mozambique: https://iptvmzansi.com/pt-mz/sadc/mozambique (Portuguese)",
+        "- Mozambique: https://iptvmzansi.com/en-za/sadc/mozambique",
         "- Lesotho: https://iptvmzansi.com/en-za/sadc/lesotho",
         "- Eswatini: https://iptvmzansi.com/en-za/sadc/eswatini",
         "- Zambia: https://iptvmzansi.com/en-za/sadc/zambia",
@@ -183,7 +185,7 @@
       "lines": [
         "- Sport: SuperSport-style folders (PSL, Premier League, Variety, Rugby,",
         "  Cricket). Matches and events are to confirm on WhatsApp; no",
-        "  every-match or PPV promise.",
+        "  blanket coverage or PPV promise.",
         "- SA channels: SABC 1/2/3/News, e.tv, eExtra, eMovies, kykNET, kykNET &",
         "  Kie, kykNET Lekker, Mzansi Magic, Mzansi Wethu, Moja Love, M-Net.",
         "- International: news and entertainment folders in addition to the SA",
@@ -214,12 +216,12 @@
         "  opinion. Redistributing copyrighted channels without permission is a",
         "  copyright question. This site does not publish a licence schedule.",
         "- Q: What's the best IPTV in South Africa 2026? — A: Mzansi Stream",
-        "  publishes plans from R99/month on the 12-month plan, no contract, and",
+        "  publishes a R199 one-month plan, no contract, and",
         "  WhatsApp activation. It does not claim a ranked \"best\" title.",
         "- Q: Can I watch SuperSport without DStv? — A: Yes, via Mzansi Stream",
         "  IPTV — SuperSport-style folders, matches to confirm on WhatsApp.",
         "- Q: How do I install IPTV on Firestick? — A: Sideload TiviMate via the",
-        "  Downloader app, paste the Mzansi Stream M3U URL — full guide at",
+        "  Downloader app, paste the Mzansi Stream playlist URL — full guide at",
         "  /en-za/iptv-firestick-south-africa.",
         "- Q: How do I cancel DStv? — A: WhatsApp 060 060 3788, give 30 days'",
         "  notice on Day 1 of your billing cycle — full guide at",
@@ -230,6 +232,14 @@
       "h2": "Contact",
       "lines": [
         "WhatsApp: see iptvmzansi.com for the current number."
+      ]
+    },
+    {
+      "h2": "Technical evidence",
+      "lines": [
+        "- HLS bitrate status and measurement fields: https://iptvmzansi.com/tech-specs.json",
+        "- 4K setup guide: https://iptvmzansi.com/en-za/4k-iptv-south-africa",
+        "- No measured latency or HLS ladder is published until supporting manifests and observations are supplied."
       ]
     }
   ]

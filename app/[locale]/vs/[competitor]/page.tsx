@@ -86,13 +86,13 @@ export default async function VersusPage({ params }: Props) {
   const faqEntries = [
     {
       q: `Is Mzansi Stream a real alternative to ${data.name}?`,
-      a: `It is a different product: live TV folders in 4K UHD where the source supports it, from R99/month, with no contract and no decoder — line-up to confirm on WhatsApp. Activated on WhatsApp.`,
+      a: `It is a different product: live TV folders in 4K UHD where the source supports it, from R199/month, with no contract and no decoder — line-up to confirm on WhatsApp. Activated on WhatsApp.`,
     },
     {
       q: `How much can I save by switching from ${data.name}?`,
       a: `${data.name} is ${data.priceMonthly}/month${
         data.priceYearly ? ` (${data.priceYearly}/year)` : ""
-      }. Mzansi Stream starts at R99/month — most households save R8,000-R10,000 a year by switching.`,
+      }. Mzansi Stream offers a R199 one-month plan — most households save R8,000-R10,000 a year by switching.`,
     },
     {
       q: `Do I need a decoder to switch from ${data.name}?`,
@@ -142,7 +142,7 @@ export default async function VersusPage({ params }: Props) {
               <h1>Mzansi Stream vs {data.name}</h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                From R99/mo · 24h free trial, no card · 7-day satisfaction guarantee
+                From R199/mo · 24h free trial, no card · 7-day satisfaction guarantee
               </p>
               <div className="ctaRow">
                 <a
@@ -151,7 +151,7 @@ export default async function VersusPage({ params }: Props) {
                   data-track-ref={`Vs-${competitor}-Hero-Pricing`}
                   data-track-placement={`Vs-${competitor}-Hero`}
                 >
-                  See plans from R99/mo →
+                  See plans from R199/mo →
                 </a>
                 <a
                   href="#table"
@@ -166,7 +166,7 @@ export default async function VersusPage({ params }: Props) {
 
             <DirectAnswerBlock
               question={`Is Mzansi Stream a real alternative to ${data.name}?`}
-              answer={`It is a different product: live TV folders in 4K UHD where the source supports it for R99/month, with no contract, no decoder and no installer visit — line-up to confirm on WhatsApp. Activation runs on WhatsApp. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective.`}
+              answer={`It is a different product: live TV folders in 4K UHD where the source supports it for R199 per month, with no contract, no decoder and no installer visit — line-up to confirm on WhatsApp. Activation runs on WhatsApp. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective.`}
             />
 
             <section className="longformSection" id="table">
@@ -216,7 +216,7 @@ export default async function VersusPage({ params }: Props) {
             <InlinePricingBlock
               locale={locale as Locale}
               refTag={`Vs-${competitor}`}
-              heading={`Switch from ${data.name} — plans from R99/month`}
+              heading={`Switch from ${data.name} — plans from R199/month`}
               sub={`SuperSport-style, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. No contract, no decoder. Activated on WhatsApp.`}
             />
 

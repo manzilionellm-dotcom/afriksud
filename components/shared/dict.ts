@@ -102,7 +102,7 @@ const enZA: Copy = {
       { service: "DStv Compact",      price: "R449",    live: "~120",    vod: true,  hd4k: false, support: "Phone" },
       { service: "Showmax",           price: "R99",     live: "0",       vod: true,  hd4k: true,  support: "Email" },
       { service: "Netflix Premium",   price: "R199",    live: "0",       vod: true,  hd4k: true,  support: "Chat" },
-      { service: "Mzansi Stream",     price: "from R99", live: "Confirm on WhatsApp", vod: true, hd4k: true,  support: "Direct WhatsApp", highlight: true },
+      { service: "Mzansi Stream",     price: "from R199", live: "Confirm on WhatsApp", vod: true, hd4k: true,  support: "Direct WhatsApp", highlight: true },
     ],
   },
   reviews: {
@@ -129,7 +129,7 @@ const enZA: Copy = {
     items: [
       { q: "Can I watch SABC, e.tv and SA free-to-air channels?", a: "SABC 1, 2 and 3, e.tv and the usual SA free-to-air names are the folders most viewers look for. Confirm what actually plays on your 24h trial — we don’t list this as a complete official line-up." },
       { q: "Can I watch the DStv Premiership and the Premier League?", a: "SuperSport PSL, Premier League, Variety, Rugby and Cricket folders are on the lineup. We don't promise every official feed or a buffer-free picture — test the match on the 24h trial." },
-      { q: "Is it compatible with TiviMate, IPTV Smarters and Smart TV?", a: "Yes. Works with TiviMate, IPTV Smarters Pro, GSE Smart IPTV and any standard M3U app. We send the M3U link directly via WhatsApp." },
+      { q: "Is it compatible with IPTV player, IPTV Smarters and Smart TV?", a: "Yes. Works with IPTV player, IPTV Smarters Pro, GSE Smart IPTV and any standard playlist app. We send the playlist link directly via WhatsApp." },
       { q: "Which devices are supported?", a: "Smart TVs (Samsung, LG, Sony), Firestick / Fire TV, Android TV, iPhone, iPad, Android, Android TV Box, MAG Box and PC/Mac. We guide the install for your specific device." },
       { q: "How fast is activation?", a: "Activation is done on WhatsApp after we receive your order and payment. We don't publish a fixed delay." },
       { q: "Is the EPG guide included?", a: "Yes. The full Electronic Programme Guide is included in every plan so you always know what's on now and what's coming up." },
@@ -139,9 +139,9 @@ const enZA: Copy = {
       { q: "How do I pay?", a: "Payment is handled on WhatsApp. We accept EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin." },
       { q: "What if the service goes down?", a: "Message us directly on WhatsApp. We treat outages as a support job, not a promise that nothing will ever drop." },
       { q: "Is there a contract? Can I cancel?", a: "No contract and no auto-renewal. You pay once and the service ends at the end of the chosen period. If you want to continue, you renew it manually." },
-      { q: "Is Mzansi Stream a DStv alternative?", a: "It is a no-contract option people compare with a DStv decoder. We don't claim every DStv Premium channel, a ranked 'leading' title, or a multiple like '100x more'. Trial the folders you watch." },
+      { q: "Is Mzansi Stream a DStv alternative?", a: "It is a no-contract option people compare with a DStv decoder. We don't claim every DStv Premium channel, a ranked 'leading' title, or a multiple like 'unsupported multiples'. Trial the folders you watch." },
       { q: "Do you cover the Springboks rugby and the URC?", a: "Springboks, URC and Currie Cup are the fixtures people ask for, via SuperSport Rugby and Variety folders. Rights and blackouts can still apply — test the match." },
-      { q: "Can I watch the IPL cricket and Proteas matches?", a: "SuperSport Cricket / Star Sports-style folders are the usual ask for Proteas and IPL. We don’t guarantee every match or every official feed. Tell us the upcoming games on WhatsApp and test them first." },
+      { q: "Can I watch the IPL cricket and Proteas matches?", a: "SuperSport Cricket / Star Sports-style folders are the usual ask for Proteas and IPL. We don’t guarantee each requested fixture or every official feed. Tell us the upcoming games on WhatsApp and test them first." },
       { q: "Will it work with Vumatel, Openserve and other SA fibre?", a: "It runs over any home internet, including Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre and Vodacom Fibre. The 24h trial is the proof on your line — not a guarantee for every network." },
     ],
   },
@@ -156,7 +156,7 @@ const enZA: Copy = {
       { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — install in about 10 minutes via WhatsApp." },
       { name: "Gqeberha",     text: "Eastern Cape setup — Chippa United, EP Elephants and the major national folders, confirmed on trial." },
       { name: "Bloemfontein", text: "Bloemfontein Celtic, Free State Cheetahs and SuperSport-style rugby folders with English-language WhatsApp support." },
-      { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an every-match promise." },
+      { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an blanket coverage promise." },
       { name: "Polokwane",    text: "Black Leopards, SABC, kykNET and the international folders people ask for across Limpopo." },
     ],
   },
@@ -167,7 +167,7 @@ const enZA: Copy = {
     steps: [
       { step: "1", text: "Message us on WhatsApp and tell us which device you have." },
       { step: "2", text: "Pick your plan and pay via EFT, SnapScan, Zapper or card." },
-      { step: "3", text: "Receive your M3U link and step-by-step guide, then start watching." },
+      { step: "3", text: "Receive your playlist link and step-by-step guide, then start watching." },
     ],
   },
   international: {
@@ -239,7 +239,7 @@ const enZA: Copy = {
     name: "Lerato",
     greeting1: "Hi there! 👋 I'm Lerato.",
     greeting2: "I can help with pricing, the free trial or the install. What would you like to know?",
-    price1: "Plans start at R99/month — 1, 3, 6 or 12 months. All include the same line-up, EPG and WhatsApp support.",
+    price1: "The one-month plan is R199 — 1, 3, 6 or 12 months. All include the same line-up, EPG and WhatsApp support.",
     price2: "Want to see the pricing or try it free for 24h first?",
     install1: "Firestick and Smart TV both work. Install takes about 10 minutes.",
     install2: "I'll send the step-by-step guide on WhatsApp now.",
@@ -330,7 +330,7 @@ const af: Copy = {
     steps: [
       { step: "1", text: "Stuur ons 'n WhatsApp en sê watter toestel jy gebruik." },
       { step: "2", text: "Kies jou pakket en betaal via EFT, SnapScan, Zapper of kaart." },
-      { step: "3", text: "Ontvang jou M3U-skakel en gids, en begin kyk." },
+      { step: "3", text: "Ontvang jou playlist-skakel en gids, en begin kyk." },
     ],
   },
   stickyCta: "★ Probeer 24u gratis →",
@@ -397,7 +397,7 @@ const fr: Copy = {
     steps: [
       { step: "1", text: "Contactez-nous sur WhatsApp et indiquez votre appareil." },
       { step: "2", text: "Choisissez votre forfait et payez par EFT, carte ou PayPal." },
-      { step: "3", text: "Recevez votre lien M3U et le guide, puis lancez la TV." },
+      { step: "3", text: "Recevez votre lien playlist et le guide, puis lancez la TV." },
     ],
   },
   stickyCta: "★ Essayer 24h gratuit →",
@@ -455,7 +455,7 @@ const zu: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "I-IPTV Engcono e-South Africa 2026.",
-    titleB: "SuperSport, ku-4K kusukela ku-R99/inyanga.",
+    titleB: "SuperSport, ku-4K kusukela ku-R199/inyanga.",
     ctaPrices: "Bona izinhlelo",
     ctaAdvisor: "Khuluma nomeluleki",
     trust: "Akukho nkontileka",
@@ -482,7 +482,7 @@ const xh: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026.",
-    titleB: "SuperSport ku-4K ukusuka ku-R99/inyanga.",
+    titleB: "SuperSport ku-4K ukusuka ku-R199/inyanga.",
     ctaPrices: "Jonga izicwangciso",
     ctaAdvisor: "Thetha necebo",
     trust: "Akukho sivumelwano",
@@ -549,7 +549,7 @@ const enZW: Copy = {
 
 // English diaspora variants share en-ZA copy unless a locale needs its
 // own claims. en-gb homepage is live in the UK: soft-sell only — no
-// every-match guarantees, no invented expat counts, no 100x, no ratings.
+// blanket coverage guarantees, no invented expat counts, no unsupported multiples, no ratings.
 const enGB: Copy = {
   ...enZA,
   hero: {
@@ -572,9 +572,9 @@ const enGB: Copy = {
       },
       {
         q: "Can I watch the DStv Premiership and the Premier League?",
-        a: "SuperSport-style PSL and Premier League folders are what people usually ask for. We don’t guarantee every match feed or every official broadcast. Tell us the fixtures you care about on WhatsApp +44 7307 410512 and test them on a short trial.",
+        a: "SuperSport-style PSL and Premier League folders are what people usually ask for. We don’t guarantee each requested fixture feed or every official broadcast. Tell us the fixtures you care about on WhatsApp +44 7307 410512 and test them on a short trial.",
       },
-      { q: "Is it compatible with TiviMate, IPTV Smarters and Smart TV?", a: "Yes. Works with TiviMate, IPTV Smarters Pro, GSE Smart IPTV and any standard M3U app. We send the M3U link directly via WhatsApp." },
+      { q: "Is it compatible with IPTV player, IPTV Smarters and Smart TV?", a: "Yes. Works with IPTV player, IPTV Smarters Pro, GSE Smart IPTV and any standard playlist app. We send the playlist link directly via WhatsApp." },
       { q: "Which devices are supported?", a: "Smart TVs (Samsung, LG, Sony), Firestick / Fire TV, Android TV, iPhone, iPad, Android, Android TV Box, MAG Box and PC/Mac. We guide the install for your specific device." },
       { q: "How fast is activation?", a: "Activation is done on WhatsApp after we receive your order and payment. We don't publish a fixed delay." },
       { q: "Is the EPG guide included?", a: "Yes. The full Electronic Programme Guide is included in every plan so you always know what's on now and what's coming up." },
@@ -586,7 +586,7 @@ const enGB: Copy = {
       { q: "Is there a contract? Can I cancel?", a: "No contract and no auto-renewal. You pay once and the service ends at the end of the chosen period. If you want to continue, you renew it manually." },
       {
         q: "Is Mzansi Stream a DStv alternative?",
-        a: "Mzansi Stream is a DStv-style alternative for South African channels — playlist categories, not an exclusive MultiChoice licence. We don’t claim every DStv Premium channel or “100x more”. Trial the folders you actually watch, then decide.",
+        a: "Mzansi Stream is a DStv-style alternative for South African channels — playlist categories, not an exclusive MultiChoice licence. We don’t claim every DStv Premium channel or “unsupported multiples”. Trial the folders you actually watch, then decide.",
       },
       {
         q: "Do you cover the Springboks rugby and the URC?",
@@ -594,7 +594,7 @@ const enGB: Copy = {
       },
       {
         q: "Can I watch the IPL cricket and Proteas matches?",
-        a: "SuperSport Cricket / Star Sports-style folders are the usual ask for Proteas and IPL. We don’t guarantee every match or every official feed. Message +44 7307 410512 with the upcoming games and test them first.",
+        a: "SuperSport Cricket / Star Sports-style folders are the usual ask for Proteas and IPL. We don’t guarantee each requested fixture or every official feed. Message +44 7307 410512 with the upcoming games and test them first.",
       },
       {
         q: "Will it work with Vumatel, Openserve and other SA fibre?",
@@ -615,7 +615,7 @@ const enGB: Copy = {
       { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — install in about 10 minutes via WhatsApp." },
       { name: "Gqeberha",     text: "Eastern Cape setup — Chippa United, EP Elephants and the major national folders, confirmed on trial." },
       { name: "Bloemfontein", text: "Bloemfontein Celtic, Free State Cheetahs and SuperSport-style rugby folders with English-language WhatsApp support." },
-      { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an every-match promise." },
+      { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an blanket coverage promise." },
       { name: "Polokwane",    text: "Black Leopards, SABC, kykNET and the international folders people ask for across Limpopo." },
     ],
   },

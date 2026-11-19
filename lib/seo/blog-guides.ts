@@ -21,7 +21,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     keyFacts: [
       "Mzansi Stream activates on WhatsApp after a clear first message; this page does not publish a fixed delay.",
       "Pay with EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco, Visa, Mastercard or PayPal after the trial — not by mailing a card number.",
-      "You should receive an M3U link or Xtream Codes login plus a device-specific setup note. If you only get a random APK, walk away.",
+      "You should receive a playlist link or Xtream Codes login plus a device-specific setup note. If you only get a random APK, walk away.",
     ],
     cta: {
       label: "Start the WhatsApp order — free 24h trial →",
@@ -45,7 +45,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "why-whatsapp",
         h2: "Why IPTV in South Africa is ordered on WhatsApp",
         body: [
-          "A web form cannot see your TV model, your fibre ISP, or whether you are sitting in Soweto on Vumatel or in a res on campus Wi-Fi. WhatsApp can. The same thread that takes the order also ships the M3U, the Xtream Codes login, the EPG URL and the one-page setup for that exact device.",
+          "A web form cannot see your TV model, your fibre ISP, or whether you are sitting in Soweto on Vumatel or in a res on campus Wi-Fi. WhatsApp can. The same thread that takes the order also ships the playlist, the Xtream Codes login, the EPG URL and the one-page setup for that exact device.",
           "Mzansi Stream does not ask you to email a credit-card photo or open a ticket on a foreign helpdesk. The conversion path on iptvmzansi.com is WhatsApp only — the site buttons open a pre-filled chat so the first message is already useful.",
         ],
       },
@@ -102,9 +102,9 @@ export const BLOG_GUIDES: BlogPost[] = [
           "A complete reply is boring on purpose. You want credentials and a setup note, not a mystery APK from a random drive link.",
         ],
         bullets: [
-          "M3U playlist URL, or Xtream Codes (server URL + username + password).",
+          "stream playlist URL, or Xtream Codes (server URL + username + password).",
           "EPG / XMLTV URL if the playlist does not embed the guide.",
-          "A short setup path for your device (TiviMate, Smarters, MAG portal, or Smart TV store app).",
+          "A short setup path for your device (IPTV player, Smarters, MAG portal, or Smart TV store app).",
           "A human still on the thread if SuperSport PSL is blank at 15:00 on Saturday.",
         ],
       },
@@ -121,7 +121,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Load the trial on the TV you actually watch",
-            text: "Paste the M3U or Xtream login into TiviMate, IPTV Smarters Pro or the Smart TV app. Test SuperSport PSL and one entertainment channel on the lounge screen — not only on your phone.",
+            text: "Paste the playlist or Xtream login into IPTV player, IPTV Smarters Pro or the Smart TV app. Test SuperSport PSL and one entertainment channel on the lounge screen — not only on your phone.",
           },
           {
             title: "Pay on a local rail in the same thread",
@@ -129,7 +129,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Confirm the paid credentials",
-            text: "If the trial login becomes the paid login, say so in the chat. If you receive a new M3U, replace the playlist and refresh EPG.",
+            text: "If the trial login becomes the paid login, say so in the chat. If you receive a new playlist, replace the playlist and refresh EPG.",
           },
           {
             title: "Save the chat",
@@ -176,7 +176,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       { label: "Pay via EFT, SnapScan, Ozow & Capitec Pay", href: "/en-za/iptv-eft-snapscan-payment" },
       { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
       { label: "Switch from DStv in one weekend", href: "/en-za/blog/switch-from-dstv-to-iptv-weekend" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
@@ -205,7 +205,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         "Confirm your connection count on WhatsApp, load the second playlist, and test both screens during the same fixture.",
       totalTime: "PT15M",
       supply: ["Active Mzansi Stream account", "Second device on the same or a backup network"],
-      tool: ["TiviMate, IPTV Smarters Pro, or the Smart TV store app"],
+      tool: ["IPTV player, IPTV Smarters Pro, or the Smart TV store app"],
     },
     sections: [
       {
@@ -232,8 +232,8 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "devices",
         h2: "Which device should be the 'primary' screen",
         body: [
-          "Put the most reliable player on the screen that must not fail during a derby. On Firestick and Android TV that is TiviMate. On Samsung / LG / Hisense that is usually IPTV Smarters from the TV store. Phones are the backup, not the primary, unless load shedding has already killed the ONT.",
-          "A MAG box is a good second screen for a parent who only wants the remote to work like DStv. We whitelist the MAC on WhatsApp — do not 'share' a Firestick M3U onto a MAG portal and hope.",
+          "Put the most reliable player on the screen that must not fail during a derby. On Firestick and Android TV that is IPTV player. On Samsung / LG / Hisense that is usually IPTV Smarters from the TV store. Phones are the backup, not the primary, unless load shedding has already killed the ONT.",
+          "A MAG box is a good second screen for a parent who only wants the remote to work like DStv. We whitelist the MAC on WhatsApp — do not 'share' a Firestick playlist onto a MAG portal and hope.",
         ],
       },
       {
@@ -257,7 +257,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Load the second playlist as a new profile",
-            text: "In TiviMate use a second playlist slot if you have Premium. In Smarters, add a new user profile rather than overwriting the lounge login.",
+            text: "In IPTV player use a second playlist slot if you have Premium. In Smarters, add a new user profile rather than overwriting the lounge login.",
           },
           {
             title: "Play two live channels at once",
@@ -291,8 +291,8 @@ export const BLOG_GUIDES: BlogPost[] = [
         a: "Not always. It needs two connections if both play live at once. Ask in the order chat; do not assume.",
       },
       {
-        q: "Can I use the same M3U on a MAG box?",
-        a: "MAG boxes typically need a portal + MAC whitelist, not a pasted M3U. Send the MAG MAC on WhatsApp instead of cloning the Firestick playlist.",
+        q: "Can I use the same playlist on a MAG box?",
+        a: "MAG boxes typically need a portal + MAC whitelist, not a pasted playlist. Send the MAG MAC on WhatsApp instead of cloning the Firestick playlist.",
       },
       {
         q: "What happens if we exceed the connection limit?",
@@ -306,91 +306,91 @@ export const BLOG_GUIDES: BlogPost[] = [
     relatedLinks: [
       { label: "Order IPTV on WhatsApp — walkthrough", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
       { label: "IPTV during load shedding", href: "/en-za/blog/iptv-load-shedding-south-africa" },
-      { label: "TiviMate setup — South Africa", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "IPTV player setup — South Africa", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
       { label: "Firestick IPTV pillar", href: "/en-za/iptv-firestick-south-africa" },
     ],
   },
   {
     slug: "tivimate-setup-south-africa-2026",
-    title: "TiviMate setup in South Africa — playlist, EPG and 4K SuperSport",
+    title: "IPTV player setup in South Africa — playlist, EPG and 4K SuperSport",
     metaDescription:
-      "Install TiviMate for IPTV in South Africa: Downloader on Firestick, Xtream login, XMLTV EPG, and the buffer setting for 4K SuperSport.",
+      "Install IPTV player for IPTV in South Africa: Downloader on Firestick, Xtream login, XMLTV EPG, and the buffer setting for 4K SuperSport.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
-      "TiviMate is the player we recommend on Firestick and Android TV in South Africa — not because it is trendy, but because the remote layout, 7-day EPG and buffer control survive a SuperSport 4K bitrate spike. This is the install path from a WhatsApp M3U to a stable PSL picture, including the XMLTV step most generic TiviMate blogs skip.",
+      "IPTV player is the player we recommend on Firestick and Android TV in South Africa — not because it is trendy, but because the remote layout, 7-day EPG and buffer control survive a SuperSport 4K bitrate spike. This is the install path from a WhatsApp playlist to a stable PSL picture, including the XMLTV step most generic IPTV player blogs skip.",
     keyFacts: [
-      "TiviMate is for Firestick, Android TV and Nvidia Shield — not iPhone and not Samsung Tizen.",
-      "Use Xtream Codes if we sent them; otherwise paste the M3U URL from WhatsApp with no trailing space.",
+      "IPTV player is for Firestick, Android TV and Nvidia Shield — not iPhone and not Samsung Tizen.",
+      "Use Xtream Codes if we sent them; otherwise paste the playlist URL from WhatsApp with no trailing space.",
       "Raise the playback buffer to 8 seconds for 4K SuperSport. The factory 2-second buffer is why corners look like they 'stick'.",
     ],
     cta: {
-      label: "Get the TiviMate playlist on WhatsApp →",
+      label: "Get the IPTV player playlist on WhatsApp →",
       message:
-        "Hi! I want Mzansi Stream on TiviMate. Device: [Firestick 4K Max / Android TV]. Please send Xtream or M3U + EPG and the free 24h trial.",
-      ref: "Blog-TiviMate-Setup",
+        "Hi! I want Mzansi Stream on IPTV player. Device: [Firestick 4K Max / Android TV]. Please send Xtream or playlist + EPG and the free 24h trial.",
+      ref: "Blog-IPTV player-Setup",
     },
     howTo: {
-      name: "Set up TiviMate with Mzansi Stream",
+      name: "Set up IPTV player with Mzansi Stream",
       description:
-        "Sideload TiviMate on Firestick or install from Play Store on Android TV, add the WhatsApp playlist, set EPG and the 8-second buffer.",
+        "Sideload IPTV player on Firestick or install from Play Store on Android TV, add the WhatsApp playlist, set EPG and the 8-second buffer.",
       totalTime: "PT10M",
-      supply: ["Mzansi Stream M3U or Xtream Codes from WhatsApp", "Home Wi-Fi or Ethernet"],
-      tool: ["Firestick 4K / Android TV", "Downloader app (Firestick)", "TiviMate"],
+      supply: ["Mzansi Stream playlist or Xtream Codes from WhatsApp", "Home Wi-Fi or Ethernet"],
+      tool: ["Firestick 4K / Android TV", "Downloader app (Firestick)", "IPTV player"],
     },
     sections: [
       {
         id: "where",
-        h2: "Where TiviMate belongs (and where it does not)",
+        h2: "Where IPTV player belongs (and where it does not)",
         body: [
-          "Install TiviMate on Amazon Firestick, Fire TV, Android TV boxes and Google TV (Sony Bravia, Chromecast with Google TV). That is the gold path for 4K SuperSport.",
-          "Do not hunt for TiviMate on iPhone, iPad or Samsung Tizen — it is not there. Those households use IPTV Smarters Player. The app-comparison post covers the three-way choice; this page is only the TiviMate install.",
+          "Install IPTV player on Amazon Firestick, Fire TV, Android TV boxes and Google TV (Sony Bravia, Chromecast with Google TV). That is the gold path for 4K SuperSport.",
+          "Do not hunt for IPTV player on iPhone, iPad or Samsung Tizen — it is not there. Those households use IPTV Smarters Player. The app-comparison post covers the three-way choice; this page is only the IPTV player install.",
         ],
       },
       {
         id: "firestick",
-        h2: "Firestick path: Downloader, then TiviMate",
+        h2: "Firestick path: Downloader, then IPTV player",
         body: [
-          "On Firestick, enable Apps from Unknown Sources, install Downloader from the Amazon Appstore, and sideload TiviMate. The Firestick pillar on this site walks the same sequence. When TiviMate opens, you add a playlist — you do not type a South African 'activation code' from a Facebook ad.",
-          "TiviMate Premium is a once-off player licence (the site already quotes the R150–R199 band). It unlocks extra playlists, recording and a cleaner EPG. The free tier is enough for one Mzansi Stream playlist.",
+          "On Firestick, enable Apps from Unknown Sources, install Downloader from the Amazon Appstore, and sideload IPTV player. The Firestick pillar on this site walks the same sequence. When IPTV player opens, you add a playlist — you do not type a South African 'activation code' from a Facebook ad.",
+          "IPTV player Premium is a once-off player licence (the site already quotes the R150–R199 band). It unlocks extra playlists, recording and a cleaner EPG. The free tier is enough for one Mzansi Stream playlist.",
         ],
       },
       {
         id: "playlist",
-        h2: "M3U vs Xtream Codes — use what WhatsApp sent",
+        h2: "playlist vs Xtream Codes — use what WhatsApp sent",
         body: [
-          "If the chat contains a server URL, username and password, choose 'Xtream Codes' / login with API. If it contains a single https://…/get.php?… link, choose M3U URL. Do not mix them. Do not add a space at the end of the URL — Firestick's remote loves trailing spaces and then the channel list is empty.",
+          "If the chat contains a server URL, username and password, choose 'Xtream Codes' / login with API. If it contains a single https://…/get.php?… link, choose playlist URL. Do not mix them. Do not add a space at the end of the URL — Firestick's remote loves trailing spaces and then the channel list is empty.",
         ],
       },
       {
         id: "epg",
         h2: "EPG: the XMLTV URL most people skip",
         body: [
-          "A playlist without a guide is just a channel dump. If the EPG is empty after the first load, open the playlist settings and paste the XMLTV URL from the same WhatsApp message. Wait a minute. If it is still empty, send 'EPG empty on TiviMate' in the thread — we resend the guide URL rather than pretending the player is broken.",
+          "A playlist without a guide is just a channel dump. If the EPG is empty after the first load, open the playlist settings and paste the XMLTV URL from the same WhatsApp message. Wait a minute. If it is still empty, send 'EPG empty on IPTV player' in the thread — we resend the guide URL rather than pretending the player is broken.",
         ],
       },
       {
         id: "buffer",
         h2: "The SuperSport 4K buffer setting",
         body: [
-          "TiviMate ships with a short playback buffer. That is fine for 1080p news. It is tight for 4K SuperSport when a corner kick spikes the bitrate. Set Settings → Playback → Buffer Size to 8 seconds. Channel-change delay grows slightly; Saturday re-buffers drop for most Vumatel / Openserve / Frogfoot lines.",
-          "If it still hitch-hikes, the cause is usually the ISP router or 2.4 GHz Wi-Fi — not TiviMate. Use the buffering guide and the Wi-Fi 6 guide before you blame the playlist.",
+          "IPTV player ships with a short playback buffer. That is fine for 1080p news. It is tight for 4K SuperSport when a corner kick spikes the bitrate. Set Settings → Playback → Buffer Size to 8 seconds. Channel-change delay grows slightly; Saturday re-buffers drop for most Vumatel / Openserve / Frogfoot lines.",
+          "If it still hitch-hikes, the cause is usually the ISP router or 2.4 GHz Wi-Fi — not IPTV player. Use the buffering guide and the Wi-Fi 6 guide before you blame the playlist.",
         ],
       },
       {
         id: "howto",
-        h2: "TiviMate setup steps",
+        h2: "IPTV player setup steps",
         body: [
-          "Do this once. After that, TiviMate remembers the playlist across Firestick reboots.",
+          "Do this once. After that, IPTV player remembers the playlist across Firestick reboots.",
         ],
         steps: [
           {
-            title: "Install TiviMate",
-            text: "Android TV: Play Store → TiviMate. Firestick: Downloader → sideload TiviMate after enabling unknown sources.",
+            title: "Install IPTV player",
+            text: "Android TV: Play Store → IPTV player. Firestick: Downloader → sideload IPTV player after enabling unknown sources.",
           },
           {
             title: "Add the Mzansi Stream playlist",
-            text: "Add playlist → Xtream Codes or M3U URL → paste exactly what WhatsApp sent. Name it 'Mzansi Stream' so you can find it later.",
+            text: "Add playlist → Xtream Codes or playlist URL → paste exactly what WhatsApp sent. Name it 'Mzansi Stream' so you can find it later.",
           },
           {
             title: "Attach the EPG",
@@ -408,40 +408,40 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         id: "after",
-        h2: "When TiviMate is the wrong fix",
+        h2: "When IPTV player is the wrong fix",
         body: [
-          "If every channel is black, the playlist expired — message WhatsApp, do not reinstall TiviMate. If only 4K SuperSport fails while SABC is fine, that is bandwidth or Wi-Fi. If the app itself will not open, clear cache or soft-restart the Firestick (the Firestick fix post lists the button combo).",
+          "If every channel is black, the playlist expired — message WhatsApp, do not reinstall IPTV player. If only 4K SuperSport fails while SABC is fine, that is bandwidth or Wi-Fi. If the app itself will not open, clear cache or soft-restart the Firestick (the Firestick fix post lists the button combo).",
         ],
       },
     ],
     faq: [
       {
-        q: "Is TiviMate free in South Africa?",
+        q: "Is IPTV player free in South Africa?",
         a: "The basic player is free for one playlist. Premium is a once-off player licence in the R150–R199 band already quoted on this site. It is not an IPTV subscription.",
       },
       {
-        q: "Does Mzansi Stream work in TiviMate?",
-        a: "Yes. We send Xtream Codes or an M3U plus EPG on WhatsApp. TiviMate is the preferred player on Firestick and Android TV.",
+        q: "Does Mzansi Stream work in IPTV player?",
+        a: "Yes. We send Xtream Codes or a playlist plus EPG on WhatsApp. IPTV player is the preferred player on Firestick and Android TV.",
       },
       {
-        q: "Why is my TiviMate EPG empty?",
+        q: "Why is my IPTV player EPG empty?",
         a: "Update EPG on the playlist, or paste the XMLTV URL from WhatsApp. If it stays empty, ask us to resend the guide link.",
       },
       {
-        q: "Can I use TiviMate on a Samsung Smart TV?",
-        a: "No. Use IPTV Smarters from the Samsung store, or plug in a Firestick and run TiviMate on the stick.",
+        q: "Can I use IPTV player on a Samsung Smart TV?",
+        a: "No. Use IPTV Smarters from the Samsung store, or plug in a Firestick and run IPTV player on the stick.",
       },
       {
         q: "What buffer should I use for 4K SuperSport?",
-        a: "8 seconds in TiviMate Playback settings. The default 2-second buffer is the usual cause of micro-stutters on 4K.",
+        a: "8 seconds in IPTV player Playback settings. The default 2-second buffer is the usual cause of micro-stutters on 4K.",
       },
       {
-        q: "TiviMate vs IPTV Smarters Pro — which one?",
-        a: "TiviMate on Firestick / Android TV. Smarters on iPhone, iPad, Samsung and LG. The comparison post covers the rest.",
+        q: "IPTV player vs IPTV Smarters Pro — which one?",
+        a: "IPTV player on Firestick / Android TV. Smarters on iPhone, iPad, Samsung and LG. The comparison post covers the rest.",
       },
     ],
     relatedLinks: [
-      { label: "TiviMate vs IPTV Smarters Pro vs GSE", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
+      { label: "IPTV player vs IPTV Smarters Pro vs GSE", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
       { label: "Firestick IPTV South Africa — pillar", href: "/en-za/iptv-firestick-south-africa" },
       { label: "Firestick 4K Max vs Lite — which to buy", href: "/en-za/blog/firestick-4k-max-vs-lite-south-africa" },
       { label: "Why IPTV buffers — SA fix guide", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
@@ -509,7 +509,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "player",
         h2: "Player settings that survive a reconnect",
         body: [
-          "TiviMate with an 8-second buffer will usually resume after a short blip. If the ONT is off for the whole slot, no buffer saves you — switch the Firestick onto the phone hotspot SSID you prepared. Name the backup Wi-Fi clearly (for example Home-LTE) so you are not guessing passwords in the dark.",
+          "IPTV player with an 8-second buffer will usually resume after a short blip. If the ONT is off for the whole slot, no buffer saves you — switch the Firestick onto the phone hotspot SSID you prepared. Name the backup Wi-Fi clearly (for example Home-LTE) so you are not guessing passwords in the dark.",
         ],
       },
       {
@@ -533,7 +533,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Install the player on the phone",
-            text: "IPTV Smarters or TiviMate companion on the phone is the last-resort screen when both TVs are dark.",
+            text: "IPTV Smarters or IPTV player companion on the phone is the last-resort screen when both TVs are dark.",
           },
           {
             title: "Tell WhatsApp your fallback",
@@ -545,7 +545,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "dstv",
         h2: "Load shedding does not make DStv cheaper",
         body: [
-          "A DStv decoder on an inverter still needs the dish and the same household power politics. IPTV's advantage in a slot is the phone: SuperSport can move to LTE without a truck roll. The bill stays R99–R199/month on Mzansi Stream versus R899/month Premium — load shedding does not change that arithmetic.",
+          "A DStv decoder on an inverter still needs the dish and the same household power politics. IPTV's advantage in a slot is the phone: SuperSport can move to LTE without a truck roll. The bill stays R99.92–R199/month equivalent, depending on the prepaid term, on Mzansi Stream versus R899/month Premium — load shedding does not change that arithmetic.",
         ],
       },
     ],
@@ -608,7 +608,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         "Order a WhatsApp trial, load SuperSport Premier League, and confirm both the early and late kick-offs.",
       totalTime: "PT10M",
       supply: ["WhatsApp", "A 4K or HD screen", "Fibre or a stable LTE backup"],
-      tool: ["TiviMate or IPTV Smarters Pro"],
+      tool: ["IPTV player or IPTV Smarters Pro"],
     },
     sections: [
       {
@@ -640,7 +640,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Open SuperSport Premier League first",
-            text: "Favourite it in TiviMate or Smarters. Then favourite SuperSport PSL and Variety 1–4 for overflow.",
+            text: "Favourite it in IPTV player or Smarters. Then favourite SuperSport PSL and Variety 1–4 for overflow.",
           },
           {
             title: "Watch one early and one late kick-off",
@@ -753,7 +753,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         steps: [
           {
             title: "Friday — trial on the lounge TV",
-            text: "WhatsApp Mzansi Stream from the site button. Load TiviMate or Smarters. Watch SuperSport PSL or a midweek leftover. Confirm EPG.",
+            text: "WhatsApp Mzansi Stream from the site button. Load IPTV player or Smarters. Watch SuperSport PSL or a midweek leftover. Confirm EPG.",
           },
           {
             title: "Saturday — live match test, then pay",
@@ -881,7 +881,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         steps: [
           {
             title: "Install a player on the phone",
-            text: "iPhone/iPad: IPTV Smarters Player. Android: Smarters or TiviMate companion. Paste the same WhatsApp credentials.",
+            text: "iPhone/iPad: IPTV Smarters Player. Android: Smarters or IPTV player companion. Paste the same WhatsApp credentials.",
           },
           {
             title: "Store the hotspot on the Firestick",
@@ -942,7 +942,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     slug: "watch-proteas-cricket-online-south-africa",
     title: "Watch the Proteas live online — cricket without DStv in 2026",
     metaDescription:
-      "Stream Proteas Tests, ODIs, T20, SA20 and ICC cricket in South Africa without DStv — SuperSport Cricket via IPTV from R99/mo.",
+      "Stream Proteas Tests, ODIs, T20, SA20 and ICC cricket in South Africa without DStv — SuperSport Cricket via IPTV from R199/mo.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
@@ -964,7 +964,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         "Get the WhatsApp trial, favourite SuperSport Cricket, and test a live session on the lounge TV.",
       totalTime: "PT10M",
       supply: ["WhatsApp", "Screen you will actually watch a Test on"],
-      tool: ["TiviMate or IPTV Smarters Pro"],
+      tool: ["IPTV player or IPTV Smarters Pro"],
     },
     sections: [
       {
@@ -1059,20 +1059,20 @@ export const BLOG_GUIDES: BlogPost[] = [
     slug: "iptv-epg-catchup-south-africa",
     title: "IPTV EPG and catch-up TV in South Africa — vs Explora PVR 2026",
     metaDescription:
-      "How IPTV EPG and catch-up work in South Africa versus a DStv Explora PVR — XMLTV, restart match, timeshift, and TiviMate guide fixes.",
+      "How IPTV EPG and catch-up work in South Africa versus a DStv Explora PVR — XMLTV, restart match, timeshift, and IPTV player guide fixes.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
-      "The Explora trained South Africa to treat TV as a disk in the lounge: pause, rewind, record the derby. IPTV does the same job with an EPG and catch-up on the server — if the provider sent an XMLTV URL and the player is allowed to timeshift. This guide is that difference, plus the exact TiviMate / Smarters taps when the guide is empty.",
+      "The Explora trained South Africa to treat TV as a disk in the lounge: pause, rewind, record the derby. IPTV does the same job with an EPG and catch-up on the server — if the provider sent an XMLTV URL and the player is allowed to timeshift. This guide is that difference, plus the exact IPTV player / Smarters taps when the guide is empty.",
     keyFacts: [
       "EPG is the TV guide. Catch-up / timeshift is 'start the match from the beginning' — not a second subscription.",
-      "Mzansi Stream sends M3U or Xtream plus an EPG URL on WhatsApp. If the guide is empty, ask for XMLTV again; do not reinstall the app first.",
+      "Mzansi Stream sends playlist or Xtream plus an EPG URL on WhatsApp. If the guide is empty, ask for XMLTV again; do not reinstall the app first.",
       "Explora records to a box in your house. Catch-up lives on the provider side — useful when load shedding killed the decoder mid-match.",
     ],
     cta: {
       label: "Get EPG + playlist on WhatsApp →",
       message:
-        "Hi! Please send Mzansi Stream with EPG/XMLTV for [TiviMate / Smarters] on my [device]. I want the free 24h trial and catch-up if available.",
+        "Hi! Please send Mzansi Stream with EPG/XMLTV for [IPTV player / Smarters] on my [device]. I want the free 24h trial and catch-up if available.",
       ref: "Blog-EPG-Catchup",
     },
     howTo: {
@@ -1081,7 +1081,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         "Paste the WhatsApp XMLTV URL, refresh the guide, and test restart/timeshift on a SuperSport channel.",
       totalTime: "PT5M",
       supply: ["EPG / XMLTV URL from WhatsApp"],
-      tool: ["TiviMate or IPTV Smarters Pro"],
+      tool: ["IPTV player or IPTV Smarters Pro"],
     },
     sections: [
       {
@@ -1089,7 +1089,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "What EPG is (and what it is not)",
         body: [
           "EPG is the grid: channel, start time, programme name. It is not the video. You can have a perfect SuperSport picture and an empty guide if the XMLTV URL was never pasted. You can also have a full guide and a dead picture if the stream URL expired.",
-          "Xtream logins often pull a guide automatically. M3U playlists often need the XMLTV field filled once. WhatsApp should contain both.",
+          "Xtream logins often pull a guide automatically. stream playlists often need the XMLTV field filled once. WhatsApp should contain both.",
         ],
       },
       {
@@ -1097,7 +1097,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "Catch-up vs Explora PVR",
         body: [
           "Explora PVR writes the match to a disk in your lounge. If load shedding kills the decoder at 16:00, the recording can die with it. Catch-up / restart on IPTV starts the programme from the server. That is the feature people mean when they say 'I missed the first half'.",
-          "Not every channel offers the same catch-up window. Sport is the honest test: open SuperSport PSL after kick-off and look for restart / catch-up in TiviMate (programme long-press or the catch-up row). If it is missing, ask WhatsApp whether that feed exposes catch-up — do not assume a Facebook screenshot.",
+          "Not every channel offers the same catch-up window. Sport is the honest test: open SuperSport PSL after kick-off and look for restart / catch-up in IPTV player (programme long-press or the catch-up row). If it is missing, ask WhatsApp whether that feed exposes catch-up — do not assume a Facebook screenshot.",
         ],
       },
       {
@@ -1109,11 +1109,11 @@ export const BLOG_GUIDES: BlogPost[] = [
         steps: [
           {
             title: "Update EPG in the player",
-            text: "TiviMate: playlist → Update EPG. Smarters: log out and in with Xtream Codes.",
+            text: "IPTV player: playlist → Update EPG. Smarters: log out and in with Xtream Codes.",
           },
           {
             title: "Paste XMLTV if still empty",
-            text: "Use the EPG URL from the same WhatsApp that sent the M3U. No extra spaces.",
+            text: "Use the EPG URL from the same WhatsApp that sent the playlist. No extra spaces.",
           },
           {
             title: "Open a live SuperSport programme",
@@ -1121,7 +1121,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Message WhatsApp if the grid is still blank",
-            text: "Send a screenshot of the empty guide. We resend XMLTV. Reinstalling TiviMate rarely fixes a missing URL.",
+            text: "Send a screenshot of the empty guide. We resend XMLTV. Reinstalling IPTV player rarely fixes a missing URL.",
           },
         ],
       },
@@ -1129,7 +1129,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "timeshift",
         h2: "Timeshift buffer (pause live)",
         body: [
-          "TiviMate can pause live TV if the player buffer and the provider allow it. Raise the playback buffer to 8 seconds for 4K as in the TiviMate guide. Pause is not the same as a three-hour Explora record — think 'kettle pause', not 'record the whole Test'.",
+          "IPTV player can pause live TV if the player buffer and the provider allow it. Raise the playback buffer to 8 seconds for 4K as in the IPTV player guide. Pause is not the same as a three-hour Explora record — think 'kettle pause', not 'record the whole Test'.",
         ],
       },
       {
@@ -1147,7 +1147,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Can I restart a PSL match I joined late?",
-        a: "If that SuperSport feed exposes catch-up, TiviMate / Smarters will show restart. Ask WhatsApp if the button is missing on that channel.",
+        a: "If that SuperSport feed exposes catch-up, IPTV player / Smarters will show restart. Ask WhatsApp if the button is missing on that channel.",
       },
       {
         q: "Is catch-up as good as an Explora PVR?",
@@ -1162,12 +1162,12 @@ export const BLOG_GUIDES: BlogPost[] = [
         a: "No separate catch-up SKU on the published plans. If a specific channel has no catch-up, that is a feed limit, not an upsell.",
       },
       {
-        q: "Smarters vs TiviMate for EPG?",
-        a: "TiviMate's 7-day guide is the nicer sport grid on Firestick. Smarters is the one that exists on iPhone and Samsung. Both accept the same EPG URL.",
+        q: "Smarters vs IPTV player for EPG?",
+        a: "IPTV player's 7-day guide is the nicer sport grid on Firestick. Smarters is the one that exists on iPhone and Samsung. Both accept the same EPG URL.",
       },
     ],
     relatedLinks: [
-      { label: "TiviMate setup — EPG and buffer", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "IPTV player setup — EPG and buffer", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
       { label: "IPTV for movies & series", href: "/en-za/iptv-for-movies-and-series" },
       { label: "Firestick IPTV not working — EPG fixes", href: "/en-za/blog/iptv-not-working-firestick-fix" },
       { label: "Order on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
@@ -1181,7 +1181,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     datePublished: PUB,
     dateModified: PUB,
     lead:
-      "The Firestick setup pillar tells you how to install TiviMate. This page answers the earlier question: which stick to buy in South Africa so 4K SuperSport is not a lottery. Short version — Lite is a backup bedroom stick; 4K Max is the lounge stick. Prices below are the Takealot/Game band already published on this site, not a live scrape.",
+      "The Firestick setup pillar tells you how to install IPTV player. This page answers the earlier question: which stick to buy in South Africa so 4K SuperSport is not a lottery. Short version — Lite is a backup bedroom stick; 4K Max is the lounge stick. Prices below are the Takealot/Game band already published on this site, not a live scrape.",
     keyFacts: [
       "Firestick 4K Max is the stick this site already recommends for 4K SuperSport (published band R900–R1,400 at Takealot or Game).",
       "Lite is the wrong primary device if you care about 4K HDR sport.",
@@ -1190,16 +1190,16 @@ export const BLOG_GUIDES: BlogPost[] = [
     cta: {
       label: "I already have a Firestick — WhatsApp setup →",
       message:
-        "Hi! I have a [Firestick 4K Max / 4K / Lite]. Please send the TiviMate M3U and the free 24-hour trial.",
+        "Hi! I have a [Firestick 4K Max / 4K / Lite]. Please send the IPTV player playlist and the free 24-hour trial.",
       ref: "Blog-Firestick-SKU",
     },
     howTo: {
       name: "Pick a Firestick and load Mzansi Stream",
       description:
-        "Buy 4K Max for the lounge, optionally add Ethernet, then load TiviMate from the WhatsApp playlist.",
+        "Buy 4K Max for the lounge, optionally add Ethernet, then load IPTV player from the WhatsApp playlist.",
       totalTime: "PT15M",
       supply: ["Firestick 4K Max (recommended)", "Optional USB-Ethernet adapter"],
-      tool: ["4K HDMI TV", "TiviMate", "WhatsApp credentials"],
+      tool: ["4K HDMI TV", "IPTV player", "WhatsApp credentials"],
     },
     sections: [
       {
@@ -1214,7 +1214,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "price",
         h2: "What South Africans actually pay (already published)",
         body: [
-          "This site already quotes Firestick 4K Max around R900–R1,400 at Takealot or Game. We are not refreshing that band from a live scrape in this article. If a marketplace listing is far below that and ships from an unnamed warehouse, treat it like cheap IPTV — too low usually means a Lite, a grey import, or a stick that will not stay on unknown-sources long enough to install TiviMate.",
+          "This site already quotes Firestick 4K Max around R900–R1,400 at Takealot or Game. We are not refreshing that band from a live scrape in this article. If a marketplace listing is far below that and ships from an unnamed warehouse, treat it like cheap IPTV — too low usually means a Lite, a grey import, or a stick that will not stay on unknown-sources long enough to install IPTV player.",
         ],
       },
       {
@@ -1240,8 +1240,8 @@ export const BLOG_GUIDES: BlogPost[] = [
             text: "Rename bands so you can see 5 GHz. Or use the USB-Ethernet adapter.",
           },
           {
-            title: "Sideload TiviMate",
-            text: "Unknown sources → Downloader → TiviMate. Follow the TiviMate guide for buffer and EPG.",
+            title: "Sideload IPTV player",
+            text: "Unknown sources → Downloader → IPTV player. Follow the IPTV player guide for buffer and EPG.",
           },
           {
             title: "WhatsApp the trial",
@@ -1275,8 +1275,8 @@ export const BLOG_GUIDES: BlogPost[] = [
         a: "Yes for HD and for a second room. If it overheats or drops 4K, move Lite to the bedroom and put a Max in the lounge.",
       },
       {
-        q: "TiviMate or Smarters on Firestick?",
-        a: "TiviMate. Smarters is the fallback and the iPhone/Samsung app.",
+        q: "IPTV player or Smarters on Firestick?",
+        a: "IPTV player. Smarters is the fallback and the iPhone/Samsung app.",
       },
       {
         q: "Will a Firestick work during load shedding?",
@@ -1285,7 +1285,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     ],
     relatedLinks: [
       { label: "Firestick IPTV setup — pillar", href: "/en-za/iptv-firestick-south-africa" },
-      { label: "TiviMate setup guide", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
+      { label: "IPTV player setup guide", href: "/en-za/blog/tivimate-setup-south-africa-2026" },
       { label: "Firestick IPTV not working — fixes", href: "/en-za/blog/iptv-not-working-firestick-fix" },
       { label: "Wi-Fi 6 / Ethernet for IPTV", href: "/en-za/blog/iptv-wifi-6-router-south-africa" },
     ],
@@ -1422,7 +1422,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     slug: "watch-kyknet-online-without-dstv",
     title: "Watch kykNET and Afrikaans TV online without DStv — 2026",
     metaDescription:
-      "Watch kykNET, kykNET & kie, VIA and Afrikaans SABC online without DStv. IPTV for Afrikaans households from R99/mo on WhatsApp.",
+      "Watch kykNET, kykNET & kie, VIA and Afrikaans SABC online without DStv. IPTV for Afrikaans households from R199/mo on WhatsApp.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
@@ -1444,7 +1444,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         "Order a WhatsApp trial, favourite the Afrikaans folder, and test kykNET on the lounge TV.",
       totalTime: "PT10M",
       supply: ["WhatsApp", "Smart TV or Firestick"],
-      tool: ["IPTV Smarters or TiviMate"],
+      tool: ["IPTV Smarters or IPTV player"],
     },
     sections: [
       {
@@ -1467,7 +1467,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "devices",
         h2: "Hisense, Samsung and the remote that still feels like DStv",
         body: [
-          "Afrikaans-majority households often have a Hisense or Samsung, not a Firestick. Use IPTV Smarters from the TV store (VIDAA / Tizen). A parent who only wants two buttons can get a MAG — we whitelist the MAC on WhatsApp. Teenagers can keep TiviMate on a bedroom Max.",
+          "Afrikaans-majority households often have a Hisense or Samsung, not a Firestick. Use IPTV Smarters from the TV store (VIDAA / Tizen). A parent who only wants two buttons can get a MAG — we whitelist the MAC on WhatsApp. Teenagers can keep IPTV player on a bedroom Max.",
         ],
       },
       {
@@ -1506,7 +1506,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "af",
         h2: "Afrikaans on the site vs Afrikaans on the TV",
         body: [
-          "The TV channels are Afrikaans. This article is English so the TiviMate and Smarters steps stay accurate. Native Afrikaans homepage and language-landing copy already exist elsewhere on iptvmzansi.com. We will not auto-translate this guide into thin Afrikaans and pretend it is a second market page.",
+          "The TV channels are Afrikaans. This article is English so the IPTV player and Smarters steps stay accurate. Native Afrikaans homepage and language-landing copy already exist elsewhere on iptvmzansi.com. We will not auto-translate this guide into thin Afrikaans and pretend it is a second market page.",
         ],
       },
     ],
@@ -1525,7 +1525,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Do I need Afrikaans support in the WhatsApp chat?",
-        a: "Message in Afrikaans if you prefer. Setup menus in TiviMate / Smarters stay in the app's own language.",
+        a: "Message in Afrikaans if you prefer. Setup menus in IPTV player / Smarters stay in the app's own language.",
       },
       {
         q: "What about M-Net and Afrikaans movies?",

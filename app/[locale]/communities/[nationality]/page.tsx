@@ -32,9 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getCommunity(nationality);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
 
-  // Per B.5.4, /communities/* canonicalises to en-za regardless of the
-  // user's locale prefix — the audience lives in SA.
-  const canonical = localeUrl("en-za", `/communities/${nationality}`);
+  // Self-canonical language variants must agree with the reciprocal alternates.
+  const canonical = localeUrl(locale as Locale, `/communities/${nationality}`);
 
   return {
     title: data.meta.title,
@@ -168,7 +167,7 @@ export default async function CommunityPage({ params }: Props) {
               Plus international and South African channels in 4K and HD
               on the same subscription (line-up to confirm on WhatsApp), so the household gets
               {" "}{data.homeCountry} TV alongside SuperSport, SABC and
-              global content in one M3U feed.
+              global content in one playlist feed.
             </p>
           </section>
 
@@ -189,7 +188,7 @@ export default async function CommunityPage({ params }: Props) {
               {data.hubCities[2] ?? data.hubCities[0]}
             </h2>
             <p>
-              {data.demonym} TV in South Africa lands in the same M3U
+              {data.demonym} TV in South Africa lands in the same playlist
               playlist as your SA channels. {data.demonym} iptv South
               Africa with no decoder, no contract and no separate dish.
               Works on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre,
@@ -202,12 +201,12 @@ export default async function CommunityPage({ params }: Props) {
             <ol className="longformList">
               <li>Message us on WhatsApp with your device + city.</li>
               <li>
-                Pick a plan from R99/month (12-month plan equivalent) and
+                Pick a plan from R199 for one month and
                 pay via EFT, SnapScan, Ozow, Capitec Pay, Visa, Mastercard
                 or PayPal.
               </li>
               <li>
-                Receive your M3U link plus a setup guide on WhatsApp — and
+                Receive your playlist link plus a setup guide on WhatsApp — and
                 {data.homeCountry} channels show
                 up alongside your SA channels in the same player.
               </li>

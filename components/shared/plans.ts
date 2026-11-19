@@ -1,7 +1,7 @@
 // components/shared/plans.ts
 // Mzansi Stream pricing in ZAR.
 // Strategy: dramatically cheaper than DStv Premium (R899/mo) and Compact (R449/mo).
-// 12-month plan = R99.92/mo effective — destroys DStv on every metric.
+// 12-month plan = R99.92/mo effective — paid upfront; not a monthly billing option.
 
 import type { Plan } from "./types";
 

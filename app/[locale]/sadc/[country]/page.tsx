@@ -294,8 +294,8 @@ export default async function SadcCountryPage({ params }: Props) {
               <p>
                 Smart TV (Samsung, LG, Sony, Hisense), Firestick, Android TV
                 Box, MAG Box, iPhone, iPad, Android, PC and Mac. Use
-                TiviMate, IPTV Smarters Pro, GSE Smart IPTV or any standard
-                M3U player.
+                IPTV player, IPTV Smarters Pro, GSE Smart IPTV or any standard
+                playlist player.
               </p>
               <p>
                 <strong>Tested on local ISPs:</strong> {data.isps.join(", ")}.
@@ -311,7 +311,7 @@ export default async function SadcCountryPage({ params }: Props) {
                   {data.payments.slice(0, 3).join(", ")} or card.
                 </li>
                 <li>
-                  Receive your M3U link plus a setup guide for your device on
+                  Receive your playlist link plus a setup guide for your device on
                   WhatsApp.
                 </li>
               </ol>

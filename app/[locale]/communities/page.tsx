@@ -48,7 +48,7 @@ export default async function CommunitiesHub({ params }: Props) {
       locale={locale as Locale}
       eyebrow="Foreign communities in SA"
       h1="Home-country TV for foreign communities in South Africa"
-      lead="If you live in South Africa and want your home-country channels alongside SuperSport, SABC and kykNET, Mzansi Stream bundles them into a single M3U feed — 15 community channel packs in their native languages."
+      lead="If you live in South Africa and want your home-country channels alongside SuperSport, SABC and kykNET, Mzansi Stream bundles them into a single playlist feed — 15 community channel packs in their native languages."
       itemListName="Community channel guides"
       basePath="/communities"
       items={COMMUNITIES.map((c) => ({

@@ -134,7 +134,7 @@ export const SA_CITIES: SACity[] = [
     suburbs: ["Cashan", "Safari Gardens", "Geelhoutpark", "Tlhabane"],
     isps: ["Openserve", "MTN Fibre", "Rain 5G"],
     teams: [{ sport: "PSL", clubs: ["Platinum Stars legacy"] }],
-    hook: "Mining-town households cancelling DStv — SuperSport-style, Premier League and kykNET folders in 4K from R99/mo, to confirm on WhatsApp.",
+    hook: "Mining-town households cancelling DStv — SuperSport-style, Premier League and kykNET folders in 4K from R199/mo, to confirm on WhatsApp.",
   },
   {
     slug: "pietermaritzburg",

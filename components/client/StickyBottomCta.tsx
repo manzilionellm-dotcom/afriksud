@@ -22,18 +22,18 @@ const TRIAL_LABEL: Record<Locale, string> = {
 };
 
 const PLANS_LABEL: Record<Locale, string> = {
-  "en-za": "See plans from R99/mo",
-  "en-gb": "See plans from R99/mo",
-  "en-au": "See plans from R99/mo",
-  "en-us": "See plans from R99/mo",
-  "en-ae": "See plans from R99/mo",
-  "en-nz": "See plans from R99/mo",
+  "en-za": "See plans from R199/mo",
+  "en-gb": "See plans from R199/mo",
+  "en-au": "See plans from R199/mo",
+  "en-us": "See plans from R199/mo",
+  "en-ae": "See plans from R199/mo",
+  "en-nz": "See plans from R199/mo",
   "en-zw": "See plans from US$11/mo",
-  af: "Sien pryse vanaf R99/mnd",
-  zu: "Bona izinhlelo ku-R99/inyanga",
-  xh: "Jonga izicwangciso ku-R99",
+  af: "Sien pryse vanaf R199/mnd",
+  zu: "Bona izinhlelo ku-R199/inyanga",
+  xh: "Jonga izicwangciso ku-R199",
   "pt-mz": "Ver planos desde 700 MT/mês",
-  fr: "Voir les tarifs dès R99/mois",
+  fr: "Voir les tarifs dès R199/mois",
 };
 
 export function StickyBottomCta() {

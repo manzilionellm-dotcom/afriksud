@@ -1,7 +1,7 @@
 "use client";
 // components/client/ChannelExplorer.tsx
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useLang } from "./LanguageProvider";
 import { dict } from "../shared/dict";
 import { channelPreview } from "../shared/plans";
@@ -10,6 +10,9 @@ export function ChannelExplorer() {
   const { lang } = useLang();
   const t = dict[lang];
   const [activeTab, setActiveTab] = useState(0);
+
+  const frame = useRef<number | null>(null);
+  useEffect(() => () => { if (frame.current !== null) cancelAnimationFrame(frame.current); }, []);
 
   return (
     <section id="channels" className="section">
@@ -23,7 +26,10 @@ export function ChannelExplorer() {
             <button
               key={item.region}
               className={`tabBtn ${activeTab === i ? "active" : ""}`}
-              onClick={() => setActiveTab(i)}
+              onClick={() => {
+                if (frame.current !== null) cancelAnimationFrame(frame.current);
+                frame.current = requestAnimationFrame(() => { setActiveTab(i); frame.current = null; });
+              }}
             >
               {item.region}
             </button>

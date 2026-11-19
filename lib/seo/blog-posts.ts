@@ -57,7 +57,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-watch-psl-online-2026",
     title: "How to watch PSL online in 2026 — no DStv decoder",
-    metaDescription: "DStv Premiership without a DStv subscription — SuperSport PSL folders via Mzansi Stream in 4K, matches to confirm on WhatsApp, from R99/mo.",
+    metaDescription: "DStv Premiership without a DStv subscription — SuperSport PSL folders via Mzansi Stream in 4K, matches to confirm on WhatsApp, from R199/mo.",
     datePublished: "2026-01-20",
     lead: "The DStv Premiership runs from August through May with 240+ fixtures across the season. Here's how to watch PSL online in 2026 without a DStv decoder, a 24-month contract, or paying R899/month for Premium.",
     sections: [
@@ -78,13 +78,13 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Devices you can watch on",
         body: [
-          "Firestick, Android TV, Apple TV, Smart TVs (Samsung, LG, Sony, Hisense), iPhone, iPad, Android phones, MAG Box, PC and Mac. Use TiviMate, IPTV Smarters Pro, GSE Smart IPTV or any standard M3U app.",
+          "Firestick, Android TV, Apple TV, Smart TVs (Samsung, LG, Sony, Hisense), iPhone, iPad, Android phones, MAG Box, PC and Mac. Use IPTV player, IPTV Smarters Pro, GSE Smart IPTV or any standard playlist app.",
         ],
       },
       {
         h2: "How to set it up",
         body: [
-          "Message us on WhatsApp, pick a plan (1 / 3 / 6 / 12 months), pay via EFT, SnapScan, Ozow or card, and we send the M3U link plus a one-page setup guide for your specific device.",
+          "Message us on WhatsApp, pick a plan (1 / 3 / 6 / 12 months), pay via EFT, SnapScan, Ozow or card, and we send the playlist link plus a one-page setup guide for your specific device.",
         ],
       },
     ],
@@ -129,40 +129,40 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "firestick-iptv-setup-south-africa",
     title: "Firestick IPTV setup in South Africa — 2026 guide",
-    metaDescription: "Step-by-step Firestick IPTV setup for South Africa in 2026 — TiviMate, IPTV Smarters Pro, M3U links, EPG and 4K playback.",
+    metaDescription: "Step-by-step Firestick IPTV setup for South Africa in 2026 — IPTV player, IPTV Smarters Pro, playlist links, EPG and 4K playback.",
     datePublished: "2026-01-24",
-    lead: "The Amazon Firestick is the cheapest 4K IPTV box in South Africa today. Here's how to set up Mzansi Stream on a Firestick in 10 minutes, using TiviMate or IPTV Smarters Pro.",
+    lead: "The Amazon Firestick is the cheapest 4K IPTV box in South Africa today. Here's how to set up Mzansi Stream on a Firestick in 10 minutes, using IPTV player or IPTV Smarters Pro.",
     sections: [
       {
         h2: "What you need",
         body: [
-          "A Firestick 4K Max (R900-R1,400 at Takealot or Game), home WiFi, and an active Mzansi Stream M3U link.",
+          "A Firestick 4K Max (R900-R1,400 at Takealot or Game), home WiFi, and an active Mzansi Stream playlist link.",
         ],
       },
       {
-        h2: "Installing TiviMate",
+        h2: "Installing IPTV player",
         body: [
-          "Enable Apps from Unknown Sources, install the Downloader app from the Amazon Appstore, paste the TiviMate APK URL, and add your M3U playlist URL when prompted.",
-          "TiviMate Premium (one-time payment, ~R150) unlocks the proper EPG layout, recording and multi-playlist support.",
+          "Enable Apps from Unknown Sources, install the Downloader app from the Amazon Appstore, paste the IPTV player APK URL, and add your stream playlist URL when prompted.",
+          "IPTV player Premium (one-time payment, ~R150) unlocks the proper EPG layout, recording and multi-playlist support.",
         ],
       },
       {
-        h2: "Switching between TiviMate and Smarters Pro",
+        h2: "Switching between IPTV player and Smarters Pro",
         body: [
-          "TiviMate is the better player overall — faster channel switching, cleaner EPG, multi-playlist. IPTV Smarters Pro is free but more cluttered.",
-          "Both accept the same M3U link we send you on WhatsApp.",
+          "IPTV player is the better player overall — faster channel switching, cleaner EPG, multi-playlist. IPTV Smarters Pro is free but more cluttered.",
+          "Both accept the same playlist link we send you on WhatsApp.",
         ],
       },
     ],
     relatedLinks: [
-      { label: "Mzansi Stream plans from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream plans from R199/mo", href: "/en-za" },
       { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
     slug: "watch-springboks-live-online",
     title: "Watch the Springboks live online in 2026",
-    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. From R99/mo. No DStv required.",
+    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. From R199/mo. No DStv required.",
     datePublished: "2026-01-26",
     lead: "Springbok Tests, Rugby Championship, URC, Currie Cup and Six Nations matches are broadcast on SuperSport in SA. Here's how to check what plays on Mzansi Stream in 4K without DStv.",
     sections: [
@@ -176,7 +176,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Streaming setup",
         body: [
-          "Order any Mzansi Stream plan, drop the M3U link into TiviMate or IPTV Smarters, and check the SuperSport Rugby folder in your channel list — fixtures to confirm on WhatsApp.",
+          "Order any Mzansi Stream plan, drop the playlist link into IPTV player or IPTV Smarters, and check the SuperSport Rugby folder in your channel list — fixtures to confirm on WhatsApp.",
         ],
       },
     ],
@@ -234,7 +234,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
       { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
@@ -259,7 +259,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Switch to Mzansi Stream from R99/mo", href: "/en-za" },
+      { label: "Switch to Mzansi Stream from R199/mo", href: "/en-za" },
       { label: "DStv vs Mzansi Stream comparison", href: "/en-za/vs/dstv-premium" },
     ],
   },
@@ -338,7 +338,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     ],
     relatedLinks: [
       { label: "Mzansi Stream vs DStv Premium — full comparison", href: "/en-za/vs/dstv-premium" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
@@ -372,8 +372,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Cause #3 — your player buffer is too small for 4K",
         body: [
-          "TiviMate ships with a 2-second buffer by default. Fine for 1080p. Not enough headroom for 4K SuperSport when a Premier League corner kick spikes the bitrate.",
-          "Fix: TiviMate → Settings → Playback → Buffer Size → 8 seconds. IPTV Smarters → Settings → Player → Time-shift Buffer → 6-10 seconds. This change often reduces micro-re-buffers, at the cost of slightly slower channel changes.",
+          "IPTV player ships with a 2-second buffer by default. Fine for 1080p. Not enough headroom for 4K SuperSport when a Premier League corner kick spikes the bitrate.",
+          "Fix: IPTV player → Settings → Playback → Buffer Size → 8 seconds. IPTV Smarters → Settings → Player → Time-shift Buffer → 6-10 seconds. This change often reduces micro-re-buffers, at the cost of slightly slower channel changes.",
         ],
       },
       {
@@ -403,7 +403,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "IPTV buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa" },
       { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
@@ -475,20 +475,20 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
       { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa" },
       { label: "IPTV buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
     slug: "tivimate-vs-iptv-smarters-pro-2026",
-    title: "TiviMate vs IPTV Smarters Pro vs GSE Smart IPTV — which app in 2026?",
-    metaDescription: "Honest 2026 comparison of TiviMate, IPTV Smarters Pro and GSE Smart IPTV for South African IPTV. UI, EPG quality, 4K, VOD, device support.",
+    title: "IPTV player vs IPTV Smarters Pro vs GSE Smart IPTV — which app in 2026?",
+    metaDescription: "Honest 2026 comparison of IPTV player, IPTV Smarters Pro and GSE Smart IPTV for South African IPTV. UI, EPG quality, 4K, VOD, device support.",
     datePublished: "2026-03-12",
-    lead: "The three apps every SA IPTV user encounters: TiviMate, IPTV Smarters Pro and GSE Smart IPTV. Here's the honest 2026 comparison — UI quality, EPG handling, 4K performance, VOD support, paid vs free, and which one to install for your specific device.",
+    lead: "The three apps every SA IPTV user encounters: IPTV player, IPTV Smarters Pro and GSE Smart IPTV. Here's the honest 2026 comparison — UI quality, EPG handling, 4K performance, VOD support, paid vs free, and which one to install for your specific device.",
     sections: [
       {
-        h2: "TiviMate — the gold standard for Firestick and Android TV",
+        h2: "IPTV player — the gold standard for Firestick and Android TV",
         body: [
-          "TiviMate is the most polished IPTV player on Firestick, Android TV and Nvidia Shield. The UI is built around remote-control navigation — every action is two clicks away. EPG handling is best-in-class: 7-day guide, instant catch-up TV, picture-in-picture preview.",
+          "IPTV player is the most polished IPTV player on Firestick, Android TV and Nvidia Shield. The UI is built around remote-control navigation — every action is two clicks away. EPG handling is best-in-class: 7-day guide, instant catch-up TV, picture-in-picture preview.",
           "Premium tier is R199 once-off (lifetime). Worth it for multi-playlist support, recording and unlimited playlists. Free tier supports one playlist, which is enough for most households.",
           "Best for: Firestick 4K, Firestick 4K Max, Nvidia Shield, Chromecast with Google TV. Not available on iOS or Samsung Tizen.",
         ],
@@ -504,22 +504,22 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "GSE Smart IPTV — solid free fallback",
         body: [
-          "GSE Smart IPTV is the free fallback when TiviMate isn't available on your device. Reliable, no-frills, EPG works.",
+          "GSE Smart IPTV is the free fallback when IPTV player isn't available on your device. Reliable, no-frills, EPG works.",
           "Best for: older Android TV boxes, MAG boxes (sort of — most MAGs run their own portal), backup option when other apps fail.",
         ],
       },
       {
         h2: "Performance comparison on 4K SuperSport",
         body: [
-          "TiviMate has the lowest re-buffer rate on 4K — better internal buffer management and faster HEVC decode path.",
-          "IPTV Smarters Pro is a close second; performance is identical for 1080p, slightly behind TiviMate on 4K HDR.",
+          "IPTV player has the lowest re-buffer rate on 4K — better internal buffer management and faster HEVC decode path.",
+          "IPTV Smarters Pro is a close second; performance is identical for 1080p, slightly behind IPTV player on 4K HDR.",
           "GSE Smart IPTV handles 1080p well; 4K HDR has slightly higher re-buffer rate but is still acceptable on a stable line.",
         ],
       },
       {
         h2: "Which one should you install?",
         body: [
-          "Firestick 4K Max + 4K SuperSport household → TiviMate Premium (R199 once).",
+          "Firestick 4K Max + 4K SuperSport household → IPTV player Premium (R199 once).",
           "iPhone / iPad → IPTV Smarters Pro (free).",
           "Samsung Smart TV / LG Smart TV → IPTV Smarters Pro (free, native Tizen / webOS app).",
           "Mzansi Stream sends an Xtream Codes login that works directly in all three apps. We send the device-specific setup guide on WhatsApp after sign-up.",
@@ -530,7 +530,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "IPTV Firestick setup — full guide", href: "/en-za/iptv-firestick-south-africa" },
       { label: "IPTV for Samsung Smart TV (Tizen)", href: "/en-za/iptv-samsung-smart-tv" },
       { label: "4K IPTV in South Africa", href: "/en-za/4k-iptv-south-africa" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
@@ -582,21 +582,21 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa" },
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
       { label: "Privacy / POPIA policy", href: "/en-za/legal/popia" },
     ],
   },
   {
     slug: "iptv-not-working-firestick-fix",
     title: "IPTV not working on Firestick — 2026 fix guide for South Africa",
-    metaDescription: "Step-by-step Firestick IPTV troubleshooting for 2026 — black screen, channel won't load, EPG missing, buffering and Smarters / TiviMate fixes.",
+    metaDescription: "Step-by-step Firestick IPTV troubleshooting for 2026 — black screen, channel won't load, EPG missing, buffering and Smarters / IPTV player fixes.",
     datePublished: "2026-03-12",
     lead: "Firestick is the most popular 4K IPTV box in South Africa — but when something breaks, it's usually one of six things. Here's how to diagnose every common Firestick IPTV failure in under 5 minutes, with the exact fix for each.",
     sections: [
       {
         h2: "Symptom: 'No channels' or empty channel list",
         body: [
-          "Cause 1: your M3U link expired. Most IPTV subscriptions tie the M3U to a fixed expiry. Message your provider on WhatsApp and ask them to confirm the link is active.",
+          "Cause 1: your playlist link expired. Most IPTV subscriptions tie the playlist to a fixed expiry. Message your provider on WhatsApp and ask them to confirm the link is active.",
           "Cause 2: you pasted the link with a trailing space. Re-copy and paste it fresh.",
           "Cause 3: Firestick lost network. Settings → Network — verify Wi-Fi is connected to the 5GHz SSID.",
         ],
@@ -612,16 +612,16 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Symptom: EPG (channel guide) is empty",
         body: [
-          "In TiviMate: Settings → Playlist → Tap your playlist → 'Update EPG'. Wait 60 seconds.",
+          "In IPTV player: Settings → Playlist → Tap your playlist → 'Update EPG'. Wait 60 seconds.",
           "In Smarters Pro: log out and log back in with your Xtream Codes credentials. EPG re-syncs on login.",
-          "If still empty after both: the EPG XML URL may not be set. Ask your provider for the EPG URL alongside the M3U — Mzansi Stream sends both by default.",
+          "If still empty after both: the EPG XML URL may not be set. Ask your provider for the EPG URL alongside the playlist — Mzansi Stream sends both by default.",
         ],
       },
       {
         h2: "Symptom: Firestick frozen / app won't open",
         body: [
           "Hold the play button + select button together for 10 seconds — soft restart.",
-          "Settings → Applications → TiviMate / Smarters → Clear Cache. Reopen the app.",
+          "Settings → Applications → IPTV player / Smarters → Clear Cache. Reopen the app.",
           "If the Firestick still locks up: unplug the power for 60 seconds. Older Firestick Lite units overheat in summer — switch to a Firestick 4K Max.",
         ],
       },
@@ -634,7 +634,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Symptom: audio is out of sync",
         body: [
-          "In TiviMate: open the channel → press Up on the remote → Audio Sync → adjust by ±200ms until lips match.",
+          "In IPTV player: open the channel → press Up on the remote → Audio Sync → adjust by ±200ms until lips match.",
           "In Smarters Pro: long-press the channel → Audio Track → switch decoder. Often fixes Dolby vs. AAC mismatches.",
         ],
       },
@@ -642,8 +642,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa" },
       { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
-      { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "IPTV player vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
   {
@@ -687,7 +687,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Or: skip the Smart TV app entirely",
         body: [
-          "A Firestick 4K Max (~R1,400) plugged into the TV's HDMI port runs TiviMate — a far better IPTV player than anything available on Samsung, LG or Hisense. Often the cleanest fix is to bypass the Smart TV's OS altogether.",
+          "A Firestick 4K Max (~R1,400) plugged into the TV's HDMI port runs IPTV player — a far better IPTV player than anything available on Samsung, LG or Hisense. Often the cleanest fix is to bypass the Smart TV's OS altogether.",
         ],
       },
     ],
@@ -701,9 +701,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "cheap-iptv-south-africa-realistic-pricing",
     title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
-    metaDescription: "Cheap IPTV in South Africa in 2026 — the realistic price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R99/mo.",
+    metaDescription: "Cheap IPTV in South Africa in 2026 — the realistic price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R199/mo.",
     datePublished: "2026-03-16",
-    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside three months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and why R99/month is the sweet spot.",
+    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside three months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and how the R199 one-month plan compares.",
     sections: [
       {
         h2: "What 'cheap IPTV' really costs to run",
@@ -713,9 +713,9 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "The R99/month sweet spot",
+        h2: "The R199 one-month plan",
         body: [
-          "At R99/month you get Mzansi Stream's line-up (to confirm on WhatsApp), 4K where the source supports it and WhatsApp support, with no contract.",
+          "At R199 for one month you get Mzansi Stream's line-up (to confirm on WhatsApp), 4K where the source supports it and WhatsApp support, with no contract.",
           "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
         ],
       },
@@ -726,7 +726,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "How Mzansi Stream stays at R99",
+        h2: "How Mzansi Stream stays at R199",
         body: [
           "WhatsApp-first support — no call centre overhead — and one-off payments with no decoder hardware. This page does not publish a cost breakdown.",
         ],
@@ -736,7 +736,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa" },
       { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
       { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Pricing — from R199/mo", href: "/en-za" },
     ],
   },
 ];

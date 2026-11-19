@@ -3252,3 +3252,11 @@ section.deferred,
 .authorBioLinks a:hover {
   text-decoration: underline;
 }
+
+/* Below-fold content remains in server HTML and the accessibility tree. */
+@supports (content-visibility: auto) {
+  #main-content > .main > .section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 650px;
+  }
+}

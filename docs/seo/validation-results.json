@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-25",
+  "scope": "Local candidate; not production verification",
+  "typecheck": "pass",
+  "lint": "pass",
+  "build": "pass",
+  "unitTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "hreflang": {
+    "pages": 1671,
+    "errors": [],
+    "ok": true
+  },
+  "html": {
+    "pages": 1671,
+    "run005Slugs": 12,
+    "run005LocalePages": 48,
+    "problems": [],
+    "ok": true
+  },
+  "clusters": {
+    "routes": 240,
+    "rendered": 240,
+    "satellites": 162,
+    "minWords": 301,
+    "maxWords": 403,
+    "problems": [],
+    "ok": true
+  },
+  "webmaster": {
+    "gsc_key_present": false,
+    "bing_key_present": false,
+    "google_meta_present": false,
+    "bing_meta_present": false,
+    "google_verified": false,
+    "bing_verified": false,
+    "errors": [
+      "gsc_key_present=false: configure the three GSC OAuth secrets.",
+      "BING_WEBMASTER_API_KEY missing.",
+      "Public verification meta token missing."
+    ],
+    "ok": false
+  },
+  "evidence": {
+    "ready": false,
+    "blockers": [
+      "Need 12 genuine reviews; supplied 0.",
+      "Missing review source for ZA.",
+      "Missing review source for GB.",
+      "Missing review source for AU.",
+      "Missing review source for US.",
+      "No verified upcoming Soweto Derby broadcast.",
+      "No verified upcoming Currie Cup Final broadcast.",
+      "No verified upcoming Proteas broadcast.",
+      "Native af reviewer approval missing.",
+      "Native zu reviewer approval missing.",
+      "Measured HLS evidence missing: SD.",
+      "Measured HLS evidence missing: HD.",
+      "Measured HLS evidence missing: Full HD.",
+      "Measured HLS evidence missing: UHD/4K."
+    ]
+  }
+}

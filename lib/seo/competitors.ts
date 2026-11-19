@@ -33,7 +33,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "Decoder", them: "R1,500+ upfront", us: "None" },
       { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
       { label: "Free trial", them: "None", us: "24h, no card" },
-      { label: "Monthly price", them: "R899", us: "from R99" },
+      { label: "Monthly price", them: "R899", us: "from R199" },
     ],
     theirStrengths: [
       "Long-established brand and infrastructure",
@@ -47,9 +47,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs DStv Premium — Save R800+/mo",
-      description: "DStv Premium vs Mzansi Stream — SuperSport-style, PSL, Premier League and kykNET folders in 4K, line-up to confirm on WhatsApp, from R99/mo with no contract and no decoder.",
+      description: "DStv Premium vs Mzansi Stream — SuperSport-style, PSL, Premier League and kykNET folders in 4K, line-up to confirm on WhatsApp, from R199/mo with no contract and no decoder.",
     },
-    hook: "DStv Premium runs R899/month with a 24-month contract and a R1,500 decoder. Mzansi Stream is a no-contract, no-decoder option from R99/month — line-up to confirm on WhatsApp.",
+    hook: "DStv Premium runs R899/month with a 24-month contract and a R1,500 decoder. Mzansi Stream is a no-contract, no-decoder option from R199/month — line-up to confirm on WhatsApp.",
   },
   {
     slug: "dstv-compact-plus",
@@ -66,7 +66,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "Decoder", them: "Required", us: "None" },
       { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
       { label: "Free trial", them: "None", us: "24h, no card" },
-      { label: "Monthly price", them: "R549", us: "from R99" },
+      { label: "Monthly price", them: "R549", us: "from R199" },
     ],
     theirStrengths: ["Catch-up TV included", "Decoder doubles as PVR"],
     ourEdge: [
@@ -77,9 +77,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs DStv Compact Plus — Save R450+/mo",
-      description: "DStv Compact Plus vs Mzansi Stream — sport folders in 4K to confirm on WhatsApp, no contract, no decoder. From R99/mo on WhatsApp.",
+      description: "DStv Compact Plus vs Mzansi Stream — sport folders in 4K to confirm on WhatsApp, no contract, no decoder. From R199/mo on WhatsApp.",
     },
-    hook: "DStv Compact Plus is R549/month for partial sport in HD. Mzansi Stream is R99/month with sport folders in 4K — to confirm on WhatsApp.",
+    hook: "DStv Compact Plus is R549/month for partial sport in HD. Mzansi Stream is R199/month with sport folders in 4K — to confirm on WhatsApp.",
   },
   {
     slug: "dstv-compact",
@@ -95,7 +95,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "Contract", them: "24-month", us: "None" },
       { label: "Decoder", them: "Required", us: "None" },
       { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
-      { label: "Monthly price", them: "R449", us: "from R99" },
+      { label: "Monthly price", them: "R449", us: "from R199" },
     ],
     theirStrengths: ["Entry-level sport coverage", "PVR via decoder"],
     ourEdge: [
@@ -106,9 +106,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs DStv Compact — Save R350+/mo",
-      description: "DStv Compact vs Mzansi Stream — sport and Premier League folders in 4K from R99/mo, to confirm on WhatsApp. No contract, no decoder.",
+      description: "DStv Compact vs Mzansi Stream — sport and Premier League folders in 4K from R199/mo, to confirm on WhatsApp. No contract, no decoder.",
     },
-    hook: "DStv Compact is R449/month and skips the Premier League. Mzansi Stream is R99/month with Premier League folders in 4K — matches to confirm on WhatsApp.",
+    hook: "DStv Compact is R449/month and skips the Premier League. Mzansi Stream is R199/month with Premier League folders in 4K — matches to confirm on WhatsApp.",
   },
   {
     slug: "showmax",
@@ -122,7 +122,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "4K UHD", them: "Select titles", us: "All plans" },
       { label: "Contract", them: "None", us: "None" },
       { label: "Free trial", them: "14-day", us: "24h, no card" },
-      { label: "Monthly price (Entertainment)", them: "R99", us: "R99" },
+      { label: "Monthly price (Entertainment)", them: "R99", us: "R199 (1 month)" },
     ],
     theirStrengths: [
       "Strong original SA dramas and Showmax originals",
@@ -136,9 +136,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs Showmax — Live TV vs VOD",
-      description: "Showmax is great VOD but has no live TV on Entertainment. Mzansi Stream is live TV plus VOD from R99/mo — line-up to confirm on WhatsApp.",
+      description: "Showmax is great VOD but has no live TV on Entertainment. Mzansi Stream is live TV plus VOD from R199/mo — line-up to confirm on WhatsApp.",
     },
-    hook: "Showmax Entertainment is R99/month — pure VOD, zero live channels. Mzansi Stream is R99/month with live channels and VOD — line-up to confirm on WhatsApp.",
+    hook: "Showmax Entertainment is R99/month — pure VOD, zero live channels. Mzansi Stream is R199/month with live channels and VOD — line-up to confirm on WhatsApp.",
   },
   {
     slug: "supersport",
@@ -150,7 +150,7 @@ export const COMPETITORS: Competitor[] = [
       { label: "Premier League", them: "Yes (Premium tier)", us: "Folders to confirm" },
       { label: "4K UHD", them: "Limited", us: "All plans" },
       { label: "Contract", them: "DStv contract required", us: "None" },
-      { label: "Devices", them: "Decoder / DStv app", us: "Any M3U app, Firestick, Smart TV" },
+      { label: "Devices", them: "Decoder / DStv app", us: "Any playlist app, Firestick, Smart TV" },
     ],
     theirStrengths: [
       "Official broadcaster — first-party rights",
@@ -159,14 +159,14 @@ export const COMPETITORS: Competitor[] = [
     ourEdge: [
       "Watch SuperSport without paying for a full DStv subscription",
       "No decoder, no contract, no installer fee",
-      "Works on Firestick, Smart TV, MAG Box, TiviMate, IPTV Smarters — anywhere a DStv decoder doesn't reach",
+      "Works on Firestick, Smart TV, MAG Box, IPTV player, IPTV Smarters — anywhere a DStv decoder doesn't reach",
       "SuperSport-style folders in 4K — to confirm on WhatsApp",
     ],
     meta: {
       title: "Mzansi Stream vs SuperSport — Without DStv",
-      description: "SuperSport-style, PSL and Premier League folders in 4K without a DStv subscription, decoder or contract — to confirm on WhatsApp. From R99/mo.",
+      description: "SuperSport-style, PSL and Premier League folders in 4K without a DStv subscription, decoder or contract — to confirm on WhatsApp. From R199/mo.",
     },
-    hook: "SuperSport is locked behind a DStv subscription with a 24-month contract. Mzansi Stream offers SuperSport-style folders for R99/month, no contract, no decoder — to confirm on WhatsApp.",
+    hook: "SuperSport is locked behind a DStv subscription with a 24-month contract. Mzansi Stream offers SuperSport-style folders for R199/month, no contract, no decoder — to confirm on WhatsApp.",
   },
   {
     slug: "starsat",
@@ -190,9 +190,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs StarSat — Why People Switch",
-      description: "StarSat vs Mzansi Stream — SuperSport-style folders in 4K, no decoder, no contract. From R99/mo on WhatsApp.",
+      description: "StarSat vs Mzansi Stream — SuperSport-style folders in 4K, no decoder, no contract. From R199/mo on WhatsApp.",
     },
-    hook: "StarSat undercuts DStv but still needs a decoder and skips the top sport tier. Mzansi Stream has sport folders in 4K from R99 — no decoder; line-up to confirm on WhatsApp.",
+    hook: "StarSat undercuts DStv but still needs a decoder and skips the top sport tier. Mzansi Stream has sport folders in 4K from R199 — no decoder; line-up to confirm on WhatsApp.",
   },
   {
     slug: "openview",
@@ -215,9 +215,9 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs OpenView — Add Live Sport",
-      description: "OpenView covers free-to-air SA basics. Mzansi Stream adds SuperSport-style and Premier League folders in 4K from R99/mo.",
+      description: "OpenView covers free-to-air SA basics. Mzansi Stream adds SuperSport-style and Premier League folders in 4K from R199/mo.",
     },
-    hook: "OpenView gives you basic SA free-to-air for free — but no sport, no Premier League, no international channels. Mzansi Stream adds sport and international folders for R99/month — to confirm on WhatsApp.",
+    hook: "OpenView gives you basic SA free-to-air for free — but no sport, no Premier League, no international channels. Mzansi Stream adds sport and international folders for R199/month — to confirm on WhatsApp.",
   },
   {
     slug: "netflix",
@@ -240,7 +240,7 @@ export const COMPETITORS: Competitor[] = [
     ],
     meta: {
       title: "Mzansi Stream vs Netflix — Add Live SA TV",
-      description: "Netflix is VOD-only. Mzansi Stream adds live SuperSport-style, SABC and kykNET folders in 4K from R99/mo.",
+      description: "Netflix is VOD-only. Mzansi Stream adds live SuperSport-style, SABC and kykNET folders in 4K from R199/mo.",
     },
     hook: "Netflix is great for series but has no live TV, no sport and no SA channels. Mzansi Stream adds live TV, sport and SA folders, plus VOD — line-up to confirm on WhatsApp.",
   },

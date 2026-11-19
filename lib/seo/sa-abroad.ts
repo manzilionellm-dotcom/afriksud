@@ -302,7 +302,7 @@ export function saAbroadFaq(data: SaAbroadCountry): { q: string; a: string }[] {
     },
     {
       q: `What device should I use in ${data.name}?`,
-      a: `Firestick 4K / 4K Max with TiviMate, or Samsung / LG / Hisense with IPTV Smarters. Name the model on WhatsApp. The UK setup guide is the Firestick/Smart TV deep dive.`,
+      a: `Firestick 4K / 4K Max with IPTV player, or Samsung / LG / Hisense with IPTV Smarters. Name the model on WhatsApp. The UK setup guide is the Firestick/Smart TV deep dive.`,
     },
     {
       q: `Will it buffer on home Wi-Fi in ${data.name}?`,

@@ -1,3 +1,5 @@
+import { VerifiedEvidence } from "../../components/seo/VerifiedEvidence";
+import { ClusterDirectory } from "../../components/seo/ClusterDirectory";
 // app/[locale]/page.tsx
 // Per-locale homepage. Server-rendered JSON-LD reflects the active locale
 // so Google sees the right canonical, language and channel mix. Client
@@ -208,7 +210,7 @@ export default async function LocaleHome({ params }: Props) {
     url: localeUrl(locale as Locale, "/"),
     name: "DStv Alternative — Mzansi Stream IPTV South Africa",
     description:
-      "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24-hour trial, no card. From R99/month.",
+      "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24-hour trial, no card. From R199/month.",
     inLanguage: LOCALE_META[locale as Locale].hreflang,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
@@ -266,11 +268,13 @@ export default async function LocaleHome({ params }: Props) {
             <ChannelExplorer />
             <CountriesSection />
             <InternationalSection />
+            <ClusterDirectory locale={locale} />
             <DeviceSection />
             <ReviewsSection />
+            {locale === "en-za" ? <VerifiedEvidence /> : null}
             <SACities />
             <QuickSetup />
-            {locale === "en-za" ? <AioCitationFaq /> : <FaqSection />}
+            {locale === "en-za" ? <AioCitationFaq /> : ["af", "zu", "en-gb", "en-au", "en-us"].includes(locale) ? <AioCitationFaq items={t.faq.items} title={t.faq.title} /> : <FaqSection />}
             {locale === "en-za" ? <EnZaTrialCta variant="after-faq" /> : null}
           </div>
         </main>

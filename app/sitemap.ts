@@ -1,8 +1,11 @@
+import { clustersPublished } from "../lib/seo/clusters/publication";
+import { CLUSTERS, CLUSTER_DATE, clusterPath, clusterAlternates } from "../lib/seo/clusters";
+import { AU_LANGUAGES, AU_SLUGS, AU_UPDATED, auPath, auAlternates } from "../lib/seo/australia";
+import { SITE_URL } from "../lib/url";
 // app/sitemap.ts
 
 import type { MetadataRoute } from "next";
 import { DEFAULT_LOCALE, LOCALES, LOCALE_META, type Locale } from "../lib/locales";
-import { indexableCanonicalLocale } from "../lib/seo/indexability";
 import { hreflangFor, hreflangForProgrammatic, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
@@ -163,24 +166,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(withAlternates(`/legal/${slug}`, 0.4, "yearly"));
   }
 
-  // SA diaspora abroad — canonical lives on the preferred locale per
-  // country (e.g. /en-gb/sa-abroad/uk/ rather than /en-za/...).
+  // Country pages now share a reciprocal, self-canonical English locale circle.
   for (const country of SA_ABROAD_COUNTRIES) {
-    void SA_ABROAD_SLUGS; // tree-shake guard
-    const canonicalLocale = indexableCanonicalLocale(country.preferredCanonicalLocale);
-    const url = localeUrl(canonicalLocale, `/sa-abroad/${country.slug}`);
-    entries.push({
-      url,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          [LOCALE_META[canonicalLocale].hreflang]: url,
-          "x-default": url,
-        },
-      },
-    });
+    entries.push(withAlternates(`/sa-abroad/${country.slug}`, 0.8, "monthly"));
   }
+  void SA_ABROAD_SLUGS;
 
   // Foreign communities in SA — always canonicalises to en-za.
   for (const slug of COMMUNITY_SLUGS) {
@@ -191,5 +181,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // resolve every locale — strips out at tree-shake time.
   void LOCALE_META;
 
+  if (clustersPublished) {
+  for (const lang of AU_LANGUAGES) {
+    for (const slug of AU_SLUGS) {
+      entries.push({ url: `${SITE_URL}${auPath(lang, slug)}`, lastModified: new Date(AU_UPDATED), changeFrequency: "monthly", priority: slug === "supersport" ? 0.8 : 0.6, alternates: { languages: auAlternates(slug) } });
+    }
+  }
+
+  for (const cluster of CLUSTERS) {
+    for (const lang of AU_LANGUAGES) {
+      for (const satellite of [undefined, ...cluster.satellites.map(s => s.slug)]) {
+        entries.push({url: `${SITE_URL}${clusterPath(cluster, lang, satellite)}`, lastModified: new Date(CLUSTER_DATE), changeFrequency: "monthly", priority: satellite ? 0.6 : 0.8, alternates: {languages: clusterAlternates(cluster, satellite)}});
+      }
+    }
+  }
+  }
   return entries;
 }

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pmeta = pillarMetaLocalized("dstv-alternative", locale as Locale, {
     title: "DStv Alternative 2026 — Save R800/mo · No Contract",
     description:
-      "DStv alternative in South Africa 2026. SuperSport PSL, Premier League, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. From R99/mo. Free 24h trial — no card.",
+      "DStv alternative in South Africa 2026. SuperSport PSL, Premier League, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. From R199/mo. Free 24h trial — no card.",
   });
   return {
     title: pmeta.title,
@@ -56,15 +56,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const FAQ = [
   {
     q: "What can I replace DStv with in South Africa?",
-    a: "Mzansi Stream is a no-contract DStv alternative in SA — SuperSport-style, PSL, Premier League, kykNET, SABC and international folders in 4K where the source supports it, from R99/month, with no decoder. Line-up to confirm on WhatsApp.",
+    a: "Mzansi Stream is a no-contract DStv alternative in SA — SuperSport-style, PSL, Premier League, kykNET, SABC and international folders in 4K where the source supports it, from R199/month, with no decoder. Line-up to confirm on WhatsApp.",
   },
   {
     q: "Is there an app like DStv but cheaper?",
-    a: "Yes — Mzansi Stream works on Firestick, Smart TV (Samsung / LG / Sony / Hisense), Android TV, iPhone, iPad and PC via TiviMate, IPTV Smarters Pro and other M3U players.",
+    a: "Yes — Mzansi Stream works on Firestick, Smart TV (Samsung / LG / Sony / Hisense), Android TV, iPhone, iPad and PC via IPTV player, IPTV Smarters Pro and other playlist players.",
   },
   {
     q: "How do I watch the rugby today without DStv?",
-    a: "Order a Mzansi Stream plan (from R99/month), receive the M3U link on WhatsApp, and check the SuperSport Rugby folder in 4K on your existing TV or device.",
+    a: "Order a Mzansi Stream plan (from R199/month), receive the playlist link on WhatsApp, and check the SuperSport Rugby folder in 4K on your existing TV or device.",
   },
   {
     q: "Can I live stream SuperSport without DStv?",
@@ -105,7 +105,7 @@ export default async function DstvAlternativePage({ params }: Props) {
     "@type": "Article",
     headline: "DStv Alternative 2026 — Save R800/mo · Live TV in 4K",
     description:
-      "Leaving DStv: SuperSport-style, kykNET and SABC folders in 4K, line-up to confirm on WhatsApp. From R99/month on Mzansi Stream.",
+      "Leaving DStv: SuperSport-style, kykNET and SABC folders in 4K, line-up to confirm on WhatsApp. From R199/month on Mzansi Stream.",
     image: `${SITE_URL}/og-image.jpg`,
     datePublished: "2026-01-15",
     dateModified: "2026-05-15",
@@ -172,7 +172,7 @@ export default async function DstvAlternativePage({ params }: Props) {
             <header className="longformHeader">
               <p className="longformEyebrow">DStv Alternative · 2026 Guide</p>
               <h1>
-                DStv Alternative South Africa 2026 — Live TV from R99/month
+                DStv Alternative South Africa 2026 — Live TV from R199/month
               </h1>
               <p className="longformLead">
                 Tired of paying R899/month for DStv Premium and watching the
@@ -182,7 +182,7 @@ export default async function DstvAlternativePage({ params }: Props) {
                 e.tv, plus movies and series on demand — line-up to confirm on WhatsApp —
                 in 4K UHD where the source supports it, with no decoder and
                 no dish. Switch from DStv on WhatsApp. Free 24-hour trial,
-                no credit card. From R99/month.
+                no credit card. From R199/month.
               </p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
                 Works on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre,
@@ -193,7 +193,7 @@ export default async function DstvAlternativePage({ params }: Props) {
                   Start 24h free trial →
                 </a>
                 <a href="#pricing" className="btnSecondary">
-                  See plans from R99/mo →
+                  See plans from R199/mo →
                 </a>
               </div>
             </header>
@@ -269,7 +269,7 @@ export default async function DstvAlternativePage({ params }: Props) {
               <h2>Channel folders people ask for when they leave DStv</h2>
               <p>
                 Line-up to confirm on WhatsApp before you pay — we don&apos;t claim every
-                DStv channel or every match.
+                DStv channel or each requested fixture.
               </p>
 
               <h3>Sport — SuperSport replacement</h3>
@@ -315,7 +315,7 @@ export default async function DstvAlternativePage({ params }: Props) {
                 </li>
                 <li>Order any plan (1 / 3 / 6 / 12 months).</li>
                 <li>
-                  Receive your M3U link and one-page setup guide on
+                  Receive your playlist link and one-page setup guide on
                   WhatsApp.
                 </li>
                 <li>
@@ -340,7 +340,7 @@ export default async function DstvAlternativePage({ params }: Props) {
             </section>
 
             <section className="longformSection" id="pricing">
-              <h2>Mzansi Stream plans — from R99/month, no contract</h2>
+              <h2>Mzansi Stream plans — from R199/month, no contract</h2>
               <ul className="longformList">
                 <li>
                   <strong>1 month — R199</strong>

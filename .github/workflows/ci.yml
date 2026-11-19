@@ -1,12 +1,10 @@
 name: CI
-
 on:
   pull_request:
   push:
-    branches:
-      - main
-      - seo/alias-404-free-trial
-
+    branches: [main, seo/alias-404-free-trial, seo/australia-bilingual-cluster]
+permissions:
+  contents: read
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -18,5 +16,54 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint
-      - run: pnpm run build
+      - run: pnpm type-check
+      - run: pnpm lint
+      - run: pnpm seo:test
+      - run: pnpm build
+        env:
+          GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ secrets.BING_SITE_VERIFICATION }}
+      - run: pnpm seo:hreflang
+      - run: pnpm seo:html
+      - name: Audit request-rendered cluster HTML
+        run: |
+          pnpm start > /tmp/site.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://localhost:3000/en-za > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/cluster-check.mjs http://localhost:3000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seo-html-audit
+          path: reports/*.json
+  webmaster-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/gsc-check.mjs
+        env:
+          GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ secrets.BING_SITE_VERIFICATION }}
+          GSC_OAUTH_CLIENT_ID: ${{ secrets.GSC_OAUTH_CLIENT_ID }}
+          GSC_OAUTH_CLIENT_SECRET: ${{ secrets.GSC_OAUTH_CLIENT_SECRET }}
+          GSC_OAUTH_REFRESH_TOKEN: ${{ secrets.GSC_OAUTH_REFRESH_TOKEN }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          GSC_SITE_URL: https://iptvmzansi.com/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: webmaster-verification
+          path: reports/webmaster-verification.json
+  evidence-readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/evidence-check.mjs

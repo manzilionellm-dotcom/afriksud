@@ -9,7 +9,7 @@ export function ReviewsSection() {
   const t = dict[lang];
   const process = [
     { title: "24h trial", text: "WhatsApp us. No card. Test on your device first." },
-    { title: "Clear prices", text: "From R99/mo on the 12-month plan. Paid once per term." },
+    { title: "Clear prices", text: "R199 for 1 month. R1199 for 12 months, paid upfront." },
     { title: "HelloPeter", text: "We invite customers to leave a review after 30 days. We do not invent stars." },
   ];
   return (

@@ -1,0 +1,1557 @@
+[
+  {
+    "slug": "uk",
+    "family": "countries",
+    "region": "GB",
+    "name": {
+      "en": "United Kingdom",
+      "af": "Verenigde Koninkryk",
+      "zu": "i-United Kingdom"
+    },
+    "title": {
+      "en": "SuperSport IPTV United Kingdom — channels, pricing, setup",
+      "af": "SuperSport IPTV Verenigde Koninkryk — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV United Kingdom — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "Looking for SuperSport in United Kingdom? The dated diaspora reference records 247,300 people in 2020. This historical figure is context, not a customer count or 2026 estimate. Confirm local broadcast availability, the full price and your device before choosing a service.",
+      "af": "Soek jy SuperSport in Verenigde Koninkryk? Die gedateerde diasporabron gee 247,300 mense vir 2020. Dit is historiese konteks, nie ’n klantetelling of ’n raming vir 2026 nie. Bevestig plaaslike uitsaaibeskikbaarheid, die volle prys en jou toestel voordat jy kies.",
+      "zu": "Ufuna i-SuperSport e-United Kingdom? Umthombo womphakathi waseNingizimu Afrika ubala abantu abangu-247,300 ngo-2020. Leli yinani lomlando, hhayi amakhasimende noma isilinganiso sango-2026. Qinisekisa umsakazi wendawo, inani eliphelele nedivayisi ngaphambi kokukhetha inkonzo."
+    },
+    "detail": {
+      "en": "Use GBP when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: Europe/London. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik GBP vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: Europe/London. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-GBP ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi Europe/London. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "UN estimate, reproduced by Birmingham City Council",
+        "url": "https://www.birmingham.gov.uk/download/downloads/id/28598/south_african_community_health_profile.pdf"
+      }
+    ],
+    "stat": {
+      "value": "247,300",
+      "year": "2020",
+      "definition": "UN estimate, reproduced by Birmingham City Council"
+    },
+    "satellites": [
+      {
+        "slug": "london",
+        "title": {
+          "en": "SuperSport in London — Firestick setup checks",
+          "af": "SuperSport in London — Firestick-opstelling",
+          "zu": "SuperSport eLondon — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For London, confirm the programme is offered in United Kingdom before installing anything. Use the time-zone identifier Europe/London for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not GBP totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir London dat die program in Verenigde Koninkryk beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Europe/London, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie GBP-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useLondon, qinisekisa ukuthi uhlelo lutholakala e-United Kingdom ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Europe/London nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-GBP. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "manchester",
+        "title": {
+          "en": "SuperSport in Manchester — match times and Smart TV checks",
+          "af": "SuperSport in Manchester — wedstrydtye en Smart TV",
+          "zu": "SuperSport eManchester — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Manchester, confirm the programme is offered in United Kingdom before installing anything. Use the time-zone identifier Europe/London for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not GBP totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Manchester dat die program in Verenigde Koninkryk beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Europe/London, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie GBP-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useManchester, qinisekisa ukuthi uhlelo lutholakala e-United Kingdom ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Europe/London nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-GBP. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "usa",
+    "family": "countries",
+    "region": "US",
+    "name": {
+      "en": "United States",
+      "af": "Verenigde State",
+      "zu": "i-United States"
+    },
+    "title": {
+      "en": "SuperSport IPTV United States — channels, pricing, setup",
+      "af": "SuperSport IPTV Verenigde State — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV United States — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "Looking for SuperSport in United States? The dated diaspora reference records 117,300 people in 2020. This historical figure is context, not a customer count or 2026 estimate. Confirm local broadcast availability, the full price and your device before choosing a service.",
+      "af": "Soek jy SuperSport in Verenigde State? Die gedateerde diasporabron gee 117,300 mense vir 2020. Dit is historiese konteks, nie ’n klantetelling of ’n raming vir 2026 nie. Bevestig plaaslike uitsaaibeskikbaarheid, die volle prys en jou toestel voordat jy kies.",
+      "zu": "Ufuna i-SuperSport e-United States? Umthombo womphakathi waseNingizimu Afrika ubala abantu abangu-117,300 ngo-2020. Leli yinani lomlando, hhayi amakhasimende noma isilinganiso sango-2026. Qinisekisa umsakazi wendawo, inani eliphelele nedivayisi ngaphambi kokukhetha inkonzo."
+    },
+    "detail": {
+      "en": "Use USD when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: America/New_York / America/Chicago. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik USD vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: America/New_York / America/Chicago. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-USD ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi America/New_York / America/Chicago. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "UN estimate, reproduced by Birmingham City Council",
+        "url": "https://www.birmingham.gov.uk/download/downloads/id/28598/south_african_community_health_profile.pdf"
+      }
+    ],
+    "stat": {
+      "value": "117,300",
+      "year": "2020",
+      "definition": "UN estimate, reproduced by Birmingham City Council"
+    },
+    "satellites": [
+      {
+        "slug": "new-york",
+        "title": {
+          "en": "SuperSport in New York — Firestick setup checks",
+          "af": "SuperSport in New York — Firestick-opstelling",
+          "zu": "SuperSport eNew York — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For New York, confirm the programme is offered in United States before installing anything. Use the time-zone identifier America/New_York / America/Chicago for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not USD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir New York dat die program in Verenigde State beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone America/New_York / America/Chicago, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie USD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useNew York, qinisekisa ukuthi uhlelo lutholakala e-United States ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi America/New_York / America/Chicago nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-USD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "houston",
+        "title": {
+          "en": "SuperSport in Houston — match times and Smart TV checks",
+          "af": "SuperSport in Houston — wedstrydtye en Smart TV",
+          "zu": "SuperSport eHouston — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Houston, confirm the programme is offered in United States before installing anything. Use the time-zone identifier America/New_York / America/Chicago for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not USD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Houston dat die program in Verenigde State beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone America/New_York / America/Chicago, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie USD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useHouston, qinisekisa ukuthi uhlelo lutholakala e-United States ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi America/New_York / America/Chicago nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-USD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "new-zealand",
+    "family": "countries",
+    "region": "NZ",
+    "name": {
+      "en": "New Zealand",
+      "af": "Nieu-Seeland",
+      "zu": "i-New Zealand"
+    },
+    "title": {
+      "en": "SuperSport IPTV New Zealand — channels, pricing, setup",
+      "af": "SuperSport IPTV Nieu-Seeland — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV New Zealand — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "Looking for SuperSport in New Zealand? The dated diaspora reference records 95,577 people in 2023. This historical figure is context, not a customer count or 2026 estimate. Confirm local broadcast availability, the full price and your device before choosing a service.",
+      "af": "Soek jy SuperSport in Nieu-Seeland? Die gedateerde diasporabron gee 95,577 mense vir 2023. Dit is historiese konteks, nie ’n klantetelling of ’n raming vir 2026 nie. Bevestig plaaslike uitsaaibeskikbaarheid, die volle prys en jou toestel voordat jy kies.",
+      "zu": "Ufuna i-SuperSport e-New Zealand? Umthombo womphakathi waseNingizimu Afrika ubala abantu abangu-95,577 ngo-2023. Leli yinani lomlando, hhayi amakhasimende noma isilinganiso sango-2026. Qinisekisa umsakazi wendawo, inani eliphelele nedivayisi ngaphambi kokukhetha inkonzo."
+    },
+    "detail": {
+      "en": "Use NZD when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: Pacific/Auckland. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik NZD vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: Pacific/Auckland. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-NZD ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi Pacific/Auckland. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "Stats NZ census: South African-born residents",
+        "url": "https://www.stats.govt.nz/news/census-results-reflect-aotearoa-new-zealands-diversity/"
+      }
+    ],
+    "stat": {
+      "value": "95,577",
+      "year": "2023",
+      "definition": "Stats NZ census: South African-born residents"
+    },
+    "satellites": [
+      {
+        "slug": "auckland",
+        "title": {
+          "en": "SuperSport in Auckland — Firestick setup checks",
+          "af": "SuperSport in Auckland — Firestick-opstelling",
+          "zu": "SuperSport eAuckland — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For Auckland, confirm the programme is offered in New Zealand before installing anything. Use the time-zone identifier Pacific/Auckland for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not NZD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Auckland dat die program in Nieu-Seeland beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Pacific/Auckland, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie NZD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useAuckland, qinisekisa ukuthi uhlelo lutholakala e-New Zealand ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Pacific/Auckland nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-NZD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "wellington",
+        "title": {
+          "en": "SuperSport in Wellington — match times and Smart TV checks",
+          "af": "SuperSport in Wellington — wedstrydtye en Smart TV",
+          "zu": "SuperSport eWellington — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Wellington, confirm the programme is offered in New Zealand before installing anything. Use the time-zone identifier Pacific/Auckland for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not NZD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Wellington dat die program in Nieu-Seeland beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Pacific/Auckland, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie NZD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useWellington, qinisekisa ukuthi uhlelo lutholakala e-New Zealand ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Pacific/Auckland nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-NZD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "canada",
+    "family": "countries",
+    "region": "CA",
+    "name": {
+      "en": "Canada",
+      "af": "Kanada",
+      "zu": "i-Canada"
+    },
+    "title": {
+      "en": "SuperSport IPTV Canada — channels, pricing, setup",
+      "af": "SuperSport IPTV Kanada — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV Canada — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "Looking for SuperSport in Canada? The dated diaspora reference records 51,590 people in 2021. This historical figure is context, not a customer count or 2026 estimate. Confirm local broadcast availability, the full price and your device before choosing a service.",
+      "af": "Soek jy SuperSport in Kanada? Die gedateerde diasporabron gee 51,590 mense vir 2021. Dit is historiese konteks, nie ’n klantetelling of ’n raming vir 2026 nie. Bevestig plaaslike uitsaaibeskikbaarheid, die volle prys en jou toestel voordat jy kies.",
+      "zu": "Ufuna i-SuperSport e-Canada? Umthombo womphakathi waseNingizimu Afrika ubala abantu abangu-51,590 ngo-2021. Leli yinani lomlando, hhayi amakhasimende noma isilinganiso sango-2026. Qinisekisa umsakazi wendawo, inani eliphelele nedivayisi ngaphambi kokukhetha inkonzo."
+    },
+    "detail": {
+      "en": "Use CAD when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: America/Toronto / America/Vancouver. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik CAD vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: America/Toronto / America/Vancouver. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-CAD ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi America/Toronto / America/Vancouver. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "Statistics Canada: immigrants born in South Africa, private households",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?DGUIDlist=2021A000011124&HEADERlist=0&Lang=E"
+      }
+    ],
+    "stat": {
+      "value": "51,590",
+      "year": "2021",
+      "definition": "Statistics Canada: immigrants born in South Africa, private households"
+    },
+    "satellites": [
+      {
+        "slug": "toronto",
+        "title": {
+          "en": "SuperSport in Toronto — Firestick setup checks",
+          "af": "SuperSport in Toronto — Firestick-opstelling",
+          "zu": "SuperSport eToronto — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For Toronto, confirm the programme is offered in Canada before installing anything. Use the time-zone identifier America/Toronto / America/Vancouver for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not CAD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Toronto dat die program in Kanada beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone America/Toronto / America/Vancouver, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie CAD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useToronto, qinisekisa ukuthi uhlelo lutholakala e-Canada ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi America/Toronto / America/Vancouver nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-CAD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "vancouver",
+        "title": {
+          "en": "SuperSport in Vancouver — match times and Smart TV checks",
+          "af": "SuperSport in Vancouver — wedstrydtye en Smart TV",
+          "zu": "SuperSport eVancouver — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Vancouver, confirm the programme is offered in Canada before installing anything. Use the time-zone identifier America/Toronto / America/Vancouver for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not CAD totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Vancouver dat die program in Kanada beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone America/Toronto / America/Vancouver, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie CAD-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useVancouver, qinisekisa ukuthi uhlelo lutholakala e-Canada ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi America/Toronto / America/Vancouver nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-CAD. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "uae",
+    "family": "countries",
+    "region": "AE",
+    "name": {
+      "en": "United Arab Emirates",
+      "af": "Verenigde Arabiese Emirate",
+      "zu": "i-United Arab Emirates"
+    },
+    "title": {
+      "en": "SuperSport IPTV United Arab Emirates — channels, pricing, setup",
+      "af": "SuperSport IPTV Verenigde Arabiese Emirate — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV United Arab Emirates — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "SuperSport viewing in the United Arab Emirates starts with local rights. Historical diaspora estimates ranged from 40,000–100,000 in 2008, reviewed in a 2017 study; this is not a current count. Check the authorised broadcaster, subscription terms and supported device before paying.",
+      "af": "SuperSport in die Verenigde Arabiese Emirate begin by plaaslike uitsaairegte. Historiese diasporaramings was 40,000–100,000 in 2008, bespreek in ’n studie van 2017; dit is nie ’n huidige telling nie. Kontroleer die uitsaaier, intekening en toestel voor betaling.",
+      "zu": "Ukubuka i-SuperSport e-United Arab Emirates kuqala ngamalungelo endawo. Izilinganiso zomphakathi zango-2008 zazingu-40,000–100,000, zachazwa ocwaningweni lwango-2017; akulona inani lamanje. Hlola umsakazi, ukubhalisa nedivayisi ngaphambi kokukhokha."
+    },
+    "detail": {
+      "en": "Use AED when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: Asia/Dubai. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik AED vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: Asia/Dubai. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-AED ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi Asia/Dubai. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "Historical estimate range reviewed in a 2017 academic paper; not a census or current count",
+        "url": "https://doi.org/10.1080/0376835X.2017.1351870"
+      }
+    ],
+    "stat": {
+      "value": "40,000–100,000",
+      "year": "2008",
+      "definition": "Historical estimate range reviewed in a 2017 academic paper; not a census or current count"
+    },
+    "satellites": [
+      {
+        "slug": "dubai",
+        "title": {
+          "en": "SuperSport in Dubai — Firestick setup checks",
+          "af": "SuperSport in Dubai — Firestick-opstelling",
+          "zu": "SuperSport eDubai — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For Dubai, confirm the programme is offered in United Arab Emirates before installing anything. Use the time-zone identifier Asia/Dubai for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not AED totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Dubai dat die program in Verenigde Arabiese Emirate beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Asia/Dubai, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie AED-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useDubai, qinisekisa ukuthi uhlelo lutholakala e-United Arab Emirates ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Asia/Dubai nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-AED. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "abu-dhabi",
+        "title": {
+          "en": "SuperSport in Abu Dhabi — match times and Smart TV checks",
+          "af": "SuperSport in Abu Dhabi — wedstrydtye en Smart TV",
+          "zu": "SuperSport eAbu Dhabi — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Abu Dhabi, confirm the programme is offered in United Arab Emirates before installing anything. Use the time-zone identifier Asia/Dubai for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not AED totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Abu Dhabi dat die program in Verenigde Arabiese Emirate beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Asia/Dubai, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie AED-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useAbu Dhabi, qinisekisa ukuthi uhlelo lutholakala e-United Arab Emirates ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Asia/Dubai nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-AED. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "netherlands",
+    "family": "countries",
+    "region": "NL",
+    "name": {
+      "en": "Netherlands",
+      "af": "Nederland",
+      "zu": "i-Netherlands"
+    },
+    "title": {
+      "en": "SuperSport IPTV Netherlands — channels, pricing, setup",
+      "af": "SuperSport IPTV Nederland — kanale, pryse en opstelling",
+      "zu": "SuperSport IPTV Netherlands — amashaneli, amanani nokusetha"
+    },
+    "lead": {
+      "en": "Looking for SuperSport in Netherlands? The dated diaspora reference records 17,500 people in 2020. This historical figure is context, not a customer count or 2026 estimate. Confirm local broadcast availability, the full price and your device before choosing a service.",
+      "af": "Soek jy SuperSport in Nederland? Die gedateerde diasporabron gee 17,500 mense vir 2020. Dit is historiese konteks, nie ’n klantetelling of ’n raming vir 2026 nie. Bevestig plaaslike uitsaaibeskikbaarheid, die volle prys en jou toestel voordat jy kies.",
+      "zu": "Ufuna i-SuperSport e-Netherlands? Umthombo womphakathi waseNingizimu Afrika ubala abantu abangu-17,500 ngo-2020. Leli yinani lomlando, hhayi amakhasimende noma isilinganiso sango-2026. Qinisekisa umsakazi wendawo, inani eliphelele nedivayisi ngaphambi kokukhetha inkonzo."
+    },
+    "detail": {
+      "en": "Use EUR when comparing local bills and identify whether a price is monthly or for the entire term. Match schedules must use the relevant local zone: Europe/Amsterdam. A South African channel package is not automatically available abroad. Consult the event organiser and the broadcaster for the specific territory.",
+      "af": "Gebruik EUR vir plaaslike prysvergelykings en onderskei tussen maandpryse en die volle termynbedrag. Gebruik die toepaslike tydsone: Europe/Amsterdam. ’n Suid-Afrikaanse kanaalpakket is nie outomaties in die buiteland beskikbaar nie. Raadpleeg die organiseerder en uitsaaier vir jou gebied.",
+      "zu": "Sebenzisa i-EUR ukuqhathanisa izindleko zendawo bese uhlukanisa inani lenyanga nenani lesikhathi sonke. Sebenzisa indawo yesikhathi efanele ethi Europe/Amsterdam. Iphakheji yamashaneli yaseNingizimu Afrika ayitholakali ngokuzenzakalela kwamanye amazwe. Buza umhleli womdlalo nomsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "UN estimate, reproduced by Birmingham City Council",
+        "url": "https://www.birmingham.gov.uk/download/downloads/id/28598/south_african_community_health_profile.pdf"
+      }
+    ],
+    "stat": {
+      "value": "17,500",
+      "year": "2020",
+      "definition": "UN estimate, reproduced by Birmingham City Council"
+    },
+    "satellites": [
+      {
+        "slug": "amsterdam",
+        "title": {
+          "en": "SuperSport in Amsterdam — Firestick setup checks",
+          "af": "SuperSport in Amsterdam — Firestick-opstelling",
+          "zu": "SuperSport eAmsterdam — ukusetha i-Firestick"
+        },
+        "task": "setup",
+        "detail": {
+          "en": "For Amsterdam, confirm the programme is offered in Netherlands before installing anything. Use the time-zone identifier Europe/Amsterdam for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not EUR totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Amsterdam dat die program in Nederland beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Europe/Amsterdam, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie EUR-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useAmsterdam, qinisekisa ukuthi uhlelo lutholakala e-Netherlands ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Europe/Amsterdam nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-EUR. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      },
+      {
+        "slug": "rotterdam",
+        "title": {
+          "en": "SuperSport in Rotterdam — match times and Smart TV checks",
+          "af": "SuperSport in Rotterdam — wedstrydtye en Smart TV",
+          "zu": "SuperSport eRotterdam — izikhathi zemidlalo ne-Smart TV"
+        },
+        "task": "schedule",
+        "detail": {
+          "en": "For Rotterdam, confirm the programme is offered in Netherlands before installing anything. Use the time-zone identifier Europe/Amsterdam for the relevant city and match date, rather than a fixed South African offset. Prices quoted in rand are not EUR totals. Check the payment currency, any conversion charge and the named device in writing. A local address does not prove the provider has a server in this city.",
+          "af": "Bevestig vir Rotterdam dat die program in Nederland beskikbaar is voordat jy iets installeer. Gebruik die toepaslike stad en wedstryddatum met die tydsone Europe/Amsterdam, eerder as ’n vaste Suid-Afrikaanse tydsverskil. Randpryse is nie EUR-totale nie. Bevestig die betaalgeldeenheid, omskakelingsfooie en toestel skriftelik. ’n Plaaslike adres bewys nie dat die verskaffer ’n bediener hier het nie.",
+          "zu": "Uma useRotterdam, qinisekisa ukuthi uhlelo lutholakala e-Netherlands ngaphambi kokufaka noma yini. Sebenzisa indawo yesikhathi ethi Europe/Amsterdam nedethi yomdlalo, hhayi umehluko wamahora oqageliwe. Inani elibhalwe ngamarandi alilona inani le-EUR. Cela ukuqinisekiswa kwemali yokukhokha, izindleko zokushintshanisa kanye nedivayisi. Ikheli lendawo alifakazeli ukuthi umhlinzeki uneseva kuleli dolobha. Hlola lokhu ngaphambi kokukhetha ukubhalisa kwesikhathi eside."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "sabc",
+    "family": "channels",
+    "region": "ZA",
+    "name": {
+      "en": "SABC",
+      "af": "SABC",
+      "zu": "SABC"
+    },
+    "title": {
+      "en": "SABC — South African streaming guide",
+      "af": "SABC — Suid-Afrikaanse stroomgids",
+      "zu": "SABC — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Separate live SABC television from catch-up episodes. Search SABC+ for the exact channel, episode and viewing country; a news stream does not prove that a sports event is included. Keep the programme title and scheduled date when asking about availability.",
+      "af": "Onderskei regstreekse SABC-kanale van opvangepisodes. Soek die presiese kanaal, episode en kykland op SABC+; ’n nuusstroom bewys nie toegang tot sport nie. Hou die programnaam en datum wanneer jy navraag doen.",
+      "zu": "Hlukanisa ithelevishini ye-SABC ebukhoma neziqephu ezidlule. Ku-SABC+, hlola isiteshi, isiqephu nezwe lakho; ukusakazwa kwezindaba akufakazeli ukuthi umdlalo ukhona. Gcina igama lohlelo nosuku uma ucela usizo."
+    },
+    "detail": {
+      "en": "Separate live SABC television from catch-up episodes. Search SABC+ for the exact channel, episode and viewing country; a news stream does not prove that a sports event is included. Keep the programme title and scheduled date when asking about availability.",
+      "af": "Onderskei regstreekse SABC-kanale van opvangepisodes. Soek die presiese kanaal, episode en kykland op SABC+; ’n nuusstroom bewys nie toegang tot sport nie. Hou die programnaam en datum wanneer jy navraag doen.",
+      "zu": "Hlukanisa ithelevishini ye-SABC ebukhoma neziqephu ezidlule. Ku-SABC+, hlola isiteshi, isiqephu nezwe lakho; ukusakazwa kwezindaba akufakazeli ukuthi umdlalo ukhona. Gcina igama lohlelo nosuku uma ucela usizo."
+    },
+    "sources": [
+      {
+        "name": "SABC — official reference",
+        "url": "https://www.sabcplus.com/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "live-versus-catch-up",
+        "task": "availability",
+        "title": {
+          "en": "SABC: What access should I verify?",
+          "af": "SABC: Watter toegang moet ek bevestig?",
+          "zu": "SABC: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Separate live SABC television from catch-up episodes. Search SABC+ for the exact channel, episode and viewing country; a news stream does not prove that a sports event is included. Keep the programme title and scheduled date when asking about availability.",
+          "af": "Onderskei regstreekse SABC-kanale van opvangepisodes. Soek die presiese kanaal, episode en kykland op SABC+; ’n nuusstroom bewys nie toegang tot sport nie. Hou die programnaam en datum wanneer jy navraag doen.",
+          "zu": "Hlukanisa ithelevishini ye-SABC ebukhoma neziqephu ezidlule. Ku-SABC+, hlola isiteshi, isiqephu nezwe lakho; ukusakazwa kwezindaba akufakazeli ukuthi umdlalo ukhona. Gcina igama lohlelo nosuku uma ucela usizo."
+        }
+      },
+      {
+        "slug": "smart-tv",
+        "task": "setup",
+        "title": {
+          "en": "SABC: How do I check a supported setup?",
+          "af": "SABC: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "SABC: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "Separate live SABC television from catch-up episodes. Search SABC+ for the exact channel, episode and viewing country; a news stream does not prove that a sports event is included. Keep the programme title and scheduled date when asking about availability.",
+          "af": "Onderskei regstreekse SABC-kanale van opvangepisodes. Soek die presiese kanaal, episode en kykland op SABC+; ’n nuusstroom bewys nie toegang tot sport nie. Hou die programnaam en datum wanneer jy navraag doen.",
+          "zu": "Hlukanisa ithelevishini ye-SABC ebukhoma neziqephu ezidlule. Ku-SABC+, hlola isiteshi, isiqephu nezwe lakho; ukusakazwa kwezindaba akufakazeli ukuthi umdlalo ukhona. Gcina igama lohlelo nosuku uma ucela usizo."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "etv",
+    "family": "channels",
+    "region": "ZA",
+    "name": {
+      "en": "e.tv",
+      "af": "e.tv",
+      "zu": "e.tv"
+    },
+    "title": {
+      "en": "e.tv — South African streaming guide",
+      "af": "e.tv — Suid-Afrikaanse stroomgids",
+      "zu": "e.tv — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "An eVOD episode and the e.tv live schedule are different viewing options. Search the episode title and season on the official service, then check whether it is free, paid or unavailable for your location. A channel logo in a playlist is not an episode catalogue.",
+      "af": "’n eVOD-episode en e.tv se regstreekse program is verskillende opsies. Soek die titel en seisoen en kontroleer koste en gebied. ’n Kanaallogo in ’n speellys is nie ’n episodekatalogus nie.",
+      "zu": "Isiqephu se-eVOD nohlelo lwe-e.tv olubukhoma kuyizinto ezahlukene. Sesha isihloko nesizini bese uhlola izindleko nendawo. Uphawu lwesiteshi ohlwini lokudlala alulona uhlu lweziqephu."
+    },
+    "detail": {
+      "en": "An eVOD episode and the e.tv live schedule are different viewing options. Search the episode title and season on the official service, then check whether it is free, paid or unavailable for your location. A channel logo in a playlist is not an episode catalogue.",
+      "af": "’n eVOD-episode en e.tv se regstreekse program is verskillende opsies. Soek die titel en seisoen en kontroleer koste en gebied. ’n Kanaallogo in ’n speellys is nie ’n episodekatalogus nie.",
+      "zu": "Isiqephu se-eVOD nohlelo lwe-e.tv olubukhoma kuyizinto ezahlukene. Sesha isihloko nesizini bese uhlola izindleko nendawo. Uphawu lwesiteshi ohlwini lokudlala alulona uhlu lweziqephu."
+    },
+    "sources": [
+      {
+        "name": "e.tv — official reference",
+        "url": "https://www.etv.co.za/shows/evod"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "evod-versus-live",
+        "task": "availability",
+        "title": {
+          "en": "e.tv: What access should I verify?",
+          "af": "e.tv: Watter toegang moet ek bevestig?",
+          "zu": "e.tv: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "An eVOD episode and the e.tv live schedule are different viewing options. Search the episode title and season on the official service, then check whether it is free, paid or unavailable for your location. A channel logo in a playlist is not an episode catalogue.",
+          "af": "’n eVOD-episode en e.tv se regstreekse program is verskillende opsies. Soek die titel en seisoen en kontroleer koste en gebied. ’n Kanaallogo in ’n speellys is nie ’n episodekatalogus nie.",
+          "zu": "Isiqephu se-eVOD nohlelo lwe-e.tv olubukhoma kuyizinto ezahlukene. Sesha isihloko nesizini bese uhlola izindleko nendawo. Uphawu lwesiteshi ohlwini lokudlala alulona uhlu lweziqephu."
+        }
+      },
+      {
+        "slug": "android-tv",
+        "task": "setup",
+        "title": {
+          "en": "e.tv: How do I check a supported setup?",
+          "af": "e.tv: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "e.tv: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "An eVOD episode and the e.tv live schedule are different viewing options. Search the episode title and season on the official service, then check whether it is free, paid or unavailable for your location. A channel logo in a playlist is not an episode catalogue.",
+          "af": "’n eVOD-episode en e.tv se regstreekse program is verskillende opsies. Soek die titel en seisoen en kontroleer koste en gebied. ’n Kanaallogo in ’n speellys is nie ’n episodekatalogus nie.",
+          "zu": "Isiqephu se-eVOD nohlelo lwe-e.tv olubukhoma kuyizinto ezahlukene. Sesha isihloko nesizini bese uhlola izindleko nendawo. Uphawu lwesiteshi ohlwini lokudlala alulona uhlu lweziqephu."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "mnet",
+    "family": "channels",
+    "region": "ZA",
+    "name": {
+      "en": "M-Net",
+      "af": "M-Net",
+      "zu": "M-Net"
+    },
+    "title": {
+      "en": "M-Net — South African streaming guide",
+      "af": "M-Net — Suid-Afrikaanse stroomgids",
+      "zu": "M-Net — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Check the exact M-Net channel and package rather than assuming every DStv plan contains the same films. A catch-up window can differ from the live schedule. Record the title, episode, territory and account package when a programme is missing.",
+      "af": "Kontroleer die presiese M-Net-kanaal en pakket. Nie elke DStv-plan bevat dieselfde films nie. Opvangbeskikbaarheid kan van die regstreekse program verskil. Noteer titel, episode, gebied en rekeningpakket.",
+      "zu": "Hlola isiteshi se-M-Net nephakheji eqondile. Akuwona wonke amapulani e-DStv anefilimu efanayo. Isikhathi sokubuka isiqephu esidlule singahluka. Bhala isihloko, isiqephu, izwe nephakheji yakho."
+    },
+    "detail": {
+      "en": "Check the exact M-Net channel and package rather than assuming every DStv plan contains the same films. A catch-up window can differ from the live schedule. Record the title, episode, territory and account package when a programme is missing.",
+      "af": "Kontroleer die presiese M-Net-kanaal en pakket. Nie elke DStv-plan bevat dieselfde films nie. Opvangbeskikbaarheid kan van die regstreekse program verskil. Noteer titel, episode, gebied en rekeningpakket.",
+      "zu": "Hlola isiteshi se-M-Net nephakheji eqondile. Akuwona wonke amapulani e-DStv anefilimu efanayo. Isikhathi sokubuka isiqephu esidlule singahluka. Bhala isihloko, isiqephu, izwe nephakheji yakho."
+    },
+    "sources": [
+      {
+        "name": "M-Net — official reference",
+        "url": "https://www.dstv.com/m-net/en-za"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "package-check",
+        "task": "availability",
+        "title": {
+          "en": "M-Net: What access should I verify?",
+          "af": "M-Net: Watter toegang moet ek bevestig?",
+          "zu": "M-Net: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Check the exact M-Net channel and package rather than assuming every DStv plan contains the same films. A catch-up window can differ from the live schedule. Record the title, episode, territory and account package when a programme is missing.",
+          "af": "Kontroleer die presiese M-Net-kanaal en pakket. Nie elke DStv-plan bevat dieselfde films nie. Opvangbeskikbaarheid kan van die regstreekse program verskil. Noteer titel, episode, gebied en rekeningpakket.",
+          "zu": "Hlola isiteshi se-M-Net nephakheji eqondile. Akuwona wonke amapulani e-DStv anefilimu efanayo. Isikhathi sokubuka isiqephu esidlule singahluka. Bhala isihloko, isiqephu, izwe nephakheji yakho."
+        }
+      },
+      {
+        "slug": "episode-playback",
+        "task": "playback",
+        "title": {
+          "en": "M-Net: How do I isolate a playback fault?",
+          "af": "M-Net: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "M-Net: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Check the exact M-Net channel and package rather than assuming every DStv plan contains the same films. A catch-up window can differ from the live schedule. Record the title, episode, territory and account package when a programme is missing.",
+          "af": "Kontroleer die presiese M-Net-kanaal en pakket. Nie elke DStv-plan bevat dieselfde films nie. Opvangbeskikbaarheid kan van die regstreekse program verskil. Noteer titel, episode, gebied en rekeningpakket.",
+          "zu": "Hlola isiteshi se-M-Net nephakheji eqondile. Akuwona wonke amapulani e-DStv anefilimu efanayo. Isikhathi sokubuka isiqephu esidlule singahluka. Bhala isihloko, isiqephu, izwe nephakheji yakho."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "mzansi-magic",
+    "family": "channels",
+    "region": "ZA",
+    "name": {
+      "en": "Mzansi Magic",
+      "af": "Mzansi Magic",
+      "zu": "Mzansi Magic"
+    },
+    "title": {
+      "en": "Mzansi Magic — South African streaming guide",
+      "af": "Mzansi Magic — Suid-Afrikaanse stroomgids",
+      "zu": "Mzansi Magic — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Distinguish a new Mzansi Magic episode from a repeat and an on-demand copy. Search by series title, season and episode number, not just the channel name. Check the official schedule before blaming the player for a different episode appearing.",
+      "af": "Onderskei ’n nuwe Mzansi Magic-episode van ’n herhaling en ’n op-aanvraagkopie. Soek volgens reeks, seisoen en episodenommer. Kontroleer die amptelike program voordat jy die speler blameer.",
+      "zu": "Hlukanisa isiqephu esisha se-Mzansi Magic, ukuphindwa kwaso nokubuka lapho ufuna khona. Sesha uchungechunge, isizini nenombolo yesiqephu. Hlola uhlelo olusemthethweni ngaphambi kokusola isidlali."
+    },
+    "detail": {
+      "en": "Distinguish a new Mzansi Magic episode from a repeat and an on-demand copy. Search by series title, season and episode number, not just the channel name. Check the official schedule before blaming the player for a different episode appearing.",
+      "af": "Onderskei ’n nuwe Mzansi Magic-episode van ’n herhaling en ’n op-aanvraagkopie. Soek volgens reeks, seisoen en episodenommer. Kontroleer die amptelike program voordat jy die speler blameer.",
+      "zu": "Hlukanisa isiqephu esisha se-Mzansi Magic, ukuphindwa kwaso nokubuka lapho ufuna khona. Sesha uchungechunge, isizini nenombolo yesiqephu. Hlola uhlelo olusemthethweni ngaphambi kokusola isidlali."
+    },
+    "sources": [
+      {
+        "name": "Mzansi Magic — official reference",
+        "url": "https://www.dstv.com/mzansimagic/en-za"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "episodes-and-repeats",
+        "task": "schedule",
+        "title": {
+          "en": "Mzansi Magic: How do I verify the programme and time?",
+          "af": "Mzansi Magic: Hoe bevestig ek die program en tyd?",
+          "zu": "Mzansi Magic: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Distinguish a new Mzansi Magic episode from a repeat and an on-demand copy. Search by series title, season and episode number, not just the channel name. Check the official schedule before blaming the player for a different episode appearing.",
+          "af": "Onderskei ’n nuwe Mzansi Magic-episode van ’n herhaling en ’n op-aanvraagkopie. Soek volgens reeks, seisoen en episodenommer. Kontroleer die amptelike program voordat jy die speler blameer.",
+          "zu": "Hlukanisa isiqephu esisha se-Mzansi Magic, ukuphindwa kwaso nokubuka lapho ufuna khona. Sesha uchungechunge, isizini nenombolo yesiqephu. Hlola uhlelo olusemthethweni ngaphambi kokusola isidlali."
+        }
+      },
+      {
+        "slug": "missing-programme",
+        "task": "availability",
+        "title": {
+          "en": "Mzansi Magic: What access should I verify?",
+          "af": "Mzansi Magic: Watter toegang moet ek bevestig?",
+          "zu": "Mzansi Magic: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Distinguish a new Mzansi Magic episode from a repeat and an on-demand copy. Search by series title, season and episode number, not just the channel name. Check the official schedule before blaming the player for a different episode appearing.",
+          "af": "Onderskei ’n nuwe Mzansi Magic-episode van ’n herhaling en ’n op-aanvraagkopie. Soek volgens reeks, seisoen en episodenommer. Kontroleer die amptelike program voordat jy die speler blameer.",
+          "zu": "Hlukanisa isiqephu esisha se-Mzansi Magic, ukuphindwa kwaso nokubuka lapho ufuna khona. Sesha uchungechunge, isizini nenombolo yesiqephu. Hlola uhlelo olusemthethweni ngaphambi kokusola isidlali."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "africamagic",
+    "family": "channels",
+    "region": "ZA",
+    "name": {
+      "en": "Africa Magic",
+      "af": "Africa Magic",
+      "zu": "Africa Magic"
+    },
+    "title": {
+      "en": "Africa Magic — South African streaming guide",
+      "af": "Africa Magic — Suid-Afrikaanse stroomgids",
+      "zu": "Africa Magic — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Africa Magic is a channel family, so confirm the specific channel and programme language. A Nigerian package listing does not establish availability in every country. Match the official channel name to your account before comparing schedules or prices.",
+      "af": "Africa Magic is ’n kanaalfamilie. Bevestig die spesifieke kanaal en programtaal. ’n Nigeriese pakketlys bewys nie beskikbaarheid in elke land nie. Vergelyk die amptelike kanaalnaam met jou rekening.",
+      "zu": "I-Africa Magic iwumndeni wamashaneli. Qinisekisa isiteshi esiqondile nolimi lohlelo. Iphakheji yaseNigeria ayifakazeli ukutholakala kuwo wonke amazwe. Qhathanisa igama lesiteshi ne-akhawunti yakho."
+    },
+    "detail": {
+      "en": "Africa Magic is a channel family, so confirm the specific channel and programme language. A Nigerian package listing does not establish availability in every country. Match the official channel name to your account before comparing schedules or prices.",
+      "af": "Africa Magic is ’n kanaalfamilie. Bevestig die spesifieke kanaal en programtaal. ’n Nigeriese pakketlys bewys nie beskikbaarheid in elke land nie. Vergelyk die amptelike kanaalnaam met jou rekening.",
+      "zu": "I-Africa Magic iwumndeni wamashaneli. Qinisekisa isiteshi esiqondile nolimi lohlelo. Iphakheji yaseNigeria ayifakazeli ukutholakala kuwo wonke amazwe. Qhathanisa igama lesiteshi ne-akhawunti yakho."
+    },
+    "sources": [
+      {
+        "name": "Africa Magic — official reference",
+        "url": "https://www.dstv.com/africamagic/en-ng"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "channel-and-language",
+        "task": "availability",
+        "title": {
+          "en": "Africa Magic: What access should I verify?",
+          "af": "Africa Magic: Watter toegang moet ek bevestig?",
+          "zu": "Africa Magic: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Africa Magic is a channel family, so confirm the specific channel and programme language. A Nigerian package listing does not establish availability in every country. Match the official channel name to your account before comparing schedules or prices.",
+          "af": "Africa Magic is ’n kanaalfamilie. Bevestig die spesifieke kanaal en programtaal. ’n Nigeriese pakketlys bewys nie beskikbaarheid in elke land nie. Vergelyk die amptelike kanaalnaam met jou rekening.",
+          "zu": "I-Africa Magic iwumndeni wamashaneli. Qinisekisa isiteshi esiqondile nolimi lohlelo. Iphakheji yaseNigeria ayifakazeli ukutholakala kuwo wonke amazwe. Qhathanisa igama lesiteshi ne-akhawunti yakho."
+        }
+      },
+      {
+        "slug": "programme-guide",
+        "task": "schedule",
+        "title": {
+          "en": "Africa Magic: How do I verify the programme and time?",
+          "af": "Africa Magic: Hoe bevestig ek die program en tyd?",
+          "zu": "Africa Magic: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Africa Magic is a channel family, so confirm the specific channel and programme language. A Nigerian package listing does not establish availability in every country. Match the official channel name to your account before comparing schedules or prices.",
+          "af": "Africa Magic is ’n kanaalfamilie. Bevestig die spesifieke kanaal en programtaal. ’n Nigeriese pakketlys bewys nie beskikbaarheid in elke land nie. Vergelyk die amptelike kanaalnaam met jou rekening.",
+          "zu": "I-Africa Magic iwumndeni wamashaneli. Qinisekisa isiteshi esiqondile nolimi lohlelo. Iphakheji yaseNigeria ayifakazeli ukutholakala kuwo wonke amazwe. Qhathanisa igama lesiteshi ne-akhawunti yakho."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "psl",
+    "family": "sports",
+    "region": "ZA",
+    "name": {
+      "en": "PSL",
+      "af": "PSL",
+      "zu": "PSL"
+    },
+    "title": {
+      "en": "PSL — South African streaming guide",
+      "af": "PSL — Suid-Afrikaanse stroomgids",
+      "zu": "PSL — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Confirm the competition, two clubs and fixture date on the PSL schedule. League fixtures and cup ties can have different listings. A general football category does not guarantee your match. Check the broadcaster’s programme for that fixture in your country.",
+      "af": "Bevestig die kompetisie, klubs en datum op die PSL-program. Liga- en bekerwedstryde kan verskillende lyste hê. ’n Sokkerkategorie waarborg nie jou wedstryd nie. Kontroleer die uitsaaier in jou land.",
+      "zu": "Qinisekisa umqhudelwano, amakilabhu nosuku ohlelweni lwe-PSL. Imidlalo yeligi neyendebe ingaba nezinhlelo ezihlukene. Ifolda yebhola ayiqinisekisi umdlalo wakho. Hlola umsakazi ezweni lakho."
+    },
+    "detail": {
+      "en": "Confirm the competition, two clubs and fixture date on the PSL schedule. League fixtures and cup ties can have different listings. A general football category does not guarantee your match. Check the broadcaster’s programme for that fixture in your country.",
+      "af": "Bevestig die kompetisie, klubs en datum op die PSL-program. Liga- en bekerwedstryde kan verskillende lyste hê. ’n Sokkerkategorie waarborg nie jou wedstryd nie. Kontroleer die uitsaaier in jou land.",
+      "zu": "Qinisekisa umqhudelwano, amakilabhu nosuku ohlelweni lwe-PSL. Imidlalo yeligi neyendebe ingaba nezinhlelo ezihlukene. Ifolda yebhola ayiqinisekisi umdlalo wakho. Hlola umsakazi ezweni lakho."
+    },
+    "sources": [
+      {
+        "name": "PSL — official reference",
+        "url": "https://www.psl.co.za/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "fixture-and-channel",
+        "task": "schedule",
+        "title": {
+          "en": "PSL: How do I verify the programme and time?",
+          "af": "PSL: Hoe bevestig ek die program en tyd?",
+          "zu": "PSL: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Confirm the competition, two clubs and fixture date on the PSL schedule. League fixtures and cup ties can have different listings. A general football category does not guarantee your match. Check the broadcaster’s programme for that fixture in your country.",
+          "af": "Bevestig die kompetisie, klubs en datum op die PSL-program. Liga- en bekerwedstryde kan verskillende lyste hê. ’n Sokkerkategorie waarborg nie jou wedstryd nie. Kontroleer die uitsaaier in jou land.",
+          "zu": "Qinisekisa umqhudelwano, amakilabhu nosuku ohlelweni lwe-PSL. Imidlalo yeligi neyendebe ingaba nezinhlelo ezihlukene. Ifolda yebhola ayiqinisekisi umdlalo wakho. Hlola umsakazi ezweni lakho."
+        }
+      },
+      {
+        "slug": "match-not-showing",
+        "task": "availability",
+        "title": {
+          "en": "PSL: What access should I verify?",
+          "af": "PSL: Watter toegang moet ek bevestig?",
+          "zu": "PSL: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Confirm the competition, two clubs and fixture date on the PSL schedule. League fixtures and cup ties can have different listings. A general football category does not guarantee your match. Check the broadcaster’s programme for that fixture in your country.",
+          "af": "Bevestig die kompetisie, klubs en datum op die PSL-program. Liga- en bekerwedstryde kan verskillende lyste hê. ’n Sokkerkategorie waarborg nie jou wedstryd nie. Kontroleer die uitsaaier in jou land.",
+          "zu": "Qinisekisa umqhudelwano, amakilabhu nosuku ohlelweni lwe-PSL. Imidlalo yeligi neyendebe ingaba nezinhlelo ezihlukene. Ifolda yebhola ayiqinisekisi umdlalo wakho. Hlola umsakazi ezweni lakho."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "springboks",
+    "family": "sports",
+    "region": "ZA",
+    "name": {
+      "en": "Springboks",
+      "af": "Springboks",
+      "zu": "Springboks"
+    },
+    "title": {
+      "en": "Springboks — South African streaming guide",
+      "af": "Springboks — Suid-Afrikaanse stroomgids",
+      "zu": "Springboks — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Identify the Springboks fixture and tournament before selecting a rugby package. A club-rugby subscription is not proof of national-team coverage. Convert the official kickoff using its date and venue time zone, then distinguish pre-match coverage from kickoff.",
+      "af": "Identifiseer die Springbok-wedstryd en toernooi voordat jy kies. Klubrugby bewys nie nasionale dekking nie. Skakel die amptelike afskop volgens datum en tydsone om en onderskei die voorprogram van afskop.",
+      "zu": "Thola umdlalo we-Springboks nomqhudelwano ngaphambi kokukhetha. Ukubuka amakilabhu akufakazeli ukufakwa kweqembu lesizwe. Guqula isikhathi ngokosuku nendawo bese uhlukanisa uhlelo lwangaphambi komdlalo nokuqala kwawo."
+    },
+    "detail": {
+      "en": "Identify the Springboks fixture and tournament before selecting a rugby package. A club-rugby subscription is not proof of national-team coverage. Convert the official kickoff using its date and venue time zone, then distinguish pre-match coverage from kickoff.",
+      "af": "Identifiseer die Springbok-wedstryd en toernooi voordat jy kies. Klubrugby bewys nie nasionale dekking nie. Skakel die amptelike afskop volgens datum en tydsone om en onderskei die voorprogram van afskop.",
+      "zu": "Thola umdlalo we-Springboks nomqhudelwano ngaphambi kokukhetha. Ukubuka amakilabhu akufakazeli ukufakwa kweqembu lesizwe. Guqula isikhathi ngokosuku nendawo bese uhlukanisa uhlelo lwangaphambi komdlalo nokuqala kwawo."
+    },
+    "sources": [
+      {
+        "name": "Springboks — official reference",
+        "url": "https://www.sarugby.co.za/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "kickoff-time",
+        "task": "schedule",
+        "title": {
+          "en": "Springboks: How do I verify the programme and time?",
+          "af": "Springboks: Hoe bevestig ek die program en tyd?",
+          "zu": "Springboks: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Identify the Springboks fixture and tournament before selecting a rugby package. A club-rugby subscription is not proof of national-team coverage. Convert the official kickoff using its date and venue time zone, then distinguish pre-match coverage from kickoff.",
+          "af": "Identifiseer die Springbok-wedstryd en toernooi voordat jy kies. Klubrugby bewys nie nasionale dekking nie. Skakel die amptelike afskop volgens datum en tydsone om en onderskei die voorprogram van afskop.",
+          "zu": "Thola umdlalo we-Springboks nomqhudelwano ngaphambi kokukhetha. Ukubuka amakilabhu akufakazeli ukufakwa kweqembu lesizwe. Guqula isikhathi ngokosuku nendawo bese uhlukanisa uhlelo lwangaphambi komdlalo nokuqala kwawo."
+        }
+      },
+      {
+        "slug": "live-delay",
+        "task": "playback",
+        "title": {
+          "en": "Springboks: How do I isolate a playback fault?",
+          "af": "Springboks: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Springboks: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Identify the Springboks fixture and tournament before selecting a rugby package. A club-rugby subscription is not proof of national-team coverage. Convert the official kickoff using its date and venue time zone, then distinguish pre-match coverage from kickoff.",
+          "af": "Identifiseer die Springbok-wedstryd en toernooi voordat jy kies. Klubrugby bewys nie nasionale dekking nie. Skakel die amptelike afskop volgens datum en tydsone om en onderskei die voorprogram van afskop.",
+          "zu": "Thola umdlalo we-Springboks nomqhudelwano ngaphambi kokukhetha. Ukubuka amakilabhu akufakazeli ukufakwa kweqembu lesizwe. Guqula isikhathi ngokosuku nendawo bese uhlukanisa uhlelo lwangaphambi komdlalo nokuqala kwawo."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "bafana-bafana",
+    "family": "sports",
+    "region": "ZA",
+    "name": {
+      "en": "Bafana Bafana",
+      "af": "Bafana Bafana",
+      "zu": "Bafana Bafana"
+    },
+    "title": {
+      "en": "Bafana Bafana — South African streaming guide",
+      "af": "Bafana Bafana — Suid-Afrikaanse stroomgids",
+      "zu": "Bafana Bafana — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Separate a Bafana Bafana qualifier, friendly and tournament match. The team name alone is insufficient to identify the broadcast. Use the opponent, competition and fixture date from SAFA, then check the local broadcaster for that exact event.",
+      "af": "Onderskei ’n Bafana Bafana-kwalifiseerder, vriendskaplike wedstryd en toernooi. Die spannaam alleen identifiseer nie die uitsending nie. Gebruik teenstander, kompetisie en datum van SAFA om die plaaslike uitsaaier na te gaan.",
+      "zu": "Hlukanisa umdlalo wokuhlungela we-Bafana Bafana, owobungani nowomqhudelwano. Igama leqembu lodwa alanele. Sebenzisa imbangi, umqhudelwano nosuku lwe-SAFA ukuze uhlole umsakazi wendawo."
+    },
+    "detail": {
+      "en": "Separate a Bafana Bafana qualifier, friendly and tournament match. The team name alone is insufficient to identify the broadcast. Use the opponent, competition and fixture date from SAFA, then check the local broadcaster for that exact event.",
+      "af": "Onderskei ’n Bafana Bafana-kwalifiseerder, vriendskaplike wedstryd en toernooi. Die spannaam alleen identifiseer nie die uitsending nie. Gebruik teenstander, kompetisie en datum van SAFA om die plaaslike uitsaaier na te gaan.",
+      "zu": "Hlukanisa umdlalo wokuhlungela we-Bafana Bafana, owobungani nowomqhudelwano. Igama leqembu lodwa alanele. Sebenzisa imbangi, umqhudelwano nosuku lwe-SAFA ukuze uhlole umsakazi wendawo."
+    },
+    "sources": [
+      {
+        "name": "Bafana Bafana — official reference",
+        "url": "https://www.safa.net/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "qualifier-or-friendly",
+        "task": "availability",
+        "title": {
+          "en": "Bafana Bafana: What access should I verify?",
+          "af": "Bafana Bafana: Watter toegang moet ek bevestig?",
+          "zu": "Bafana Bafana: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Separate a Bafana Bafana qualifier, friendly and tournament match. The team name alone is insufficient to identify the broadcast. Use the opponent, competition and fixture date from SAFA, then check the local broadcaster for that exact event.",
+          "af": "Onderskei ’n Bafana Bafana-kwalifiseerder, vriendskaplike wedstryd en toernooi. Die spannaam alleen identifiseer nie die uitsending nie. Gebruik teenstander, kompetisie en datum van SAFA om die plaaslike uitsaaier na te gaan.",
+          "zu": "Hlukanisa umdlalo wokuhlungela we-Bafana Bafana, owobungani nowomqhudelwano. Igama leqembu lodwa alanele. Sebenzisa imbangi, umqhudelwano nosuku lwe-SAFA ukuze uhlole umsakazi wendawo."
+        }
+      },
+      {
+        "slug": "kickoff-calendar",
+        "task": "schedule",
+        "title": {
+          "en": "Bafana Bafana: How do I verify the programme and time?",
+          "af": "Bafana Bafana: Hoe bevestig ek die program en tyd?",
+          "zu": "Bafana Bafana: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Separate a Bafana Bafana qualifier, friendly and tournament match. The team name alone is insufficient to identify the broadcast. Use the opponent, competition and fixture date from SAFA, then check the local broadcaster for that exact event.",
+          "af": "Onderskei ’n Bafana Bafana-kwalifiseerder, vriendskaplike wedstryd en toernooi. Die spannaam alleen identifiseer nie die uitsending nie. Gebruik teenstander, kompetisie en datum van SAFA om die plaaslike uitsaaier na te gaan.",
+          "zu": "Hlukanisa umdlalo wokuhlungela we-Bafana Bafana, owobungani nowomqhudelwano. Igama leqembu lodwa alanele. Sebenzisa imbangi, umqhudelwano nosuku lwe-SAFA ukuze uhlole umsakazi wendawo."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "cricket",
+    "family": "sports",
+    "region": "ZA",
+    "name": {
+      "en": "South African cricket",
+      "af": "South African cricket",
+      "zu": "South African cricket"
+    },
+    "title": {
+      "en": "South African cricket — South African streaming guide",
+      "af": "South African cricket — Suid-Afrikaanse stroomgids",
+      "zu": "South African cricket — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Identify whether the cricket match is a Test, ODI or T20 and which session you need. A multi-day fixture may have several daily listings. Check weather interruptions with the organiser rather than treating every break in play as a streaming failure.",
+      "af": "Identifiseer Toets-, eendag- of T20-krieket en die sessie. ’n Meerdaagse wedstryd het verskeie daglyste. Kontroleer weeronderbrekings by die organiseerder voordat jy elke pouse as ’n stroomfout sien.",
+      "zu": "Thola ukuthi umdlalo ungowe-Test, ODI noma T20 nokuthi ufuna yiphi ingxenye. Umdlalo wezinsuku eziningi unezinhlelo ezahlukene. Hlola ukuphazamiseka kwesimo sezulu nomhleli ngaphambi kokusola ukusakaza."
+    },
+    "detail": {
+      "en": "Identify whether the cricket match is a Test, ODI or T20 and which session you need. A multi-day fixture may have several daily listings. Check weather interruptions with the organiser rather than treating every break in play as a streaming failure.",
+      "af": "Identifiseer Toets-, eendag- of T20-krieket en die sessie. ’n Meerdaagse wedstryd het verskeie daglyste. Kontroleer weeronderbrekings by die organiseerder voordat jy elke pouse as ’n stroomfout sien.",
+      "zu": "Thola ukuthi umdlalo ungowe-Test, ODI noma T20 nokuthi ufuna yiphi ingxenye. Umdlalo wezinsuku eziningi unezinhlelo ezahlukene. Hlola ukuphazamiseka kwesimo sezulu nomhleli ngaphambi kokusola ukusakaza."
+    },
+    "sources": [
+      {
+        "name": "South African cricket — official reference",
+        "url": "https://cricket.co.za/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "format-and-session",
+        "task": "schedule",
+        "title": {
+          "en": "South African cricket: How do I verify the programme and time?",
+          "af": "South African cricket: Hoe bevestig ek die program en tyd?",
+          "zu": "South African cricket: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "Identify whether the cricket match is a Test, ODI or T20 and which session you need. A multi-day fixture may have several daily listings. Check weather interruptions with the organiser rather than treating every break in play as a streaming failure.",
+          "af": "Identifiseer Toets-, eendag- of T20-krieket en die sessie. ’n Meerdaagse wedstryd het verskeie daglyste. Kontroleer weeronderbrekings by die organiseerder voordat jy elke pouse as ’n stroomfout sien.",
+          "zu": "Thola ukuthi umdlalo ungowe-Test, ODI noma T20 nokuthi ufuna yiphi ingxenye. Umdlalo wezinsuku eziningi unezinhlelo ezahlukene. Hlola ukuphazamiseka kwesimo sezulu nomhleli ngaphambi kokusola ukusakaza."
+        }
+      },
+      {
+        "slug": "replay-versus-live",
+        "task": "availability",
+        "title": {
+          "en": "South African cricket: What access should I verify?",
+          "af": "South African cricket: Watter toegang moet ek bevestig?",
+          "zu": "South African cricket: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "Identify whether the cricket match is a Test, ODI or T20 and which session you need. A multi-day fixture may have several daily listings. Check weather interruptions with the organiser rather than treating every break in play as a streaming failure.",
+          "af": "Identifiseer Toets-, eendag- of T20-krieket en die sessie. ’n Meerdaagse wedstryd het verskeie daglyste. Kontroleer weeronderbrekings by die organiseerder voordat jy elke pouse as ’n stroomfout sien.",
+          "zu": "Thola ukuthi umdlalo ungowe-Test, ODI noma T20 nokuthi ufuna yiphi ingxenye. Umdlalo wezinsuku eziningi unezinhlelo ezahlukene. Hlola ukuphazamiseka kwesimo sezulu nomhleli ngaphambi kokusola ukusakaza."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "formula-one",
+    "family": "sports",
+    "region": "ZA",
+    "name": {
+      "en": "Formula One",
+      "af": "Formula One",
+      "zu": "Formula One"
+    },
+    "title": {
+      "en": "Formula One — South African streaming guide",
+      "af": "Formula One — Suid-Afrikaanse stroomgids",
+      "zu": "Formula One — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "A Formula One weekend includes separate practice, qualifying and race sessions, sometimes with a sprint. Check each session on the official calendar. A main race broadcast does not automatically include onboard cameras, timing feeds or every practice session.",
+      "af": "’n Formule Een-naweek het oefening, kwalifisering en die wedren, soms ook ’n naelloop. Kontroleer elke sessie op die kalender. Die hoofuitsending sluit nie outomaties alle kameras of oefensessies in nie.",
+      "zu": "Impelasonto ye-Formula One ihlanganisa ukuzilolonga, ukuhlungela nomjaho, kwesinye isikhathi ne-sprint. Hlola ingxenye ngayinye ekhalendeni. Ukusakaza okuyinhloko akufaki ngokuzenzakalela wonke amakhamera noma ukuzilolonga."
+    },
+    "detail": {
+      "en": "A Formula One weekend includes separate practice, qualifying and race sessions, sometimes with a sprint. Check each session on the official calendar. A main race broadcast does not automatically include onboard cameras, timing feeds or every practice session.",
+      "af": "’n Formule Een-naweek het oefening, kwalifisering en die wedren, soms ook ’n naelloop. Kontroleer elke sessie op die kalender. Die hoofuitsending sluit nie outomaties alle kameras of oefensessies in nie.",
+      "zu": "Impelasonto ye-Formula One ihlanganisa ukuzilolonga, ukuhlungela nomjaho, kwesinye isikhathi ne-sprint. Hlola ingxenye ngayinye ekhalendeni. Ukusakaza okuyinhloko akufaki ngokuzenzakalela wonke amakhamera noma ukuzilolonga."
+    },
+    "sources": [
+      {
+        "name": "Formula One — official reference",
+        "url": "https://www.formula1.com/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "race-weekend-times",
+        "task": "schedule",
+        "title": {
+          "en": "Formula One: How do I verify the programme and time?",
+          "af": "Formula One: Hoe bevestig ek die program en tyd?",
+          "zu": "Formula One: Ngiluqinisekisa kanjani uhlelo nesikhathi?"
+        },
+        "detail": {
+          "en": "A Formula One weekend includes separate practice, qualifying and race sessions, sometimes with a sprint. Check each session on the official calendar. A main race broadcast does not automatically include onboard cameras, timing feeds or every practice session.",
+          "af": "’n Formule Een-naweek het oefening, kwalifisering en die wedren, soms ook ’n naelloop. Kontroleer elke sessie op die kalender. Die hoofuitsending sluit nie outomaties alle kameras of oefensessies in nie.",
+          "zu": "Impelasonto ye-Formula One ihlanganisa ukuzilolonga, ukuhlungela nomjaho, kwesinye isikhathi ne-sprint. Hlola ingxenye ngayinye ekhalendeni. Ukusakaza okuyinhloko akufaki ngokuzenzakalela wonke amakhamera noma ukuzilolonga."
+        }
+      },
+      {
+        "slug": "onboard-and-main-feed",
+        "task": "availability",
+        "title": {
+          "en": "Formula One: What access should I verify?",
+          "af": "Formula One: Watter toegang moet ek bevestig?",
+          "zu": "Formula One: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "A Formula One weekend includes separate practice, qualifying and race sessions, sometimes with a sprint. Check each session on the official calendar. A main race broadcast does not automatically include onboard cameras, timing feeds or every practice session.",
+          "af": "’n Formule Een-naweek het oefening, kwalifisering en die wedren, soms ook ’n naelloop. Kontroleer elke sessie op die kalender. Die hoofuitsending sluit nie outomaties alle kameras of oefensessies in nie.",
+          "zu": "Impelasonto ye-Formula One ihlanganisa ukuzilolonga, ukuhlungela nomjaho, kwesinye isikhathi ne-sprint. Hlola ingxenye ngayinye ekhalendeni. Ukusakaza okuyinhloko akufaki ngokuzenzakalela wonke amakhamera noma ukuzilolonga."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "firestick",
+    "family": "devices",
+    "region": "ZA",
+    "name": {
+      "en": "Firestick",
+      "af": "Firestick",
+      "zu": "Firestick"
+    },
+    "title": {
+      "en": "Firestick — South African streaming guide",
+      "af": "Firestick — Suid-Afrikaanse stroomgids",
+      "zu": "Firestick — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Read the exact Fire TV model and operating system before following an installation guide. Store availability can differ between devices and regions. A sideloading tutorial for another model is not proof of compatibility. Prefer the provider’s supported application and official installation route.",
+      "af": "Lees die presiese Fire TV-model en stelsel voor installasie. Winkelbeskikbaarheid verskil volgens toestel en gebied. ’n Handleiding vir ’n ander model bewys nie verenigbaarheid nie. Gebruik die ondersteunde toepassing en amptelike metode.",
+      "zu": "Funda imodeli ye-Fire TV nesistimu ngaphambi kokufaka. Isitolo singahluka ngokwedivayisi nendawo. Imiyalelo yenye imodeli ayiqinisekisi ukusebenzisana. Khetha uhlelo olusekelwayo nendlela esemthethweni yokufaka."
+    },
+    "detail": {
+      "en": "Read the exact Fire TV model and operating system before following an installation guide. Store availability can differ between devices and regions. A sideloading tutorial for another model is not proof of compatibility. Prefer the provider’s supported application and official installation route.",
+      "af": "Lees die presiese Fire TV-model en stelsel voor installasie. Winkelbeskikbaarheid verskil volgens toestel en gebied. ’n Handleiding vir ’n ander model bewys nie verenigbaarheid nie. Gebruik die ondersteunde toepassing en amptelike metode.",
+      "zu": "Funda imodeli ye-Fire TV nesistimu ngaphambi kokufaka. Isitolo singahluka ngokwedivayisi nendawo. Imiyalelo yenye imodeli ayiqinisekisi ukusebenzisana. Khetha uhlelo olusekelwayo nendlela esemthethweni yokufaka."
+    },
+    "sources": [
+      {
+        "name": "Firestick — official reference",
+        "url": "https://www.amazon.com/firetv"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "app-compatibility",
+        "task": "setup",
+        "title": {
+          "en": "Firestick: How do I check a supported setup?",
+          "af": "Firestick: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "Firestick: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "Read the exact Fire TV model and operating system before following an installation guide. Store availability can differ between devices and regions. A sideloading tutorial for another model is not proof of compatibility. Prefer the provider’s supported application and official installation route.",
+          "af": "Lees die presiese Fire TV-model en stelsel voor installasie. Winkelbeskikbaarheid verskil volgens toestel en gebied. ’n Handleiding vir ’n ander model bewys nie verenigbaarheid nie. Gebruik die ondersteunde toepassing en amptelike metode.",
+          "zu": "Funda imodeli ye-Fire TV nesistimu ngaphambi kokufaka. Isitolo singahluka ngokwedivayisi nendawo. Imiyalelo yenye imodeli ayiqinisekisi ukusebenzisana. Khetha uhlelo olusekelwayo nendlela esemthethweni yokufaka."
+        }
+      },
+      {
+        "slug": "black-screen",
+        "task": "playback",
+        "title": {
+          "en": "Firestick: How do I isolate a playback fault?",
+          "af": "Firestick: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Firestick: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Read the exact Fire TV model and operating system before following an installation guide. Store availability can differ between devices and regions. A sideloading tutorial for another model is not proof of compatibility. Prefer the provider’s supported application and official installation route.",
+          "af": "Lees die presiese Fire TV-model en stelsel voor installasie. Winkelbeskikbaarheid verskil volgens toestel en gebied. ’n Handleiding vir ’n ander model bewys nie verenigbaarheid nie. Gebruik die ondersteunde toepassing en amptelike metode.",
+          "zu": "Funda imodeli ye-Fire TV nesistimu ngaphambi kokufaka. Isitolo singahluka ngokwedivayisi nendawo. Imiyalelo yenye imodeli ayiqinisekisi ukusebenzisana. Khetha uhlelo olusekelwayo nendlela esemthethweni yokufaka."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "android-box",
+    "family": "devices",
+    "region": "ZA",
+    "name": {
+      "en": "Android TV box",
+      "af": "Android TV box",
+      "zu": "Android TV box"
+    },
+    "title": {
+      "en": "Android TV box — South African streaming guide",
+      "af": "Android TV box — Suid-Afrikaanse stroomgids",
+      "zu": "Android TV box — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "An Android box and an Android TV or Google TV device are not interchangeable labels. Check the model’s supported store, remote-control interface and provider compatibility. Phone apps may install without working properly on a television. Confirm video support before choosing a box.",
+      "af": "’n Android-boks en Android TV of Google TV is nie dieselfde etiket nie. Kontroleer die winkel, afstandbeheer en diensondersteuning. Foontoepassings werk nie noodwendig behoorlik op televisie nie. Bevestig video-ondersteuning voor aankoop.",
+      "zu": "Ibhokisi le-Android ne-Android TV noma i-Google TV akufani njalo. Hlola isitolo, isilawuli nokusekelwa yinkonzo. Uhlelo locingo lungafakwa kodwa lungasebenzi kahle kumabonakude. Qinisekisa ukusekelwa kwevidiyo ngaphambi kokuthenga."
+    },
+    "detail": {
+      "en": "An Android box and an Android TV or Google TV device are not interchangeable labels. Check the model’s supported store, remote-control interface and provider compatibility. Phone apps may install without working properly on a television. Confirm video support before choosing a box.",
+      "af": "’n Android-boks en Android TV of Google TV is nie dieselfde etiket nie. Kontroleer die winkel, afstandbeheer en diensondersteuning. Foontoepassings werk nie noodwendig behoorlik op televisie nie. Bevestig video-ondersteuning voor aankoop.",
+      "zu": "Ibhokisi le-Android ne-Android TV noma i-Google TV akufani njalo. Hlola isitolo, isilawuli nokusekelwa yinkonzo. Uhlelo locingo lungafakwa kodwa lungasebenzi kahle kumabonakude. Qinisekisa ukusekelwa kwevidiyo ngaphambi kokuthenga."
+    },
+    "sources": [
+      {
+        "name": "Android TV box — official reference",
+        "url": "https://support.google.com/googletv/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "certified-app-check",
+        "task": "setup",
+        "title": {
+          "en": "Android TV box: How do I check a supported setup?",
+          "af": "Android TV box: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "Android TV box: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "An Android box and an Android TV or Google TV device are not interchangeable labels. Check the model’s supported store, remote-control interface and provider compatibility. Phone apps may install without working properly on a television. Confirm video support before choosing a box.",
+          "af": "’n Android-boks en Android TV of Google TV is nie dieselfde etiket nie. Kontroleer die winkel, afstandbeheer en diensondersteuning. Foontoepassings werk nie noodwendig behoorlik op televisie nie. Bevestig video-ondersteuning voor aankoop.",
+          "zu": "Ibhokisi le-Android ne-Android TV noma i-Google TV akufani njalo. Hlola isitolo, isilawuli nokusekelwa yinkonzo. Uhlelo locingo lungafakwa kodwa lungasebenzi kahle kumabonakude. Qinisekisa ukusekelwa kwevidiyo ngaphambi kokuthenga."
+        }
+      },
+      {
+        "slug": "remote-and-playback",
+        "task": "playback",
+        "title": {
+          "en": "Android TV box: How do I isolate a playback fault?",
+          "af": "Android TV box: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Android TV box: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "An Android box and an Android TV or Google TV device are not interchangeable labels. Check the model’s supported store, remote-control interface and provider compatibility. Phone apps may install without working properly on a television. Confirm video support before choosing a box.",
+          "af": "’n Android-boks en Android TV of Google TV is nie dieselfde etiket nie. Kontroleer die winkel, afstandbeheer en diensondersteuning. Foontoepassings werk nie noodwendig behoorlik op televisie nie. Bevestig video-ondersteuning voor aankoop.",
+          "zu": "Ibhokisi le-Android ne-Android TV noma i-Google TV akufani njalo. Hlola isitolo, isilawuli nokusekelwa yinkonzo. Uhlelo locingo lungafakwa kodwa lungasebenzi kahle kumabonakude. Qinisekisa ukusekelwa kwevidiyo ngaphambi kokuthenga."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "smart-tv",
+    "family": "devices",
+    "region": "ZA",
+    "name": {
+      "en": "Smart TV",
+      "af": "Smart TV",
+      "zu": "Smart TV"
+    },
+    "title": {
+      "en": "Smart TV — South African streaming guide",
+      "af": "Smart TV — Suid-Afrikaanse stroomgids",
+      "zu": "Smart TV — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Write down the television model year and operating system. Samsung, LG, Hisense and Android TV can have different app stores and codec support. An application with the same name may have different features. Check the provider’s model list before paying for an external player.",
+      "af": "Noteer die televisie se modeljaar en stelsel. Samsung, LG, Hisense en Android TV het verskillende winkels en video-ondersteuning. Dieselfde toepassingsnaam kan verskillende funksies hê. Raadpleeg die verskaffer se lys voordat jy betaal.",
+      "zu": "Bhala unyaka wemodeli nesistimu kamabonakude. Ama-Samsung, LG, Hisense ne-Android TV anezitolo nokusekelwa kwevidiyo okuhlukene. Igama lohlelo elifanayo lingaba nezici ezahlukene. Hlola uhlu lomhl inzeki ngaphambi kokukhokha."
+    },
+    "detail": {
+      "en": "Write down the television model year and operating system. Samsung, LG, Hisense and Android TV can have different app stores and codec support. An application with the same name may have different features. Check the provider’s model list before paying for an external player.",
+      "af": "Noteer die televisie se modeljaar en stelsel. Samsung, LG, Hisense en Android TV het verskillende winkels en video-ondersteuning. Dieselfde toepassingsnaam kan verskillende funksies hê. Raadpleeg die verskaffer se lys voordat jy betaal.",
+      "zu": "Bhala unyaka wemodeli nesistimu kamabonakude. Ama-Samsung, LG, Hisense ne-Android TV anezitolo nokusekelwa kwevidiyo okuhlukene. Igama lohlelo elifanayo lingaba nezici ezahlukene. Hlola uhlu lomhl inzeki ngaphambi kokukhokha."
+    },
+    "sources": [
+      {
+        "name": "Smart TV — official reference",
+        "url": "https://www.dstv.com/en-za/help/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "model-year-check",
+        "task": "setup",
+        "title": {
+          "en": "Smart TV: How do I check a supported setup?",
+          "af": "Smart TV: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "Smart TV: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "Write down the television model year and operating system. Samsung, LG, Hisense and Android TV can have different app stores and codec support. An application with the same name may have different features. Check the provider’s model list before paying for an external player.",
+          "af": "Noteer die televisie se modeljaar en stelsel. Samsung, LG, Hisense en Android TV het verskillende winkels en video-ondersteuning. Dieselfde toepassingsnaam kan verskillende funksies hê. Raadpleeg die verskaffer se lys voordat jy betaal.",
+          "zu": "Bhala unyaka wemodeli nesistimu kamabonakude. Ama-Samsung, LG, Hisense ne-Android TV anezitolo nokusekelwa kwevidiyo okuhlukene. Igama lohlelo elifanayo lingaba nezici ezahlukene. Hlola uhlu lomhl inzeki ngaphambi kokukhokha."
+        }
+      },
+      {
+        "slug": "sound-without-picture",
+        "task": "playback",
+        "title": {
+          "en": "Smart TV: How do I isolate a playback fault?",
+          "af": "Smart TV: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Smart TV: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Write down the television model year and operating system. Samsung, LG, Hisense and Android TV can have different app stores and codec support. An application with the same name may have different features. Check the provider’s model list before paying for an external player.",
+          "af": "Noteer die televisie se modeljaar en stelsel. Samsung, LG, Hisense en Android TV het verskillende winkels en video-ondersteuning. Dieselfde toepassingsnaam kan verskillende funksies hê. Raadpleeg die verskaffer se lys voordat jy betaal.",
+          "zu": "Bhala unyaka wemodeli nesistimu kamabonakude. Ama-Samsung, LG, Hisense ne-Android TV anezitolo nokusekelwa kwevidiyo okuhlukene. Igama lohlelo elifanayo lingaba nezici ezahlukene. Hlola uhlu lomhl inzeki ngaphambi kokukhokha."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "iphone",
+    "family": "devices",
+    "region": "ZA",
+    "name": {
+      "en": "iPhone and iPad",
+      "af": "iPhone and iPad",
+      "zu": "iPhone and iPad"
+    },
+    "title": {
+      "en": "iPhone and iPad — South African streaming guide",
+      "af": "iPhone and iPad — Suid-Afrikaanse stroomgids",
+      "zu": "iPhone and iPad — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Check the supported iOS version and official App Store publisher before signing in. AirPlay support depends on the service and receiver, not just the phone. Test the programme on the phone first and then the television to isolate an output restriction from an account problem.",
+      "af": "Kontroleer die iOS-weergawe en App Store-uitgewer. AirPlay hang van die diens en ontvanger af, nie net die foon nie. Toets eers op die foon en daarna die televisie om uitset- en rekeningprobleme te skei.",
+      "zu": "Hlola inguqulo ye-iOS nomshicileli ku-App Store. I-AirPlay incike enkonzweni nakwamukelayo, hhayi ifoni kuphela. Zama kuqala ocingweni bese kumabonakude ukuhlukanisa inkinga yokukhipha isithombe neye-akhawunti."
+    },
+    "detail": {
+      "en": "Check the supported iOS version and official App Store publisher before signing in. AirPlay support depends on the service and receiver, not just the phone. Test the programme on the phone first and then the television to isolate an output restriction from an account problem.",
+      "af": "Kontroleer die iOS-weergawe en App Store-uitgewer. AirPlay hang van die diens en ontvanger af, nie net die foon nie. Toets eers op die foon en daarna die televisie om uitset- en rekeningprobleme te skei.",
+      "zu": "Hlola inguqulo ye-iOS nomshicileli ku-App Store. I-AirPlay incike enkonzweni nakwamukelayo, hhayi ifoni kuphela. Zama kuqala ocingweni bese kumabonakude ukuhlukanisa inkinga yokukhipha isithombe neye-akhawunti."
+    },
+    "sources": [
+      {
+        "name": "iPhone and iPad — official reference",
+        "url": "https://support.apple.com/airplay"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "app-and-account",
+        "task": "setup",
+        "title": {
+          "en": "iPhone and iPad: How do I check a supported setup?",
+          "af": "iPhone and iPad: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "iPhone and iPad: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "Check the supported iOS version and official App Store publisher before signing in. AirPlay support depends on the service and receiver, not just the phone. Test the programme on the phone first and then the television to isolate an output restriction from an account problem.",
+          "af": "Kontroleer die iOS-weergawe en App Store-uitgewer. AirPlay hang van die diens en ontvanger af, nie net die foon nie. Toets eers op die foon en daarna die televisie om uitset- en rekeningprobleme te skei.",
+          "zu": "Hlola inguqulo ye-iOS nomshicileli ku-App Store. I-AirPlay incike enkonzweni nakwamukelayo, hhayi ifoni kuphela. Zama kuqala ocingweni bese kumabonakude ukuhlukanisa inkinga yokukhipha isithombe neye-akhawunti."
+        }
+      },
+      {
+        "slug": "airplay-check",
+        "task": "playback",
+        "title": {
+          "en": "iPhone and iPad: How do I isolate a playback fault?",
+          "af": "iPhone and iPad: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "iPhone and iPad: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Check the supported iOS version and official App Store publisher before signing in. AirPlay support depends on the service and receiver, not just the phone. Test the programme on the phone first and then the television to isolate an output restriction from an account problem.",
+          "af": "Kontroleer die iOS-weergawe en App Store-uitgewer. AirPlay hang van die diens en ontvanger af, nie net die foon nie. Toets eers op die foon en daarna die televisie om uitset- en rekeningprobleme te skei.",
+          "zu": "Hlola inguqulo ye-iOS nomshicileli ku-App Store. I-AirPlay incike enkonzweni nakwamukelayo, hhayi ifoni kuphela. Zama kuqala ocingweni bese kumabonakude ukuhlukanisa inkinga yokukhipha isithombe neye-akhawunti."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kodi",
+    "family": "devices",
+    "region": "ZA",
+    "name": {
+      "en": "Kodi",
+      "af": "Kodi",
+      "zu": "Kodi"
+    },
+    "title": {
+      "en": "Kodi — South African streaming guide",
+      "af": "Kodi — Suid-Afrikaanse stroomgids",
+      "zu": "Kodi — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Kodi is a media player, not a television subscription. Installing it does not supply SuperSport or premium channels. Use documented add-ons and sources you are authorised to access. A third-party add-on failure is not automatically a Kodi-wide fault; record its name and version.",
+      "af": "Kodi is ’n mediaspeler, nie ’n televisie-intekening nie. Installasie verskaf nie SuperSport nie. Gebruik gedokumenteerde byvoegings en gemagtigde bronne. ’n Derdepartyfout is nie noodwendig ’n Kodi-fout nie; noteer naam en weergawe.",
+      "zu": "I-Kodi iyisidlali semidiya, hhayi ukubhalisa kukamabonakude. Ukuyifaka akukuniki i-SuperSport. Sebenzisa izengezo ezichaziwe nemithombo ogunyaziwe ukuyisebenzisa. Iphutha lesengezo alisho ukuthi yonke i-Kodi yonakele; bhala igama nenguqulo."
+    },
+    "detail": {
+      "en": "Kodi is a media player, not a television subscription. Installing it does not supply SuperSport or premium channels. Use documented add-ons and sources you are authorised to access. A third-party add-on failure is not automatically a Kodi-wide fault; record its name and version.",
+      "af": "Kodi is ’n mediaspeler, nie ’n televisie-intekening nie. Installasie verskaf nie SuperSport nie. Gebruik gedokumenteerde byvoegings en gemagtigde bronne. ’n Derdepartyfout is nie noodwendig ’n Kodi-fout nie; noteer naam en weergawe.",
+      "zu": "I-Kodi iyisidlali semidiya, hhayi ukubhalisa kukamabonakude. Ukuyifaka akukuniki i-SuperSport. Sebenzisa izengezo ezichaziwe nemithombo ogunyaziwe ukuyisebenzisa. Iphutha lesengezo alisho ukuthi yonke i-Kodi yonakele; bhala igama nenguqulo."
+    },
+    "sources": [
+      {
+        "name": "Kodi — official reference",
+        "url": "https://kodi.tv/about/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "player-versus-subscription",
+        "task": "setup",
+        "title": {
+          "en": "Kodi: How do I check a supported setup?",
+          "af": "Kodi: Hoe kontroleer ek ’n ondersteunde opstelling?",
+          "zu": "Kodi: Ngiluhlola kanjani uhlelo olusekelwayo?"
+        },
+        "detail": {
+          "en": "Kodi is a media player, not a television subscription. Installing it does not supply SuperSport or premium channels. Use documented add-ons and sources you are authorised to access. A third-party add-on failure is not automatically a Kodi-wide fault; record its name and version.",
+          "af": "Kodi is ’n mediaspeler, nie ’n televisie-intekening nie. Installasie verskaf nie SuperSport nie. Gebruik gedokumenteerde byvoegings en gemagtigde bronne. ’n Derdepartyfout is nie noodwendig ’n Kodi-fout nie; noteer naam en weergawe.",
+          "zu": "I-Kodi iyisidlali semidiya, hhayi ukubhalisa kukamabonakude. Ukuyifaka akukuniki i-SuperSport. Sebenzisa izengezo ezichaziwe nemithombo ogunyaziwe ukuyisebenzisa. Iphutha lesengezo alisho ukuthi yonke i-Kodi yonakele; bhala igama nenguqulo."
+        }
+      },
+      {
+        "slug": "addon-troubleshooting",
+        "task": "playback",
+        "title": {
+          "en": "Kodi: How do I isolate a playback fault?",
+          "af": "Kodi: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Kodi: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Kodi is a media player, not a television subscription. Installing it does not supply SuperSport or premium channels. Use documented add-ons and sources you are authorised to access. A third-party add-on failure is not automatically a Kodi-wide fault; record its name and version.",
+          "af": "Kodi is ’n mediaspeler, nie ’n televisie-intekening nie. Installasie verskaf nie SuperSport nie. Gebruik gedokumenteerde byvoegings en gemagtigde bronne. ’n Derdepartyfout is nie noodwendig ’n Kodi-fout nie; noteer naam en weergawe.",
+          "zu": "I-Kodi iyisidlali semidiya, hhayi ukubhalisa kukamabonakude. Ukuyifaka akukuniki i-SuperSport. Sebenzisa izengezo ezichaziwe nemithombo ogunyaziwe ukuyisebenzisa. Iphutha lesengezo alisho ukuthi yonke i-Kodi yonakele; bhala igama nenguqulo."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "buffering",
+    "family": "problems",
+    "region": "ZA",
+    "name": {
+      "en": "IPTV buffering",
+      "af": "IPTV buffering",
+      "zu": "IPTV buffering"
+    },
+    "title": {
+      "en": "IPTV buffering — South African streaming guide",
+      "af": "IPTV buffering — Suid-Afrikaanse stroomgids",
+      "zu": "IPTV buffering — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Separate slow start-up, repeated stalls and live video delay. A larger buffer may reduce stalls while increasing delay. Compare the same programme and quality on Ethernet and Wi-Fi; a speed-test score alone cannot identify the provider’s video-path problem.",
+      "af": "Skei stadige begin, herhaalde onderbrekings en videovertraging. ’n Groter buffer kan onderbrekings verminder maar vertraging vergroot. Vergelyk dieselfde program en gehalte op Ethernet en Wi-Fi; ’n spoedtoets alleen bewys nie die fout nie.",
+      "zu": "Hlukanisa ukuqala kancane, ukunqamuka nokubambezeleka kwevidiyo. I-buffer enkulu inganciphisa ukunqamuka kodwa yandise ukubambezeleka. Qhathanisa uhlelo nekhwalithi efanayo ku-Ethernet ne-Wi-Fi; ukuhlola isivinini kuphela akwanele."
+    },
+    "detail": {
+      "en": "Separate slow start-up, repeated stalls and live video delay. A larger buffer may reduce stalls while increasing delay. Compare the same programme and quality on Ethernet and Wi-Fi; a speed-test score alone cannot identify the provider’s video-path problem.",
+      "af": "Skei stadige begin, herhaalde onderbrekings en videovertraging. ’n Groter buffer kan onderbrekings verminder maar vertraging vergroot. Vergelyk dieselfde program en gehalte op Ethernet en Wi-Fi; ’n spoedtoets alleen bewys nie die fout nie.",
+      "zu": "Hlukanisa ukuqala kancane, ukunqamuka nokubambezeleka kwevidiyo. I-buffer enkulu inganciphisa ukunqamuka kodwa yandise ukubambezeleka. Qhathanisa uhlelo nekhwalithi efanayo ku-Ethernet ne-Wi-Fi; ukuhlola isivinini kuphela akwanele."
+    },
+    "sources": [
+      {
+        "name": "IPTV buffering — official reference",
+        "url": "https://support.google.com/googletv/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "wifi-or-provider",
+        "task": "playback",
+        "title": {
+          "en": "IPTV buffering: How do I isolate a playback fault?",
+          "af": "IPTV buffering: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "IPTV buffering: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Separate slow start-up, repeated stalls and live video delay. A larger buffer may reduce stalls while increasing delay. Compare the same programme and quality on Ethernet and Wi-Fi; a speed-test score alone cannot identify the provider’s video-path problem.",
+          "af": "Skei stadige begin, herhaalde onderbrekings en videovertraging. ’n Groter buffer kan onderbrekings verminder maar vertraging vergroot. Vergelyk dieselfde program en gehalte op Ethernet en Wi-Fi; ’n spoedtoets alleen bewys nie die fout nie.",
+          "zu": "Hlukanisa ukuqala kancane, ukunqamuka nokubambezeleka kwevidiyo. I-buffer enkulu inganciphisa ukunqamuka kodwa yandise ukubambezeleka. Qhathanisa uhlelo nekhwalithi efanayo ku-Ethernet ne-Wi-Fi; ukuhlola isivinini kuphela akwanele."
+        }
+      },
+      {
+        "slug": "buffer-versus-delay",
+        "task": "diagnosis",
+        "title": {
+          "en": "IPTV buffering: Which checks identify the cause?",
+          "af": "IPTV buffering: Watter kontroles wys die oorsaak?",
+          "zu": "IPTV buffering: Yikuphi ukuhlola okuthola imbangela?"
+        },
+        "detail": {
+          "en": "Separate slow start-up, repeated stalls and live video delay. A larger buffer may reduce stalls while increasing delay. Compare the same programme and quality on Ethernet and Wi-Fi; a speed-test score alone cannot identify the provider’s video-path problem.",
+          "af": "Skei stadige begin, herhaalde onderbrekings en videovertraging. ’n Groter buffer kan onderbrekings verminder maar vertraging vergroot. Vergelyk dieselfde program en gehalte op Ethernet en Wi-Fi; ’n spoedtoets alleen bewys nie die fout nie.",
+          "zu": "Hlukanisa ukuqala kancane, ukunqamuka nokubambezeleka kwevidiyo. I-buffer enkulu inganciphisa ukunqamuka kodwa yandise ukubambezeleka. Qhathanisa uhlelo nekhwalithi efanayo ku-Ethernet ne-Wi-Fi; ukuhlola isivinini kuphela akwanele."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "geo-block",
+    "family": "problems",
+    "region": "ZA",
+    "name": {
+      "en": "Geographic restrictions",
+      "af": "Geographic restrictions",
+      "zu": "Geographic restrictions"
+    },
+    "title": {
+      "en": "Geographic restrictions — South African streaming guide",
+      "af": "Geographic restrictions — Suid-Afrikaanse stroomgids",
+      "zu": "Geographic restrictions — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "A region error is not the same as a slow connection. Read the provider’s supported territories and confirm the country attached to your account. Installing another player does not change distribution rights. If your real location is misidentified, contact the provider with the error and ISP details.",
+      "af": "’n Gebiedsfout is nie ’n stadige verbinding nie. Lees ondersteunde gebiede en kontroleer jou rekeningland. ’n Ander speler verander nie uitsaairegte nie. Kontak ondersteuning as jou werklike ligging verkeerd geïdentifiseer word.",
+      "zu": "Iphutha lendawo alifani noxhumano oluhamba kancane. Funda izindawo ezisekelwayo uqinisekise izwe le-akhawunti. Esinye isidlali asishintshi amalungelo. Uma indawo yakho ibonakala ngokungalungile, thumela iphutha nemininingwane ye-inthanethi kwabasekeli."
+    },
+    "detail": {
+      "en": "A region error is not the same as a slow connection. Read the provider’s supported territories and confirm the country attached to your account. Installing another player does not change distribution rights. If your real location is misidentified, contact the provider with the error and ISP details.",
+      "af": "’n Gebiedsfout is nie ’n stadige verbinding nie. Lees ondersteunde gebiede en kontroleer jou rekeningland. ’n Ander speler verander nie uitsaairegte nie. Kontak ondersteuning as jou werklike ligging verkeerd geïdentifiseer word.",
+      "zu": "Iphutha lendawo alifani noxhumano oluhamba kancane. Funda izindawo ezisekelwayo uqinisekise izwe le-akhawunti. Esinye isidlali asishintshi amalungelo. Uma indawo yakho ibonakala ngokungalungile, thumela iphutha nemininingwane ye-inthanethi kwabasekeli."
+    },
+    "sources": [
+      {
+        "name": "Geographic restrictions — official reference",
+        "url": "https://www.dstv.com/en-za/help/faqs/services/dstv-app/what-is-the-dstv-stream-app/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "region-error",
+        "task": "diagnosis",
+        "title": {
+          "en": "Geographic restrictions: Which checks identify the cause?",
+          "af": "Geographic restrictions: Watter kontroles wys die oorsaak?",
+          "zu": "Geographic restrictions: Yikuphi ukuhlola okuthola imbangela?"
+        },
+        "detail": {
+          "en": "A region error is not the same as a slow connection. Read the provider’s supported territories and confirm the country attached to your account. Installing another player does not change distribution rights. If your real location is misidentified, contact the provider with the error and ISP details.",
+          "af": "’n Gebiedsfout is nie ’n stadige verbinding nie. Lees ondersteunde gebiede en kontroleer jou rekeningland. ’n Ander speler verander nie uitsaairegte nie. Kontak ondersteuning as jou werklike ligging verkeerd geïdentifiseer word.",
+          "zu": "Iphutha lendawo alifani noxhumano oluhamba kancane. Funda izindawo ezisekelwayo uqinisekise izwe le-akhawunti. Esinye isidlali asishintshi amalungelo. Uma indawo yakho ibonakala ngokungalungile, thumela iphutha nemininingwane ye-inthanethi kwabasekeli."
+        }
+      },
+      {
+        "slug": "travel-account-check",
+        "task": "availability",
+        "title": {
+          "en": "Geographic restrictions: What access should I verify?",
+          "af": "Geographic restrictions: Watter toegang moet ek bevestig?",
+          "zu": "Geographic restrictions: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "A region error is not the same as a slow connection. Read the provider’s supported territories and confirm the country attached to your account. Installing another player does not change distribution rights. If your real location is misidentified, contact the provider with the error and ISP details.",
+          "af": "’n Gebiedsfout is nie ’n stadige verbinding nie. Lees ondersteunde gebiede en kontroleer jou rekeningland. ’n Ander speler verander nie uitsaairegte nie. Kontak ondersteuning as jou werklike ligging verkeerd geïdentifiseer word.",
+          "zu": "Iphutha lendawo alifani noxhumano oluhamba kancane. Funda izindawo ezisekelwayo uqinisekise izwe le-akhawunti. Esinye isidlali asishintshi amalungelo. Uma indawo yakho ibonakala ngokungalungile, thumela iphutha nemininingwane ye-inthanethi kwabasekeli."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "vpn-south-africa",
+    "family": "problems",
+    "region": "ZA",
+    "name": {
+      "en": "VPN and South African streaming",
+      "af": "VPN and South African streaming",
+      "zu": "VPN and South African streaming"
+    },
+    "title": {
+      "en": "VPN and South African streaming — South African streaming guide",
+      "af": "VPN and South African streaming — Suid-Afrikaanse stroomgids",
+      "zu": "VPN and South African streaming — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "A VPN changes the network route and may affect speed or trigger a provider restriction. It does not create broadcast rights or guarantee access. For ordinary troubleshooting, compare your own authorised service with and without the VPN where permitted, keeping the programme and device unchanged.",
+      "af": "’n VPN verander die netwerkroete en kan spoed of beperkings beïnvloed. Dit skep nie uitsaairegte of gewaarborgde toegang nie. Vergelyk jou gemagtigde diens met en sonder die VPN waar toegelaat, met dieselfde program en toestel.",
+      "zu": "I-VPN ishintsha indlela yenethiwekhi futhi ingathinta isivinini noma imikhawulo. Ayidali amalungelo noma iqinisekise ukufinyelela. Uma kuvunyelwe, qhathanisa inkonzo yakho egunyaziwe nge-VPN nangaphandle kwayo, ugcine uhlelo nedivayisi kufana."
+    },
+    "detail": {
+      "en": "A VPN changes the network route and may affect speed or trigger a provider restriction. It does not create broadcast rights or guarantee access. For ordinary troubleshooting, compare your own authorised service with and without the VPN where permitted, keeping the programme and device unchanged.",
+      "af": "’n VPN verander die netwerkroete en kan spoed of beperkings beïnvloed. Dit skep nie uitsaairegte of gewaarborgde toegang nie. Vergelyk jou gemagtigde diens met en sonder die VPN waar toegelaat, met dieselfde program en toestel.",
+      "zu": "I-VPN ishintsha indlela yenethiwekhi futhi ingathinta isivinini noma imikhawulo. Ayidali amalungelo noma iqinisekise ukufinyelela. Uma kuvunyelwe, qhathanisa inkonzo yakho egunyaziwe nge-VPN nangaphandle kwayo, ugcine uhlelo nedivayisi kufana."
+    },
+    "sources": [
+      {
+        "name": "VPN and South African streaming — official reference",
+        "url": "https://www.dstv.com/en-za/help/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "connection-comparison",
+        "task": "diagnosis",
+        "title": {
+          "en": "VPN and South African streaming: Which checks identify the cause?",
+          "af": "VPN and South African streaming: Watter kontroles wys die oorsaak?",
+          "zu": "VPN and South African streaming: Yikuphi ukuhlola okuthola imbangela?"
+        },
+        "detail": {
+          "en": "A VPN changes the network route and may affect speed or trigger a provider restriction. It does not create broadcast rights or guarantee access. For ordinary troubleshooting, compare your own authorised service with and without the VPN where permitted, keeping the programme and device unchanged.",
+          "af": "’n VPN verander die netwerkroete en kan spoed of beperkings beïnvloed. Dit skep nie uitsaairegte of gewaarborgde toegang nie. Vergelyk jou gemagtigde diens met en sonder die VPN waar toegelaat, met dieselfde program en toestel.",
+          "zu": "I-VPN ishintsha indlela yenethiwekhi futhi ingathinta isivinini noma imikhawulo. Ayidali amalungelo noma iqinisekise ukufinyelela. Uma kuvunyelwe, qhathanisa inkonzo yakho egunyaziwe nge-VPN nangaphandle kwayo, ugcine uhlelo nedivayisi kufana."
+        }
+      },
+      {
+        "slug": "privacy-and-account",
+        "task": "availability",
+        "title": {
+          "en": "VPN and South African streaming: What access should I verify?",
+          "af": "VPN and South African streaming: Watter toegang moet ek bevestig?",
+          "zu": "VPN and South African streaming: Yikuphi ukufinyelela okufanele ngikuqinisekise?"
+        },
+        "detail": {
+          "en": "A VPN changes the network route and may affect speed or trigger a provider restriction. It does not create broadcast rights or guarantee access. For ordinary troubleshooting, compare your own authorised service with and without the VPN where permitted, keeping the programme and device unchanged.",
+          "af": "’n VPN verander die netwerkroete en kan spoed of beperkings beïnvloed. Dit skep nie uitsaairegte of gewaarborgde toegang nie. Vergelyk jou gemagtigde diens met en sonder die VPN waar toegelaat, met dieselfde program en toestel.",
+          "zu": "I-VPN ishintsha indlela yenethiwekhi futhi ingathinta isivinini noma imikhawulo. Ayidali amalungelo noma iqinisekise ukufinyelela. Uma kuvunyelwe, qhathanisa inkonzo yakho egunyaziwe nge-VPN nangaphandle kwayo, ugcine uhlelo nedivayisi kufana."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "load-shedding",
+    "family": "problems",
+    "region": "ZA",
+    "name": {
+      "en": "Streaming during load shedding",
+      "af": "Streaming during load shedding",
+      "zu": "Streaming during load shedding"
+    },
+    "title": {
+      "en": "Streaming during load shedding — South African streaming guide",
+      "af": "Streaming during load shedding — Suid-Afrikaanse stroomgids",
+      "zu": "Streaming during load shedding — umhlahlandlela wokusakaza waseNingizimu Afrika"
+    },
+    "lead": {
+      "en": "Keeping a router powered does not guarantee internet access: the fibre ONT and upstream network also matter. Check your ISP’s outage notice before buying backup equipment. Use manufacturer-rated power products and record which device loses power; do not improvise wiring or assume an advertised runtime fits your setup.",
+      "af": "’n Roeteerder met krag waarborg nie internet nie: die vesel-ONT en netwerk tel ook. Lees jou internetverskaffer se onderbrekingskennisgewing. Gebruik korrek gegradeerde kragprodukte; moenie bedrading improviseer of geadverteerde looptyd aanvaar nie.",
+      "zu": "Ugesi ku-router awuqinisekisi i-inthanethi: i-ONT nenethiwekhi yangaphandle nakho kubalulekile. Hlola isaziso somhlinzeki ngaphambi kokuthenga. Sebenzisa imikhiqizo yamandla efanele; ungazenzeli izintambo noma ucabange ukuthi isikhathi sebhethri esikhangisiwe sizosebenza kuwe."
+    },
+    "detail": {
+      "en": "Keeping a router powered does not guarantee internet access: the fibre ONT and upstream network also matter. Check your ISP’s outage notice before buying backup equipment. Use manufacturer-rated power products and record which device loses power; do not improvise wiring or assume an advertised runtime fits your setup.",
+      "af": "’n Roeteerder met krag waarborg nie internet nie: die vesel-ONT en netwerk tel ook. Lees jou internetverskaffer se onderbrekingskennisgewing. Gebruik korrek gegradeerde kragprodukte; moenie bedrading improviseer of geadverteerde looptyd aanvaar nie.",
+      "zu": "Ugesi ku-router awuqinisekisi i-inthanethi: i-ONT nenethiwekhi yangaphandle nakho kubalulekile. Hlola isaziso somhlinzeki ngaphambi kokuthenga. Sebenzisa imikhiqizo yamandla efanele; ungazenzeli izintambo noma ucabange ukuthi isikhathi sebhethri esikhangisiwe sizosebenza kuwe."
+    },
+    "sources": [
+      {
+        "name": "Streaming during load shedding — official reference",
+        "url": "https://www.eskom.co.za/distribution/customer-service/outages/"
+      }
+    ],
+    "satellites": [
+      {
+        "slug": "router-and-ont",
+        "task": "diagnosis",
+        "title": {
+          "en": "Streaming during load shedding: Which checks identify the cause?",
+          "af": "Streaming during load shedding: Watter kontroles wys die oorsaak?",
+          "zu": "Streaming during load shedding: Yikuphi ukuhlola okuthola imbangela?"
+        },
+        "detail": {
+          "en": "Keeping a router powered does not guarantee internet access: the fibre ONT and upstream network also matter. Check your ISP’s outage notice before buying backup equipment. Use manufacturer-rated power products and record which device loses power; do not improvise wiring or assume an advertised runtime fits your setup.",
+          "af": "’n Roeteerder met krag waarborg nie internet nie: die vesel-ONT en netwerk tel ook. Lees jou internetverskaffer se onderbrekingskennisgewing. Gebruik korrek gegradeerde kragprodukte; moenie bedrading improviseer of geadverteerde looptyd aanvaar nie.",
+          "zu": "Ugesi ku-router awuqinisekisi i-inthanethi: i-ONT nenethiwekhi yangaphandle nakho kubalulekile. Hlola isaziso somhlinzeki ngaphambi kokuthenga. Sebenzisa imikhiqizo yamandla efanele; ungazenzeli izintambo noma ucabange ukuthi isikhathi sebhethri esikhangisiwe sizosebenza kuwe."
+        }
+      },
+      {
+        "slug": "mobile-data-fallback",
+        "task": "playback",
+        "title": {
+          "en": "Streaming during load shedding: How do I isolate a playback fault?",
+          "af": "Streaming during load shedding: Hoe isoleer ek ’n afspeelfout?",
+          "zu": "Streaming during load shedding: Ngiyihlukanisa kanjani inkinga yokudlala?"
+        },
+        "detail": {
+          "en": "Keeping a router powered does not guarantee internet access: the fibre ONT and upstream network also matter. Check your ISP’s outage notice before buying backup equipment. Use manufacturer-rated power products and record which device loses power; do not improvise wiring or assume an advertised runtime fits your setup.",
+          "af": "’n Roeteerder met krag waarborg nie internet nie: die vesel-ONT en netwerk tel ook. Lees jou internetverskaffer se onderbrekingskennisgewing. Gebruik korrek gegradeerde kragprodukte; moenie bedrading improviseer of geadverteerde looptyd aanvaar nie.",
+          "zu": "Ugesi ku-router awuqinisekisi i-inthanethi: i-ONT nenethiwekhi yangaphandle nakho kubalulekile. Hlola isaziso somhlinzeki ngaphambi kokuthenga. Sebenzisa imikhiqizo yamandla efanele; ungazenzeli izintambo noma ucabange ukuthi isikhathi sebhethri esikhangisiwe sizosebenza kuwe."
+        }
+      }
+    ]
+  }
+]
