@@ -1,3 +1,5 @@
+> **Status 2026-11-20 — site withdrawn.** Every URL answers 410 Gone with noindex (`scripts/withdrawn.mjs`, set in `vercel.json`). Do not restore the offer pages or republish them under other URLs or with synonyms unless rights to the content offered are documented. See `docs/withdrawal-2026-11-20.md`. While the withdrawal is in force it supersedes the instructions below.
+
 # AGENTS.md
 
 Notes for AI coding agents (Claude Code, Cursor, GitHub Copilot Workspace)

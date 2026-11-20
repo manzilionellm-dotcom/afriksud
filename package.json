@@ -9,7 +9,9 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "aio:llms": "node scripts/aio-llms.mjs",
-    "aio:check": "node scripts/aio-check.mjs"
+    "aio:check": "node scripts/aio-check.mjs",
+    "build:withdrawn": "node scripts/withdrawn.mjs",
+    "test:withdrawn": "node scripts/withdrawn.mjs && node --test scripts/withdrawn.test.mjs"
   },
   "dependencies": {
     "@ai-sdk/gateway": "2.0.27",
