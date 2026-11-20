@@ -165,3 +165,6 @@ Revert the withdrawal commit, or promote the deployment above in Vercel, only on
 - https://iptvmzansi.com/xh/language/iptv-xhosa (was 200)
 - https://iptvmzansi.com/zu (was 200)
 - https://iptvmzansi.com/zu/language/iptv-zulu (was 200)
+
+## Follow-up fix (2026-11-20)
+- Vercel deployed the root `middleware.ts` as routing middleware even with the withdrawn build, and it failed without the framework dependencies (`MIDDLEWARE_INVOCATION_FAILED`, HTTP 500 on every URL). The file is moved, unchanged, to `docs/withdrawn-source/middleware.ts`; move it back to the root when restoring the site.
