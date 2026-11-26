@@ -175,8 +175,8 @@ export const countries: Country[] = [
 // Where SA diaspora lives. Big SEO opportunity: "watch SuperSport in UK", etc.
 export const expatCountries: ExpatCountry[] = [
   { flag: "🇬🇧", code: "gb", name: "United Kingdom", desc: "Full SA TV in London, Manchester, Birmingham — SuperSport, SABC, kykNET with no geo-blocking." },
-  { flag: "🇦🇺", code: "au", name: "Australia",       desc: "SuperSport and SA channels in Perth, Sydney, Melbourne — perfect for the SA expat community." },
-  { flag: "🇳🇿", code: "nz", name: "New Zealand",     desc: "South African channels in Auckland, Wellington, Christchurch — low-latency stream." },
+  { flag: "🇦🇺", code: "au", name: "Australia",       desc: "Check your device and local programme availability. See prepaid plans in US dollars.", guidePath: "/en-au/sa-abroad/australia" },
+  { flag: "🇳🇿", code: "nz", name: "New Zealand",     desc: "Ask about a programme in New Zealand and try the service on your home connection.", guidePath: "/en-nz/sa-abroad/new-zealand" },
   { flag: "🇺🇸", code: "us", name: "United States",   desc: "Watch SuperSport and SABC in Houston, NYC, LA — large SA community supported." },
   { flag: "🇨🇦", code: "ca", name: "Canada",          desc: "SA TV in Toronto, Vancouver, Calgary, Montreal." },
   { flag: "🇦🇪", code: "ae", name: "UAE / Dubai",     desc: "SA TV for South Africans in the Emirates — test 4K on the trial." },

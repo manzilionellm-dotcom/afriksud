@@ -19,6 +19,7 @@ import {
   type Locale,
 } from "../../lib/locales";
 import { hreflangFor, localeUrl, SITE_URL } from "../../lib/url";
+import { isOceaniaMarket, OCEANIA_MARKETS } from "../../lib/oceania-offer";
 import { AnalyticsProvider } from "../../lib/analytics/AnalyticsProvider";
 import { WhatsAppFabLink } from "../../components/seo/WhatsAppFabLink";
 import "../globals.css";
@@ -154,6 +155,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return BASE_METADATA;
   const meta = LOCALE_META[locale as Locale];
+  const other = { ...(BASE_METADATA.other as Record<string, string>) };
+  if (isOceaniaMarket(locale)) {
+    other["geo.region"] = meta.country;
+    other["geo.placename"] = OCEANIA_MARKETS[locale].country;
+    delete other["geo.position"];
+    delete other.ICBM;
+  }
   return {
     ...BASE_METADATA,
     alternates: {
@@ -163,12 +171,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       ...BASE_METADATA.openGraph,
       locale: meta.ogLocale,
+      ...(isOceaniaMarket(locale) ? { countryName: OCEANIA_MARKETS[locale].country } : {}),
       alternateLocale: LOCALES.filter((l) => l !== locale).map(
         (l) => LOCALE_META[l].ogLocale
       ),
     },
     other: {
-      ...(BASE_METADATA.other as Record<string, string>),
+      ...other,
       "x-mz-locale": locale,
     },
   };

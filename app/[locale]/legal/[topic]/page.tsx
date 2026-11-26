@@ -1,6 +1,7 @@
 // app/[locale]/legal/[topic]/page.tsx
 // Skeleton legal pages: popia, terms, refund, cookies, about.
 
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -13,6 +14,9 @@ import {
   getLegalTopic,
   isNoindexLegal,
 } from "../../../../lib/seo/legal";
+import { isOceaniaMarket } from "../../../../lib/oceania-offer";
+import { oceaniaRouteMetadata } from "../../../../lib/seo/oceania-route";
+import { OceaniaOffer } from "../../../../components/seo/OceaniaOffer";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { JsonLd } from "../../../../lib/seo/jsonld";
 import { breadcrumbSchema } from "../../../../lib/seo/breadcrumb";
@@ -29,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, topic } = await params;
   const data = getLegalTopic(topic);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
+  if (topic === "terms" && isOceaniaMarket(locale)) return oceaniaRouteMetadata(locale, "terms");
   return {
     title: data.title,
     description: data.metaDescription,
@@ -57,6 +62,23 @@ export default async function LegalPage({ params }: Props) {
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const data = getLegalTopic(topic);
   if (!data) notFound();
+  if (topic === "terms" && isOceaniaMarket(locale)) {
+    return (
+      <OceaniaOffer market={locale} view="terms">
+        <p>{data.lead}</p>
+        <p>{LEGAL_DETAILS_PENDING}</p>
+        {data.sections.map((section) => (
+          <section key={section.h2}>
+            <h2>{section.h2}</h2>
+            {(section.oceaniaBody ?? section.body).map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+        <Link href={`/${locale}/legal/refund`}>Read the full refund policy</Link>
+      </OceaniaOffer>
+    );
+  }
 
   return (
     <LongformShell locale={locale as Locale}>

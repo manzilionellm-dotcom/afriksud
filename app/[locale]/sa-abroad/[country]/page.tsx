@@ -5,7 +5,7 @@
 // hreflang lists only that canonical URL (self + x-default). Locales
 // that are noindex (fr, pt-mz) are never the canonical target.
 
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -20,6 +20,9 @@ import {
   getSaAbroadCountry,
   saAbroadFaq,
 } from "../../../../lib/seo/sa-abroad";
+import { isOceaniaMarket } from "../../../../lib/oceania-offer";
+import { oceaniaRouteMetadata } from "../../../../lib/seo/oceania-route";
+import { OceaniaOffer } from "../../../../components/seo/OceaniaOffer";
 import { JsonLd } from "../../../../lib/seo/jsonld";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
@@ -37,6 +40,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, country } = await params;
   const data = getSaAbroadCountry(country);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
+
+  if (isOceaniaMarket(data.preferredCanonicalLocale)) {
+    return oceaniaRouteMetadata(data.preferredCanonicalLocale, "guide", locale === data.preferredCanonicalLocale);
+  }
 
   const cityList = data.cities.join(", ");
   const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
@@ -79,6 +86,13 @@ export default async function SaAbroadCountryPage({ params }: Props) {
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const data = getSaAbroadCountry(country);
   if (!data) notFound();
+
+  if (isOceaniaMarket(data.preferredCanonicalLocale)) {
+    if (locale !== data.preferredCanonicalLocale) {
+      permanentRedirect(`/${data.preferredCanonicalLocale}/sa-abroad/${country}`);
+    }
+    return <OceaniaOffer market={data.preferredCanonicalLocale} view="guide" />;
+  }
 
   const cityList = data.cities.join(", ");
   const lastCity = data.cities[data.cities.length - 1];

@@ -5,6 +5,7 @@
 // translations. The number is fixed — do not read it from env.
 
 import type { Locale } from "../../lib/locales";
+import { waMeLink } from "./utils";
 
 export const WA_NUMBER = "447307410512";
 
@@ -43,6 +44,11 @@ export function fabLang(locale: Locale): FabLang {
  * which page the visitor came from. Context is data, not copy.
  */
 export function waNeutralHref(locale: Locale, context?: string): string {
+  if (locale === "en-au" || locale === "en-nz") {
+    const country = locale === "en-au" ? "Australia" : "New Zealand";
+    const enquiry = `I’m in ${country} and would like to check a programme before paying. My device: __. Programme: __.`;
+    return waMeLink(context ? `${enquiry} [${context}]` : enquiry);
+  }
   const base = WA_NEUTRAL_MESSAGE[fabLang(locale)];
   const text = context ? `${base} [${context}]` : base;
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;

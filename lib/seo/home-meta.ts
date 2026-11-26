@@ -17,6 +17,7 @@
 // not run through the template.
 
 import type { Locale } from "../locales";
+import { OCEANIA_MARKETS, OCEANIA_PLANS, type OceaniaMarket } from "../oceania-offer";
 
 export type HomeMeta = {
   /** <title> WITHOUT brand suffix (the layout template appends it). */
@@ -28,6 +29,16 @@ export type HomeMeta = {
 };
 
 const BRAND = "Mzansi Stream";
+
+function oceaniaHomeMeta(market: OceaniaMarket): HomeMeta {
+  const { country } = OCEANIA_MARKETS[market];
+  const prices = OCEANIA_PLANS.map((plan) => `US$${plan.usd}/${plan.id}`);
+  const options = new Intl.ListFormat("en-GB", { type: "disjunction" }).format(prices);
+  return {
+    title: `South African TV in ${country}`,
+    description: `Start a free 24-hour trial in ${country}, Monday to Friday. No card needed. Ask about your channels on WhatsApp. Prepay ${options}.`,
+  };
+}
 
 export const HOME_META: Record<Locale, HomeMeta> = {
   // ── English South Africa (default) — unchanged, protects the ranking page.
@@ -45,11 +56,7 @@ export const HOME_META: Record<Locale, HomeMeta> = {
     description:
       "Watch South African TV in the UK — SuperSport and DStv-style channels in 4K, no decoder. Free 24h trial on WhatsApp. From R99/mo.",
   },
-  "en-au": {
-    title: "South African IPTV in Australia — SuperSport & DStv",
-    description:
-      "Watch South African TV in Australia — SuperSport and DStv-style channels in 4K, no dish. Free 24h trial on WhatsApp. From R99/mo.",
-  },
+  "en-au": oceaniaHomeMeta("en-au"),
   "en-us": {
     title: "South African IPTV in the USA — SuperSport & DStv",
     description:
@@ -60,11 +67,7 @@ export const HOME_META: Record<Locale, HomeMeta> = {
     description:
       "Watch South African TV in the UAE — SuperSport and DStv-style channels in 4K, no dish. Free 24h trial on WhatsApp. From R99/mo.",
   },
-  "en-nz": {
-    title: "South African IPTV in New Zealand — SuperSport & DStv",
-    description:
-      "Watch South African TV in New Zealand — SuperSport and DStv-style channels in 4K, no dish. Free 24h trial on WhatsApp. From R99/mo.",
-  },
+  "en-nz": oceaniaHomeMeta("en-nz"),
   "en-zw": {
     title: "Best IPTV Zimbabwe 2026 — Live TV in 4K",
     description:

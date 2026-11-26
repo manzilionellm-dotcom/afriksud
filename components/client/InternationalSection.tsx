@@ -7,6 +7,7 @@ import { useLang } from "./LanguageProvider";
 import { dict } from "../shared/dict";
 import { expatCountries } from "../shared/countries";
 import { generateWhatsAppLink } from "../shared/utils";
+import { isOceaniaMarket } from "../../lib/oceania-offer";
 import { SA_ABROAD_COUNTRIES } from "../../lib/seo/sa-abroad";
 
 export function InternationalSection() {
@@ -47,8 +48,8 @@ export function InternationalSection() {
             key={country.code}
             role="listitem"
             className="intlCard"
-            href={generateWhatsAppLink(buildMsg(country.name), ua, `Intl-${country.code}`)}
-            target="_blank"
+            href={country.guidePath ?? generateWhatsAppLink(buildMsg(country.name), ua, `Intl-${country.code}`)}
+            target={country.guidePath ? undefined : "_blank"}
             rel="noreferrer"
             aria-label={`${country.name} — ${country.desc}`}
           >
@@ -80,7 +81,7 @@ export function InternationalSection() {
         <ul>
           {SA_ABROAD_COUNTRIES.map((c) => (
             <li key={c.slug}>
-              <a href={`/${lang}/sa-abroad/${c.slug}`} hrefLang={c.preferredCanonicalLocale}>
+              <a href={`/${isOceaniaMarket(c.preferredCanonicalLocale) ? c.preferredCanonicalLocale : lang}/sa-abroad/${c.slug}`} hrefLang={c.preferredCanonicalLocale}>
                 <span aria-hidden="true">{c.flag}</span> SA TV in {c.name}
               </a>
             </li>

@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
+import { isOceaniaMarket } from "../../../lib/oceania-offer";
 import { SA_ABROAD_COUNTRIES } from "../../../lib/seo/sa-abroad";
 import { HubListing } from "../../../components/seo/HubListing";
 
@@ -53,6 +54,7 @@ export default async function SaAbroadHub({ params }: Props) {
       basePath="/sa-abroad"
       items={SA_ABROAD_COUNTRIES.map((c) => ({
         href: `/sa-abroad/${c.slug}`,
+        locale: isOceaniaMarket(c.preferredCanonicalLocale) ? c.preferredCanonicalLocale : undefined,
         label: `South African TV in ${c.name}`,
         caption:
           c.slug === "uk"

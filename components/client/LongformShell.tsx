@@ -3,6 +3,7 @@
 // Standard wrapper for the programmatic content pages — keeps the page
 // templates focused on their content while sharing chrome.
 
+import { isOceaniaMarket } from "../../lib/oceania-offer";
 import type { Locale } from "../../lib/locales";
 import { LanguageProvider } from "./LanguageProvider";
 import { LocaleSync } from "./LocaleSync";
@@ -28,7 +29,7 @@ export function LongformShell({
   waOverride?: WaPrefillOverride | null;
 }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLocale={isOceaniaMarket(locale) ? locale : undefined}>
       <WaPrefillProvider value={waOverride}>
         <LocaleSync locale={locale} />
         <SkipLink />

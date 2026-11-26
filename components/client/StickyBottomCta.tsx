@@ -4,6 +4,7 @@
 
 import { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
+import { isOceaniaMarket } from "../../lib/oceania-offer";
 import type { Locale } from "../../lib/locales";
 
 const TRIAL_LABEL: Record<Locale, string> = {
@@ -24,10 +25,10 @@ const TRIAL_LABEL: Record<Locale, string> = {
 const PLANS_LABEL: Record<Locale, string> = {
   "en-za": "See plans from R99/mo",
   "en-gb": "See plans from R99/mo",
-  "en-au": "See plans from R99/mo",
+  "en-au": "See prepaid plans in USD",
   "en-us": "See plans from R99/mo",
   "en-ae": "See plans from R99/mo",
-  "en-nz": "See plans from R99/mo",
+  "en-nz": "See prepaid plans in USD",
   "en-zw": "See plans from US$11/mo",
   af: "Sien pryse vanaf R99/mnd",
   zu: "Bona izinhlelo ku-R99/inyanga",
@@ -52,7 +53,7 @@ export function StickyBottomCta() {
   return (
     <div className="stickyBottomCta" role="region" aria-label="Quick actions">
       <a
-        href="#trial"
+        href={isOceaniaMarket(lang) ? `/${lang}/free-trial` : "#trial"}
         className="stickyBottomCtaPrimary"
         data-track-ref="Sticky-Bottom-Trial"
         data-track-placement="Sticky-Bottom-CTA"
@@ -60,7 +61,7 @@ export function StickyBottomCta() {
         {TRIAL_LABEL[lang] ?? TRIAL_LABEL["en-za"]}
       </a>
       <a
-        href="#offers"
+        href={isOceaniaMarket(lang) ? `/${lang}#plans` : "#offers"}
         className="stickyBottomCtaSecondary"
         data-track-ref="Sticky-Bottom-Pricing"
         data-track-placement="Sticky-Bottom-CTA"
