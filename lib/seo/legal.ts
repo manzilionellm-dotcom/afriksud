@@ -20,10 +20,13 @@ export type LegalTopic = {
   /** One-paragraph intro shown above the body. */
   lead: string;
   /** Body sections with H2 + paragraphs. */
-  sections: { h2: string; body: string[] }[];
+  sections: { h2: string; body: string[]; oceaniaBody?: string[] }[];
   /** Whether to badge the page as `TO_FILL_BY_OWNER`. */
   needsOwnerInput: boolean;
 };
+
+const EXPIRY_TERMS =
+  "You may stop using the service at any time. The service ends at the end of the paid period; no notice is required.";
 
 export const LEGAL_TOPICS: LegalTopic[] = [
   {
@@ -90,7 +93,11 @@ export const LEGAL_TOPICS: LegalTopic[] = [
         h2: "Subscription and cancellation",
         body: [
           "Plans are pre-paid for the period selected (1, 3, 6 or 12 months). There is no auto-renewal and no contract.",
-          "You may stop using the service at any time. The service ends at the end of the paid period; no notice is required.",
+          EXPIRY_TERMS,
+        ],
+        oceaniaBody: [
+          "Pay once in US dollars for one day, one month or one year. There is no automatic renewal.",
+          EXPIRY_TERMS,
         ],
       },
       {

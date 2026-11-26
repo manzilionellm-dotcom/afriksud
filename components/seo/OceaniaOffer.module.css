@@ -1,0 +1,235 @@
+.page {
+  --ink: #162820;
+  --muted: #4a5c50;
+  --paper: #f6f5ed;
+  --line: #c6cdbf;
+  min-height: 100svh;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+.header {
+  background: #102b25;
+  color: #fff;
+}
+
+.headerInner, .content {
+  width: min(100% - 2.5rem, 72rem);
+  margin-inline: auto;
+}
+
+.headerInner {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.markets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.markets a {
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  color: #d8e4d9;
+  padding: .7rem .9rem;
+  font-size: .875rem;
+  text-decoration: none;
+}
+
+.markets a[aria-current], .markets a:hover {
+  border-color: #68837b;
+  color: #fff;
+}
+
+.content {
+  padding-bottom: 3rem;
+}
+
+.hero {
+  padding-block: clamp(3rem, 7vw, 6rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(17rem, 1fr);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.kicker {
+  margin: 0 0 1.1rem;
+  color: #38624c;
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  max-width: 15ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  line-height: 1.01;
+  letter-spacing: -.058em;
+  text-wrap: balance;
+}
+
+.intro {
+  max-width: 48ch;
+  margin: 1.35rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  line-height: 1.6;
+}
+
+.trial {
+  border-inline-start: 3px solid #c59121;
+  padding-inline-start: 1.4rem;
+}
+
+.trialTitle {
+  color: var(--ink);
+  margin: 0;
+  font-weight: 750;
+  font-size: 1.5rem;
+  letter-spacing: -.04em;
+}
+
+.trial p + p, .billing, .description, .details p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.trial p + p { margin: .45rem 0 1.05rem; }
+
+.trialAction, .card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-height: 2.75rem;
+  font-size: .93rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.trialAction {
+  border-radius: .6rem;
+  padding: .7rem 1.15rem;
+  color: #fff;
+  background: #0d573f;
+}
+
+.trialAction:hover { background: #11432f; }
+
+.pricing {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(1.8rem, 4vw, 3rem);
+  scroll-margin-top: 1.5rem;
+}
+
+.pricing h2, .details h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  letter-spacing: -.05em;
+  line-height: 1.2;
+}
+
+.billing { margin: .45rem 0 1.55rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--line);
+  border-radius: .85rem;
+  background: #fdfcf6;
+  padding: clamp(1.15rem, 2.2vw, 2rem);
+}
+
+.card h3 {
+  margin: 0;
+  color: inherit;
+  font-size: 1.1rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: .32rem;
+  margin: .4rem 0 .65rem;
+  font-size: clamp(2.35rem, 4.7vw, 3.8rem);
+  line-height: 1.1;
+  font-weight: 650;
+  letter-spacing: -.06em;
+  color: inherit;
+}
+
+.price span {
+  font-size: .9rem;
+  letter-spacing: .02em;
+}
+
+.description { margin: 0 0 1rem; }
+
+.card a {
+  margin-top: auto;
+  color: #075a3e;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+.month { background: #173e30; border-color: #173e30; color: #fff; }
+.month .description { color: #d6e5d8; }
+.month a { color: #ffda82; }
+.page a:focus-visible { outline: 3px solid #ce8a17; outline-offset: 3px; }
+
+.details {
+  margin-top: 2.5rem;
+  max-width: 46rem;
+}
+
+.details p { margin: .65rem 0 0; }
+.details section + section { margin-top: 1.5rem; }
+.details a, .footer a { color: #075a3e; text-decoration: underline; text-underline-offset: .2em; }
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1rem 5rem;
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.3rem;
+  width: min(100% - 2.5rem, 72rem);
+  margin-inline: auto;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: .875rem;
+}
+
+@media (max-width: 44rem) {
+  .hero, .cards { grid-template-columns: 1fr; }
+  .hero { gap: 1.8rem; padding-block: 2.5rem; }
+  .trial { padding-inline-start: 1rem; }
+  .card { padding: 1.25rem; }
+  .card a { min-height: 2.75rem; }
+  .description { margin-bottom: .45rem; }
+  .headerInner { min-height: 4rem; gap: .3rem; }
+  .headerInner > svg { max-width: 6.8rem; }
+  .markets a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .5rem .55rem; font-size: .78rem; }
+}

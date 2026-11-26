@@ -10,6 +10,7 @@ import { SITE } from "../shared/site";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
 import { compareHook } from "../../lib/aio";
+import { isOceaniaMarket } from "../../lib/oceania-offer";
 import { usePathname } from "next/navigation";
 import { LiveStatus } from "./LiveStatus";
 import { WA_ARIA_LABEL, fabLang, waNeutralHref } from "../shared/wa-neutral";
@@ -428,7 +429,11 @@ export function FooterSection() {
           <h4>Product</h4>
           <a href={basePath}>Home</a>
           <a href={`${basePath}/best-iptv-south-africa-2026`}>Best IPTV 2026</a>
-          <a href={`${basePath}/cheap-iptv-south-africa`}>Cheap IPTV from R99</a>
+          {isOceaniaMarket(lang) ? (
+            <a href={`${basePath}#plans`}>Prepaid plans in USD</a>
+          ) : (
+            <a href={`${basePath}/cheap-iptv-south-africa`}>Cheap IPTV from R99</a>
+          )}
           <a href={`${basePath}/4k-iptv-south-africa`}>4K IPTV</a>
           <a href={`${basePath}/iptv-no-buffering-south-africa`}>IPTV buffering on SA fibre</a>
           <a href={`${basePath}/iptv-for-movies-and-series`}>IPTV for movies & series</a>
@@ -472,7 +477,9 @@ export function FooterSection() {
         </div>
         <div className="footerCol">
           <h4>Support</h4>
-          <a href={`${basePath}/iptv-eft-snapscan-payment`}>Payment methods</a>
+          <a href={isOceaniaMarket(lang) ? `${basePath}/legal/terms` : `${basePath}/iptv-eft-snapscan-payment`}>
+            {isOceaniaMarket(lang) ? "Payment terms" : "Payment methods"}
+          </a>
           <a href={`${basePath}/cancel-dstv-2026`}>Cancel DStv</a>
           <a href={`${basePath}/iptv-vumatel-openserve-frogfoot`}>Fibre & ISPs</a>
           <a href={`${basePath}/referral`}>Refer a friend</a>

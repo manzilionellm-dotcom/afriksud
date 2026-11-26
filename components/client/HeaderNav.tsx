@@ -2,6 +2,7 @@
 // components/client/HeaderNav.tsx
 
 import React, { useEffect, useState } from "react";
+import { isOceaniaMarket } from "../../lib/oceania-offer";
 import { useLang } from "./LanguageProvider";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { dict } from "../shared/dict";
@@ -35,7 +36,7 @@ export function HeaderNav() {
   };
 
   const navLinks = [
-    { href: "#offers",        label: t.nav.offers },
+    { href: isOceaniaMarket(lang) ? `/${lang}#plans` : "#offers", label: t.nav.offers },
     { href: "#channels",      label: t.nav.channels },
     { href: "#countries",     label: t.nav.countries },
     { href: "#international", label: t.nav.international },

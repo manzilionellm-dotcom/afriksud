@@ -119,6 +119,6 @@ export type Country = {
   channels: CountryChannel[];
 };
 
-export type ExpatCountry = { flag: string; code: string; name: string; desc: string };
+export type ExpatCountry = { flag: string; code: string; name: string; desc: string; guidePath?: string };
 
 export type LangCtx = { lang: Locale; setLang: (l: Locale) => void };

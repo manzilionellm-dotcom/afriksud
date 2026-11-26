@@ -12,6 +12,7 @@ import { LongformShell } from "../client/LongformShell";
 export type HubItem = {
   /** Path under the locale, e.g. `/cities/johannesburg/`. */
   href: string;
+  locale?: Locale;
   /** Display label e.g. "Johannesburg". */
   label: string;
   /** Optional eyebrow under the label (region, country, etc.). */
@@ -54,7 +55,7 @@ export function HubListing({
       "@type": "ListItem",
       position: i + 1,
       name: it.label,
-      url: `${SITE_URL}/${locale}${it.href}`,
+      url: `${SITE_URL}/${it.locale ?? locale}${it.href}`,
     })),
   };
 
@@ -109,7 +110,7 @@ export function HubListing({
             <ul className="longformList">
               {items.map((it) => (
                 <li key={it.href}>
-                  <Link href={`/${locale}${it.href}`}>{it.label}</Link>
+                  <Link href={`/${it.locale ?? locale}${it.href}`}>{it.label}</Link>
                   {it.caption ? <span> — {it.caption}</span> : null}
                 </li>
               ))}
