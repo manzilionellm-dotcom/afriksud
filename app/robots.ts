@@ -20,10 +20,10 @@ const ALLOW_ALL = [
   "Slurp",
   "Applebot",
   "YandexBot",
-  "GPTBot",
+
   "ChatGPT-User",
   "OAI-SearchBot",
-  "ClaudeBot",
+
   "Claude-Web",
   "Claude-SearchBot",
   "anthropic-ai",
@@ -82,6 +82,7 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [
+      { userAgent: ["GPTBot", "ClaudeBot"], disallow: "/" },
       ...ALLOW_ALL.map((userAgent) => ({ userAgent, allow: "/", disallow: PRIVATE_PATHS })),
       ...BLOCK_ALL.map((userAgent) => ({ userAgent, disallow: "/" })),
       { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/", "/ops"], crawlDelay: 5 },

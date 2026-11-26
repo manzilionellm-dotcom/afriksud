@@ -139,3 +139,11 @@ holds broadcast or redistribution licences.
 ## Contact
 
 WhatsApp: see iptvmzansi.com for the current number.
+
+## Home
+
+- [Home](https://iptvmzansi.com/en-za)
+
+## Optional
+
+- [Sitemap](https://iptvmzansi.com/sitemap.xml)
