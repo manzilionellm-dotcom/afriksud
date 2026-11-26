@@ -21,7 +21,7 @@ function introduction(country: string, view: OfferView) {
   switch (view) {
     case "guide":
       return {
-        title: `Watching TV from home in ${country}`,
+        title: `Watching South African TV in ${country}`,
         text: "Send the name of a programme you miss and the make and model of your TV. We’ll check what you can watch where you live and help you try it on your own connection.",
       };
     case "trial":
@@ -36,8 +36,8 @@ function introduction(country: string, view: OfferView) {
       };
     default:
       return {
-        title: `TV from home, here in ${country}.`,
-        text: "Tell us the shows you miss and the language you watch in. We’ll check what’s available on your device before you choose a pass.",
+        title: `South African TV in ${country}.`,
+        text: "Which programme do you miss? Tell us the title, your device and the language you watch in, whether that’s English, Afrikaans, isiZulu or isiXhosa. We’ll check availability where you live before you pay.",
       };
   }
 }
