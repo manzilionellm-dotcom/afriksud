@@ -7,8 +7,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
-import { hreflangFor, localeUrl } from "../../lib/url";
+import { LOCALES, LOCALE_META, type Locale, whatsappForLocale } from "../../lib/locales";
+import { isOceaniaMarket, OCEANIA_MARKETS, OCEANIA_PLANS, type OceaniaMarket } from "../../lib/oceania-offer";
+import { hreflangFor, localeUrl, ogImagesFor } from "../../lib/url";
 import { homeMetaFor, brandedTitle } from "../../lib/seo/home-meta";
 import { dict } from "../../components/shared/dict";
 import { plans } from "../../components/shared/plans";
@@ -51,6 +52,7 @@ import { BottomTabBar } from "../../components/ux/BottomTabBar";
 import { PriceCheckoutMount } from "../../components/ux/checkout/PriceCheckoutMount";
 import { AioCitationFaq } from "../../components/seo/AioCitationFaq";
 import { EnZaTrialCta } from "../../components/seo/EnZaTrialCta";
+import { OceaniaOffer } from "../../components/seo/OceaniaOffer";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -75,6 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       url: localeUrl(locale as Locale, "/"),
       locale: meta.ogLocale,
+      ...(isOceaniaMarket(locale) ? { countryName: OCEANIA_MARKETS[locale].country } : {}),
       alternateLocale: LOCALES.filter((l) => l !== locale).map(
         (l) => LOCALE_META[l].ogLocale
       ),
@@ -86,9 +89,57 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function OceaniaHome({ market }: { market: OceaniaMarket }) {
+  const url = localeUrl(market);
+  const home = homeMetaFor(market);
+  const service = {
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: home.title,
+    description: home.description,
+    url,
+    serviceType: "Prepaid IPTV",
+    provider: { "@id": ORG_ID },
+    brand: { "@id": BRAND_ID },
+    areaServed: { "@type": "Country", name: OCEANIA_MARKETS[market].country },
+    offers: OCEANIA_PLANS.map((plan) => ({
+      "@type": "Offer",
+      "@id": `${url}#offer-${plan.id}`,
+      name: plan.name,
+      description: plan.description,
+      price: plan.usd,
+      priceCurrency: "USD",
+      url,
+      seller: { "@id": ORG_ID },
+    })),
+  };
+  const webPage = {
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: home.title,
+    description: home.description,
+    inLanguage: LOCALE_META[market].hreflang,
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: { "@id": service["@id"] },
+    primaryImageOfPage: { "@type": "ImageObject", url: ogImagesFor(market)[0].url },
+  };
+
+  return (
+    <>
+      <JsonLd data={organizationSchema({ whatsappPhone: whatsappForLocale(market) })} />
+      <JsonLd data={brandSchema()} />
+      <JsonLd data={websiteSchema()} />
+      <JsonLd data={{ "@context": "https://schema.org", "@graph": [webPage, service] }} />
+      <OceaniaOffer market={market} view="home" />
+    </>
+  );
+}
+
 export default async function LocaleHome({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
+  if (isOceaniaMarket(locale)) return <OceaniaHome market={locale} />;
 
   const t = dict[locale as Locale];
 

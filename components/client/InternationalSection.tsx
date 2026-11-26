@@ -41,7 +41,7 @@ export function InternationalSection() {
       </div>
       <div className="intlGrid">
         {expatCountries.map((country) => (
-          <Link key={country.code} className="intlCard" href={country.href}>
+          <Link key={country.code} className="intlCard" href={country.guidePath}>
             <span className="intlFlag" aria-hidden="true">{country.flag}</span>
             <div className="intlBody">
               <h3 className="intlName">{country.name}</h3>

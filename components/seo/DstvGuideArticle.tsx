@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "../../lib/locales";
+import { isOceaniaMarket, OCEANIA_MARKETS } from "../../lib/oceania-offer";
 import { breadcrumbSchema } from "../../lib/seo/breadcrumb";
 import { guidePath, type DstvGuide } from "../../lib/seo/dstv-guides";
 import { JsonLd } from "../../lib/seo/jsonld";
@@ -9,10 +10,13 @@ import { waMeLink } from "../shared/utils";
 
 export function DstvGuideArticle({ guide, locale }: { guide: DstvGuide; locale: Locale }) {
   const fr = locale === "fr";
+  const oceania = isOceaniaMarket(locale) ? OCEANIA_MARKETS[locale] : null;
   const ref = `Guide-${guide.slug}`;
   const message = fr
     ? "Je souhaite essayer Mzansi Stream pendant 24 h. Mon pays : __. Mon appareil : __."
-    : "I'd like to try Mzansi Stream for 24 hours. My country: __. My device: __.";
+    : oceania
+      ? `I would like the free 24-hour weekday trial. Country: ${oceania.country}. My device: __. Programme: __. Please confirm availability.`
+      : "I'd like to try Mzansi Stream for 24 hours. My country: __. My device: __.";
   const href = waMeLink(message, ref);
   const articleSchema = {
     "@context": "https://schema.org",
@@ -61,7 +65,7 @@ export function DstvGuideArticle({ guide, locale }: { guide: DstvGuide; locale: 
         </section>
         <section className="longformSection">
           <h2>{fr ? "Essayer Mzansi Stream sur votre appareil" : "Try Mzansi Stream on your own device"}</h2>
-          <p>{fr ? "L’essai dure 24 heures, sans carte bancaire. Indiquez votre pays et votre appareil pour vérifier le catalogue disponible avant de payer. Au tarif sud-africain, un mois coûte R199 et douze mois coûtent R1 199 payés en une fois." : "The 24-hour trial is free and requires no card. Tell us your country and device so you can check the available catalogue before paying. Our South African prices are R199 for one month or R1,199 upfront for twelve."}</p>
+          {oceania ? <p>Request a free 24-hour trial Monday to Friday. Send your device and the programme you want to check. No card is required. <Link href={`/${locale}#plans`}>See prepaid passes and prices in US dollars for {oceania.country}</Link>.</p> : <p>{fr ? "L’essai dure 24 heures, sans carte bancaire. Indiquez votre pays et votre appareil pour vérifier le catalogue disponible avant de payer. Au tarif sud-africain, un mois coûte R199 et douze mois coûtent R1 199 payés en une fois." : "The 24-hour trial is free and requires no card. Tell us your country and device so you can check the available catalogue before paying. Our South African prices are R199 for one month or R1,199 upfront for twelve."}</p>}
           <a className="btnPrimary" href={href} data-track-ref={ref} data-track-placement="Guide-Trial" target="_blank" rel="noreferrer">{fr ? "Demander mon essai de 24 h sur WhatsApp" : "Request my 24-hour trial on WhatsApp"}</a>
         </section>
         <nav className="longformSection" aria-label={fr ? "Guides associés" : "Related guides"}>

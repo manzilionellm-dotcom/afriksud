@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { localeUrl, ogImagesFor } from "../../../lib/url";
 
+import { isOceaniaMarket } from "../../../lib/oceania-offer";
+import { oceaniaRouteMetadata } from "../../../lib/seo/oceania-route";
+import { OceaniaOffer } from "../../../components/seo/OceaniaOffer";
+
 const TRIAL_PATH = "/free-trial";
 const TRIAL_CANONICAL = localeUrl("en-za", TRIAL_PATH);
 
@@ -11,6 +15,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  if (isOceaniaMarket(locale)) return oceaniaRouteMetadata(locale, "trial");
   const isCanonical = locale === "en-za";
   return {
     title: "Free 24-hour IPTV trial in South Africa",
@@ -141,7 +146,10 @@ const steps = [
   },
 ];
 
-export default function FreeTrialPage() {
+export default async function FreeTrialPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  if (isOceaniaMarket(locale)) return <OceaniaOffer market={locale} view="trial" />;
+
   return (
     <main lang="en-ZA" className="mx-auto max-w-3xl px-5 pb-28 pt-24 sm:pt-28">
       <script

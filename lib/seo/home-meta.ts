@@ -7,6 +7,7 @@
 // not run through the template.
 
 import type { Locale } from "../locales";
+import { OCEANIA_MARKETS, OCEANIA_PLANS, type OceaniaMarket } from "../oceania-offer";
 
 export type HomeMeta = {
   /** <title> WITHOUT brand suffix (the layout template appends it). */
@@ -19,6 +20,16 @@ export type HomeMeta = {
 
 const BRAND = "Mzansi Stream";
 
+function oceaniaHomeMeta(market: OceaniaMarket): HomeMeta {
+  const { country } = OCEANIA_MARKETS[market];
+  const prices = OCEANIA_PLANS.map((plan) => `US$${plan.usd}/${plan.id}`);
+  const options = new Intl.ListFormat("en-GB", { type: "disjunction" }).format(prices);
+  return {
+    title: `South African TV in ${country}`,
+    description: `Start a free 24-hour trial in ${country}, Monday to Friday. No card needed. Ask about your channels on WhatsApp. Prepay ${options}.`,
+  };
+}
+
 export const HOME_META: Record<Locale, HomeMeta> = {
   "en-za": {
     title: "DStv Alternative in South Africa | Pricing",
@@ -28,10 +39,7 @@ export const HOME_META: Record<Locale, HomeMeta> = {
     title: "South African TV in the UK",
     description: "Moving to the UK? Check South African TV availability, what happens to your DStv account and how to request a Mzansi Stream device trial.",
   },
-  "en-au": {
-    title: "South African TV in Australia",
-    description: "Check South African viewing options in Australia, find local broadcast times for Perth and Sydney, and ask about a trial on your own device.",
-  },
+  "en-au": oceaniaHomeMeta("en-au"),
   "en-us": {
     title: "South African TV in the United States",
     description: "Explore viewing options for South Africans living in the US. Check local programme availability and request a 24-hour device trial on WhatsApp.",
@@ -40,10 +48,7 @@ export const HOME_META: Record<Locale, HomeMeta> = {
     title: "South African TV in the UAE",
     description: "Explore South African viewing guides for the Emirates. Ask about your device and the programmes available where you live before paying.",
   },
-  "en-nz": {
-    title: "South African TV in New Zealand",
-    description: "Find the New Zealand guide for South African viewers. Check the programme, local broadcaster and device before you choose a prepaid plan.",
-  },
+  "en-nz": oceaniaHomeMeta("en-nz"),
   "en-zw": {
     title: "South African TV and IPTV in Zimbabwe",
     description: "Check local viewing options, supported devices and prepaid terms in Zimbabwe. Ask for the current price and a 24-hour trial on WhatsApp.",

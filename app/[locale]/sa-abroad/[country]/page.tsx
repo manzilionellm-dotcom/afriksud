@@ -5,7 +5,7 @@
 // hreflang lists only that canonical URL (self + x-default). Locales
 // that are noindex (fr, pt-mz) are never the canonical target.
 
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -22,6 +22,9 @@ import {
   saAbroadPath,
   saAbroadPlace,
 } from "../../../../lib/seo/sa-abroad";
+import { isOceaniaMarket } from "../../../../lib/oceania-offer";
+import { oceaniaRouteMetadata } from "../../../../lib/seo/oceania-route";
+import { OceaniaOffer } from "../../../../components/seo/OceaniaOffer";
 import { JsonLd } from "../../../../lib/seo/jsonld";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
@@ -39,6 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, country } = await params;
   const data = getSaAbroadCountry(country);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
+  if (isOceaniaMarket(data.preferredCanonicalLocale)) {
+    return oceaniaRouteMetadata(data.preferredCanonicalLocale, "guide", locale === data.preferredCanonicalLocale);
+  }
 
   const place = saAbroadPlace(data);
   const title = `South African TV in ${place}: a viewing guide`;
@@ -81,6 +87,21 @@ export default async function SaAbroadCountryPage({ params }: Props) {
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
   const data = getSaAbroadCountry(country);
   if (!data) notFound();
+  const market = data.preferredCanonicalLocale;
+  if (isOceaniaMarket(market)) {
+    if (locale !== market) permanentRedirect(saAbroadPath(data));
+    return (
+      <OceaniaOffer market={market} view="guide">
+        <section aria-label="Programme guides">
+          <h2>Local viewing guides</h2>
+          <ul>
+            {market === "en-au" && <li><Link href="/en-au/blog/dstv-australia-find-the-broadcaster">Find the Australian broadcaster and compare Perth and Sydney start times</Link></li>}
+            <li><Link href="/en-za/blog/sabc-without-dstv">Find South African public news and radio abroad</Link></li>
+          </ul>
+        </section>
+      </OceaniaOffer>
+    );
+  }
 
   const place = saAbroadPlace(data);
   const canonical = `${SITE_URL}${saAbroadPath(data)}`;
@@ -130,7 +151,6 @@ export default async function SaAbroadCountryPage({ params }: Props) {
             <ul className="longformList">
               <li><Link href="/en-za/blog/sabc-without-dstv">Which SABC news and radio services work abroad?</Link></li>
               {country === "uk" && <li><Link href="/en-gb/blog/dstv-uk-moving-from-south-africa">What happens to a South African DStv account when you move to the UK?</Link></li>}
-              {country === "australia" && <li><Link href="/en-au/blog/dstv-australia-find-the-broadcaster">Find the match broadcaster and compare Perth and Sydney start times</Link></li>}
               {["france", "germany", "belgium", "switzerland"].includes(country) &&
                 <li><Link href="/fr/blog/dstv-en-europe-par-programme" hrefLang="fr">Retrouver un programme en France ou en Allemagne (guide en français)</Link></li>}
             </ul>

@@ -70,7 +70,7 @@ export default async function SaAbroadHub({ params }: Props) {
         <article className="section">
           <header className="longformHeader">
             <h1>South African TV abroad</h1>
-            <p className="longformLead">Choose where you watch. Each guide covers local time, programme availability, devices and prepaid prices in rand.</p>
+            <p className="longformLead">Choose where you watch. The Australian and New Zealand guides list prepaid passes in US dollars. Other destination guides cover local start times, device setup and South African rand prices.</p>
           </header>
           <section className="longformSection">
             <h2>Destination guides</h2>

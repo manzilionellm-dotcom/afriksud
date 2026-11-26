@@ -1,13 +1,13 @@
 // app/[locale]/opengraph-image.tsx
-// One share card per locale, generated at build time from the SAME
-// dictionary strings the homepage hero renders (brand, H1, pill). No
-// ratings, no counters, no viewer numbers. The hand-made public/og-image.jpg
-// stays in place for JSON-LD `image` references.
+// Regional prepaid offers use the corresponding home metadata. The other
+// share cards use the same localised hero strings as their homepages.
 
 import { ImageResponse } from "next/og";
 import { DEFAULT_LOCALE, LOCALES, type Locale } from "../../lib/locales";
 import { APEX_HOST } from "../../lib/url";
 import { dict } from "../../components/shared/dict";
+import { isOceaniaMarket } from "../../lib/oceania-offer";
+import { homeMetaFor } from "../../lib/seo/home-meta";
 
 export const alt = "Mzansi Stream — live TV in 4K, activated on WhatsApp";
 export const size = { width: 1200, height: 630 };
@@ -25,6 +25,9 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
     ? (locale as Locale)
     : DEFAULT_LOCALE;
   const t = dict[resolved];
+  const regional = isOceaniaMarket(resolved);
+  const heading = regional ? homeMetaFor(resolved).title : `${t.hero.titleA} ${t.hero.titleB}`;
+  const subtitle = regional ? "Free 24-hour weekday trial · Prepaid passes in USD" : t.hero.pill;
 
   return new ImageResponse(
     (
@@ -47,9 +50,9 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 60, fontWeight: 800, lineHeight: 1.08, letterSpacing: -1.5, display: "flex", maxWidth: 1040 }}>
-            {`${t.hero.titleA} ${t.hero.titleB}`}
+            {heading}
           </div>
-          <div style={{ fontSize: 30, color: ACCENT, fontWeight: 600, display: "flex" }}>{t.hero.pill}</div>
+          <div style={{ fontSize: 30, color: ACCENT, fontWeight: 600, display: "flex" }}>{subtitle}</div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: "#94a3b8" }}>
           <div style={{ display: "flex" }}>{`${APEX_HOST}/${resolved}`}</div>
