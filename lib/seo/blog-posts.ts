@@ -496,7 +496,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "7. Are local payment methods supported?",
         body: [
-          "EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco — not just crypto and overseas Stripe. Local payments protect you (chargeback rights, fraud insurance) and reduce conversion friction.",
+          "Confirm the payment options available for your order on WhatsApp before paying.",
         ],
       },
       {
