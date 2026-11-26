@@ -9,8 +9,8 @@ export function ReviewsSection() {
   const t = dict[lang];
   const process = [
     { title: "24h trial", text: "WhatsApp us. No card. Test on your device first." },
-    { title: "Clear prices", text: "From R99/mo on the 12-month plan. Paid once per term." },
-    { title: "HelloPeter", text: "We invite customers to leave a review after 30 days. We do not invent stars." },
+    { title: "Clear prices", text: "R199 for one month, or R1,199 prepaid for twelve months (R99.92 per month)." },
+    { title: "HelloPeter", text: "Customers can share their experience after 30 days of use." },
   ];
   return (
     <section className="section">

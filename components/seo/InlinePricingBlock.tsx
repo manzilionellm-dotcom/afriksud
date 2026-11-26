@@ -14,11 +14,6 @@ import type { Locale } from "../../lib/locales";
 const PAYMENTS =
   "EFT · SnapScan · Zapper · Yoco · Ozow · Capitec Pay · Visa · Mastercard · PayPal · Bitcoin";
 
-function pct(plan: { price: number; months: number }) {
-  const perMonth = Math.round(plan.price / plan.months);
-  return Math.max(0, Math.round((1 - perMonth / 199) * 100));
-}
-
 function softenPerk(perk: string): string {
   return perk
     .replace(/20,000\+ live channels/g, "SA + sport folders to trial")
@@ -32,7 +27,7 @@ export function InlinePricingBlock({
   eyebrow,
   heading,
   sub,
-  softenCatalogClaims = false,
+  softenCatalogClaims = true,
 }: {
   locale: Locale;
   refTag?: string;
@@ -61,8 +56,7 @@ export function InlinePricingBlock({
         }}
       >
         {plans.map((p) => {
-          const perMonth = Math.round(p.price / p.months);
-          const saving = pct(p);
+          const perMonth = (p.price / p.months).toLocaleString(locale, { maximumFractionDigits: 2 });
           const isBest = p.highlight === true;
           return (
             <div
@@ -100,38 +94,17 @@ export function InlinePricingBlock({
                   {t.offers.bestSeller}
                 </span>
               ) : null}
-              {!isBest && saving > 0 ? (
-                <span
-                  style={{
-                    position: "absolute",
-                    top: -10,
-                    insetInlineEnd: 14,
-                    background: "#E0152D",
-                    color: "#fff",
-                    fontSize: 10,
-                    fontWeight: 800,
-                    letterSpacing: "0.18em",
-                    padding: "4px 8px",
-                    borderRadius: 999,
-                  }}
-                >
-                  −{saving}%
-                </span>
-              ) : null}
-
               <div style={{ fontSize: 13, opacity: 0.7 }}>{t.planNames[p.key]}</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginTop: 6 }}>
                 <span style={{ fontSize: 14, opacity: 0.6 }}>{SITE.currencyLabel}</span>
                 <span style={{ fontSize: "2.25rem", fontWeight: 800, lineHeight: 1 }}>
-                  {perMonth}
+                  {p.price.toLocaleString(locale)}
                 </span>
-                <span style={{ fontSize: 13, opacity: 0.65 }}>{t.offers.perMonth}</span>
+                <span style={{ fontSize: 13, opacity: 0.85 }}>{t.offers.billedOnce}</span>
               </div>
-              <div style={{ fontSize: 12, opacity: 0.55, marginTop: 4 }}>
-                {t.offers.billedOnce} {SITE.currencyLabel}
-                {p.price}
-                {p.months > 1 ? ` (${t.offers.totalLabel})` : ""}
-              </div>
+              {p.months > 1 && <div style={{ fontSize: 13, opacity: 0.8, marginTop: 4 }}>
+                {SITE.currencyLabel}{perMonth}{t.offers.perMonth}
+              </div>}
               <ul
                 style={{
                   listStyle: "none",

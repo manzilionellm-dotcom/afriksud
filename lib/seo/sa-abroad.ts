@@ -16,14 +16,10 @@ export type SaAbroadCountry = {
   preferredCanonicalLocale: Locale;
   /** Top 3 cities to localise the keyword footprint. */
   cities: string[];
-  /** Region used for the "low-latency edge servers in [region]" line. */
-  edgeRegion: string;
   /** Time-zone summary for the "watch on SA time" angle. */
   timezone: string;
   /** Local currency code for the pricing block. ZAR is always shown. */
   localCurrency: string;
-  /** Approximate ZAR-equivalent prefix used in copy. */
-  localPriceNote: string;
 };
 
 export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
@@ -34,10 +30,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "GB",
     preferredCanonicalLocale: "en-gb",
     cities: ["London", "Manchester", "Birmingham"],
-    edgeRegion: "London (LON-1)",
     timezone: "UTC / UTC+1 BST — 1-2 hours behind SAST",
     localCurrency: "GBP",
-    localPriceNote: "From the equivalent of ~£5/month in ZAR",
   },
   {
     slug: "australia",
@@ -46,10 +40,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "AU",
     preferredCanonicalLocale: "en-au",
     cities: ["Sydney", "Melbourne", "Perth"],
-    edgeRegion: "Sydney (SYD-1)",
-    timezone: "UTC+8 to UTC+11 — 6-9 hours ahead of SAST",
+    timezone: "Perth is six hours ahead of South Africa. Sydney and Melbourne are eight hours ahead in standard time and nine hours ahead during daylight saving",
     localCurrency: "AUD",
-    localPriceNote: "From the equivalent of ~AU$8/month in ZAR",
   },
   {
     slug: "new-zealand",
@@ -58,10 +50,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "NZ",
     preferredCanonicalLocale: "en-nz",
     cities: ["Auckland", "Wellington", "Christchurch"],
-    edgeRegion: "Sydney (SYD-1) and Auckland peering",
-    timezone: "UTC+12 — 10 hours ahead of SAST",
+    timezone: "Auckland, Wellington and Christchurch are 10 hours ahead of South Africa on NZST and 11 hours ahead on NZDT",
     localCurrency: "NZD",
-    localPriceNote: "From the equivalent of ~NZ$9/month in ZAR",
   },
   {
     slug: "usa",
@@ -70,10 +60,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "US",
     preferredCanonicalLocale: "en-us",
     cities: ["New York", "Los Angeles", "Houston"],
-    edgeRegion: "Ashburn (IAD-1) and Los Angeles (LAX-1)",
-    timezone: "UTC-5 to UTC-10 — 5-10 hours behind SAST",
+    timezone: "New York, Houston and Los Angeles follow different US time zones. Select your city and the event date in your calendar",
     localCurrency: "USD",
-    localPriceNote: "From the equivalent of ~US$6/month in ZAR",
   },
   {
     slug: "canada",
@@ -84,10 +72,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // since it shares the North American time zone band and currency feel.
     preferredCanonicalLocale: "en-us",
     cities: ["Toronto", "Vancouver", "Calgary"],
-    edgeRegion: "Ashburn (IAD-1) and Los Angeles (LAX-1)",
-    timezone: "UTC-4 to UTC-8 — 6-10 hours behind SAST",
+    timezone: "Toronto, Calgary and Vancouver follow different local clocks. Select your city and the event date in your calendar",
     localCurrency: "CAD",
-    localPriceNote: "From the equivalent of ~CA$8/month in ZAR",
   },
   {
     slug: "uae",
@@ -96,10 +82,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "AE",
     preferredCanonicalLocale: "en-ae",
     cities: ["Dubai", "Abu Dhabi", "Sharjah"],
-    edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+4 — 2 hours ahead of SAST",
     localCurrency: "AED",
-    localPriceNote: "From the equivalent of ~AED25/month in ZAR",
   },
   {
     slug: "germany",
@@ -110,10 +94,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // diaspora reads in English anyway.
     preferredCanonicalLocale: "en-za",
     cities: ["Berlin", "Munich", "Frankfurt"],
-    edgeRegion: "Frankfurt (FRA-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "ireland",
@@ -122,10 +104,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "IE",
     preferredCanonicalLocale: "en-gb",
     cities: ["Dublin", "Cork", "Galway"],
-    edgeRegion: "London (LON-1) and Dublin peering",
     timezone: "UTC / UTC+1 IST — 1-2 hours behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "netherlands",
@@ -134,10 +114,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "NL",
     preferredCanonicalLocale: "en-za",
     cities: ["Amsterdam", "Rotterdam", "The Hague"],
-    edgeRegion: "Amsterdam (AMS-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "belgium",
@@ -148,10 +126,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // the indexable canonical is en-za. À CONFIRMER if a French body lands.
     preferredCanonicalLocale: "en-za",
     cities: ["Brussels", "Antwerp", "Ghent"],
-    edgeRegion: "Amsterdam (AMS-1) and Brussels peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "switzerland",
@@ -162,10 +138,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // À CONFIRMER if a French body lands.
     preferredCanonicalLocale: "en-za",
     cities: ["Zurich", "Geneva", "Basel"],
-    edgeRegion: "Frankfurt (FRA-1) and Zurich peering",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "CHF",
-    localPriceNote: "From the equivalent of ~CHF8/month in ZAR",
   },
   {
     slug: "singapore",
@@ -174,10 +148,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "SG",
     preferredCanonicalLocale: "en-za",
     cities: ["Singapore"],
-    edgeRegion: "Singapore (SIN-1)",
     timezone: "UTC+8 — 6 hours ahead of SAST",
     localCurrency: "SGD",
-    localPriceNote: "From the equivalent of ~SG$8/month in ZAR",
   },
   {
     slug: "saudi-arabia",
@@ -186,10 +158,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "SA",
     preferredCanonicalLocale: "en-ae",
     cities: ["Riyadh", "Jeddah", "Dammam"],
-    edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+3 — 1 hour ahead of SAST",
     localCurrency: "SAR",
-    localPriceNote: "From the equivalent of ~SAR25/month in ZAR",
   },
   {
     slug: "qatar",
@@ -198,10 +168,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "QA",
     preferredCanonicalLocale: "en-ae",
     cities: ["Doha", "Al Rayyan", "Al Wakrah"],
-    edgeRegion: "Dubai (DXB-1)",
     timezone: "UTC+3 — 1 hour ahead of SAST",
     localCurrency: "QAR",
-    localPriceNote: "From the equivalent of ~QAR25/month in ZAR",
   },
   {
     slug: "mauritius",
@@ -210,10 +178,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "MU",
     preferredCanonicalLocale: "en-za",
     cities: ["Port Louis", "Curepipe", "Quatre Bornes"],
-    edgeRegion: "Johannesburg (JNB-1) — closest SA edge serves Mauritius",
     timezone: "UTC+4 — 2 hours ahead of SAST",
     localCurrency: "MUR",
-    localPriceNote: "From the equivalent of ~MUR300/month in ZAR",
   },
   {
     slug: "portugal",
@@ -224,10 +190,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // indexable canonical is en-za. À CONFIRMER if a Portuguese body lands.
     preferredCanonicalLocale: "en-za",
     cities: ["Lisbon", "Porto", "Funchal"],
-    edgeRegion: "Lisbon (LIS-1) and Amsterdam (AMS-1)",
     timezone: "UTC / UTC+1 — 1-2 hours behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "israel",
@@ -236,10 +200,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "IL",
     preferredCanonicalLocale: "en-za",
     cities: ["Tel Aviv", "Jerusalem", "Haifa"],
-    edgeRegion: "Frankfurt (FRA-1) and Tel Aviv peering",
     timezone: "UTC+2 / UTC+3 — same as SAST / 1 hour ahead",
     localCurrency: "ILS",
-    localPriceNote: "From the equivalent of ~₪25/month in ZAR",
   },
   {
     slug: "spain",
@@ -248,10 +210,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "ES",
     preferredCanonicalLocale: "en-za",
     cities: ["Madrid", "Barcelona", "Valencia"],
-    edgeRegion: "Madrid (MAD-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
   {
     slug: "thailand",
@@ -260,10 +220,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     iso2: "TH",
     preferredCanonicalLocale: "en-za",
     cities: ["Bangkok", "Chiang Mai", "Phuket"],
-    edgeRegion: "Singapore (SIN-1)",
     timezone: "UTC+7 — 5 hours ahead of SAST",
     localCurrency: "THB",
-    localPriceNote: "From the equivalent of ~฿200/month in ZAR",
   },
   {
     // Tasmania-style note: France isn't a major SA diaspora destination by
@@ -277,10 +235,8 @@ export const SA_ABROAD_COUNTRIES: SaAbroadCountry[] = [
     // À CONFIRMER if a French body lands.
     preferredCanonicalLocale: "en-za",
     cities: ["Paris", "Lyon", "Marseille"],
-    edgeRegion: "Paris (CDG-1) and Frankfurt (FRA-1)",
     timezone: "UTC+1 / UTC+2 — same as / 1 hour behind SAST",
     localCurrency: "EUR",
-    localPriceNote: "From the equivalent of ~€6/month in ZAR",
   },
 ];
 
@@ -288,41 +244,32 @@ export function getSaAbroadCountry(slug: string): SaAbroadCountry | undefined {
   return SA_ABROAD_COUNTRIES.find((c) => c.slug === slug);
 }
 
-/** 8 diaspora FAQs — interpolated, no exclusive-rights claims. */
+export function saAbroadPath(country: SaAbroadCountry): string {
+  return `/${country.preferredCanonicalLocale}/sa-abroad/${country.slug}`;
+}
+
+export function saAbroadPlace(country: SaAbroadCountry): string {
+  return ["uk", "usa", "uae", "netherlands"].includes(country.slug) ? `the ${country.name}` : country.name;
+}
+
 export function saAbroadFaq(data: SaAbroadCountry): { q: string; a: string }[] {
-  const city = data.cities[0];
+  const place = saAbroadPlace(data);
   return [
     {
-      q: `Can I watch SuperSport and the Springboks in ${data.name}?`,
-      a: `Yes — test the SuperSport Rugby / Variety / Grandstand categories on a 24-hour WhatsApp trial from ${city}. Those are playlist folders, not exclusive SuperSport licences.`,
+      q: `Where can I find a specific South African programme in ${place}?`,
+      a: "Search the local broadcaster’s schedule for the programme or event, date and viewing country. For news and radio, SABC+ lists the services it makes available internationally.",
     },
     {
-      q: `What time is a South African rugby kickoff in ${data.name}?`,
-      a: `${data.timezone}. For London-style conversion (SAST → GMT/BST) see the rugby kickoff-times guide. This page does not list fixtures.`,
+      q: `How do I check the local start time in ${place}?`,
+      a: `${data.timezone}. Check whether the event listing is already shown in your device’s local time before converting it.`,
     },
     {
-      q: `What device should I use in ${data.name}?`,
-      a: `Firestick 4K / 4K Max with TiviMate, or Samsung / LG / Hisense with IPTV Smarters. Name the model on WhatsApp. The UK setup guide is the Firestick/Smart TV deep dive.`,
+      q: `Can I try Mzansi Stream in ${data.name} before paying?`,
+      a: `Request a free 24-hour trial on WhatsApp. Give your city and the exact model of the device you plan to use. Support can confirm what you can test from your location. No payment card is required.`,
     },
     {
-      q: `Will it buffer on home Wi-Fi in ${data.name}?`,
-      a: `Use 5 GHz or Ethernet and an 8-second player buffer before you blame the playlist. Edge note already on this page: ${data.edgeRegion}. UK Wi-Fi specifics are on the UK buffering guide.`,
-    },
-    {
-      q: `How do I get a 24-hour trial from ${data.name}?`,
-      a: `WhatsApp +44 7307 410512 (wa.me/447307410512). City, device, and “24-hour trial”. No card.`,
-    },
-    {
-      q: `My old IPTV seller died while I was already in ${data.name}. Now what?`,
-      a: `Load a new 24-hour trial as a second playlist. Do not send a passport. The switch-while-abroad guide is the checklist.`,
-    },
-    {
-      q: `How do I pay from ${data.name}?`,
-      a: `Visa, Mastercard, PayPal, Apple Pay, Google Pay or Wise — already listed on this page. ${data.localPriceNote}. ZA EFT remains if you still have that account.`,
-    },
-    {
-      q: `Are you selling Sky or SuperSport exclusive rights in ${data.name}?`,
-      a: `No. We list channel categories. See “IPTV categories are not broadcast licences”. Confirm folders on the trial.`,
+      q: `What currency will I pay in?`,
+      a: `The published plans are priced in South African rand. If you pay from an account in ${data.localCurrency}, confirm the payment currency, total and any bank conversion charges before you authorise payment.`,
     },
   ];
 }

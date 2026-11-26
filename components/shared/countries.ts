@@ -172,22 +172,21 @@ export const countries: Country[] = [
 ];
 
 // ─── EXPATS — DESTINATIONS FOR SOUTH AFRICANS ABROAD ────────────────
-// Where SA diaspora lives. Big SEO opportunity: "watch SuperSport in UK", etc.
-export const expatCountries: ExpatCountry[] = [
-  { flag: "🇬🇧", code: "gb", name: "United Kingdom", desc: "Full SA TV in London, Manchester, Birmingham — SuperSport, SABC, kykNET with no geo-blocking." },
-  { flag: "🇦🇺", code: "au", name: "Australia",       desc: "SuperSport and SA channels in Perth, Sydney, Melbourne — perfect for the SA expat community." },
-  { flag: "🇳🇿", code: "nz", name: "New Zealand",     desc: "South African channels in Auckland, Wellington, Christchurch — low-latency stream." },
-  { flag: "🇺🇸", code: "us", name: "United States",   desc: "Watch SuperSport and SABC in Houston, NYC, LA — large SA community supported." },
-  { flag: "🇨🇦", code: "ca", name: "Canada",          desc: "SA TV in Toronto, Vancouver, Calgary, Montreal." },
-  { flag: "🇦🇪", code: "ae", name: "UAE / Dubai",     desc: "SA TV for South Africans in the Emirates — test 4K on the trial." },
-  { flag: "🇩🇪", code: "de", name: "Germany",         desc: "SuperSport and SABC in Berlin, Munich, Frankfurt." },
-  { flag: "🇮🇪", code: "ie", name: "Ireland",         desc: "SA channels in Dublin, Cork, Galway — growing SA expat community." },
-  { flag: "🇳🇱", code: "nl", name: "Netherlands",     desc: "South African TV in Amsterdam, The Hague, Rotterdam — without VPN." },
-  { flag: "🇧🇪", code: "be", name: "Belgium",         desc: "SA channels for the diaspora in Brussels and Antwerp." },
-  { flag: "🇨🇭", code: "ch", name: "Switzerland",     desc: "Low-latency streaming for SA expats in Zurich, Geneva, Lausanne." },
-  { flag: "🇲🇿", code: "mz", name: "Mozambique",      desc: "Cross-border SA + Portuguese channels for Maputo and Beira." },
-  { flag: "🇿🇼", code: "zw", name: "Zimbabwe",        desc: "South African channels in Harare and Bulawayo with edge servers." },
-  { flag: "🇧🇼", code: "bw", name: "Botswana",        desc: "SA channels in Gaborone and Francistown — same package, regional pricing." },
-  { flag: "🇳🇦", code: "na", name: "Namibia",         desc: "South African TV across Windhoek, Walvis Bay, Swakopmund." },
-  { flag: "🇸🇬", code: "sg", name: "Singapore",       desc: "SA channels for expats in Singapore — test the stream on the trial." },
+export const expatCountries: (ExpatCountry & { href: string })[] = [
+  { flag: "🇬🇧", code: "gb", name: "United Kingdom", desc: "Moving from SA, household subscriptions and UK viewing.", href: "/en-gb/sa-abroad/uk" },
+  { flag: "🇦🇺", code: "au", name: "Australia", desc: "Match listings and local start times in Perth, Sydney and Melbourne.", href: "/en-au/sa-abroad/australia" },
+  { flag: "🇳🇿", code: "nz", name: "New Zealand", desc: "Reading a South African fixture time in Auckland or Wellington.", href: "/en-nz/sa-abroad/new-zealand" },
+  { flag: "🇺🇸", code: "us", name: "United States", desc: "Local listings and time zones from New York to Los Angeles.", href: "/en-us/sa-abroad/usa" },
+  { flag: "🇨🇦", code: "ca", name: "Canada", desc: "Checking a programme in Toronto, Calgary or Vancouver.", href: "/en-us/sa-abroad/canada" },
+  { flag: "🇦🇪", code: "ae", name: "United Arab Emirates", desc: "Viewing times in Dubai and Abu Dhabi and the price in rand.", href: "/en-ae/sa-abroad/uae" },
+  { flag: "🇩🇪", code: "de", name: "Germany", desc: "Find the German broadcaster for a South African fixture.", href: "/en-za/sa-abroad/germany" },
+  { flag: "🇮🇪", code: "ie", name: "Ireland", desc: "Local programme times for Dublin, Cork and Galway.", href: "/en-gb/sa-abroad/ireland" },
+  { flag: "🇳🇱", code: "nl", name: "Netherlands", desc: "Programme availability and local time in the Netherlands.", href: "/en-za/sa-abroad/netherlands" },
+  { flag: "🇧🇪", code: "be", name: "Belgium", desc: "Find a programme from Brussels, Antwerp or Ghent.", href: "/en-za/sa-abroad/belgium" },
+  { flag: "🇨🇭", code: "ch", name: "Switzerland", desc: "Viewing times and payment currency for Swiss households.", href: "/en-za/sa-abroad/switzerland" },
+  { flag: "🇲🇿", code: "mz", name: "Mozambique", desc: "Regional guide for viewers in Maputo and Beira.", href: "/en-za/sadc/mozambique" },
+  { flag: "🇿🇼", code: "zw", name: "Zimbabwe", desc: "Regional guide for households in Harare and Bulawayo.", href: "/en-za/sadc/zimbabwe" },
+  { flag: "🇧🇼", code: "bw", name: "Botswana", desc: "Regional guide for Gaborone and Francistown.", href: "/en-za/sadc/botswana" },
+  { flag: "🇳🇦", code: "na", name: "Namibia", desc: "Regional guide for Windhoek, Walvis Bay and Swakopmund.", href: "/en-za/sadc/namibia" },
+  { flag: "🇸🇬", code: "sg", name: "Singapore", desc: "Convert a fixture time and check local viewing options.", href: "/en-za/sa-abroad/singapore" },
 ];

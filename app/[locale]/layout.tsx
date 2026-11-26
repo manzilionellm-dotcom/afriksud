@@ -51,12 +51,12 @@ const BASE_METADATA: Metadata = {
     // `default` is rendered as-is (no template applied) so the brand
     // suffix lives here. Child pages must set `title` WITHOUT the
     // `| Mzansi Stream` suffix — the template appends it once.
-    default: "DStv Alternative — Live TV in 4K from R99 | Mzansi Stream",
+    default: "DStv Alternative in South Africa | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },
   // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24h trial, no card. From R99/mo.",
+    "Compare DStv with Mzansi Stream. One month costs R199, or pay R1,199 upfront for a year. Request a free 24-hour trial on WhatsApp.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",

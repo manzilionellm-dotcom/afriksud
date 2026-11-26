@@ -68,10 +68,12 @@ function attachWhatsAppDelegate() {
       // Don't block the click on a URL parse failure.
     }
 
+    // The checkout records one richer event before opening its WhatsApp link.
+    if (anchor.dataset.clickRecorded === "true") return;
     track("whatsapp_click", {
       ref: ref || undefined,
       placement: placement || undefined,
-      href: anchor.href.slice(0, 200),
+      page: window.location.pathname,
     });
   };
   document.addEventListener("click", handler, { capture: true });

@@ -202,7 +202,7 @@ export default async function CommunityPage({ params }: Props) {
             <ol className="longformList">
               <li>Message us on WhatsApp with your device + city.</li>
               <li>
-                Pick a plan from R99/month (12-month plan equivalent) and
+                Pick a plan at R199 for one month or R1,199 upfront for twelve months and
                 pay via EFT, SnapScan, Ozow, Capitec Pay, Visa, Mastercard
                 or PayPal.
               </li>
@@ -215,7 +215,10 @@ export default async function CommunityPage({ params }: Props) {
           </section>
 
           <section className="longformSection">
-            <h2>Related city pages</h2>
+            <h2>Related guides</h2>
+            {data.slug === "nigerian" && (
+              <p>Renewing an account in Nigeria? <Link href="/en-za/blog/dstv-nigeria-packages">Check DStv Nigeria prices and your next bill in naira.</Link></p>
+            )}
             <ul className="longformList">
               {data.hubCities.slice(0, 3).map((city) => {
                 const slug = city.toLowerCase().replace(/\s+/g, "-");

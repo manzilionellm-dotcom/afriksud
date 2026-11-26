@@ -5,7 +5,7 @@
 // + HowTo when steps exist + BreadcrumbList).
 
 import Link from "next/link";
-import { LOCALE_META, type Locale } from "../../lib/locales";
+import { LOCALES, LOCALE_META, type Locale } from "../../lib/locales";
 import { localeUrl, SITE_URL } from "../../lib/url";
 import { SITE } from "../shared/site";
 import { generateWhatsAppLink } from "../shared/utils";
@@ -169,7 +169,7 @@ export function PillarTemplate({
             answer={pillar.lead}
             keyFacts={
               pillar.trustLine
-                ? [pillar.trustLine, "From R99/month. 24-hour free trial, no credit card. Activated on WhatsApp."]
+                ? [pillar.trustLine, "One month R199 or twelve months R1,199 upfront. Free 24-hour trial without a card."]
                 : undefined
             }
           />
@@ -228,7 +228,7 @@ export function PillarTemplate({
           <InlinePricingBlock
             locale={locale}
             refTag={`Pillar-${pillar.slug}`}
-            heading="Pricing — from R99/month, no contract"
+            heading="Mzansi Stream prepaid prices"
             sub="Pick a plan, message us on WhatsApp, and we activate it there. 24-hour free trial available before you pay."
           />
 
@@ -258,7 +258,7 @@ export function PillarTemplate({
             <ul className="longformList">
               {pillar.related.map((r) => (
                 <li key={r.href}>
-                  <Link href={`/${locale}${r.href}`}>{r.label}</Link>
+                  <Link href={r.href.startsWith("https://") || LOCALES.some((code) => r.href.startsWith(`/${code}/`)) ? r.href : `/${locale}${r.href}`}>{r.label}</Link>
                 </li>
               ))}
             </ul>

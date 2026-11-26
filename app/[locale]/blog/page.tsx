@@ -8,6 +8,7 @@ import Link from "next/link";
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangForProgrammatic, localeUrl, ogImagesFor } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
+import { listedGuides, guidePath } from "../../../lib/seo/dstv-guides";
 import { BLOG_POSTS } from "../../../lib/seo/blog-posts";
 import { LongformShell } from "../../../components/client/LongformShell";
 import { JsonLd } from "../../../lib/seo/jsonld";
@@ -22,6 +23,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
+  if (locale === "fr") {
+    const canonical = localeUrl("fr", "/blog");
+    return {
+      title: { absolute: "Guides télévision en Afrique et en Europe | Mzansi Stream" },
+      description: "Comparez les bouquets TV par pays et retrouvez les diffuseurs de programmes sud-africains en France et en Allemagne.",
+      alternates: { canonical, languages: { fr: canonical } },
+      robots: { index: true, follow: true },
+    };
+  }
   return {
     title: "Mzansi Stream Blog — IPTV guides, sport, devices",
     description:
@@ -44,24 +54,29 @@ export default async function BlogIndex({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
 
+  const fr = locale === "fr";
+  const guideList = listedGuides(locale as Locale);
   return (
     <LongformShell locale={locale as Locale}>
       <JsonLd data={breadcrumbSchema(locale as Locale, [{ name: "Blog", path: "/blog" }])} />
       <article className="section">
         <header className="longformHeader">
           <p className="longformEyebrow">Blog</p>
-          <h1>Mzansi Stream Blog — IPTV guides for SA, SADC and the diaspora</h1>
+          <h1>{fr ? "Guides télévision en Afrique et en Europe" : "Mzansi Stream Blog — IPTV guides for SA, SADC and the diaspora"}</h1>
           <p className="longformLead">
-            Guides to streaming TV in South Africa, across SADC, and for
-            South Africans abroad — WhatsApp order, DStv alternatives, device
-            setup, SuperSport, rugby from London, load shedding and what to
-            look for in a reliable IPTV service.
+            {fr ? "Choisissez un guide selon le pays du foyer, le programme que vous cherchez et votre mode de réception." : "Find current package prices, official services and local broadcasters. Our setup guides cover streaming devices and the 24-hour Mzansi Stream trial."}
           </p>
         </header>
 
         <section className="longformSection">
           <ul className="blogIndex">
-            {[...BLOG_POSTS]
+            {guideList.map((guide) => (
+              <li key={guide.slug} className="blogIndexItem">
+                <h2><Link href={guidePath(guide)}>{guide.title}</Link></h2>
+                <p className="blogIndexLead">{guide.description}</p>
+              </li>
+            ))}
+            {!fr && [...BLOG_POSTS]
               .sort((a, b) => b.datePublished.localeCompare(a.datePublished))
               .map((p) => (
               <li key={p.slug} className="blogIndexItem">

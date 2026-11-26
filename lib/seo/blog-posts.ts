@@ -57,14 +57,14 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "how-to-watch-psl-online-2026",
     title: "How to watch PSL online in 2026 — no DStv decoder",
-    metaDescription: "DStv Premiership without a DStv subscription — SuperSport PSL folders via Mzansi Stream in 4K, matches to confirm on WhatsApp, from R99/mo.",
+    metaDescription: "DStv Premiership without a DStv subscription — SuperSport PSL folders via Mzansi Stream in 4K, matches to confirm on WhatsApp, with a free 24-hour trial.",
     datePublished: "2026-01-20",
-    lead: "The DStv Premiership runs from August through May with 240+ fixtures across the season. Here's how to watch PSL online in 2026 without a DStv decoder, a 24-month contract, or paying R899/month for Premium.",
+    lead: "Check the South African TV guide for the exact PSL fixture before choosing a package. A decoder is one way to watch a broadcaster; the streaming offer has its own guide and price.",
     sections: [
       {
         h2: "Why so many fans are dropping DStv",
         body: [
-          "DStv Premium is currently R899/month — R10,788 a year. With load-shedding, decoder failures and inflation, more PSL fans are looking for streaming that works on the devices they already own.",
+          "DStv Stream Starter costs R99 per month and Sports costs R399. Confirm the fixture on the package before paying.",
           "Mzansi Stream lists SuperSport-style folders — PSL, Variety, Rugby, Cricket — in 4K where the source supports it; matches to confirm on WhatsApp. No decoder, no installer, no 24-month contract.",
         ],
       },
@@ -95,36 +95,45 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "dstv-vs-iptv-2026-complete-guide",
-    title: "DStv vs IPTV in 2026 — the complete guide",
-    metaDescription: "Side-by-side comparison of DStv and IPTV in 2026 — pricing, channels, sport, 4K and what to look for in a reliable IPTV provider.",
+    title: "DStv vs prepaid IPTV in South Africa",
+    metaDescription: "Compare the initial bill, streaming devices and programme checks for DStv and Mzansi. Prices in rand and a checklist for your household.",
     datePublished: "2026-01-22",
-    lead: "If you're weighing DStv against IPTV in 2026, here's the honest comparison — pricing, channel mix, sport coverage, devices, and what to check before you sign up.",
+    dateModified: "2026-11-26",
+    lead: "DStv itself sells streaming subscriptions. The useful comparison is between the service, its catalogue and the amount due for your preferred term.",
     sections: [
       {
-        h2: "The 2026 pricing reality",
+        h2: "Compare month-to-month prices",
         body: [
-          "DStv Premium is R899/month, Compact Plus R549, Compact R449, Family R329. All require a 24-month contract and a decoder (R1,500+ upfront).",
-          "Reliable IPTV in SA sits between R99 and R200/month, with no contract and no decoder.",
-        ],
+          "DStv Stream Starter costs R99 for a month and Premium Stream R799. Mzansi’s one-month plan costs R199. Check the specific package and programme you need."
+        ]
       },
       {
-        h2: "Sport coverage compared",
+        h2: "Calculate prepaid cash flow",
         body: [
-          "DStv Premium carries every SuperSport feed plus Premier League. Compact Plus partially covers Premier League and URC. Compact skips the Premier League entirely.",
-          "Mzansi Stream lists SuperSport-style and Premier League folders on every plan, in 4K where the source supports it — matches to confirm on WhatsApp.",
-        ],
+          "Mzansi’s R1,199 annual payment works out to R99.92 per month. Twelve R99 payments for DStv Stream Starter would be R1,188 if the rate holds. Extra costs can include data, devices and some satellite services."
+        ]
       },
       {
-        h2: "What makes IPTV reliable",
+        h2: "Test the programmes you care about",
         body: [
-          "Server uptime, EPG quality, support response time, and 4K bandwidth are the four metrics that matter. Don't pay for an IPTV provider that ghosts you on WhatsApp.",
-        ],
-      },
+          "Write down three shows and one live event, including the episode or match. Check their listing for your viewing country, preferred language and device before cancelling another account."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium" },
-      { label: "How to cancel DStv", href: "/en-za/blog/cancel-dstv-step-by-step-2026" },
-    ],
+      {
+        label: "Official DStv package guide",
+        href: "https://www.dstv.com/en-za/news/149536/how-to-change-upgrade-dstv-package/"
+      },
+      {
+        label: "South African price comparison",
+        href: "/en-za/blog/dstv-price-south-africa"
+      },
+      {
+        label: "SABC direct viewing",
+        href: "/en-za/blog/sabc-without-dstv"
+      }
+    ]
   },
   {
     slug: "firestick-iptv-setup-south-africa",
@@ -155,14 +164,14 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Mzansi Stream plans from R99/mo", href: "/en-za" },
+      { label: "Compare Mzansi prepaid terms", href: "/en-za" },
       { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
     slug: "watch-springboks-live-online",
     title: "Watch the Springboks live online in 2026",
-    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. From R99/mo. No DStv required.",
+    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. R199 for one month. No DStv required.",
     datePublished: "2026-01-26",
     lead: "Springbok Tests, Rugby Championship, URC, Currie Cup and Six Nations matches are broadcast on SuperSport in SA. Here's how to check what plays on Mzansi Stream in 4K without DStv.",
     sections: [
@@ -234,47 +243,64 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       },
     ],
     relatedLinks: [
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
       { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
     ],
   },
   {
     slug: "cancel-dstv-step-by-step-2026",
-    title: "How to cancel DStv — step-by-step 2026 guide",
-    metaDescription: "How to cancel DStv in 2026 — WhatsApp, MyDStv, USSD and call centre options. Avoid the 30-day notice trap.",
+    title: "How to verify your DStv cancellation date",
+    metaDescription: "Find the next payment date in MyDStv, choose the correct package and keep your confirmation. Includes an example of what to check on your next bill.",
     datePublished: "2026-02-01",
-    lead: "Cancelling DStv is intentionally awkward. Here's the fastest 2026 method — WhatsApp, MyDStv app or call centre — plus how to avoid the 30-day notice trap.",
+    dateModified: "2026-11-26",
+    lead: "If you are planning a move or a change of service, start by checking the date on your own DStv account. The South African disconnection FAQ schedules an ordinary cancellation at the next payment date.",
     sections: [
       {
-        h2: "Three ways to cancel",
+        h2: "Find the effective date",
         body: [
-          "WhatsApp 060 060 3788 — fastest, get written confirmation. MyDStv app — Manage subscription → Cancel. Call centre 083 900 8000 — longest queues.",
-        ],
+          "Sign in to DStv’s Self Service website, go to My Products, select your package and open Disconnect. Review the date the account shows before submitting."
+        ]
       },
       {
-        h2: "Avoiding the 30-day notice trap",
+        h2: "Check the product you selected",
         body: [
-          "DStv requires 30 days' notice on a paid month. Cancel on day 1 of your billing cycle, not day 25, or you'll pay an extra full month.",
-        ],
+          "A household can have a television subscription alongside an internet bundle or a contract. Confirm which services will end and what costs apply with DStv."
+        ]
       },
+      {
+        h2: "Keep a record of the change",
+        body: [
+          "Save the confirmation or reference. If a payment still appears after the date, give DStv the date, reference and amount and ask which billing period it covers."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "Switch to Mzansi Stream from R99/mo", href: "/en-za" },
-      { label: "DStv vs Mzansi Stream comparison", href: "/en-za/vs/dstv-premium" },
-    ],
+      {
+        label: "Main DStv cancellation guide",
+        href: "/en-za/cancel-dstv-2026"
+      },
+      {
+        label: "Official disconnection instructions",
+        href: "https://www.dstv.com/en-za/help/faqs/viewing/my-dstv-viewing/how-can-i-cancel-my-dstv-packageservice/"
+      },
+      {
+        label: "Leaving for the UK",
+        href: "/en-gb/blog/dstv-uk-moving-from-south-africa"
+      }
+    ]
   },
   {
     slug: "iptv-zimbabwe-complete-guide",
     title: "IPTV Zimbabwe in 2026 — complete guide",
     metaDescription: "Complete IPTV guide for Zimbabwe in 2026 — pricing in USD, EcoCash payment, DStv alternative, SuperSport in 4K.",
     datePublished: "2026-02-03",
-    lead: "Streaming TV in Zimbabwe in 2026 — pricing in USD, paying with EcoCash and OneMoney, getting around load shedding, and watching SuperSport without DStv Africa's US$96/month bill.",
+    lead: "Compare the local price and payment currency, and test your own connection during your normal viewing hours. A South African package price cannot tell you what a household in Zimbabwe will pay.",
     sections: [
       {
         h2: "Why DStv Africa is expensive in ZW",
         body: [
-          "DStv Premium Africa runs around US$96/month in Zimbabwe. That's R1,800+ at the bond rate, locked behind a 24-month contract.",
-          "Mzansi Stream is US$11/month with no contract, paid in USD or EcoCash.",
+          "Check the DStv Zimbabwe package and account balance in your own billing currency. Ask for the full charge including equipment or other fees.",
+          "Ask for a written Mzansi quote in your currency with the term, total payment and accepted method before you pay.",
         ],
       },
       {
@@ -305,7 +331,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Canais portugueses incluídos",
         body: [
-          "TVM, RTP África, SIC, TVI, STV e os canais desportivos SuperSport — tudo num só pacote, em 4K.",
+          "Verifique o programa e o horário no guia do canal em Moçambique antes de escolher uma assinatura. A disponibilidade muda de acordo com o território e o pacote.",
         ],
       },
     ],
@@ -316,30 +342,45 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "dstv-premium-vs-mzansi-stream",
-    title: "DStv Premium vs Mzansi Stream — honest 2026 review",
-    metaDescription: "Honest 2026 comparison of DStv Premium and Mzansi Stream — same channels, fraction of the price, no decoder, no contract.",
+    title: "DStv Premium vs Mzansi Stream – the first payment",
+    metaDescription: "Compare Premium satellite, Premium Stream and Mzansi on current South African prices. See how monthly and annual plans affect cash flow.",
     datePublished: "2026-02-07",
-    lead: "An honest side-by-side of DStv Premium and Mzansi Stream in 2026 — pricing, channel coverage, sport, 4K availability, support quality, and whether the savings actually hold up over a year.",
+    dateModified: "2026-11-26",
+    lead: "Premium has more than one price. The standard satellite plan is R979 per month and Premium Stream is R799. The advertised R799 satellite deal involves a 24-month commitment and includes the access fee.",
     sections: [
       {
-        h2: "The annual cost",
+        h2: "How much is due upfront?",
         body: [
-          "DStv Premium: R899 × 12 = R10,788/year, plus a R1,500+ decoder upfront.",
-          "Mzansi Stream 12-month plan: R1,199/year. Savings over year one: roughly R10,000.",
-        ],
+          "Mzansi costs R199 for one month or R1,199 upfront for twelve. On a monthly DStv Premium subscription, check your account to see whether equipment, access fees or other products are included."
+        ]
       },
       {
-        h2: "Where DStv still wins",
+        h2: "What if the rates stay fixed for a year?",
         body: [
-          "Brand familiarity, a stable phone-based support call centre, and PVR via the Explora decoder.",
-          "If you can't use WhatsApp or a Smart TV, DStv may still suit you.",
-        ],
+          "Twelve R799 Premium Stream payments total R9,588. Twelve standard R979 Premium satellite payments total R11,748, before any applicable fees. A R1,199 Mzansi plan is a distinct service with its own catalogue."
+        ]
       },
+      {
+        h2: "Which account should a household keep?",
+        body: [
+          "Check each must-have event or programme using the broadcaster’s own listing. If a service already delivers what you need within budget, changing solely for a larger advertised catalogue may add little value."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "Mzansi Stream vs DStv Premium — full comparison", href: "/en-za/vs/dstv-premium" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
-    ],
+      {
+        label: "Official Premium rates",
+        href: "https://www.dstv.com/en-za/news/149536/how-to-change-upgrade-dstv-package/"
+      },
+      {
+        label: "Compare all packages",
+        href: "/en-za/blog/dstv-price-south-africa"
+      },
+      {
+        label: "DStv household options",
+        href: "/en-za/dstv-alternative"
+      }
+    ]
   },
   {
     slug: "why-is-my-iptv-buffering-fix-2026",
@@ -403,7 +444,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "IPTV buffering — full pillar guide", href: "/en-za/iptv-no-buffering-south-africa" },
       { label: "Best IPTV for Vumatel / Openserve / Frogfoot", href: "/en-za/iptv-vumatel-openserve-frogfoot" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
   {
@@ -475,7 +516,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
       { label: "Cheap IPTV South Africa — under R100", href: "/en-za/cheap-iptv-south-africa" },
       { label: "IPTV buffering on SA fibre", href: "/en-za/iptv-no-buffering-south-africa" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
   {
@@ -530,7 +571,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "IPTV Firestick setup — full guide", href: "/en-za/iptv-firestick-south-africa" },
       { label: "IPTV for Samsung Smart TV (Tizen)", href: "/en-za/iptv-samsung-smart-tv" },
       { label: "4K IPTV in South Africa", href: "/en-za/4k-iptv-south-africa" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
   {
@@ -559,7 +600,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "What Mzansi Stream is not",
         body: [
-          "Not a content broadcaster. The channels you watch are sourced from existing broadcaster feeds — we don't produce SuperSport or kykNET content.",
+          "Check the channel or programme with the broadcaster for your country. A player can show a title in its guide without proving who can distribute it.",
           "Not a torrent service. The streams are delivered over standard HLS.",
           "This page makes no legality or licence claim and does not state a company registration.",
         ],
@@ -582,7 +623,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Is IPTV legal in South Africa? — 2026 guide", href: "/en-za/is-iptv-legal-south-africa" },
       { label: "Best IPTV in South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
       { label: "Privacy / POPIA policy", href: "/en-za/legal/popia" },
     ],
   },
@@ -605,7 +646,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "Symptom: 'Cannot play this stream' on every channel",
         body: [
           "The server may be temporarily down. This page does not quote an uptime percentage. Try a single channel after 60 seconds.",
-          "If only some channels fail: that channel's source feed is down at the broadcaster (e.g. a SuperSport feed mid-restream). Switch to a sister channel and retry.",
+          "If only one channel fails, note the time, device and any on-screen error. Test another programme and give support those details.",
           "If every channel fails for more than 5 minutes — message your provider on WhatsApp. Mzansi Stream resolves outages typically within an hour.",
         ],
       },
@@ -643,7 +684,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       { label: "Firestick IPTV setup — South Africa", href: "/en-za/iptv-firestick-south-africa" },
       { label: "Why your IPTV keeps buffering", href: "/en-za/blog/why-is-my-iptv-buffering-fix-2026" },
       { label: "TiviMate vs IPTV Smarters Pro", href: "/en-za/blog/tivimate-vs-iptv-smarters-pro-2026" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
   {
@@ -701,22 +742,22 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "cheap-iptv-south-africa-realistic-pricing",
     title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
-    metaDescription: "Cheap IPTV in South Africa in 2026 — the realistic price floor for a reliable provider, the red flags below R50, and how Mzansi Stream stays at R99/mo.",
+    metaDescription: "Compare prepaid IPTV prices in South Africa, check the amount due upfront and use a trial before buying a longer term.",
     datePublished: "2026-03-16",
-    lead: "Cheap IPTV in South Africa is everywhere — but most under-R50 providers vanish inside three months. Here's the realistic 2026 floor for cheap-but-reliable IPTV, what to look for, and why R99/month is the sweet spot.",
+    lead: "For a budget close to R100 per month, compare how much is due today. Mzansi’s annual plan costs R1,199 in one payment. The minimum one-month purchase is R199.",
     sections: [
       {
         h2: "What 'cheap IPTV' really costs to run",
         body: [
           "Running IPTV infrastructure with WhatsApp support has real fixed costs per subscriber; this page does not publish a figure.",
-          "Anything below that means either the provider is skipping licensed feeds, oversubscribing the CDN (which is why peak-hour buffering is so common in cheap services) or running a short-term cash grab.",
+          "A price alone cannot establish reliability or programme availability. Ask for the full prepaid amount, the service terms and a trial on your own device.",
         ],
       },
       {
-        h2: "The R99/month sweet spot",
+        h2: "The first payment and the yearly total",
         body: [
-          "At R99/month you get Mzansi Stream's line-up (to confirm on WhatsApp), 4K where the source supports it and WhatsApp support, with no contract.",
-          "Mzansi Stream's 12-month plan works out to R99.92/mo effective — cheaper still if you can commit to the year.",
+          "Mzansi offers one month for R199 and a year for R1,199 upfront. Internet access and a compatible device are needed for both.",
+          "Dividing R1,199 by twelve gives R99.92 per month to the nearest cent. The renewal price is the price shown when you place the next order.",
         ],
       },
       {
@@ -726,7 +767,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         ],
       },
       {
-        h2: "How Mzansi Stream stays at R99",
+        h2: "What to check before a longer term",
         body: [
           "WhatsApp-first support — no call centre overhead — and one-off payments with no decoder hardware. This page does not publish a cost breakdown.",
         ],
@@ -735,8 +776,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     relatedLinks: [
       { label: "Cheap IPTV South Africa — full pillar guide", href: "/en-za/cheap-iptv-south-africa" },
       { label: "Best IPTV South Africa 2026", href: "/en-za/best-iptv-south-africa-2026" },
-      { label: "DStv alternative — save R800+/month", href: "/en-za/dstv-alternative" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "DStv alternative — compare your options", href: "/en-za/dstv-alternative" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
 ];

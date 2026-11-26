@@ -9,9 +9,31 @@
 // the diaspora landing pages are built out.
 
 import type { Copy, Locale } from "./types";
-import { deviceList } from "./plans";
+import { deviceList, monthlyEquivalent, plans } from "./plans";
+import { DSTV_SA_PRICES } from "../../lib/seo/dstv-sa-prices";
 
 const SITE_LABEL = { brand: "Mzansi Stream" };
+
+function homePriceRows(language: "en" | "fr"): Copy["compare"]["rows"] {
+  const french = language === "fr";
+  const format = new Intl.NumberFormat(french ? "fr-FR" : "en-GB");
+  const money = (amount: number) => `R${format.format(amount)}`;
+  const monthly = french ? "par mois" : "monthly";
+  const decoder = french ? "sur décodeur" : "on a decoder";
+  const dstv = DSTV_SA_PRICES
+    .filter((tier) => tier.name === "Starter" || tier.name === "Premium")
+    .flatMap((tier) => [
+      { service: `DStv Stream ${tier.name}`, payment: `${money(tier.stream)} ${monthly}`, perMonth: money(tier.stream) },
+      { service: `DStv ${tier.name} ${decoder}`, payment: `${money(tier.satellite)} ${monthly}`, perMonth: money(tier.satellite) },
+    ]);
+  const mzansi = plans.filter((plan) => plan.months === 1 || plan.months === 12).map((plan) => ({
+    service: `Mzansi Stream · ${plan.months} ${french ? "mois" : plan.months === 1 ? "month" : "months"}`,
+    payment: `${money(plan.price)} ${french ? "en une fois" : "upfront"}`,
+    perMonth: money(monthlyEquivalent(plan)),
+    highlight: true,
+  }));
+  return [...dstv, ...mzansi];
+}
 
 // ════════════════════════════════════════════════════════════════════════════
 // ENGLISH SOUTH AFRICA (en-ZA) — DEFAULT
@@ -38,7 +60,7 @@ const enZA: Copy = {
     pill: "Premium 4K · No contract · 24h free trial",
     titleA: "Best IPTV South Africa.",
     titleB: "Direct to your screen.",
-    lead: "Live channels in 4K, sport, movies and series. SuperSport-style, DStv Premiership, Premier League and kykNET folders — line-up to confirm on WhatsApp. No contract. Picture quality depends on your line.",
+    lead: "Try live TV, films and series for 24 hours on your own screen. One month costs R199. Twelve months cost R1,199 upfront. Ask about your programmes and device on WhatsApp.",
     ctaPrices: "See pricing",
     ctaAdvisor: "Talk to an advisor",
     trust: "No contract · WhatsApp activation · Test it on your own line",
@@ -52,12 +74,12 @@ const enZA: Copy = {
   },
   offers: {
     title: "Choose your plan",
-    sub: "Every plan includes the same channel line-up, VOD, EPG and WhatsApp support. Line-up to confirm on WhatsApp.",
+    sub: "Pay once for your chosen term. One month costs R199 and twelve months cost R1,199. Check the current line-up on the free trial.",
     order: "Order via WhatsApp",
     billedOnce: "One-off payment of",
     perMonth: "/mo",
     save: "SAVE",
-    bestSeller: "BEST SELLER",
+    bestSeller: "3-MONTH PLAN",
     totalLabel: "one-off",
   },
   planNames: {
@@ -68,9 +90,9 @@ const enZA: Copy = {
   },
   planPerks: {
     p1: ["SA + sport folders to trial", "4K/UHD quality", "EPG guide included", "WhatsApp support", "No contract"],
-    p3: ["Most popular choice", "SA + sport folders to trial", "VOD on the trial", "Priority support", "Guided install"],
-    p6: ["Best value for money", "SA + sport folders to trial", "Up to 3 devices", "EPG + Catch-up TV", "Same line-up as every plan"],
-    p12: ["Best deal of the year", "Premium VIP access", "Published channel pack", "WhatsApp support", "Free upgrades"],
+    p3: ["One upfront payment", "On-demand titles", "Programme guide", "WhatsApp setup help"],
+    p6: ["Six months prepaid", "Programme guide", "One simultaneous connection", "WhatsApp support"],
+    p12: ["Twelve months prepaid", "One simultaneous connection", "Programme guide", "WhatsApp support"],
   },
   channels: {
     title: "Browse the channel line-up",
@@ -84,7 +106,7 @@ const enZA: Copy = {
   },
   vod: {
     title: "Movies and series on demand",
-    sub: "Ask on WhatsApp for the current catalogue, then check it on the 24h trial. Watch when you want, where you want.",
+    sub: "Ask on WhatsApp for the current catalogue, then check it on the 24h trial. Availability varies by programme and country.",
     stats: [
       { value: "VOD",      label: "Movies & series" },
       { value: "Live",     label: "TV channels" },
@@ -93,17 +115,11 @@ const enZA: Copy = {
     ],
   },
   compare: {
-    title: "Why choose Mzansi Stream?",
-    sub: "Comparison vs the main streaming services in South Africa.",
-    headers: ["Service", "Price/mo", "Live channels", "VOD", "4K", "Support"],
-    rows: [
-      { service: "DStv Premium",      price: "R899",    live: "~180",    vod: true,  hd4k: true,  support: "Phone" },
-      { service: "DStv Compact Plus", price: "R549",    live: "~150",    vod: true,  hd4k: false, support: "Phone" },
-      { service: "DStv Compact",      price: "R449",    live: "~120",    vod: true,  hd4k: false, support: "Phone" },
-      { service: "Showmax",           price: "R99",     live: "0",       vod: true,  hd4k: true,  support: "Email" },
-      { service: "Netflix Premium",   price: "R199",    live: "0",       vod: true,  hd4k: true,  support: "Chat" },
-      { service: "Mzansi Stream",     price: "from R99", live: "Confirm on WhatsApp", vod: true, hd4k: true,  support: "Direct WhatsApp", highlight: true },
-    ],
+    title: "DStv and Mzansi Stream prices in South Africa",
+    sub: "Subscription prices checked on 26 November 2026, excluding data, installation and add-ons. Check the programmes you want with each provider.",
+    headers: ["Plan", "Subscription payment", "Monthly equivalent"],
+    sourceLabel: "Official DStv South Africa prices",
+    rows: homePriceRows("en"),
   },
   reviews: {
     title: "Customer reviews",
@@ -116,10 +132,10 @@ const enZA: Copy = {
   trust: {
     title: "Safe, simple sign-up",
     items: [
-      { icon: "🧪", title: "Free 24h trial",          desc: "No credit card. Zero risk." },
-      { icon: "⚡", title: "Activated on WhatsApp",   desc: "Activation is done on WhatsApp after payment." },
+      { icon: "🧪", title: "Free 24h trial",          desc: "Test on your device before paying." },
+      { icon: "⚡", title: "Activated on WhatsApp",   desc: "Request your free trial on WhatsApp. Choose a paid term if it suits you." },
       { icon: "💬", title: "English support",         desc: "Support on WhatsApp." },
-      { icon: "🛡️", title: "Satisfaction guarantee", desc: "Not happy? Reach out within 24h." },
+      { icon: "🛡️", title: "Check on your device", desc: "Try the picture and sound on your own connection before paying." },
       { icon: "📺", title: "4K on every plan",        desc: "No surcharge for max quality." },
       { icon: "🌐", title: "SA fibre",                desc: "Test it on Vumatel, Openserve, Frogfoot, MTN or Vodacom during the trial." },
     ],
@@ -134,8 +150,8 @@ const enZA: Copy = {
       { q: "How fast is activation?", a: "Activation is done on WhatsApp after we receive your order and payment. We don't publish a fixed delay." },
       { q: "Is the EPG guide included?", a: "Yes. The full Electronic Programme Guide is included in every plan so you always know what's on now and what's coming up." },
       { q: "Can I watch on multiple devices at the same time?", a: "The standard plan includes one connection. If you need multi-screen for the whole household, message us on WhatsApp and we'll set up a tailored plan." },
-      { q: "Do I need a VPN?", a: "Not required in South Africa, but we recommend one for extra privacy. We can advise on the best VPN for the service." },
-      { q: "Does it work outside South Africa?", a: "South Africans abroad use it. We don't publish a country count. For best results outside SA we recommend a VPN, and the 24h trial is how you check your own connection." },
+      { q: "Do I need a VPN?", a: "Use your usual internet connection and choose the viewing options available in your country." },
+      { q: "Does it work outside South Africa?", a: "Tell us your country of residence and the programme you want. Availability depends on the territory, and you can check your supported device before paying." },
       { q: "How do I pay?", a: "Payment is handled on WhatsApp. We accept EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin." },
       { q: "What if the service goes down?", a: "Message us directly on WhatsApp. We treat outages as a support job, not a promise that nothing will ever drop." },
       { q: "Is there a contract? Can I cancel?", a: "No contract and no auto-renewal. You pay once and the service ends at the end of the chosen period. If you want to continue, you renew it manually." },
@@ -150,10 +166,10 @@ const enZA: Copy = {
     sub: "The best internet TV service, tuned for your province.",
     button: "Contact us",
     items: [
-      { name: "Johannesburg", text: "A cheaper DStv-style option for Joburg households. SuperSport-style folders, Premier League, kykNET and SABC — confirm what you need on the trial." },
+      { name: "Johannesburg", text: "Compare prepaid options in Joburg and test the picture on your home connection." },
       { name: "Cape Town",    text: "Set up for Cape Town. Stormers, Cape Town City FC, URC and PSL folders — test the fixture on your line. We don't promise zero buffering." },
       { name: "Durban",       text: "Built for Durban: AmaZulu FC, Sharks rugby, Indian channels for the local community and the international folders people actually use." },
-      { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — install in about 10 minutes via WhatsApp." },
+      { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — ask about your device and the current line-up on WhatsApp." },
       { name: "Gqeberha",     text: "Eastern Cape setup — Chippa United, EP Elephants and the major national folders, confirmed on trial." },
       { name: "Bloemfontein", text: "Bloemfontein Celtic, Free State Cheetahs and SuperSport-style rugby folders with English-language WhatsApp support." },
       { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an every-match promise." },
@@ -161,7 +177,7 @@ const enZA: Copy = {
     ],
   },
   setup: {
-    title: "10-minute install",
+    title: "Set up your device",
     sub: "Works on Firestick, Smart TV, iPhone, Android and more. We walk you through every step.",
     button: "Get install help",
     steps: [
@@ -172,15 +188,15 @@ const enZA: Copy = {
   },
   international: {
     eyebrow: "SA WORLDWIDE",
-    title: "Mzansi Stream — for South Africans anywhere in the world",
+    title: "South African viewing guides for people abroad",
     sub: "Live channels in 4K where your line allows. Built for the SA diaspora in the UK, Australia, New Zealand, USA, UAE, Canada, Germany and beyond. SuperSport-style, SABC and kykNET folders — confirm them on the 24h trial.",
     tagline: "Tap your country to see its page.",
     selectCountry: "Pick your country",
     benefitsTitle: "South African TV for people living abroad",
     benefits: [
-      { icon: "🌍", title: "Used by SA expats abroad", desc: "Edges in the regions we publish on the country pages. 4K depends on your broadband — test it. We don't publish a country count." },
+      { icon: "🌍", title: "Check availability abroad", desc: "Choose your country of residence and check the programme you want there." },
       { icon: "📺", title: "SA channel folders",      desc: "SABC, e.tv, SuperSport-style sport and kykNET are the usual folders — confirm names on the 24h trial." },
-      { icon: "⚡", title: "No geo-blocking",        desc: "The service works without a VPN. You don't need a separate SA decoder rental to watch SABC abroad." },
+      { icon: "⚡", title: "Availability by country",        desc: "Live TV and on-demand rights vary by country and programme. Check your local viewing options before paying." },
       { icon: "💬", title: "Support in English",    desc: "WhatsApp support in English (and Afrikaans on request)." },
     ],
     cta: "Order via WhatsApp",
@@ -239,9 +255,9 @@ const enZA: Copy = {
     name: "Lerato",
     greeting1: "Hi there! 👋 I'm Lerato.",
     greeting2: "I can help with pricing, the free trial or the install. What would you like to know?",
-    price1: "Plans start at R99/month — 1, 3, 6 or 12 months. All include the same line-up, EPG and WhatsApp support.",
+    price1: "One month is R199. A full year is R1,199 paid upfront, equivalent to R99.92 per month.",
     price2: "Want to see the pricing or try it free for 24h first?",
-    install1: "Firestick and Smart TV both work. Install takes about 10 minutes.",
+    install1: "Firestick and Smart TV both work. Message us with your device model for setup help.",
     install2: "I'll send the step-by-step guide on WhatsApp now.",
     trial1: "Of course! We offer a 24-hour free trial — no card, no commitment.",
     trial2: "Tap below and I'll send the trial link directly on WhatsApp.",
@@ -314,7 +330,7 @@ const af: Copy = {
     billedOnce: "Eenmalige betaling van",
     perMonth: "/maand",
     save: "BESPAAR",
-    bestSeller: "MEES POPULÊR",
+    bestSeller: "3 MAANDE",
     totalLabel: "eenmalig",
   },
   planNames: {
@@ -324,7 +340,7 @@ const af: Copy = {
     p12: "12 maande",
   },
   setup: {
-    title: "10-minuut installasie",
+    title: "Stel jou toestel op",
     sub: "Werk op Firestick, Smart TV, iPhone, Android en meer. Ons lei jou deur elke stap.",
     button: "Kry hulp met installasie",
     steps: [
@@ -374,6 +390,13 @@ const fr: Copy = {
     cta: "Demander mon essai gratuit",
     note: "Sans engagement. Sans prélèvement automatique.",
   },
+  compare: {
+    title: "Prix de DStv et Mzansi Stream en Afrique du Sud",
+    sub: "Abonnements vérifiés le 26 novembre 2026. La connexion, l’installation et les options s’ajoutent si nécessaire. Vérifiez vos programmes auprès de chaque service.",
+    headers: ["Forfait", "Somme à payer", "Équivalent mensuel"],
+    sourceLabel: "Tarifs officiels de DStv Afrique du Sud",
+    rows: homePriceRows("fr"),
+  },
   offers: {
     title: "Choisissez votre forfait",
     sub: "Chaque forfait a la même grille, films et séries, EPG et support WhatsApp. Catalogue à confirmer sur WhatsApp.",
@@ -381,7 +404,7 @@ const fr: Copy = {
     billedOnce: "Paiement unique de",
     perMonth: "/mois",
     save: "ÉCONOMISEZ",
-    bestSeller: "MEILLEURE VENTE",
+    bestSeller: "FORFAIT 3 MOIS",
     totalLabel: "paiement unique",
   },
   planNames: {
@@ -391,7 +414,7 @@ const fr: Copy = {
     p12: "12 mois",
   },
   setup: {
-    title: "Installation en 10 minutes",
+    title: "Installer votre appareil",
     sub: "Fonctionne sur Firestick, Smart TV, iPhone, Android et plus. On vous accompagne étape par étape.",
     button: "Obtenir de l'aide",
     steps: [
@@ -455,7 +478,7 @@ const zu: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "I-IPTV Engcono e-South Africa 2026.",
-    titleB: "SuperSport, ku-4K kusukela ku-R99/inyanga.",
+    titleB: "R199 / 1 inyanga.",
     ctaPrices: "Bona izinhlelo",
     ctaAdvisor: "Khuluma nomeluleki",
     trust: "Akukho nkontileka",
@@ -482,7 +505,7 @@ const xh: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026.",
-    titleB: "SuperSport ku-4K ukusuka ku-R99/inyanga.",
+    titleB: "R199 / 1 inyanga.",
     ctaPrices: "Jonga izicwangciso",
     ctaAdvisor: "Thetha necebo",
     trust: "Akukho sivumelwano",
@@ -561,7 +584,7 @@ const enGB: Copy = {
   },
   planPerks: {
     ...enZA.planPerks,
-    p6: ["Best value for money", "SA + sport folders to trial", "Up to 3 devices", "EPG + Catch-up TV", "Same line-up as every plan"],
+    p6: ["Six months prepaid", "Programme guide", "One simultaneous connection", "WhatsApp support"],
   },
   faq: {
     title: "Frequently asked questions",
@@ -579,8 +602,8 @@ const enGB: Copy = {
       { q: "How fast is activation?", a: "Activation is done on WhatsApp after we receive your order and payment. We don't publish a fixed delay." },
       { q: "Is the EPG guide included?", a: "Yes. The full Electronic Programme Guide is included in every plan so you always know what's on now and what's coming up." },
       { q: "Can I watch on multiple devices at the same time?", a: "The standard plan includes one connection. If you need multi-screen for the whole household, message us on WhatsApp and we'll set up a tailored plan." },
-      { q: "Do I need a VPN?", a: "Not required in South Africa, but we recommend one for extra privacy. We can advise on the best VPN for the service." },
-      { q: "Does it work outside South Africa?", a: "Yes — it works for South Africans in the UK and other countries. For best results outside SA we recommend a VPN. The 24h trial is how you check your own connection." },
+      { q: "Do I need a VPN?", a: "Use your usual internet connection and choose the viewing options available in your country." },
+      { q: "Does it work outside South Africa?", a: "Tell us the country where you will watch. Programme availability varies by territory. Use the country guide and ask about your device before paying." },
       { q: "How do I pay?", a: "Payment is handled on WhatsApp. We accept EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal and Bitcoin." },
       { q: "What if the service goes down?", a: "Message us directly on WhatsApp +44 7307 410512. We treat outages as a support job, not a promise that nothing will ever drop." },
       { q: "Is there a contract? Can I cancel?", a: "No contract and no auto-renewal. You pay once and the service ends at the end of the chosen period. If you want to continue, you renew it manually." },
@@ -609,10 +632,10 @@ const enGB: Copy = {
   cities: {
     ...enZA.cities,
     items: [
-      { name: "Johannesburg", text: "A cheaper DStv-style option for Joburg households. SuperSport-style folders, Premier League, kykNET and SABC — confirm what you need on the trial." },
+      { name: "Johannesburg", text: "Compare prepaid options in Joburg and test the picture on your home connection." },
       { name: "Cape Town",    text: "Cape Town viewers usually ask for Stormers, Cape Town City FC, URC and PSL folders. We don’t promise every fixture — test the ones you care about first." },
       { name: "Durban",       text: "Built for Durban: AmaZulu FC, Sharks rugby, Indian channels for the local community and the international folders people actually use." },
-      { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — install in about 10 minutes via WhatsApp." },
+      { name: "Pretoria",     text: "Mamelodi Sundowns, Bulls rugby, kykNET dramas and the SABC + e.tv pack — ask about your device and the current line-up on WhatsApp." },
       { name: "Gqeberha",     text: "Eastern Cape setup — Chippa United, EP Elephants and the major national folders, confirmed on trial." },
       { name: "Bloemfontein", text: "Bloemfontein Celtic, Free State Cheetahs and SuperSport-style rugby folders with English-language WhatsApp support." },
       { name: "East London",  text: "Streaming in EL over a local line — PSL and Premier League folders to test, not an every-match promise." },
@@ -625,7 +648,7 @@ const enGB: Copy = {
     benefits: [
       { icon: "🌍", title: "Built for SA viewers abroad", desc: "European edges for a London or Manchester lounge. Trial 4K on your own UK broadband — we don’t invent viewer counts." },
       { icon: "📺", title: "SA channel folders",      desc: "SABC, e.tv, SuperSport-style sport and kykNET are the usual folders — confirm names on the 24h trial." },
-      { icon: "⚡", title: "No SA decoder rental",        desc: "You don’t need a decoder sitting in someone’s Joburg lounge. A VPN can still help privacy and some routes." },
+      { icon: "⚡", title: "No SA decoder rental",        desc: "Check the local broadcaster for the programme and country where you will watch." },
       { icon: "💬", title: "Support in English",    desc: "WhatsApp +44 7307 410512, in English (and Afrikaans on request)." },
     ],
   },

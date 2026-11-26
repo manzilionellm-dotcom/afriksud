@@ -28,7 +28,7 @@ export function LongformShell({
   waOverride?: WaPrefillOverride | null;
 }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLocale={locale}>
       <WaPrefillProvider value={waOverride}>
         <LocaleSync locale={locale} />
         <SkipLink />

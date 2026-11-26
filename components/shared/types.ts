@@ -41,8 +41,8 @@ export type Copy = {
   devices: { title: string; sub: string; list: { name: string; icon: string }[] };
   vod: { title: string; sub: string; stats: { value: string; label: string }[] };
   compare: {
-    title: string; sub: string; headers: string[];
-    rows: { service: string; price: string; live: string; vod: boolean; hd4k: boolean; support: string; highlight?: boolean }[];
+    title: string; sub: string; headers: string[]; sourceLabel: string;
+    rows: { service: string; payment: string; perMonth: string; highlight?: boolean }[];
   };
   reviews: { title: string; sub: string; items: ReviewItem[] };
   trust: { title: string; items: { icon: string; title: string; desc: string }[] };

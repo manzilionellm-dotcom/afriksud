@@ -18,7 +18,7 @@ import { Check, ChevronRight, ShieldCheck, X, MessageCircle } from "lucide-react
 import { useLang } from "../../client/LanguageProvider";
 import { useWaPrefillOverride } from "../../client/WaPrefillContext";
 import { dict } from "../../shared/dict";
-import { plans } from "../../shared/plans";
+import { plans, monthlyEquivalent } from "../../shared/plans";
 import { SITE } from "../../shared/site";
 import { isMobileUA } from "../../shared/utils";
 import { track } from "../../../lib/analytics/track";
@@ -32,9 +32,6 @@ const MORPH_EASE = "cubic-bezier(0.34, 1.56, 0.64, 1)";
 
 function planTotal(p: Plan) {
   return p.price;
-}
-function planPerMonth(p: Plan) {
-  return Math.round(p.price / p.months);
 }
 
 function buildWhatsAppMessage(opts: {
@@ -215,25 +212,26 @@ export function PriceCheckoutPanel({
     // Read latest displayKey via ref so this effect's identity doesn't
     // depend on it. Otherwise our own setDisplayKey at mid-point would
     // restart the effect, blow the cleanup, and leave morphing stuck.
-    if (planKey === displayKeyRef.current) return;
+    if (planKey === displayKeyRef.current) {
+      setMorphing("idle");
+      return;
+    }
     let alive = true;
+    let inId: number | undefined;
     setMorphing("out");
     const outId = window.setTimeout(() => {
       if (!alive) return;
       setDisplayKey(planKey);
       setMorphing("in");
-      const inId = window.setTimeout(() => {
+      inId = window.setTimeout(() => {
         if (!alive) return;
         setMorphing("idle");
       }, MORPH_IN_MS);
-      // Stash so cleanup can clear the second timer too.
-      (outId as unknown as { _inId: number })._inId = inId;
     }, MORPH_OUT_MS);
     return () => {
       alive = false;
       window.clearTimeout(outId);
-      const stashed = (outId as unknown as { _inId?: number })._inId;
-      if (stashed) window.clearTimeout(stashed);
+      if (inId !== undefined) window.clearTimeout(inId);
     };
   }, [planKey]);
 
@@ -323,6 +321,7 @@ export function PriceCheckoutPanel({
     });
     const a = document.createElement("a");
     a.href = waLink;
+    a.dataset.clickRecorded = "true";
     a.target = "_blank";
     a.rel = "noopener noreferrer";
     a.style.display = "none";
@@ -415,7 +414,7 @@ export function PriceCheckoutPanel({
                 <legend className="sr-only">{t.checkout.step1Title}</legend>
                 {plans.map((p) => {
                   const selected = p.key === planKey;
-                  const perMonth = planPerMonth(p);
+                  const perMonth = monthlyEquivalent(p);
                   return (
                     <label
                       key={p.key}

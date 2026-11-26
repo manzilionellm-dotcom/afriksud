@@ -5,11 +5,12 @@
 import React, { useEffect, useState } from "react";
 import { useLang } from "./LanguageProvider";
 import { dict } from "../shared/dict";
-import { plans } from "../shared/plans";
+import { plans, monthlyEquivalent } from "../shared/plans";
 import { SITE } from "../shared/site";
 import { MzansiLogo } from "../shared/MzansiLogo";
 import { generateWhatsAppLink } from "../shared/utils";
 import { compareHook } from "../../lib/aio";
+import { DSTV_PRICE_SOURCE } from "../../lib/seo/dstv-sa-prices";
 import { usePathname } from "next/navigation";
 import { LiveStatus } from "./LiveStatus";
 import { WA_ARIA_LABEL, fabLang, waNeutralHref } from "../shared/wa-neutral";
@@ -134,7 +135,7 @@ export function Offers() {
       </div>
       <div className="grid">
         {plans.map(p => {
-          const pricePerMonth = Math.round(p.price / p.months);
+          const pricePerMonth = monthlyEquivalent(p);
           const saving = Math.round((1 - pricePerMonth / 199) * 100);
           return (
             <article key={p.key} className={`card ${p.highlight ? "highlight" : ""}`}>
@@ -227,7 +228,7 @@ export function CompareSection() {
     <section className="section">
       <div className="sectionHead">
         <h2>{t.compare.title}</h2>
-        <p>{compareHook()}</p>
+        {lang === "en-za" && <p>{compareHook()}</p>}
         <p>{t.compare.sub}</p>
       </div>
       <div className="compareWrap">
@@ -242,16 +243,14 @@ export function CompareSection() {
                   {row.highlight && <span className="bestTag">✓ </span>}
                   {row.service}
                 </td>
-                <td className={row.highlight ? "accentPrice" : ""}>{row.price}</td>
-                <td>{row.live}</td>
-                <td style={{ color: row.vod ? "#22c55e" : "#ef4444" }}>{row.vod ? "✓" : "✗"}</td>
-                <td style={{ color: row.hd4k ? "#22c55e" : "#ef4444" }}>{row.hd4k ? "✓" : "✗"}</td>
-                <td>{row.support}</td>
+                <td className={row.highlight ? "accentPrice" : ""}>{row.payment}</td>
+                <td>{row.perMonth}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p><a href={DSTV_PRICE_SOURCE}>{t.compare.sourceLabel}</a></p>
     </section>
   );
 }
@@ -428,7 +427,7 @@ export function FooterSection() {
           <h4>Product</h4>
           <a href={basePath}>Home</a>
           <a href={`${basePath}/best-iptv-south-africa-2026`}>Best IPTV 2026</a>
-          <a href={`${basePath}/cheap-iptv-south-africa`}>Cheap IPTV from R99</a>
+          <a href={`${basePath}/cheap-iptv-south-africa`}>Prepaid IPTV prices</a>
           <a href={`${basePath}/4k-iptv-south-africa`}>4K IPTV</a>
           <a href={`${basePath}/iptv-no-buffering-south-africa`}>IPTV buffering on SA fibre</a>
           <a href={`${basePath}/iptv-for-movies-and-series`}>IPTV for movies & series</a>

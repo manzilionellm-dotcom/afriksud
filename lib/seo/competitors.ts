@@ -5,7 +5,7 @@ export type Competitor = {
   slug: string;
   name: string;
   priceMonthly: string;
-  priceYearly?: string;
+  source?: { label: string; url: string };
   /** Row data for the comparison table: feature → competitor value. */
   features: { label: string; them: string; us: string }[];
   /** The one or two things this competitor genuinely does well — credibility builds trust. */
@@ -21,228 +21,308 @@ export const COMPETITORS: Competitor[] = [
   {
     slug: "dstv-premium",
     name: "DStv Premium",
-    priceMonthly: "R899",
-    priceYearly: "R10,788",
+    priceMonthly: "R799 Stream or R979 standard satellite per month",
     features: [
-      { label: "Live channels", them: "~180", us: "Confirm on WhatsApp" },
-      { label: "SuperSport PSL", them: "Included", us: "Folders to confirm" },
-      { label: "Premier League", them: "Included", us: "Folders to confirm" },
-      { label: "URC / Currie Cup", them: "Included", us: "Folders to confirm" },
-      { label: "4K UHD", them: "Limited", us: "All plans" },
-      { label: "Contract", them: "24-month", us: "None" },
-      { label: "Decoder", them: "R1,500+ upfront", us: "None" },
-      { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
-      { label: "Free trial", them: "None", us: "24h, no card" },
-      { label: "Monthly price", them: "R899", us: "from R99" },
+      {
+        label: "First month",
+        them: "R799 Stream or R979 standard satellite",
+        us: "R199 for one month"
+      },
+      {
+        label: "Full year at current prices",
+        them: "R9,588 Stream or R11,748 standard satellite before extras",
+        us: "R1,199 prepaid"
+      },
+      {
+        label: "Long-term satellite deal",
+        them: "R799/month on 24-month contract including access fee",
+        us: "Prepaid terms of 1, 3, 6 or 12 months"
+      },
+      {
+        label: "Programme listings",
+        them: "Consult DStv’s guide for the exact event",
+        us: "Check the title and territory before paying"
+      }
     ],
     theirStrengths: [
-      "Long-established brand and infrastructure",
-      "DStv Now app for tablet / phone viewing on the same subscription",
+      "Satellite is an option when home internet is unreliable.",
+      "Premium offers a published sports and entertainment line-up."
     ],
     ourEdge: [
-      "Save R800+/month vs. DStv Premium — over R9,500 a year",
-      "No 24-month contract, no decoder, no installer fee",
-      "SuperSport-style folders on every plan — matches to confirm on WhatsApp",
-      "Activated on WhatsApp instead of an installer visit",
+      "Use your own compatible streaming device.",
+      "Choose a short prepaid term after testing your own connection."
     ],
     meta: {
-      title: "Mzansi Stream vs DStv Premium — Save R800+/mo",
-      description: "DStv Premium vs Mzansi Stream — SuperSport-style, PSL, Premier League and kykNET folders in 4K, line-up to confirm on WhatsApp, from R99/mo with no contract and no decoder.",
+      title: "Mzansi Stream vs DStv Premium – compare real costs",
+      description: "Compare South African Premium satellite and Stream prices with the amount Mzansi charges upfront for a month or a year."
     },
-    hook: "DStv Premium runs R899/month with a 24-month contract and a R1,500 decoder. Mzansi Stream is a no-contract, no-decoder option from R99/month — line-up to confirm on WhatsApp.",
+    hook: "Which Premium price is on your bill? The R799 monthly Stream tariff, R979 standard satellite tariff and R799 satellite contract represent different payment commitments.",
+    source: {
+      label: "Check the official DStv package guide",
+      url: "https://www.dstv.com/en-za/news/149536/how-to-change-upgrade-dstv-package/"
+    }
   },
   {
     slug: "dstv-compact-plus",
     name: "DStv Compact Plus",
-    priceMonthly: "R549",
-    priceYearly: "R6,588",
+    priceMonthly: "Existing customers – check your current invoice",
     features: [
-      { label: "Live channels", them: "~150", us: "Confirm on WhatsApp" },
-      { label: "SuperSport PSL", them: "Included", us: "Folders to confirm" },
-      { label: "Premier League", them: "Partial", us: "Folders to confirm" },
-      { label: "URC / Currie Cup", them: "Partial", us: "Folders to confirm" },
-      { label: "4K UHD", them: "Not available", us: "All plans" },
-      { label: "Contract", them: "24-month", us: "None" },
-      { label: "Decoder", them: "Required", us: "None" },
-      { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
-      { label: "Free trial", them: "None", us: "24h, no card" },
-      { label: "Monthly price", them: "R549", us: "from R99" },
+      {
+        label: "New customers",
+        them: "Closed to new subscriptions",
+        us: "Trial and prepaid terms available"
+      },
+      {
+        label: "Existing customer",
+        them: "Can keep the package under DStv’s migration policy",
+        us: "Independent streaming service"
+      },
+      {
+        label: "Cash due today",
+        them: "See your account balance",
+        us: "R199 for one month"
+      },
+      {
+        label: "Annual Mzansi option",
+        them: "Compare against twelve actual billing periods",
+        us: "R1,199 prepaid"
+      }
     ],
-    theirStrengths: ["Catch-up TV included", "Decoder doubles as PVR"],
+    theirStrengths: [
+      "Existing subscribers can keep their current package.",
+      "The account and TV guide show the package and channel selection."
+    ],
     ourEdge: [
-      "Save R450+/month vs Compact Plus",
-      "URC, Currie Cup and Premier League folders — to confirm on WhatsApp",
-      "Watch in 4K — Compact Plus is HD only",
-      "No 24-month contract, no decoder, no installer wait",
+      "Try Mzansi before changing an existing package.",
+      "Use your own compatible TV or streaming player."
     ],
     meta: {
-      title: "Mzansi Stream vs DStv Compact Plus — Save R450+/mo",
-      description: "DStv Compact Plus vs Mzansi Stream — sport folders in 4K to confirm on WhatsApp, no contract, no decoder. From R99/mo on WhatsApp.",
+      title: "DStv Compact Plus – keep it or compare alternatives?",
+      description: "See what happened to Compact Plus in South Africa. Check the price on your existing account before changing to a current DStv or Mzansi plan."
     },
-    hook: "DStv Compact Plus is R549/month for partial sport in HD. Mzansi Stream is R99/month with sport folders in 4K — to confirm on WhatsApp.",
+    hook: "DStv kept Compact Plus for existing customers and closed it to new subscriptions. Before changing away, confirm with DStv whether you could ever return to that package.",
+    source: {
+      label: "Read the DStv migration guide",
+      url: "https://www.dstv.com/en-za/news/149042/complete-guide-to-new-dstv-packages/"
+    }
   },
   {
     slug: "dstv-compact",
     name: "DStv Compact",
-    priceMonthly: "R449",
-    priceYearly: "R5,388",
+    priceMonthly: "Migrated to Sports – R399 Stream or R479 satellite",
     features: [
-      { label: "Live channels", them: "~120", us: "Confirm on WhatsApp" },
-      { label: "SuperSport PSL", them: "Included", us: "Folders to confirm" },
-      { label: "Premier League", them: "Not included", us: "Folders to confirm" },
-      { label: "URC", them: "Limited", us: "Folders to confirm" },
-      { label: "4K UHD", them: "Not available", us: "All plans" },
-      { label: "Contract", them: "24-month", us: "None" },
-      { label: "Decoder", them: "Required", us: "None" },
-      { label: "Support", them: "Phone IVR", us: "Direct WhatsApp" },
-      { label: "Monthly price", them: "R449", us: "from R99" },
+      {
+        label: "Current successor",
+        them: "DStv Sports",
+        us: "Independent streaming service"
+      },
+      {
+        label: "Monthly price",
+        them: "R399 Stream or R479 satellite",
+        us: "R199 for one month"
+      },
+      {
+        label: "Twelve months at constant price",
+        them: "R4,788 Stream or R5,748 satellite before extras",
+        us: "R1,199 prepaid"
+      },
+      {
+        label: "Match selection",
+        them: "Check fixture and package in DStv’s guide",
+        us: "Check broadcaster by event and country"
+      }
     ],
-    theirStrengths: ["Entry-level sport coverage", "PVR via decoder"],
+    theirStrengths: [
+      "DStv publishes the sports bouquet and official listings.",
+      "Satellite and internet reception are available."
+    ],
     ourEdge: [
-      "Save R350+/month vs Compact",
-      "Premier League folders — to confirm on WhatsApp",
-      "URC and SuperSport variety folders — to confirm on WhatsApp",
-      "International folders on top of SA channels",
+      "A compatible existing streaming device can be used.",
+      "You can assess the service on your own connection during the free trial."
     ],
     meta: {
-      title: "Mzansi Stream vs DStv Compact — Save R350+/mo",
-      description: "DStv Compact vs Mzansi Stream — sport and Premier League folders in 4K from R99/mo, to confirm on WhatsApp. No contract, no decoder.",
+      title: "DStv Compact became Sports – prices and alternatives",
+      description: "Find the South African successor to DStv Compact, compare satellite and streaming prices, and check your next bill before switching."
     },
-    hook: "DStv Compact is R449/month and skips the Premier League. Mzansi Stream is R99/month with Premier League folders in 4K — matches to confirm on WhatsApp.",
+    hook: "Since the September 2026 migration, the successor to Compact is Sports. If your account still displays an old name, confirm the actual package and payment on your account before changing it.",
+    source: {
+      label: "Check the official DStv package guide",
+      url: "https://www.dstv.com/en-za/news/149536/how-to-change-upgrade-dstv-package/"
+    }
   },
   {
     slug: "showmax",
     name: "Showmax",
-    priceMonthly: "R99",
+    priceMonthly: "Standalone service closed 30 April 2026",
     features: [
-      { label: "Live channels", them: "0", us: "Confirm on WhatsApp" },
-      { label: "SuperSport PSL live", them: "Pro tier only", us: "Folders to confirm" },
-      { label: "Premier League live", them: "Pro tier only", us: "Folders to confirm" },
-      { label: "Movies & series", them: "Strong catalogue", us: "VOD — confirm on WhatsApp" },
-      { label: "4K UHD", them: "Select titles", us: "All plans" },
-      { label: "Contract", them: "None", us: "None" },
-      { label: "Free trial", them: "14-day", us: "24h, no card" },
-      { label: "Monthly price (Entertainment)", them: "R99", us: "R99" },
+      {
+        label: "Standalone subscription",
+        them: "Closed on 30 April 2026",
+        us: "R199 for one month"
+      },
+      {
+        label: "Finding a title",
+        them: "Look for selected Showmax titles in DStv Stream",
+        us: "Ask about the exact season or episode"
+      },
+      {
+        label: "Access",
+        them: "Check the DStv package that includes the title",
+        us: "Test on a compatible device"
+      }
     ],
     theirStrengths: [
-      "Strong original SA dramas and Showmax originals",
-      "Tightly integrated MultiChoice payments and EFT options",
+      "DStv lists selected returning Showmax titles in its own app.",
+      "Individual title pages can confirm a season or episode."
     ],
     ourEdge: [
-      "Showmax Entertainment has zero live channels — Mzansi Stream is live TV",
-      "SuperSport-style, PSL and Premier League folders on every plan — to confirm on WhatsApp",
-      "VOD on top of live TV — not VOD-only",
-      "EPG and live recording, not just on-demand",
+      "A separate catalogue to explore on your own device.",
+      "A single prepaid month costs R199."
     ],
     meta: {
-      title: "Mzansi Stream vs Showmax — Live TV vs VOD",
-      description: "Showmax is great VOD but has no live TV on Entertainment. Mzansi Stream is live TV plus VOD from R99/mo — line-up to confirm on WhatsApp.",
+      title: "Where to find Showmax shows after the app closed",
+      description: "The standalone Showmax service closed in April 2026. Check the new DStv Stream listing for your show before choosing another subscription."
     },
-    hook: "Showmax Entertainment is R99/month — pure VOD, zero live channels. Mzansi Stream is R99/month with live channels and VOD — line-up to confirm on WhatsApp.",
+    hook: "The standalone Showmax service closed on 30 April 2026. For a particular show, check the Showmax section on DStv Stream and the package required for your episode.",
+    source: {
+      label: "Showmax transition and official FAQ",
+      url: "https://www.dstv.com/en-za/watch/showmax/"
+    }
   },
   {
     slug: "supersport",
-    name: "SuperSport Schools / SuperSport stand-alone",
-    priceMonthly: "Tied to DStv",
+    name: "SuperSport",
+    priceMonthly: "Depends on event, country and package",
     features: [
-      { label: "Stand-alone subscription", them: "Effectively no — bundled with DStv", us: "Yes, no DStv required" },
-      { label: "Live PSL", them: "Yes (with DStv tier)", us: "Folders to confirm" },
-      { label: "Premier League", them: "Yes (Premium tier)", us: "Folders to confirm" },
-      { label: "4K UHD", them: "Limited", us: "All plans" },
-      { label: "Contract", them: "DStv contract required", us: "None" },
-      { label: "Devices", them: "Decoder / DStv app", us: "Any M3U app, Firestick, Smart TV" },
+      {
+        label: "Looking for a fixture",
+        them: "Use the official broadcast schedule",
+        us: "Confirm exact fixture and territory independently"
+      },
+      {
+        label: "Finding a replay",
+        them: "Look for full-match replay and expiry",
+        us: "Ask about the programme before subscribing"
+      },
+      {
+        label: "Reception",
+        them: "Selected coverage on DStv satellite or Stream",
+        us: "Compatible internet-connected devices"
+      }
     ],
     theirStrengths: [
-      "Official broadcaster — first-party rights",
-      "DStv Now / SuperSport app on tablet and phone",
+      "Official listings identify the competition, territory and package.",
+      "Match schedules distinguish full broadcasts, highlights and replays."
     ],
     ourEdge: [
-      "Watch SuperSport without paying for a full DStv subscription",
-      "No decoder, no contract, no installer fee",
-      "Works on Firestick, Smart TV, MAG Box, TiviMate, IPTV Smarters — anywhere a DStv decoder doesn't reach",
-      "SuperSport-style folders in 4K — to confirm on WhatsApp",
+      "Try the player, remote and internet connection on your own device.",
+      "Choose a one-month prepaid term if it suits the household."
     ],
     meta: {
-      title: "Mzansi Stream vs SuperSport — Without DStv",
-      description: "SuperSport-style, PSL and Premier League folders in 4K without a DStv subscription, decoder or contract — to confirm on WhatsApp. From R99/mo.",
+      title: "SuperSport coverage – find the match and broadcaster",
+      description: "Find the broadcaster for a specific fixture and compare your viewing options in South Africa or overseas."
     },
-    hook: "SuperSport is locked behind a DStv subscription with a 24-month contract. Mzansi Stream offers SuperSport-style folders for R99/month, no contract, no decoder — to confirm on WhatsApp.",
+    hook: "A search for SuperSport may mean a professional match, a school event or a highlights clip. Start with the event and viewing country, then check its actual broadcaster."
   },
   {
     slug: "starsat",
     name: "StarSat",
-    priceMonthly: "R199-R399",
+    priceMonthly: "Check current local availability",
     features: [
-      { label: "Live channels", them: "~150", us: "Confirm on WhatsApp" },
-      { label: "Premier League", them: "Partial", us: "Folders to confirm" },
-      { label: "URC / Currie Cup", them: "Limited", us: "Folders to confirm" },
-      { label: "4K UHD", them: "Limited", us: "All plans" },
-      { label: "Decoder", them: "Required upfront", us: "None" },
-      { label: "Support", them: "Call centre", us: "Direct WhatsApp" },
-      { label: "Free trial", them: "None", us: "24h, no card" },
+      {
+        label: "Availability",
+        them: "Verify local service status before paying",
+        us: "Check the catalogue in your location"
+      },
+      {
+        label: "Equipment",
+        them: "Check your decoder and agreement",
+        us: "Existing compatible streaming device"
+      },
+      {
+        label: "First payment",
+        them: "Request a current quote",
+        us: "R199 for one month"
+      }
     ],
-    theirStrengths: ["Cheaper than DStv", "Bouquet of Asian and African channels"],
+    theirStrengths: [
+      "Check local service notices for decoder availability."
+    ],
     ourEdge: [
-      "International folders on top of SA channels",
-      "SuperSport-style folders in 4K — to confirm on WhatsApp",
-      "No decoder, no installer — works on devices you already own",
-      "Direct WhatsApp support instead of a call centre",
+      "A trial is available before choosing a prepaid term."
     ],
     meta: {
-      title: "Mzansi Stream vs StarSat — Why People Switch",
-      description: "StarSat vs Mzansi Stream — SuperSport-style folders in 4K, no decoder, no contract. From R99/mo on WhatsApp.",
+      title: "StarSat alternatives for South African households",
+      description: "Check service status, hardware and an actual quote before comparing with a prepaid streaming offer."
     },
-    hook: "StarSat undercuts DStv but still needs a decoder and skips the top sport tier. Mzansi Stream has sport folders in 4K from R99 — no decoder; line-up to confirm on WhatsApp.",
+    hook: "A historical decoder package price is a poor guide to what you can buy today. Check current service availability before spending on hardware."
   },
   {
     slug: "openview",
-    name: "OpenView",
-    priceMonthly: "Free (decoder upfront)",
+    name: "Openview",
+    priceMonthly: "Free-to-view after equipment and setup",
     features: [
-      { label: "Live channels", them: "~25", us: "Confirm on WhatsApp" },
-      { label: "SuperSport PSL", them: "Not included", us: "Folders to confirm" },
-      { label: "Premier League", them: "Not included", us: "Folders to confirm" },
-      { label: "Decoder", them: "R1,000+ upfront", us: "None" },
-      { label: "International channels", them: "Limited", us: "International folders" },
-      { label: "4K", them: "Not supported", us: "All plans" },
+      {
+        label: "Monthly subscription",
+        them: "Free-to-view once installed",
+        us: "R199 for one month"
+      },
+      {
+        label: "Hardware",
+        them: "Check dish, decoder and installation costs",
+        us: "Compatible internet-connected device"
+      },
+      {
+        label: "Data",
+        them: "Satellite reception",
+        us: "Internet data used while watching"
+      }
     ],
-    theirStrengths: ["No monthly fee", "Decent free-to-air SA channel mix"],
+    theirStrengths: [
+      "A prepaid TV subscription is unnecessary for free-to-view satellite services.",
+      "Satellite viewing can suit homes with limited internet data."
+    ],
     ourEdge: [
-      "Add SuperSport-style and international folders on top of free-to-air",
-      "No decoder upfront — watch on devices you already own",
-      "Premier League, URC and IPL folders — to confirm on WhatsApp; OpenView doesn't carry them",
-      "International channels for diaspora households",
+      "A household with a compatible TV can try streaming over its existing internet."
     ],
     meta: {
-      title: "Mzansi Stream vs OpenView — Add Live Sport",
-      description: "OpenView covers free-to-air SA basics. Mzansi Stream adds SuperSport-style and Premier League folders in 4K from R99/mo.",
+      title: "Openview vs Mzansi Stream – monthly and setup costs",
+      description: "Compare free-to-view satellite with prepaid internet television, including hardware, data and the first payment."
     },
-    hook: "OpenView gives you basic SA free-to-air for free — but no sport, no Premier League, no international channels. Mzansi Stream adds sport and international folders for R99/month — to confirm on WhatsApp.",
+    hook: "Compare the cost of installing Openview against a prepaid streaming plan on an existing TV. Check both line-ups for the programmes your household watches."
   },
   {
     slug: "netflix",
     name: "Netflix",
-    priceMonthly: "R199 (Standard with ads)",
+    priceMonthly: "Check the current South African plan",
     features: [
-      { label: "Live channels", them: "0", us: "Confirm on WhatsApp" },
-      { label: "SuperSport", them: "Not included", us: "Folders to confirm" },
-      { label: "Premier League", them: "Not included", us: "Folders to confirm" },
-      { label: "Movies & series", them: "Strong global catalogue", us: "VOD — confirm on WhatsApp" },
-      { label: "SA channels (SABC, kykNET)", them: "None", us: "Folders to confirm" },
-      { label: "4K", them: "Premium tier only", us: "All plans" },
+      {
+        label: "Catalogue",
+        them: "Search Netflix for the title and territory",
+        us: "Ask about the exact title and season"
+      },
+      {
+        label: "Pricing",
+        them: "Confirm current local price at sign-up",
+        us: "R199 for one month"
+      },
+      {
+        label: "Playback",
+        them: "Plan and device affect video quality",
+        us: "Test your network and device before prepaying"
+      }
     ],
-    theirStrengths: ["Best-in-class originals", "Strong global library"],
+    theirStrengths: [
+      "The official title listing lets you check seasons and episodes."
+    ],
     ourEdge: [
-      "Live TV + sport + news + kids — Netflix is VOD-only",
-      "SA folders including SABC, e.tv, kykNET, Mzansi Magic — to confirm on WhatsApp",
-      "SuperSport-style and Premier League folders — matches to confirm on WhatsApp",
-      "4K on every plan, not just Premium",
+      "Live television and on-demand options can be tried on a compatible device."
     ],
     meta: {
-      title: "Mzansi Stream vs Netflix — Add Live SA TV",
-      description: "Netflix is VOD-only. Mzansi Stream adds live SuperSport-style, SABC and kykNET folders in 4K from R99/mo.",
+      title: "Netflix vs Mzansi Stream – compare your watchlist",
+      description: "Use a list of shows, live programmes and device needs to compare Netflix with a prepaid streaming service in South Africa."
     },
-    hook: "Netflix is great for series but has no live TV, no sport and no SA channels. Mzansi Stream adds live TV, sport and SA folders, plus VOD — line-up to confirm on WhatsApp.",
+    hook: "Start with a list of titles and note whether you watch them live or on demand. Service catalogues can differ by country."
   },
 ];
 

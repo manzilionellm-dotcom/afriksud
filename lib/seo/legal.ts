@@ -183,7 +183,7 @@ export const LEGAL_TOPICS: LegalTopic[] = [
       {
         h2: "Why we built this",
         body: [
-          "DStv Premium is R899/month. For most households that's groceries, school fees, or a fibre upgrade. We started Mzansi Stream because the technology to deliver the same channels in 4K already exists — at a fraction of the price.",
+          "Mzansi Stream offers prepaid streaming with WhatsApp setup support. One month is R199. The annual plan is R1,199 paid upfront. You can use the free 24-hour trial to check the catalogue and picture quality on your own device.",
         ],
       },
       {

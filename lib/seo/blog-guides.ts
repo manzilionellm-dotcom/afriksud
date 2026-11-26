@@ -92,7 +92,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "How payment works after the chat",
         body: [
           "On Mzansi Stream you can test for 24 hours with no card. When you are ready, the same WhatsApp thread sends local rails already listed on the site: EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco, Visa, Mastercard, PayPal. Bitcoin is listed as an option; it is not required.",
-          "Plans are billed once per term — R199 for 1 month, R449 for 3 months, R699 for 6 months, R1,199 for 12 months (R99.92/month effective on the year). There is no auto-renewal contract in the DStv sense. Proof of payment in the same chat is enough; you should not need to mail anything.",
+          "Plans are billed once per term — R199 for 1 month, R449 for 3 months, R699 for 6 months, R1,199 for 12 months (R99.92/month effective on the year). The term ends unless you renew. Proof of payment in the same chat is enough; you should not need to mail anything.",
         ],
       },
       {
@@ -142,7 +142,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "Renewals, extra TVs and when to message again",
         body: [
           "Before the term ends, send “renew 12-month” in the same chat. For a second TV, ask for an extra connection and name the new device. If the EPG goes empty after a Firestick crash, ask for the XMLTV URL again rather than re-ordering a new subscription.",
-          "If you are still deciding between DStv Premium at R899/month and a once-off R1,199 year, run the Saturday trial during a SuperSport fixture. That is the only honest test.",
+          "Compare the first payment on each service. Premium Stream costs R799 a month. Mzansi costs R199 for one month or R1,199 upfront for a year; check the exact programmes you want.",
         ],
       },
     ],
@@ -176,7 +176,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       { label: "Pay via EFT, SnapScan, Ozow & Capitec Pay", href: "/en-za/iptv-eft-snapscan-payment" },
       { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
       { label: "Switch from DStv in one weekend", href: "/en-za/blog/switch-from-dstv-to-iptv-weekend" },
-      { label: "Pricing — from R99/mo", href: "/en-za" },
+      { label: "Mzansi Stream prepaid prices", href: "/en-za" },
     ],
   },
   {
@@ -545,7 +545,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         id: "dstv",
         h2: "Load shedding does not make DStv cheaper",
         body: [
-          "A DStv decoder on an inverter still needs the dish and the same household power politics. IPTV's advantage in a slot is the phone: SuperSport can move to LTE without a truck roll. The bill stays R99–R199/month on Mzansi Stream versus R899/month Premium — load shedding does not change that arithmetic.",
+          "If the household moves from fibre to mobile data during a power cut, measure how much data an hour of viewing uses. Include that amount in any monthly TV cost comparison.",
         ],
       },
     ],
@@ -584,242 +584,93 @@ export const BLOG_GUIDES: BlogPost[] = [
   },
   {
     slug: "watch-premier-league-south-africa-no-dstv",
-    title: "Watch the Premier League in South Africa without DStv — 2026",
-    metaDescription:
-      "Stream the Premier League in South Africa without DStv Premium. Why Compact drops PL, and how IPTV carries SuperSport Premier League in 4K.",
-    datePublished: PUB,
-    dateModified: PUB,
-    lead:
-      "DStv Compact does not give you the Premier League. Compact Plus only covers it in part. Premium at R899/month is the MultiChoice package that carries the full SuperSport Premier League slate — which is why so many SA fans keep a decoder they barely use for anything else. This guide is the 2026 way to watch every PL fixture without that decoder.",
-    keyFacts: [
-      "DStv Compact skips the Premier League entirely. Compact Plus is partial. Full PL on DStv means Premium.",
-      "Mzansi Stream carries SuperSport Premier League on every plan — sport is not gated behind a higher tier.",
-      "Test a Saturday 18:30 and a Sunday fixture on the 24-hour WhatsApp trial before you cancel anything.",
-    ],
-    cta: {
-      label: "Watch PL this weekend — WhatsApp trial →",
-      message:
-        "Hi! I want to watch the Premier League without DStv. Please activate the free 24-hour trial and tell me how to open SuperSport Premier League.",
-      ref: "Blog-PL-No-DStv",
-    },
-    howTo: {
-      name: "Watch this weekend's Premier League on Mzansi Stream",
-      description:
-        "Order a WhatsApp trial, load SuperSport Premier League, and confirm both the early and late kick-offs.",
-      totalTime: "PT10M",
-      supply: ["WhatsApp", "A 4K or HD screen", "Fibre or a stable LTE backup"],
-      tool: ["TiviMate or IPTV Smarters Pro"],
-    },
+    title: "How to find a Premier League match in South Africa",
+    metaDescription: "Check which local broadcaster lists the exact fixture, compare DStv Stream with satellite and distinguish live matches from highlights.",
+    datePublished: "2026-09-05",
+    dateModified: "2026-11-26",
+    lead: "Search for the two teams, the fixture date and your viewing country. A list of channels can help locate a search result, but it cannot tell you which match is live or whether the replay is included.",
     sections: [
       {
-        id: "dstv-gap",
-        h2: "The DStv package gap (this is why people overpay)",
+        h2: "Check the match before selecting a package",
         body: [
-          "The site already publishes the 2026 package picture: Premium R899, Compact Plus R549, Compact R449, Family R329. Compact drops Premier League entirely. Compact Plus only partially covers it. The full SuperSport Premier League slate sits on Premium — plus a decoder and a 24-month contract habit.",
-          "If you kept DStv 'for the soccer' and you are not on Premium, you are already missing fixtures. IPTV is not the downgrade in that story. The downgrade was the package you were sold.",
-        ],
+          "Use the local provider’s TV guide to confirm the fixture, channel, kickoff in SAST and replay window. Check whether a subscription or a once-off purchase is required."
+        ]
       },
       {
-        id: "what-you-get",
-        h2: "What you actually watch on IPTV",
+        h2: "Using DStv without a decoder",
         body: [
-          "Mzansi Stream carries SuperSport Premier League and the Variety overflow channels used when two matches collide. Kick-offs that DStv Compact Plus 'partially blocks' — including the early, the 16:30 and the evening games called out on the SuperSport pillar — are the test, not a midweek replay.",
-          "You also keep SuperSport PSL on the same plan. That is the point for a South African weekend: Kaizer Chiefs or Orlando Pirates at 15:00, then a PL match without changing subscription.",
-        ],
+          "DStv offers streaming packages in South Africa. The Sports package is R399 a month on Stream or R479 on satellite. Check the programme guide for the specific fixture."
+        ]
       },
       {
-        id: "howto",
-        h2: "This-weekend setup",
+        h2: "Watching from a different country",
         body: [
-          "Do not cancel DStv on Friday night if your notice period would cut Saturday. Overlap the trial. The weekend-switch guide covers the cancel calendar; this is the football path.",
-        ],
-        steps: [
-          {
-            title: "Message WhatsApp for a 24-hour trial",
-            text: "Say you care about Premier League + PSL and name your device. No card.",
-          },
-          {
-            title: "Open SuperSport Premier League first",
-            text: "Favourite it in TiviMate or Smarters. Then favourite SuperSport PSL and Variety 1–4 for overflow.",
-          },
-          {
-            title: "Watch one early and one late kick-off",
-            text: "If both hold on your fibre, the provider is doing the job Compact Plus would not.",
-          },
-          {
-            title: "Only then pick a plan",
-            text: "12-month at R1,199 is the published cheap year. Pay in the same WhatsApp thread.",
-          },
-        ],
-      },
-      {
-        id: "4k",
-        h2: "4K vs HD — what your line must do",
-        body: [
-          "The SuperSport pillar already states a 25 Mbps floor for stable 4K. Vumatel, Openserve, Frogfoot, Octotel and MetroFibre are enough when the CDN peers at NAPAfrica. If your router is an old ISP Huawei on 2.4 GHz, fix the Wi-Fi before you decide IPTV 'can't do PL in 4K'.",
-        ],
-      },
-      {
-        id: "vs-showmax",
-        h2: "This is not a Showmax-only problem",
-        body: [
-          "Showmax and other apps shuffle football rights. This page is about SuperSport Premier League as South Africans already know it on DStv — the same feeds, a different commercial wrapper. Compare Showmax on the vs page if that is your question; do not mix the two products in one Saturday panic.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        q: "Can I watch the Premier League in South Africa without DStv?",
-        a: "Yes. Mzansi Stream carries SuperSport Premier League on every plan, in 4K where the source supports it, activated on WhatsApp.",
-      },
-      {
-        q: "Does DStv Compact include the Premier League?",
-        a: "No. Compact skips it. Compact Plus is partial. Full PL on DStv is a Premium-tier problem.",
-      },
-      {
-        q: "Do I also get PSL on the same IPTV plan?",
-        a: "Yes. SuperSport PSL and Variety overflow sit on the same Mzansi Stream pack as Premier League.",
-      },
-      {
-        q: "Will it buffer on a Saturday?",
-        a: "It can. We don't promise zero buffering — use 5 GHz or Ethernet and test a Saturday match during the 24-hour trial.",
-      },
-      {
-        q: "Is sport extra on Mzansi Stream?",
-        a: "No. Published plans all carry the same line-up — sport is not an add-on tier. Specific matches are to confirm on WhatsApp.",
-      },
-      {
-        q: "Can I try before the big kick-off?",
-        a: "Yes. Ask for the 24-hour trial on WhatsApp and test on the lounge TV, not only on a phone.",
-      },
+          "Check the competition’s local broadcaster in the country where you are watching. A South African subscription cannot be used to stream DStv content in the UK or Australia."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "Watch SuperSport without DStv — pillar", href: "/en-za/iptv-supersport-without-dstv" },
-      { label: "How to watch PSL online", href: "/en-za/blog/how-to-watch-psl-online-2026" },
-      { label: "DStv vs IPTV — complete guide", href: "/en-za/blog/dstv-vs-iptv-2026-complete-guide" },
-      { label: "Mzansi Stream vs DStv Premium", href: "/en-za/vs/dstv-premium" },
-    ],
+      {
+        label: "Official DStv package prices",
+        href: "https://www.dstv.com/en-za/news/149536/how-to-change-upgrade-dstv-package/"
+      },
+      {
+        label: "Official DStv travel FAQ",
+        href: "https://www.dstv.com/en-za/help/faqs/services/dstv-app/what-is-the-dstv-stream-app/"
+      },
+      {
+        label: "Find sports broadcasts by fixture",
+        href: "/en-za/iptv-supersport-without-dstv"
+      }
+    ]
   },
   {
     slug: "switch-from-dstv-to-iptv-weekend",
-    title: "Switch from DStv to IPTV in one weekend — 2026 SA checklist",
-    metaDescription:
-      "Switch from DStv to IPTV in one South African weekend: overlap the trial, avoid the 30-day notice trap, keep Saturday PSL, return the decoder.",
-    datePublished: PUB,
-    dateModified: PUB,
-    lead:
-      "The dangerous way to leave DStv is to cancel on Friday and discover Saturday that the 30-day notice ate your PSL. The safe way is a weekend overlap: IPTV trial live on the lounge TV before you touch MyDStv. This is that checklist — cancel calendar, decoder leftover, and the WhatsApp messages that keep SuperSport on air the whole time.",
-    keyFacts: [
-      "DStv's 30-day notice is already documented on this site: cancel on day 1 of the billing cycle, not day 25.",
-      "Run the Mzansi Stream 24-hour trial on Friday night. Pay Saturday only if SuperSport holds.",
-      "Do not email MultiChoice or Mzansi Stream to switch. DStv cancel is WhatsApp 060 060 3788 or MyDStv; Mzansi Stream is the site WhatsApp button.",
-    ],
-    cta: {
-      label: "Overlap this weekend — WhatsApp trial →",
-      message:
-        "Hi! I am switching from DStv this weekend. Please activate the free 24-hour trial on my [device] so I can overlap before I cancel.",
-      ref: "Blog-Weekend-Switch",
-    },
-    howTo: {
-      name: "Switch from DStv to Mzansi Stream over one weekend",
-      description:
-        "Trial Friday, watch Saturday, cancel on the correct billing day, return the decoder only after IPTV is stable.",
-      totalTime: "PT48H",
-      supply: ["Active DStv account (for overlap)", "WhatsApp", "A Smart TV or Firestick"],
-      tool: ["MyDStv app or DStv WhatsApp 060 060 3788", "Mzansi Stream WhatsApp from iptvmzansi.com"],
-    },
+    title: "Check a DStv switch before the weekend",
+    metaDescription: "Use your account’s actual disconnection date, test your home device and keep your billing reference. A checklist for changing a TV service.",
+    datePublished: "2026-09-05",
+    dateModified: "2026-11-26",
+    lead: "The weekend you try another service and the date a DStv package ends can be different. Check your account first, and choose a quiet time to set up and test the device the household actually watches.",
     sections: [
       {
-        id: "overlap",
-        h2: "Why you overlap — not 'rip the plaster'",
+        h2: "Before changing your DStv package",
         body: [
-          "Saturday PSL and Sunday Premier League are the two fixtures that make people rage-reorder DStv. Overlap means both stacks work for a few days. You are not paying double forever; you are buying one insurance weekend.",
-          "Mzansi Stream's trial is 24 hours with no card. If Friday night looks good, pay the 1-month or 3-month plan on Saturday so you still have cover while DStv winds down.",
-        ],
+          "Find the next payment date in MyDStv. On an ordinary account, disconnection takes effect on that date. Fixed-term internet deals can involve exit costs and linked services."
+        ]
       },
       {
-        id: "calendar",
-        h2: "The cancel calendar (do this before you message MultiChoice)",
+        h2: "Test a normal evening",
         body: [
-          "The cancel-DStv pages on this site already warn: notice is 30 days on a paid month. Cancel on day 1 of your cycle, not day 25, or you donate another Premium month. Look at the MyDStv billing date first. If day 1 is next Thursday, your 'weekend switch' is still the trial-and-pay weekend — the cancel tap waits until Thursday.",
-        ],
+          "Try the remote, sound, subtitles, picture and guide. List the programmes your family needs. For live sport, check the named fixture in the local broadcaster’s guide; a trial today cannot establish future event coverage."
+        ]
       },
       {
-        id: "howto",
-        h2: "Weekend sequence",
+        h2: "After you decide",
         body: [
-          "Print this in your head. The only date that moves is your DStv billing day.",
-        ],
-        steps: [
-          {
-            title: "Friday — trial on the lounge TV",
-            text: "WhatsApp Mzansi Stream from the site button. Load TiviMate or Smarters. Watch SuperSport PSL or a midweek leftover. Confirm EPG.",
-          },
-          {
-            title: "Saturday — live match test, then pay",
-            text: "If the 15:00 holds, pay a plan in the same chat (EFT / SnapScan / Ozow). Do not cancel DStv yet unless your billing day 1 is today.",
-          },
-          {
-            title: "Find day 1 of the DStv cycle",
-            text: "MyDStv → billing date. If it is not today, diarise it. Cancel on that day via WhatsApp 060 060 3788 or the app, and keep the written confirmation.",
-          },
-          {
-            title: "Return the decoder last",
-            text: "Only after IPTV has survived a full SuperSport weekend. The cancel pillar lists return options — do not leave an Explora running 'just in case' for six months.",
-          },
-          {
-            title: "Pin both chats",
-            text: "DStv confirmation in one thread, Mzansi Stream credentials in the other. Keep the written reply in the chat.",
-          },
-        ],
+          "Use the official DStv My Products disconnection route if leaving. Save the reference and reconcile your next bill. Ask DStv for return instructions for the particular device or rental agreement."
+        ]
       },
       {
-        id: "money",
-        h2: "What the year looks like if the switch sticks",
+        h2: "Compare the amounts due",
         body: [
-          "DStv Premium is R899 × 12 = R10,788, plus a decoder in the R1,500+ band. Mzansi Stream's 12-month plan is R1,199 once. Those figures are already on the SuperSport and vs pages. The point is to stop paying both for a quarter because you cancelled on the wrong day.",
-        ],
-      },
-      {
-        id: "keep-dstv",
-        h2: "When you should not switch this weekend",
-        body: [
-          "If nobody in the house will use WhatsApp, or the only TV is a non-smart CRT with no HDMI, DStv may still fit. If your fibre is down and you have no LTE, fix connectivity first. IPTV is not a decoder; it will not resurrect a dead ONT.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        q: "Can I switch from DStv to IPTV without missing a PSL match?",
-        a: "Yes, if you overlap. Trial and pay Mzansi Stream first; cancel DStv on day 1 of the billing cycle, not the night before a derby.",
-      },
-      {
-        q: "What is the DStv 30-day notice trap?",
-        a: "Cancel late in the paid month and MultiChoice bills another month. Cancel on day 1. Details are on the cancel-DStv guides.",
-      },
-      {
-        q: "Do I email DStv to cancel?",
-        a: "No. Use MyDStv or WhatsApp 060 060 3788 and keep the written reply.",
-      },
-      {
-        q: "When do I return the decoder?",
-        a: "After IPTV has survived a SuperSport weekend. Returning it first is how people panic-reinstall DStv on Sunday.",
-      },
-      {
-        q: "Which Mzansi Stream plan should I buy for the overlap month?",
-        a: "1-month (R199) or 3-month (R449) if you want a short bridge; 12-month (R1,199) if the Friday trial already convinced you.",
-      },
-      {
-        q: "Can I keep DStv EasyView and add IPTV for sport?",
-        a: "Some households do that for a month. It is your budget. Sport on Mzansi Stream does not require a DStv add-on.",
-      },
+          "DStv Starter Stream costs R99 for a month. Mzansi costs R199 for a month or R1,199 in one annual payment. Compare the full service and the initial debit before selecting a long term."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "How to cancel DStv — step by step", href: "/en-za/blog/cancel-dstv-step-by-step-2026" },
-      { label: "Cancel DStv 2026 — pillar", href: "/en-za/cancel-dstv-2026" },
-      { label: "Order IPTV on WhatsApp", href: "/en-za/blog/order-iptv-whatsapp-south-africa" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
-    ],
+      {
+        label: "Schedule DStv disconnection",
+        href: "https://www.dstv.com/en-za/help/faqs/viewing/my-dstv-viewing/how-can-i-cancel-my-dstv-packageservice/"
+      },
+      {
+        label: "Main cancellation guide",
+        href: "/en-za/cancel-dstv-2026"
+      },
+      {
+        label: "DStv prices and Mzansi’s upfront costs",
+        href: "/en-za/blog/dstv-price-south-africa"
+      }
+    ]
   },
   {
     slug: "iptv-on-lte-5g-south-africa",
@@ -942,7 +793,7 @@ export const BLOG_GUIDES: BlogPost[] = [
     slug: "watch-proteas-cricket-online-south-africa",
     title: "Watch the Proteas live online — cricket without DStv in 2026",
     metaDescription:
-      "Stream Proteas Tests, ODIs, T20, SA20 and ICC cricket in South Africa without DStv — SuperSport Cricket via IPTV from R99/mo.",
+      "Stream Proteas Tests, ODIs, T20, SA20 and ICC cricket in South Africa without DStv — SuperSport Cricket via IPTV with a free 24-hour trial.",
     datePublished: PUB,
     dateModified: PUB,
     lead:
@@ -1420,128 +1271,55 @@ export const BLOG_GUIDES: BlogPost[] = [
   },
   {
     slug: "watch-kyknet-online-without-dstv",
-    title: "Watch kykNET and Afrikaans TV online without DStv — 2026",
-    metaDescription:
-      "Watch kykNET, kykNET & kie, VIA and Afrikaans SABC online without DStv. IPTV for Afrikaans households from R99/mo on WhatsApp.",
-    datePublished: PUB,
-    dateModified: PUB,
-    lead:
-      "A lot of South African households did not buy DStv for Premier League. They bought it for kykNET, kykNET & kie, VIA, and the Afrikaans soaps that still live on SABC 2. This guide is that cluster — how to keep Afrikaans TV on the Hisense without Premium at R899/month, and how it sits next to SuperSport if the rest of the family still wants PSL.",
-    keyFacts: [
-      "kykNET, kykNET & kie and VIA are part of the Mzansi Stream pack — not a language add-on.",
-      "SABC 2 and the free-to-air Afrikaans stack stay in the same playlist as Mzansi Magic and e.tv.",
-      "English body on purpose (Loi #9: no machine-translated Afrikaans). The /language/afrikaans landing is the language door; this is the how-to.",
-    ],
-    cta: {
-      label: "Keep kykNET — WhatsApp trial →",
-      message:
-        "Hi! I want kykNET / Afrikaans TV without DStv on my [Hisense / Samsung / Firestick]. Please send the free 24-hour trial.",
-      ref: "Blog-Kyknet",
-    },
-    howTo: {
-      name: "Watch kykNET on Mzansi Stream",
-      description:
-        "Order a WhatsApp trial, favourite the Afrikaans folder, and test kykNET on the lounge TV.",
-      totalTime: "PT10M",
-      supply: ["WhatsApp", "Smart TV or Firestick"],
-      tool: ["IPTV Smarters or TiviMate"],
-    },
+    title: "How to find kykNET shows and Afrikaans TV online",
+    metaDescription: "Find clips, a full episode or the linear kykNET channel. Check the country, episode and broadcaster before buying a streaming plan.",
+    datePublished: "2026-09-05",
+    dateModified: "2026-11-26",
+    lead: "If you are looking for Binnelanders, start with the episode rather than the channel number. An official preview, a complete episode on demand and an entire linear channel are different products.",
     sections: [
       {
-        id: "who",
-        h2: "Who this page is for",
+        h2: "Find the title on kykNET’s official site",
         body: [
-          "Parents who kept DStv Compact or Family 'for the Afrikaans channels' while the rest of the house streams on phones. Students who went home for the weekend and realised the soaps are not on a free app. Anyone who searched 'watch kykNET online' and found a Facebook group instead of a setup.",
-          "If you want a full Afrikaans-language site experience, use the language landing. This article stays in English so the how-to is exact — we do not machine-translate player menus.",
-        ],
+          "Search the channel’s official page for the programme title, date and episode. A short preview can confirm you found the right show. Check for a separate full-episode listing and its viewing conditions."
+        ]
       },
       {
-        id: "channels",
-        h2: "The Afrikaans cluster you are actually paying DStv for",
+        h2: "Can I watch without a satellite dish?",
         body: [
-          "The homepage channel preview already lists kykNET, Mzansi Magic, SABC 1/2/3, e.tv. On a full pack you also look for kykNET & kie and VIA — the 'and kie' channel is the one people notice is missing when a cheap reseller sends a sports-only list.",
-          "Ask WhatsApp to confirm those names in the trial. If a seller cannot show kykNET in the 24-hour test, they do not have your household's product, even if SuperSport looks fine.",
-        ],
+          "DStv Stream offers South African streaming plans without a dish. Check the precise channel or programme available on the package you are considering. The old standalone Showmax service ended on 30 April 2026. Selected content is now on DStv Stream."
+        ]
       },
       {
-        id: "devices",
-        h2: "Hisense, Samsung and the remote that still feels like DStv",
+        h2: "What changes outside South Africa?",
         body: [
-          "Afrikaans-majority households often have a Hisense or Samsung, not a Firestick. Use IPTV Smarters from the TV store (VIDAA / Tizen). A parent who only wants two buttons can get a MAG — we whitelist the MAC on WhatsApp. Teenagers can keep TiviMate on a bedroom Max.",
-        ],
+          "Search the exact title on local broadcasters’ official listings. The DStv app does not make its South African live catalogue available in Europe or Australia. For any title without an announced local distributor, availability remains unconfirmed."
+        ]
       },
       {
-        id: "howto",
-        h2: "From WhatsApp to kykNET",
+        h2: "If you mainly want Afrikaans news or radio",
         body: [
-          "Same ten-minute path as sport, different favourites.",
-        ],
-        steps: [
-          {
-            title: "Message WhatsApp for a trial",
-            text: "Say 'kykNET / Afrikaans TV' and the TV brand. No card.",
-          },
-          {
-            title: "Favourite kykNET, kykNET & kie, VIA, SABC 2",
-            text: "Put them in a folder named Afrikaans so the remote does not drown in a long channel list.",
-          },
-          {
-            title: "Watch an evening slot on the lounge TV",
-            text: "If the soap holds, the pack is real. Then add SuperSport PSL for the rest of the family on the same plan.",
-          },
-          {
-            title: "Pay on a local rail",
-            text: "EFT, SnapScan, Ozow, Capitec Pay. 12-month at R1,199 is the published year — not a language surcharge.",
-          },
-        ],
-      },
-      {
-        id: "family",
-        h2: "One pack, two motivations",
-        body: [
-          "This is why IPTV beats a DStv downsell: Compact may keep some Afrikaans entertainment and still drop Premier League. Mzansi Stream does not split the family into 'sport house' and 'soap house'. One WhatsApp plan carries both. Extra connections are a household question — see the multi-device guide — not a language question.",
-        ],
-      },
-      {
-        id: "af",
-        h2: "Afrikaans on the site vs Afrikaans on the TV",
-        body: [
-          "The TV channels are Afrikaans. This article is English so the TiviMate and Smarters steps stay accurate. Native Afrikaans homepage and language-landing copy already exist elsewhere on iptvmzansi.com. We will not auto-translate this guide into thin Afrikaans and pretend it is a second market page.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        q: "Can I watch kykNET without DStv?",
-        a: "Yes. Mzansi Stream includes kykNET in the same pack as SABC, e.tv and SuperSport. Ask WhatsApp to confirm kykNET & kie and VIA on the trial.",
-      },
-      {
-        q: "Is there an extra fee for Afrikaans channels?",
-        a: "No. Published plans are 1 / 3 / 6 / 12 months for the full pack. Language is not a tier.",
-      },
-      {
-        q: "Will it work on a Hisense?",
-        a: "Yes. Use IPTV Smarters on VIDAA, or plug in a Firestick. The Hisense device page has the taps.",
-      },
-      {
-        q: "Do I need Afrikaans support in the WhatsApp chat?",
-        a: "Message in Afrikaans if you prefer. Setup menus in TiviMate / Smarters stay in the app's own language.",
-      },
-      {
-        q: "What about M-Net and Afrikaans movies?",
-        a: "The movies pillar covers the VOD shelf. Live M-Net-family entertainment sits in the same playlist — confirm the names you care about during the trial.",
-      },
-      {
-        q: "Can granny use this without a smartphone?",
-        a: "Someone in the house needs WhatsApp once for the order. After that a MAG or a Smart TV app is remote-only. Pin the chat for renewals.",
-      },
+          "Check SABC’s radio options directly. Its official FAQ lists services that can be used internationally, including radio and SABC News."
+        ]
+      }
     ],
     relatedLinks: [
-      { label: "Afrikaans language landing", href: "/af/language/iptv-afrikaans" },
-      { label: "IPTV on Hisense VIDAA", href: "/en-za/devices/hisense-vidaa" },
-      { label: "IPTV on multiple devices", href: "/en-za/blog/iptv-multiple-devices-south-africa" },
-      { label: "DStv alternative — full guide", href: "/en-za/dstv-alternative" },
-    ],
+      {
+        label: "kykNET official programmes and previews",
+        href: "https://www.dstv.com/en-za/kyknet/"
+      },
+      {
+        label: "Showmax transition",
+        href: "https://www.dstv.com/en-za/watch/showmax/"
+      },
+      {
+        label: "SABC at home and abroad",
+        href: "/en-za/blog/sabc-without-dstv"
+      },
+      {
+        label: "Find a programme in Europe",
+        href: "/fr/blog/dstv-en-europe-par-programme"
+      }
+    ]
   },
 ];
 

@@ -7,6 +7,8 @@ import { hreflangFor, hreflangForProgrammatic, localeUrl } from "../lib/url";
 import { SADC_SLUGS } from "../lib/seo/sadc-countries";
 import { SA_CITY_SLUGS } from "../lib/seo/cities";
 import { COMPETITOR_SLUGS } from "../lib/seo/competitors";
+import { dstvGuides, guidePath } from "../lib/seo/dstv-guides";
+import { SITE_URL } from "../lib/url";
 import { BLOG_POSTS, BLOG_SLUGS } from "../lib/seo/blog-posts";
 import { LEGAL_SLUGS, isNoindexLegal } from "../lib/seo/legal";
 import { SA_LANGUAGE_PAGES } from "../lib/seo/sa-languages";
@@ -156,6 +158,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     );
   }
   void BLOG_SLUGS;
+  entries.push({ url: localeUrl("fr", "/blog"), changeFrequency: "weekly", priority: 0.7 });
+  for (const guide of dstvGuides) {
+    const url = SITE_URL + guidePath(guide);
+    entries.push({ url, lastModified: parseDate(guide.published), alternates: { languages: { [guide.language]: url, "x-default": url } } });
+  }
 
   // popia, terms and about stay reachable and linked, but out of the sitemap.
   for (const slug of LEGAL_SLUGS) {

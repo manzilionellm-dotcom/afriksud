@@ -19,11 +19,13 @@ import {
   SA_ABROAD_SLUGS,
   getSaAbroadCountry,
   saAbroadFaq,
+  saAbroadPath,
+  saAbroadPlace,
 } from "../../../../lib/seo/sa-abroad";
 import { JsonLd } from "../../../../lib/seo/jsonld";
 import { LongformShell } from "../../../../components/client/LongformShell";
 import { DiasporaSoftSellCta } from "../../../../components/seo/DiasporaSoftSellCta";
-import { waMeLink } from "../../../../components/shared/utils";
+import { plans } from "../../../../components/shared/plans";
 
 type Props = { params: Promise<{ locale: string; country: string }> };
 
@@ -38,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getSaAbroadCountry(country);
   if (!(LOCALES as readonly string[]).includes(locale) || !data) return {};
 
-  const cityList = data.cities.join(", ");
-  const title = `Watch SuperSport, SABC & kykNET in ${data.name}`;
-  const description = `Stream SuperSport-style, SABC and kykNET folders in ${data.name} (${cityList}) in 4K — line-up to confirm on WhatsApp. Built for SA expats — no DStv decoder, no contract.`;
+  const place = saAbroadPlace(data);
+  const title = `South African TV in ${place}: a viewing guide`;
+  const description = `Find South African news and programme listings in ${place}. Check local times, device setup and prepaid Mzansi Stream prices before choosing a plan.`;
 
   // One indexable URL. Non-canonical locales only emit rel=canonical
   // (no hreflang to URLs that themselves canonicalise elsewhere).
@@ -80,227 +82,79 @@ export default async function SaAbroadCountryPage({ params }: Props) {
   const data = getSaAbroadCountry(country);
   if (!data) notFound();
 
-  const cityList = data.cities.join(", ");
-  const lastCity = data.cities[data.cities.length - 1];
-  const otherCities = data.cities.slice(0, -1).join(", ");
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `Mzansi Stream — South African TV in ${data.name}`,
-    description: `SuperSport-style, SABC, kykNET and M-Net folders for SA expats living in ${data.name} — line-up to confirm on WhatsApp.`,
-    serviceType: "IPTV streaming for South African diaspora",
-    provider: {
-      "@type": "Organization",
-      name: "Mzansi Stream",
-      url: SITE_URL,
-    },
-    areaServed: { "@type": "Country", name: data.name, addressCountry: data.iso2 },
-    audience: {
-      "@type": "PeopleAudience",
-      audienceType: `South African diaspora in ${data.name}`,
-      geographicArea: { "@type": "Country", name: data.name },
-    },
-    url: localeUrl(
-      indexableCanonicalLocale(data.preferredCanonicalLocale),
-      `/sa-abroad/${country}`
-    ),
-    knowsAbout: [
-      "South African television",
-      "SuperSport",
-      "SABC",
-      "kykNET",
-      `South African diaspora in ${data.name}`,
-    ],
-  };
-
+  const place = saAbroadPlace(data);
+  const canonical = `${SITE_URL}${saAbroadPath(data)}`;
   const faq = saAbroadFaq(data);
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faq.map((f) => ({
+    mainEntity: faq.map(({ q, a }) => ({
       "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
     })),
   };
-
-  const waTrialHref = waMeLink(
-    `Hi! I'm a South African in ${data.name} (${data.cities[0]}). Device: [Firestick / Smart TV]. I want the free 24-hour trial — SuperSport rugby + SA channels.`,
-    `SAAbroad-${data.iso2}-Trial`
-  );
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale as Locale, "/") },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "SA Worldwide",
-        item: localeUrl(locale as Locale, "/sa-abroad"),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: data.name,
-        item: localeUrl(locale as Locale, `/sa-abroad/${country}`),
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(locale as Locale) },
+      { "@type": "ListItem", position: 2, name: "South African TV abroad", item: localeUrl("en-za", "/sa-abroad") },
+      { "@type": "ListItem", position: 3, name: data.name, item: canonical },
     ],
   };
 
   return (
     <>
-      <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
-
       <LongformShell locale={locale as Locale}>
         <article className="section">
           <header className="longformHeader">
-            <p className="longformEyebrow">
-              {data.flag} {data.name} · SA Worldwide
-            </p>
-            <h1>
-              Watch SuperSport, SABC and kykNET in {data.name} — Mzansi
-              Stream
-            </h1>
+            <p className="longformEyebrow">{data.flag} South African TV abroad</p>
+            <h1>South African TV in {place}</h1>
             <p className="longformLead">
-              South Africans living in {cityList} can stream
-              SuperSport-style, SABC 1/2/3, e.tv, kykNET, kykNET & Kie and
-              Mzansi Magic folders in 4K (line-up to confirm on WhatsApp) — without a DStv decoder, without a 24-
-              month contract and without a separate SA satellite
-              subscription. Mzansi Stream delivers South African TV in
-              {" "}{data.name} on the device you already own: Smart TV,
-              Firestick, iPhone, iPad, Android, MAG Box or PC.
+              Looking for a South African bulletin, a series or a particular match in {place}?
+              Start with the programme title and the local broadcaster’s listing. You can also
+              check your device with Mzansi Stream before choosing a prepaid plan.
             </p>
-            <div className="ctaRow">
-              <a
-                href={waTrialHref}
-                className="btnPrimary"
-                target="_blank"
-                rel="noreferrer"
-                data-track-ref={`SAAbroad-${data.iso2}-Hero`}
-                data-track-placement={`SAAbroad-${data.iso2}-Hero`}
-              >
-                WhatsApp 24h trial — +44 7307 410512 →
-              </a>
-              <a
-                href={`/?ref=SAAbroad-${data.iso2}#offers`}
-                className="btnSecondary"
-              >
-                Start 24h free trial →
-              </a>
-              <a href="#pricing" className="btnSecondary">
-                See plans →
-              </a>
-            </div>
           </header>
-
           <section className="longformSection">
-            <h2>Watch SuperSport in {data.name}</h2>
+            <h2>Find your programme</h2>
             <p>
-              SuperSport-style folders — PSL, Premier League, Variety,
-              Rugby, Cricket — to confirm on WhatsApp, with 4K depending on your broadband in {otherCities}
-              {otherCities ? " and " : ""}{lastCity}. In {data.cities[0]}, the PSL folder runs over home broadband — no SuperSport
-              stand-alone subscription, no DStv decoder, no installer.
+              For SABC News, radio or podcasts, start with <a href="https://sabc-plus.com/index.php/faq">SABC+’s international availability list</a>.
+              For a sports fixture, look up the teams, competition and date in a broadcaster’s
+              schedule for {place}. For an Afrikaans series, check the season, episode and
+              available audio on the local listing before paying.
             </p>
-            <p>
-              Springboks, URC, Currie Cup and British &amp; Irish Lions
-              fixtures via SuperSport Rugby-style folders in {data.name} —
-              to confirm on WhatsApp; rights and blackouts still apply.
-            </p>
+            <ul className="longformList">
+              <li><Link href="/en-za/blog/sabc-without-dstv">Which SABC news and radio services work abroad?</Link></li>
+              {country === "uk" && <li><Link href="/en-gb/blog/dstv-uk-moving-from-south-africa">What happens to a South African DStv account when you move to the UK?</Link></li>}
+              {country === "australia" && <li><Link href="/en-au/blog/dstv-australia-find-the-broadcaster">Find the match broadcaster and compare Perth and Sydney start times</Link></li>}
+              {["france", "germany", "belgium", "switzerland"].includes(country) &&
+                <li><Link href="/fr/blog/dstv-en-europe-par-programme" hrefLang="fr">Retrouver un programme en France ou en Allemagne (guide en français)</Link></li>}
+            </ul>
           </section>
-
           <section className="longformSection">
-            <h2>SABC, kykNET and the full SA local pack abroad</h2>
-            <p>
-              Stream SABC abroad — SABC 1, SABC 2, SABC 3, SABC News and
-              SABC Education in HD — alongside e.tv, eExtra, eMovies and
-              eToonz. Add the full kykNET pack (kykNET, kykNET & Kie,
-              kykNET Lekker, kykNET Musiek, kykNET Nou!) for SA expats
-              who keep up with their Afrikaans drama from {data.name}, plus
-              Mzansi Magic and Moja Love for South African series watchers.
-            </p>
+            <h2>Read the schedule in local time</h2>
+            <p>{data.timezone}. If a listing uses South African Standard Time, select the date and your city when converting it. Your phone may already display the local start time.</p>
           </section>
-
-          <section className="longformSection">
-            <h2>How it works in {data.name}</h2>
-            <ol className="longformList">
-              <li>
-                Message us on WhatsApp from your {data.name} phone — we
-                support international numbers.
-              </li>
-              <li>
-                Pick a plan and pay by card, PayPal or international EFT.
-                {" "}{data.localPriceNote}.
-              </li>
-              <li>
-                Receive your M3U link plus a one-page setup guide for your
-                Firestick, Smart TV, iPhone, iPad or Android TV on
-                WhatsApp.
-              </li>
-            </ol>
-            <p>
-              South African expat TV in {data.name}: 4K depends on your
-              broadband — test it in {cityList} during the 24-hour trial.
-              {" "}{data.timezone}, so live SA sport hits prime time on
-              your local clock.
-            </p>
-          </section>
-
-          <DiasporaSoftSellCta
-            variant="mid"
-            slug={`sa-abroad-${data.slug}`}
-            place={`${data.cities[0]} / ${data.name}`}
-          />
-
-          <section className="longformSection">
-            <h2>Premier League, PSL and DStv channels overseas</h2>
-            <p>
-              The same Premier League and PSL feeds available on DStv
-              Premium back home stream cleanly to {data.name} via Mzansi
-              Stream. SA expats who used to pay for DStv overseas via
-              a friend or family member back home can drop that workaround
-              entirely — Mzansi Stream serves you directly in {data.name},
-              with your own subscription and WhatsApp support in English.
-            </p>
-          </section>
-
+          <DiasporaSoftSellCta variant="mid" slug={`sa-abroad-${country}`} place={place} />
           <section className="longformSection" id="pricing">
-            <h2>Pricing</h2>
-            <p>
-              Plans in ZAR with international payment options: 1 month
-              R199, 3 months R449, 6 months R699, 12 months R1,199.
-              Pay via Visa, Mastercard, PayPal, Apple Pay, Google Pay or
-              Wise. {data.localPriceNote}.
-            </p>
-            <p>
-              No 24-month contract. 7-day money-back guarantee if the
-              service doesn&apos;t work for your line in {data.name}.
-            </p>
+            <h2>What Mzansi Stream costs</h2>
+            <p>The published prices are in South African rand. Each amount pays for the whole period shown.</p>
+            <ul className="longformList">
+              {plans.map((p) => (
+                <li key={p.key}>{p.months} {p.months === 1 ? "month" : "months"} · R{p.price.toLocaleString("en-GB")} paid upfront</li>
+              ))}
+            </ul>
+            <p>If your account is in {data.localCurrency}, ask for the checkout amount and currency before paying. Your bank can confirm any conversion charge.</p>
           </section>
-
           <section className="longformSection">
-            <h2>Devices we support in {data.name}</h2>
-            <p>
-              Samsung / LG / Sony / Hisense Smart TV, Amazon Firestick
-              (4K Max), Apple TV, Android TV Box, iPhone, iPad, Android
-              phone, MAG Box, PC and Mac via TiviMate, IPTV Smarters Pro,
-              GSE Smart IPTV, XCIPTV or any standard M3U player.
-            </p>
+            <h2>Check your television and connection</h2>
+            <p>Tell support the model printed on your television or streaming stick. Try the service during your usual viewing hours in {data.cities.join(", ")} or wherever you live. Test the remote, audio and picture on the screen you intend to use.</p>
+            <Link href="/en-za/devices">Browse the device setup guides</Link>
           </section>
-
-          <section className="longformSection">
-            <h2>Coverage across {data.name}</h2>
-            <p>
-              We have customers in {cityList} and across {data.name}. The
-              same M3U link works on home fibre, public WiFi and mobile
-              data on any local network.
-            </p>
-          </section>
-
           <section className="longformSection" id="faq">
             <h2>Frequently asked questions</h2>
             {faq.map((f) => (
@@ -310,58 +164,7 @@ export default async function SaAbroadCountryPage({ params }: Props) {
               </details>
             ))}
           </section>
-
-          <DiasporaSoftSellCta
-            variant="end"
-            slug={`sa-abroad-${data.slug}`}
-            place={`${data.cities[0]} / ${data.name}`}
-          />
-
-          <section className="longformSection">
-            <h2>Related</h2>
-            <ul className="longformList">
-              <li>
-                <Link href={`/${locale}/blog/watch-springboks-from-london`}>
-                  Watch the Springboks from London — diaspora rugby FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/rugby-kickoff-times-london`}>
-                  Rugby kickoff times from London (SAST to GMT/BST)
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/iptv-uk-firestick-smart-tv-sa-sports`}>
-                  Best IPTV setup in the UK — Firestick and Smart TV
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/switch-iptv-seller-abroad-whatsapp`}>
-                  Switch from a dead IPTV seller while abroad
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/iptv-uk-categories-not-licences`}>
-                  IPTV categories are not broadcast licences
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/dstv-alternative`}>
-                  DStv abroad — full 2026 guide and pricing comparison
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/watch-springboks-live-online`}>
-                  Watch the Springboks live online in {data.name}
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${locale}/blog/how-to-watch-psl-online-2026`}>
-                  How to watch the PSL online in 2026
-                </Link>
-              </li>
-            </ul>
-          </section>
+          <p><Link href="/en-za/sa-abroad">All destination guides</Link></p>
         </article>
       </LongformShell>
     </>

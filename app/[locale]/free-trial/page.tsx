@@ -13,9 +13,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const isCanonical = locale === "en-za";
   return {
-    title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
+    title: "Free 24-hour IPTV trial in South Africa",
     description:
-      "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public playlist. Not official DStv.",
+      "Try Mzansi Stream for 24 hours on your TV or phone. No card needed. Send your country and device on WhatsApp to arrange setup and check availability.",
     alternates: {
       canonical: TRIAL_CANONICAL,
       // x-default is this page, not the homepage. Other locales canonicalise
@@ -26,9 +26,9 @@ export async function generateMetadata({
     },
     openGraph: {
       images: ogImagesFor("en-za"),
-      title: "Mzansi IPTV Free Trial — WhatsApp | en-ZA",
+      title: "Free 24-hour IPTV trial in South Africa",
       description:
-        "Try SA entertainment & sports weekends on your Wi‑Fi. Message WhatsApp with city + device. Private setup — no public playlist. Not official DStv.",
+        "Try Mzansi Stream for 24 hours on your TV or phone. No card needed. Send your country and device on WhatsApp to arrange setup and check availability.",
       url: TRIAL_CANONICAL,
       type: "website",
       locale: "en_ZA",
@@ -53,11 +53,11 @@ const WA_HREF = `https://wa.me/${WA_NUMBER}?text=${WA_PREFILL}`;
 const faqs = [
   {
     q: "Is there a free IPTV trial for Mzansi / South Africa?",
-    a: "Ask on WhatsApp. We confirm today’s trial window for your city (Johannesburg, Cape Town, Durban, Pretoria, or diaspora London) and device.",
+    a: "The Mzansi Stream trial is free for 24 hours. You do not need a card. Send your country and device on WhatsApp and support will confirm the start time.",
   },
   {
     q: "Can I watch SuperSport-style sports and SA entertainment?",
-    a: "Many households test rugby/football weekends and SA entertainment categories. We claim no broadcast rights; blackouts/rights can still apply — confirm match priorities on chat.",
+    a: "Ask about the exact programme, date and country. Availability varies by territory. For a specific match, check the local broadcaster’s schedule before buying a plan.",
   },
   {
     q: "I’m in London — can diaspora try Mzansi IPTV?",
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: "Where are the prices?",
-    a: "Current options on WhatsApp.",
+    a: "South African plans are R199 for one month, R449 for three months, R699 for six months or R1,199 upfront for twelve months. The 24-hour trial is free.",
   },
   {
     q: "Do you show star ratings?",
@@ -137,7 +137,7 @@ const steps = [
   {
     n: "4",
     t: "Test & decide",
-    d: "SA entertainment + rugby/football window that matters → decide on chat.",
+    d: "Try a programme you actually watch. Check picture, audio and playback at your usual viewing time.",
   },
 ];
 
@@ -154,22 +154,23 @@ export default function FreeTrialPage() {
       />
 
       <p className="text-sm font-medium text-emerald-700">
-        24h trial · South Africa · WhatsApp only · not official DStv
+        South Africa · Free 24-hour trial · No card needed
       </p>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
         Mzansi IPTV free trial — start on WhatsApp
       </h1>
       <p className="mt-4 text-lg text-neutral-600">
-        Test SA entertainment and sports weekends on your Wi‑Fi before you
-        pay. Private guided setup — no public playlists, no fake star ratings.
+        Try the service on the TV or phone you already use. Tell us your country and device on WhatsApp. We will confirm availability, send the setup steps and tell you when your 24 hours start.
       </p>
       <p className="mt-2 text-sm text-neutral-500">
-        Not an official DStv product — categories described honestly.
+        After the trial, one month is R199. Twelve months cost R1,199 upfront. You choose whether to continue.
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
           href={WA_HREF}
+          data-track-ref="Free-Trial"
+          data-track-placement="Trial-Landing"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-[#25D366] px-6 py-3.5 text-base font-semibold text-white shadow-lg"
@@ -269,10 +270,12 @@ export default function FreeTrialPage() {
       <section className="mt-14 rounded-3xl bg-neutral-900 px-6 py-10 text-center text-white">
         <h2 className="text-2xl font-bold">Message WhatsApp to start</h2>
         <p className="mx-auto mt-3 max-w-md text-neutral-300">
-          City + device. Current options on WhatsApp.
+          City + device. South African plans are R199 for one month, R449 for three months, R699 for six months or R1,199 upfront for twelve months. The 24-hour trial is free.
         </p>
         <a
           href={WA_HREF}
+          data-track-ref="Free-Trial"
+          data-track-placement="Trial-Landing"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white"
@@ -295,6 +298,8 @@ export default function FreeTrialPage() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-neutral-200 bg-white/95 p-3 backdrop-blur sm:hidden">
         <a
           href={WA_HREF}
+          data-track-ref="Free-Trial"
+          data-track-placement="Trial-Landing"
           target="_blank"
           rel="noopener noreferrer"
           className="flex w-full items-center justify-center rounded-full bg-[#25D366] py-3 text-sm font-semibold text-white"

@@ -1,37 +1,16 @@
 "use client";
 // components/ux/PremiumPlanSelector.tsx
-// Pricing surface (BONUS): ONE big premium card + segmented pill
-// (1m·3m·6m·12m). First visit auto-tours through every duration before
-// settling on the recommended plan; subsequent visits respect the
-// user's session and skip the tour. prefers-reduced-motion → no tour.
-
-import React, { useEffect, useMemo, useRef, useState } from "react";
+// Keep the selected term and the price passed to checkout in sync.
+import React, { useEffect, useRef, useState } from "react";
 import { Check, MessageCircle, Sparkles } from "lucide-react";
 import { useLang } from "../client/LanguageProvider";
 import { dict } from "../shared/dict";
-import { plans } from "../shared/plans";
+import { plans, monthlyEquivalent } from "../shared/plans";
 import { SITE } from "../shared/site";
 import { tapHaptic } from "./haptic";
 import { openCheckout } from "./checkout/bus";
 import { track } from "../../lib/analytics/track";
 import type { PlanKey } from "../shared/types";
-
-const TOUR_FLAG = "mz_pricing_tour_v1";
-const TOUR_INTERVAL_MS = 1250;
-const MORPH_OUT_MS = 120;
-const MORPH_IN_MS = 240;
-const MORPH_EASE = "cubic-bezier(0.34, 1.56, 0.64, 1)";
-
-const TOUR_ORDER: PlanKey[] = ["p1", "p3", "p6", "p12"];
-
-function perMonth(price: number, months: number) {
-  return Math.round(price / months);
-}
-
-function prefersReducedMotion(): boolean {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
 
 export function PremiumPlanSelector() {
   const { lang } = useLang();
@@ -40,90 +19,14 @@ export function PremiumPlanSelector() {
     plans.find((p) => p.highlight)?.key ?? "p3";
   const [planKey, setPlanKey] = useState<PlanKey>(recommendedKey);
 
-  // ── Morph animation state (PIÈGE C: deps = [planKey] only) ──
-  const [morphing, setMorphing] = useState<"idle" | "out" | "in">("idle");
-  const [displayKey, setDisplayKey] = useState<PlanKey>(recommendedKey);
-  const displayKeyRef = useRef<PlanKey>(recommendedKey);
-  displayKeyRef.current = displayKey;
+  const currentPlan = plans.find((plan) => plan.key === planKey) ?? plans[0];
+  const monthlyPrice = monthlyEquivalent(currentPlan);
+  const numberFormat = new Intl.NumberFormat(lang);
 
-  useEffect(() => {
-    if (planKey === displayKeyRef.current) return;
-    let alive = true;
-    setMorphing("out");
-    const outId = window.setTimeout(() => {
-      if (!alive) return;
-      setDisplayKey(planKey);
-      setMorphing("in");
-      window.setTimeout(() => {
-        if (!alive) return;
-        setMorphing("idle");
-      }, MORPH_IN_MS);
-    }, MORPH_OUT_MS);
-    return () => {
-      alive = false;
-      window.clearTimeout(outId);
-    };
-  }, [planKey]);
-
-  // ── First-visit auto-tour ───────────────────────────────────
-  const tourCancelRef = useRef<(() => void) | null>(null);
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    let played = false;
-    try {
-      played = sessionStorage.getItem(TOUR_FLAG) === "1";
-    } catch {}
-    if (played) return;
-    try {
-      sessionStorage.setItem(TOUR_FLAG, "1");
-    } catch {}
-
-    if (prefersReducedMotion()) {
-      // Honor user preference — settle on the recommended plan, no
-      // marketing animation, no surprise motion.
-      setPlanKey(recommendedKey);
-      return;
-    }
-
-    let cancelled = false;
-    const timers: number[] = [];
-    TOUR_ORDER.forEach((k, i) => {
-      const id = window.setTimeout(() => {
-        if (cancelled) return;
-        setPlanKey(k);
-      }, i * TOUR_INTERVAL_MS);
-      timers.push(id);
-    });
-    const finalId = window.setTimeout(() => {
-      if (cancelled) return;
-      setPlanKey(recommendedKey);
-    }, TOUR_ORDER.length * TOUR_INTERVAL_MS);
-    timers.push(finalId);
-
-    const cancel = () => {
-      cancelled = true;
-      timers.forEach((id) => window.clearTimeout(id));
-    };
-    tourCancelRef.current = cancel;
-    return cancel;
-  }, [recommendedKey]);
-
-  // Manual interaction cancels the tour immediately.
-  const pick = (k: PlanKey) => {
-    tourCancelRef.current?.();
-    tourCancelRef.current = null;
-    if (k !== planKey) tapHaptic(8);
-    setPlanKey(k);
+  const pick = (key: PlanKey) => {
+    if (key !== planKey) tapHaptic(8);
+    setPlanKey(key);
   };
-
-  const displayPlan = useMemo(
-    () => plans.find((p) => p.key === displayKey) ?? plans[0],
-    [displayKey]
-  );
-  const currentPlan = useMemo(
-    () => plans.find((p) => p.key === planKey) ?? plans[0],
-    [planKey]
-  );
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const firedView = useRef(false);
@@ -155,21 +58,6 @@ export function PremiumPlanSelector() {
     });
     openCheckout({ plan: currentPlan, source: "PremiumPlanSelector" });
   };
-
-  const morphStyle = (kind: "out" | "in" | "idle"): React.CSSProperties =>
-    kind === "out"
-      ? {
-          opacity: 0,
-          transform: "scale(0.84)",
-          transition: `opacity ${MORPH_OUT_MS}ms ease-out, transform ${MORPH_OUT_MS}ms ease-out`,
-        }
-      : kind === "in"
-      ? {
-          opacity: 1,
-          transform: "scale(1)",
-          transition: `opacity ${MORPH_IN_MS}ms ${MORPH_EASE}, transform ${MORPH_IN_MS}ms ${MORPH_EASE}`,
-        }
-      : { opacity: 1, transform: "scale(1)" };
 
   return (
     <section
@@ -268,29 +156,16 @@ export function PremiumPlanSelector() {
                 fontSize: "clamp(3.5rem, 11vw, 5.5rem)",
                 letterSpacing: "-0.04em",
                 display: "inline-block",
-                transformOrigin: "left center",
-                ...morphStyle(morphing),
               }}
             >
-              {perMonth(displayPlan.price, displayPlan.months)}
+              {numberFormat.format(currentPlan.price)}
             </span>
-            <span className="pb-2 text-base text-white/65">{t.offers.perMonth}</span>
-
-            <span
-              className="ml-auto inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/85"
-              style={{ display: "inline-block", ...morphStyle(morphing) }}
-            >
-              {SITE.currencyLabel}
-              {displayPlan.price} {t.checkout.pillTotal}
-            </span>
+            <span className="pb-2 text-base text-white/65">{t.checkout.pillTotal}</span>
           </div>
 
-          <div className="relative mt-3 text-sm text-white/60">
-            <span style={{ display: "inline-block", ...morphStyle(morphing) }}>
-              {t.planNames[displayPlan.key]} · {t.offers.billedOnce}{" "}
-              {SITE.currencyLabel}
-              {displayPlan.price}
-            </span>
+          <div className="relative mt-3 text-sm text-white/70">
+            {t.planNames[currentPlan.key]} · {t.checkout.pillBilledOnce}
+            {currentPlan.months > 1 && <> · {SITE.currencyLabel}{numberFormat.format(monthlyPrice)}{t.offers.perMonth}</>}
           </div>
 
           <ul className="relative mt-6 grid grid-cols-1 gap-2.5 text-sm text-white/85 sm:grid-cols-2">

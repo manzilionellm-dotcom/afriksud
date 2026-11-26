@@ -6,7 +6,9 @@
 // Primary WA href = SPRINGBOKS_LONDON_WA_HREF (character-exact, 0 Ref).
 
 import { Fragment } from "react";
-import { notFound } from "next/navigation";
+import { dstvGuides, guidePath } from "../../../../lib/seo/dstv-guides";
+import { DstvGuideArticle } from "../../../../components/seo/DstvGuideArticle";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -40,13 +42,27 @@ import { generateWhatsAppLink, waMeLink } from "../../../../components/shared/ut
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return LOCALES.flatMap((locale) =>
-    BLOG_SLUGS.map((slug) => ({ locale, slug }))
-  );
+  return [
+    ...LOCALES.flatMap((locale) => BLOG_SLUGS.map((slug) => ({ locale, slug }))),
+    ...dstvGuides.map(({ locale, slug }) => ({ locale, slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+  if (!(LOCALES as readonly string[]).includes(locale)) return {};
+  const guide = dstvGuides.find((item) => item.slug === slug);
+  if (guide) {
+    const canonical = SITE_URL + guidePath(guide);
+    return {
+      title: { absolute: guide.title },
+      description: guide.description,
+      alternates: { canonical, languages: { [guide.language]: canonical, "x-default": canonical } },
+      robots: { index: locale === guide.locale, follow: true },
+      openGraph: { type: "article", url: canonical, title: guide.title, description: guide.description, publishedTime: guide.published, images: [`${SITE_URL}/og-image.jpg`] },
+      twitter: { card: "summary_large_image", title: guide.title, description: guide.description },
+    };
+  }
   const post = getBlogPost(slug);
   if (!(LOCALES as readonly string[]).includes(locale) || !post) return {};
   return {
@@ -79,6 +95,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
+  const guide = dstvGuides.find((item) => item.slug === slug);
+  if (guide) {
+    if (locale !== guide.locale) permanentRedirect(guidePath(guide));
+    return <DstvGuideArticle guide={guide} locale={locale as Locale} />;
+  }
   const post = getBlogPost(slug);
   if (!post) notFound();
 
@@ -228,7 +249,7 @@ export default async function BlogPostPage({ params }: Props) {
                 data-track-ref={`Blog-${slug}-Hero-Pricing`}
                 data-track-placement={`Blog-${slug}-Hero`}
               >
-                See plans from R99/mo →
+                See prepaid plans →
               </a>
             </div>
           </header>
@@ -239,7 +260,7 @@ export default async function BlogPostPage({ params }: Props) {
             emitSchema={!isSpringboksLondon}
             keyFacts={
               post.keyFacts ?? [
-                "From R99/month on the 12-month plan. 24-hour free trial, no credit card.",
+                "R199 for one month or R1,199 prepaid for twelve months. Free 24-hour trial, no card.",
                 "Activated on WhatsApp, without a call centre queue.",
               ]
             }
@@ -332,7 +353,7 @@ export default async function BlogPostPage({ params }: Props) {
           <InlinePricingBlock
             locale={loc}
             refTag={`Blog-${slug}`}
-            heading={`Get started with ${SITE.brand} — from R99/month`}
+            heading={`Prepaid plans from ${SITE.brand}`}
             sub="Same channel pack on every plan. Pay once, no auto-renewal, no contract. 24-hour free trial available on WhatsApp."
             softenCatalogClaims={isSpringboksLondon}
           />
