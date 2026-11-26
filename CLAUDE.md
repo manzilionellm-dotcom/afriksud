@@ -1,5 +1,3 @@
-> **Status 2026-11-20 — site withdrawn.** Every URL answers 410 Gone with noindex (`scripts/withdrawn.mjs`, set in `vercel.json`). Do not restore the offer pages or republish them under other URLs or with synonyms unless rights to the content offered are documented. See `docs/withdrawal-2026-11-20.md`. While the withdrawal is in force it supersedes the instructions below.
-
 # CLAUDE.md — LOIS de l'USINE (Mzansi Stream · iptvmzansi.com)
 
 Ce fichier fait autorité pour tout agent travaillant sur ce dépôt. Les LOIS s'appliquent partout, toujours.

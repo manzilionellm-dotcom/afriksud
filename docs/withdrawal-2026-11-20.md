@@ -1,5 +1,9 @@
 # Withdrawal of iptvmzansi.com — 2026-11-20
 
+## Publication status on 2026-11-26
+
+The production domain serves deployment `dpl_72us3BzdDQS9tbbkVKa4tSZiGLmB` from commit `a0925cd`. At the owner's request, the default Vercel configuration and routing middleware have been aligned with that live version. The November 20 decision and its supporting observations below are retained as history. No new distribution-rights evidence was supplied with this deployment change.
+
 ## Why
 - On 2026-11-20 the owner decided to apply to every IPTV domain the rule used for the domains named in Google copyright notices: pages that rely on an IPTV offer with no documented rights to the content offered are removed from publication (410), not reworded or moved to other URLs.
 - Live check on 2026-11-20: home page “DStv Alternative — Live TV in 4K from R99”; 147 sitemap URLs, 124 answering 200, 125 carrying offer signals (prices, subscriptions, channels, WhatsApp).
