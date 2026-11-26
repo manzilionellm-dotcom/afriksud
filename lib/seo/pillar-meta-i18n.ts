@@ -27,7 +27,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
   "dstv-alternative": {
     af: {
       title: "DStv te duur? Vergelyk jou TV-koste",
-      description: "Vergelyk DStv-pakkette in Suid-Afrika met Mzansi se voorafbetaalde pryse. Een maand kos R199 en twaalf maande kos R1 199 vooruit.",
+      description: "Vergelyk DStv-pakkette in Suid-Afrika met Mzansi se voorafbetaalde pryse. Een maand kos USD 15 en twaalf maande kos USD 65 vooruit.",
     },
     fr: {
       title: "DStv trop cher ? Comparer les options en Afrique du Sud",
@@ -35,15 +35,15 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     },
     "pt-mz": {
       title: "Alternativas à DStv na África do Sul",
-      description: "Compare os pacotes locais da DStv com os planos pré-pagos da Mzansi. Um mês custa R199 e doze meses custam R1 199 pagos de uma vez.",
+      description: "Compare os pacotes locais da DStv com os planos pré-pagos da Mzansi. Um mês custa USD 15 e doze meses custam USD 65 pagos de uma vez.",
     },
     zu: {
       title: "Ezinye izindlela ze-DStv eNingizimu Afrika",
-      description: "Qhathanisa amanani e-DStv nawe-Mzansi Stream. Inyanga eyodwa ibiza u-R199. Izinyanga eziyi-12 zibiza u-R1 199 uma ukhokha kusengaphambili.",
+      description: "Qhathanisa amanani e-DStv nawe-Mzansi Stream. Inyanga eyodwa ibiza u-USD 15. Izinyanga eziyi-12 zibiza u-USD 65 uma ukhokha kusengaphambili.",
     },
     xh: {
       title: "Ezinye iindlela ze-DStv eMzantsi Afrika",
-      description: "Thelekisa amaxabiso e-DStv nawe-Mzansi Stream. Inyanga enye ixabisa i-R199. Iinyanga ezili-12 zibiza i-R1 199 xa kuhlawulwa kwangaphambili.",
+      description: "Thelekisa amaxabiso e-DStv nawe-Mzansi Stream. Inyanga enye ixabisa i-USD 15. Iinyanga ezili-12 zibiza i-USD 65 xa kuhlawulwa kwangaphambili.",
     },
   },
 
@@ -51,7 +51,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "IPTV vir Vumatel, Openserve & Frogfoot 2026 — 4K-toets",
       description:
-        "Beste IPTV vir Vumatel, Openserve, Frogfoot, Octotel en MetroFibre in Suid-Afrika. 4K SuperSport — toets dit op jou lyn. R199 vir een maand.",
+        "Beste IPTV vir Vumatel, Openserve, Frogfoot, Octotel en MetroFibre in Suid-Afrika. 4K SuperSport — toets dit op jou lyn. USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV pour Vumatel, Openserve & Frogfoot 2026 — tester la 4K",
@@ -61,17 +61,17 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV para Vumatel, Openserve & Frogfoot 2026 — testar 4K",
       description:
-        "Melhor IPTV para fibra Vumatel, Openserve, Frogfoot, Octotel e MetroFibre na África do Sul. SuperSport em 4K — teste na sua linha. R199 por um mês.",
+        "Melhor IPTV para fibra Vumatel, Openserve, Frogfoot, Octotel e MetroFibre na África do Sul. SuperSport em 4K — teste na sua linha. USD 15 por um mês.",
     },
     zu: {
       title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — 4K",
       description:
-        "I-IPTV engcono ye-fiber ye-Vumatel, Openserve ne-Frogfoot e-South Africa. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. R199 ngenyanga eyodwa.",
+        "I-IPTV engcono ye-fiber ye-Vumatel, Openserve ne-Frogfoot e-South Africa. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. USD 15 ngenyanga eyodwa.",
     },
     xh: {
       title: "I-IPTV ye-Vumatel, Openserve & Frogfoot 2026 — i-4K",
       description:
-        "I-IPTV elungileyo ye-fiber ye-Vumatel, Openserve ne-Frogfoot eMzantsi Afrika. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. R199 ngenyanga enye.",
+        "I-IPTV elungileyo ye-fiber ye-Vumatel, Openserve ne-Frogfoot eMzantsi Afrika. I-SuperSport ku-4K. I-CDN ye-NAPAfrica. USD 15 ngenyanga enye.",
     },
   },
 
@@ -79,7 +79,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "IPTV met EFT, SnapScan, Ozow & Capitec Pay — Geen Kredietkaart",
       description:
-        "Betaal vir IPTV in Suid-Afrika met EFT, SnapScan, Ozow, Zapper, Yoco of Capitec Pay — geen kredietkaart nodig. Volle 4K SuperSport teen R199 vir een maand.",
+        "Betaal vir IPTV in Suid-Afrika met EFT, SnapScan, Ozow, Zapper, Yoco of Capitec Pay — geen kredietkaart nodig. Volle 4K SuperSport teen USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV par EFT, SnapScan, Ozow & Capitec Pay — Sans carte",
@@ -89,17 +89,17 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV por EFT, SnapScan, Ozow & Capitec Pay — Sem cartão",
       description:
-        "Pague o seu IPTV na África do Sul por EFT, SnapScan, Ozow, Zapper, Yoco ou Capitec Pay — sem cartão de crédito. SuperSport 4K completo a R199 por um mês.",
+        "Pague o seu IPTV na África do Sul por EFT, SnapScan, Ozow, Zapper, Yoco ou Capitec Pay — sem cartão de crédito. SuperSport 4K completo a USD 15 por um mês.",
     },
     zu: {
       title: "I-IPTV nge-EFT, SnapScan & Capitec Pay — Ngaphandle Kwekhadi",
       description:
-        "Khokhela i-IPTV e-South Africa nge-EFT, SnapScan, Ozow noma Capitec Pay — akudingeki ikhadi lesikweletu. I-SuperSport 4K egcwele ngo-R199 ngenyanga eyodwa.",
+        "Khokhela i-IPTV e-South Africa nge-EFT, SnapScan, Ozow noma Capitec Pay — akudingeki ikhadi lesikweletu. I-SuperSport 4K egcwele ngo-USD 15 ngenyanga eyodwa.",
     },
     xh: {
       title: "I-IPTV nge-EFT, SnapScan & Capitec Pay — Ngaphandle Kwekhadi",
       description:
-        "Hlawulela i-IPTV eMzantsi Afrika nge-EFT, SnapScan, Ozow okanye Capitec Pay — akufuneki khadi letyala. I-SuperSport 4K epheleleyo nge-R199 ngenyanga enye.",
+        "Hlawulela i-IPTV eMzantsi Afrika nge-EFT, SnapScan, Ozow okanye Capitec Pay — akufuneki khadi letyala. I-SuperSport 4K epheleleyo nge-USD 15 ngenyanga enye.",
     },
   },
 
@@ -158,7 +158,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "Beste IPTV Suid-Afrika 2026 — Kopersgids, 4K",
       description:
-        "Die eerlike 2026-kopersgids vir die beste IPTV in Suid-Afrika. Vergelyk prys, kanale, sport, 4K en ondersteuning. R199 vir een maand met 'n gratis 24u-proeftydperk.",
+        "Die eerlike 2026-kopersgids vir die beste IPTV in Suid-Afrika. Vergelyk prys, kanale, sport, 4K en ondersteuning. USD 15 vir een maand met 'n gratis 24u-proeftydperk.",
     },
     fr: {
       title: "Meilleure IPTV Afrique du Sud 2026 — guide d'achat, 4K",
@@ -168,17 +168,17 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "Melhor IPTV África do Sul 2026 — guia de compra, 4K",
       description:
-        "O guia de compra honesto de 2026 para o melhor IPTV na África do Sul. Compare preço, canais, desporto, 4K e suporte. R199 por um mês com teste grátis de 24h.",
+        "O guia de compra honesto de 2026 para o melhor IPTV na África do Sul. Compare preço, canais, desporto, 4K e suporte. USD 15 por um mês com teste grátis de 24h.",
     },
     zu: {
       title: "I-IPTV Engcono e-South Africa 2026 — ku-4K",
       description:
-        "Umhlahlandlela wabathengi ka-2026 we-IPTV engcono e-South Africa. Qhathanisa intengo, iziteshi, ezemidlalo ne-4K. R199 ngenyanga eyodwa nokulinga kwamahhala kwama-24h.",
+        "Umhlahlandlela wabathengi ka-2026 we-IPTV engcono e-South Africa. Qhathanisa intengo, iziteshi, ezemidlalo ne-4K. USD 15 ngenyanga eyodwa nokulinga kwamahhala kwama-24h.",
     },
     xh: {
       title: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026 — ku-4K",
       description:
-        "Isikhokelo sabathengi sika-2026 seyona IPTV ilungileyo eMzantsi Afrika. Thelekisa ixabiso, iitshaneli, ezemidlalo ne-4K. R199 ngenyanga enye nokuvavanya kwasimahla.",
+        "Isikhokelo sabathengi sika-2026 seyona IPTV ilungileyo eMzantsi Afrika. Thelekisa ixabiso, iitshaneli, ezemidlalo ne-4K. USD 15 ngenyanga enye nokuvavanya kwasimahla.",
     },
   },
 
@@ -186,7 +186,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "IPTV Firestick Suid-Afrika 2026 — TiviMate in 10 Minute",
       description:
-        "Stap-vir-stap IPTV Firestick-opstelling vir Suid-Afrika in 2026 — TiviMate Premium, M3U-skakel, EPG, 4K SuperSport. Werk op Vumatel, Openserve, Frogfoot. R199 vir een maand.",
+        "Stap-vir-stap IPTV Firestick-opstelling vir Suid-Afrika in 2026 — TiviMate Premium, M3U-skakel, EPG, 4K SuperSport. Werk op Vumatel, Openserve, Frogfoot. USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV Firestick Afrique du Sud 2026 — TiviMate en 10 min",
@@ -196,17 +196,17 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV Firestick África do Sul 2026 — TiviMate em 10 min",
       description:
-        "Configuração IPTV Firestick passo a passo para a África do Sul em 2026 — TiviMate Premium, link M3U, EPG, SuperSport 4K. Funciona em Vumatel, Openserve. R199 por um mês.",
+        "Configuração IPTV Firestick passo a passo para a África do Sul em 2026 — TiviMate Premium, link M3U, EPG, SuperSport 4K. Funciona em Vumatel, Openserve. USD 15 por um mês.",
     },
     zu: {
       title: "I-IPTV Firestick South Africa 2026 — TiviMate ngemizuzu eyi-10",
       description:
-        "Ukusetha i-IPTV ku-Firestick e-South Africa ngo-2026 — TiviMate Premium, isixhumanisi se-M3U, i-EPG, i-SuperSport 4K. Kusebenza ku-Vumatel, Openserve. R199 ngenyanga eyodwa.",
+        "Ukusetha i-IPTV ku-Firestick e-South Africa ngo-2026 — TiviMate Premium, isixhumanisi se-M3U, i-EPG, i-SuperSport 4K. Kusebenza ku-Vumatel, Openserve. USD 15 ngenyanga eyodwa.",
     },
     xh: {
       title: "I-IPTV Firestick eMzantsi Afrika 2026 — TiviMate ngemizuzu eli-10",
       description:
-        "Ukuseta i-IPTV ku-Firestick eMzantsi Afrika ngo-2026 — TiviMate Premium, ikhonkco le-M3U, i-EPG, i-SuperSport 4K. Isebenza ku-Vumatel, Openserve. R199 ngenyanga enye.",
+        "Ukuseta i-IPTV ku-Firestick eMzantsi Afrika ngo-2026 — TiviMate Premium, ikhonkco le-M3U, i-EPG, i-SuperSport 4K. Isebenza ku-Vumatel, Openserve. USD 15 ngenyanga enye.",
     },
   },
 
@@ -214,7 +214,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "IPTV Samsung Smart TV Suid-Afrika 2026 — Tizen Installasie",
       description:
-        "Installeer IPTV op 'n Samsung Smart TV (Tizen) in Suid-Afrika — IPTV Smarters Pro, M3U-skakel, 4K SuperSport, kykNET. Werk op elke Samsung van 2022+. R199 vir een maand.",
+        "Installeer IPTV op 'n Samsung Smart TV (Tizen) in Suid-Afrika — IPTV Smarters Pro, M3U-skakel, 4K SuperSport, kykNET. Werk op elke Samsung van 2022+. USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV Samsung Smart TV Afrique du Sud 2026 — installation Tizen",
@@ -224,7 +224,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV Samsung Smart TV África do Sul 2026 — instalação Tizen",
       description:
-        "Instale IPTV numa Samsung Smart TV (Tizen) na África do Sul — IPTV Smarters Pro, link M3U, SuperSport 4K, kykNET. Funciona em qualquer Samsung 2022+. R199 por um mês.",
+        "Instale IPTV numa Samsung Smart TV (Tizen) na África do Sul — IPTV Smarters Pro, link M3U, SuperSport 4K, kykNET. Funciona em qualquer Samsung 2022+. USD 15 por um mês.",
     },
     zu: {
       title: "I-IPTV Samsung Smart TV South Africa 2026 — Ukufaka i-Tizen",
@@ -264,7 +264,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
   "cheap-iptv-south-africa": {
     af: {
       title: "Goedkoop IPTV in Suid-Afrika – wat betaal jy vooruit?",
-      description: "Mzansi kos R199 vir een maand of R1 199 vooruit vir twaalf maande. Vergelyk die volle bedrag met DStv Starter.",
+      description: "Mzansi kos USD 15 vir een maand of USD 65 vooruit vir twaalf maande. Vergelyk die volle bedrag met DStv Starter.",
     },
     fr: {
       title: "IPTV abordable en Afrique du Sud – coût du prépaiement",
@@ -272,15 +272,15 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     },
     "pt-mz": {
       title: "IPTV na África do Sul – quanto se paga à partida?",
-      description: "A Mzansi custa R199 por um mês ou R1 199 por doze meses pagos à partida. Compare o valor total com o DStv Starter.",
+      description: "A Mzansi custa USD 15 por um mês ou USD 65 por doze meses pagos à partida. Compare o valor total com o DStv Starter.",
     },
     zu: {
       title: "Amanani e-IPTV eNingizimu Afrika",
-      description: "Inyanga eyodwa ye-Mzansi Stream ibiza u-R199. Izinyanga eziyi-12 zibiza u-R1 199 uma ukhokha kusengaphambili.",
+      description: "Inyanga eyodwa ye-Mzansi Stream ibiza u-USD 15. Izinyanga eziyi-12 zibiza u-USD 65 uma ukhokha kusengaphambili.",
     },
     xh: {
       title: "Amaxabiso e-IPTV eMzantsi Afrika",
-      description: "Inyanga enye ye-Mzansi Stream ixabisa i-R199. Iinyanga ezili-12 zibiza i-R1 199 xa kuhlawulwa kwangaphambili.",
+      description: "Inyanga enye ye-Mzansi Stream ixabisa i-USD 15. Iinyanga ezili-12 zibiza i-USD 65 xa kuhlawulwa kwangaphambili.",
     },
   },
 
@@ -288,7 +288,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "4K IPTV Suid-Afrika — Ware UHD SuperSport & Premier League",
       description:
-        "4K UHD IPTV in Suid-Afrika. SuperSport, Premier League en kykNET in 4K waar die bron dit toelaat — bevestig op WhatsApp. R199 vir een maand.",
+        "4K UHD IPTV in Suid-Afrika. SuperSport, Premier League en kykNET in 4K waar die bron dit toelaat — bevestig op WhatsApp. USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV 4K Afrique du Sud — UHD natif SuperSport & Premier League",
@@ -298,17 +298,17 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV 4K África do Sul — UHD nativo SuperSport & Premier League",
       description:
-        "IPTV 4K UHD na África do Sul. SuperSport, Premier League e kykNET em 4K quando a fonte o permite — confirme no WhatsApp. R199 por um mês.",
+        "IPTV 4K UHD na África do Sul. SuperSport, Premier League e kykNET em 4K quando a fonte o permite — confirme no WhatsApp. USD 15 por um mês.",
     },
     zu: {
       title: "I-4K IPTV South Africa — i-UHD Yangempela SuperSport & Premier League",
       description:
-        "I-IPTV ye-4K UHD e-South Africa. R199 ngenyanga eyodwa.",
+        "I-IPTV ye-4K UHD e-South Africa. USD 15 ngenyanga eyodwa.",
     },
     xh: {
       title: "I-4K IPTV eMzantsi Afrika — i-UHD Yokwenyani SuperSport & Premier League",
       description:
-        "I-IPTV ye-4K UHD eMzantsi Afrika. R199 ngenyanga enye.",
+        "I-IPTV ye-4K UHD eMzantsi Afrika. USD 15 ngenyanga enye.",
     },
   },
 
@@ -331,12 +331,12 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     zu: {
       title: "I-IPTV e-South Africa — Ukusakaza kwe-4K",
       description:
-        "I-IPTV e-South Africa. I-CDN ye-NAPAfrica. I-SuperSport 4K. R199 ngenyanga eyodwa.",
+        "I-IPTV e-South Africa. I-CDN ye-NAPAfrica. I-SuperSport 4K. USD 15 ngenyanga eyodwa.",
     },
     xh: {
       title: "I-IPTV eMzantsi Afrika — Ukusasaza kwe-4K",
       description:
-        "I-IPTV eMzantsi Afrika. I-CDN ye-NAPAfrica. I-SuperSport 4K. R199 ngenyanga enye.",
+        "I-IPTV eMzantsi Afrika. I-CDN ye-NAPAfrica. I-SuperSport 4K. USD 15 ngenyanga enye.",
     },
   },
 
@@ -344,7 +344,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     af: {
       title: "IPTV vir Flieks & Reekse Suid-Afrika",
       description:
-        "IPTV vir flieks en reekse in Suid-Afrika — films en reekse op aanvraag; bevestig die katalogus op WhatsApp. Geen kontrak. R199 vir een maand.",
+        "IPTV vir flieks en reekse in Suid-Afrika — films en reekse op aanvraag; bevestig die katalogus op WhatsApp. Geen kontrak. USD 15 vir een maand.",
     },
     fr: {
       title: "IPTV films & séries Afrique du Sud — VOD",
@@ -354,7 +354,7 @@ export const PILLAR_META_I18N: Record<string, LocaleOverlay> = {
     "pt-mz": {
       title: "IPTV filmes & séries África do Sul — VOD",
       description:
-        "IPTV para filmes e séries na África do Sul — VOD a pedido; confirme o catálogo no WhatsApp. Sem fidelização. R199 por um mês.",
+        "IPTV para filmes e séries na África do Sul — VOD a pedido; confirme o catálogo no WhatsApp. Sem fidelização. USD 15 por um mês.",
     },
     zu: {
       title: "I-IPTV Yamamuvi Nochungechunge South Africa",

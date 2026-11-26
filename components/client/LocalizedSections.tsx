@@ -137,7 +137,7 @@ export function Offers() {
       <div className="grid">
         {plans.map(p => {
           const pricePerMonth = monthlyEquivalent(p);
-          const saving = Math.round((1 - pricePerMonth / 199) * 100);
+          const saving = p.months > 1 ? Math.round((1 - pricePerMonth / 15) * 100) : 0;
           return (
             <article key={p.key} className={`card ${p.highlight ? "highlight" : ""}`}>
               {saving > 0 && (
@@ -151,8 +151,8 @@ export function Offers() {
               </div>
               <div className="priceLockup">
                 <span className="currency">{SITE.currencyLabel}</span>
-                <span className="bigNumber">{pricePerMonth}</span>
-                <span className="perMonth">{t.offers.perMonth}</span>
+                <span className="bigNumber">{p.price}</span>
+                <span className="perMonth">{t.checkout.pillTotal}</span>
               </div>
               <div className="billedInfo">
                 {t.offers.billedOnce} {SITE.currencyLabel}{p.price}

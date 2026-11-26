@@ -26,12 +26,12 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "First month",
         them: "R799 Stream or R979 standard satellite",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Full year at current prices",
         them: "R9,588 Stream or R11,748 standard satellite before extras",
-        us: "R1,199 prepaid"
+        us: "USD 65 prepaid"
       },
       {
         label: "Long-term satellite deal",
@@ -80,12 +80,12 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "Cash due today",
         them: "See your account balance",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Annual Mzansi option",
         them: "Compare against twelve actual billing periods",
-        us: "R1,199 prepaid"
+        us: "USD 65 prepaid"
       }
     ],
     theirStrengths: [
@@ -119,12 +119,12 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "Monthly price",
         them: "R399 Stream or R479 satellite",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Twelve months at constant price",
         them: "R4,788 Stream or R5,748 satellite before extras",
-        us: "R1,199 prepaid"
+        us: "USD 65 prepaid"
       },
       {
         label: "Match selection",
@@ -158,7 +158,7 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "Standalone subscription",
         them: "Closed on 30 April 2026",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Finding a title",
@@ -177,7 +177,7 @@ export const COMPETITORS: Competitor[] = [
     ],
     ourEdge: [
       "A separate catalogue to explore on your own device.",
-      "A single prepaid month costs R199."
+      "A single prepaid month costs USD 15."
     ],
     meta: {
       title: "Where to find Showmax shows after the app closed",
@@ -242,7 +242,7 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "First payment",
         them: "Request a current quote",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       }
     ],
     theirStrengths: [
@@ -265,7 +265,7 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "Monthly subscription",
         them: "Free-to-view once installed",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Hardware",
@@ -304,7 +304,7 @@ export const COMPETITORS: Competitor[] = [
       {
         label: "Pricing",
         them: "Confirm current local price at sign-up",
-        us: "R199 for one month"
+        us: "USD 15 for one month"
       },
       {
         label: "Playback",

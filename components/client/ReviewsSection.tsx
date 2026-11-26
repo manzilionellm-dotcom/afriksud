@@ -9,7 +9,7 @@ export function ReviewsSection() {
   const t = dict[lang];
   const process = [
     { title: "24h trial", text: "WhatsApp us. No card. Test on your device first." },
-    { title: "Clear prices", text: "R199 for one month, or R1,199 prepaid for twelve months (R99.92 per month)." },
+    { title: "Clear prices", text: "USD 15 for one month, or USD 65 prepaid for twelve months (USD 5.42 per month)." },
     { title: "HelloPeter", text: "Customers can share their experience after 30 days of use." },
   ];
   return (

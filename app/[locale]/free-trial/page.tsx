@@ -90,7 +90,7 @@ const faqs = [
   },
   {
     q: "Where are the prices?",
-    a: "South African plans are R199 for one month, R449 for three months, R699 for six months or R1,199 upfront for twelve months. The 24-hour trial is free.",
+    a: "South African plans are USD 5 for the day pass, USD 15 for one month or USD 65 for one year. The 24-hour trial is free.",
   },
   {
     q: "Do you show star ratings?",
@@ -171,7 +171,7 @@ export default async function FreeTrialPage({ params }: { params: Promise<{ loca
         Try the service on the TV or phone you already use. Tell us your country and device on WhatsApp. We will confirm availability, send the setup steps and tell you when your 24 hours start.
       </p>
       <p className="mt-2 text-sm text-neutral-500">
-        After the trial, one month is R199. Twelve months cost R1,199 upfront. You choose whether to continue.
+        After the trial, one month is USD 15. Twelve months cost USD 65 upfront. You choose whether to continue.
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -278,7 +278,7 @@ export default async function FreeTrialPage({ params }: { params: Promise<{ loca
       <section className="mt-14 rounded-3xl bg-neutral-900 px-6 py-10 text-center text-white">
         <h2 className="text-2xl font-bold">Message WhatsApp to start</h2>
         <p className="mx-auto mt-3 max-w-md text-neutral-300">
-          City + device. South African plans are R199 for one month, R449 for three months, R699 for six months or R1,199 upfront for twelve months. The 24-hour trial is free.
+          City + device. South African plans are USD 5 for the day pass, USD 15 for one month or USD 65 for one year. The 24-hour trial is free.
         </p>
         <a
           href={WA_HREF}

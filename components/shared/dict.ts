@@ -28,8 +28,8 @@ function homePriceRows(language: "en" | "fr"): Copy["compare"]["rows"] {
     ]);
   const mzansi = plans.filter((plan) => plan.months === 1 || plan.months === 12).map((plan) => ({
     service: `Mzansi Stream · ${plan.months} ${french ? "mois" : plan.months === 1 ? "month" : "months"}`,
-    payment: `${money(plan.price)} ${french ? "en une fois" : "upfront"}`,
-    perMonth: money(monthlyEquivalent(plan)),
+    payment: `USD ${format.format(plan.price)} ${french ? "en une fois" : "upfront"}`,
+    perMonth: `USD ${format.format(monthlyEquivalent(plan))}`,
     highlight: true,
   }));
   return [...dstv, ...mzansi];
@@ -60,7 +60,7 @@ const enZA: Copy = {
     pill: "Premium 4K · No contract · 24h free trial",
     titleA: "Best IPTV South Africa.",
     titleB: "Direct to your screen.",
-    lead: "Try live TV, films and series for 24 hours on your own screen. One month costs R199. Twelve months cost R1,199 upfront. Ask about your programmes and device on WhatsApp.",
+    lead: "Try live TV, films and series for 24 hours on your own screen. A day pass costs USD 5. One month costs USD 15. Twelve months cost USD 65 upfront. Ask about your programmes and device on WhatsApp.",
     ctaPrices: "See pricing",
     ctaAdvisor: "Talk to an advisor",
     trust: "No contract · WhatsApp activation · Test it on your own line",
@@ -74,7 +74,7 @@ const enZA: Copy = {
   },
   offers: {
     title: "Choose your plan",
-    sub: "Pay once for your chosen term. One month costs R199 and twelve months cost R1,199. Check the current line-up on the free trial.",
+    sub: "Pay once for your chosen term. A day pass costs USD 5. One month costs USD 15 and twelve months cost USD 65. Check the current line-up on the free trial.",
     order: "Order via WhatsApp",
     billedOnce: "One-off payment of",
     perMonth: "/mo",
@@ -84,14 +84,12 @@ const enZA: Copy = {
   },
   planNames: {
     p1: "1 month",
-    p3: "3 months",
-    p6: "6 months",
+    pday: "Day pass",
     p12: "12 months",
   },
   planPerks: {
     p1: ["SA + sport folders to trial", "4K/UHD quality", "EPG guide included", "WhatsApp support", "No contract"],
-    p3: ["One upfront payment", "On-demand titles", "Programme guide", "WhatsApp setup help"],
-    p6: ["Six months prepaid", "Programme guide", "One simultaneous connection", "WhatsApp support"],
+    pday: ["One upfront payment", "On-demand titles", "Programme guide", "WhatsApp setup help"],
     p12: ["Twelve months prepaid", "One simultaneous connection", "Programme guide", "WhatsApp support"],
   },
   channels: {
@@ -255,7 +253,7 @@ const enZA: Copy = {
     name: "Lerato",
     greeting1: "Hi there! 👋 I'm Lerato.",
     greeting2: "I can help with pricing, the free trial or the install. What would you like to know?",
-    price1: "One month is R199. A full year is R1,199 paid upfront, equivalent to R99.92 per month.",
+    price1: "A day pass costs USD 5. One month is USD 15. A full year is USD 65 paid upfront, equivalent to USD 5.42 per month.",
     price2: "Want to see the pricing or try it free for 24h first?",
     install1: "Firestick and Smart TV both work. Message us with your device model for setup help.",
     install2: "I'll send the step-by-step guide on WhatsApp now.",
@@ -335,8 +333,7 @@ const af: Copy = {
   },
   planNames: {
     p1: "1 maand",
-    p3: "3 maande",
-    p6: "6 maande",
+    pday: "Dagpas",
     p12: "12 maande",
   },
   setup: {
@@ -409,8 +406,7 @@ const fr: Copy = {
   },
   planNames: {
     p1: "1 mois",
-    p3: "3 mois",
-    p6: "6 mois",
+    pday: "Pass journée",
     p12: "12 mois",
   },
   setup: {
@@ -478,7 +474,7 @@ const zu: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "I-IPTV Engcono e-South Africa 2026.",
-    titleB: "R199 / 1 inyanga.",
+    titleB: "USD 15 / 1 inyanga.",
     ctaPrices: "Bona izinhlelo",
     ctaAdvisor: "Khuluma nomeluleki",
     trust: "Akukho nkontileka",
@@ -505,7 +501,7 @@ const xh: Copy = {
   hero: {
     ...enZA.hero,
     titleA: "Eyona IPTV Ilungileyo eMzantsi Afrika 2026.",
-    titleB: "R199 / 1 inyanga.",
+    titleB: "USD 15 / 1 inyanga.",
     ctaPrices: "Jonga izicwangciso",
     ctaAdvisor: "Thetha necebo",
     trust: "Akukho sivumelwano",
@@ -584,7 +580,6 @@ const enGB: Copy = {
   },
   planPerks: {
     ...enZA.planPerks,
-    p6: ["Six months prepaid", "Programme guide", "One simultaneous connection", "WhatsApp support"],
   },
   faq: {
     title: "Frequently asked questions",

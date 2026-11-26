@@ -260,7 +260,7 @@ export default async function BlogPostPage({ params }: Props) {
             emitSchema={!isSpringboksLondon}
             keyFacts={
               post.keyFacts ?? [
-                "R199 for one month or R1,199 prepaid for twelve months. Free 24-hour trial, no card.",
+                "USD 15 for one month or USD 65 prepaid for twelve months. Free 24-hour trial, no card.",
                 "Activated on WhatsApp, without a call centre queue.",
               ]
             }

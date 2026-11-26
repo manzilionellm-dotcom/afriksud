@@ -57,7 +57,7 @@ const BASE_METADATA: Metadata = {
   },
   // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "Compare DStv with Mzansi Stream. One month costs R199, or pay R1,199 upfront for a year. Request a free 24-hour trial on WhatsApp.",
+    "Compare DStv with Mzansi Stream. One month costs USD 15, or pay USD 65 upfront for a year. Request a free 24-hour trial on WhatsApp.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",

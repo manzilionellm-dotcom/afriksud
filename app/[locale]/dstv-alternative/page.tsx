@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const FAQ = [
-  { q: "What is the cheapest monthly option in this comparison?", a: "DStv Stream Starter costs R99 per month. Mzansi costs R199 for one month or R1,199 upfront for twelve months. Compare the programmes you actually watch before deciding." },
+  { q: "What is the cheapest monthly option in this comparison?", a: "DStv Stream Starter costs R99 per month. Mzansi costs USD 15 for one month or USD 65 upfront for twelve months. Compare the programmes you actually watch before deciding." },
   { q: "Can I keep DStv without a satellite dish?", a: "DStv offers streaming-only packages in South Africa. Check your device, broadband and the package that carries the shows you want." },
   { q: "How do I cancel an ordinary DStv subscription?", a: "Use DStv Self Service, choose My Products and the correct package, then schedule Disconnect for your next payment date. If you have a fixed-term or internet bundle, request an account-specific quote before changing it." },
   { q: "Can I keep a particular sports event or series?", a: "Check the exact fixture or episode with its broadcaster for your country. A channel name is insufficient to confirm a live match, full series or future replay." },
@@ -135,7 +135,7 @@ export default async function DstvAlternativePage({ params }: Props) {
             <header className="longformHeader">
               <p className="longformEyebrow">DStv Alternative · 2026 Guide</p>
               <h1>DStv too expensive? Compare your South African options</h1>
-              <p className="longformLead">Start with the shows your household watched last week and the amount you can spend today. DStv Stream Starter is R99 for one month. A month of Mzansi Stream is R199. Mzansi’s R1,199 annual offer is paid in full, which works out to R99.92 a month.</p>
+              <p className="longformLead">Start with the shows your household watched last week and the amount you can spend today. DStv Stream Starter is R99 for one month. A month of Mzansi Stream is USD 15. Mzansi’s USD 65 annual offer is paid in full, which works out to USD 5.42 a month.</p>
               <p className="trustStrip">South Africa · Prices checked 26 November 2026 · All amounts in rand</p>
               <div className="ctaRow">
                 <a href="#calculator" className="btnSecondary">Compare my costs</a>
@@ -166,7 +166,7 @@ export default async function DstvAlternativePage({ params }: Props) {
             </section>
             <section className="longformSection" id="pricing">
               <h2>What you pay Mzansi today</h2>
-              <ul className="longformList"><li>One month — R199</li><li>Three months — R449</li><li>Six months — R699</li><li>Twelve months — R1,199</li></ul>
+              <ul className="longformList"><li>One month — USD 15</li><li>Day pass — USD 5</li><li>Twelve months — USD 65</li></ul>
               <p>Each term is prepaid. A full year of DStv Stream Starter would cost R1,188 at its current monthly price. That is R11 less than the Mzansi annual subscription. Programme availability and device compatibility matter as much as the difference.</p>
             </section>
             <section className="longformSection" id="trial">

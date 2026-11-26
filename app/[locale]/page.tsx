@@ -244,7 +244,7 @@ export default async function LocaleHome({ params }: Props) {
         closes: "23:00",
       },
     },
-    priceRange: `${plans[0].price}-${plans[plans.length - 1].price} ZAR`,
+    priceRange: `${plans[0].price}-${plans[plans.length - 1].price} USD`,
     currenciesAccepted: SITE.currencyCode,
     paymentAccepted:
       "EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin",

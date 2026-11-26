@@ -2,7 +2,7 @@
 // Server component. Drop-in pricing block for longform SEO surfaces
 // (pillars, blog posts, competitor and city pages). Keeps the user one
 // tap away from a WhatsApp purchase without scrolling back to the home
-// page. Renders the four canonical plans, anchors the "best value"
+// page. Renders the three canonical plans, anchors the "best value"
 // option, and includes risk-reversal copy + payment methods.
 
 import { dict } from "../shared/dict";
@@ -56,7 +56,7 @@ export function InlinePricingBlock({
         }}
       >
         {plans.map((p) => {
-          const perMonth = (p.price / p.months).toLocaleString(locale, { maximumFractionDigits: 2 });
+          const perMonth = (p.price / Math.max(1, p.months)).toLocaleString(locale, { maximumFractionDigits: 2 });
           const isBest = p.highlight === true;
           return (
             <div

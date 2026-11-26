@@ -33,7 +33,7 @@ function oceaniaHomeMeta(market: OceaniaMarket): HomeMeta {
 export const HOME_META: Record<Locale, HomeMeta> = {
   "en-za": {
     title: "DStv Alternative in South Africa | Pricing",
-    description: "Compare DStv and Mzansi Stream in South Africa. Mzansi costs R199 for one month or R1,199 upfront for a year. Try it for 24 hours without a card.",
+    description: "Compare DStv and Mzansi Stream in South Africa. Mzansi costs USD 15 for one month or USD 65 upfront for a year. Try it for 24 hours without a card.",
   },
   "en-gb": {
     title: "South African TV in the UK",
@@ -55,15 +55,15 @@ export const HOME_META: Record<Locale, HomeMeta> = {
   },
   af: {
     title: "IPTV in Suid-Afrika | Pryse en gratis proef",
-    description: "Een maand kos R199, of betaal R1 199 vooruit vir twaalf maande. Probeer Mzansi Stream vir 24 uur op jou eie toestel, sonder ’n bankkaart.",
+    description: "Een maand kos USD 15, of betaal USD 65 vooruit vir twaalf maande. Probeer Mzansi Stream vir 24 uur op jou eie toestel, sonder ’n bankkaart.",
   },
   zu: {
     title: "I-IPTV e-South Africa",
-    description: "I-IPTV e-South Africa. R199 / 1 inyanga. Ukulinga kwamahhala kwama-24h ku-WhatsApp.",
+    description: "I-IPTV e-South Africa. USD 15 / 1 inyanga. Ukulinga kwamahhala kwama-24h ku-WhatsApp.",
   },
   xh: {
     title: "I-IPTV eMzantsi Afrika",
-    description: "I-IPTV eMzantsi Afrika. R199 / 1 inyanga. Uvavanyo lwasimahla lweeyure ezingama-24 ku-WhatsApp.",
+    description: "I-IPTV eMzantsi Afrika. USD 15 / 1 inyanga. Uvavanyo lwasimahla lweeyure ezingama-24 ku-WhatsApp.",
   },
   "pt-mz": {
     title: "IPTV em Moçambique | Guias e teste grátis",

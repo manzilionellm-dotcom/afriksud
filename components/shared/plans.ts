@@ -1,18 +1,17 @@
 // components/shared/plans.ts
-// Mzansi Stream pricing in ZAR.
+// Mzansi Stream pricing in USD.
 // Totals below are paid upfront for the chosen term.
 
 import type { Plan } from "./types";
 
 export const plans: Plan[] = [
-  { key: "p1",  price: 199,  months: 1,  currency: "ZAR", priceValidUntil: "2027-12-31" },
-  { key: "p3",  price: 449,  months: 3,  currency: "ZAR", priceValidUntil: "2027-12-31", highlight: true },
-  { key: "p6",  price: 699,  months: 6,  currency: "ZAR", priceValidUntil: "2027-12-31" },
-  { key: "p12", price: 1199, months: 12, currency: "ZAR", priceValidUntil: "2027-12-31" },
+  { key: "pday", price: 5, months: 0, currency: "USD", priceValidUntil: "2027-12-31" },
+  { key: "p1", price: 15, months: 1, currency: "USD", priceValidUntil: "2027-12-31" },
+  { key: "p12", price: 65, months: 12, currency: "USD", priceValidUntil: "2027-12-31" },
 ];
 
 export function monthlyEquivalent(plan: Plan): number {
-  return Number((plan.price / plan.months).toFixed(2));
+  return Number((plan.price / Math.max(1, plan.months)).toFixed(2));
 }
 
 // Channel categories preview (5 tabs)

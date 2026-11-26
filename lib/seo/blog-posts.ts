@@ -84,7 +84,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "How to set it up",
         body: [
-          "Message us on WhatsApp, pick a plan (1 / 3 / 6 / 12 months), pay via EFT, SnapScan, Ozow or card, and we send the M3U link plus a one-page setup guide for your specific device.",
+          "Message us on WhatsApp, pick a plan (day pass / one month / one year), pay via EFT, SnapScan, Ozow or card, and we send the M3U link plus a one-page setup guide for your specific device.",
         ],
       },
     ],
@@ -104,13 +104,13 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Compare month-to-month prices",
         body: [
-          "DStv Stream Starter costs R99 for a month and Premium Stream R799. Mzansi’s one-month plan costs R199. Check the specific package and programme you need."
+          "DStv Stream Starter costs R99 for a month and Premium Stream R799. Mzansi’s one-month plan costs USD 15. Check the specific package and programme you need."
         ]
       },
       {
         h2: "Calculate prepaid cash flow",
         body: [
-          "Mzansi’s R1,199 annual payment works out to R99.92 per month. Twelve R99 payments for DStv Stream Starter would be R1,188 if the rate holds. Extra costs can include data, devices and some satellite services."
+          "Mzansi’s USD 65 annual payment works out to USD 5.42 per month. Twelve R99 payments for DStv Stream Starter would be R1,188 if the rate holds. Extra costs can include data, devices and some satellite services."
         ]
       },
       {
@@ -171,7 +171,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
   {
     slug: "watch-springboks-live-online",
     title: "Watch the Springboks live online in 2026",
-    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. R199 for one month. No DStv required.",
+    metaDescription: "Springbok Tests and URC fixtures via SuperSport Rugby-style folders on Mzansi Stream in 4K — fixtures to confirm on WhatsApp. USD 15 for one month. No DStv required.",
     datePublished: "2026-01-26",
     lead: "Springbok Tests, Rugby Championship, URC, Currie Cup and Six Nations matches are broadcast on SuperSport in SA. Here's how to check what plays on Mzansi Stream in 4K without DStv.",
     sections: [
@@ -351,13 +351,13 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "How much is due upfront?",
         body: [
-          "Mzansi costs R199 for one month or R1,199 upfront for twelve. On a monthly DStv Premium subscription, check your account to see whether equipment, access fees or other products are included."
+          "Mzansi costs USD 15 for one month or USD 65 upfront for twelve. On a monthly DStv Premium subscription, check your account to see whether equipment, access fees or other products are included."
         ]
       },
       {
         h2: "What if the rates stay fixed for a year?",
         body: [
-          "Twelve R799 Premium Stream payments total R9,588. Twelve standard R979 Premium satellite payments total R11,748, before any applicable fees. A R1,199 Mzansi plan is a distinct service with its own catalogue."
+          "Twelve R799 Premium Stream payments total R9,588. Twelve standard R979 Premium satellite payments total R11,748, before any applicable fees. A USD 65 Mzansi plan is a distinct service with its own catalogue."
         ]
       },
       {
@@ -490,7 +490,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "6. Is the pricing locked?",
         body: [
-          "Avoid month-to-month pricing that escalates after the first cycle. Pay once per term (1 / 3 / 6 / 12 months) and the price for that term doesn't change.",
+          "Avoid month-to-month pricing that escalates after the first cycle. Pay once per term (day pass / one month / one year) and the price for that term doesn't change.",
         ],
       },
       {
@@ -530,7 +530,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
         h2: "TiviMate — the gold standard for Firestick and Android TV",
         body: [
           "TiviMate is the most polished IPTV player on Firestick, Android TV and Nvidia Shield. The UI is built around remote-control navigation — every action is two clicks away. EPG handling is best-in-class: 7-day guide, instant catch-up TV, picture-in-picture preview.",
-          "Premium tier is R199 once-off (lifetime). Worth it for multi-playlist support, recording and unlimited playlists. Free tier supports one playlist, which is enough for most households.",
+          "Premium tier is USD 15 once-off (lifetime). Worth it for multi-playlist support, recording and unlimited playlists. Free tier supports one playlist, which is enough for most households.",
           "Best for: Firestick 4K, Firestick 4K Max, Nvidia Shield, Chromecast with Google TV. Not available on iOS or Samsung Tizen.",
         ],
       },
@@ -560,7 +560,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "Which one should you install?",
         body: [
-          "Firestick 4K Max + 4K SuperSport household → TiviMate Premium (R199 once).",
+          "Firestick 4K Max + 4K SuperSport household → TiviMate Premium (USD 15 once).",
           "iPhone / iPad → IPTV Smarters Pro (free).",
           "Samsung Smart TV / LG Smart TV → IPTV Smarters Pro (free, native Tizen / webOS app).",
           "Mzansi Stream sends an Xtream Codes login that works directly in all three apps. We send the device-specific setup guide on WhatsApp after sign-up.",
@@ -744,7 +744,7 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
     title: "Cheap IPTV in South Africa in 2026 — what's realistic, what's a scam",
     metaDescription: "Compare prepaid IPTV prices in South Africa, check the amount due upfront and use a trial before buying a longer term.",
     datePublished: "2026-03-16",
-    lead: "For a budget close to R100 per month, compare how much is due today. Mzansi’s annual plan costs R1,199 in one payment. The minimum one-month purchase is R199.",
+    lead: "For a budget close to R100 per month, compare how much is due today. Mzansi’s annual plan costs USD 65 in one payment. The minimum one-month purchase is USD 15.",
     sections: [
       {
         h2: "What 'cheap IPTV' really costs to run",
@@ -756,8 +756,8 @@ const EXISTING_BLOG_POSTS: BlogPost[] = [
       {
         h2: "The first payment and the yearly total",
         body: [
-          "Mzansi offers one month for R199 and a year for R1,199 upfront. Internet access and a compatible device are needed for both.",
-          "Dividing R1,199 by twelve gives R99.92 per month to the nearest cent. The renewal price is the price shown when you place the next order.",
+          "Mzansi offers one month for USD 15 and a year for USD 65 upfront. Internet access and a compatible device are needed for both.",
+          "Dividing USD 65 by twelve gives USD 5.42 per month to the nearest cent. The renewal price is the price shown when you place the next order.",
         ],
       },
       {

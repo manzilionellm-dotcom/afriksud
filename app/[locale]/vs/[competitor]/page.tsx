@@ -86,7 +86,7 @@ export default async function VersusPage({ params }: Props) {
   // FAQPage schema. Owner can replace with bespoke entries later.
   const faqEntries = [
     { q: `What should I check about ${data.name}?`, a: data.hook },
-    { q: "What does Mzansi cost upfront?", a: "One month is R199. Twelve months are R1,199 in one payment, equivalent to R99.92 per month. Include any internet, equipment and access costs when comparing services." },
+    { q: "What does Mzansi cost upfront?", a: "One month is USD 15. Twelve months are USD 65 in one payment, equivalent to USD 5.42 per month. Include any internet, equipment and access costs when comparing services." },
     { q: "Can I test Mzansi before paying?", a: "Request a 24-hour trial without a card, and share your device and country. Check the picture, guide, remote and audio on your own connection." },
   ];
 
@@ -124,7 +124,7 @@ export default async function VersusPage({ params }: Props) {
               <h1>Mzansi Stream vs {data.name}</h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                One month R199 · Twelve months R1,199 upfront · Free 24-hour trial
+                One month USD 15 · Twelve months USD 65 upfront · Free 24-hour trial
               </p>
               <div className="ctaRow">
                 <a
@@ -148,7 +148,7 @@ export default async function VersusPage({ params }: Props) {
 
             <DirectAnswerBlock
               question={`What is the current position for ${data.name}?`}
-              answer={`${data.priceMonthly}. A single month of Mzansi Stream is R199. Check the programme and viewing country before deciding.`}
+              answer={`${data.priceMonthly}. A single month of Mzansi Stream is USD 15. Check the programme and viewing country before deciding.`}
             />
 
             <section className="longformSection" id="table">
@@ -204,7 +204,7 @@ export default async function VersusPage({ params }: Props) {
               locale={locale as Locale}
               refTag={`Vs-${competitor}`}
               heading="Mzansi Stream prepaid prices"
-              sub="One month costs R199. A full year costs R1,199 upfront. Test the service on your home connection before choosing."
+              sub="One month costs USD 15. A full year costs USD 65 upfront. Test the service on your home connection before choosing."
             />
 
             <section className="longformSection" id="faq">

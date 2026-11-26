@@ -13,7 +13,7 @@ import type { Plan, PlanKey } from "../../shared/types";
 export function PriceCheckoutMount() {
   const [open, setOpen] = useState(false);
   const [planKey, setPlanKey] = useState<PlanKey>(
-    plans.find((p) => p.highlight)?.key ?? "p3"
+    plans.find((p) => p.highlight)?.key ?? "p1"
   );
   const [source, setSource] = useState<string | undefined>(undefined);
 

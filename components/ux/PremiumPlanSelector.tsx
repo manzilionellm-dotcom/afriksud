@@ -16,7 +16,7 @@ export function PremiumPlanSelector() {
   const { lang } = useLang();
   const t = dict[lang];
   const recommendedKey: PlanKey =
-    plans.find((p) => p.highlight)?.key ?? "p3";
+    plans.find((p) => p.highlight)?.key ?? "p1";
   const [planKey, setPlanKey] = useState<PlanKey>(recommendedKey);
 
   const currentPlan = plans.find((plan) => plan.key === planKey) ?? plans[0];

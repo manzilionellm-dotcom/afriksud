@@ -1,7 +1,7 @@
 "use client";
 // components/client/DstvSavingsCalculator.tsx
 // Interactive savings calculator vs DStv plans. Prices in ZAR.
-// Mzansi Stream 12-month equivalent at R1,199 = ~R99.92/month.
+// Mzansi Stream 12-month equivalent at USD 65 = ~USD 5.42/month.
 
 import { useState } from "react";
 import { plans } from "../shared/plans";
@@ -18,7 +18,6 @@ export function DstvSavingsCalculator() {
   const selected = DSTV_PLANS.find((plan) => plan.label === label)!;
   const yearlyDstv = selected.monthly * 12;
   const yearlyMzansi = annualPlan.price;
-  const difference = yearlyDstv - yearlyMzansi;
 
   return (
     <div className="savingsCalc">
@@ -45,17 +44,11 @@ export function DstvSavingsCalculator() {
         </div>
         <div className="savingsCalcRow">
           <span>Mzansi Stream 12 months</span>
-          <strong>R{yearlyMzansi.toLocaleString("en-ZA")}</strong>
-        </div>
-        <div className="savingsCalcRow savingsCalcTotal">
-          <span>{difference >= 0 ? "Mzansi costs less by" : "DStv costs less by"}</span>
-          <strong className={difference > 0 ? "savingsCalcWin" : ""}>
-            R{Math.abs(difference).toLocaleString("en-ZA")} / year
-          </strong>
+          <strong>USD {yearlyMzansi.toLocaleString("en-ZA")}</strong>
         </div>
         <p className="savingsCalcHint">
-          Mzansi is paid upfront at an effective R{(yearlyMzansi / 12).toFixed(2)}/month.
-          DStv totals assume twelve payments at the selected price.
+          Mzansi is paid upfront at an effective USD {(yearlyMzansi / 12).toFixed(2)}/month.
+          The two totals use different currencies. DStv totals assume twelve payments at the selected price.
           Equipment, data, promotional contracts and access fees are excluded.
         </p>
       </div>

@@ -26,7 +26,7 @@ function PlanCard({
   const { lang } = useLang();
   const t = dict[lang];
   const pricePerMonth = monthlyEquivalent(plan);
-  const saving = Math.round((1 - pricePerMonth / 199) * 100);
+  const saving = plan.months > 1 ? Math.round((1 - pricePerMonth / 15) * 100) : 0;
   const highlight = plan.highlight;
 
   return (
@@ -63,9 +63,9 @@ function PlanCard({
           className="font-bold tracking-tight text-white"
           style={{ fontSize: "clamp(2.75rem, 8vw, 3.5rem)", lineHeight: 1 }}
         >
-          {pricePerMonth}
+          {plan.price}
         </span>
-        <span className="text-sm text-white/60">{t.offers.perMonth}</span>
+        <span className="text-sm text-white/60">{t.checkout.pillTotal}</span>
       </div>
       <div className="mt-1 text-xs text-white/50">
         {t.offers.billedOnce} {SITE.currencyLabel}

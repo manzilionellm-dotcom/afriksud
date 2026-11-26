@@ -92,7 +92,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "How payment works after the chat",
         body: [
           "On Mzansi Stream you can test for 24 hours with no card. When you are ready, the same WhatsApp thread sends local rails already listed on the site: EFT, SnapScan, Zapper, Ozow, Capitec Pay, Yoco, Visa, Mastercard, PayPal. Bitcoin is listed as an option; it is not required.",
-          "Plans are billed once per term — R199 for 1 month, R449 for 3 months, R699 for 6 months, R1,199 for 12 months (R99.92/month effective on the year). The term ends unless you renew. Proof of payment in the same chat is enough; you should not need to mail anything.",
+          "Plans are billed once per term — USD 5 for a day pass, USD 15 for one month, USD 65 for one year (USD 5.42/month effective on the year). The term ends unless you renew. Proof of payment in the same chat is enough; you should not need to mail anything.",
         ],
       },
       {
@@ -125,7 +125,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Pay on a local rail in the same thread",
-            text: "Pick 1 / 3 / 6 / 12 months. Send proof of EFT, SnapScan, Ozow or card in the same WhatsApp. Do not send OTPs or card photos.",
+            text: "Pick day pass / one month / one year. Send proof of EFT, SnapScan, Ozow or card in the same WhatsApp. Do not send OTPs or card photos.",
           },
           {
             title: "Confirm the paid credentials",
@@ -142,7 +142,7 @@ export const BLOG_GUIDES: BlogPost[] = [
         h2: "Renewals, extra TVs and when to message again",
         body: [
           "Before the term ends, send “renew 12-month” in the same chat. For a second TV, ask for an extra connection and name the new device. If the EPG goes empty after a Firestick crash, ask for the XMLTV URL again rather than re-ordering a new subscription.",
-          "Compare the first payment on each service. Premium Stream costs R799 a month. Mzansi costs R199 for one month or R1,199 upfront for a year; check the exact programmes you want.",
+          "Compare the first payment on each service. Premium Stream costs R799 a month. Mzansi costs USD 15 for one month or USD 65 upfront for a year; check the exact programmes you want.",
         ],
       },
     ],
@@ -300,7 +300,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       },
       {
         q: "Is there a family plan price on the website?",
-        a: "Published plans are 1 / 3 / 6 / 12 months for the full channel pack. Extra connections are confirmed in the WhatsApp thread so the quote matches your screens.",
+        a: "Published plans are day pass / one month / one year for the full channel pack. Extra connections are confirmed in the WhatsApp thread so the quote matches your screens.",
       },
     ],
     relatedLinks: [
@@ -653,7 +653,7 @@ export const BLOG_GUIDES: BlogPost[] = [
       {
         h2: "Compare the amounts due",
         body: [
-          "DStv Starter Stream costs R99 for a month. Mzansi costs R199 for a month or R1,199 in one annual payment. Compare the full service and the initial debit before selecting a long term."
+          "DStv Starter Stream costs R99 for a month. Mzansi costs USD 15 for a month or USD 65 in one annual payment. Compare the full service and the initial debit before selecting a long term."
         ]
       }
     ],
@@ -854,7 +854,7 @@ export const BLOG_GUIDES: BlogPost[] = [
           },
           {
             title: "Pay if the session holds",
-            text: "Use the same chat. 12-month at R1,199 is the published year price for the full pack, not a cricket add-on.",
+            text: "Use the same chat. 12-month at USD 65 is the published year price for the full pack, not a cricket add-on.",
           },
         ],
       },

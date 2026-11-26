@@ -202,7 +202,7 @@ export default async function CommunityPage({ params }: Props) {
             <ol className="longformList">
               <li>Message us on WhatsApp with your device + city.</li>
               <li>
-                Pick a plan at R199 for one month or R1,199 upfront for twelve months and
+                Pick a plan at USD 15 for one month or USD 65 upfront for twelve months and
                 pay via EFT, SnapScan, Ozow, Capitec Pay, Visa, Mastercard
                 or PayPal.
               </li>

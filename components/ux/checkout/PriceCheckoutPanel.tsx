@@ -18,7 +18,7 @@ import { Check, ChevronRight, ShieldCheck, X, MessageCircle } from "lucide-react
 import { useLang } from "../../client/LanguageProvider";
 import { useWaPrefillOverride } from "../../client/WaPrefillContext";
 import { dict } from "../../shared/dict";
-import { plans, monthlyEquivalent } from "../../shared/plans";
+import { plans } from "../../shared/plans";
 import { SITE } from "../../shared/site";
 import { isMobileUA } from "../../shared/utils";
 import { track } from "../../../lib/analytics/track";
@@ -275,7 +275,7 @@ export function PriceCheckoutPanel({
       typeof window !== "undefined"
         ? window.location.pathname + window.location.search
         : "/";
-    const planLabel = `${t.planNames[currentPlan.key]} (${currentPlan.months}m)`;
+    const planLabel = t.planNames[currentPlan.key];
     const message = buildWhatsAppMessage({
       intro: waOverride?.message ?? t.checkout.waIntro,
       planLabel,
@@ -414,7 +414,7 @@ export function PriceCheckoutPanel({
                 <legend className="sr-only">{t.checkout.step1Title}</legend>
                 {plans.map((p) => {
                   const selected = p.key === planKey;
-                  const perMonth = monthlyEquivalent(p);
+                  
                   return (
                     <label
                       key={p.key}
@@ -444,10 +444,10 @@ export function PriceCheckoutPanel({
                           {SITE.currencyLabel}
                         </span>
                         <span className="text-2xl font-extrabold text-white leading-none">
-                          {perMonth}
+                          {p.price}
                         </span>
                         <span className="text-[11px] text-white/60">
-                          {t.offers.perMonth}
+                          {t.checkout.pillTotal}
                         </span>
                       </div>
                       <span

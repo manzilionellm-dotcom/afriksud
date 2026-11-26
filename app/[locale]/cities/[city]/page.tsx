@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const primaryTeam =
     data.teams[0]?.clubs[0]?.replace(/\s*\(.*?\)\s*/g, "").trim();
   const sportLine = primaryTeam ? ` ${primaryTeam} matches to confirm on WhatsApp.` : "";
-  const description = `IPTV ${data.name} (${data.region}) — SuperSport, kykNET and SABC folders in 4K UHD. Works on ${data.isps.slice(0, 3).join(", ")}.${sportLine} R199 for one month, activated on WhatsApp.`;
+  const description = `IPTV ${data.name} (${data.region}) — SuperSport, kykNET and SABC folders in 4K UHD. Works on ${data.isps.slice(0, 3).join(", ")}.${sportLine} USD 15 for one month, activated on WhatsApp.`;
   const title = `IPTV ${data.name} 2026 — DStv Alternative, SuperSport 4K`;
 
   return {
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: localeUrl(locale as Locale, `/cities/${city}`),
       locale: LOCALE_META[locale as Locale].ogLocale,
       title: `IPTV ${data.name} 2026 — DStv Alternative in 4K`,
-      description: `IPTV in ${data.name} from R199 for one month. SuperSport, kykNET, SABC folders in 4K — works on ${data.isps.slice(0, 3).join(", ")}.`,
+      description: `IPTV in ${data.name} from USD 15 for one month. SuperSport, kykNET, SABC folders in 4K — works on ${data.isps.slice(0, 3).join(", ")}.`,
       images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630 }],
     },
     robots: robotsForProgrammatic(locale as Locale),
@@ -92,7 +92,7 @@ export default async function CityPage({ params }: Props) {
     },
     {
       q: `How much can I save vs DStv Premium in ${data.name}?`,
-      a: `As checked on 26 November 2026, DStv Stream Starter costs R99 a month and Premium costs R799 on Stream or R979 on a monthly decoder package. Mzansi Stream costs R199 for one month or R1,199 prepaid for twelve. The right comparison depends on the programmes your household watches.`,
+      a: `As checked on 26 November 2026, DStv Stream Starter costs R99 a month and Premium costs R799 on Stream or R979 on a monthly decoder package. Mzansi Stream costs USD 15 for one month or USD 65 prepaid for twelve. The right comparison depends on the programmes your household watches.`,
     },
     {
       q: `How fast is activation in ${data.name}?`,
@@ -116,7 +116,7 @@ export default async function CityPage({ params }: Props) {
   const sportSummary = sportFocus.length
     ? ` ${sportFocus.slice(0, 3).join(", ")} matches to confirm on WhatsApp.`
     : "";
-  const directAnswer = `Mzansi Stream is a no-contract DStv alternative for households in ${data.name} (${data.region}, ${data.population}) over ${data.isps.slice(0, 3).join(", ")} and other major fibre/5G networks. SuperSport-style, kykNET, SABC, Mzansi Magic and Premier League folders in 4K UHD where the source supports it — line-up to confirm on WhatsApp — at R199 for one month or R1,199 prepaid for twelve, with a 24-hour free trial, no credit card required.${sportSummary}`;
+  const directAnswer = `Mzansi Stream is a no-contract DStv alternative for households in ${data.name} (${data.region}, ${data.population}) over ${data.isps.slice(0, 3).join(", ")} and other major fibre/5G networks. SuperSport-style, kykNET, SABC, Mzansi Magic and Premier League folders in 4K UHD where the source supports it — line-up to confirm on WhatsApp — at USD 15 for one month or USD 65 prepaid for twelve, with a 24-hour free trial, no credit card required.${sportSummary}`;
 
   const localBusiness = {
     "@context": "https://schema.org",
@@ -141,8 +141,8 @@ export default async function CityPage({ params }: Props) {
     },
     url: canonical,
     image: `${SITE_URL}/og-image.jpg`,
-    priceRange: "R199-R1199",
-    currenciesAccepted: "ZAR",
+    priceRange: "USD 15-R1199",
+    currenciesAccepted: "USD",
     paymentAccepted: "EFT, Ozow, SnapScan, Zapper, Yoco, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin",
     telephone: `+${SITE.whatsappPhone}`,
     openingHoursSpecification: {
@@ -239,7 +239,7 @@ export default async function CityPage({ params }: Props) {
               </h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                Test 4K on {data.isps.slice(0, 3).join(", ")} · R199 for one month · 24h free trial, no card
+                Test 4K on {data.isps.slice(0, 3).join(", ")} · USD 15 for one month · 24h free trial, no card
               </p>
               <div className="ctaRow">
                 <a
@@ -267,7 +267,7 @@ export default async function CityPage({ params }: Props) {
               keyFacts={[
                 `Works on ${data.isps.join(", ")} like any home internet — test it on the 24-hour trial.`,
                 `Coverage spans ${data.suburbs.slice(0, 4).join(", ")} and every other ${data.region} suburb.`,
-                `R199 for one month or R1,199 prepaid for twelve months. No contract, no decoder, no installer.`,
+                `USD 15 for one month or USD 65 prepaid for twelve months. No contract, no decoder, no installer.`,
               ]}
             />
 
@@ -341,7 +341,7 @@ export default async function CityPage({ params }: Props) {
             <InlinePricingBlock
               locale={locale as Locale}
               refTag={`City-${city}`}
-              heading={`Pricing for ${data.name} — prepaid plans in ZAR`}
+              heading={`Pricing for ${data.name} — prepaid plans in USD`}
               sub={`Pick a plan, message us on WhatsApp, and we activate it there — anywhere in ${data.name}. 24-hour free trial available before you pay.`}
             />
 

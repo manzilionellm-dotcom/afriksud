@@ -162,10 +162,10 @@ export default async function SaAbroadCountryPage({ params }: Props) {
           <DiasporaSoftSellCta variant="mid" slug={`sa-abroad-${country}`} place={place} />
           <section className="longformSection" id="pricing">
             <h2>What Mzansi Stream costs</h2>
-            <p>The published prices are in South African rand. Each amount pays for the whole period shown.</p>
+            <p>The published prices are in US dollars. Each amount pays for the whole period shown.</p>
             <ul className="longformList">
               {plans.map((p) => (
-                <li key={p.key}>{p.months} {p.months === 1 ? "month" : "months"} · R{p.price.toLocaleString("en-GB")} paid upfront</li>
+                <li key={p.key}>{p.months === 0 ? "Day pass" : p.months === 1 ? "1 month" : "1 year"} · USD {p.price.toLocaleString("en-GB")} paid upfront</li>
               ))}
             </ul>
             <p>If your account is in {data.localCurrency}, ask for the checkout amount and currency before paying. Your bank can confirm any conversion charge.</p>

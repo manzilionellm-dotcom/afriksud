@@ -63,7 +63,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV for Vumatel, Openserve & Frogfoot 2026 — 4K Checks",
     metaDescription:
-      "IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre in South Africa. 4K SuperSport, NAPAfrica-peered CDN. One month R199. Stability depends on your line.",
+      "IPTV for Vumatel, Openserve, Frogfoot, Octotel and MetroFibre in South Africa. 4K SuperSport, NAPAfrica-peered CDN. One month USD 15. Stability depends on your line.",
     lead:
       "If you're on Vumatel, Openserve, Frogfoot, Octotel, MetroFibre, MTN Fibre, Vodacom Fibre or Rain 5G, your fibre line usually has the bandwidth for 4K IPTV — but peering, home Wi-Fi and the router decide what you actually see. This guide explains why routing matters, what to check on your router if 4K streams drop to 1080p, and how to test Mzansi Stream on your own line during the 24-hour trial.",
     trustLine:
@@ -256,7 +256,7 @@ export const PILLARS: Pillar[] = [
         id: "no-recurring",
         h2: "No recurring billing trap",
         paragraphs: [
-          "Mzansi Stream does not enrol your card or bank in any recurring debit order. Every plan is paid once for the period you selected. When the period ends, your subscription expires unless you actively renew via WhatsApp — no surprise R1,199 charge at midnight on month 13.",
+          "Mzansi Stream does not enrol your card or bank in any recurring debit order. Every plan is paid once for the period you selected. When the period ends, your subscription expires unless you actively renew via WhatsApp — no surprise USD 65 charge at midnight on month 13.",
           "Your Mzansi term is prepaid. Check the end date on the confirmation and decide whether you want to renew.",
         ],
       },
@@ -366,7 +366,7 @@ export const PILLARS: Pillar[] = [
         id: "instead",
         h2: "When a cheaper package could be enough",
         paragraphs: [
-          "In South Africa, DStv Stream Starter is R99 per month. Mzansi costs R199 for one month or R1,199 upfront for twelve months. List the programmes you want to keep before comparing the first payment and the full term."
+          "In South Africa, DStv Stream Starter is R99 per month. Mzansi costs USD 15 for one month or USD 65 upfront for twelve months. List the programmes you want to keep before comparing the first payment and the full term."
         ]
       },
       {
@@ -566,7 +566,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "Best IPTV South Africa 2026 — Buyer's Guide, Live TV in 4K",
     metaDescription:
-      "The honest 2026 buyer's guide to the best IPTV in South Africa. Compare price, channels, sport, 4K, support and what to check before you pay. R199 for one month with a free 24h trial.",
+      "The honest 2026 buyer's guide to the best IPTV in South Africa. Compare price, channels, sport, 4K, support and what to check before you pay. USD 15 for one month with a free 24h trial.",
     lead:
       "Choosing the best IPTV in South Africa in 2026 means weighing price, channel lineup, sport coverage, 4K stability on Vumatel and Openserve, support quality and the simple question — can you actually cancel without a fight? This guide ranks what to look for, what to ignore and why Mzansi Stream tops the practical short-list for SA households cutting the DStv cord.",
     trustLine:
@@ -606,7 +606,7 @@ export const PILLARS: Pillar[] = [
           "Mzansi Stream is a no-contract option for households who want one subscription with SA, SuperSport-style and international folders — line-up to confirm on WhatsApp and to test on the 24-hour trial.",
         ],
         bullets: [
-          "Mzansi Stream offers a R199 one-month prepaid plan and a free 24-hour trial without a card.",
+          "Mzansi Stream offers a USD 15 one-month prepaid plan and a free 24-hour trial without a card.",
           "Reseller marketplaces (Facebook groups, Gumtree) — cheap (R50-R80/mo) but typically 720p, frequent outages and no recourse when the link dies.",
           "DStv Stream starts at R99 per month for Starter. Premium Stream costs R799 a month. Standard Premium satellite costs R979 per month.",
           "Showmax closed as a standalone service in April 2026. Selected Showmax titles are available on DStv Stream.",
@@ -618,7 +618,7 @@ export const PILLARS: Pillar[] = [
         h2: "Price vs. quality — the 2026 IPTV pricing reality",
         paragraphs: [
           "The first payment and the price per month can be very different. Compare equal periods, and check whether equipment or data will add to your total.",
-          "Mzansi costs R1,199 upfront for twelve months or R449 upfront for three. Those totals equal R99.92 and R149.67 per month respectively. A single month costs R199.",
+          "Mzansi costs USD 65 upfront for twelve months or USD 5 for a day pass. A single month costs USD 15.",
         ],
       },
       {
@@ -685,7 +685,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does a good IPTV cost in South Africa?",
-        a: "Mzansi charges R199 for one month or R1,199 in one prepaid annual payment. Compare additional equipment and data costs yourself.",
+        a: "Mzansi charges USD 15 for one month or USD 65 in one prepaid annual payment. Compare additional equipment and data costs yourself.",
       },
       {
         q: "Is IPTV legal in South Africa?",
@@ -752,7 +752,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV Firestick South Africa 2026 — TiviMate Setup in 10 Min",
     metaDescription:
-      "Step-by-step IPTV Firestick setup for South Africa in 2026 — TiviMate Premium, M3U link, EPG, 4K SuperSport. Works on Vumatel, Openserve, Frogfoot. One month R199.",
+      "Step-by-step IPTV Firestick setup for South Africa in 2026 — TiviMate Premium, M3U link, EPG, 4K SuperSport. Works on Vumatel, Openserve, Frogfoot. One month USD 15.",
     lead:
       "The Amazon Firestick 4K is the most popular IPTV device in South Africa in 2026 — cheap, plug-and-play, and TiviMate Premium gives the slickest IPTV experience on any platform. This guide walks through the complete Mzansi Stream install on Firestick using TiviMate or IPTV Smarters Pro, with troubleshooting for the common SA-specific issues (Vumatel DNS, Openserve buffering, EPG load order).",
     trustLine:
@@ -889,7 +889,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does an IPTV subscription for Firestick cost in South Africa?",
-        a: "One month costs R199. Three months cost R449 upfront and a year costs R1,199 upfront. Confirm the current catalogue on the device during the free trial.",
+        a: "One month costs USD 15. The day pass costs USD 5 and a year costs USD 65 upfront. Confirm the current catalogue on the device during the free trial.",
       },
     ],
     related: [
@@ -923,7 +923,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV Samsung Smart TV South Africa 2026 — Tizen Install",
     metaDescription:
-      "Install IPTV on a Samsung Smart TV (Tizen) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport, kykNET. Works on every 2022+ Samsung. One month R199.",
+      "Install IPTV on a Samsung Smart TV (Tizen) in South Africa — IPTV Smarters Pro, M3U link, 4K SuperSport, kykNET. Works on every 2022+ Samsung. One month USD 15.",
     lead:
       "Samsung Smart TVs running Tizen (2022 and later) install IPTV natively from the Samsung App Store — no Firestick required, no sideload, no developer mode. This guide covers the complete Mzansi Stream install on Samsung Tizen using IPTV Smarters Pro or Smart IPTV, with troubleshooting for the Samsung-specific quirks (regional store, OneRemote pairing, the M3U cache reload).",
     trustLine:
@@ -1048,7 +1048,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does IPTV cost for a Samsung Smart TV in South Africa?",
-        a: "One month costs R199. A three-month term is R449 upfront and a twelve-month term is R1,199 upfront. Check that your TV and player are supported before paying.",
+        a: "One month costs USD 15. A day pass is USD 5 and a twelve-month term is USD 65 upfront. Check that your TV and player are supported before paying.",
       },
       {
         q: "Does IPTV on Samsung work with SuperSport in 4K?",
@@ -1154,7 +1154,7 @@ export const PILLARS: Pillar[] = [
       },
       {
         q: "How much does a Mzansi trial cost?",
-        a: "The advertised 24-hour trial is free and no card is needed. A one-month subscription is R199."
+        a: "The advertised 24-hour trial is free and no card is needed. A one-month subscription is USD 15."
       }
     ],
     related: [
@@ -1192,7 +1192,7 @@ export const PILLARS: Pillar[] = [
     h1: "Cheap IPTV in South Africa – what you pay upfront",
     metaTitle: "Cheap IPTV in South Africa – monthly and annual costs",
     metaDescription: "Compare Mzansi’s one-month and prepaid prices in rand with DStv Starter. Check the first payment, device compatibility and data cost before choosing.",
-    lead: "A month of Mzansi Stream costs R199. The annual price is R1,199 paid in one transaction, equivalent to R99.92 per month. If R100 is your total budget today, the annual Mzansi plan exceeds it. DStv Stream Starter is advertised at R99 for a month.",
+    lead: "A month of Mzansi Stream costs USD 15. The annual price is USD 65 paid in one transaction, equivalent to USD 5.42 per month. If R100 is your total budget today, the annual Mzansi plan exceeds it. DStv Stream Starter is advertised at R99 for a month.",
     trustLine: "South Africa · Checked 26 November 2026",
     cta: {
       primary: {
@@ -1210,10 +1210,9 @@ export const PILLARS: Pillar[] = [
         id: "pricing",
         h2: "Compare the payment due today",
         bullets: [
-          "One month costs R199 upfront.",
-          "Three months cost R449 upfront, equivalent to R149.67 per month.",
-          "Six months cost R699 upfront, equivalent to R116.50 per month.",
-          "Twelve months cost R1,199 upfront, equivalent to R99.92 per month."
+          "One month costs USD 15 upfront.",
+          "A day pass costs USD 5 upfront.",
+          "Twelve months cost USD 65 upfront, equivalent to USD 5.42 per month."
         ]
       },
       {
@@ -1233,8 +1232,8 @@ export const PILLARS: Pillar[] = [
     ],
     faq: [
       {
-        q: "Can I pay R99.92 for just one month of Mzansi?",
-        a: "One month is R199. R99.92 is the rounded monthly equivalent after paying R1,199 for a year."
+        q: "Can I pay USD 5.42 for just one month of Mzansi?",
+        a: "One month is USD 15. USD 5.42 is the rounded monthly equivalent after paying USD 65 for a year."
       },
       {
         q: "Can I test it before paying?",
@@ -1273,9 +1272,9 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "4K IPTV South Africa — Native UHD SuperSport & Premier League",
     metaDescription:
-      "4K UHD IPTV in South Africa. SuperSport, Premier League and kykNET folders to confirm on WhatsApp. One month R199. No promise of zero buffering.",
+      "4K UHD IPTV in South Africa. SuperSport, Premier League and kykNET folders to confirm on WhatsApp. One month USD 15. No promise of zero buffering.",
     lead:
-      "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a home connection that holds 25 Mbps. Mzansi offers a R199 one-month plan. The available picture quality depends on the source, device and connection — test it on your own line during the 24-hour trial.",
+      "Real 4K IPTV in South Africa means three things at the same time: a CDN bandwidth budget that can sustain 25 Mbps per stream, channels that broadcast in native UHD (not upscaled 1080p), and a home connection that holds 25 Mbps. Mzansi offers a USD 15 one-month plan. The available picture quality depends on the source, device and connection — test it on your own line during the 24-hour trial.",
     trustLine:
       "4K where the source supports it · No quality tier · Test on the 24h trial",
     cta: {
@@ -1355,7 +1354,7 @@ export const PILLARS: Pillar[] = [
     faq: [
       {
         q: "Is 4K available on every Mzansi Stream plan?",
-        a: "Every plan — including R99.92/month effective on the 12-month — has the same line-up, with 4K where the source supports it. There is no 4K surcharge.",
+        a: "Every plan — including USD 5.42/month effective on the 12-month — has the same line-up, with 4K where the source supports it. There is no 4K surcharge.",
       },
       {
         q: "What internet speed do I need for 4K IPTV?",
@@ -1536,7 +1535,7 @@ export const PILLARS: Pillar[] = [
     metaTitle:
       "IPTV for Movies & Series South Africa — VOD and Live Movies",
     metaDescription:
-      "IPTV for movies and series in South Africa — on-demand VOD plus live movie-channel folders. Catalogue to confirm on WhatsApp. 4K where the source supports it, no contract. One month R199.",
+      "IPTV for movies and series in South Africa — on-demand VOD plus live movie-channel folders. Catalogue to confirm on WhatsApp. 4K where the source supports it, no contract. One month USD 15.",
     lead:
       "If you watch more movies and series than live sport, ask about Mzansi Stream's VOD catalogue and live movie-channel folders before you pay. This page does not publish a title count or promise any studio's or streaming service's catalogue — browse what is actually there during the 24-hour trial, then decide.",
     trustLine:

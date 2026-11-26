@@ -143,7 +143,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
           },
           {
             title: "Pay only after the folders are real",
-            text: "Same WhatsApp thread. Card, PayPal or Wise. Plans are the published ZAR terms — 1 / 3 / 6 / 12 months — not a UK contract.",
+            text: "Same WhatsApp thread. Card, PayPal or Wise. Plans are the published USD terms — day pass / one month / one year — not a UK contract.",
           },
         ],
       },
@@ -657,7 +657,7 @@ export const BLOG_DIASPORA: BlogPost[] = [
           },
           {
             title: "Pay on a UK-reachable rail",
-            text: "Card, PayPal or Wise after the trial. Published ZAR plans — 1 / 3 / 6 / 12 months. No auto-renew DStv contract.",
+            text: "Card, PayPal or Wise after the trial. Published USD plans — day pass / one month / one year. No auto-renew DStv contract.",
           },
           {
             title: "Remove the dead seller login",

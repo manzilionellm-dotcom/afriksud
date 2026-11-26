@@ -169,7 +169,7 @@ export function PillarTemplate({
             answer={pillar.lead}
             keyFacts={
               pillar.trustLine
-                ? [pillar.trustLine, "One month R199 or twelve months R1,199 upfront. Free 24-hour trial without a card."]
+                ? [pillar.trustLine, "One month USD 15 or twelve months USD 65 upfront. Free 24-hour trial without a card."]
                 : undefined
             }
           />

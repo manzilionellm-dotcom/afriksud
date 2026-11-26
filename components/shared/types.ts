@@ -3,14 +3,14 @@
 
 import type { Locale } from "../../lib/locales";
 export type { Locale };
-export type PlanKey = "p1" | "p3" | "p6" | "p12";
+export type PlanKey = "p1" | "pday" | "p12";
 export type Msg = { from: "bot" | "user"; text: string };
 
 export type Plan = {
   key: PlanKey;
   price: number;
   months: number;
-  currency: "ZAR";
+  currency: "USD";
   highlight?: boolean;
   priceValidUntil: string;
 };

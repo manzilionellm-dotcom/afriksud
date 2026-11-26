@@ -10,8 +10,8 @@ export const SITE = {
     process.env.NEXT_PUBLIC_WHATSAPP_MZANSI ||
     process.env.NEXT_PUBLIC_WHATSAPP_DEFAULT ||
     WHATSAPP_DEFAULT,
-  currencyCode: "ZAR" as const,
-  currencyLabel: "R",
+  currencyCode: "USD" as const,
+  currencyLabel: "US$",
   countryCode: "ZA",
   defaultLocale: "en-za" as const,
 } as const;
