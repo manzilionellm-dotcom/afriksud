@@ -21,14 +21,14 @@ export const OCEANIA_PLANS = [
     id: "month",
     name: "One month",
     usd: 15,
-    description: "We’ll guide you through setup and help you save three favourites on your device.",
+    description: "One prepaid month. Confirm your device and programme before you pay.",
     action: "Choose one month",
   },
   {
     id: "year",
     name: "One year",
     usd: 65,
-    description: "12 months of access with priority support on WhatsApp.",
+    description: "One upfront payment for 12 months. Ask us to confirm the programmes you want.",
     action: "Choose one year",
   },
 ] as const;
