@@ -6,18 +6,18 @@ import fs from "node:fs";
 const c = JSON.parse(fs.readFileSync(new URL("../aio.config.json", import.meta.url), "utf8"));
 const L = c.defaultLang;
 const i = c.i18n[L];
-const money = (n) => (n === 0 ? "free (R0)" : `R${n}`);
+const money = (n) => `${c.currency} ${n}`;
 const lines = [];
 
 lines.push(`# ${c.siteName}`, "", `> ${i.description}`, "");
 lines.push("## Services", "");
 lines.push(`- IPTV subscriptions for South Africa and the SA diaspora. Order and support on WhatsApp: ${c.contact.whatsapp}`);
 lines.push(`- Website: ${c.siteUrl}/en-za (default language: ${L}; hreflang locales are listed below)`, "");
-lines.push("## Prices (ZAR)", "");
+lines.push(`## Prices (${c.currency})`, "");
 lines.push(`- ${c.pricingNote}`);
 for (const p of c.plans) {
   const term = p.months ? `${p.months} month plan total` : p.name[L];
-  lines.push(`- ${p.name[L]}: ${p.price === 0 ? "free (R0)" : money(p.price)}${p.months ? ` (${term})` : ""}`);
+  lines.push(`- ${p.name[L]}: ${money(p.price)}${p.months ? ` (${term})` : ""}`);
 }
 lines.push("", "## Technical details", "");
 const t = c.tech;

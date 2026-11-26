@@ -4,48 +4,32 @@
   "siteUrl": "https://iptvmzansi.com",
   "defaultLang": "en",
   "faqInLanguage": "en-ZA",
-  "currency": "ZAR",
+  "currency": "USD",
   "contact": {
     "whatsapp": "https://wa.me/447307410512",
     "whatsappNote": "Repo fallback in components/shared/site.ts when NEXT_PUBLIC_WHATSAPP_* is unset."
   },
-  "pricingNote": "Mzansi Stream subscriptions are prepaid in rand. One month costs R199, three months R449, six months R699 and twelve months R1,199 upfront (R99.92 per month equivalent).",
+  "pricingNote": "The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65.",
   "plans": [
     {
-      "id": "trial-24h",
-      "price": 0,
+      "id": "day-pass",
+      "price": 5,
       "months": 0,
       "name": {
-        "en": "24 hour free trial"
+        "en": "Day pass"
       }
     },
     {
       "id": "1-month",
-      "price": 199,
+      "price": 15,
       "months": 1,
       "name": {
         "en": "1 month"
       }
     },
     {
-      "id": "3-months",
-      "price": 449,
-      "months": 3,
-      "name": {
-        "en": "3 months"
-      }
-    },
-    {
-      "id": "6-months",
-      "price": 699,
-      "months": 6,
-      "name": {
-        "en": "6 months"
-      }
-    },
-    {
       "id": "12-months",
-      "price": 1199,
+      "price": 65,
       "months": 12,
       "name": {
         "en": "12 months"
@@ -73,11 +57,11 @@
     "en": {
       "description": "Mzansi Stream offers prepaid internet TV for South African viewers. Check the programmes available in your country and the picture on your device during the free 24-hour trial. You can request the trial and contact support on WhatsApp.",
       "productDescription": "Mzansi Stream IPTV subscription, term: {name}. Live channels and on-demand titles as described on the site, ordered via WhatsApp.",
-      "compareHook": "DStv Stream Starter costs R99 per month in South Africa. Mzansi Stream costs R199 for one month or R1,199 upfront for twelve months, equivalent to R99.92 per month on the annual term.",
+      "compareHook": "DStv Stream Starter is quoted in South African rand. The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65.",
       "faq": [
         {
           "q": "How much does Mzansi Stream cost?",
-          "a": "A prepaid month costs R199, three months cost R449 and six months cost R699. The annual plan costs R1,199 in one payment. Dividing that total by twelve gives R99.92 per month. Choose the term you want after trying the service on your own device."
+          "a": "The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65. The 24-hour trial can be requested separately before payment."
         },
         {
           "q": "How does the free 24 hour trial work?",
@@ -109,7 +93,7 @@
         },
         {
           "q": "Can several people watch at once and what if a stream fails?",
-          "a": "The standard plan includes one connection. If you need more than one screen at the same time, the site says to message WhatsApp for a tailored plan. The six month plan text mentions up to 3 devices. If a stream fails, you message WhatsApp; the site treats outages as a support job and publishes no fix time."
+          "a": "The standard plan includes one connection. If you need more than one screen at the same time, the site says to message WhatsApp for a tailored plan. If a stream fails, you message WhatsApp; the site treats outages as a support job and publishes no fix time."
         },
         {
           "q": "Are Springboks rugby and Proteas cricket included?",
@@ -202,7 +186,7 @@
     {
       "h2": "Common questions for AI Overviews",
       "lines": [
-        "- What does a paid term cost? One month costs R199. Twelve months cost R1,199 upfront.",
+        "- What does a paid term cost? The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65.",
         "- How can I check a match? Check the local broadcaster, fixture date and package for your country.",
         "- How do I set up a Firestick? See https://iptvmzansi.com/en-za/iptv-firestick-south-africa.",
         "- How do I disconnect a DStv package? In DStv South Africa's My Products section, select the package and schedule disconnection for the next payment date. Check fixed-term conditions with DStv.",

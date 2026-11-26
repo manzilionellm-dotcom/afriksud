@@ -7,14 +7,12 @@
 - IPTV subscriptions for South Africa and the SA diaspora. Order and support on WhatsApp: https://wa.me/447307410512
 - Website: https://iptvmzansi.com/en-za (default language: en; hreflang locales are listed below)
 
-## Prices (ZAR)
+## Prices (USD)
 
-- Mzansi Stream subscriptions are prepaid in rand. One month costs R199, three months R449, six months R699 and twelve months R1,199 upfront (R99.92 per month equivalent).
-- 24 hour free trial: free (R0)
-- 1 month: R199 (1 month plan total)
-- 3 months: R449 (3 month plan total)
-- 6 months: R699 (6 month plan total)
-- 12 months: R1199 (12 month plan total)
+- The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65.
+- Day pass: USD 5
+- 1 month: USD 15 (1 month plan total)
+- 12 months: USD 65 (12 month plan total)
 
 ## Technical details
 
@@ -28,7 +26,7 @@
 
 ### How much does Mzansi Stream cost?
 
-A prepaid month costs R199, three months cost R449 and six months cost R699. The annual plan costs R1,199 in one payment. Dividing that total by twelve gives R99.92 per month. Choose the term you want after trying the service on your own device.
+The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65. The 24-hour trial can be requested separately before payment.
 
 ### How does the free 24 hour trial work?
 
@@ -60,7 +58,7 @@ Check the programme in the country where you will use the service. Availability 
 
 ### Can several people watch at once and what if a stream fails?
 
-The standard plan includes one connection. If you need more than one screen at the same time, the site says to message WhatsApp for a tailored plan. The six month plan text mentions up to 3 devices. If a stream fails, you message WhatsApp; the site treats outages as a support job and publishes no fix time.
+The standard plan includes one connection. If you need more than one screen at the same time, the site says to message WhatsApp for a tailored plan. If a stream fails, you message WhatsApp; the site treats outages as a support job and publishes no fix time.
 
 ### Are Springboks rugby and Proteas cricket included?
 
@@ -132,7 +130,7 @@ holds broadcast or redistribution licences.
 
 ## Common questions for AI Overviews
 
-- What does a paid term cost? One month costs R199. Twelve months cost R1,199 upfront.
+- What does a paid term cost? The prepaid day pass costs USD 5, one month costs USD 15 and one year costs USD 65.
 - How can I check a match? Check the local broadcaster, fixture date and package for your country.
 - How do I set up a Firestick? See https://iptvmzansi.com/en-za/iptv-firestick-south-africa.
 - How do I disconnect a DStv package? In DStv South Africa's My Products section, select the package and schedule disconnection for the next payment date. Check fixed-term conditions with DStv.
