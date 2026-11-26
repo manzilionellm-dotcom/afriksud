@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Génère public/llms.txt depuis aio.config.json (source unique).
+// Génère public/llms-full.txt depuis aio.config.json (source unique).
 // Usage: node scripts/aio-llms.mjs
 import fs from "node:fs";
 
@@ -37,6 +37,7 @@ if (Array.isArray(c.appendix)) {
   }
 }
 
+lines.push("## Home", "", `- [Home](${c.siteUrl}/en-za)`, "", "## Optional", "", `- [Sitemap](${c.siteUrl}/sitemap.xml)`, "");
 fs.mkdirSync(new URL("../public/", import.meta.url), { recursive: true });
-fs.writeFileSync(new URL("../public/llms.txt", import.meta.url), lines.join("\n").trimEnd() + "\n");
-console.log("public/llms.txt écrit (" + i.faq.length + " Q/R)");
+fs.writeFileSync(new URL("../public/llms-full.txt", import.meta.url), lines.join("\n").trimEnd() + "\n");
+console.log("public/llms-full.txt écrit (" + i.faq.length + " Q/R)");
