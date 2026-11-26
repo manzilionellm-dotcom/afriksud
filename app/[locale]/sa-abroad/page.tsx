@@ -6,9 +6,10 @@ import type { Metadata } from "next";
 import { LOCALES, LOCALE_META, type Locale } from "../../../lib/locales";
 import { hreflangForProgrammatic, localeUrl, SITE_URL } from "../../../lib/url";
 import { robotsForProgrammatic } from "../../../lib/seo/indexability";
-import { isOceaniaMarket } from "../../../lib/oceania-offer";
-import { SA_ABROAD_COUNTRIES } from "../../../lib/seo/sa-abroad";
-import { HubListing } from "../../../components/seo/HubListing";
+import { SA_ABROAD_COUNTRIES, saAbroadPath } from "../../../lib/seo/sa-abroad";
+import Link from "next/link";
+import { LongformShell } from "../../../components/client/LongformShell";
+import { JsonLd } from "../../../lib/seo/jsonld";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,9 +20,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) return {};
-  const title = "South African TV Abroad — SuperSport, SABC & kykNET in 20+ Countries";
+  const title = "South African TV Abroad | Country Guides";
   const description =
-    "Watch SuperSport-style, SABC and kykNET folders from the UK, Australia, USA, UAE, NZ, Canada and other countries — line-up to confirm on WhatsApp. For SA expats and diaspora.";
+    "Find country guides for South African viewers abroad. Check local programme availability, match times, news, radio and device setup.";
   return {
     title,
     description,
@@ -44,57 +45,50 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SaAbroadHub({ params }: Props) {
   const { locale } = await params;
   if (!(LOCALES as readonly string[]).includes(locale)) notFound();
+  const pageLocale = locale as Locale;
+  const guides = SA_ABROAD_COUNTRIES.map((c) => ({ name: c.name, href: saAbroadPath(c) }));
   return (
-    <HubListing
-      locale={locale as Locale}
-      eyebrow="SA worldwide · 20+ countries"
-      h1="South African TV abroad — every country covered"
-      lead="If you're a South African abroad, Mzansi Stream is a no-decoder way to try SuperSport, SABC, kykNET and Mzansi Magic folders. This page does not publish a country count."
-      itemListName="Countries with SA TV via Mzansi Stream"
-      basePath="/sa-abroad"
-      items={SA_ABROAD_COUNTRIES.map((c) => ({
-        href: `/sa-abroad/${c.slug}`,
-        locale: isOceaniaMarket(c.preferredCanonicalLocale) ? c.preferredCanonicalLocale : undefined,
-        label: `South African TV in ${c.name}`,
-        caption:
-          c.slug === "uk"
-            ? "Rugby from London — Springboks, URC, kickoff times"
-            : undefined,
-      }))}
-      extraSections={[
-        {
-          h2: "Rugby from London and the UK",
-          paragraphs: [
-            "South Africans who follow the Springboks from London have a dedicated FAQ cluster. Start the 24-hour trial on WhatsApp +44 7307 410512. We list playlist categories — not exclusive Sky, TNT or SuperSport licences.",
-          ],
-          links: [
-            {
-              label: "Watch the Springboks from London",
-              href: "/blog/watch-springboks-from-london",
-            },
-            {
-              label: "Rugby kickoff times from London",
-              href: "/blog/rugby-kickoff-times-london",
-            },
-            {
-              label: "Best IPTV setup in the UK",
-              href: "/blog/iptv-uk-firestick-smart-tv-sa-sports",
-            },
-            {
-              label: "IPTV buffering on UK Wi-Fi",
-              href: "/blog/iptv-buffering-uk-wifi",
-            },
-            {
-              label: "Switch from a dead IPTV seller while abroad",
-              href: "/blog/switch-iptv-seller-abroad-whatsapp",
-            },
-            {
-              label: "IPTV categories are not broadcast licences",
-              href: "/blog/iptv-uk-categories-not-licences",
-            },
-          ],
-        },
-      ]}
-    />
+    <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Destination guides",
+        numberOfItems: guides.length,
+        itemListElement: guides.map((g, i) => ({
+          "@type": "ListItem", position: i + 1, name: g.name, url: `${SITE_URL}${g.href}`,
+        })),
+      }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: localeUrl(pageLocale) },
+          { "@type": "ListItem", position: 2, name: "South African TV abroad", item: localeUrl(pageLocale, "/sa-abroad") },
+        ],
+      }} />
+      <LongformShell locale={pageLocale}>
+        <article className="section">
+          <header className="longformHeader">
+            <h1>South African TV abroad</h1>
+            <p className="longformLead">Choose where you watch. The Australian and New Zealand guides list prepaid passes in US dollars. Other destination guides cover local start times, device setup and South African rand prices.</p>
+          </header>
+          <section className="longformSection">
+            <h2>Destination guides</h2>
+            <ul className="longformList">
+              {guides.map((g) => <li key={g.href}><Link href={g.href}>{g.name}</Link></li>)}
+            </ul>
+          </section>
+          <section className="longformSection">
+            <h2>News, sport and moving abroad</h2>
+            <ul className="longformList">
+              <li><Link href="/en-za/blog/sabc-without-dstv">Find South African news and radio abroad</Link></li>
+              <li><Link href="/en-gb/blog/dstv-uk-moving-from-south-africa">Manage your South African DStv account before moving to the UK</Link></li>
+              <li><Link href="/en-au/blog/dstv-australia-find-the-broadcaster">Find a match broadcaster and its local start time in Australia</Link></li>
+              <li><Link href="/fr/blog/dstv-en-europe-par-programme" hrefLang="fr">Retrouver un programme sud-africain en Europe (en français)</Link></li>
+            </ul>
+          </section>
+        </article>
+      </LongformShell>
+    </>
   );
 }

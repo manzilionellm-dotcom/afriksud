@@ -1,41 +1,18 @@
 "use client";
 // components/ux/HeroV2.tsx
-// Full-viewport (100dvh) cinematic hero. Layers:
-//   1. Background: looping muted video with poster fallback (placeholder
-//      path — TO_FILL_BY_OWNER once the channel-montage reel ships).
-//   2. Overlay: top-to-bottom black gradient + brand gold radial glow.
-//   3. Content: bottom-aligned pill, hero H1, lead, dual CTAs.
-
-import React, { useEffect, useState } from "react";
-import { Play, ArrowRight } from "lucide-react";
+// The hero uses the same WhatsApp destination for trial and advisor requests.
+import React from "react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import { useLang } from "../client/LanguageProvider";
 import { dict } from "../shared/dict";
-import { generateWhatsAppLink } from "../shared/utils";
-import { FreeTrialSheet } from "./FreeTrialSheet";
-import { VideoDemoSheet } from "./VideoDemoSheet";
+import { waMeLink } from "../shared/utils";
 import { tapHaptic } from "./haptic";
 
-const HERO_VIDEO_SRC = "/videos/hero-loop.mp4"; // TO_FILL_BY_OWNER
 const HERO_POSTER_SRC = "/og-image.jpg";
 
 export function HeroV2() {
   const { lang } = useLang();
   const t = dict[lang];
-  const [trialOpen, setTrialOpen] = useState(false);
-  const [demoOpen, setDemoOpen] = useState(false);
-  // Defer the video element to first paint: poster image carries the
-  // hero visual at the SSR moment so LCP is the H1, not a 1.5MB video
-  // initialised mid-paint. The video mounts after the first user gesture
-  // or after `mount` to keep mobile data + CPU sane on Galaxy A-class
-  // devices.
-  const [showVideo, setShowVideo] = useState(false);
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      setShowVideo(true);
-    }
-  }, []);
-
   const headline = (t.hero.titleA || "").trim();
   const accent = (t.hero.titleB || "").trim();
 
@@ -46,34 +23,15 @@ export function HeroV2() {
       aria-label={t.hero.pill}
     >
       <div className="absolute inset-0 z-0">
-        {showVideo ? (
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster={HERO_POSTER_SRC}
-            aria-hidden="true"
-          >
-            {/* The .mp4 is intentionally a placeholder. If missing, the poster
-                ensures graceful fallback — no broken state. */}
-            <source src={HERO_VIDEO_SRC} type="video/mp4" />
-          </video>
-        ) : (
-          // Mobile / first paint: serve the poster as a plain <img> so it
-          // becomes the LCP candidate quickly and never blocks on video
-          // metadata. Better Samsung / Galaxy A class performance.
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={HERO_POSTER_SRC}
-            alt="Mzansi Stream hero poster for Best IPTV South Africa"
-            decoding="async"
-            fetchPriority="high"
-            className="h-full w-full object-cover"
-          />
-        )}
+        {/* The poster is the first visible asset on desktop and mobile. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_POSTER_SRC}
+          alt="Mzansi Stream television and device preview"
+          decoding="async"
+          fetchPriority="high"
+          className="h-full w-full object-cover"
+        />
       </div>
 
       <div
@@ -128,40 +86,35 @@ export function HeroV2() {
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button
-              type="button"
-              onClick={() => {
-                tapHaptic();
-                setTrialOpen(true);
-              }}
+            <a
+              href={waMeLink(t.whatsapp.trial, "Hero-Trial")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track-placement="hero-trial"
+              onClick={() => tapHaptic()}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E0152D] px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_30px_rgba(224,21,45,0.35)] hover:bg-[#c40f24] active:scale-95 transition"
             >
               <ArrowRight size={18} aria-hidden="true" />
               {t.trial.cta}
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                tapHaptic();
-                setDemoOpen(true);
-              }}
+            </a>
+            <a
+              href={waMeLink(t.whatsapp.generic, "Hero-Advisor")}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track-placement="hero-advisor"
+              onClick={() => tapHaptic()}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-[15px] font-medium text-white backdrop-blur hover:bg-white/10 active:scale-95 transition"
             >
-              <Play size={16} aria-hidden="true" />
+              <MessageCircle size={16} aria-hidden="true" />
               {t.hero.ctaAdvisor}
-            </button>
+            </a>
           </div>
 
           <p className="mt-5 text-xs text-white/55">{t.hero.trust}</p>
         </div>
       </div>
-
-      <FreeTrialSheet open={trialOpen} onOpenChange={setTrialOpen} />
-      <VideoDemoSheet open={demoOpen} onOpenChange={setDemoOpen} />
     </section>
   );
 }
 
-// Server-safe re-export of WhatsApp helper isn't needed here; the
-// FreeTrialSheet imports it lazily on the client.
-export { generateWhatsAppLink as _whatsappHelper };
+export { generateWhatsAppLink as _whatsappHelper } from "../shared/utils";

@@ -9,7 +9,7 @@ import { HorizontalRow, RowItem } from "./HorizontalRow";
 import { Sheet } from "./Sheet";
 import { useLang } from "../client/LanguageProvider";
 import { dict } from "../shared/dict";
-import { plans } from "../shared/plans";
+import { plans, monthlyEquivalent } from "../shared/plans";
 import { SITE } from "../shared/site";
 import type { Plan } from "../shared/types";
 import { tapHaptic } from "./haptic";
@@ -25,7 +25,7 @@ function PlanCard({
 }) {
   const { lang } = useLang();
   const t = dict[lang];
-  const pricePerMonth = Math.round(plan.price / plan.months);
+  const pricePerMonth = monthlyEquivalent(plan);
   const saving = Math.round((1 - pricePerMonth / 199) * 100);
   const highlight = plan.highlight;
 

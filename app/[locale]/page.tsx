@@ -4,6 +4,7 @@
 // islands (LanguageProvider, switcher) layer on top.
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { LOCALES, LOCALE_META, type Locale, whatsappForLocale } from "../../lib/locales";
@@ -71,6 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: localeUrl(locale as Locale, "/"),
       languages: hreflangFor("/"),
     },
+    twitter: { card: "summary_large_image", title: brandedTitle(locale as Locale), description: home.description },
     openGraph: {
       type: "website",
       url: localeUrl(locale as Locale, "/"),
@@ -84,15 +86,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       // og:image / twitter:image come from app/[locale]/opengraph-image.tsx
       // (native-language card per locale, generated at build time).
     },
-    ...(isOceaniaMarket(locale)
-      ? {
-          twitter: {
-            card: "summary_large_image" as const,
-            title: brandedTitle(locale),
-            description: home.description,
-          },
-        }
-      : {}),
   };
 }
 
@@ -165,7 +158,7 @@ export default async function LocaleHome({ params }: Props) {
     brand: { "@id": BRAND_ID },
     provider: { "@id": ORG_ID },
     description:
-      "Mzansi Stream — live channels, movies and series, EPG, 4K/UHD. SuperSport, DStv Premiership, Premier League, kykNET and SABC folders — line-up confirmed on WhatsApp. WhatsApp activation.",
+      homeMetaFor(locale as Locale).description,
     image: `${SITE.domain}/og-image.jpg`,
     url: localeUrl(locale as Locale, "/"),
     areaServed: { "@type": "Country", name: "South Africa" },
@@ -251,7 +244,7 @@ export default async function LocaleHome({ params }: Props) {
         closes: "23:00",
       },
     },
-    priceRange: "99-1199 ZAR",
+    priceRange: `${plans[0].price}-${plans[plans.length - 1].price} ZAR`,
     currenciesAccepted: SITE.currencyCode,
     paymentAccepted:
       "EFT, SnapScan, Zapper, Yoco, Ozow, Capitec Pay, Visa, Mastercard, PayPal, Bitcoin",
@@ -266,9 +259,8 @@ export default async function LocaleHome({ params }: Props) {
     "@type": "WebPage",
     "@id": `${localeUrl(locale as Locale, "/")}#webpage`,
     url: localeUrl(locale as Locale, "/"),
-    name: "DStv Alternative — Mzansi Stream IPTV South Africa",
-    description:
-      "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24-hour trial, no card. From R99/month.",
+    name: homeMetaFor(locale as Locale).title,
+    description: homeMetaFor(locale as Locale).description,
     inLanguage: LOCALE_META[locale as Locale].hreflang,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
@@ -323,6 +315,25 @@ export default async function LocaleHome({ params }: Props) {
           <div className="main">
             <VODSection />
             <CompareSection />
+            {locale === "fr" && (
+              <nav aria-label="Guides DStv en français" className="diasporaLinks">
+                <p className="diasporaLinksTitle">Guides DStv en français</p>
+                <ul>
+                  <li><Link href="/fr/blog/dstv-afrique-pays-devises">DStv en Afrique selon le pays, le bouquet et la devise</Link></li>
+                  <li><Link href="/fr/blog/dstv-en-europe-par-programme">Où retrouver un programme sud-africain en Europe</Link></li>
+                </ul>
+              </nav>
+            )}
+            {locale === "en-za" && (
+              <nav aria-label="South African viewing guides" className="diasporaLinks">
+                <p className="diasporaLinksTitle">Compare your viewing options</p>
+                <ul>
+                  <li><Link href="/en-za/blog/dstv-price-south-africa">DStv Stream and satellite prices in rand</Link></li>
+                  <li><Link href="/en-za/blog/dstv-open-time-2026">DStv Open Time 2026 dates and eligibility</Link></li>
+                  <li><Link href="/en-za/blog/sabc-without-dstv">How to watch SABC directly</Link></li>
+                </ul>
+              </nav>
+            )}
             <ChannelExplorer />
             <CountriesSection />
             <InternationalSection />

@@ -11,7 +11,7 @@ import type { Locale } from "../../lib/locales";
 type CommercialLink = { label: string; href: string };
 
 const COMMERCIAL_LINKS: CommercialLink[] = [
-  { label: "Pricing — see plans from R99/mo", href: "#offers" },
+  { label: "Compare prepaid prices", href: "#offers" },
   { label: "Cheap IPTV South Africa (under R100)", href: "/cheap-iptv-south-africa" },
   { label: "4K IPTV in South Africa", href: "/4k-iptv-south-africa" },
   { label: "IPTV buffering on SA fibre", href: "/iptv-no-buffering-south-africa" },
@@ -21,7 +21,7 @@ const COMMERCIAL_LINKS: CommercialLink[] = [
   { label: "IPTV for Firestick / Fire TV", href: "/iptv-firestick-south-africa" },
   { label: "IPTV for movies & series", href: "/iptv-for-movies-and-series" },
   { label: "Mzansi Stream vs DStv Premium", href: "/vs/dstv-premium" },
-  { label: "Mzansi Stream vs Showmax", href: "/vs/showmax" },
+  { label: "Where to find shows after Showmax closed", href: "/vs/showmax" },
   { label: "Mzansi Stream vs Netflix", href: "/vs/netflix" },
   { label: "Order IPTV on WhatsApp — 10-minute walkthrough", href: "/blog/order-iptv-whatsapp-south-africa" },
   { label: "IPTV on multiple devices", href: "/blog/iptv-multiple-devices-south-africa" },

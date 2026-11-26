@@ -112,6 +112,7 @@ export function OceaniaOffer({ market, view = "home", children }: Props) {
         <footer className={styles.footer}>
           <nav aria-label="Viewing guides and policies">
             <Link href={`/${market}/sa-abroad/${slug}`}>Viewing guide</Link>
+            {market === "en-au" && <Link href="/en-au/blog/dstv-australia-find-the-broadcaster">Find the Australian broadcaster for a match</Link>}
             <Link href={`/${market}/free-trial`}>Free trial</Link>
             <Link href={`/${market}/legal/terms`}>Terms</Link>
             <Link href={`/${market}/legal/refund`}>Refund policy</Link>

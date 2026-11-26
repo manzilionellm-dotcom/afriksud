@@ -52,12 +52,12 @@ const BASE_METADATA: Metadata = {
     // `default` is rendered as-is (no template applied) so the brand
     // suffix lives here. Child pages must set `title` WITHOUT the
     // `| Mzansi Stream` suffix — the template appends it once.
-    default: "DStv Alternative — Live TV in 4K from R99 | Mzansi Stream",
+    default: "DStv Alternative in South Africa | Mzansi Stream",
     template: "%s | Mzansi Stream",
   },
   // Under 155 characters; honest claims only (no fabricated rating).
   description:
-    "South Africa's IPTV alternative to DStv — live channels in 4K with SuperSport, kykNET and SABC folders to confirm on WhatsApp. Free 24h trial, no card. From R99/mo.",
+    "Compare DStv with Mzansi Stream. One month costs R199, or pay R1,199 upfront for a year. Request a free 24-hour trial on WhatsApp.",
   applicationName: SITE_NAME,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
@@ -89,17 +89,17 @@ const BASE_METADATA: Metadata = {
     ),
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Best IPTV South Africa 2026 — Live TV in 4K | Mzansi Stream",
+    title: "Prepaid TV in South Africa | Mzansi Stream",
     description:
-      "IPTV for South Africa — SABC, e.tv, SuperSport PSL, Premier League, kykNET and international folders in 4K, line-up confirmed on WhatsApp. Free 24h trial.",
+      "Compare South African prepaid prices and check the programmes available on your device during the free 24-hour trial.",
     countryName: "South Africa",
   },
   twitter: {
     card: "summary_large_image",
     // À CONFIRMER — no verified @iptvmzansi profile in the repo. Do not emit site/creator.
-    title: "Best IPTV South Africa 2026 — Live TV in 4K",
+    title: "Prepaid TV in South Africa",
     description:
-      "Premium streaming SA — SABC, e.tv, SuperSport, Premier League + diaspora channels. Activated on WhatsApp. Free 24h trial.",
+      "South African prepaid streaming plans and a free 24-hour trial on your own device.",
   },
   robots: {
     index: true,
@@ -156,14 +156,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!(LOCALES as readonly string[]).includes(locale)) return BASE_METADATA;
   const meta = LOCALE_META[locale as Locale];
   const other = { ...(BASE_METADATA.other as Record<string, string>) };
-  if (isOceaniaMarket(locale)) {
+  const market = isOceaniaMarket(locale) ? OCEANIA_MARKETS[locale] : null;
+  const marketTitle = market ? `Prepaid TV in ${market.country} | Mzansi Stream` : undefined;
+  const marketDescription = market ? `Try Mzansi Stream in ${market.country} on a weekday. Compare prepaid day, month and annual passes in US dollars.` : undefined;
+  if (market) {
     other["geo.region"] = meta.country;
-    other["geo.placename"] = OCEANIA_MARKETS[locale].country;
+    other["geo.placename"] = market.country;
     delete other["geo.position"];
     delete other.ICBM;
   }
   return {
     ...BASE_METADATA,
+    ...(marketTitle && marketDescription ? {
+      title: { default: marketTitle, template: "%s | Mzansi Stream" },
+      description: marketDescription,
+      twitter: { ...BASE_METADATA.twitter, title: marketTitle, description: marketDescription },
+    } : {}),
     alternates: {
       canonical: localeUrl(locale as Locale, "/"),
       languages: hreflangFor("/"),
@@ -171,7 +179,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       ...BASE_METADATA.openGraph,
       locale: meta.ogLocale,
-      ...(isOceaniaMarket(locale) ? { countryName: OCEANIA_MARKETS[locale].country } : {}),
+      ...(market ? { countryName: market.country, title: marketTitle, description: marketDescription } : {}),
       alternateLocale: LOCALES.filter((l) => l !== locale).map(
         (l) => LOCALE_META[l].ogLocale
       ),

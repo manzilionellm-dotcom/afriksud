@@ -1,6 +1,7 @@
 // app/[locale]/vs/[competitor]/page.tsx
 // 8 versus-competitor pages generated from lib/seo/competitors.
 
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -84,28 +85,9 @@ export default async function VersusPage({ params }: Props) {
   // Auto-generated FAQ from the comparison data so every /vs/ page emits
   // FAQPage schema. Owner can replace with bespoke entries later.
   const faqEntries = [
-    {
-      q: `Is Mzansi Stream a real alternative to ${data.name}?`,
-      a: `It is a different product: live TV folders in 4K UHD where the source supports it, from R99/month, with no contract and no decoder — line-up to confirm on WhatsApp. Activated on WhatsApp.`,
-    },
-    {
-      q: `How much can I save by switching from ${data.name}?`,
-      a: `${data.name} is ${data.priceMonthly}/month${
-        data.priceYearly ? ` (${data.priceYearly}/year)` : ""
-      }. Mzansi Stream starts at R99/month — most households save R8,000-R10,000 a year by switching.`,
-    },
-    {
-      q: `Do I need a decoder to switch from ${data.name}?`,
-      a: `No — Mzansi Stream runs on devices you already own: Firestick, Samsung Tizen, LG webOS, Hisense VIDAA Smart TVs, iPhone, iPad, Android phone, Android TV box and PC. No decoder, no installer, no contract.`,
-    },
-    {
-      q: `Can I try Mzansi Stream before I cancel ${data.name}?`,
-      a: `Yes — Mzansi Stream offers a 24-hour free trial on WhatsApp with no credit card required. Test it during peak hours before cancelling your current subscription.`,
-    },
-    {
-      q: `Is Mzansi Stream legal in South Africa?`,
-      a: `This page is not legal advice and makes no legality claim. Distributing copyrighted content without authorisation is the copyright issue. This page does not state that Mzansi Stream holds channel licences.`,
-    },
+    { q: `What should I check about ${data.name}?`, a: data.hook },
+    { q: "What does Mzansi cost upfront?", a: "One month is R199. Twelve months are R1,199 in one payment, equivalent to R99.92 per month. Include any internet, equipment and access costs when comparing services." },
+    { q: "Can I test Mzansi before paying?", a: "Request a 24-hour trial without a card, and share your device and country. Check the picture, guide, remote and audio on your own connection." },
   ];
 
   const faqSchema = {
@@ -142,7 +124,7 @@ export default async function VersusPage({ params }: Props) {
               <h1>Mzansi Stream vs {data.name}</h1>
               <p className="longformLead">{data.hook}</p>
               <p className="trustStrip" style={{ marginTop: 16 }}>
-                From R99/mo · 24h free trial, no card · 7-day satisfaction guarantee
+                One month R199 · Twelve months R1,199 upfront · Free 24-hour trial
               </p>
               <div className="ctaRow">
                 <a
@@ -151,7 +133,7 @@ export default async function VersusPage({ params }: Props) {
                   data-track-ref={`Vs-${competitor}-Hero-Pricing`}
                   data-track-placement={`Vs-${competitor}-Hero`}
                 >
-                  See plans from R99/mo →
+                  Compare prepaid terms →
                 </a>
                 <a
                   href="#table"
@@ -165,8 +147,8 @@ export default async function VersusPage({ params }: Props) {
             </header>
 
             <DirectAnswerBlock
-              question={`Is Mzansi Stream a real alternative to ${data.name}?`}
-              answer={`It is a different product: live TV folders in 4K UHD where the source supports it for R99/month, with no contract, no decoder and no installer visit — line-up to confirm on WhatsApp. Activation runs on WhatsApp. ${data.name} is ${data.priceMonthly}/month${data.priceYearly ? ` (${data.priceYearly}/year)` : ""}; the Mzansi Stream 12-month plan works out to R99.92/month effective.`}
+              question={`What is the current position for ${data.name}?`}
+              answer={`${data.priceMonthly}. A single month of Mzansi Stream is R199. Check the programme and viewing country before deciding.`}
             />
 
             <section className="longformSection" id="table">
@@ -194,7 +176,7 @@ export default async function VersusPage({ params }: Props) {
             </section>
 
             <section className="longformSection">
-              <h2>Where {data.name} genuinely wins</h2>
+              <h2>What to check with {data.name}</h2>
               <ul className="longformList">
                 {data.theirStrengths.map((s) => (
                   <li key={s}>{s}</li>
@@ -203,7 +185,7 @@ export default async function VersusPage({ params }: Props) {
             </section>
 
             <section className="longformSection">
-              <h2>Where Mzansi Stream beats {data.name}</h2>
+              <h2>What to check with Mzansi Stream</h2>
               <ul className="longformList">
                 {data.ourEdge.map((s) => (
                   <li key={s}>{s}</li>
@@ -211,13 +193,18 @@ export default async function VersusPage({ params }: Props) {
               </ul>
             </section>
 
+            <section className="longformSection">
+              <h2>Check the source and compare prices</h2>
+              {data.source && <p><a href={data.source.url}>{data.source.label}</a></p>}
+              <p><Link href="/en-za/blog/dstv-price-south-africa">South African DStv prices and Mzansi’s upfront cost</Link></p>
+            </section>
             <TrustReversalBlock locale={locale as Locale} />
 
             <InlinePricingBlock
               locale={locale as Locale}
               refTag={`Vs-${competitor}`}
-              heading={`Switch from ${data.name} — plans from R99/month`}
-              sub={`SuperSport-style, kykNET and SABC folders in 4K — line-up to confirm on WhatsApp. No contract, no decoder. Activated on WhatsApp.`}
+              heading="Mzansi Stream prepaid prices"
+              sub="One month costs R199. A full year costs R1,199 upfront. Test the service on your home connection before choosing."
             />
 
             <section className="longformSection" id="faq">
@@ -237,11 +224,10 @@ export default async function VersusPage({ params }: Props) {
             />
 
             <section className="longformSection" id="trial">
-              <h2>Switch from {data.name} today</h2>
+              <h2>Try Mzansi Stream on your device</h2>
               <p>
                 24-hour free trial, no card. Pay only if it works for you.
-                Activated on WhatsApp. 7-day satisfaction
-                guarantee on every paid plan.
+                Activation and support are provided on WhatsApp.
               </p>
             </section>
           </article>
